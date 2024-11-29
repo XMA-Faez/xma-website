@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "@radix-ui/themes/styles.css";
+import Header from "@/components/layout/header/Header";
+import { Theme } from "@radix-ui/themes";
+
+import AnimatedCursorComponent from "@/components/ui/AnimatedCursor";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +33,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Theme appearance="dark" grayColor="slate">
+          <AnimatedCursorComponent />
+          <Header />
+          <main>{children}</main>
+        </Theme>
       </body>
     </html>
   );
