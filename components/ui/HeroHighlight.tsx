@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
-import React from "react";
+import { useMotionValue, motion, useMotionTemplate, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 export const HeroHighlight = ({
   children,
@@ -66,26 +66,33 @@ export const Highlight = ({
   children: React.ReactNode;
   className?: string;
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+  });
+
   return (
     <motion.span
       initial={{
         backgroundSize: "0% 100%",
       }}
       animate={{
-        backgroundSize: "100% 100%",
+        backgroundSize: isInView ? "100% 100%" : "0% 100%",
       }}
       transition={{
-        duration: 2,
-        ease: "linear",
-        delay: 0.5,
+        type: "tween",
+        ease: "easeInOut",
+        duration: 0.8,
+        delay: 0.3
       }}
       style={{
         backgroundRepeat: "no-repeat",
         backgroundPosition: "left center",
         display: "inline",
       }}
+      ref={ref}
       className={cn(
-        `relative inline-block pb-1   px-1 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,
+        `relative inline-block pb-1 rounded-main px-1 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,
         className
       )}
     >

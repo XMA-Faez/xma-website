@@ -1,4 +1,5 @@
 import About from "@/components/landing-page/about-section/About";
+import CTA from "@/components/landing-page/cta/CTA";
 import Hero from "@/components/landing-page/hero/Hero";
 import Services from "@/components/landing-page/services/Services";
 import Tile from "@/components/ui/Tile";
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <CTA />
     </div>
   );
 }

@@ -1,9 +1,9 @@
+import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import "@radix-ui/themes/styles.css";
+import "./globals.css";
 import Header from "@/components/layout/header/Header";
-import { Theme } from "@radix-ui/themes";
 
 import AnimatedCursorComponent from "@/components/ui/AnimatedCursor";
 
@@ -37,6 +37,15 @@ export default function RootLayout({
           <AnimatedCursorComponent />
           <Header />
           <main>{children}</main>
+          <style>
+          {`
+            .dark,
+            .dark-theme,
+            :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
+              --color-background: #080808;
+            }
+          `}
+          </style>
         </Theme>
       </body>
     </html>

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const headerItems = [
@@ -20,7 +19,7 @@ function HeaderItems() {
         <a
           key={index}
           href={`/#${item.name.toLowerCase().replace(" ", "-")}`}
-          className="text link font-thin"
+          className="text p-1 link font-thin"
         >
           {item.name}
         </a>
