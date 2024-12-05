@@ -1,8 +1,12 @@
 "use client";
+import useDeviceDetection from "@/hooks/useDeviceDetection";
 import React from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 function AnimatedCursorComponent() {
+  const device = useDeviceDetection();
+  if (device === "Mobile" || device === "Tablet") return null;
+
   return (
     <AnimatedCursor
       color="255, 255, 255"
