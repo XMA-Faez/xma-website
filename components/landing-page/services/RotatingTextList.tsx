@@ -1,32 +1,19 @@
-"use client"; // For Framer Motion compatibility in Next.js 13
+"use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./rotatingText.module.css"; // Include your CSS file
+import styles from "./rotatingTextList.module.css";
 import { useEffect, useRef, useState } from "react";
+import TextComponent from "./TextComponent";
 
-const RotatingText = () => {
+const RotatingTextList = () => {
   const [rotateXState, setRotateXState] = useState(0);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end center"],
   });
 
-  // Dynamic rotation value for the wheel
-  const rotateX = useTransform(scrollYProgress, [0, 1], [230, 450]); // Adjust range as needed
-
-  // Highlighting logic for center text
-  const totalItems = 5; // Total number of text items
-  const highlightOpacity = Array.from({ length: totalItems }, (_, index) => {
-    const start = index / totalItems;
-    const end = (index + 1) / totalItems;
-
-    return useTransform(
-      scrollYProgress,
-      [start, (start + end) / 2, end],
-      [0.2, 1, 0.2],
-    );
-  });
+  const rotateX = useTransform(scrollYProgress, [0, 1], [270, 420]);
 
   useEffect(() => {
     rotateX.on("change", (v) => {
@@ -52,15 +39,12 @@ const RotatingText = () => {
             "Copywriting",
             "Marketing",
           ].map((text, index) => (
-            <motion.div
+            <TextComponent
+              scrollY={scrollYProgress}
+              index={index}
+              text={text}
               key={index}
-              className={`${ styles[`servicesText${index + 1}`] } text-[7vh] leading-3`}
-              style={{
-                opacity: highlightOpacity[index], 
-              }}
-            >
-              {text}
-            </motion.div>
+            />
           ))}
         </motion.div>
       </div>
@@ -68,4 +52,4 @@ const RotatingText = () => {
   );
 };
 
-export default RotatingText;
+export default RotatingTextList;

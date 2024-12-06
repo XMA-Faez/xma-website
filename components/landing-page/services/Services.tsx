@@ -1,8 +1,8 @@
 import React from "react";
-import RotatingText from "./RotatingText";
+import RotatingTextList from "./RotatingTextList";
 
 function Services() {
-  return <RotatingText />;
+  return <RotatingTextList />;
 }
 
 export default Services;
