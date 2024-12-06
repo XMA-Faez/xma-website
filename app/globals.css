@@ -3,19 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --bg: #ffffff;
-  --fg: #171717;
+  --bg: #000000;
+  --fg: #ededed;
+  --primary: #f0f0f0;
+  --secondary: cyan;
   --accent: purple;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #000000;
-    --fg: #ededed;
-    --primary: #f0f0f0;
-    --secondary: cyan;
-    --accent: purple;
-  }
 }
 
 .radix-themes ::selection {
