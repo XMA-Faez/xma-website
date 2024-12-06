@@ -1,6 +1,12 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useMotionValue, motion, useMotionTemplate, useInView } from "framer-motion";
+import {
+  useMotionValue,
+  motion,
+  useMotionTemplate,
+  useInView,
+  useScroll,
+} from "framer-motion";
 import React, { useRef } from "react";
 
 export const HeroHighlight = ({
@@ -30,7 +36,7 @@ export const HeroHighlight = ({
     <div
       className={cn(
         "relative bg-gradient-to-t from-black flex items-center bg-white dark:bg-bg justify-center w-full group",
-        containerClassName
+        containerClassName,
       )}
       onMouseMove={handleMouseMove}
     >
@@ -67,6 +73,12 @@ export const Highlight = ({
   className?: string;
 }) => {
   const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
   const isInView = useInView(ref, {
     once: true,
   });
@@ -82,8 +94,7 @@ export const Highlight = ({
       transition={{
         type: "tween",
         ease: "easeInOut",
-        duration: 0.8,
-        delay: 0.3
+        duration: 0.5,
       }}
       style={{
         backgroundRepeat: "no-repeat",
@@ -93,7 +104,7 @@ export const Highlight = ({
       ref={ref}
       className={cn(
         `relative inline-block pb-1 rounded-main px-1 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,
-        className
+        className,
       )}
     >
       {children}

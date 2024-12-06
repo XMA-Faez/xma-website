@@ -32,27 +32,27 @@ export const HeroParallax = ({
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig
+    springConfig,
   );
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig
+    springConfig,
   );
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig
+    springConfig,
   );
   const opacity = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
+    springConfig,
   );
   const rotateZ = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig
+    springConfig,
   );
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
-    springConfig
+    springConfig,
   );
   return (
     <div
@@ -103,15 +103,19 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
+    <div className="max-w-7xl z-10 relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+      <h1 className="text-2xl md:text-6xl text-balance capitalize font-bold dark:text-white">
+        Unlimited Growth with subscription-based lead generation
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      <p className="max-w-2xl text-base md:text-xl mt-8 mb-lg dark:text-neutral-200">
+        From SMART ads and campaign management to message marketing, Lead Flow
+        provides everything you need.
       </p>
+      <Link href="" className="transition duration-300">
+        <button className="button--calypso inline-block relative button bg-fg px-8 py-3">
+          <span>Book Discovery Call</span>
+        </button>
+      </Link>
     </div>
   );
 };
