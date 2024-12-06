@@ -4,9 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./rotatingTextList.module.css";
 import { useEffect, useRef, useState } from "react";
 import TextComponent from "./TextComponent";
+import GlassEffectWrap from "./glass-effect-wrap/GlassEffectWrap";
 
 const RotatingTextList = () => {
-  const [rotateXState, setRotateXState] = useState(0);
+  const [rotateXState, setRotateXState] = useState(270);
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -47,6 +48,7 @@ const RotatingTextList = () => {
             />
           ))}
         </motion.div>
+        <GlassEffectWrap />
       </div>
     </div>
   );

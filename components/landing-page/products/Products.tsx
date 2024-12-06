@@ -37,12 +37,11 @@ function Products() {
       {cards.map((card, index) => (
         <div
           key={card.title}
-          className={`p-md border-zinc-800 hover:bg-black transition-colors border backdrop-blur-md ${
+          className={`p-md border-zinc-800 flex flex-col hover:bg-black transition-colors border backdrop-blur-md ${
             styles[`card-${index + 1}`]
           }`}
         >
-          <img src={card.image} alt={card.title} />
-          <h2 className="text-xl">{card.title}</h2>
+          <h2 className="text-xl mt-auto mb-sm">{card.title}</h2>
           <p className="text-base">{card.description}</p>
         </div>
       ))}
