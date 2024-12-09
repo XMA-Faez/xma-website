@@ -1,14 +1,16 @@
 "use client";
 import React from "react";
 import {
-  motion,
   useScroll,
   useTransform,
   useSpring,
   MotionValue,
+  LazyMotion,
+  domAnimation,
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import * as m from "framer-motion/m"
 
 export const HeroParallax = ({
   products,
@@ -60,7 +62,8 @@ export const HeroParallax = ({
       className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
-      <motion.div
+      <LazyMotion features={domAnimation}>
+      <m.div
         style={{
           rotateX,
           rotateZ,
@@ -69,7 +72,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <m.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -77,8 +80,8 @@ export const HeroParallax = ({
               key={product.title}
             />
           ))}
-        </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        </m.div>
+        <m.div className="flex flex-row  mb-20 space-x-20 ">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -86,8 +89,8 @@ export const HeroParallax = ({
               key={product.title}
             />
           ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        </m.div>
+        <m.div className="flex flex-row-reverse space-x-reverse space-x-20">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -95,8 +98,9 @@ export const HeroParallax = ({
               key={product.title}
             />
           ))}
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
+      </LazyMotion>
     </div>
   );
 };
@@ -104,10 +108,10 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl z-10 relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-6xl text-balance capitalize font-bold dark:text-white">
+      <h1 className="text-2xl pointer-events-none md:text-6xl text-balance capitalize font-bold dark:text-white">
         Unlimited Growth with subscription-based lead generation
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 mb-lg dark:text-neutral-200">
+      <p className="max-w-2xl text-base pointer-events-none md:text-xl mt-8 mb-lg dark:text-neutral-200">
         From SMART ads and campaign management to message marketing, Lead Flow
         provides everything you need.
       </p>
@@ -132,7 +136,7 @@ export const ProductCard = ({
   translate: MotionValue<number>;
 }) => {
   return (
-    <motion.div
+    <m.div
       style={{
         x: translate,
       }}
@@ -158,6 +162,6 @@ export const ProductCard = ({
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
       </h2>
-    </motion.div>
+    </m.div>
   );
 };
