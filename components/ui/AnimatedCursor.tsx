@@ -18,7 +18,7 @@ function AnimatedCursorComponent() {
       outerStyle={{
         mixBlendMode: "exclusion",
       }}
-      trailingSpeed={3}
+      trailingSpeed={2}
     />
   );
 }

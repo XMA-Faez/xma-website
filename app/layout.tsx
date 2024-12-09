@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/layout/header/Header";
 
 import AnimatedCursorComponent from "@/components/ui/AnimatedCursor";
+import Footer from "@/components/layout/footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,9 +35,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Theme appearance="dark" grayColor="slate">
-          <AnimatedCursorComponent />
+          {/* <AnimatedCursorComponent /> */}
           <Header />
           <main>{children}</main>
+          <Footer />
           <style>
           {`
             .dark,
