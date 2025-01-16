@@ -8,6 +8,9 @@ const headerItems = [
     name: "About Us",
   },
   {
+    name: "XMA Boost",
+  },
+  {
     name: "Contact",
   },
 ];
@@ -18,7 +21,7 @@ function HeaderItems() {
       {headerItems.map((item, index) => (
         <a
           key={index}
-          href={`/#${item.name.toLowerCase().replace(" ", "-")}`}
+          href={`/${item.name.toLowerCase().replace(" ", "-")}`}
           className="text p-1 link font-thin"
         >
           {item.name}
