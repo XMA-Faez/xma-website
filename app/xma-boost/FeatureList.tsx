@@ -32,7 +32,7 @@ const FeatureList = () => {
       {features.map((feature) => (
         <div
           key={feature.id}
-          className="bg-zinc-900 border border-gray-700 rounded-lg p-6 text-center shadow-lg shadow-white/10 transition-transform transform hover:scale-105"
+          className="bg-zinc-900 border border-zinc-800 rounded-lg p-6 text-center shadow-lg shadow-white/10 transition-transform transform hover:scale-105"
         >
           <div className="mb-4">{feature.icon}</div>
           <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
