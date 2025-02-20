@@ -1,24 +1,38 @@
-import React from "react";
+"use client";
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { useStripeCheckout } from "@/hooks/useStripeCheckout";
+import { PackageType, AddonType } from "@/utils/stripe";
 import { packages, addOns } from "@/data/proposalData";
 
-const PaymentSummary = ({
+interface PaymentSummaryProps {
+  selectedPackage: PackageType;
+  selectedAddOns: AddonType[];
+}
+
+export default function PaymentSummary({
   selectedPackage,
-  selectedAddOns = [],
-  onPayment,
-}) => {
-  // Calculate total for add-ons
+  selectedAddOns,
+}: PaymentSummaryProps) {
+  const { createCheckoutSession, isLoading } = useStripeCheckout();
+
+  const handlePayment = async () => {
+    try {
+      await createCheckoutSession(selectedPackage, selectedAddOns);
+    } catch (error) {
+      console.error("Payment error:", error);
+      // You might want to show an error toast here
+    }
+  };
+
+  // Calculate total
+  const packagePrice = parseInt(
+    packages[selectedPackage].price.replace(/[^0-9]/g, ""),
+  );
   const addOnsTotal = selectedAddOns.reduce((total, addonId) => {
     const addon = addOns.find((a) => a.id === addonId);
     return total + (addon ? addon.basePrice : 0);
   }, 0);
-
-  // Get package price as number
-  const packagePrice = parseInt(
-    packages[selectedPackage].price.replace(/[^0-9]/g, ""),
-  );
-
-  // Calculate final total
   const totalPrice = packagePrice + addOnsTotal;
 
   return (
@@ -45,10 +59,11 @@ const PaymentSummary = ({
               </h4>
               {selectedAddOns.map((addonId) => {
                 const addon = addOns.find((a) => a.id === addonId);
+                    console.log(addon)
                 return (
                   <div key={addonId} className="flex justify-between text-sm">
-                    <span className="text-zinc-300">{addon.feature}</span>
-                    <span className="text-red-400">{addon.price}</span>
+                    <span className="text-zinc-300">{addon?.feature}</span>
+                    <span className="text-red-400">{addon?.price}</span>
                   </div>
                 );
               })}
@@ -66,25 +81,34 @@ const PaymentSummary = ({
                 </p>
               </div>
               <button
-                onClick={onPayment}
-                className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg transition-colors duration-200 flex items-center gap-3"
+                onClick={handlePayment}
+                disabled={isLoading}
+                className={`
+                  bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg 
+                  transition-colors duration-200 flex items-center gap-3
+                  disabled:opacity-50 disabled:cursor-not-allowed
+                `}
               >
                 <span className="font-semibold">
-                  Pay {totalPrice.toLocaleString()} AED
+                  {isLoading
+                    ? "Processing..."
+                    : `Pay ${totalPrice.toLocaleString()} AED`}
                 </span>
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
+                {!isLoading && (
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
@@ -109,6 +133,4 @@ const PaymentSummary = ({
       </CardContent>
     </Card>
   );
-};
-
-export default PaymentSummary;
+}

@@ -1,9 +1,66 @@
+"use client";
+
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
-import { addOns } from "@/data/proposalData";
+import { AddonType } from "@/utils/stripe";
 
-const AddOns = ({ selectedAddOns = [], onAddOnToggle }) => {
+interface AddOnsProps {
+  selectedAddOns: AddonType[];
+  onAddOnToggle: (addonId: AddonType) => void;
+}
+
+const ADDONS = [
+  {
+    id: "website_design" as AddonType,
+    name: "Website Design",
+    description: "Custom website design tailored to your brand",
+    price: "8,000 AED",
+  },
+  {
+    id: "website_redesign" as AddonType,
+    name: "Website Redesign",
+    description: "Refresh and update your existing website",
+    price: "4,000 AED",
+  },
+  {
+    id: "logo_design" as AddonType,
+    name: "Logo Design",
+    description: "Professional logo design with multiple concepts",
+    price: "2,000 AED",
+  },
+  {
+    id: "business_email" as AddonType,
+    name: "Business Email",
+    description: "Professional email setup with your domain",
+    price: "500 AED",
+  },
+  {
+    id: "hosting" as AddonType,
+    name: "Hosting",
+    description: "Reliable web hosting for your website",
+    price: "500 AED",
+  },
+  {
+    id: "domain" as AddonType,
+    name: "Domain",
+    description: "Domain registration for one year",
+    price: "200 AED",
+  },
+  {
+    id: "payment_gateway" as AddonType,
+    name: "Payment Gateway Integration",
+    description: "Secure payment processing setup",
+    price: "500 AED",
+  },
+];
+
+export default function AddOns({ selectedAddOns, onAddOnToggle }: AddOnsProps) {
+  const handleClick = (addonId: AddonType) => {
+    console.log("Clicked addon:", addonId); // Debug log
+    onAddOnToggle(addonId);
+  };
+
   return (
     <Card className="bg-zinc-950 border-zinc-800">
       <CardHeader>
@@ -20,7 +77,7 @@ const AddOns = ({ selectedAddOns = [], onAddOnToggle }) => {
             <thead>
               <tr className="border-b border-zinc-800">
                 <th className="text-left bg-zinc-900/50 p-4 text-zinc-400 font-medium">
-                  Feature
+                  Service
                 </th>
                 <th className="text-right bg-zinc-900/50 p-4 text-zinc-400 font-medium">
                   Price
@@ -28,17 +85,18 @@ const AddOns = ({ selectedAddOns = [], onAddOnToggle }) => {
               </tr>
             </thead>
             <tbody>
-              {addOns.map((addon) => {
+              {ADDONS.map((addon) => {
                 const isSelected = selectedAddOns.includes(addon.id);
                 return (
                   <tr
                     key={addon.id}
-                    onClick={() => onAddOnToggle(addon.id)}
                     className={`
                       border-b border-zinc-800 last:border-0
                       cursor-pointer transition-all
-                      ${isSelected ? "bg-red-500/10 hover:bg-red-500/20" : "hover:bg-zinc-800/50"}
+                      ${isSelected ? "bg-red-500/10" : ""}
+                      hover:bg-zinc-800/50
                     `}
+                    onClick={() => handleClick(addon.id)}
                   >
                     <td className="p-4">
                       <div className="flex items-center gap-3">
@@ -57,7 +115,7 @@ const AddOns = ({ selectedAddOns = [], onAddOnToggle }) => {
                           )}
                         </div>
                         <div>
-                          <div className="text-zinc-100">{addon.feature}</div>
+                          <div className="text-zinc-100">{addon.name}</div>
                           <div className="text-xs text-zinc-400">
                             {addon.description}
                           </div>
@@ -73,13 +131,7 @@ const AddOns = ({ selectedAddOns = [], onAddOnToggle }) => {
             </tbody>
           </table>
         </div>
-
-        <p className="mt-4 text-sm text-zinc-400 italic">
-          * Prices may vary based on specific requirements
-        </p>
       </CardContent>
     </Card>
   );
-};
-
-export default AddOns;
+}

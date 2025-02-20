@@ -31,28 +31,28 @@ export const packages = {
 
 export const addOns = [
   {
-    id: "website-design",
+    id: "website_design",
     feature: "Website Design",
     price: "8,000 AED",
     basePrice: 8000,
     description: "Custom website design tailored to your brand",
   },
   {
-    id: "website-redesign",
+    id: "website_redesign",
     feature: "Website Redesign",
-    price: "1,000 AED",
-    basePrice: 1000,
+    price: "4,000 AED",
+    basePrice: 4000,
     description: "Refresh and update your existing website",
   },
   {
-    id: "logo-design",
+    id: "logo_design",
     feature: "Logo Design",
     price: "2,000 AED",
     basePrice: 2000,
     description: "Professional logo design with multiple concepts",
   },
   {
-    id: "business-email",
+    id: "business_email",
     feature: "Business Email",
     price: "500 AED",
     basePrice: 500,
@@ -73,7 +73,7 @@ export const addOns = [
     description: "Domain registration for one year",
   },
   {
-    id: "payment-gateway",
+    id: "payment_gateway",
     feature: "Payment Gateway Integration",
     price: "500 AED",
     basePrice: 500,
