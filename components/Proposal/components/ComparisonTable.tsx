@@ -1,9 +1,12 @@
-import React from 'react';
-import { Check, X } from 'lucide-react';
+import React from "react";
+import { Check, X } from "lucide-react";
 
-const ComparisonTable = ({ features, tiers = ['base', 'standard', 'premium'] }) => {
+const ComparisonTable = ({
+  features,
+  tiers = ["base", "standard", "premium"],
+}) => {
   const renderCell = (value) => {
-    if (typeof value === 'boolean') {
+    if (typeof value === "boolean") {
       return value ? (
         <Check className="text-red-400" />
       ) : (
@@ -30,7 +33,7 @@ const ComparisonTable = ({ features, tiers = ['base', 'standard', 'premium'] }) 
           {features.map((feature, index) => (
             <tr key={index} className="border-t border-zinc-700">
               <td className="p-4 text-zinc-400">
-                {typeof feature === 'object' ? feature.name : feature}
+                {typeof feature === "object" ? feature.name : feature}
               </td>
               {tiers.map((tier) => (
                 <td key={`${index}-${tier}`} className="p-4">
