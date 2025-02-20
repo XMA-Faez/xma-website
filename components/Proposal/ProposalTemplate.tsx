@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import ProposalHeader from "./components/ProposalHeader";
 import PackageSelection from "./components/PackageSelection";
+import AddOns from "./components/AddOne";
 import PaymentSummary from "./components/PaymentSummary";
 
 const ProposalTemplate = ({
   onPayment = () => console.log("Payment initiated"),
 }) => {
   const [selectedPackage, setSelectedPackage] = useState("premium");
+  const [selectedAddOns, setSelectedAddOns] = useState([]);
   const [expandedSections, setExpandedSections] = useState({
     package: false,
   });
@@ -17,6 +19,14 @@ const ProposalTemplate = ({
       ...prev,
       [section]: !prev[section],
     }));
+  };
+
+  const handleAddOnToggle = (addonId) => {
+    setSelectedAddOns((prev) =>
+      prev.includes(addonId)
+        ? prev.filter((id) => id !== addonId)
+        : [...prev, addonId],
+    );
   };
 
   return (
@@ -30,7 +40,16 @@ const ProposalTemplate = ({
         onToggleExpand={() => handleToggleSection("package")}
       />
 
-      <PaymentSummary selectedPackage={selectedPackage} onPayment={onPayment} />
+      <AddOns
+        selectedAddOns={selectedAddOns}
+        onAddOnToggle={handleAddOnToggle}
+      />
+
+      <PaymentSummary
+        selectedPackage={selectedPackage}
+        selectedAddOns={selectedAddOns}
+        onPayment={onPayment}
+      />
     </div>
   );
 };
