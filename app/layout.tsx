@@ -3,10 +3,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
-import Header from "@/components/layout/header/Header";
 
-import AnimatedCursorComponent from "@/components/ui/AnimatedCursor";
 import Footer from "@/components/layout/footer/Footer";
+import { Header } from "@/components/layout/header/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,7 +39,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <style>
-          {`
+            {`
             .dark,
             .dark-theme,
             :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {

@@ -1,14 +1,15 @@
-"use client";
+"use client"
+
+import React from 'react';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/public/XMA Lead Flow Logo.webp";
-import HeaderItems from "./HeaderItems";
-import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { MainNav } from './navigation/MainNav';
+import { MobileNav } from './navigation/MobileNav';
 
-export default function Header() {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
   const pathname = usePathname();
@@ -19,19 +20,13 @@ export default function Header() {
     };
 
     handleResize();
-
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     if (pathname === "/") {
@@ -64,45 +59,55 @@ export default function Header() {
                 : "0px 10px 30px rgba(0,0,0,0.2)",
           }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
-          className={`flex py-4 items-center text-fg container px-8 mx-auto`}
+          className="flex py-4 items-center justify-between text-fg container px-8 mx-auto"
         >
-          <div className="flex-grow flex-shrink-0 basis-0 mr-auto">
+          {/* Logo */}
+          <div className="flex-grow flex-shrink-0 basis-0">
             <Link className="block w-fit" href="/">
-              <Image src={Logo} alt="Qoo About" width={50} height={50} />
+              <Image 
+                src="/XMA Lead Flow Logo.webp" 
+                alt="XMA Logo" 
+                width={50} 
+                height={50} 
+                priority
+              />
             </Link>
           </div>
-          <HeaderItems />
-          <div className="ml-auto flex justify-end flex-grow flex-shrink-0 basis-0">
-            <div className="md:hidden">
-              <MobileMenu isScrolled={isScrolled} />
-            </div>
-            <div className="hidden md:block">
-              <button className="button--calypso inline-block relative bg-fg px-6 py-2 text-black">
-                <span>Schedule a Demo</span>
+
+          {/* Desktop Navigation - Centered */}
+          <div className="flex-grow flex justify-center">
+            <MainNav />
+          </div>
+
+          {/* CTA Button */}
+          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end">
+            <Link href="/proposal">
+              <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                Get Started
               </button>
-            </div>
+            </Link>
           </div>
         </motion.div>
       ) : (
         <div
-          className={`${isScrolled ? `bg-black/50` : `bg-transparent`}
-        flex items-center text-fg px-8 mx-auto duration-300 backdrop-blur-md transition-colors`}
+          className={`${isScrolled ? 'bg-black/50' : 'bg-transparent'}
+            flex items-center text-fg px-8 mx-auto duration-300 backdrop-blur-md transition-colors`}
         >
-          <div className="flex-grow flex-shrink-0 basis-0 mr-auto">
+          <div className="flex-grow flex-shrink-0 basis-0">
             <Link className="block w-fit" href="/">
-              <Image src={Logo} alt="Qoo About" width={50} height={50} />
+              <Image 
+                src="/XMA Lead Flow Logo.webp" 
+                alt="XMA Logo" 
+                width={50} 
+                height={50} 
+                priority
+              />
             </Link>
           </div>
-          <HeaderItems />
-          <div className="ml-auto flex justify-end flex-grow flex-shrink-0 basis-0">
-            <div className="md:hidden">
-              <MobileMenu isScrolled={isScrolled} />
-            </div>
-            <div className="hidden md:block">
-              <button className="py-2 px-4 rounded-main bg-accent text-fg hover:bg-orange-500 transition-colors">
-                Schedule a Demo
-              </button>
-            </div>
+
+          {/* Mobile Navigation */}
+          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end">
+            <MobileNav />
           </div>
         </div>
       )}
