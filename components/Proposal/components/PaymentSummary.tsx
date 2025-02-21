@@ -21,7 +21,6 @@ export default function PaymentSummary({
       await createCheckoutSession(selectedPackage, selectedAddOns);
     } catch (error) {
       console.error("Payment error:", error);
-      // You might want to show an error toast here
     }
   };
 
@@ -37,17 +36,17 @@ export default function PaymentSummary({
 
   return (
     <Card className="bg-zinc-950 border-zinc-800">
-      <CardHeader>
-        <CardTitle className="text-white">Payment Summary</CardTitle>
+      <CardHeader className="p-4 sm:p-6">
+        <CardTitle className="text-xl sm:text-2xl text-white">Payment Summary</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-4 sm:p-6">
         <div className="space-y-6">
-          <div className="bg-red-900/10 border border-red-500/20 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-2 text-white">Package</h3>
-            <div className="text-3xl font-bold text-red-400">
+          <div className="bg-red-900/10 border border-red-500/20 p-4 sm:p-6 rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white"> {packages[selectedPackage].name} Package</h3>
+            <div className="text-2xl sm:text-3xl font-bold text-red-400">
               {packages[selectedPackage].price}
             </div>
-            <div className="text-zinc-400">
+            <div className="text-sm sm:text-base text-zinc-400">
               {packages[selectedPackage].usdPrice}
             </div>
           </div>
@@ -59,9 +58,8 @@ export default function PaymentSummary({
               </h4>
               {selectedAddOns.map((addonId) => {
                 const addon = addOns.find((a) => a.id === addonId);
-                    console.log(addon)
                 return (
-                  <div key={addonId} className="flex justify-between text-sm">
+                  <div key={addonId} className="flex justify-between text-sm sm:text-base">
                     <span className="text-zinc-300">{addon?.feature}</span>
                     <span className="text-red-400">{addon?.price}</span>
                   </div>
@@ -71,9 +69,9 @@ export default function PaymentSummary({
           )}
 
           <div className="border-t border-zinc-700 pt-6">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <div className="space-y-1">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-lg sm:text-xl font-semibold text-white">
                   Total Payment
                 </h3>
                 <p className="text-sm text-zinc-400">
@@ -84,8 +82,8 @@ export default function PaymentSummary({
                 onClick={handlePayment}
                 disabled={isLoading}
                 className={`
-                  bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg 
-                  transition-colors duration-200 flex items-center gap-3
+                  w-full sm:w-auto bg-red-500 hover:bg-red-600 text-white px-4 sm:px-6 py-3 rounded-lg 
+                  transition-colors duration-200 flex items-center justify-center sm:justify-start gap-3
                   disabled:opacity-50 disabled:cursor-not-allowed
                 `}
               >
@@ -113,7 +111,7 @@ export default function PaymentSummary({
             </div>
           </div>
 
-          <div className="flex items-center justify-end gap-2 text-sm text-zinc-400">
+          <div className="flex items-center justify-center sm:justify-end gap-2 text-sm text-zinc-400">
             <svg
               className="w-4 h-4"
               fill="none"

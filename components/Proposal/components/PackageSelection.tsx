@@ -14,22 +14,20 @@ const PackageSelection = ({ selectedPackage, onPackageSelect }) => {
 
   return (
     <Card className="bg-zinc-950 border-zinc-800">
-      <CardHeader>
-        <div className="flex justify-between items-center">
+      <CardHeader className="p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="space-y-1">
-            <CardTitle className="text-white">Choose Your Package</CardTitle>
+            <CardTitle className="text-xl sm:text-2xl text-white">
+              Choose Your Package
+            </CardTitle>
             <p className="text-sm text-zinc-400">
               Select the perfect package for your business needs
             </p>
           </div>
-          <ComparisonToggleButton
-            isExpanded={isComparisonExpanded}
-            onClick={onToggleComparisonExpand}
-          />
         </div>
       </CardHeader>
-      <CardContent className="space-y-6">
-        <div className="grid grid-cols-3 gap-4">
+      <CardContent className="space-y-6 p-4 sm:p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {Object.entries(packages).map(([key, pkg]) => (
             <FeatureCard
               key={key}
@@ -43,11 +41,21 @@ const PackageSelection = ({ selectedPackage, onPackageSelect }) => {
           ))}
         </div>
 
-        {isComparisonExpanded && (
-          <ComparisonTable
-            features={packageFeatures}
-            tiers={["base", "standard", "premium"]}
+          <div className="mx-auto w-fit">
+            <ComparisonToggleButton
+            isExpanded={isComparisonExpanded}
+            onClick={onToggleComparisonExpand}
           />
+          </div>
+        {isComparisonExpanded && (
+          <div className="overflow-x-auto -mx-4 sm:mx-0">
+            <div className="min-w-[640px] px-4 sm:px-0">
+              <ComparisonTable
+                features={packageFeatures}
+                tiers={["base", "standard", "premium"]}
+              />
+            </div>
+          </div>
         )}
       </CardContent>
     </Card>

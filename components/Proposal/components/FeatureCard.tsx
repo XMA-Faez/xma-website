@@ -14,18 +14,18 @@ const FeatureCard = ({
   const defaultFeatureRenderer = (feature, value) => (
     <li
       key={typeof feature === "string" ? feature : feature.toString()}
-      className="flex items-center gap-2 text-zinc-300"
+      className="flex items-start sm:items-center gap-2 text-zinc-300"
     >
       {typeof value === "boolean" ? (
         value ? (
-          <Check className="text-red-400" size={16} />
+          <Check className="text-red-400 mt-1 sm:mt-0" size={16} />
         ) : (
-          <X className="text-zinc-600" size={16} />
+          <X className="text-zinc-600 mt-1 sm:mt-0" size={16} />
         )
       ) : (
-        <Check className="text-red-400" size={16} />
+        <Check className="text-red-400 mt-1 sm:mt-0" size={16} />
       )}
-      <span>
+      <span className="text-sm sm:text-base">
         {typeof feature === "object"
           ? feature
           : `${feature}${value !== true ? `: ${value}` : ""}`}
@@ -35,17 +35,23 @@ const FeatureCard = ({
 
   return (
     <div
-      className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
+      className={`p-4 sm:p-6 rounded-lg border-2 cursor-pointer transition-all h-full ${
         isSelected
           ? "border-red-500 bg-red-900/20"
           : "border-zinc-800 hover:border-zinc-600 bg-zinc-900"
       }`}
       onClick={onClick}
     >
-      <h3 className="text-xl font-bold mb-2 text-white">{name}</h3>
-      <div className="text-2xl font-semibold mb-1 text-white">{price}</div>
-      {usdPrice && <div className="text-zinc-400 mb-4">{usdPrice}</div>}
-      <ul className="space-y-2">
+      <h3 className="text-lg sm:text-xl font-bold mb-2 text-white">{name}</h3>
+      <div className="text-xl sm:text-2xl font-semibold mb-1 text-white">
+        {price}
+      </div>
+      {usdPrice && (
+        <div className="text-sm sm:text-base text-zinc-400 mb-4">
+          {usdPrice}
+        </div>
+      )}
+      <ul className="space-y-3">
         {Array.isArray(features)
           ? features.map((feature, index) =>
               defaultFeatureRenderer(feature, true),

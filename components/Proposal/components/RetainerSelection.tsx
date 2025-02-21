@@ -2,7 +2,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import ComparisonToggleButton from "./ComparisonToggleButton";
 import ComparisonTable from "./ComparisonTable";
 import FeatureCard from "./FeatureCard";
-import { retainers } from "@/data/proposalData";
 
 const RetainerSelection = ({
   selectedRetainer,
@@ -48,9 +47,9 @@ const RetainerSelection = ({
 
   return (
     <Card className="bg-zinc-950 border-zinc-800">
-      <CardHeader>
-        <div className="flex justify-between items-center">
-          <CardTitle className="text-white">
+      <CardHeader className="p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <CardTitle className="text-xl sm:text-2xl text-white">
             Monthly Retainer Selection
           </CardTitle>
           <ComparisonToggleButton
@@ -59,27 +58,6 @@ const RetainerSelection = ({
           />
         </div>
       </CardHeader>
-      <CardContent className="space-y-6">
-        <div className="grid grid-cols-3 gap-4">
-          {Object.entries(retainers).map(([key, retainer]) => (
-            <FeatureCard
-              key={key}
-              name={retainer.name}
-              price={retainer.price}
-              features={retainer.features}
-              isSelected={selectedRetainer === key}
-              onClick={() => onRetainerSelect(key)}
-            />
-          ))}
-        </div>
-
-        {isExpanded && (
-          <ComparisonTable
-            features={retainerFeatures}
-            tiers={["base", "standard", "premium"]}
-          />
-        )}
-      </CardContent>
     </Card>
   );
 };
