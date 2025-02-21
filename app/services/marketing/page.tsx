@@ -36,7 +36,7 @@ const PerformanceMarketingPage = () => {
           <div className="w-full h-full bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center" />
         </div>
         <div className="relative z-20 text-center px-4">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-6">
+          <h1 className="font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-6">
             Performance Marketing
           </h1>
           <p className="text-xl md:text-2xl text-zinc-300 max-w-2xl mx-auto">

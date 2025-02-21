@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsAndConditionsArticle = () => {
   return (
-    <article className="max-w-6xl pt-40 mx-auto px-4 py-8 text-zinc-300">
+    <article className="container pt-40 mx-auto px-4 py-8 text-zinc-300">
       <header className="mb-12">
         <h1 className="text-4xl leading-[1.2] font-bold mb-4 text-center bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
           XMA Agency - Terms and Conditions

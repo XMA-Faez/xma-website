@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-  @apply md:text-5xl text-4xl font-bold leading-[1.3];
+  @apply text-5xl md:text-6xl font-bold md:leading-[1.3];
 }
 
 h2 {

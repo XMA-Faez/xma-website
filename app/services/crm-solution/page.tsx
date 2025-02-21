@@ -89,7 +89,7 @@ const CRMSolutionsPage = () => {
         </div>
         <div className="relative z-20 text-center px-4">
           <motion.h1
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-6"
+            className="font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
