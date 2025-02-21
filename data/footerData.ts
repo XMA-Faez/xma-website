@@ -63,10 +63,6 @@ const footerData = {
       href: "/about",
     },
     {
-      text: "Our Process",
-      href: "/process",
-    },
-    {
       text: "Proposal",
       href: "/proposal",
     },
@@ -78,12 +74,12 @@ const footerData = {
   legal: [
     {
       text: "Terms of Service",
-      href: "/terms",
+      href: "/terms-conditions",
       icon: FileText,
     },
     {
       text: "Privacy Policy",
-      href: "/privacy",
+      href: "/privacy-policy",
       icon: Shield,
     },
   ],
