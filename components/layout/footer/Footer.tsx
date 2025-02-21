@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="py-12 bg-black/40 backdrop-blur-sm border-t border-zinc-800/60">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
