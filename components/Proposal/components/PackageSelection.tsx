@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import ComparisonToggleButton from "./ComparisonToggleButton";
 import ComparisonTable from "./ComparisonTable";
 import FeatureCard from "./FeatureCard";
 import { packages, packageFeatures } from "@/data/proposalData";
 
-const PackageSelection = ({
-  selectedPackage,
-  onPackageSelect,
-  isExpanded,
-  onToggleExpand,
-}) => {
+const PackageSelection = ({ selectedPackage, onPackageSelect }) => {
+  const [isComparisonExpanded, setIsComparisonExtended] = useState(false);
+
+  function onToggleComparisonExpand() {
+    setIsComparisonExtended(!isComparisonExpanded);
+  }
+
   return (
     <Card className="bg-zinc-950 border-zinc-800">
       <CardHeader>
@@ -22,8 +23,8 @@ const PackageSelection = ({
             </p>
           </div>
           <ComparisonToggleButton
-            isExpanded={isExpanded}
-            onClick={onToggleExpand}
+            isExpanded={isComparisonExpanded}
+            onClick={onToggleComparisonExpand}
           />
         </div>
       </CardHeader>
@@ -42,7 +43,7 @@ const PackageSelection = ({
           ))}
         </div>
 
-        {isExpanded && (
+        {isComparisonExpanded && (
           <ComparisonTable
             features={packageFeatures}
             tiers={["base", "standard", "premium"]}
