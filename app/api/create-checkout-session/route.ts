@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { lineItems } = body;
-    const headersList = headers();
+    const headersList = await headers();
     const origin = headersList.get('origin') || 'http://localhost:3000';
 
     if (!lineItems?.length) {
@@ -16,7 +16,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // Create Checkout Session
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       line_items: lineItems,
@@ -25,13 +24,12 @@ export async function POST(req: Request) {
       metadata: {
         items: JSON.stringify(lineItems.map(item => item.price))
       },
-      // Add any additional configuration here
       billing_address_collection: 'required',
       phone_number_collection: {
         enabled: true,
       },
-      customer_email: undefined, // Optional: Add if you want to prefill email
-      locale: 'en', // Add your preferred locale
+      customer_email: undefined, 
+      locale: 'en', 
     });
 
     return NextResponse.json({ sessionId: session.id });
