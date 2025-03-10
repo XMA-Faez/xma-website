@@ -1,15 +1,7 @@
 // app/thank-you/page.js
 import React from "react";
 import Link from "next/link";
-import {
-  CheckCircle,
-  Calendar,
-  ChevronRight,
-  ArrowLeft,
-  Clock,
-  Phone,
-  Share2,
-} from "lucide-react";
+import { CheckCircle, Calendar, ArrowLeft, Clock, Phone } from "lucide-react";
 
 export const metadata = {
   title: "Thank You - XMA Agency",

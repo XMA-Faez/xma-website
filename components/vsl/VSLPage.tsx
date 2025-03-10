@@ -1,7 +1,7 @@
 // components/VSLPage.jsx
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Play,
@@ -11,11 +11,8 @@ import {
   Bot,
   BarChart3,
   Check,
-  ChevronRight,
-  MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 import FloatingCTA from "./FloatingCTA";
 import SidebarCTA from "./SidebarCTA";
@@ -28,6 +25,7 @@ import { PackageProvider } from "@/context/PackageContext";
 
 // Import lead tracking utility
 import { submitLeadForm } from "@/lib/leadTracking";
+import Link from "next/link";
 
 const VSLPage = () => {
   // Add a state to track when the video has been watched
@@ -149,6 +147,11 @@ const VSLPage = () => {
                 Dubai's top businesses trust our 4-step system to grow
                 consistently month after month
               </p>
+              <Link href="#cta" className="transition duration-300">
+                <button className="button--calypso mt-md inline-block relative button bg-red-500 px-8 py-3">
+                  <span>Book Discovery Call</span>
+                </button>
+              </Link>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
@@ -373,9 +376,6 @@ const VSLPage = () => {
         {/* Benefits Section */}
         <BusinessBenefits />
 
-        {/* Pricing Section */}
-        <PricingPackages />
-
         {/* Social Proof Section */}
         <div className="bg-zinc-900/30 py-16">
           <div className="container mx-auto px-4">
@@ -428,8 +428,8 @@ const VSLPage = () => {
         <FAQ />
 
         {/* Guarantee & CTA Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
+        <div id="cta" className="container scroll-mt-20 mx-auto px-4 py-16">
+          <div className="max-w-8xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -452,169 +452,7 @@ const VSLPage = () => {
                   you can have your money back, no questions asked.
                 </p>
 
-                {showCTA ? (
-                  <div>
-                    <Card className="max-w-md mx-auto bg-zinc-800/50 border-zinc-700">
-                      <div className="p-6">
-                        <h3 className="text-2xl font-bold mb-4">
-                          Ready to grow your business?
-                        </h3>
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                          <div>
-                            <input
-                              type="text"
-                              name="name"
-                              placeholder="Your Name"
-                              value={formData.name}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            />
-                          </div>
-                          <div>
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="Your Email"
-                              value={formData.email}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            />
-                          </div>
-                          <div>
-                            <input
-                              type="text"
-                              name="company"
-                              placeholder="Company Name"
-                              value={formData.company}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            />
-                          </div>
-                          <div>
-                            <input
-                              type="tel"
-                              name="phone"
-                              placeholder="Phone Number"
-                              value={formData.phone}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            />
-                          </div>
-
-                          {/* BANT Questions */}
-                          <div>
-                            <select
-                              name="budget"
-                              value={formData.budget}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            >
-                              <option value="" disabled>
-                                Your marketing budget?
-                              </option>
-                              <option value="5000-10000">
-                                5,000 - 10,000 AED
-                              </option>
-                              <option value="10000-20000">
-                                10,000 - 20,000 AED
-                              </option>
-                              <option value="20000-30000">
-                                20,000 - 30,000 AED
-                              </option>
-                              <option value="30000+">30,000+ AED</option>
-                            </select>
-                          </div>
-
-                          <div>
-                            <select
-                              name="authority"
-                              value={formData.authority}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            >
-                              <option value="" disabled>
-                                Your role in decision making?
-                              </option>
-                              <option value="final">
-                                Final Decision Maker
-                              </option>
-                              <option value="key">Key Influencer</option>
-                              <option value="part">
-                                Part of Decision Committee
-                              </option>
-                              <option value="research">
-                                Researching Options
-                              </option>
-                            </select>
-                          </div>
-
-                          <div>
-                            <select
-                              name="need"
-                              value={formData.need}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            >
-                              <option value="" disabled>
-                                Your primary marketing challenge?
-                              </option>
-                              <option value="leads">Getting More Leads</option>
-                              <option value="conversion">
-                                Improving Conversion Rates
-                              </option>
-                              <option value="awareness">Brand Awareness</option>
-                              <option value="automation">
-                                Marketing Automation
-                              </option>
-                            </select>
-                          </div>
-
-                          <div>
-                            <select
-                              name="timeline"
-                              value={formData.timeline}
-                              onChange={handleInputChange}
-                              required
-                              className="w-full p-3 rounded-lg bg-zinc-700 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                            >
-                              <option value="" disabled>
-                                When do you want to start?
-                              </option>
-                              <option value="immediate">Immediately</option>
-                              <option value="1month">Within 1 month</option>
-                              <option value="3months">Within 3 months</option>
-                              <option value="planning">
-                                Just planning ahead
-                              </option>
-                            </select>
-                          </div>
-                          <Button
-                            type="submit"
-                            className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium text-lg transition duration-300"
-                          >
-                            Schedule a Strategy Call
-                          </Button>
-                        </form>
-                      </div>
-                    </Card>
-                  </div>
-                ) : (
-                  <Button
-                    className="bg-red-600 hover:bg-red-700 text-white py-6 px-8 rounded-xl font-medium text-lg transition duration-300 inline-flex items-center gap-2"
-                    onClick={() => setShowCTA(true)}
-                  >
-                    <MessageSquare size={20} />
-                    Schedule a Free Strategy Call
-                    <ChevronRight size={20} />
-                  </Button>
-                )}
+                <BookingIframe />
               </div>
             </motion.div>
           </div>

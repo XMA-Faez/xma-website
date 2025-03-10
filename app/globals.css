@@ -156,7 +156,6 @@ button::after {
 .button--calypso span {
   display: block;
   position: relative;
-  mix-blend-mode: difference;
   z-index: 10;
 }
 

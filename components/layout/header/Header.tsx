@@ -80,7 +80,7 @@ export function Header() {
           </div>
 
           {/* CTA Button */}
-          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end">
+          <div className="flex-grow opacity-0 flex-shrink-0 basis-0 flex justify-end">
             <Link href="/proposal">
               <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                 Get Started
