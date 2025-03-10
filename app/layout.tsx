@@ -36,7 +36,7 @@ export default function RootLayout({
         <Theme appearance="dark" grayColor="slate">
           {/* <AnimatedCursorComponent /> */}
           <Header />
-          <main>{children}</main>
+          <main className="pt-24 bg-zinc-950">{children}</main>
           <Footer />
           <style>
             {`

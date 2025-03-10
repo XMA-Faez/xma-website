@@ -2,12 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg: #000000;
-  --fg: #ededed;
-  --primary: #f0f0f0;
-  --secondary: cyan;
-  --accent: purple;
+/* Add these to your globals.css file */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 90% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 0 90% 60%;
+    --radius: 0.75rem;
+    --bg: #000000;
+    --fg: #ededed;
+    --primary: #f0f0f0;
+    --secondary: cyan;
+    --accent: purple;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 15, 15, 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(64, 64, 64, 0.7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.8);
+}
+
+/* Custom video player styles */
+.video-controls-hidden::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent;
+}
+
+/* Glass card effect */
+.glass-card {
+  @apply bg-zinc-900/40 backdrop-blur-sm border border-zinc-800 hover:border-red-600/50 transition-all duration-300;
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #1a1a1a, #0f0f0f, #2c1212, #220b0b);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .radix-themes ::selection {
