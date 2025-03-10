@@ -17,14 +17,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-// Import custom components
 import FloatingCTA from "./FloatingCTA";
 import SidebarCTA from "./SidebarCTA";
 import ClientTestimonials from "./ClientTestimonials";
 import BusinessBenefits from "./BusinessBenefits";
 import PricingPackages from "./PricingPackages";
 import FAQ from "./FAQ";
+import BookingIframe from "./BookingIframe";
 import { PackageProvider } from "@/context/PackageContext";
+
+// Import lead tracking utility
+import { submitLeadForm } from "@/lib/leadTracking";
 
 const VSLPage = () => {
   // Add a state to track when the video has been watched
@@ -83,11 +86,34 @@ const VSLPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission - could integrate with your CRM
-    console.log("Form submitted:", formData);
-    alert("Thanks for your interest! Our team will contact you shortly.");
+
+    try {
+      // Submit to tracking/CRM system
+      const result = await submitLeadForm(formData, "vsl-main-cta");
+
+      // Show success message
+      alert("Thanks for your interest! Our team will contact you shortly.");
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        budget: "",
+        authority: "",
+        need: "",
+        timeline: "",
+      });
+
+      // Hide CTA
+      setShowCTA(false);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an error submitting your form. Please try again.");
+    }
   };
 
   // Format time from seconds to MM:SS
@@ -402,7 +428,7 @@ const VSLPage = () => {
         <FAQ />
 
         {/* Guarantee & CTA Section */}
-        <div id="cta" className="container scroll-mt-20 mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}

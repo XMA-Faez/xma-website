@@ -75,22 +75,6 @@ const SidebarCTA = ({ scrollThreshold = 300 }) => {
                   Schedule a Call
                 </Button>
 
-                <Button
-                  variant="outline"
-                  className="w-full border-zinc-700 text-zinc-300 hover:bg-zinc-800 py-2 rounded-lg font-medium transition duration-300 flex items-center justify-center gap-1"
-                  onClick={() => {
-                    // Scroll to pricing section - you might need to adjust this selector
-                    const pricingSection =
-                      document.getElementById("pricing") ||
-                      document.querySelector('[data-section="pricing"]');
-                    if (pricingSection) {
-                      pricingSection.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  View Packages
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
               </div>
             </div>
           </div>
