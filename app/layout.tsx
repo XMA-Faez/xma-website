@@ -21,6 +21,10 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "XMA Agency",
   description: "XMA Agency is a digital marketing agency.",
+  appleWebApp: {
+    title: "XMA Agency",
+    statusBarStyle: "black-translucent",
+  }
 };
 
 export default function RootLayout({

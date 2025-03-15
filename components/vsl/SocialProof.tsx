@@ -105,11 +105,11 @@ const CountingNumber = ({
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="font-extrabold"
+      className="font-extrabold text-2xl md:text-5xl"
     >
       {prefix}
       {displayValue}
-      {suffix}
+        {suffix}
     </motion.div>
   );
 };
@@ -152,7 +152,7 @@ const SocialProof = () => {
                 suffix={metric.suffix || ""}
               />
             </div>
-            <div className="text-zinc-400">{metric.label}</div>
+            <div className="text-zinc-400 text-sm md:text-lg">{metric.label}</div>
           </motion.div>
         ))}
       </div>

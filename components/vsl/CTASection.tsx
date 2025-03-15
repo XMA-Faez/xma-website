@@ -7,9 +7,9 @@ import { MessageSquare, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import BookingIframe from "./BookingIframe";
 
-const CTASection = ({ id }) => {
+const CTASection = ({ ref }) => {
   return (
-    <section id={id} className="py-16">
+    <section ref={ref} className="py-16 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
