@@ -1,17 +1,67 @@
-// app/system/page.js
 "use client";
 
 import React, { useRef } from 'react';
+import dynamic from 'next/dynamic';
+
+// Loading placeholders
+const LoadingVideo = () => (
+  <div className="w-full aspect-video bg-zinc-900 rounded-xl animate-pulse"></div>
+);
+
+const LoadingSection = () => (
+  <div className="w-full h-96 flex items-center justify-center">
+    <div className="w-8 h-8 border-4 border-red-600/30 border-t-red-600 rounded-full animate-spin"></div>
+  </div>
+);
+
+// Eagerly load critical above-the-fold component
 import HeroSection from './HeroSection';
-import AdsCarousel from './AdsCarousel';
-import PainPoints from './PainPoints';
-import Solutions from './Solutions';
-import LogoMarquee from './LogoMarquee';
-import Testimonials from './Testimonials';
-import SocialProof from './SocialProof';
-import FAQ from './FAQ';
-import CTASection from './CTASection';
-import { motion } from 'framer-motion';
+
+// Dynamically load below-the-fold components with code splitting
+const AdsCarousel = dynamic(() => import('./AdsCarousel'), {
+  loading: () => <LoadingVideo />,
+  ssr: false // Client-side only rendering for this heavy component
+});
+
+const PainPoints = dynamic(() => import('./PainPoints'), {
+  loading: () => <LoadingSection />,
+  ssr: true
+});
+
+const Solutions = dynamic(() => import('./Solutions'), {
+  loading: () => <LoadingSection />,
+  ssr: true
+});
+
+const LogoMarquee = dynamic(() => import('./LogoMarquee'), {
+  loading: () => <LoadingSection />,
+  ssr: true
+});
+
+const Testimonials = dynamic(() => import('./Testimonials'), {
+  loading: () => <LoadingSection />,
+  ssr: true
+});
+
+const SocialProof = dynamic(() => import('./SocialProof'), {
+  loading: () => <LoadingSection />,
+  ssr: true
+});
+
+const FAQ = dynamic(() => import('./FAQ'), {
+  loading: () => <LoadingSection />,
+  ssr: true
+});
+
+const CTASection = dynamic(() => import('./CTASection'), {
+  loading: () => <LoadingSection />,
+  ssr: true
+});
+
+// Simplified motion component to avoid importing the full framer-motion library
+const SimpleMotion = ({ children, className }) => {
+  return <div className={className}>{children}</div>;
+};
 
 export default function SystemPage() {
   const ctaRef = useRef(null);
@@ -30,20 +80,14 @@ export default function SystemPage() {
       {/* Ads Carousel */}
       <section className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <SimpleMotion className="text-center mb-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
               Our Work
             </h2>
             <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
               Check out the high-quality videos we create for our clients
             </p>
-          </motion.div>
+          </SimpleMotion>
           
           <AdsCarousel />
         </div>
@@ -52,58 +96,30 @@ export default function SystemPage() {
       {/* Pain Points */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <SimpleMotion className="text-center mb-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
               Challenges Dubai Businesses Face
             </h2>
             <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
               Are you struggling with any of these marketing challenges?
             </p>
-          </motion.div>
+          </SimpleMotion>
           
           <PainPoints />
-          
-          {/* <motion.div */}
-          {/*   initial={{ opacity: 0, y: 20 }} */}
-          {/*   whileInView={{ opacity: 1, y: 0 }} */}
-          {/*   transition={{ duration: 0.5, delay: 0.3 }} */}
-          {/*   viewport={{ once: true }} */}
-          {/*   className="text-center mt-10" */}
-          {/* > */}
-          {/*   <button  */}
-          {/*     onClick={() => scrollToSection(solutionsRef)} */}
-          {/*     className="border border-red-600 text-red-500 hover:bg-red-600/10 px-6 py-3 rounded-lg font-medium transition-colors duration-300 inline-flex items-center gap-2" */}
-          {/*   > */}
-          {/*     Discover the Solution */}
-          {/*     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg> */}
-          {/*   </button> */}
-          {/* </motion.div> */}
         </div>
       </section>
       
       {/* Solutions */}
       <section ref={solutionsRef} className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <SimpleMotion className="text-center mb-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
               Our Proven 4-Step Solution
             </h2>
             <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
               A streamlined system that delivers qualified leads on autopilot
             </p>
-          </motion.div>
+          </SimpleMotion>
           
           <Solutions />
         </div>
@@ -112,17 +128,11 @@ export default function SystemPage() {
       {/* Logo Marquee */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
-          >
+          <SimpleMotion className="text-center mb-8">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
               Trusted by Dubai's Top Businesses
             </h2>
-          </motion.div>
+          </SimpleMotion>
           
           <LogoMarquee />
         </div>
@@ -131,20 +141,14 @@ export default function SystemPage() {
       {/* Testimonials */}
       <section className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <SimpleMotion className="text-center mb-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
               What Our Clients Say
             </h2>
             <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
               Success stories from businesses just like yours
             </p>
-          </motion.div>
+          </SimpleMotion>
           
           <Testimonials />
         </div>
@@ -160,27 +164,23 @@ export default function SystemPage() {
       {/* Q&A */}
       <section className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <SimpleMotion className="text-center mb-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
               Everything you need to know about our marketing system
             </p>
-          </motion.div>
+          </SimpleMotion>
           
           <FAQ />
         </div>
       </section>
       
       {/* Final CTA */}
-      <CTASection id="book-call" ref={ctaRef} />
+      <div id="book-call">
+        <CTASection ref={ctaRef} />
+      </div>
     </div>
   );
 }
