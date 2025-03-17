@@ -19,14 +19,13 @@ export function MainNav() {
       <NavigationMenuList className="flex items-center space-x-4">
         {/* Home */}
         <NavigationMenuItem>
-          <Link href="/" passHref>
-            <NavigationMenuLink
-              className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
-                ${pathname === "/" ? "text-white font-medium" : ""}`}
-            >
-              Home
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink
+            href="/"
+            className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
+${pathname === "/" ? "text-white font-medium" : ""}`}
+          >
+            Home
+          </NavigationMenuLink>
         </NavigationMenuItem>
 
         {/* Services Dropdown */}
@@ -62,24 +61,22 @@ export function MainNav() {
 
         {/* About */}
         <NavigationMenuItem>
-          <Link href="/about" passHref>
-            <NavigationMenuLink
-              className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
-                ${pathname === "/about" ? "text-white font-medium" : ""}`}
-            >
-              About
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink
+            href="/about"
+            className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
+${pathname === "/about" ? "text-white font-medium" : ""}`}
+          >
+            About
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact" passHref>
-            <NavigationMenuLink
-              className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
-                ${pathname === "/about" ? "text-white font-medium" : ""}`}
-            >
-              Contact
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink
+            href="/contact"
+            className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
+${pathname === "/about" ? "text-white font-medium" : ""}`}
+          >
+            Contact
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
