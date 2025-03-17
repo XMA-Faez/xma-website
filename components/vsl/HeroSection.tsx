@@ -63,27 +63,28 @@ const HeroSection = ({ onCtaClick }) => {
           className="max-w-4xl mx-auto mb-12"
         >
           <div className="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
-            <video
-              ref={videoRef}
-              className="w-full h-full object-cover"
-              poster="/video-poster.jpg"
-              onEnded={() => setIsPlaying(false)}
-            >
-              <source src="/vsl-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Video Controls */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-              <div className="flex items-center justify-between">
-                <button
-                  onClick={handlePlayPause}
-                  className="bg-red-600 hover:bg-red-700 rounded-full p-3 transition"
-                >
-                  {isPlaying ? <Pause size={24} /> : <Play size={24} />}
-                </button>
-              </div>
-            </div>
+            <iframe
+              src="https://player.cloudinary.com/embed/?cloud_name=dw1j7izud&public_id=Amir_-_XMA_-_VSL_-_Draft_5_compressed_derxxx&profile=Looping"
+              width="640"
+              height="360"
+              style={{
+                height: "auto",
+                width: "100%",
+                aspectRatio: "640 / 360",
+              }}
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4"> */}
+            {/*   <div className="flex items-center justify-between"> */}
+            {/*     <button */}
+            {/*       onClick={handlePlayPause} */}
+            {/*       className="bg-red-600 hover:bg-red-700 rounded-full p-3 transition" */}
+            {/*     > */}
+            {/*       {isPlaying ? <Pause size={24} /> : <Play size={24} />} */}
+            {/*     </button> */}
+            {/*   </div> */}
+            {/* </div> */}
           </div>
         </motion.div>
 

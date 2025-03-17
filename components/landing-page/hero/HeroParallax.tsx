@@ -116,8 +116,8 @@ export const Header = () => {
         provides everything you need.
       </p>
       <Link href="" className="transition duration-300">
-        <button className="button--calypso inline-block relative button bg-fg px-8 py-3">
-          <span>Book Discovery Call</span>
+        <button className="button--calypso inline-block relative button !bg-blend-difference bg-fg px-8 py-3">
+          <span className="mix-blend-difference">Book Discoery Call</span>
         </button>
       </Link>
     </div>
