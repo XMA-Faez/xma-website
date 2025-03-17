@@ -1,68 +1,66 @@
 // components/BookingIframe.jsx
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import Script from "next/script";
 
 const BookingIframe = ({ className = "" }) => {
   const iframeRef = useRef(null);
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    // Add the external script
-    const script = document.createElement("script");
-    script.src = "https://link.xmaboost.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Clean up
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  useEffect(() => {
-    // Function to adjust iframe height based on content
-    const adjustIframeHeight = () => {
-      if (iframeRef.current && containerRef.current) {
-        try {
-          // Wait for iframe to load
-          iframeRef.current.onload = () => {
-            // Try to get the height from the iframe content
-            const height =
-              iframeRef.current.contentWindow.document.body.scrollHeight;
-            iframeRef.current.style.height = `${height}px`;
-          };
-        } catch (error) {
-          console.log("Could not adjust iframe height:", error);
-        }
+  // Handle iframe height adjustment after load
+  const adjustIframeHeight = () => {
+    if (iframeRef.current) {
+      try {
+        // Set a reasonable starting height
+        iframeRef.current.style.height = '500px';
+        
+        // Try to adjust based on content when loaded
+        iframeRef.current.onload = () => {
+          try {
+            const height = iframeRef.current.contentWindow.document.body.scrollHeight;
+            if (height > 0) {
+              iframeRef.current.style.height = `${height}px`;
+            }
+          } catch (error) {
+            // Cross-origin restrictions may prevent accessing content
+            console.log("Height adjustment failed, using default height");
+          }
+        };
+      } catch (error) {
+        console.log("Could not adjust iframe:", error);
       }
-    };
-
-    // Set initial height and add event listener
-    adjustIframeHeight();
-    window.addEventListener("resize", adjustIframeHeight);
-
-    // Clean up
-    return () => {
-      window.removeEventListener("resize", adjustIframeHeight);
-    };
-  }, []);
+    }
+  };
 
   return (
-    <div ref={containerRef} className={`w-full ${className}`}>
-      <iframe
-        ref={iframeRef}
-        src="https://link.xmaboost.com/widget/booking/Tj3i8x3FyT8sQOayn89T"
-        style={{
-          width: "100%",
-          border: "none",
-          minHeight: "450px", // Starting height before it adjusts
-        }}
-        id="a3mOsZixFuC2B0xuDyJz_1741602279253"
-        title="XMA Booking System"
+    <>
+      {/* Load the external script with next/script for better performance */}
+      <Script
+        src="https://link.xmaboost.com/js/form_embed.js"
+        strategy="lazyOnload"
+        onLoad={() => console.log("Booking script loaded")}
       />
-    </div>
+      
+      <div ref={containerRef} className={`w-full ${className}`}>
+        <iframe
+          ref={iframeRef}
+          src="https://link.xmaboost.com/widget/booking/Tj3i8x3FyT8sQOayn89T"
+          style={{
+            width: "100%",
+            border: "none",
+            minHeight: "450px", // Starting height before it adjusts
+            height: "500px"
+          }}
+          id="a3mOsZixFuC2B0xuDyJz_1741602279253"
+          title="XMA Booking System"
+          loading="lazy" // Add lazy loading
+          onLoad={adjustIframeHeight}
+        />
+      </div>
+    </>
   );
 };
 
-export default BookingIframe;
+// Use React.memo to prevent unnecessary re-renders
+export default React.memo(BookingIframe);

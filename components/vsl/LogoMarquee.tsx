@@ -1,136 +1,61 @@
 // components/LogoMarquee.jsx
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { memo } from "react";
 
 // Sample client logos - replace with your actual client logos
 const clientLogos = [
-  { id: 1, name: "Packman", logo: "/packman_Logo.jpg" },
-  { id: 2, name: "The Flower Guys", logo: "/flowerguys_logo.jpg" },
-  { id: 3, name: "Hairology", logo: "/hairology_logo.jpg" },
-  { id: 4, name: "The Fabrique", logo: "/fabrique_logo.jpg" },
-  { id: 5, name: "4Matic Rentals", logo: "/4matic_logo.jpg" },
-  { id: 6, name: "Wavesound Studio", logo: "/wavesound_logo.jpg" },
-  { id: 7, name: "Client 7", logo: "/client7_logo.jpg" },
-  { id: 8, name: "Client 8", logo: "/client8_logo.jpg" },
+  { id: 1, name: "Packman" },
+  { id: 2, name: "The Flower Guys" },
+  { id: 3, name: "Hairology" },
+  { id: 4, name: "The Fabrique" },
+  { id: 5, name: "4Matic Rentals" },
+  { id: 6, name: "Wavesound Studio" },
+  { id: 7, name: "Client 7" },
+  { id: 8, name: "Client 8" },
 ];
 
+// Memoized logo component
+const Logo = memo(({ name }) => (
+  <div className="flex items-center justify-center h-16 px-4 bg-zinc-900/50 rounded-xl backdrop-blur-sm border border-zinc-800">
+    <span className="text-zinc-400 font-medium">{name}</span>
+  </div>
+));
+
+// Using CSS animations instead of framer-motion for better performance
 const LogoMarquee = () => {
   return (
     <div className="relative overflow-hidden py-6">
       {/* First Marquee - Left to Right */}
-      <div className="flex items-center">
-        <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 25,
-            ease: "linear",
-          }}
-          className="flex items-center space-x-12 whitespace-nowrap"
-        >
+      <div className="flex items-center mb-8">
+        <div className="animate-marquee flex items-center space-x-12 whitespace-nowrap">
           {clientLogos.map((client) => (
-            <React.Fragment key={client.id}>
-              <div className="flex items-center justify-center h-16 px-4 bg-zinc-900/50 rounded-xl backdrop-blur-sm border border-zinc-800">
-                {/* If you have actual logos */}
-                {/* <img src={client.logo} alt={client.name} className="h-10 w-auto" /> */}
-
-                {/* If you don't have logos yet, use the name */}
-                <span className="text-zinc-400 font-medium">{client.name}</span>
-              </div>
-            </React.Fragment>
+            <Logo key={client.id} name={client.name} />
           ))}
-        </motion.div>
-
-        {/* Duplicate for seamless looping */}
-        <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 25,
-            ease: "linear",
-          }}
-          className="flex items-center space-x-12 whitespace-nowrap"
-        >
+          {/* Add duplicates for seamless looping */}
           {clientLogos.map((client) => (
-            <React.Fragment key={`dup-${client.id}`}>
-              <div className="flex items-center justify-center h-16 px-4 bg-zinc-900/50 rounded-xl backdrop-blur-sm border border-zinc-800">
-                {/* If you have actual logos */}
-                {/* <img src={client.logo} alt={client.name} className="h-10 w-auto" /> */}
-
-                {/* If you don't have logos yet, use the name */}
-                <span className="text-zinc-400 font-medium">{client.name}</span>
-              </div>
-            </React.Fragment>
+            <Logo key={`dup-${client.id}`} name={client.name} />
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Second Marquee - Right to Left (opposite direction) */}
-      <div className="flex items-center mt-8">
-        <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: 0 }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 30,
-            ease: "linear",
-          }}
-          className="flex items-center space-x-12 whitespace-nowrap"
-        >
+      <div className="flex items-center">
+        <div className="animate-marquee-reverse flex items-center space-x-12 whitespace-nowrap">
           {clientLogos
             .slice()
             .reverse()
             .map((client) => (
-              <React.Fragment key={`rev-${client.id}`}>
-                <div className="flex items-center justify-center h-16 px-4 bg-zinc-900/50 rounded-xl backdrop-blur-sm border border-zinc-800">
-                  {/* If you have actual logos */}
-                  {/* <img src={client.logo} alt={client.name} className="h-10 w-auto" /> */}
-
-                  {/* If you don't have logos yet, use the name */}
-                  <span className="text-zinc-400 font-medium">
-                    {client.name}
-                  </span>
-                </div>
-              </React.Fragment>
+              <Logo key={`rev-${client.id}`} name={client.name} />
             ))}
-        </motion.div>
-
-        {/* Duplicate for seamless looping */}
-        <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: 0 }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 30,
-            ease: "linear",
-          }}
-          className="flex items-center space-x-12 whitespace-nowrap"
-        >
+          {/* Add duplicates for seamless looping */}
           {clientLogos
             .slice()
             .reverse()
             .map((client) => (
-              <React.Fragment key={`rev-dup-${client.id}`}>
-                <div className="flex items-center justify-center h-16 px-4 bg-zinc-900/50 rounded-xl backdrop-blur-sm border border-zinc-800">
-                  {/* If you have actual logos */}
-                  {/* <img src={client.logo} alt={client.name} className="h-10 w-auto" /> */}
-
-                  {/* If you don't have logos yet, use the name */}
-                  <span className="text-zinc-400 font-medium">
-                    {client.name}
-                  </span>
-                </div>
-              </React.Fragment>
+              <Logo key={`rev-dup-${client.id}`} name={client.name} />
             ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Gradient Overlay - Fade edges */}
@@ -142,4 +67,4 @@ const LogoMarquee = () => {
   );
 };
 
-export default LogoMarquee;
+export default memo(LogoMarquee);
