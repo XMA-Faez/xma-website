@@ -9,7 +9,7 @@ import BookingIframe from "./BookingIframe";
 
 const CTASection = ({ ref }) => {
   return (
-    <section ref={ref} className="scroll-mt-20">
+    <section ref={ref} className="scroll-mt-20 md:my-16 mb-16">
       <div className="container max-w-7xl mx-auto md:px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
