@@ -9,15 +9,15 @@ import BookingIframe from "./BookingIframe";
 
 const CTASection = ({ ref }) => {
   return (
-    <section ref={ref} className="py-16 scroll-mt-20">
-      <div className="container mx-auto px-4">
+    <section ref={ref} className="scroll-mt-20">
+      <div className="container max-w-7xl mx-auto md:px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 text-center relative overflow-hidden"
+            className="bg-gradient-to-br py-16 from-zinc-900 to-zinc-950 md:rounded-2xl md:p-8 p-4 md:border border-zinc-800 text-center relative overflow-hidden"
           >
             {/* Background decorative elements */}
             <div className="absolute top-0 left-0 w-full h-full">
@@ -39,8 +39,8 @@ const CTASection = ({ ref }) => {
                 <span>100% Money Back Guarantee</span>
               </div>
 
-              <Card className="mx-auto bg-zinc-800/50 border-zinc-700">
-                <div className="p-6">
+              <Card className="mx-auto bg-transparent border-none">
+                <div className="">
                   <div className="flex items-center justify-center mb-4">
                     <MessageSquare className="w-6 h-6 text-red-500 mr-2" />
                     <h3 className="text-2xl font-bold">
