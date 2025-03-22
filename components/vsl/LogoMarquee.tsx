@@ -2,6 +2,7 @@
 "use client";
 import React, { memo } from "react";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 // Client logos with correct file paths, extensions, and specific styling requirements
 const clientLogos = [
@@ -9,55 +10,55 @@ const clientLogos = [
     id: 1, 
     name: "Packman", 
     image: "/logos/packman_Logo.png", 
-    className: "h-12 bg-white rounded-xl"
+    className: "h-auto p-8 rounded-xl"
   },
   { 
     id: 2, 
     name: "Casapons", 
     image: "/logos/Casapons.png", 
-    className: "h-12 rounded-xl bg-white rounded-xl" 
+    className: "w-full rounded-xl rounded-xl" 
   },
   { 
     id: 3, 
     name: "DXtreme", 
     image: "/logos/DXtreme.svg", 
-    className: "h-12 rounded-xl bg-white rounded-xl p-2" 
+    className: "w-full rounded-xl rounded-xl p-2" 
   },
   { 
     id: 4, 
     name: "4Matic", 
     image: "/logos/4Matic.jpg", 
-    className: "h-12 rounded-xl" 
+    className: "h-full rounded-xl" 
   },
   { 
     id: 5, 
     name: "WYZ", 
     image: "/logos/wyz-logo.png", 
-    className: "h-12 rounded-xl bg-white rounded-xl p-2" 
+    className: "h-12 rounded-xl rounded-xl p-2" 
   },
   { 
     id: 6, 
     name: "Tick", 
     image: "/logos/Tick.webp", 
-    className: "h-12 bg-white rounded-xl p-2" 
+    className: "w-full p-4 rounded-xl p-2" 
   },
   { 
     id: 7, 
     name: "ASUS", 
     image: "/logos/ASUS.png", 
-    className: "h-12 w-full rounded-xl bg-white" 
+    className: "w-full rounded-xl " 
   },
   { 
     id: 8, 
     name: "TFG", 
     image: "/logos/TFG.png", 
-    className: "h-12 w-full rounded-xl bg-white" 
+    className: "w-full p-4 rounded-xl " 
   },
 ];
 
 // Memoized logo component with custom styling per logo
 const Logo = memo(({ name, image, className }) => (
-  <div className="flex items-center justify-center h-16 w-40 mx-1 p-2 transition duration-300">
+  <div className="flex items-center bg-white rounded-xl justify-center h-16 w-40 p-2 mx-4 transition duration-300">
     <Image 
       src={image} 
       alt={`${name} logo`} 
@@ -69,13 +70,11 @@ const Logo = memo(({ name, image, className }) => (
   </div>
 ));
 
+Logo.displayName = "Logo";
+
 // Animation styles 
 const marqueeStyles = {
   animation: 'marquee 30s linear infinite',
-};
-
-const marqueeReverseStyles = {
-  animation: 'marquee-reverse 30s linear infinite',
 };
 
 // Keyframes calculation based on logo width and count
@@ -123,7 +122,7 @@ const LogoMarquee = () => {
     <div className="relative overflow-hidden py-6">
       {/* First Marquee - Left to Right */}
       <div className="flex mb-8 overflow-hidden">
-        <div style={marqueeStyles} className="flex whitespace-nowrap">
+        <Marquee className="">
           {clientLogos.map((client) => (
             <Logo 
               key={client.id} 
@@ -133,19 +132,19 @@ const LogoMarquee = () => {
             />
           ))}
           {/* Add duplicates for seamless looping */}
-          {clientLogos.map((client) => (
-            <Logo 
-              key={`dup-${client.id}`} 
-              name={client.name} 
-              image={client.image} 
-              className={client.className} 
-            />
-          ))}
-        </div>
+          {/* {clientLogos.map((client) => ( */}
+          {/*   <Logo  */}
+          {/*     key={`dup-${client.id}`}  */}
+          {/*     name={client.name}  */}
+          {/*     image={client.image}  */}
+          {/*     className={client.className}  */}
+          {/*   /> */}
+          {/* ))} */}
+        </Marquee>
       </div>
 
       {/* Gradient Overlay - Fade edges */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute z-10 inset-0 pointer-events-none">
         <div className="absolute left-0 w-24 h-full bg-gradient-to-r from-zinc-950 to-transparent"></div>
         <div className="absolute right-0 w-24 h-full bg-gradient-to-l from-zinc-950 to-transparent"></div>
       </div>

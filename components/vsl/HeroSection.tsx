@@ -280,10 +280,12 @@ const HeroSection = ({ onCtaClick }) => {
                     <RotateCcw size={18} />
                   </button>
                   
-                  <div className="relative">
+                  <div
+                    onMouseEnter={() => setShowVolumeControl(true)}
+                    onMouseLeave={() => setShowVolumeControl(false)}
+                    className="relative">
                     <button
                       onClick={handleMuteToggle}
-                      onMouseEnter={() => setShowVolumeControl(true)}
                       className="text-zinc-300 hover:text-white p-2 transition"
                     >
                       {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
