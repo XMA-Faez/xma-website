@@ -65,9 +65,14 @@ const PainPoints = () => {
           key={point.id}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          transition={{
+            duration: 0.5,
+            type: "tween",
+            ease: "easeInOut",
+            delay: index * 0.1,
+          }}
           viewport={{ once: true }}
-          className="bg-zinc-900/50 rounded-xl p-6 backdrop-blur-sm border border-zinc-800 hover:border-red-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-red-900/10"
+          className="bg-zinc-900/50 rounded-xl p-6 backdrop-blur-sm border border-zinc-800 hover:border-red-600/30 transition-colors duration-300 hover:shadow-lg hover:shadow-red-900/10"
         >
           <div className="flex flex-col h-full">
             <div className="bg-zinc-800/50 rounded-lg p-4 w-16 h-16 flex items-center justify-center mb-4">

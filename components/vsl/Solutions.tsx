@@ -106,7 +106,7 @@ const Solutions = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: step.id * 0.1 }}
                 viewport={{ once: true }}
-                className={`cursor-pointer rounded-xl p-3 md:p-4 backdrop-blur-sm border transition-all duration-300 ${
+                className={`cursor-pointer rounded-xl p-3 md:p-4 border transition-colors duration-300 ${
                   activeStep === step.id
                     ? "bg-zinc-800/70 border-red-600/50 shadow-lg shadow-red-900/10"
                     : "bg-zinc-900/30 border-zinc-800 hover:border-red-600/30"

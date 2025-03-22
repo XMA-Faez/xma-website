@@ -1,4 +1,3 @@
-// components/HeroSection.jsx
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
@@ -17,6 +16,7 @@ import {
   PlusCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Slider } from "@/components/ui/slider";
 
 const HeroSection = ({ onCtaClick }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -25,7 +25,8 @@ const HeroSection = ({ onCtaClick }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [showVolumeControl, setShowVolumeControl] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [showBigPlayButton, setShowBigPlayButton] = useState(true);
+  const videoRef = useRef(null);
   const progressBarRef = useRef(null);
 
   // Auto-play on mount with muted audio (to comply with browser policies)
@@ -71,6 +72,25 @@ const HeroSection = ({ onCtaClick }) => {
   // Track if this is the first play click
   const [isFirstPlay, setIsFirstPlay] = useState(true);
 
+  const handleBigPlayButtonClick = () => {
+    if (videoRef.current) {
+      // Reset to beginning
+      videoRef.current.currentTime = 0;
+      
+      // Unmute the video
+      videoRef.current.muted = false;
+      setIsMuted(false);
+      
+      // Play the video
+      videoRef.current.play();
+      setIsPlaying(true);
+      
+      // Hide the big play button after first interaction
+      setShowBigPlayButton(false);
+      setIsFirstPlay(false);
+    }
+  };
+
   const handlePlayPause = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -81,11 +101,11 @@ const HeroSection = ({ onCtaClick }) => {
         if (isFirstPlay) {
           videoRef.current.currentTime = 0;
           setIsFirstPlay(false);
+          
+          // If it's the first play, also unmute
+          videoRef.current.muted = false;
+          setIsMuted(false);
         }
-        
-        // Unmute when clicking play
-        videoRef.current.muted = false;
-        setIsMuted(false);
         
         videoRef.current.play();
       }
@@ -100,20 +120,7 @@ const HeroSection = ({ onCtaClick }) => {
     }
   };
 
-  const handleVolumeChange = (e) => {
-    const newVolume = parseFloat(e.target.value);
-    setVolume(newVolume);
-    if (videoRef.current) {
-      videoRef.current.volume = newVolume;
-      if (newVolume === 0) {
-        videoRef.current.muted = true;
-        setIsMuted(true);
-      } else if (isMuted) {
-        videoRef.current.muted = false;
-        setIsMuted(false);
-      }
-    }
-  };
+  // handleVolumeChange is now incorporated directly in the Slider component's onValueChange
 
   const handleProgressChange = (e) => {
     const newTime = parseFloat(e.target.value);
@@ -214,14 +221,27 @@ const HeroSection = ({ onCtaClick }) => {
           <div className="relative aspect-video bg-zinc-900 rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
             <video
               ref={videoRef}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover cursor-pointer"
               poster=""
               onEnded={() => setIsPlaying(false)}
+              onClick={showBigPlayButton ? handleBigPlayButtonClick : handlePlayPause}
               playsInline
             >
               <source src="https://res.cloudinary.com/dw1j7izud/video/upload/v1742200140/Amir_-_XMA_-_VSL_-_Draft_5_compressed_derxxx.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+
+            {/* Big Play Button - Only shown before first interaction */}
+            {showBigPlayButton && (
+              <div 
+                className="absolute inset-0 bg-black/50 flex items-center justify-center cursor-pointer z-20"
+                onClick={handleBigPlayButtonClick}
+              >
+                <div className="bg-red-600 hover:bg-red-700 rounded-full p-6 transition-all transform hover:scale-110">
+                  <Play size={60} />
+                </div>
+              </div>
+            )}
 
             {/* Video Controls */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent py-4 px-4">
@@ -271,29 +291,36 @@ const HeroSection = ({ onCtaClick }) => {
                     
                     {showVolumeControl && (
                       <div 
-                        className="absolute bottom-full left-0 bg-zinc-800 p-3 rounded-lg mb-2 flex flex-col items-center gap-2 shadow-lg"
+                        className="absolute -bottom-3 left-8 bg-zinc-800 p-3 rounded-lg mb-2 flex items-center gap-2 shadow-lg"
                         onMouseEnter={() => setShowVolumeControl(true)}
                         onMouseLeave={() => setShowVolumeControl(false)}
                       >
-                        <button onClick={increaseVolume} className="text-zinc-300 hover:text-white">
-                          <PlusCircle size={16} />
-                        </button>
-                        <input
-                          type="range"
-                          min="0"
-                          max="1"
-                          step="0.01"
-                          value={volume}
-                          onChange={handleVolumeChange}
-                          className="w-6 h-20 appearance-none cursor-pointer bg-zinc-700 rounded-full"
-                          style={{
-                            background: `linear-gradient(to top, #dc2626 ${volume * 100}%, #52525b ${volume * 100}%)`,
-                            writingMode: "bt-lr",
-                            WebkitAppearance: "slider-vertical"
-                          }}
-                        />
                         <button onClick={decreaseVolume} className="text-zinc-300 hover:text-white">
                           <MinusCircle size={16} />
+                        </button>
+                        <Slider
+                          value={[volume]}
+                          min={0}
+                          max={1}
+                          step={0.01}
+                          onValueChange={(value) => {
+                            const newVolume = value[0];
+                            setVolume(newVolume);
+                            if (videoRef.current) {
+                              videoRef.current.volume = newVolume;
+                              if (newVolume === 0) {
+                                videoRef.current.muted = true;
+                                setIsMuted(true);
+                              } else if (isMuted) {
+                                videoRef.current.muted = false;
+                                setIsMuted(false);
+                              }
+                            }
+                          }}
+                          className="w-20 h-6 cursor-pointer"
+                        />
+                        <button onClick={increaseVolume} className="text-zinc-300 hover:text-white">
+                          <PlusCircle size={16} />
                         </button>
                       </div>
                     )}
