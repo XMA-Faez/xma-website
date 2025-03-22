@@ -98,7 +98,7 @@ export default function SystemPage() {
         <div className="container mx-auto px-4">
           <SimpleMotion className="text-center mb-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
-              Challenges Dubai Businesses Face
+              Challenges Businesses Face
             </h2>
             <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
               Are you struggling with any of these marketing challenges?
@@ -130,7 +130,7 @@ export default function SystemPage() {
         <div className="container mx-auto px-4">
           <SimpleMotion className="text-center mb-8">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
-              Trusted by Dubai's Top Businesses
+              Trusted by Top Businesses
             </h2>
           </SimpleMotion>
           

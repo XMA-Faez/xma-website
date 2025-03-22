@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Can this work for my specific business?",
-    answer: "Our system has been successful across various industries in Dubai, from service-based businesses to retail and professional services. During our initial strategy call, we'll discuss your specific business needs and customize our approach accordingly."
+    answer: "Our system has been successful across various industries, from service-based businesses to retail and professional services. During our initial strategy call, we'll discuss your specific business needs and customize our approach accordingly."
   },
   {
     question: "Do you offer monthly retainer services?",

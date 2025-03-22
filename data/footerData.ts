@@ -14,18 +14,18 @@ const footerData = {
   company: {
     name: "XMA Agency",
     description:
-      "Dubai's premier digital marketing agency specializing in video production, CRM integration, and performance marketing. Transform your business with our comprehensive digital solutions.",
+      "Premier digital marketing agency specializing in video production, CRM integration, and performance marketing. Transform your business with our comprehensive digital solutions.",
     contact: [
       {
         icon: Phone,
-        text: "+971 XX XXX XXXX",
-        href: "tel:+971XXXXXXXX",
+        text: "+971 50 363 6856",
+        href: "tel:+971503636856",
         isClickable: true,
       },
       {
         icon: Mail,
-        text: "contact@xmaagency.com",
-        href: "mailto:contact@xmaagency.com",
+        text: "admin@xmaagency.com",
+        href: "mailto:admin@xmaagency.com",
         isClickable: true,
       },
       {

@@ -26,7 +26,7 @@ const AboutUsPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Dubai's premier digital marketing agency, specializing in video
+            Premier digital marketing agency, specializing in video
             production, performance marketing, and innovative CRM solutions.
           </motion.p>
         </div>

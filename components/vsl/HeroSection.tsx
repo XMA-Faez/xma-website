@@ -199,7 +199,7 @@ const HeroSection = ({ onCtaClick }) => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-zinc-400 max-w-2xl mx-auto mb-8"
           >
-            Dubai's top businesses trust our 4-step system to grow consistently
+            Top businesses trust our 4-step system to grow consistently
             month after month
           </motion.p>
         </div>
