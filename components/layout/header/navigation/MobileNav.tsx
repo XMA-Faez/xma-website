@@ -28,6 +28,7 @@ export function MobileNav() {
               key={item.name}
               href={item.href}
               className="text-zinc-300 hover:text-white transition-colors"
+              onClick={toggleMenu}
             >
               {item.name}
             </Link>
@@ -43,6 +44,7 @@ export function MobileNav() {
                   key={service.name}
                   href={service.href}
                   className="flex items-center space-x-2 py-2 text-zinc-300 hover:text-white transition-colors"
+                  onClick={toggleMenu}
                 >
                   <Icon className="h-4 w-4 text-red-500" />
                   <span>{service.name}</span>
@@ -50,7 +52,7 @@ export function MobileNav() {
               );
             })}
           </div>
-          <Link href="#cta" onClick={toggleMenu}>
+          <Link href="/#cta" onClick={toggleMenu}>
             <button className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
               Book Your Strategy Call
             </button>
