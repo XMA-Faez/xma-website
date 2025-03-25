@@ -51,9 +51,8 @@ export function MobileNav() {
             })}
           </div>
           <Link href="#cta" onClick={toggleMenu}>
-            <button
-              className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-              Get Started
+            <button className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              Book Your Strategy Call
             </button>
           </Link>
         </nav>
