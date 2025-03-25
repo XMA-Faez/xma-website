@@ -1,4 +1,5 @@
 import footerData from "@/data/footerData";
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -8,9 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
-              {footerData.company.name}
-            </h2>
+            <Image
+              src="/XMA-White.svg"
+              alt="XMA Logo"
+              width={200}
+              height={200}
+              className="mb-4"
+            />
             <p className="text-zinc-300 mb-6">
               {footerData.company.description}
             </p>

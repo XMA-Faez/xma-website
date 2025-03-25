@@ -62,10 +62,10 @@ const footerData = {
       text: "About Us",
       href: "/about",
     },
-    {
-      text: "Proposal",
-      href: "/proposal",
-    },
+    // {
+    //   text: "Proposal",
+    //   href: "/proposal",
+    // },
     {
       text: "Contact",
       href: "/contact",

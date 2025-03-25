@@ -139,20 +139,20 @@ export default function SystemPage() {
       </section>
       
       {/* Testimonials */}
-      <section className="py-16 bg-zinc-900/30">
-        <div className="container mx-auto px-4">
-          <SimpleMotion className="text-center mb-10">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-              Success stories from businesses just like yours
-            </p>
-          </SimpleMotion>
-          
-          <Testimonials />
-        </div>
-      </section>
+      {/* <section className="py-16 bg-zinc-900/30"> */}
+      {/*   <div className="container mx-auto px-4"> */}
+      {/*     <SimpleMotion className="text-center mb-10"> */}
+      {/*       <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4"> */}
+      {/*         What Our Clients Say */}
+      {/*       </h2> */}
+      {/*       <p className="text-xl text-zinc-400 max-w-2xl mx-auto"> */}
+      {/*         Success stories from businesses just like yours */}
+      {/*       </p> */}
+      {/*     </SimpleMotion> */}
+      {/*      */}
+      {/*     <Testimonials /> */}
+      {/*   </div> */}
+      {/* </section> */}
       
       {/* Social Proof */}
       <section className="py-16">

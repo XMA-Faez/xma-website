@@ -36,7 +36,7 @@ const CTASection = ({ ref }) => {
 
               <div className="flex items-center justify-center gap-2 text-lg text-zinc-300 mb-6">
                 <ShieldCheck className="text-green-500" size={24} />
-                <span>100% Money Back Guarantee</span>
+                <span>100% Satification Guarantee</span>
               </div>
 
               <Card className="mx-auto bg-transparent border-none">

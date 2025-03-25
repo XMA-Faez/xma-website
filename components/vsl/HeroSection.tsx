@@ -184,7 +184,7 @@ const HeroSection = ({ onCtaClick }) => {
   };
 
   return (
-    <section className="relative pt-24 pb-20 overflow-hidden">
+    <section className="pt-32 relative pb-20 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/40 to-zinc-950 z-0"></div>
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-red-600/10 rounded-full filter blur-3xl"></div>
@@ -196,7 +196,7 @@ const HeroSection = ({ onCtaClick }) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-lg"
           >
             Generate Qualified Leads On Autopilot
           </motion.h1>
@@ -351,7 +351,7 @@ const HeroSection = ({ onCtaClick }) => {
         >
           <div className="flex items-center justify-center gap-2 text-lg text-zinc-300 mb-6">
             <ShieldCheck className="text-green-500" size={24} />
-            <span>100% Money Back Guarantee</span>
+            <span>100% Satisfaction Guarantee</span>
           </div>
 
           <Button

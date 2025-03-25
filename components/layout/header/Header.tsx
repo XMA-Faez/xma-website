@@ -65,7 +65,7 @@ export function Header() {
           <div className="flex-grow flex-shrink-0 basis-0">
             <Link className="block w-fit" href="/">
               <Image 
-                src="/logo.svg" 
+                src="/XMA-White.svg" 
                 alt="XMA Logo" 
                 width={50} 
                 height={50} 
