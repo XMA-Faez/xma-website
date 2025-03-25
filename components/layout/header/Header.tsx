@@ -40,7 +40,7 @@ export function Header() {
     <motion.nav
       className={`${
         isScrolled ? "container" : ""
-      } fixed top-0 left-1/2 -translate-x-1/2 transform z-50 h-20 w-full`}
+      } fixed top-0 left-1/2 -translate-x-1/2 transform z-50 h-16 w-full`}
     >
       {isDesktop ? (
         <motion.div
@@ -80,10 +80,10 @@ export function Header() {
           </div>
 
           {/* CTA Button */}
-          <div className="flex-grow opacity-0 flex-shrink-0 basis-0 flex justify-end">
-            <Link href="/proposal">
+          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end">
+            <Link href="#cta">
               <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                Get Started
+                Book Your Call Now
               </button>
             </Link>
           </div>
@@ -91,12 +91,12 @@ export function Header() {
       ) : (
         <div
           className={`${isScrolled ? 'bg-black/50' : 'bg-transparent'}
-            flex items-center text-fg px-8 mx-auto duration-300 backdrop-blur-md transition-colors`}
+            flex h-full items-center text-fg px-8 mx-auto duration-300 backdrop-blur-md transition-colors`}
         >
           <div className="flex-grow flex-shrink-0 basis-0">
-            <Link className="block w-fit" href="/">
+            <Link className="block w-fit" href="#cta">
               <Image 
-                src="/logo.svg" 
+                src="/XMA-White.svg" 
                 alt="XMA Logo" 
                 width={50} 
                 height={50} 

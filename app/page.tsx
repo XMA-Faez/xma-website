@@ -28,7 +28,6 @@ export const metadata = {
     title: "XMA Agency - Generate Qualified Leads On Autopilot",
     description:
       "Top businesses trust our 4-step system to grow consistently month after month",
-    images: ["/og-image.jpg"], // Create this image for social sharing
   },
   icons: {
     icon: [

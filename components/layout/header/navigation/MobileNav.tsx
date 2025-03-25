@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { mainNavItems, services } from "@/data/navigation";
 
 export function MobileNav() {
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen(!open);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <button className="text-zinc-300 hover:text-white">
           <Menu className="h-6 w-6" />
@@ -44,8 +50,9 @@ export function MobileNav() {
               );
             })}
           </div>
-          <Link href="/proposal">
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+          <Link href="#cta" onClick={toggleMenu}>
+            <button
+              className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
               Get Started
             </button>
           </Link>
