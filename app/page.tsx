@@ -16,7 +16,6 @@
 //   );
 // }
 
-
 // /app/vsl/page.js
 import React from "react";
 import VSLPage from "@/components/vsl/VSLPage";
@@ -30,6 +29,20 @@ export const metadata = {
     description:
       "Top businesses trust our 4-step system to grow consistently month after month",
     images: ["/og-image.jpg"], // Create this image for social sharing
+  },
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/icon-48x48-dark.png",
+        href: "/images/icon-48x48-dark.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/icon-48x48-light.png",
+        href: "/images/icon-48x48-light.png",
+      },
+    ],
   },
 };
 
