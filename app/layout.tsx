@@ -1,4 +1,5 @@
 import { Theme } from "@radix-ui/themes";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -42,6 +43,7 @@ export default function RootLayout({
           {/* <AnimatedCursorComponent /> */}
           <Header />
           <Analytics />
+          <SpeedInsights />
           <main className="bg-zinc-950">{children}</main>
           <Footer />
           <style>
