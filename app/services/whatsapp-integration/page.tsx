@@ -8,6 +8,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import Link from "next/link";
+import CTAButton from "@/components/general/CTAButton";
 
 const WhatsAppIntegrationPage = () => {
   const features = [
@@ -223,11 +224,8 @@ const WhatsAppIntegrationPage = () => {
             Transform your customer engagement with intelligent WhatsApp
             solutions
           </p>
-          <Link href="/proposal">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get Started
-            </button>
-          </Link>
+
+          <CTAButton />
         </div>
       </div>
     </div>

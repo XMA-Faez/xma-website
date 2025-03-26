@@ -1,6 +1,7 @@
 import React from "react";
 import { Edit, CheckCircle, Users, Film, Target, Play } from "lucide-react";
 import Link from "next/link";
+import CTAButton from "@/components/general/CTAButton";
 
 const VideoProductionPage = () => {
   const features = [
@@ -159,11 +160,8 @@ const VideoProductionPage = () => {
           <p className="text-xl text-zinc-400 mb-8">
             Let's create stunning videos that tell your story and drive results
           </p>
-          <Link href="/proposal">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Your Project
-            </button>
-          </Link>
+
+          <CTAButton />
         </div>
       </div>
     </div>

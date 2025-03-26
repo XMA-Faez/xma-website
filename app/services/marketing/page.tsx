@@ -2,6 +2,7 @@ import React from "react";
 import { Target, TrendingUp, Users, LineChart, Zap } from "lucide-react";
 import { packages } from "@/data/proposalData";
 import Link from "next/link";
+import CTAButton from "@/components/general/CTAButton";
 
 const PerformanceMarketingPage = () => {
   const features = [
@@ -89,40 +90,40 @@ const PerformanceMarketingPage = () => {
       </div>
 
       {/* Packages Section */}
-      <div className="py-20 bg-zinc-900/50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Marketing Packages
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Object.entries(packages).map(([key, pkg], index) => (
-              <div
-                key={index}
-                className="bg-black/40 backdrop-blur-sm border border-zinc-800/60 rounded-lg p-6 hover:border-red-600/50 transition-colors"
-              >
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {pkg.name} Package
-                </h3>
-                <div className="text-2xl font-bold text-red-500 mb-1">
-                  {pkg.price}
-                </div>
-                <div className="text-sm text-zinc-400 mb-6">{pkg.usdPrice}</div>
-                <ul className="space-y-3">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center gap-2 text-zinc-300"
-                    >
-                      <Zap className="w-4 h-4 text-red-500" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* <div className="py-20 bg-zinc-900/50"> */}
+      {/*   <div className="max-w-6xl mx-auto px-4"> */}
+      {/*     <h2 className="text-3xl font-bold text-center text-white mb-12"> */}
+      {/*       Marketing Packages */}
+      {/*     </h2> */}
+      {/*     <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+      {/*       {Object.entries(packages).map(([key, pkg], index) => ( */}
+      {/*         <div */}
+      {/*           key={index} */}
+      {/*           className="bg-black/40 backdrop-blur-sm border border-zinc-800/60 rounded-lg p-6 hover:border-red-600/50 transition-colors" */}
+      {/*         > */}
+      {/*           <h3 className="text-xl font-semibold text-white mb-2"> */}
+      {/*             {pkg.name} Package */}
+      {/*           </h3> */}
+      {/*           <div className="text-2xl font-bold text-red-500 mb-1"> */}
+      {/*             {pkg.price} */}
+      {/*           </div> */}
+      {/*           <div className="text-sm text-zinc-400 mb-6">{pkg.usdPrice}</div> */}
+      {/*           <ul className="space-y-3"> */}
+      {/*             {pkg.features.map((feature, featureIndex) => ( */}
+      {/*               <li */}
+      {/*                 key={featureIndex} */}
+      {/*                 className="flex items-center gap-2 text-zinc-300" */}
+      {/*               > */}
+      {/*                 <Zap className="w-4 h-4 text-red-500" /> */}
+      {/*                 {feature} */}
+      {/*               </li> */}
+      {/*             ))} */}
+      {/*           </ul> */}
+      {/*         </div> */}
+      {/*       ))} */}
+      {/*     </div> */}
+      {/*   </div> */}
+      {/* </div> */}
 
       {/* CTA Section */}
       <div className="py-20">
@@ -133,11 +134,8 @@ const PerformanceMarketingPage = () => {
           <p className="text-xl text-zinc-400 mb-8">
             Let's create a data-driven marketing strategy that delivers results
           </p>
-          <Link href="/proposal">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get Started
-            </button>
-          </Link>
+
+          <CTAButton />
         </div>
       </div>
     </div>

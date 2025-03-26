@@ -11,6 +11,7 @@ import {
   Settings,
 } from "lucide-react";
 import Link from "next/link";
+import CTAButton from "@/components/general/CTAButton";
 
 const CRMSolutionsPage = () => {
   const features = [
@@ -281,11 +282,7 @@ const CRMSolutionsPage = () => {
           <p className="text-xl text-zinc-400 mb-8">
             Let's set up your automated CRM solution today
           </p>
-          <Link href="/proposal">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get Started
-            </button>
-          </Link>
+          <CTAButton />
         </motion.div>
       </div>
     </div>

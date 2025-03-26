@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { MapPin, Phone, Mail } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogContent,
@@ -13,7 +13,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { useState } from 'react';
+import { useState } from "react";
+import CTAButton from "@/components/general/CTAButton";
 
 export default function ContactPage() {
   const [showThankYou, setShowThankYou] = useState(false);
@@ -29,7 +30,7 @@ export default function ContactPage() {
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent" />
         <div className="container pt-40 mx-auto px-4">
-          <motion.h1 
+          <motion.h1
             className="font-bold bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,13 +38,14 @@ export default function ContactPage() {
           >
             Get In Touch
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl text-zinc-300 max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Ready to transform your digital presence? Let's start a conversation.
+            Ready to transform your digital presence? Let's start a
+            conversation.
           </motion.p>
         </div>
       </div>
@@ -62,36 +64,39 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Input 
-                      placeholder="Your Name" 
+                    <Input
+                      placeholder="Your Name"
                       className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-400"
                       required
                     />
                   </div>
                   <div>
-                    <Input 
-                      type="email" 
-                      placeholder="Email Address" 
+                    <Input
+                      type="email"
+                      placeholder="Email Address"
                       className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-400"
                       required
                     />
                   </div>
                   <div>
-                    <Input 
-                      placeholder="Company Name" 
+                    <Input
+                      placeholder="Company Name"
                       className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-400"
                       required
                     />
                   </div>
                   <div>
-                    <Textarea 
-                      placeholder="Your Message" 
+                    <Textarea
+                      placeholder="Your Message"
                       className="bg-zinc-800/50 border-zinc-700 text-white placeholder:text-zinc-400"
                       rows={5}
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white">
+                  <Button
+                    type="submit"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white"
+                  >
                     Send Message
                   </Button>
                 </form>
@@ -100,7 +105,7 @@ export default function ContactPage() {
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -109,13 +114,21 @@ export default function ContactPage() {
             <Card className="bg-zinc-900/50 border-zinc-800 backdrop-blur-sm">
               <CardContent className="p-8">
                 {[
-                  { Icon: MapPin, title: 'Visit Us', content: 'Dubai, UAE' },
-                  { Icon: Phone, title: 'Call Us', content: '+971 XX XXX XXXX' },
-                  { Icon: Mail, title: 'Email Us', content: 'contact@xmaagency.com' }
+                  { Icon: MapPin, title: "Visit Us", content: "Dubai, UAE" },
+                  {
+                    Icon: Phone,
+                    title: "Call Us",
+                    content: "+971 50 363 6856",
+                  },
+                  {
+                    Icon: Mail,
+                    title: "Email Us",
+                    content: "admin@xmaagency.com",
+                  },
                 ].map((item, index) => (
-                  <motion.div 
+                  <motion.div
                     key={item.title}
-                    className={`flex items-center gap-4 ${index !== 2 ? 'mb-6' : ''}`}
+                    className={`flex items-center gap-4 ${index !== 2 ? "mb-6" : ""}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -142,11 +155,10 @@ export default function ContactPage() {
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-4">Schedule a Meeting</h3>
                   <p className="text-zinc-400 mb-6">
-                    Book a consultation with our team to discuss your project in detail.
+                    Book a consultation with our team to discuss your project in
+                    detail.
                   </p>
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
-                    Book Consultation
-                  </Button>
+                  <CTAButton />
                 </CardContent>
               </Card>
             </motion.div>
@@ -187,7 +199,8 @@ export default function ContactPage() {
           <AlertDialogHeader>
             <AlertDialogTitle>Thank You!</AlertDialogTitle>
             <AlertDialogDescription>
-              We've received your message and will get back to you within 24 hours.
+              We've received your message and will get back to you within 24
+              hours.
             </AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
