@@ -1,4 +1,5 @@
 import { Theme } from "@radix-ui/themes";
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@radix-ui/themes/styles.css";
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Theme appearance="dark" grayColor="slate">
           {/* <AnimatedCursorComponent /> */}
           <Header />
+          <Analytics />
           <main className="bg-zinc-950">{children}</main>
           <Footer />
           <style>
