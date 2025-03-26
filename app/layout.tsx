@@ -42,9 +42,9 @@ export default function RootLayout({
         <Theme appearance="dark" grayColor="slate">
           {/* <AnimatedCursorComponent /> */}
           <Header />
-          <Analytics />
           <SpeedInsights />
           <main className="bg-zinc-950">{children}</main>
+          <Analytics />
           <Footer />
           <style>
             {`
