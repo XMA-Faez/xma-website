@@ -1,6 +1,6 @@
 import { Theme } from "@radix-ui/themes";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@radix-ui/themes/styles.css";
@@ -8,6 +8,7 @@ import "./globals.css";
 
 import Footer from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,30 +32,28 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Theme appearance="dark" grayColor="slate">
-          {/* <AnimatedCursorComponent /> */}
-          <Header />
-          <SpeedInsights />
-          <main className="bg-zinc-950">{children}</main>
-          <Analytics />
-          <Footer />
-          <style>
-            {`
+          <PostHogProvider>
+            {/* <AnimatedCursorComponent /> */}
+            <Header />
+            <SpeedInsights />
+            <main className="bg-zinc-950">{children}</main>
+            <Analytics />
+            <Footer />
+            <style>
+              {`
             .dark,
             .dark-theme,
             :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
               --color-background: #080808;
             }
           `}
-          </style>
+            </style>
+          </PostHogProvider>
         </Theme>
       </body>
     </html>
