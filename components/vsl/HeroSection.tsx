@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
+import posthog from "posthog-js";
 
 const HeroSection = ({ onCtaClick }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -74,6 +75,8 @@ const HeroSection = ({ onCtaClick }) => {
 
   const handleBigPlayButtonClick = () => {
     if (videoRef.current) {
+      posthog.capture("Clicked on VSL");
+
       // Reset to beginning
       videoRef.current.currentTime = 0;
       
