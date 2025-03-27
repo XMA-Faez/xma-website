@@ -3,7 +3,6 @@ import React from "react";
 import posthog from "posthog-js"; // Import PostHog
 
 function CTAButton({ location = "unknown" }) {
-  // Function to handle the button click and track the event
   const handleClick = () => {
     // Track the CTA button click event
     posthog.capture("cta_button_clicked", {
@@ -20,8 +19,8 @@ function CTAButton({ location = "unknown" }) {
 
   return (
     <Link href="/#cta">
-      <button 
-        onClick={handleClick} 
+      <button
+        onClick={handleClick}
         className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
       >
         Book Your Free Consultation

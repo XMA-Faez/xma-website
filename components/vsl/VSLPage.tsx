@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useRef } from "react";
+import dynamic from "next/dynamic";
 
 // Loading placeholders
 const LoadingVideo = () => (
@@ -15,47 +15,48 @@ const LoadingSection = () => (
 );
 
 // Eagerly load critical above-the-fold component
-import HeroSection from './HeroSection';
+import HeroSection from "./HeroSection";
+import posthog from "posthog-js";
 
 // Dynamically load below-the-fold components with code splitting
-const AdsCarousel = dynamic(() => import('./AdsCarousel'), {
+const AdsCarousel = dynamic(() => import("./AdsCarousel"), {
   loading: () => <LoadingVideo />,
-  ssr: false // Client-side only rendering for this heavy component
+  ssr: false, // Client-side only rendering for this heavy component
 });
 
-const PainPoints = dynamic(() => import('./PainPoints'), {
+const PainPoints = dynamic(() => import("./PainPoints"), {
   loading: () => <LoadingSection />,
-  ssr: true
+  ssr: true,
 });
 
-const Solutions = dynamic(() => import('./Solutions'), {
+const Solutions = dynamic(() => import("./Solutions"), {
   loading: () => <LoadingSection />,
-  ssr: true
+  ssr: true,
 });
 
-const LogoMarquee = dynamic(() => import('./LogoMarquee'), {
+const LogoMarquee = dynamic(() => import("./LogoMarquee"), {
   loading: () => <LoadingSection />,
-  ssr: true
+  ssr: true,
 });
 
-const Testimonials = dynamic(() => import('./Testimonials'), {
+const Testimonials = dynamic(() => import("./Testimonials"), {
   loading: () => <LoadingSection />,
-  ssr: true
+  ssr: true,
 });
 
-const SocialProof = dynamic(() => import('./SocialProof'), {
+const SocialProof = dynamic(() => import("./SocialProof"), {
   loading: () => <LoadingSection />,
-  ssr: true
+  ssr: true,
 });
 
-const FAQ = dynamic(() => import('./FAQ'), {
+const FAQ = dynamic(() => import("./FAQ"), {
   loading: () => <LoadingSection />,
-  ssr: true
+  ssr: true,
 });
 
-const CTASection = dynamic(() => import('./CTASection'), {
+const CTASection = dynamic(() => import("./CTASection"), {
   loading: () => <LoadingSection />,
-  ssr: true
+  ssr: true,
 });
 
 // Simplified motion component to avoid importing the full framer-motion library
@@ -69,14 +70,29 @@ export default function SystemPage() {
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
+      ref.current.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const onCtaClick = () => {
+    // Track the CTA button click event
+    posthog.capture("cta_home_button_clicked", {
+      buttonText: "Book Your Free Consultation",
+      location: location,
+      path: window.location.pathname,
+      url: window.location.href,
+      referrer: document.referrer,
+      viewport_width: window.innerWidth,
+      viewport_height: window.innerHeight,
+    });
+
+    scrollToSection(ctaRef);
   };
 
   return (
     <div className="bg-zinc-950 min-h-screen">
-      <HeroSection onCtaClick={() => scrollToSection(ctaRef)} />
-      
+      <HeroSection onCtaClick={onCtaClick} />
+
       {/* Ads Carousel */}
       <section className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-4">
@@ -88,11 +104,11 @@ export default function SystemPage() {
               Check out the high-quality videos we create for our clients
             </p>
           </SimpleMotion>
-          
+
           <AdsCarousel />
         </div>
       </section>
-      
+
       {/* Pain Points */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -104,11 +120,11 @@ export default function SystemPage() {
               Are you struggling with any of these marketing challenges?
             </p>
           </SimpleMotion>
-          
+
           <PainPoints />
         </div>
       </section>
-      
+
       {/* Solutions */}
       <section ref={solutionsRef} className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-4">
@@ -120,11 +136,11 @@ export default function SystemPage() {
               A streamlined system that delivers qualified leads on autopilot
             </p>
           </SimpleMotion>
-          
+
           <Solutions />
         </div>
       </section>
-      
+
       {/* Logo Marquee */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -133,11 +149,11 @@ export default function SystemPage() {
               Trusted by Top Businesses
             </h2>
           </SimpleMotion>
-          
+
           <LogoMarquee />
         </div>
       </section>
-      
+
       {/* Testimonials */}
       {/* <section className="py-16 bg-zinc-900/30"> */}
       {/*   <div className="container mx-auto px-4"> */}
@@ -153,14 +169,14 @@ export default function SystemPage() {
       {/*     <Testimonials /> */}
       {/*   </div> */}
       {/* </section> */}
-      
+
       {/* Social Proof */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <SocialProof />
         </div>
       </section>
-      
+
       {/* Q&A */}
       <section className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-4">
@@ -172,11 +188,11 @@ export default function SystemPage() {
               Everything you need to know about our marketing system
             </p>
           </SimpleMotion>
-          
+
           <FAQ />
         </div>
       </section>
-      
+
       {/* Final CTA */}
       <div id="book-call">
         <CTASection ref={ctaRef} />
