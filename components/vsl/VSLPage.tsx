@@ -78,7 +78,6 @@ export default function SystemPage() {
     // Track the CTA button click event
     posthog.capture("cta_home_button_clicked", {
       buttonText: "Book Your Free Consultation",
-      location: location,
       path: window.location.pathname,
       url: window.location.href,
       referrer: document.referrer,

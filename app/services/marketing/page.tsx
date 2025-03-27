@@ -1,7 +1,5 @@
 import React from "react";
 import { Target, TrendingUp, Users, LineChart, Zap } from "lucide-react";
-import { packages } from "@/data/proposalData";
-import Link from "next/link";
 import CTAButton from "@/components/general/CTAButton";
 
 const PerformanceMarketingPage = () => {
