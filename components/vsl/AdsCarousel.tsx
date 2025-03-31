@@ -1,8 +1,7 @@
-// components/AdsCarousel.jsx
 "use client";
 
 import React, { useState, useRef, useCallback, useEffect, memo } from "react";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from "lucide-react";
 import adCarouselData from "@/data/adCarousel";
 
 type Video = {
@@ -58,6 +57,7 @@ VideoThumbnail.displayName = 'VideoThumbnail';
 const AdsCarousel = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Start muted by default for better UX
   const videoRef = useRef<HTMLVideoElement>(null);
   const thumbnailsContainerRef = useRef<HTMLDivElement>(null);
 
@@ -76,24 +76,31 @@ const AdsCarousel = () => {
     setIsPlaying(!isPlaying);
   }, [isPlaying]);
 
+  // Handle mute/unmute
+  const handleToggleMute = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent triggering play/pause
+    if (!videoRef.current) return;
+    
+    videoRef.current.muted = !videoRef.current.muted;
+    setIsMuted(!isMuted);
+  }, [isMuted]);
+
   // Handle video ended event
   const handleVideoEnded = useCallback(() => {
     setIsPlaying(false);
   }, []);
 
-  // Change to next video
+  // Change to next video with autoplay
   const handleNext = useCallback(() => {
-    setIsPlaying(false);
     setCurrentVideoIndex(
-      (prevIndex) => (prevIndex + 1) % adCarouselData.length,
+      (prevIndex) => (prevIndex + 1) % adCarouselData.length
     );
   }, []);
 
-  // Change to previous video
+  // Change to previous video with autoplay
   const handlePrev = useCallback(() => {
-    setIsPlaying(false);
     setCurrentVideoIndex((prevIndex) =>
-      prevIndex === 0 ? adCarouselData.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? adCarouselData.length - 1 : prevIndex - 1
     );
   }, []);
 
@@ -101,7 +108,6 @@ const AdsCarousel = () => {
   const handleSelectVideo = useCallback(
     (index: number) => {
       if (currentVideoIndex !== index) {
-        setIsPlaying(false);
         setCurrentVideoIndex(index);
       }
     },
@@ -119,11 +125,22 @@ const AdsCarousel = () => {
     }
   }, []);
 
-  // Use a single effect to manage video playback
+  // Effect to handle video changes and autoplay
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-
+    
+    // Set up video properties
+    video.muted = isMuted;
+    
+    // Start playing the video automatically when index changes
+    video.play()
+      .then(() => setIsPlaying(true))
+      .catch(error => {
+        console.error("Autoplay failed:", error);
+        setIsPlaying(false);
+      });
+    
     // Set up event listeners
     video.addEventListener("ended", handleVideoEnded);
 
@@ -131,7 +148,7 @@ const AdsCarousel = () => {
     return () => {
       video.removeEventListener("ended", handleVideoEnded);
     };
-  }, [handleVideoEnded]);
+  }, [currentVideoIndex, handleVideoEnded, isMuted]);
 
   return (
     <div className="relative max-w-md mx-auto">
@@ -143,6 +160,7 @@ const AdsCarousel = () => {
           src={adCarouselData[currentVideoIndex].url}
           playsInline
           loop
+          muted={isMuted}
           onEnded={handleVideoEnded}
           poster={adCarouselData[currentVideoIndex].url.replace(
             /\.(mp4|mov)$/,
@@ -169,6 +187,19 @@ const AdsCarousel = () => {
             </div>
           )}
         </div>
+
+        {/* Audio Control Button */}
+        <button
+          className="absolute top-4 right-4 z-30 bg-black/50 p-2 rounded-full hover:bg-black/70 transition-colors"
+          onClick={handleToggleMute}
+          aria-label={isMuted ? "Unmute" : "Mute"}
+        >
+          {isMuted ? (
+            <VolumeX className="text-white" size={20} />
+          ) : (
+            <Volume2 className="text-white" size={20} />
+          )}
+        </button>
 
         {/* Navigation Arrows */}
         <button
@@ -204,7 +235,7 @@ const AdsCarousel = () => {
         >
           {adCarouselData.map((video, index) => (
             <VideoThumbnail
-              key={video.public_id}
+              key={video.public_id || index}
               video={video}
               isActive={index === currentVideoIndex}
               isPlaying={isPlaying}
