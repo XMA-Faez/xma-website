@@ -9,6 +9,7 @@ import "./globals.css";
 import Footer from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import { Suspense } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,7 +42,9 @@ export default function RootLayout({
             {/* <AnimatedCursorComponent /> */}
             <Header />
             <SpeedInsights />
-            <main className="bg-zinc-950">{children}</main>
+            <Suspense>
+              <main className="bg-zinc-950">{children}</main>
+            </Suspense>
             <Analytics />
             <Footer />
             <style>
