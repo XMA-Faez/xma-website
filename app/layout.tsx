@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: "XMA Agency",
     statusBarStyle: "black-translucent",
+  },
+  verification: {
+    google: "b4Ruz4qrwE5l_HVaxaP5_Nysz4MGIQaCWg8xYkKrJcM",
   }
 };
 
