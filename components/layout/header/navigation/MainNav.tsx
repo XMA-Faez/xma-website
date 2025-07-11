@@ -69,11 +69,24 @@ ${pathname === "/about" ? "text-white font-medium" : ""}`}
             About
           </NavigationMenuLink>
         </NavigationMenuItem>
+
+        {/* Blog */}
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            href="/blog"
+            className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
+${pathname === "/blog" || pathname.startsWith("/blog/") ? "text-white font-medium" : ""}`}
+          >
+            Blog
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        {/* Contact */}
         <NavigationMenuItem>
           <NavigationMenuLink
             href="/contact"
             className={`px-3 py-2 text-sm text-zinc-300 hover:text-white transition-colors
-${pathname === "/about" ? "text-white font-medium" : ""}`}
+${pathname === "/contact" ? "text-white font-medium" : ""}`}
           >
             Contact
           </NavigationMenuLink>

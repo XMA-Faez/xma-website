@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "aceternity.com",
       },
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+      },
     ],
   },
   async rewrites() {

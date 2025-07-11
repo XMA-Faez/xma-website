@@ -62,6 +62,10 @@ const footerData = {
       text: "About Us",
       href: "/about",
     },
+    {
+      text: "Blog",
+      href: "/blog",
+    },
     // {
     //   text: "Proposal",
     //   href: "/proposal",

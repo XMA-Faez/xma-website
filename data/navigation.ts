@@ -20,6 +20,10 @@ export const mainNavItems: NavItem[] = [
     name: "About",
     href: "/about",
   },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
 ];
 
 export const services: ServiceItem[] = [
