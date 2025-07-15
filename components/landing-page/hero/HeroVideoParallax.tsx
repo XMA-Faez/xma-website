@@ -10,10 +10,11 @@ import {
 } from "motion/react";
 import Link from "next/link";
 import * as m from "motion/react-m";
+import { optimizeCloudinaryVideoUrl, getOptimizedThumbnail } from "../../../utils/cloudinary";
 
 // Global counter to limit concurrent video loads
 let loadingVideos = 0;
-const MAX_CONCURRENT_VIDEOS = 10;
+const MAX_CONCURRENT_VIDEOS = 30;
 
 export const HeroVideoParallax = ({
   videos,
@@ -147,33 +148,17 @@ export const VideoCard = ({
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && loadingVideos < MAX_CONCURRENT_VIDEOS) {
-          setIsInView(true);
-          loadingVideos++;
-          
-          // Start playing after a short delay to stagger video loads
-          setTimeout(() => {
-            if (videoRef.current) {
-              videoRef.current.play().catch(() => {
-                // Fallback if autoplay fails
-                loadingVideos--;
-              });
-            }
-          }, Math.random() * 2000); // Increased delay to 0-2s
-        } else if (!entry.isIntersecting) {
-          // Pause video when out of view to save resources
-          if (videoRef.current) {
-            videoRef.current.pause();
-            if (isInView) {
-              loadingVideos--;
-            }
-          }
-          setIsInView(false);
+        setIsInView(entry.isIntersecting);
+        
+        if (entry.isIntersecting && videoRef.current) {
+          videoRef.current.play().catch(() => {});
+        } else if (!entry.isIntersecting && videoRef.current) {
+          videoRef.current.pause();
         }
       },
       { 
-        threshold: 0.5, // Increased threshold - video must be 50% visible
-        rootMargin: '-50px' // Start loading only when video is well into view
+        threshold: 0.3,
+        rootMargin: '0px'
       }
     );
 
@@ -183,11 +168,8 @@ export const VideoCard = ({
 
     return () => {
       observer.disconnect();
-      if (isInView) {
-        loadingVideos--;
-      }
     };
-  }, [isInView]);
+  }, []);
 
   return (
     <m.div
@@ -205,14 +187,13 @@ export const VideoCard = ({
       <div className="block group-hover/video:shadow-2xl w-full h-full">
         <video
           ref={videoRef}
-          src={isInView ? video.url : undefined}
-          poster={video.thumbnail}
+          src={optimizeCloudinaryVideoUrl(video.url)}
+          poster={getOptimizedThumbnail(video.url)}
           className="object-cover object-center absolute h-full w-full inset-0 rounded-lg"
           muted
-          autoPlay={isInView}
           loop
           playsInline
-          preload="metadata"
+          preload="none"
         />
       </div>
       {/* <div className="absolute inset-0 h-full w-full opacity-0 group-hover/video:opacity-80 bg-black transition-opacity pointer-events-none rounded-lg"></div> */}
