@@ -7,10 +7,10 @@ import {
   MotionValue,
   LazyMotion,
   domAnimation,
-} from "framer-motion";
+} from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import * as m from "framer-motion/m"
+import * as m from "motion/react-m"
 
 export const HeroParallax = ({
   products,
