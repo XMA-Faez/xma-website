@@ -117,7 +117,7 @@ export const Header = () => {
       </p>
       <Link href="" className="transition duration-300">
         <button className="button--calypso inline-block relative button !bg-blend-difference bg-fg px-8 py-3">
-          <span className="mix-blend-difference">Book Discoery Call</span>
+          <span className="mix-blend-difference">Book Discovery Call</span>
         </button>
       </Link>
     </div>
