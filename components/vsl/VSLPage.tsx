@@ -64,7 +64,7 @@ const SimpleMotion = ({ children, className }) => {
   return <div className={className}>{children}</div>;
 };
 
-export default function SystemPage() {
+export default function VSLPage() {
   const ctaRef = useRef(null);
   const solutionsRef = useRef(null);
 
