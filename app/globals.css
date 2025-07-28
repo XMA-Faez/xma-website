@@ -14,7 +14,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 90% 60%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -26,7 +26,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 0 90% 60%;
+    --ring: 217 91% 60%;
     --radius: 0.75rem;
     --bg: #000000;
     --fg: #ededed;
@@ -72,12 +72,12 @@
 
 /* Gradient text utility */
 .gradient-text {
-  @apply bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
 }
 
 /* Glass card effect */
 .glass-card {
-  @apply bg-zinc-900/40 backdrop-blur-sm border border-zinc-800 hover:border-red-600/50 transition-all duration-300;
+  @apply bg-zinc-900/40 backdrop-blur-sm border border-zinc-800 hover:border-blue-600/50 transition-all duration-300;
 }
 
 /* Animated gradient background */
@@ -358,7 +358,7 @@ button::after {
 }
 
 .blog-content blockquote {
-  @apply border-l-4 border-red-600 pl-6 italic text-gray-400 my-6;
+  @apply border-l-4 border-blue-600 pl-6 italic text-gray-400 my-6;
 }
 
 .blog-content code {
@@ -378,7 +378,7 @@ button::after {
 }
 
 .blog-content a {
-  @apply text-red-500 hover:text-red-400 underline;
+  @apply text-blue-500 hover:text-blue-400 underline;
 }
 
 .blog-content table {

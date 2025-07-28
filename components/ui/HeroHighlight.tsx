@@ -74,11 +74,6 @@ export const Highlight = ({
 }) => {
   const ref = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
   const isInView = useInView(ref, {
     once: true,
   });
@@ -103,7 +98,7 @@ export const Highlight = ({
       }}
       ref={ref}
       className={cn(
-        `relative inline-block pb-1 rounded-main px-1 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,
+        `relative inline-block pb-1 rounded-main px-1 bg-gradient-to-r from-blue-400 to-indigo-400 dark:from-blue-500 dark:to-indigo-600`,
         className,
       )}
     >
