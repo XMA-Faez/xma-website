@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { MagnifyingGlass, ClipboardText, Lightning, TrendUp } from "phosphor-react";
+import { ScanningButton } from "@/components/ui/ScanningButton";
 
 const processSteps = [
   {
@@ -187,13 +188,9 @@ export default function Process() {
           <p className="text-lg text-gray-400 mb-6">
             Ready to start your journey with us?
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-          >
+          <ScanningButton variant="primary" size="md">
             Get Started
-          </motion.button>
+          </ScanningButton>
         </motion.div>
       </div>
     </section>

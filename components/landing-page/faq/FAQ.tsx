@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { CaretDown, CurrencyDollar, Clock, Package, Handshake } from "phosphor-react";
+import { ScanningButton } from "@/components/ui/ScanningButton";
 
 const faqCategories = [
   {
@@ -226,13 +227,9 @@ export default function FAQ() {
           <p className="text-gray-500 mb-6">
             We're here to help. Let's talk about your project.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-          >
+          <ScanningButton variant="primary" size="md">
             Schedule a Consultation
-          </motion.button>
+          </ScanningButton>
         </motion.div>
       </div>
     </section>

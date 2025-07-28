@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import * as m from "motion/react-m";
 import { optimizeCloudinaryVideoUrl, getOptimizedThumbnail } from "../../../utils/cloudinary";
+import { ScanningButton } from "@/components/ui/ScanningButton";
 
 // Global counter to limit concurrent video loads
 let loadingVideos = 0;
@@ -64,7 +65,7 @@ export const HeroVideoParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[280vh] pt-40 pb-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <LazyMotion features={domAnimation}>
@@ -121,9 +122,9 @@ export const Header = () => {
         provides everything you need.
       </p>
       <Link href="" className="transition duration-300">
-        <button className="button--calypso inline-block relative button !bg-blend-difference bg-fg px-8 py-3">
-          <span className="mix-blend-difference">Book Discovery Call</span>
-        </button>
+        <ScanningButton variant="primary" size="md">
+          Book Discovery Call
+        </ScanningButton>
       </Link>
     </div>
   );

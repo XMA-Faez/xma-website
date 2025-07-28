@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TrendUp, Users, Target, Trophy } from "phosphor-react";
+import { ScanningButton } from "@/components/ui/ScanningButton";
 
 const stats = [
   {
@@ -118,13 +119,9 @@ function About() {
             Join the businesses that have already discovered the XMA difference. 
             Let's turn your marketing spend into measurable revenue.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl"
-          >
+          <ScanningButton variant="primary" size="md">
             Start Your Growth Journey
-          </motion.button>
+          </ScanningButton>
         </motion.div>
       </div>
     </section>
