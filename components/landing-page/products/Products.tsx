@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import Link from "next/link";
 
 const products = [
   {
@@ -38,15 +39,17 @@ function Products() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            Our Products
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Cutting-edge solutions designed to accelerate your business growth
-          </p>
+          <div className="max-w-7xl mx-auto rounded-3xl p-8 md:p-12 backdrop-blur-3xl">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
+              Our Products
+            </h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+              Cutting-edge solutions designed to accelerate your business growth
+            </p>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {products.map((product, index) => (
             <motion.div
               key={product.title}
@@ -54,7 +57,7 @@ function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative p-12 bg-zinc-900/30 backdrop-blur-sm border border-zinc-800 rounded-2xl hover:border-zinc-700 transition-all duration-300"
+              className="relative p-12 glass-primary rounded-3xl hover:glass-secondary hover:electric-glow group"
             >
               <div className="flex items-start justify-between mb-8">
                 <div className="space-y-2">
@@ -64,30 +67,29 @@ function Products() {
                   <div className={`w-12 h-0.5 bg-gradient-to-r ${product.accentColor}`}></div>
                 </div>
                 {product.badge && (
-                  <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                    product.badge === 'Popular' ? 'bg-blue-500/20 text-blue-400 border border-blue-400/30' :
-                    product.badge === 'Premium' ? 'bg-purple-500/20 text-purple-400 border border-purple-400/30' :
-                    'bg-emerald-500/20 text-emerald-400 border border-emerald-400/30'
+                  <span className={`px-4 py-2 text-xs font-semibold rounded-2xl glass-float ${
+                    product.badge === 'Popular' ? 'text-blue-400' :
+                    product.badge === 'Premium' ? 'text-purple-400' :
+                    'text-emerald-400'
                   }`}>
                     {product.badge}
                   </span>
                 )}
               </div>
               
-              <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+              <p className="text-white/90 mb-8 leading-relaxed text-lg drop-shadow-sm">
                 {product.description}
               </p>
 
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {product.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-gray-400">
-                    <div className="w-1 h-1 bg-gray-600 rounded-full mr-3"></div>
-                    <span className="text-sm">{feature}</span>
+                  <div key={featureIndex} className="flex items-center text-white/80 rounded-xl hover:glass-secondary ">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-4 electric-glow"></div>
+                    <span className="text-sm font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
             </motion.div>
           ))}
         </div>
@@ -102,9 +104,11 @@ function Products() {
           <p className="text-lg text-gray-400 mb-6">
             Ready to transform your business?
           </p>
-          <ScanningButton variant="primary" size="md">
-            Explore Our Solutions
-          </ScanningButton>
+          <Link href="/book">
+            <ScanningButton variant="primary" size="md">
+              Explore Our Solutions
+            </ScanningButton>
+          </Link>
         </motion.div>
       </div>
     </section>

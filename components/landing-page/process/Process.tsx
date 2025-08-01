@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { MagnifyingGlass, ClipboardText, Lightning, TrendUp } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import Link from "next/link";
 
 const processSteps = [
   {
@@ -17,10 +18,12 @@ const processSteps = [
     iconColor: "text-emerald-400",
     badgeColor: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
     bulletColor: "bg-emerald-400",
+    backgroundColor: "hover:bg-emerald-400/10",
     activeColors: {
       border: "border-emerald-500/50",
       shadow: "shadow-emerald-500/20",
-      dot: "bg-emerald-500 border-emerald-400 shadow-lg shadow-emerald-500/50"
+      dot: "bg-emerald-500 border-emerald-400 shadow-lg shadow-emerald-500/50",
+      background: "bg-gradient-to-r from-emerald-500/10 to-emerald-400/20"
     }
   },
   {
@@ -34,10 +37,12 @@ const processSteps = [
     iconColor: "text-purple-400",
     badgeColor: "text-purple-400 bg-purple-400/10 border-purple-400/20",
     bulletColor: "bg-purple-400",
+    backgroundColor: "hover:bg-purple-400/10",
     activeColors: {
       border: "border-purple-500/50",
       shadow: "shadow-purple-500/20",
-      dot: "bg-purple-500 border-purple-400 shadow-lg shadow-purple-500/50"
+      dot: "bg-purple-500 border-purple-400 shadow-lg shadow-purple-500/50",
+      background: "bg-gradient-to-r from-purple-500/10 to-purple-400/20"
     }
   },
   {
@@ -51,10 +56,12 @@ const processSteps = [
     iconColor: "text-orange-400",
     badgeColor: "text-orange-400 bg-orange-400/10 border-orange-400/20",
     bulletColor: "bg-orange-400",
+    backgroundColor: "hover:bg-orange-400/10",
     activeColors: {
       border: "border-orange-500/50",
       shadow: "shadow-orange-500/20",
-      dot: "bg-orange-500 border-orange-400 shadow-lg shadow-orange-500/50"
+      dot: "bg-orange-500 border-orange-400 shadow-lg shadow-orange-500/50",
+      background: "bg-gradient-to-r from-orange-500/10 to-orange-400/20"
     }
   },
   {
@@ -68,10 +75,12 @@ const processSteps = [
     iconColor: "text-blue-400",
     badgeColor: "text-blue-400 bg-blue-400/10 border-blue-400/20",
     bulletColor: "bg-blue-400",
+    backgroundColor: "hover:bg-blue-400/10",
     activeColors: {
       border: "border-blue-500/50",
       shadow: "shadow-blue-500/20",
-      dot: "bg-blue-500 border-blue-400 shadow-lg shadow-blue-500/50"
+      dot: "bg-blue-500 border-blue-400 shadow-lg shadow-blue-500/50",
+      background: "bg-gradient-to-r from-blue-500/10 to-blue-400/20"
     }
   }
 ];
@@ -117,13 +126,12 @@ export default function Process() {
               >
                 <div className="w-full lg:w-1/2 px-4">
                   <motion.div
-                    whileHover={{ scale: 1.02 }}
                     onClick={() => setActiveStep(activeStep === step.id ? null : step.id)}
-                    className={`cursor-pointer relative p-6 rounded-2xl border transition-all duration-300 ${
+                    className={`cursor-pointer relative p-8 rounded-3xl transition-all duration-300 ${step.backgroundColor} ${
                       activeStep === step.id
-                        ? `bg-zinc-900/80 ${step.activeColors.border} shadow-lg ${step.activeColors.shadow}`
-                        : "bg-zinc-900/40 border-zinc-800 hover:border-zinc-700"
-                    } backdrop-blur-sm`}
+                        ? `glass-secondary shadow-lg ${step.activeColors.border} ${step.activeColors.shadow} ${step.activeColors.background}`
+                        : "glass-primary hover:glass-secondary hover:electric-glow"
+                    }`}
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div>
@@ -131,12 +139,12 @@ export default function Process() {
                         <h3 className="text-2xl font-bold text-white mb-1">{step.phase}</h3>
                         <h4 className="text-lg text-gray-300">{step.title}</h4>
                       </div>
-                      <span className={`text-sm ${step.badgeColor} px-3 py-1 rounded-full border`}>
+                      <span className={`text-sm glass-float px-4 py-2 rounded-2xl ${step.iconColor} font-semibold`}>
                         {step.duration}
                       </span>
                     </div>
                     
-                    <p className="text-gray-400 mb-4">{step.description}</p>
+                    <p className="text-white/90 mb-4 drop-shadow-sm">{step.description}</p>
                     
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
@@ -147,12 +155,12 @@ export default function Process() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="pt-4 border-t border-zinc-700">
-                        <h5 className="text-sm font-semibold text-gray-300 mb-2">Key Activities:</h5>
-                        <ul className="space-y-1">
+                      <div className="pt-4 border-t border-white/10">
+                        <h5 className="text-sm font-semibold text-white mb-3">Key Activities:</h5>
+                        <ul className="space-y-2">
                           {step.activities.map((activity, i) => (
-                            <li key={i} className="text-sm text-gray-400 flex items-center">
-                              <span className={`w-1.5 h-1.5 ${step.bulletColor} rounded-full mr-2`} />
+                            <li key={i} className="text-sm text-white/80 flex items-center rounded-xl p-2 hover:glass-secondary transition-all duration-300">
+                              <span className={`w-2 h-2 ${step.bulletColor} rounded-full mr-3 electric-glow`} />
                               {activity}
                             </li>
                           ))}
@@ -188,9 +196,11 @@ export default function Process() {
           <p className="text-lg text-gray-400 mb-6">
             Ready to start your journey with us?
           </p>
-          <ScanningButton variant="primary" size="md">
-            Get Started
-          </ScanningButton>
+          <Link href="#booking-widget" scroll={true}>
+            <ScanningButton variant="primary" size="md">
+              Get Started
+            </ScanningButton>
+          </Link>
         </motion.div>
       </div>
     </section>

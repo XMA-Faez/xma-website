@@ -10,7 +10,8 @@ import {
 } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import * as m from "motion/react-m"
+import * as m from "motion/react-m";
+import { GlassShimmerButton } from "@/components/ui/GlassShimmerButton";
 
 export const HeroParallax = ({
   products,
@@ -115,10 +116,10 @@ export const Header = () => {
         From SMART ads and campaign management to message marketing, Lead Flow
         provides everything you need.
       </p>
-      <Link href="" className="transition duration-300">
-        <button className="button--calypso inline-block relative button !bg-blend-difference bg-fg px-8 py-3">
-          <span className="mix-blend-difference">Book Discovery Call</span>
-        </button>
+      <Link href="#booking-widget" className="inline-block">
+        <GlassShimmerButton variant="secondary" size="md">
+          Book Discovery Call
+        </GlassShimmerButton>
       </Link>
     </div>
   );

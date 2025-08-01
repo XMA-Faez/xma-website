@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { mainNavItems, services } from "@/data/navigation";
+import { ScanningButton } from "@/components/ui/ScanningButton";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -46,16 +47,16 @@ export function MobileNav() {
                   className="flex items-center space-x-2 py-2 text-zinc-300 hover:text-white transition-colors"
                   onClick={toggleMenu}
                 >
-                  <Icon className="h-4 w-4 text-red-500" />
+                  <Icon className="h-4 w-4 text-blue-400" />
                   <span>{service.name}</span>
                 </Link>
               );
             })}
           </div>
-          <Link href="/#cta" onClick={toggleMenu}>
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+          <Link href="/book" onClick={toggleMenu}>
+            <ScanningButton variant="primary" size="sm" className="w-full">
               Book Your Strategy Call
-            </button>
+            </ScanningButton>
           </Link>
         </nav>
       </SheetContent>

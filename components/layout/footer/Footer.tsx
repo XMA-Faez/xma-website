@@ -25,9 +25,9 @@ const Footer = () => {
                 return (
                   <div
                     key={index}
-                    className="flex items-center gap-3 text-zinc-300 hover:text-red-500 transition-colors"
+                    className="flex items-center gap-3 text-zinc-300 hover:text-blue-400 transition-colors"
                   >
-                    <Icon className="w-5 h-5 text-red-500" />
+                    <Icon className="w-5 h-5 text-blue-400" />
                     {item.isClickable ? (
                       <a href={item.href}>{item.text}</a>
                     ) : (
@@ -51,9 +51,9 @@ const Footer = () => {
                   <li key={index}>
                     <a
                       href={service.href}
-                      className="flex items-center gap-2 text-zinc-300 hover:text-red-500 transition-colors cursor-pointer"
+                      className="flex items-center gap-2 text-zinc-300 hover:text-blue-400 transition-colors cursor-pointer"
                     >
-                      <Icon className="w-4 h-4 text-red-500" />
+                      <Icon className="w-4 h-4 text-blue-400" />
                       <span>{service.text}</span>
                     </a>
                   </li>
@@ -72,7 +72,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-zinc-300 hover:text-red-500 transition-colors"
+                    className="text-zinc-300 hover:text-blue-400 transition-colors"
                   >
                     {link.text}
                   </a>
@@ -96,7 +96,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="flex items-center gap-2 text-zinc-300 hover:text-red-500 transition-colors"
+                  className="flex items-center gap-2 text-zinc-300 hover:text-blue-400 transition-colors"
                 >
                   <Icon className="w-4 h-4" />
                   {item.text}

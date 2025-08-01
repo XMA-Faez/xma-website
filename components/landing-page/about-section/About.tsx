@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TrendUp, Users, Target, Trophy } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import Link from "next/link";
 
 const stats = [
   {
@@ -41,7 +42,7 @@ function About() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl"></div>
       
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +92,7 @@ function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 viewport={{ once: true }}
-                className="p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl text-center group hover:border-zinc-700 transition-all duration-300"
+                className="p-6 glass-primary rounded-2xl text-center group"
               >
                 <stat.IconComponent className={`w-8 h-8 ${stat.color} mx-auto mb-3`} weight="duotone" />
                 <div className="text-3xl font-bold text-white mb-1">
@@ -119,9 +120,11 @@ function About() {
             Join the businesses that have already discovered the XMA difference. 
             Let's turn your marketing spend into measurable revenue.
           </p>
-          <ScanningButton variant="primary" size="md">
-            Start Your Growth Journey
-          </ScanningButton>
+          <Link href="#booking-widget" scroll={true}>
+            <ScanningButton variant="primary" size="md">
+              Start Your Growth Journey
+            </ScanningButton>
+          </Link>
         </motion.div>
       </div>
     </section>

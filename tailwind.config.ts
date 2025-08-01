@@ -72,6 +72,25 @@ export default {
   		},
   		gridTemplateColumns: {
   			'30': 'repeat(30, minmax(0, 1fr))'
+  		},
+  		backdropBlur: {
+  			'xs': '2px',
+  			'sm': '4px',
+  			'md': '8px',
+  			'lg': '12px',
+  			'xl': '16px',
+  			'2xl': '24px',
+  			'3xl': '32px'
+  		},
+  		backdropSaturate: {
+  			'120': '1.2',
+  			'150': '1.5',
+  			'180': '1.8',
+  			'200': '2'
+  		},
+  		backdropBrightness: {
+  			'110': '1.1',
+  			'120': '1.2'
   		}
   	}
   },
