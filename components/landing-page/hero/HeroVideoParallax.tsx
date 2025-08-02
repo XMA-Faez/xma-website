@@ -17,7 +17,7 @@ import {
 import { ScanningButton } from "@/components/ui/ScanningButton";
 
 // Global counter to limit concurrent video loads
-let loadingVideos = 0;
+const loadingVideos = 0;
 const MAX_CONCURRENT_VIDEOS = 30;
 
 export const HeroVideoParallax = ({

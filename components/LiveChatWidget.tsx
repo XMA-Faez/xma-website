@@ -37,7 +37,7 @@ const LiveChat = () => {
           i(["call", c.call(arguments)]);
         },
         init: function () {
-          var n = t.createElement("script");
+          const n = t.createElement("script");
           n.async = !0;
           n.type = "text/javascript";
           n.src = "https://cdn.livechatinc.com/tracking.js";

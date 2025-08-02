@@ -30,9 +30,7 @@ export function Header() {
       setIsScrolled(window.scrollY > 0);
     };
 
-    if (pathname === "/") {
-      window.addEventListener("scroll", handleScroll);
-    }
+    window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
@@ -46,12 +44,12 @@ export function Header() {
       {isDesktop ? (
         <motion.div
           animate={{
-            marginTop: pathname === "/" && !isScrolled ? 0 : "16px",
-            borderRadius: pathname === "/" && !isScrolled ? "0px" : "24px",
+            marginTop: !isScrolled ? 0 : "16px",
+            borderRadius: !isScrolled ? "0px" : "24px",
           }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
           className={`flex py-4 items-center justify-between text-white container px-8 mx-auto ${
-            pathname === "/" && !isScrolled
+            !isScrolled
               ? "bg-transparent"
               : "glass-nav-light bg-zinc-900/5"
           }`}
@@ -77,7 +75,13 @@ export function Header() {
           {/* CTA Button */}
           <div className="flex-grow flex-shrink-0 basis-0 flex justify-end">
             <Link href="/book">
-              <ScanningButton variant="primary" size="sm">
+              <ScanningButton
+                variant="primary"
+                size="sm"
+                color={
+                  pathname === "/services/crm-solution" ? "emerald" : "blue"
+                }
+              >
                 Book Your Call Now
               </ScanningButton>
             </Link>

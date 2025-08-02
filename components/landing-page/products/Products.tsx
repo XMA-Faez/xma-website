@@ -29,8 +29,6 @@ const products = [
 function Products() {
   return (
     <section className="relative min-h-screen py-24 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950" />
-      
       <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

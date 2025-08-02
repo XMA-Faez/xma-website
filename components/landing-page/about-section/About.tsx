@@ -36,8 +36,6 @@ const stats = [
 function About() {
   return (
     <section className="relative min-h-screen py-24 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950" />
-      
       {/* Background decoration */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl"></div>
