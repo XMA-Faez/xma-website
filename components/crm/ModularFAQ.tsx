@@ -14,6 +14,7 @@ import {
   Zap,
   X,
 } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
 
 interface FAQ {
   id: string;
@@ -295,13 +296,13 @@ const ModularFAQ: React.FC = () => {
     const colorMap = {
       emerald: {
         bg: "from-emerald-500/20 to-green-400/10",
-        text: "text-emerald-400",
+        text: "text-emerald-600",
         border: "border-emerald-500/30",
         hover: "hover:border-emerald-500/50",
       },
       green: {
         bg: "from-green-500/20 to-emerald-400/10",
-        text: "text-green-400",
+        text: "text-green-700",
         border: "border-green-500/30",
         hover: "hover:border-green-500/50",
       },
@@ -349,18 +350,18 @@ const ModularFAQ: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+          <Badge variant="success" className="mb-6">
             <HelpCircle className="w-4 h-4" />
             Frequently Asked Questions
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          </Badge>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
             Got Questions? We Have
             <span className="bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
               {" "}
               Answers
             </span>
           </h2>
-          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-zinc-400 max-w-3xl mx-auto">
             Everything you need to know about our AI-powered CRM for UAE
             businesses
           </p>
@@ -375,18 +376,18 @@ const ModularFAQ: React.FC = () => {
           className="relative max-w-2xl mx-auto mb-12"
         >
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-500 dark:text-zinc-400" />
             <input
               type="text"
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-12 py-4 rounded-2xl glass-primary border border-zinc-700 focus:border-emerald-500/50 focus:outline-none text-white placeholder-zinc-400"
+              className="w-full pl-12 pr-12 py-4 rounded-2xl glass-primary border border-slate-300 dark:border-zinc-700 focus:border-emerald-500/50 focus:outline-none text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-zinc-400"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -420,16 +421,16 @@ const ModularFAQ: React.FC = () => {
                     : `glass-primary hover:glass-secondary border border-transparent ${colors.hover}`
                 }`}
               >
-                <span className={isActive ? colors.text : "text-zinc-400"}>
+                <span className={isActive ? colors.text : "text-slate-600 dark:text-zinc-400"}>
                   {category.icon}
                 </span>
-                <span className={isActive ? colors.text : "text-zinc-300"}>
+                <span className={isActive ? colors.text : "text-slate-700 dark:text-zinc-300"}>
                   {category.name}
                 </span>
                 {category.id !== "all" && (
                   <span
                     className={`text-xs px-2 py-1 rounded-full ${
-                      isActive ? "bg-white/10" : "bg-zinc-800"
+                      isActive ? "bg-white/10 dark:bg-white/10 bg-slate-900/10" : "bg-slate-200 dark:bg-zinc-800"
                     }`}
                   >
                     {faqs.filter((faq) => faq.category === category.id).length}
@@ -458,7 +459,7 @@ const ModularFAQ: React.FC = () => {
                   className={`rounded-2xl glass-primary hover:glass-secondary border ${
                     isOpen
                       ? `${colors.border} ${colors.bg}`
-                      : "border-zinc-800 hover:border-zinc-700"
+                      : "border-slate-300 dark:border-zinc-800 hover:border-slate-400 dark:hover:border-zinc-700"
                   }`}
                 >
                   <button
@@ -475,13 +476,13 @@ const ModularFAQ: React.FC = () => {
                             {category?.name}
                           </span>
                           {faq.popularity >= 90 && (
-                            <span className="text-xs px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded-full">
+                            <Badge variant="success" size="sm">
                               Popular
-                            </span>
+                            </Badge>
                           )}
                         </div>
                         <h3
-                          className={`text-lg font-semibold pr-4 ${isOpen ? colors.text : "text-zinc-200"}`}
+                          className={`text-lg font-semibold pr-4 ${isOpen ? colors.text : "text-slate-900 dark:text-zinc-200"}`}
                         >
                           {faq.question}
                         </h3>
@@ -505,7 +506,7 @@ const ModularFAQ: React.FC = () => {
                       >
                         <div className="px-6 pb-6">
                           <div className="pl-8">
-                            <p className="text-zinc-300 leading-relaxed mb-4">
+                            <p className="text-slate-700 dark:text-zinc-300 leading-relaxed mb-4">
                               {faq.answer}
                             </p>
 
@@ -514,7 +515,7 @@ const ModularFAQ: React.FC = () => {
                               {faq.tags.map((tag, tagIndex) => (
                                 <span
                                   key={tagIndex}
-                                  className="text-xs px-2 py-1 bg-zinc-800 text-zinc-400 rounded-full"
+                                  className="text-xs px-2 py-1 bg-slate-200 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400 rounded-full"
                                 >
                                   {tag}
                                 </span>
@@ -538,11 +539,11 @@ const ModularFAQ: React.FC = () => {
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
-            <HelpCircle className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-zinc-300 mb-2">
+            <HelpCircle className="w-16 h-16 text-slate-400 dark:text-zinc-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-slate-700 dark:text-zinc-300 mb-2">
               No questions found
             </h3>
-            <p className="text-zinc-400 mb-6">
+            <p className="text-slate-600 dark:text-zinc-400 mb-6">
               Try adjusting your search terms or browse a different category
             </p>
             <button
@@ -550,7 +551,7 @@ const ModularFAQ: React.FC = () => {
                 setSearchQuery("");
                 setActiveCategory("all");
               }}
-              className="px-6 py-3 rounded-xl glass-primary hover:glass-secondary font-medium"
+              className="px-6 py-3 rounded-xl glass-primary hover:glass-secondary font-medium text-slate-900 dark:text-white"
             >
               Show All Questions
             </button>

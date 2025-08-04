@@ -48,7 +48,7 @@ function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl/[1.3] font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl/[1.3] font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
             Why Choose XMA?
           </h2>
         </motion.div>
@@ -60,17 +60,17 @@ function About() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-3xl md:text-4xl leading-relaxed text-white mb-8">
+            <p className="text-3xl md:text-4xl leading-relaxed text-slate-900 dark:text-white mb-8">
               We noticed a critical gap in digital marketing: businesses struggle to achieve <span className="text-blue-400 font-semibold">high-impact, results-driven</span> growth that actually moves the needle.
             </p>
             
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-xl text-slate-600 dark:text-gray-300 leading-relaxed mb-8">
               While others focus on vanity metrics, we obsess over what matters most: qualified leads, conversion rates, and sustainable growth that transforms your business.
             </p>
 
             <div className="flex items-center gap-4">
               <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
-              <span className="text-sm text-gray-500 uppercase tracking-wide">
+              <span className="text-sm text-slate-400 dark:text-gray-500 uppercase tracking-wide">
                 Trusted by Industry Leaders
               </span>
             </div>
@@ -93,10 +93,10 @@ function About() {
                 className="p-6 glass-primary rounded-2xl text-center group"
               >
                 <stat.IconComponent className={`w-8 h-8 ${stat.color} mx-auto mb-3`} weight="duotone" />
-                <div className="text-3xl font-bold text-white mb-1">
+                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-sm text-slate-500 dark:text-gray-400">
                   {stat.label}
                 </div>
               </motion.div>
@@ -111,10 +111,10 @@ function About() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
             Ready to Transform Your Growth?
           </h3>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             Join the businesses that have already discovered the XMA difference. 
             Let's turn your marketing spend into measurable revenue.
           </p>

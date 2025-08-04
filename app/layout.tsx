@@ -9,6 +9,7 @@ import "./globals.css";
 import Footer from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,25 +40,32 @@ export default function RootLayout({
         <meta name="google-site-verification" content="b4Ruz4qrwE5l_HVaxaP5_Nysz4MGIQaCWg8xYkKrJcM" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Theme appearance="dark" grayColor="slate">
-          <PostHogProvider>
-            {/* <AnimatedCursorComponent /> */}
-            <Header />
-            <SpeedInsights />
-            <main className="bg-zinc-950">{children}</main>
-            <Analytics />
-            <Footer />
-            <style>
-              {`
-            .dark,
-            .dark-theme,
-            :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
-              --color-background: #080808;
-            }
-          `}
-            </style>
-          </PostHogProvider>
-        </Theme>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <Theme grayColor="slate">
+            <PostHogProvider>
+              {/* <AnimatedCursorComponent /> */}
+              <Header />
+              <SpeedInsights />
+              <main className="bg-slate-50 dark:bg-zinc-950 transition-colors duration-300">{children}</main>
+              <Analytics />
+              <Footer />
+              <style>
+                {`
+              .dark,
+              .dark-theme,
+              :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
+                --color-background: #080808;
+              }
+            `}
+              </style>
+            </PostHogProvider>
+          </Theme>
+        </ThemeProvider>
       </body>
     </html>
   );

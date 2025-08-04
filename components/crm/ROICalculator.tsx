@@ -13,6 +13,7 @@ import {
   AlertTriangle
 } from "lucide-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import { Badge } from "@/components/ui/Badge";
 
 // Input validation utilities
 const sanitizeNumericInput = (value: number, min: number, max: number): number => {
@@ -196,15 +197,15 @@ const ROICalculator: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+          <Badge variant="success" className="mb-6">
             <Calculator className="w-4 h-4" />
             ROI Calculator
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          </Badge>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
             Calculate Your
-            <span className="bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent"> Revenue Impact</span>
+            <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent"> Revenue Impact</span>
           </h2>
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-zinc-400 max-w-2xl mx-auto">
             See exactly how much additional revenue our CRM could generate for your UAE business
           </p>
         </motion.div>
@@ -218,7 +219,7 @@ const ROICalculator: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold mb-6" id="roi-inputs-heading">
+            <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white" id="roi-inputs-heading">
               Your Current Metrics
             </h3>
             
@@ -257,20 +258,20 @@ const ROICalculator: React.FC = () => {
                     <span className="text-emerald-400" aria-hidden="true">{field.icon}</span>
                     <label 
                       htmlFor={`roi-input-${field.field}`}
-                      className="font-medium text-zinc-200"
+                      className="font-medium text-slate-700 dark:text-zinc-200"
                     >
                       {field.label}
                     </label>
                     <div className="group relative">
                       <button
                         type="button"
-                        className="text-zinc-500 hover:text-zinc-400 focus:outline-none focus:text-zinc-400"
+                        className="text-slate-500 dark:text-zinc-500 hover:text-slate-700 dark:hover:text-zinc-400 focus:outline-none focus:text-slate-700 dark:focus:text-zinc-400"
                         aria-label={`More information about ${field.label}`}
                       >
                         <Info className="w-4 h-4" />
                       </button>
                       <div 
-                        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 w-64 z-10"
+                        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-lg text-sm text-slate-700 dark:text-zinc-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 w-64 z-10 shadow-lg"
                         role="tooltip"
                       >
                         {field.tooltip}
@@ -300,21 +301,33 @@ const ROICalculator: React.FC = () => {
                         handleInputChange(field.field, newValue);
                       }
                     }}
-                    className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer slider focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-zinc-900"
+                    className="w-full h-2 rounded-lg appearance-none cursor-pointer slider focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 roi-slider"
                     aria-describedby={`roi-input-${field.field}-desc`}
                     aria-valuemin={field.min}
                     aria-valuemax={field.max}
                     aria-valuenow={metrics[field.field]}
                     aria-valuetext={`${metrics[field.field]} ${field.suffix}`}
                     style={{
-                      background: `linear-gradient(to right, 
-                        rgb(16 185 129) 0%, 
-                        rgb(16 185 129) ${((metrics[field.field] - field.min) / (field.max - field.min)) * 100}%, 
-                        rgb(39 39 42) ${((metrics[field.field] - field.min) / (field.max - field.min)) * 100}%, 
-                        rgb(39 39 42) 100%)`
-                    }}
+                      '--progress': `${((metrics[field.field] - field.min) / (field.max - field.min)) * 100}%`
+                    } as React.CSSProperties}
                   />
                   <style jsx>{`
+                    .roi-slider {
+                      background: linear-gradient(to right, 
+                        rgb(16 185 129) 0%, 
+                        rgb(16 185 129) var(--progress), 
+                        rgb(203 213 225) var(--progress), 
+                        rgb(203 213 225) 100%);
+                    }
+                    
+                    :global(.dark) .roi-slider {
+                      background: linear-gradient(to right, 
+                        rgb(16 185 129) 0%, 
+                        rgb(16 185 129) var(--progress), 
+                        rgb(39 39 42) var(--progress), 
+                        rgb(39 39 42) 100%);
+                    }
+                    
                     .slider::-webkit-slider-thumb {
                       appearance: none;
                       height: 20px;
@@ -378,7 +391,7 @@ const ROICalculator: React.FC = () => {
             className="relative"
           >
             <div className="sticky top-8">
-              <h3 className="text-2xl font-bold mb-6">Your ROI Projection</h3>
+              <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Your ROI Projection</h3>
               
               <AnimatePresence mode="wait">
                 {!results ? (
@@ -387,10 +400,10 @@ const ROICalculator: React.FC = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="p-8 rounded-3xl glass-primary border-2 border-dashed border-zinc-700 text-center"
+                    className="p-8 rounded-3xl glass-primary border-2 border-dashed border-slate-300 dark:border-zinc-700 text-center"
                   >
-                    <Calculator className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
-                    <p className="text-zinc-500">
+                    <Calculator className="w-16 h-16 text-slate-400 dark:text-zinc-600 mx-auto mb-4" />
+                    <p className="text-slate-500 dark:text-zinc-500">
                       Adjust your metrics and click &quot;Calculate My ROI&quot; to see your potential revenue increase
                     </p>
                   </motion.div>
@@ -408,7 +421,7 @@ const ROICalculator: React.FC = () => {
                         <div className="text-4xl font-bold text-emerald-400 mb-2">
                           {formatCurrency(results.additionalRevenue)}
                         </div>
-                        <div className="text-zinc-300 mb-4">Additional Monthly Revenue</div>
+                        <div className="text-slate-600 dark:text-zinc-300 mb-4">Additional Monthly Revenue</div>
                         <div className="text-2xl font-semibold text-green-300">
                           {formatCurrency(results.annualIncrease)} / year
                         </div>
@@ -421,14 +434,14 @@ const ROICalculator: React.FC = () => {
                         <div className="text-2xl font-bold text-emerald-400">
                           +{results.leadsRecovered}
                         </div>
-                        <div className="text-sm text-zinc-400">Leads Recovered</div>
+                        <div className="text-sm text-slate-500 dark:text-zinc-400">Leads Recovered</div>
                       </div>
                       
                       <div className="p-4 rounded-2xl glass-primary text-center">
                         <div className="text-2xl font-bold text-emerald-400">
                           {Math.round(results.timesSaved)}h
                         </div>
-                        <div className="text-sm text-zinc-400">Time Saved</div>
+                        <div className="text-sm text-slate-500 dark:text-zinc-400">Time Saved</div>
                       </div>
                     </div>
 
@@ -441,14 +454,14 @@ const ROICalculator: React.FC = () => {
                       
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">
-                          <span className="text-zinc-400">Current Revenue</span>
-                          <span className="font-semibold">{formatCurrency(results.monthlyRevenue)}</span>
+                          <span className="text-slate-500 dark:text-zinc-400">Current Revenue</span>
+                          <span className="font-semibold text-slate-900 dark:text-white">{formatCurrency(results.monthlyRevenue)}</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-zinc-400">With Our CRM</span>
+                          <span className="text-slate-500 dark:text-zinc-400">With Our CRM</span>
                           <span className="font-semibold text-emerald-400">{formatCurrency(results.improvedRevenue)}</span>
                         </div>
-                        <div className="h-px bg-zinc-700 my-2" />
+                        <div className="h-px bg-slate-300 dark:bg-zinc-700 my-2" />
                         <div className="flex justify-between items-center text-lg">
                           <span className="text-emerald-400 font-semibold">Increase</span>
                           <span className="font-bold text-emerald-400">
@@ -474,7 +487,7 @@ const ROICalculator: React.FC = () => {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="text-xs text-zinc-500 bg-zinc-900/50 p-4 rounded-lg mb-4"
+                            className="text-xs text-slate-600 dark:text-zinc-500 bg-slate-100 dark:bg-zinc-900/50 p-4 rounded-lg mb-4"
                           >
                             <p className="mb-2"><strong>Assumptions:</strong></p>
                             <p>• 60% improvement in conversion rate with AI chatbot</p>

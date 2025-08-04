@@ -1,6 +1,8 @@
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Always use bun for installing dependencies and running scripts, as it is the preferred runtime for this project.
+Don't ever use rgb or hex colors; always use HSL or oklch for colors to maintain consistency with the project's design system.
 
 ## Professional Expertise
 

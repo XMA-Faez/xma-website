@@ -98,10 +98,10 @@ export default function Process() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
             How We Work
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-gray-400 max-w-2xl mx-auto">
             A proven process that transforms your vision into reality with precision and creativity
           </p>
         </motion.div>
@@ -134,15 +134,15 @@ export default function Process() {
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <step.icon className={`w-8 h-8 mb-2 ${step.iconColor}`} weight="duotone" />
-                        <h3 className="text-2xl font-bold text-white mb-1">{step.phase}</h3>
-                        <h4 className="text-lg text-gray-300">{step.title}</h4>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">{step.phase}</h3>
+                        <h4 className="text-lg text-slate-600 dark:text-gray-300">{step.title}</h4>
                       </div>
                       <span className={`text-sm glass-float px-4 py-2 rounded-2xl ${step.iconColor} font-semibold`}>
                         {step.duration}
                       </span>
                     </div>
                     
-                    <p className="text-white/90 mb-4 drop-shadow-sm">{step.description}</p>
+                    <p className="text-slate-700 dark:text-white/90 mb-4 drop-shadow-sm">{step.description}</p>
                     
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
@@ -154,10 +154,10 @@ export default function Process() {
                       className="overflow-hidden"
                     >
                       <div className="pt-4 border-t border-white/10">
-                        <h5 className="text-sm font-semibold text-white mb-3">Key Activities:</h5>
+                        <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-3">Key Activities:</h5>
                         <ul className="space-y-2">
                           {step.activities.map((activity, i) => (
-                            <li key={i} className="text-sm text-white/80 flex items-center rounded-xl p-2 hover:glass-secondary transition-all duration-300">
+                            <li key={i} className="text-sm text-slate-700 dark:text-white/80 flex items-center rounded-xl p-2 hover:glass-secondary transition-all duration-300">
                               <span className={`w-2 h-2 ${step.bulletColor} rounded-full mr-3 electric-glow`} />
                               {activity}
                             </li>
@@ -191,7 +191,7 @@ export default function Process() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-400 mb-6">
+          <p className="text-lg text-slate-600 dark:text-gray-400 mb-6">
             Ready to start your journey with us?
           </p>
           <Link href="#booking-widget" scroll={true}>

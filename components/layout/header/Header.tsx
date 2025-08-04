@@ -9,11 +9,19 @@ import { usePathname } from "next/navigation";
 import { MainNav } from "./navigation/MainNav";
 import { MobileNav } from "./navigation/MobileNav";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { useTheme } from "next-themes";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,22 +56,24 @@ export function Header() {
             borderRadius: !isScrolled ? "0px" : "24px",
           }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
-          className={`flex py-4 items-center justify-between text-white container px-8 mx-auto ${
+          className={`flex py-4 items-center justify-between text-slate-900 dark:text-white container px-8 mx-auto ${
             !isScrolled
               ? "bg-transparent"
-              : "glass-nav-light bg-zinc-900/5"
+              : "glass-nav"
           }`}
         >
           {/* Logo */}
           <div className="flex-grow flex-shrink-0 basis-0">
             <Link className="block w-fit" href="/">
-              <Image
-                src="/XMA-White.svg"
-                alt="XMA Logo"
-                width={50}
-                height={50}
-                priority
-              />
+              {mounted && (
+                <Image
+                  src={theme === 'light' ? "/XMA-01.svg" : "/XMA-White.svg"}
+                  alt="XMA Logo"
+                  width={50}
+                  height={50}
+                  priority
+                />
+              )}
             </Link>
           </div>
 
@@ -72,8 +82,9 @@ export function Header() {
             <MainNav />
           </div>
 
-          {/* CTA Button */}
-          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end">
+          {/* Theme Toggle and CTA Button */}
+          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end items-center gap-4">
+            <ThemeToggle />
             <Link href="/book">
               <ScanningButton
                 variant="primary"
@@ -89,23 +100,26 @@ export function Header() {
         </motion.div>
       ) : (
         <div
-          className={`${isScrolled ? "glass-nav-light" : "bg-transparent"}
-            flex h-full items-center text-white px-8 mx-auto duration-300 transition-all`}
+          className={`${isScrolled ? "glass-nav" : "bg-transparent"}
+            flex h-full items-center text-slate-900 dark:text-white px-8 mx-auto duration-300 transition-all`}
         >
           <div className="flex-grow flex-shrink-0 basis-0">
             <Link className="block w-fit" href="/">
-              <Image
-                src="/XMA-White.svg"
-                alt="XMA Logo"
-                width={50}
-                height={50}
-                priority
-              />
+              {mounted && (
+                <Image
+                  src={theme === 'light' ? "/XMA-01.svg" : "/XMA-White.svg"}
+                  alt="XMA Logo"
+                  width={50}
+                  height={50}
+                  priority
+                />
+              )}
             </Link>
           </div>
 
-          {/* Mobile Navigation */}
-          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end">
+          {/* Mobile Navigation and Theme Toggle */}
+          <div className="flex-grow flex-shrink-0 basis-0 flex justify-end items-center gap-3">
+            <ThemeToggle />
             <MobileNav />
           </div>
         </div>

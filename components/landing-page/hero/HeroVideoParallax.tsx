@@ -13,12 +13,8 @@ import * as m from "motion/react-m";
 import {
   optimizeCloudinaryVideoUrl,
   getOptimizedThumbnail,
-} from "../../../utils/cloudinary";
+} from "@/utils/cloudinary";
 import { ScanningButton } from "@/components/ui/ScanningButton";
-
-// Global counter to limit concurrent video loads
-const loadingVideos = 0;
-const MAX_CONCURRENT_VIDEOS = 30;
 
 export const HeroVideoParallax = ({
   videos,
@@ -119,16 +115,16 @@ export const Header = () => {
     <div className="max-w-7xl z-10 relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       {/* Glassmorphism hero container */}
       <div className="rounded-3xl p-8 md:p-12">
-        <h1 className="text-2xl pointer-events-none md:text-6xl text-balance capitalize font-bold text-white drop-shadow-lg">
+        <h1 className="text-2xl pointer-events-none md:text-6xl text-balance capitalize font-bold text-slate-900 dark:text-white drop-shadow-lg">
           Unlimited Growth with subscription-based lead generation
         </h1>
-        <p className="max-w-2xl text-base pointer-events-none md:text-xl mt-8 mb-lg text-white/90 drop-shadow-sm">
+        <p className="max-w-2xl text-base pointer-events-none md:text-xl mt-8 mb-lg text-slate-700 dark:text-white/90 drop-shadow-sm">
           From SMART ads and campaign management to message marketing, Lead Flow
           provides everything you need.
         </p>
         <div className="mt-8">
           <Link href="#booking-widget" scroll={true} className="inline-block">
-            <ScanningButton variant="primary" size="md">
+            <ScanningButton className="backdrop-blur-md" variant="primary" size="md">
               Book Discovery Call
             </ScanningButton>
           </Link>
@@ -151,15 +147,11 @@ export const VideoCard = ({
   };
   translate: MotionValue<number>;
 }) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-  const [isInView, setIsInView] = React.useState(false);
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting);
-
         if (entry.isIntersecting && videoRef.current) {
           videoRef.current.play().catch(() => {});
         } else if (!entry.isIntersecting && videoRef.current) {
@@ -191,8 +183,6 @@ export const VideoCard = ({
       }}
       key={video.public_id}
       className="group/video w-64 aspect-[9/16] relative flex-shrink-0"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="block w-full h-full rounded-2xl overflow-hidden">
         <video

@@ -10,6 +10,7 @@ import {
   Check,
   Zap,
 } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
 
 interface Feature {
   id: string;
@@ -161,7 +162,7 @@ const FeatureSection: React.FC<{
             {feature.icon}
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-white mb-2">
+            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
               {feature.title}
             </h3>
             <div className={`w-20 h-1 bg-gradient-to-r ${feature.color.gradient} rounded-full`}></div>
@@ -169,7 +170,7 @@ const FeatureSection: React.FC<{
         </div>
 
         {/* Description */}
-        <p className="text-lg text-zinc-300 leading-relaxed">
+        <p className="text-lg text-slate-600 dark:text-zinc-300 leading-relaxed">
           {feature.description}
         </p>
 
@@ -185,7 +186,7 @@ const FeatureSection: React.FC<{
               className="flex items-start gap-3"
             >
               <Check className={`w-5 h-5 ${feature.color.text} flex-shrink-0 mt-0.5`} />
-              <p className="text-zinc-300">{detail}</p>
+              <p className="text-slate-600 dark:text-zinc-300">{detail}</p>
             </motion.div>
           ))}
         </div>
@@ -198,7 +199,7 @@ const StreamlinedFeatures: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
 
   return (
-    <section className="relative text-white py-24">
+    <section className="relative py-24">
       {/* Header */}
       <div className="relative z-10 text-center mb-16 px-4">
         <motion.div
@@ -208,16 +209,16 @@ const StreamlinedFeatures: React.FC = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-8">
+          <Badge variant="success" size="lg" className="mb-8">
             <Zap className="w-4 h-4" />
             Core Features
-          </div>
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          </Badge>
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
             <span className="">
               Everything You Need to Win
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-zinc-400 leading-relaxed max-w-3xl mx-auto">
             Four powerful features that work together to transform your customer relationships
           </p>
         </motion.div>
@@ -254,13 +255,13 @@ const StreamlinedFeatures: React.FC = () => {
                   >
                   {/* Image Container */}
                   <div className={`rounded-2xl overflow-hidden bg-gradient-to-br ${features[activeFeature].color.bg} backdrop-blur-xl border ${features[activeFeature].color.border} p-1`}>
-                    <div className="rounded-xl overflow-hidden bg-zinc-900/80 aspect-[16/10]">
+                    <div className="rounded-xl overflow-hidden bg-slate-100 dark:bg-zinc-900/80 aspect-[16/10]">
                       <div className="w-full h-full flex items-center justify-center p-8">
                         <div className="text-center space-y-4">
-                          <div className={`inline-flex p-4 rounded-2xl bg-white/5 ${features[activeFeature].color.text}`}>
+                          <div className={`inline-flex p-4 rounded-2xl bg-slate-200/50 dark:bg-white/5 ${features[activeFeature].color.text}`}>
                             {features[activeFeature].icon}
                           </div>
-                          <p className="text-zinc-400 text-sm max-w-md mx-auto">
+                          <p className="text-slate-500 dark:text-zinc-400 text-sm max-w-md mx-auto">
                             {features[activeFeature].screenshot.placeholder}
                           </p>
                         </div>
@@ -276,7 +277,7 @@ const StreamlinedFeatures: React.FC = () => {
                         className={`w-1 h-12 rounded-full transition-all duration-300 ${
                           index === activeFeature 
                             ? `bg-gradient-to-b ${features[activeFeature].color.gradient} opacity-100` 
-                            : 'bg-zinc-700 opacity-40'
+                            : 'bg-slate-300 dark:bg-zinc-700 opacity-40'
                         }`}
                         animate={{
                           scaleY: index === activeFeature ? 1 : 0.5,
@@ -287,12 +288,12 @@ const StreamlinedFeatures: React.FC = () => {
                   </div>
 
                   {/* Feature Number */}
-                  <div className={`absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-br ${features[activeFeature].color.gradient} flex items-center justify-center text-black font-bold text-lg`}>
+                  <div className={`absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-br ${features[activeFeature].color.gradient} flex items-center justify-center text-white font-bold text-lg`}>
                     {activeFeature + 1}
                   </div>
                   
                   {/* Debug - remove this later */}
-                  <div className="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                  <div className="absolute top-4 left-4 bg-black/50 dark:bg-black/50 text-white px-2 py-1 rounded text-sm">
                     Active: {activeFeature}
                   </div>
                   </motion.div>
@@ -312,13 +313,13 @@ const StreamlinedFeatures: React.FC = () => {
                 viewport={{ once: true }}
                 className={`rounded-2xl overflow-hidden bg-gradient-to-br ${feature.color.bg} backdrop-blur-xl border ${feature.color.border} p-1 mb-32`}
               >
-                <div className="rounded-xl overflow-hidden bg-zinc-900/80 aspect-[16/10]">
+                <div className="rounded-xl overflow-hidden bg-slate-100 dark:bg-zinc-900/80 aspect-[16/10]">
                   <div className="w-full h-full flex items-center justify-center p-8">
                     <div className="text-center space-y-4">
-                      <div className={`inline-flex p-4 rounded-2xl bg-white/5 ${feature.color.text}`}>
+                      <div className={`inline-flex p-4 rounded-2xl bg-slate-200/50 dark:bg-white/5 ${feature.color.text}`}>
                         {feature.icon}
                       </div>
-                      <p className="text-zinc-400 text-sm">
+                      <p className="text-slate-500 dark:text-zinc-400 text-sm">
                         {feature.screenshot.placeholder}
                       </p>
                     </div>

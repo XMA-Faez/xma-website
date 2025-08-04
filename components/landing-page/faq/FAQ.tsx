@@ -110,10 +110,10 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <div className="rounded-3xl p-8 md:p-12 backdrop-blur-3xl">
-            <h2 className="text-5xl md:text-6xl/[1.3] font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
+            <h2 className="text-5xl md:text-6xl/[1.3] font-bold mb-4 bg-gradient-to-r from-slate-900 to-blue-600 dark:from-white dark:to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+            <p className="text-xl text-slate-700 dark:text-white/90 max-w-2xl mx-auto drop-shadow-sm">
               Everything you need to know about working with us
             </p>
           </div>
@@ -133,8 +133,8 @@ export default function FAQ() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-2xl font-medium transition-all duration-300 flex items-center gap-2 ${
                 activeCategory === category.id
-                  ? "glass-button-primary electric-glow text-white"
-                  : "glass-tertiary text-gray-400 hover:glass-secondary hover:text-white"
+                  ? "glass-button-primary electric-glow text-black"
+                  : "glass-tertiary text-slate-600 dark:text-gray-400 transition-colors hover:glass-secondary hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               <category.icon className="w-5 h-5" />
@@ -168,21 +168,21 @@ export default function FAQ() {
                   onClick={() => toggleQuestion(questionId)}
                   className={`w-full text-left p-6 rounded-2xl transition-all duration-300 ${
                     isOpen
-                      ? "bg-zinc-800/80 shadow-lg"
-                      : "bg-zinc-900/50 hover:bg-zinc-800/50"
+                      ? "bg-white/80 dark:bg-zinc-800/80 shadow-lg"
+                      : "bg-white/50 dark:bg-zinc-900/50 hover:bg-white/70 dark:hover:bg-zinc-800/50"
                   } backdrop-blur-sm border ${
-                    isOpen ? "border-blue-500/30" : "border-zinc-800"
+                    isOpen ? "border-blue-500/30" : "border-slate-300 dark:border-zinc-800"
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-white pr-4">
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white pr-4">
                       {item.q}
                     </h3>
                     <motion.div
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
                       className={`flex-shrink-0 ${
-                        isOpen ? "text-blue-400" : "text-gray-400"
+                        isOpen ? "text-blue-400" : "text-slate-600 dark:text-gray-400"
                       }`}
                     >
                       <CaretDown className="w-5 h-5" />
@@ -198,7 +198,7 @@ export default function FAQ() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="mt-4 text-gray-300 leading-relaxed">
+                        <p className="mt-4 text-slate-700 dark:text-gray-300 leading-relaxed">
                           {item.a}
                         </p>
                       </motion.div>
@@ -219,18 +219,18 @@ export default function FAQ() {
           className="mt-16"
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
               Still have questions?
             </h3>
-            <p className="text-lg text-gray-400 mb-2">
-              Let's discuss your project in detail.
+            <p className="text-lg text-slate-600 dark:text-gray-400 mb-2">
+              Let's discuss your project in detail.  
             </p>
-            <p className="text-gray-500">
+            <p className="text-slate-500 dark:text-gray-500">
               Book a free consultation call with our experts.
             </p>
           </div>
           
-          <div className="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-6">
+          <div className="bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-slate-300 dark:border-zinc-800 rounded-2xl p-6">
             <BookingIframe className="rounded-lg overflow-hidden" />
           </div>
         </motion.div>

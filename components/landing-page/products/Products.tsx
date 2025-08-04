@@ -38,10 +38,10 @@ function Products() {
           className="text-center mb-16"
         >
           <div className="max-w-7xl mx-auto rounded-3xl p-8 md:p-12 backdrop-blur-3xl">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-slate-900 to-blue-600 dark:from-white dark:to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
               Our Products
             </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-sm">
+            <p className="text-xl text-slate-700 dark:text-white/90 max-w-2xl mx-auto drop-shadow-sm">
               Cutting-edge solutions designed to accelerate your business growth
             </p>
           </div>
@@ -59,7 +59,7 @@ function Products() {
             >
               <div className="flex items-start justify-between mb-8">
                 <div className="space-y-2">
-                  <h3 className="text-3xl font-bold text-white">
+                  <h3 className="text-3xl font-bold text-slate-900 dark:text-white">
                     {product.title}
                   </h3>
                   <div className={`w-12 h-0.5 bg-gradient-to-r ${product.accentColor}`}></div>
@@ -75,13 +75,13 @@ function Products() {
                 )}
               </div>
               
-              <p className="text-white/90 mb-8 leading-relaxed text-lg drop-shadow-sm">
+              <p className="text-slate-700 dark:text-white/90 mb-8 leading-relaxed text-lg drop-shadow-sm">
                 {product.description}
               </p>
 
               <div className="space-y-4">
                 {product.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-white/80 rounded-xl hover:glass-secondary ">
+                  <div key={featureIndex} className="flex items-center text-slate-700 dark:text-white/80 rounded-xl hover:glass-secondary ">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-4 electric-glow"></div>
                     <span className="text-sm font-medium">{feature}</span>
                   </div>
@@ -99,7 +99,7 @@ function Products() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-400 mb-6">
+          <p className="text-lg text-slate-600 dark:text-gray-400 mb-6">
             Ready to transform your business?
           </p>
           <Link href="/book">

@@ -131,7 +131,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
     testimonials: [
       {
         id: "social_proof",
-        type: "social_proof",
+        type: "primary",
         title: "Join These Successful UAE Businesses",
         subtitle: "Get the same results they achieved",
         buttons: [
@@ -140,7 +140,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
             href: "/book",
             variant: "primary",
             icon: <ArrowRight className="w-5 h-5" />,
-            color: "blue",
+            color: "emerald",
           },
           {
             text: "Call +971 50 123 4567",
@@ -288,14 +288,14 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
 
         {/* Main Content */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
             {activeVariant.title.split(" ").map((word, index) => {
               return <span key={index}>{word} </span>;
             })}
           </h2>
 
           {activeVariant.subtitle && (
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-zinc-300 max-w-3xl mx-auto">
               {activeVariant.subtitle}
             </p>
           )}
@@ -315,7 +315,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
                 className="flex items-center gap-2 px-4 py-2 rounded-full glass-primary"
               >
                 <CheckCircle className="w-4 h-4 text-emerald-400" />
-                <span className="text-sm text-zinc-300">{benefit}</span>
+                <span className="text-sm text-slate-700 dark:text-zinc-300">{benefit}</span>
               </div>
             ))}
           </motion.div>
@@ -346,7 +346,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
                   ) : (
                     <ScanningButton
                       variant="secondary"
-                      color={button.color || "blue"}
+                      color={button.color || "emerald"}
                       size="md"
                       className="w-full sm:w-auto"
                     >
@@ -399,7 +399,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
                   >
                     {proof.metric}
                   </div>
-                  <div className="text-xs text-zinc-400">{proof.label}</div>
+                  <div className="text-xs text-slate-500 dark:text-zinc-400">{proof.label}</div>
                 </div>
               </div>
             ))}
@@ -413,7 +413,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
               <select
                 value={selectedVariant}
                 onChange={(e) => setSelectedVariant(e.target.value)}
-                className="text-xs bg-zinc-800 border border-zinc-700 rounded px-2 py-1"
+                className="text-xs bg-white dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded px-2 py-1 text-slate-900 dark:text-white"
               >
                 {currentVariants.map((variant) => (
                   <option key={variant.id} value={variant.id}>
