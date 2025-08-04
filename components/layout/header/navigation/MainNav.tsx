@@ -36,7 +36,7 @@ export function MainNav() {
           <NavigationMenuTrigger className="px-4 py-2 text-sm rounded-full text-zinc-300 hover:text-white hover:glass-tertiary transition-all duration-300 group">
             Services
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="shadow-gray-500/20 shadow-2xl bg-black/70 rounded-2xl p-0 w-[420px]">
+          <NavigationMenuContent className="shadow-gray-500/20 shadow-2xl bg-zinc-800 rounded-2xl p-0 w-[420px]">
             <div className="p-6 min-w-[420px] space-y-1">
               {/* Service Items */}
               <div className="space-y-2">
