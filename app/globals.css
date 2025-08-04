@@ -209,6 +209,65 @@
   }
 }
 
+/* Modern navigation dropdown animations */
+@keyframes dropdownSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dropdownItemSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item-enter {
+  animation: dropdownItemSlideIn 0.3s ease-out forwards;
+}
+
+/* Enhanced glassmorphism for modern dropdown */
+.glass-dropdown {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  backdrop-filter: blur(40px) saturate(180%) brightness(110%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(110%);
+  border: 1px solid #000000aa;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 1px 1px rgba(255, 255, 255, 0.1) inset,
+    0 -1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* Darker emerald glassmorphism for CRM page dropdown */
+.glass-dropdown-emerald {
+  background: linear-gradient(135deg, 
+    rgba(6, 78, 59, 0.95) 0%,
+    rgba(5, 46, 22, 0.90) 50%,
+    rgba(6, 78, 59, 0.85) 100%
+  );
+  backdrop-filter: blur(40px) saturate(120%) brightness(80%);
+  -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(80%);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 1px 1px rgba(52, 211, 153, 0.1) inset,
+    0 -1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
 /* Glossy button animations */
 @keyframes shimmer {
   0% {
