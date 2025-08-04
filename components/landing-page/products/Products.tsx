@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const products = [
   {
-    title: "CRM System",
+    title: "XMA CRM System",
     description: "Complete customer relationship management system with unlimited users and contacts, designed to streamline your sales process.",
     features: ["Unlimited Users & Contacts", "Lead Management System", "Automated Workflows", "Reporting & Analytics"],
     accentColor: "from-emerald-400 to-green-300",

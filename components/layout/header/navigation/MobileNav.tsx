@@ -40,7 +40,20 @@ export function MobileNav() {
             </div>
             {services.map((service) => {
               const Icon = service.icon;
-              return (
+              return service.comingSoon ? (
+                <div
+                  key={service.name}
+                  className="flex items-center space-x-2 py-2 text-gray-500 opacity-60 cursor-not-allowed"
+                >
+                  <Icon className="h-4 w-4 text-gray-400" />
+                  <span className="flex items-center gap-2">
+                    {service.name}
+                    <span className="text-xs bg-gray-700/50 px-2 py-0.5 rounded-full">
+                      Coming Soon
+                    </span>
+                  </span>
+                </div>
+              ) : (
                 <Link
                   key={service.name}
                   href={service.href}
