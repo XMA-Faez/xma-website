@@ -365,7 +365,7 @@ const BusinessAssessment: React.FC = () => {
               
               <button
                 onClick={resetAssessment}
-                className="px-8 py-4 rounded-2xl glass-primary hover:glass-secondary transition-all duration-300 hover:scale-105 font-medium"
+                className="px-8 py-4 rounded-2xl glass-primary hover:glass-secondary font-medium"
               >
                 Retake Assessment
               </button>
@@ -440,7 +440,7 @@ const BusinessAssessment: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   onClick={() => handleAnswer(currentQuestion.id, option.value)}
-                  className={`p-6 rounded-2xl text-left transition-all duration-300 hover:scale-[1.02] ${
+                  className={`p-6 rounded-2xl text-left ${
                     answers[currentQuestion.id] === option.value
                       ? 'bg-gradient-to-br from-emerald-500/20 to-green-400/10 border border-emerald-500/30'
                       : 'glass-secondary hover:glass-primary'
@@ -476,7 +476,7 @@ const BusinessAssessment: React.FC = () => {
               <button
                 onClick={prevStep}
                 disabled={currentStep === 0}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium ${
                   currentStep === 0
                     ? 'opacity-50 cursor-not-allowed glass-primary'
                     : 'glass-primary hover:glass-secondary hover:scale-105'

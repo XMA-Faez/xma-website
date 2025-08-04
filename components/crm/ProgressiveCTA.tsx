@@ -230,7 +230,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
       case "value_prop":
         return "bg-gradient-to-br from-purple-500/20 to-pink-400/10 border-purple-500/30";
       default:
-        return "bg-gradient-to-br from-emerald-500/20 to-green-400/10 border-emerald-500/30";
+        return "bg-gradient-to-br from-emerald-500/20 to-teal-400/10 border-emerald-500/30";
     }
   };
 

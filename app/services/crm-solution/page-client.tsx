@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 
-import LazySection from "@/components/crm/LazySection";
 import ROICalculator from "@/components/crm/ROICalculator";
 import BusinessAssessment from "@/components/crm/BusinessAssessment";
 import StreamlinedFeatures from "@/components/crm/StreamlinedFeatures";
@@ -13,14 +12,9 @@ import ProgressiveCTA from "@/components/crm/ProgressiveCTA";
 import ModularFAQ from "@/components/crm/ModularFAQ";
 import CRMErrorBoundary from "@/components/crm/ErrorBoundary";
 import WebVitalsReporter from "@/components/performance/WebVitalsReporter";
+import { ScanningButton } from "@/components/ui/ScanningButton";
 
 const CRMPageClient = () => {
-  const stats = [
-    { number: "90%", label: "of UAE businesses use WhatsApp" },
-    { number: "3x", label: "faster response time" },
-    { number: "67%", label: "more leads converted" },
-  ];
-
   return (
     <div className="min-h-screen w-full relative bg-black">
       <WebVitalsReporter />
@@ -38,18 +32,6 @@ const CRMPageClient = () => {
         aria-labelledby="hero-heading"
         role="banner"
       >
-        <div
-          className="absolute inset-0 z-0 overflow-hidden"
-          aria-hidden="true"
-        >
-          <div className="w-full h-full flex items-center justify-center">
-            <p className="text-zinc-600 text-sm">
-              VIDEO PLACEHOLDER: Add a background video showing WhatsApp
-              notifications coming in and being managed in the CRM dashboard
-            </p>
-          </div>
-        </div>
-
         <div className="max-w-6xl mx-auto text-center relative z-20">
           {/* Trust Badge */}
           <motion.div
@@ -93,35 +75,14 @@ const CRMPageClient = () => {
 
           {/* Stats */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            role="region"
-            aria-label="Key statistics"
-          >
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="text-center"
-                role="img"
-                aria-label={`${stat.number} ${stat.label}`}
-              >
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
-                  {stat.number}
-                </div>
-                <div className="text-zinc-400">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Hero CTA */}
-          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <ProgressiveCTA position="hero" />
+            <ScanningButton color="emerald" variant="primary" size="lg">
+              Book a Demo
+            </ScanningButton>
           </motion.div>
 
           {/* Hero Image/Screenshot */}
