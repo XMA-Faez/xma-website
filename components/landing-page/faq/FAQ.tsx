@@ -8,40 +8,21 @@ import BookingIframe from "@/components/vsl/BookingIframe";
 
 const faqCategories = [
   {
-    id: "pricing",
-    name: "Pricing & Budget",
-    icon: CurrencyDollar,
-    questions: [
-      {
-        q: "How much does a typical project cost?",
-        a: "Project costs vary based on scope and complexity. We offer flexible packages starting from $5,000 for small businesses to $50,000+ for enterprise solutions. We'll provide a detailed quote after our initial consultation."
-      },
-      {
-        q: "Do you offer payment plans?",
-        a: "Yes! We typically work with a 50% upfront payment and 50% upon completion. For larger projects, we can arrange monthly milestones to make budgeting easier."
-      },
-      {
-        q: "Are there any hidden fees?",
-        a: "Never. Our quotes are comprehensive and include all discussed features, revisions, and support. Any additional requests will be clearly communicated and approved before proceeding."
-      }
-    ]
-  },
-  {
     id: "timeline",
     name: "Timeline & Process",
     icon: Clock,
     questions: [
       {
-        q: "How long does a typical project take?",
-        a: "Most projects take 6-12 weeks from kickoff to launch. Simple websites can be completed in 4-6 weeks, while complex applications may take 3-4 months. We'll provide a detailed timeline during planning."
+        q: "How long does it take to launch my campaigns?",
+        a: "Our typical timeline is 4 weeks: Week 1 for kickoff and content strategy, Weeks 2-3 for production and CRM setup, and Week 4 for launch preparation. We can expedite this process if needed."
       },
       {
-        q: "What if I need something urgently?",
-        a: "We offer expedited services for urgent projects. Rush delivery typically adds 25-50% to the project cost but can reduce timelines by up to 40%."
+        q: "What's involved in the onboarding process?",
+        a: "We have 4 key meetings: 90-minute kickoff for brand deep-dive, 60-minute content strategy session, 45-minute production review, and 60-minute launch preparation. Each includes specific deliverables to ensure success."
       },
       {
-        q: "How involved do I need to be during the project?",
-        a: "We believe in collaborative development. Expect 1-2 hours per week for reviews and feedback. We handle the heavy lifting while keeping you informed at every milestone."
+        q: "How quickly can I expect to see results?",
+        a: "With our automated CRM and instant lead response system, you'll start capturing leads immediately upon campaign launch. Conversion optimization typically shows significant results within the first 2-4 weeks."
       }
     ]
   },
@@ -51,16 +32,16 @@ const faqCategories = [
     icon: Package,
     questions: [
       {
-        q: "What do I get at the end of the project?",
-        a: "You receive full ownership of all code, designs, and assets. We provide documentation, training materials, and 30 days of post-launch support included in every project."
+        q: "What exactly do I get with the Lead Generator package?",
+        a: "You receive 20 professionally created ads (10 static, 10 video), complete CRM system setup, ad campaign configuration, and one month of professional ad management to ensure optimal performance."
       },
       {
-        q: "Do you provide ongoing maintenance?",
-        a: "Yes! We offer monthly maintenance packages starting at $500/month, including updates, backups, security monitoring, and priority support."
+        q: "What's included in monthly subscriptions?",
+        a: "Depending on your tier, you get CRM subscription, ad management, monthly graphics (1-8), WhatsApp marketing, AI chatbot, and video content. All plans include performance monitoring and optimization."
       },
       {
-        q: "Can I make changes myself after launch?",
-        a: "Absolutely. We build with user-friendly CMSs and provide training. For custom applications, we ensure clean, documented code that any developer can work with."
+        q: "Do you provide training for the CRM system?",
+        a: "Yes! Training and support are included with all CRM setups. We provide hands-on walkthroughs, documentation, and ongoing support to ensure your team can effectively use all features."
       }
     ]
   },
@@ -70,23 +51,34 @@ const faqCategories = [
     icon: Handshake,
     questions: [
       {
-        q: "What if I don't like the initial designs?",
-        a: "No worries! Our process includes multiple revision rounds. We'll work closely with you to refine the designs until they perfectly match your vision. Major pivots may affect timeline and budget."
+        q: "What makes your agency different from others?",
+        a: "We're a full in-house team of 15 professionals including videographers, editors, developers, designers, and marketing experts. We've generated 30K+ leads and managed 3M+ AED in ad spend for 50+ clients."
       },
       {
-        q: "Do you work with international clients?",
-        a: "Yes! We work with clients globally. We're flexible with time zones and use tools like Slack, Zoom, and Loom for seamless communication across borders."
+        q: "How do you ensure my ads will perform?",
+        a: "We focus on what works: attention-grabbing hooks (80% of success), clear value propositions, and strong CTAs. We test multiple variations and continuously optimize based on real performance data."
       },
       {
-        q: "What technologies do you work with?",
-        a: "We're technology agnostic and choose the best tools for your project. Our expertise includes React, Next.js, Node.js, Python, and various CMS platforms. We'll recommend the ideal stack for your needs."
+        q: "Can you integrate with my existing Meta ads?",
+        a: "Absolutely! Our CRM seamlessly integrates with Facebook and Instagram ads, automatically capturing leads, triggering instant responses via chatbot, and organizing everything in one central system."
+      }
+    ]
+  },
+  {
+    id: "pricing",
+    name: "Pricing & Budget",
+    icon: CurrencyDollar,
+    questions: [
+      {
+        q: "How do you determine project costs?",
+        a: "Every business has unique needs. We offer flexible packages and will provide a detailed, transparent quote after understanding your specific goals during our consultation. Book a call to discuss your budget and requirements."
       }
     ]
   }
 ];
 
 export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState("pricing");
+  const [activeCategory, setActiveCategory] = useState("timeline");
   const [openQuestions, setOpenQuestions] = useState<string[]>([]);
 
   const toggleQuestion = (questionId: string) => {
