@@ -3,14 +3,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
-  MessageSquare,
+  MessageCircle,
   Brain,
   BarChart3,
   Workflow,
   Check,
   Zap,
+  Activity,
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
+import {
+  PipelineVisualization,
+  WhatsAppInboxDemo,
+  AIAssistantDemo,
+  AutomationFlowDemo,
+} from "@/components/crm/feature-demos";
 
 interface Feature {
   id: string;
@@ -28,14 +35,15 @@ interface Feature {
     placeholder: string;
     aspectRatio: string;
   };
+  demoComponent?: React.ComponentType;
 }
 
 const features: Feature[] = [
   {
     id: "whatsapp",
     title: "WhatsApp Team Inbox",
-    description: "Centralize all WhatsApp conversations in one organized team inbox. Never miss a customer message again with smart routing and real-time collaboration.",
-    icon: <MessageSquare className="w-8 h-8" />,
+    description: "Transform scattered WhatsApp chaos into an organized system where every message gets handled instantly and no lead ever falls through the cracks.",
+    icon: <MessageCircle className="w-8 h-8" />,
     color: {
       bg: "from-emerald-500/10 to-green-400/5",
       text: "text-emerald-400",
@@ -52,12 +60,13 @@ const features: Feature[] = [
     screenshot: {
       placeholder: "WhatsApp Team Inbox Interface - Shows unified conversation view with team assignments, customer details, and message history",
       aspectRatio: "16/9"
-    }
+    },
+    demoComponent: WhatsAppInboxDemo
   },
   {
     id: "ai",
     title: "Smart AI Assistant",
-    description: "24/7 AI-powered chatbot that handles customer inquiries, books appointments, and qualifies leads automatically. Trained on your business data for accurate responses.",
+    description: "Watch your AI assistant instantly qualify leads, book appointments, and provide perfect responses while you sleep - converting inquiries into revenue 24/7.",
     icon: <Brain className="w-8 h-8" />,
     color: {
       bg: "from-blue-500/10 to-cyan-400/5",
@@ -75,12 +84,13 @@ const features: Feature[] = [
     screenshot: {
       placeholder: "AI Assistant Chat Interface - Shows natural conversation flow, appointment booking, and automated responses",
       aspectRatio: "9/16"
-    }
+    },
+    demoComponent: AIAssistantDemo
   },
   {
     id: "pipeline",
     title: "Visual Sales Pipeline",
-    description: "Track every deal from inquiry to close with a visual pipeline. Drag-and-drop interface makes it easy to manage opportunities and forecast revenue.",
+    description: "See exactly which deals will close this month and watch your revenue grow as opportunities automatically progress from lead to paying customer.",
     icon: <BarChart3 className="w-8 h-8" />,
     color: {
       bg: "from-purple-500/10 to-pink-400/5",
@@ -98,13 +108,14 @@ const features: Feature[] = [
     screenshot: {
       placeholder: "Sales Pipeline Dashboard - Shows deals in different stages, revenue metrics, and upcoming actions",
       aspectRatio: "16/9"
-    }
+    },
+    demoComponent: PipelineVisualization
   },
   {
     id: "automation",
     title: "Smart Automation",
-    description: "Automate repetitive tasks and follow-ups with intelligent workflows. Capture leads from all channels and nurture them automatically.",
-    icon: <Workflow className="w-8 h-8" />,
+    description: "Turn hours of manual follow-up work into seconds of automated perfection. Watch leads get qualified, routed, and scheduled without touching your keyboard.",
+    icon: <Activity className="w-8 h-8" />,
     color: {
       bg: "from-amber-500/10 to-yellow-400/5",
       text: "text-amber-400",
@@ -121,87 +132,17 @@ const features: Feature[] = [
     screenshot: {
       placeholder: "Automation Workflow Builder - Shows visual workflow creation with triggers, conditions, and actions",
       aspectRatio: "16/10"
-    }
+    },
+    demoComponent: AutomationFlowDemo
   },
 ];
 
-// Feature Section Component
-const FeatureSection: React.FC<{
-  feature: Feature;
-  index: number;
-  setActiveFeature: (index: number) => void;
-}> = ({ feature, index, setActiveFeature }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    margin: "-20% 0px -20% 0px",
-    amount: 0.3
-  });
-
-  console.log('test')
-
-  useEffect(() => {
-    if (isInView) {
-      setActiveFeature(index);
-    }
-  }, [isInView, index, setActiveFeature]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      viewport={{ once: true, margin: "-100px" }}
-      className="relative flex items-center"
-    >
-      {/* Feature Content */}
-      <div className="space-y-6">
-        {/* Icon and Title */}
-        <div className="flex items-start gap-4">
-          <div className={`p-3 rounded-2xl bg-gradient-to-br ${feature.color.bg} ${feature.color.text} shrink-0`}>
-            {feature.icon}
-          </div>
-          <div>
-            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-              {feature.title}
-            </h3>
-            <div className={`w-20 h-1 bg-gradient-to-r ${feature.color.gradient} rounded-full`}></div>
-          </div>
-        </div>
-
-        {/* Description */}
-        <p className="text-lg text-slate-600 dark:text-zinc-300 leading-relaxed">
-          {feature.description}
-        </p>
-
-        {/* Bullet Points */}
-        <div className="space-y-3 pt-2">
-          {feature.details.map((detail, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.2, delay: idx * 0.05 }}
-              viewport={{ once: true }}
-              className="flex items-start gap-3"
-            >
-              <Check className={`w-5 h-5 ${feature.color.text} flex-shrink-0 mt-0.5`} />
-              <p className="text-slate-600 dark:text-zinc-300">{detail}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </motion.div>
-  );
-};
 
 const StreamlinedFeatures: React.FC = () => {
-  const [activeFeature, setActiveFeature] = useState(0);
-
   return (
     <section className="relative py-24">
       {/* Header */}
-      <div className="relative z-10 text-center mb-16 px-4">
+      <div className="relative z-10 text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -213,122 +154,81 @@ const StreamlinedFeatures: React.FC = () => {
             <Zap className="w-4 h-4" />
             Core Features
           </Badge>
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-            <span className="">
-              Everything You Need to Win
-            </span>
-          </h2>
-          <p className="text-xl md:text-2xl text-slate-600 dark:text-zinc-400 leading-relaxed max-w-3xl mx-auto">
-            Four powerful features that work together to transform your customer relationships
-          </p>
         </motion.div>
       </div>
 
-      {/* Two Column Layout */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <div className="grid py-20 lg:grid-cols-2 gap-12 lg:gap-20">
-          
-          {/* Left Column - Scrolling Features */}
-          <div className="space-y-80">
-            {features.map((feature, index) => (
-              <FeatureSection
-                key={feature.id}
-                feature={feature}
-                index={index}
-                setActiveFeature={setActiveFeature}
-              />
-            ))}
-          </div>
-
-          {/* Right Column - Sticky Image */}
-          <div className="hidden lg:block relative">
-            <div className="sticky top-80 flex items-center">
-              <div className="w-full">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={features[activeFeature].id}
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.2 }}
-                    className="relative"
-                  >
-                  {/* Image Container */}
-                  <div className={`rounded-2xl overflow-hidden bg-gradient-to-br ${features[activeFeature].color.bg} backdrop-blur-xl border ${features[activeFeature].color.border} p-1`}>
-                    <div className="rounded-xl overflow-hidden bg-slate-100 dark:bg-zinc-900/80 aspect-[16/10]">
-                      <div className="w-full h-full flex items-center justify-center p-8">
-                        <div className="text-center space-y-4">
-                          <div className={`inline-flex p-4 rounded-2xl bg-slate-200/50 dark:bg-white/5 ${features[activeFeature].color.text}`}>
-                            {features[activeFeature].icon}
-                          </div>
-                          <p className="text-slate-500 dark:text-zinc-400 text-sm max-w-md mx-auto">
-                            {features[activeFeature].screenshot.placeholder}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+      {/* Full Width Layout */}
+      <div className="relative z-10 px-4">
+        {features.map((feature, index) => (
+          <motion.div
+            key={feature.id}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-24 last:mb-0"
+          >
+            <div className="max-w-7xl mx-auto">
+              {/* Feature Introduction */}
+              <div className="text-center mb-16">
+                <div className="flex items-center justify-center mb-6">
+                  <div className={`p-4 rounded-2xl bg-gradient-to-br ${feature.color.bg} ${feature.color.text}`}>
+                    {feature.icon}
                   </div>
-
-                  {/* Progress Indicators */}
-                  <div className="absolute -left-8 top-1/2 -translate-y-1/2 space-y-4">
-                    {features.map((_, index) => (
-                      <motion.div
-                        key={index}
-                        className={`w-1 h-12 rounded-full transition-all duration-300 ${
-                          index === activeFeature 
-                            ? `bg-gradient-to-b ${features[activeFeature].color.gradient} opacity-100` 
-                            : 'bg-slate-300 dark:bg-zinc-700 opacity-40'
-                        }`}
-                        animate={{
-                          scaleY: index === activeFeature ? 1 : 0.5,
-                        }}
-                        transition={{ duration: 0.15 }}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Feature Number */}
-                  <div className={`absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-br ${features[activeFeature].color.gradient} flex items-center justify-center text-white font-bold text-lg`}>
-                    {activeFeature + 1}
-                  </div>
-                  
-                  {/* Debug - remove this later */}
-                  <div className="absolute top-4 left-4 bg-black/50 dark:bg-black/50 text-white px-2 py-1 rounded text-sm">
-                    Active: {activeFeature}
-                  </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Image - Shows inline */}
-          <div className="lg:hidden">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.id}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className={`rounded-2xl overflow-hidden bg-gradient-to-br ${feature.color.bg} backdrop-blur-xl border ${feature.color.border} p-1 mb-32`}
-              >
-                <div className="rounded-xl overflow-hidden bg-slate-100 dark:bg-zinc-900/80 aspect-[16/10]">
-                  <div className="w-full h-full flex items-center justify-center p-8">
-                    <div className="text-center space-y-4">
-                      <div className={`inline-flex p-4 rounded-2xl bg-slate-200/50 dark:bg-white/5 ${feature.color.text}`}>
-                        {feature.icon}
-                      </div>
-                      <p className="text-slate-500 dark:text-zinc-400 text-sm">
-                        {feature.screenshot.placeholder}
-                      </p>
-                    </div>
+                  <div className={`ml-4 w-20 h-1 bg-gradient-to-r ${feature.color.gradient} rounded-full`}></div>
+                  <div className={`ml-4 w-8 h-8 rounded-full bg-gradient-to-br ${feature.color.gradient} flex items-center justify-center text-white font-bold`}>
+                    {index + 1}
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+                <h3 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-xl text-slate-600 dark:text-zinc-300 max-w-3xl mx-auto">
+                  {feature.description}
+                </p>
+              </div>
+
+              {/* Demo Container - Now Full Width */}
+              <div className={`rounded-3xl overflow-hidden bg-gradient-to-br ${feature.color.bg} backdrop-blur-xl border ${feature.color.border} p-2 mb-12`}>
+                <div className="rounded-2xl overflow-hidden bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm">
+                  {feature.demoComponent ? (
+                    <div className="w-full">
+                      {React.createElement(feature.demoComponent!)}
+                    </div>
+                  ) : (
+                    <div className="aspect-[16/9] flex items-center justify-center p-12">
+                      <div className="text-center space-y-6">
+                        <div className={`inline-flex p-6 rounded-2xl bg-slate-200/50 dark:bg-white/5 ${feature.color.text}`}>
+                          {feature.icon}
+                        </div>
+                        <p className="text-slate-500 dark:text-zinc-400 max-w-md mx-auto">
+                          {feature.screenshot.placeholder}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Feature Benefits */}
+              {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
+              {/*   {feature.details.map((detail, idx) => ( */}
+              {/*     <motion.div */}
+              {/*       key={idx} */}
+              {/*       initial={{ opacity: 0, y: 20 }} */}
+              {/*       whileInView={{ opacity: 1, y: 0 }} */}
+              {/*       transition={{ duration: 0.4, delay: idx * 0.1 }} */}
+              {/*       viewport={{ once: true }} */}
+              {/*       className="flex items-start gap-3 p-4 rounded-xl bg-slate-50/50 dark:bg-zinc-800/50" */}
+              {/*     > */}
+              {/*       <Check className={`w-5 h-5 ${feature.color.text} flex-shrink-0 mt-0.5`} /> */}
+              {/*       <p className="text-slate-700 dark:text-zinc-300">{detail}</p> */}
+              {/*     </motion.div> */}
+              {/*   ))} */}
+              {/* </div> */}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
