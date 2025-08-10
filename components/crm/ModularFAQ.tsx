@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
-  MessageSquare,
+  MessageCircle,
   Settings,
   Shield,
   CreditCard,
@@ -49,7 +49,7 @@ const ModularFAQ: React.FC = () => {
     {
       id: "whatsapp",
       name: "WhatsApp Integration",
-      icon: <MessageSquare className="w-5 h-5" />,
+      icon: <MessageCircle className="w-5 h-5" />,
       color: "green",
       description: "WhatsApp Business setup and features",
     },

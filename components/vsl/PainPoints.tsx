@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   Target,
-  MessageSquare,
+  MessageCircle,
   ArrowRight,
   Clock,
   Film,
@@ -25,7 +25,7 @@ const painPoints = [
     title: "Organic Content Isn't Working",
     description:
       "Creating content regularly but not seeing engagement or conversions from your efforts.",
-    icon: <MessageSquare className="w-8 h-8 text-red-500" />,
+    icon: <MessageCircle className="w-8 h-8 text-red-500" />,
   },
   {
     id: 3,

@@ -46,12 +46,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          <Theme grayColor="slate">
+          <Theme grayColor="gray" hasBackground={false} radius="full">
             <PostHogProvider>
               {/* <AnimatedCursorComponent /> */}
               <Header />
               <SpeedInsights />
-              <main className="bg-slate-50 dark:bg-zinc-950 transition-colors duration-300">{children}</main>
+              <main className="bg-slate-50 dark:bg-zinc-950">{children}</main>
               <Analytics />
               <Footer />
               <style>

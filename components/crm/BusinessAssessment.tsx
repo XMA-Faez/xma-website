@@ -7,7 +7,7 @@ import {
   X,
   ArrowRight,
   ArrowLeft,
-  MessageSquare,
+  MessageCircle,
   Users,
   BarChart3,
   Clock,
@@ -120,9 +120,9 @@ const BusinessAssessment: React.FC = () => {
       category: 'technology',
       options: [
         { value: 'none', label: 'No automation at all', score: 1, icon: <X className="w-5 h-5" /> },
-        { value: 'basic', label: 'Basic auto-responses', score: 2, icon: <MessageSquare className="w-5 h-5" /> },
-        { value: 'moderate', label: 'Scheduled messages & templates', score: 3, icon: <MessageSquare className="w-5 h-5" /> },
-        { value: 'advanced', label: 'AI chatbot with workflows', score: 4, icon: <MessageSquare className="w-5 h-5" /> }
+        { value: 'basic', label: 'Basic auto-responses', score: 2, icon: <MessageCircle className="w-5 h-5" /> },
+        { value: 'moderate', label: 'Scheduled messages & templates', score: 3, icon: <MessageCircle className="w-5 h-5" /> },
+        { value: 'advanced', label: 'AI chatbot with workflows', score: 4, icon: <MessageCircle className="w-5 h-5" /> }
       ]
     }
   ];

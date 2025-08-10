@@ -37,35 +37,23 @@ const footerData = {
   },
   services: [
     {
-      icon: Video,
-      text: "Video Production",
-      href: "/services/video-production",
-    },
-    {
-      icon: BarChart3,
-      text: "Performance Marketing",
-      href: "/services/marketing",
-    },
-    {
-      icon: Bot,
       text: "CRM Solutions",
       href: "/services/crm-solution",
     },
     {
-      icon: MessageSquare,
-      text: "WhatsApp Integration",
-      href: "/services/whatsapp-integration",
-    },
+      text: "Lead Generator",
+      href: "/",
+    }
   ],
   quickLinks: [
     {
       text: "About Us",
       href: "/about",
     },
-    {
-      text: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   text: "Blog",
+    //   href: "/blog",
+    // },
     // {
     //   text: "Proposal",
     //   href: "/proposal",

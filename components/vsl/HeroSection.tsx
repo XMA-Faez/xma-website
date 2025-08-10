@@ -6,7 +6,7 @@ import {
   Play,
   Pause,
   ShieldCheck,
-  MessageSquare,
+  MessageCircle,
   ChevronRight,
   Volume2,
   VolumeX,
@@ -362,7 +362,7 @@ const HeroSection = ({ onCtaClick }) => {
             onClick={onCtaClick}
             className="bg-red-600 hover:bg-red-700 text-white py-6 px-8 rounded-xl font-medium text-lg transition duration-300 inline-flex items-center gap-2"
           >
-            <MessageSquare size={20} />
+            <MessageCircle size={20} />
             Schedule a Free Strategy Call
             <ChevronRight size={20} />
           </Button>

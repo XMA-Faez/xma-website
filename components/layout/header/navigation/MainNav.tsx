@@ -129,18 +129,18 @@ export function MainNav() {
         </NavigationMenuItem>
 
         {/* Blog */}
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            href="/blog"
-            className={`px-4 py-2 text-sm rounded-full transition-all duration-300 ${
-              pathname === "/blog" || pathname.startsWith("/blog/")
-                ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow"
-                : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105"
-            }`}
-          >
-            Blog
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+        {/* <NavigationMenuItem> */}
+        {/*   <NavigationMenuLink */}
+        {/*     href="/blog" */}
+        {/*     className={`px-4 py-2 text-sm rounded-full transition-all duration-300 ${ */}
+        {/*       pathname === "/blog" || pathname.startsWith("/blog/") */}
+        {/*         ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow" */}
+        {/*         : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105" */}
+        {/*     }`} */}
+        {/*   > */}
+        {/*     Blog */}
+        {/*   </NavigationMenuLink> */}
+        {/* </NavigationMenuItem> */}
 
         {/* Contact */}
         <NavigationMenuItem>

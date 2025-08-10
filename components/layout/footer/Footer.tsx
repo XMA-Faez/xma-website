@@ -58,14 +58,12 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {footerData.services.map((service, index) => {
-                const Icon = service.icon;
                 return (
                   <li key={index}>
                     <a
                       href={service.href}
                       className="flex items-center gap-2 text-slate-600 dark:text-zinc-300 hover:text-blue-400 transition-colors cursor-pointer"
                     >
-                      <Icon className="w-4 h-4 text-blue-400" />
                       <span>{service.text}</span>
                     </a>
                   </li>

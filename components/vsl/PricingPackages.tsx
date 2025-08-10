@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, X, ChevronDown, ChevronUp, MessageSquare } from 'lucide-react';
+import { Check, X, ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
@@ -424,7 +424,7 @@ const PricingPackages = () => {
                 type="submit" 
                 className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium text-lg transition duration-300"
               >
-                <MessageSquare className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2" />
                 Submit Request
               </Button>
             </DialogFooter>

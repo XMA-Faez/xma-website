@@ -7,7 +7,7 @@ import {
   TrendingUp,
   DollarSign,
   Users,
-  MessageSquare,
+  MessageCircle,
   ArrowRight,
   Info,
   AlertTriangle
@@ -182,7 +182,7 @@ const ROICalculator: React.FC = () => {
       max: 24,
       step: 0.5,
       suffix: "hours",
-      icon: <MessageSquare className="w-4 h-4" />,
+      icon: <MessageCircle className="w-4 h-4" />,
       tooltip: "How long it takes to respond to WhatsApp messages"
     }
   ];

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   Calendar,
-  MessageSquare,
+  MessageCircle,
   Phone,
   PlayCircle,
   Clock,
@@ -73,7 +73,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
             text: "Chat on WhatsApp",
             href: "https://wa.me/971501234567",
             variant: "secondary",
-            icon: <MessageSquare className="w-5 h-5" />,
+            icon: <MessageCircle className="w-5 h-5" />,
             color: "emerald",
           },
         ],

@@ -826,7 +826,7 @@ export const ROICalculator = () => {
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, Send, User, Bot } from 'lucide-react';
+import { MessageCircle, Send, User, Bot } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 interface Message {
@@ -920,7 +920,7 @@ export const WhatsAppSimulator = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
-            <MessageSquare className="w-4 h-4" />
+            <MessageCircle className="w-4 h-4" />
             WhatsApp Simulator
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -996,7 +996,7 @@ export const WhatsAppSimulator = () => {
               <div className="h-96 overflow-y-auto p-4 space-y-4 bg-zinc-800">
                 {!simulationStarted ? (
                   <div className="text-center text-zinc-500 mt-16">
-                    <MessageSquare className="w-12 h-12 mx-auto mb-4 opacity-50" />
+                    <MessageCircle className="w-12 h-12 mx-auto mb-4 opacity-50" />
                     <p>Select a scenario to start the simulation</p>
                   </div>
                 ) : (

@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  MessageSquare,
+  MessageCircle,
   Bot,
   Zap,
   Users,
@@ -18,7 +18,7 @@ const WhatsAppIntegrationPage = () => {
       description: "Intelligent automated responses for 24/7 customer service",
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
+      icon: <MessageCircle className="w-6 h-6" />,
       title: "Automated Messaging",
       description: "Scheduled and triggered message automation",
     },

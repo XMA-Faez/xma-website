@@ -2,11 +2,11 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
-import { MessageSquare, Brain, BarChart3, Workflow } from "lucide-react";
+import { MessageCircle, Brain, BarChart3, Workflow } from "lucide-react";
 
 // Minimal data structure
 const sections = [
-  { id: "section1", title: "WhatsApp Integration", icon: <MessageSquare className="w-8 h-8" />, color: "emerald" },
+  { id: "section1", title: "WhatsApp Integration", icon: <MessageCircle className="w-8 h-8" />, color: "emerald" },
   { id: "section2", title: "AI Chatbot", icon: <Brain className="w-8 h-8" />, color: "blue" },
   { id: "section3", title: "Sales Pipeline", icon: <BarChart3 className="w-8 h-8" />, color: "purple" },
   { id: "section4", title: "Automation", icon: <Workflow className="w-8 h-8" />, color: "amber" }

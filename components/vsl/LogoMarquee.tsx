@@ -145,8 +145,8 @@ const LogoMarquee = () => {
 
       {/* Gradient Overlay - Fade edges */}
       <div className="absolute z-10 inset-0 pointer-events-none">
-        <div className="absolute left-0 w-24 h-full bg-gradient-to-r from-zinc-950 to-transparent"></div>
-        <div className="absolute right-0 w-24 h-full bg-gradient-to-l from-zinc-950 to-transparent"></div>
+        <div className="absolute left-0 w-24 h-full bg-gradient-to-r dark:from-zinc-950 from-slate-50 to-transparent"></div>
+        <div className="absolute right-0 w-24 h-full bg-gradient-to-l dark:from-zinc-950 from-slate-50 to-transparent"></div>
       </div>
     </div>
   );

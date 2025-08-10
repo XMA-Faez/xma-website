@@ -3,7 +3,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { MessageSquare, ShieldCheck } from "lucide-react";
+import { MessageCircle, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import BookingIframe from "./BookingIframe";
 
@@ -42,7 +42,7 @@ const CTASection = ({ ref }) => {
               <Card className="mx-auto bg-transparent border-none">
                 <div className="">
                   <div className="flex items-center justify-center mb-4">
-                    <MessageSquare className="w-6 h-6 text-red-500 mr-2" />
+                    <MessageCircle className="w-6 h-6 text-red-500 mr-2" />
                     <h3 className="text-2xl font-bold">
                       Book Your Strategy Call
                     </h3>
