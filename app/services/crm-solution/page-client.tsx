@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 import ROICalculator from "@/components/crm/ROICalculator";
 import BusinessAssessment from "@/components/crm/BusinessAssessment";
@@ -111,22 +112,15 @@ const CRMPageClient = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-emerald-500/20 border border-emerald-500/20">
-              <div
-                className="aspect-[16/9] bg-slate-100 dark:bg-zinc-800 flex items-center justify-center"
-                role="img"
-                aria-label="CRM dashboard preview showing WhatsApp integration, customer management, and sales pipeline features"
-              >
-                <p className="text-slate-500 dark:text-zinc-400 text-center p-8" aria-hidden="true">
-                  IMAGE PLACEHOLDER: CRM dashboard screenshot showing:
-                  <br />
-                  - WhatsApp conversation panel on the left
-                  <br />
-                  - Customer details in the center
-                  <br />
-                  - Sales pipeline on the right
-                  <br />- Clean, modern interface with emerald green accents
-                </p>
-              </div>
+              <Image
+                src="/crm-screenshot.png"
+                alt="XMA CRM dashboard showing opportunities pipeline with lead management, sales tracking, and multi-channel communication features"
+                width={1920}
+                height={1080}
+                className="w-full h-auto"
+                priority
+                quality={90}
+              />
             </div>
           </motion.div>
         </div>
