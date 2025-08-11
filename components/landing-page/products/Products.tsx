@@ -79,7 +79,7 @@ function Products() {
                 {product.description}
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-4 mb-8">
                 {product.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-slate-700 dark:text-white/80 rounded-xl hover:glass-secondary ">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-4 electric-glow"></div>
@@ -87,6 +87,16 @@ function Products() {
                   </div>
                 ))}
               </div>
+
+              {product.title === "XMA CRM System" && (
+                <div className="mt-6">
+                  <Link href="/services/crm-solution">
+                    <ScanningButton variant="primary" size="sm" color="emerald">
+                      View CRM Demo
+                    </ScanningButton>
+                  </Link>
+                </div>
+              )}
 
             </motion.div>
           ))}

@@ -40,9 +40,9 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    id: "whatsapp",
-    title: "WhatsApp Team Inbox",
-    description: "Transform scattered WhatsApp chaos into an organized system where every message gets handled instantly and no lead ever falls through the cracks.",
+    id: "omnichannel",
+    title: "Omni-Channel Inbox",
+    description: "Unite all customer conversations from WhatsApp, Instagram, SMS, and Email into one powerful inbox where every message gets handled instantly.",
     icon: <MessageCircle />,
     color: {
       bg: "from-emerald-500/10 to-green-400/5",
@@ -51,14 +51,14 @@ const features: Feature[] = [
       gradient: "from-emerald-400 to-green-400",
     },
     details: [
-      "Shared team inbox with full conversation history",
+      "Unified inbox for all channels",
       "Smart routing to the right team member",
       "Quick replies with templates and media",
       "Real-time customer context and history",
-      "Team performance analytics",
+      "Channel-specific performance analytics",
     ],
     screenshot: {
-      placeholder: "WhatsApp Team Inbox Interface - Shows unified conversation view with team assignments, customer details, and message history",
+      placeholder: "Omni-Channel Inbox Interface - Shows unified conversation view across WhatsApp, Instagram, SMS, and Email with team assignments",
       aspectRatio: "16/9"
     },
     demoComponent: WhatsAppInboxDemo

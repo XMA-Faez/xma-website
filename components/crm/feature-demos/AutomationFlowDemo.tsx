@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState  } from "react";
+import React, { useEffect, useState } from "react";
 import ReactFlow, {
   addEdge,
   useNodesState,
@@ -112,7 +112,9 @@ const CustomNode = ({ data }: { data: any }) => {
                 repeatDelay: 2,
               }}
             >
-              {React.cloneElement(icon, { className: "w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" })}
+              {React.cloneElement(icon, {
+                className: "w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6",
+              })}
             </motion.div>
 
             {isCompleted && !isActive && (
@@ -154,10 +156,10 @@ const CustomNode = ({ data }: { data: any }) => {
 
 // Define initial nodes in horizontal layout with fixed positions
 const getInitialNodes = () => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   const spacing = isMobile ? 200 : 300;
   const yPos = isMobile ? 100 : 150;
-  
+
   return [
     {
       id: "1",
@@ -243,71 +245,79 @@ const initialEdges = [
   },
 ];
 
+// Define nodeTypes outside component to prevent recreation on every render
+const nodeTypes = { custom: CustomNode };
+
+// Define default edge options outside component
+const defaultEdgeOptions = {
+  type: "straight",
+  animated: true,
+  style: { strokeWidth: 2, stroke: "#3b82f6" },
+};
+
 const AutomationFlowDemo = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
-  
-  React.useEffect(() => {
+  const animationStepRef = React.useRef(0);
+
+  useEffect(() => {
     const handleResize = () => {
       const newNodes = getInitialNodes();
       setNodes(newNodes);
     };
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [setNodes]);
-  
+
   // Custom node change handler that prevents position changes
-  const handleNodesChange = React.useCallback((changes: any) => {
-    // Filter out position changes to keep nodes fixed
-    const filteredChanges = changes.filter(
-      (change: any) => change.type !== 'position' && change.type !== 'select'
-    );
-    if (filteredChanges.length > 0) {
-      onNodesChange(filteredChanges);
-    }
-  }, [onNodesChange]);
+  const handleNodesChange = React.useCallback(
+    (changes: any) => {
+      // Filter out position changes to keep nodes fixed
+      const filteredChanges = changes.filter(
+        (change: any) => change.type !== "position" && change.type !== "select",
+      );
+      if (filteredChanges.length > 0) {
+        onNodesChange(filteredChanges);
+      }
+    },
+    [onNodesChange],
+  );
 
-  // Animation logic to progress through the flow
-  React.useEffect(() => {
-    if (!isPlaying) return;
-
+  useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentStep((prev) => {
-        const next = (prev + 1) % (nodes.length + 1); // +1 to show completion
+      // Calculate next step
+      const currentStep = animationStepRef.current;
+      const nextStep = (currentStep + 1) % (nodes.length + 1);
+      animationStepRef.current = nextStep;
 
-        // Update node states based on current step
-        setNodes((nds) =>
-          nds.map((node, index) => ({
-            ...node,
-            data: {
-              ...node.data,
-              isActive: index === next - 1,
-              isCompleted: index < next - 1,
-            },
-          })),
-        );
+      // Update node states based on current step
+      setNodes((nds) =>
+        nds.map((node, index) => ({
+          ...node,
+          data: {
+            ...node.data,
+            isActive: index === nextStep - 1,
+            isCompleted: index < nextStep - 1,
+          },
+        })),
+      );
 
-        // Update edge states
-        setEdges((eds) =>
-          eds.map((edge, index) => ({
-            ...edge,
-            animated: index < next - 1,
-            style: {
-              strokeWidth: index < next - 1 ? 3 : 2,
-              stroke: index < next - 1 ? "#10b981" : "#3b82f6",
-            },
-          })),
-        );
-
-        return next;
-      });
+      // Update edge states
+      setEdges((eds) =>
+        eds.map((edge, index) => ({
+          ...edge,
+          animated: index < nextStep - 1,
+          style: {
+            strokeWidth: index < nextStep - 1 ? 3 : 2,
+            stroke: index < nextStep - 1 ? "#10b981" : "#3b82f6",
+          },
+        })),
+      );
     }, 2500);
 
     return () => clearInterval(interval);
-  }, [isPlaying, nodes.length, setNodes, setEdges]);
+  }, [nodes.length, setNodes, setEdges]);
 
   return (
     <div className="w-full h-full glass-primary backdrop-blur-xl rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden border border-slate-200/50 dark:border-zinc-800/50">
@@ -319,12 +329,8 @@ const AutomationFlowDemo = () => {
           onNodesChange={handleNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={(params) => setEdges((eds) => addEdge(params, eds))}
-          nodeTypes={{ custom: CustomNode }}
-          defaultEdgeOptions={{
-            type: "straight",
-            animated: true,
-            style: { strokeWidth: 2, stroke: "#3b82f6" },
-          }}
+          nodeTypes={nodeTypes}
+          defaultEdgeOptions={defaultEdgeOptions}
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={false}
