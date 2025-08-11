@@ -137,9 +137,9 @@ const CRMPageClient = () => {
         <ROICalculator />
       </CRMErrorBoundary>
 
-      <CRMErrorBoundary>
-        <UAESuccessStories />
-      </CRMErrorBoundary>
+      {/* <CRMErrorBoundary> */}
+      {/*   <UAESuccessStories /> */}
+      {/* </CRMErrorBoundary> */}
 
       <div className="max-w-4xl mx-auto px-4 pt-8">
         <CRMErrorBoundary>
