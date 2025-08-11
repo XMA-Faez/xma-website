@@ -28,7 +28,19 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: "XMA Agency",
     statusBarStyle: "black-translucent",
-  }
+  },
+  icons: {
+    icon: [
+      {
+        url: "/logos/xma/SVG/Logo Light.svg",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/logos/xma/SVG/Logo Dark.svg",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -38,6 +50,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="b4Ruz4qrwE5l_HVaxaP5_Nysz4MGIQaCWg8xYkKrJcM" />
+        {/* Favicon with light/dark mode support */}
+        <link rel="icon" href="/logos/xma/SVG/Logo Light.svg" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/logos/xma/SVG/Logo Dark.svg" media="(prefers-color-scheme: dark)" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider

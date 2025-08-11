@@ -85,7 +85,7 @@ export function Header() {
           {/* Theme Toggle and CTA Button */}
           <div className="flex-grow flex-shrink-0 basis-0 flex justify-end items-center gap-4">
             <ThemeToggle />
-            <Link href="/book">
+            <Link href={pathname === "/services/crm-solution" ? "/book-crm" : "/book"}>
               <ScanningButton
                 variant="primary"
                 size="sm"
@@ -93,7 +93,7 @@ export function Header() {
                   pathname === "/services/crm-solution" ? "emerald" : "blue"
                 }
               >
-                Book Your Call Now
+                {pathname === "/services/crm-solution" ? "Book CRM Demo" : "Book Your Call Now"}
               </ScanningButton>
             </Link>
           </div>

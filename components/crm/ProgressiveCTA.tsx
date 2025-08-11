@@ -65,7 +65,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
         buttons: [
           {
             text: "Book Free Demo",
-            href: "/book",
+            href: "/book-crm",
             variant: "primary",
             icon: <Calendar className="w-5 h-5" />,
           },
@@ -137,7 +137,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
         buttons: [
           {
             text: "Get Started Now",
-            href: "/book",
+            href: "/book-crm",
             variant: "primary",
             icon: <ArrowRight className="w-5 h-5" />,
             color: "emerald",
@@ -178,7 +178,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
         buttons: [
           {
             text: "Book Your Free Demo Now",
-            href: "/book",
+            href: "/book-crm",
             variant: "primary",
             icon: <Calendar className="w-5 h-5" />,
           },

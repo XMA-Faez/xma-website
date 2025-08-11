@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
+import Link from "next/link";
 
 import ROICalculator from "@/components/crm/ROICalculator";
 import BusinessAssessment from "@/components/crm/BusinessAssessment";
@@ -95,9 +96,11 @@ const CRMPageClient = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <ScanningButton color="emerald" variant="primary" size="lg">
-              Book a Demo
-            </ScanningButton>
+            <Link href="/book-crm">
+              <ScanningButton color="emerald" variant="primary" size="lg">
+                Book a Demo
+              </ScanningButton>
+            </Link>
           </motion.div>
 
           {/* Hero Image/Screenshot */}
