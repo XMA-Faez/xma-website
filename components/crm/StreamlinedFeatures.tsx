@@ -43,7 +43,7 @@ const features: Feature[] = [
     id: "whatsapp",
     title: "WhatsApp Team Inbox",
     description: "Transform scattered WhatsApp chaos into an organized system where every message gets handled instantly and no lead ever falls through the cracks.",
-    icon: <MessageCircle className="w-8 h-8" />,
+    icon: <MessageCircle />,
     color: {
       bg: "from-emerald-500/10 to-green-400/5",
       text: "text-emerald-400",
@@ -67,7 +67,7 @@ const features: Feature[] = [
     id: "ai",
     title: "Smart AI Assistant",
     description: "Watch your AI assistant instantly qualify leads, book appointments, and provide perfect responses while you sleep - converting inquiries into revenue 24/7.",
-    icon: <Brain className="w-8 h-8" />,
+    icon: <Brain />,
     color: {
       bg: "from-blue-500/10 to-cyan-400/5",
       text: "text-blue-400",
@@ -91,7 +91,7 @@ const features: Feature[] = [
     id: "pipeline",
     title: "Visual Sales Pipeline",
     description: "See exactly which deals will close this month and watch your revenue grow as opportunities automatically progress from lead to paying customer.",
-    icon: <BarChart3 className="w-8 h-8" />,
+    icon: <BarChart3 />,
     color: {
       bg: "from-purple-500/10 to-pink-400/5",
       text: "text-purple-400",
@@ -115,7 +115,7 @@ const features: Feature[] = [
     id: "automation",
     title: "Smart Automation",
     description: "Turn hours of manual follow-up work into seconds of automated perfection. Watch leads get qualified, routed, and scheduled without touching your keyboard.",
-    icon: <Activity className="w-8 h-8" />,
+    icon: <Activity />,
     color: {
       bg: "from-amber-500/10 to-yellow-400/5",
       text: "text-amber-400",
@@ -140,7 +140,7 @@ const features: Feature[] = [
 
 const StreamlinedFeatures: React.FC = () => {
   return (
-    <section className="relative py-24">
+    <section className="relative py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Header */}
       <div className="relative z-10 text-center px-4">
         <motion.div
@@ -150,15 +150,15 @@ const StreamlinedFeatures: React.FC = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <Badge variant="success" size="lg" className="mb-8">
-            <Zap className="w-4 h-4" />
-            Core Features
+          <Badge variant="success" size="lg" className="mb-6 md:mb-8">
+            <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm">Core Features</span>
           </Badge>
         </motion.div>
       </div>
 
       {/* Full Width Layout */}
-      <div className="relative z-10 px-4">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8">
         {features.map((feature, index) => (
           <motion.div
             key={feature.id}
@@ -166,42 +166,46 @@ const StreamlinedFeatures: React.FC = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-24 last:mb-0"
+            className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 last:mb-0"
           >
             <div className="max-w-7xl mx-auto">
               {/* Feature Introduction */}
-              <div className="text-center mb-16">
-                <div className="flex items-center justify-center mb-6">
-                  <div className={`p-4 rounded-2xl bg-gradient-to-br ${feature.color.bg} ${feature.color.text}`}>
-                    {feature.icon}
+              <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                <div className="flex items-center justify-center mb-4 sm:mb-6">
+                  <div className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${feature.color.bg} ${feature.color.text}`}>
+                    <div className="w-6 h-6 sm:w-8 sm:h-8">
+                      {React.cloneElement(feature.icon as React.ReactElement, { className: "w-full h-full" })}
+                    </div>
                   </div>
-                  <div className={`ml-4 w-20 h-1 bg-gradient-to-r ${feature.color.gradient} rounded-full`}></div>
-                  <div className={`ml-4 w-8 h-8 rounded-full bg-gradient-to-br ${feature.color.gradient} flex items-center justify-center text-white font-bold`}>
+                  <div className={`ml-2 sm:ml-4 w-12 sm:w-16 md:w-20 h-0.5 sm:h-1 bg-gradient-to-r ${feature.color.gradient} rounded-full`}></div>
+                  <div className={`ml-2 sm:ml-4 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br ${feature.color.gradient} flex items-center justify-center text-white font-bold text-xs sm:text-sm`}>
                     {index + 1}
                   </div>
                 </div>
-                <h3 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4 px-2">
                   {feature.title}
                 </h3>
-                <p className="text-xl text-slate-600 dark:text-zinc-300 max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-zinc-300 max-w-3xl mx-auto px-2">
                   {feature.description}
                 </p>
               </div>
 
               {/* Demo Container - Now Full Width */}
-              <div className={`rounded-3xl overflow-hidden bg-gradient-to-br ${feature.color.bg} backdrop-blur-xl border ${feature.color.border} p-2 mb-12`}>
-                <div className="rounded-2xl overflow-hidden bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm">
+              <div className={`rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden bg-gradient-to-br ${feature.color.bg} backdrop-blur-xl border ${feature.color.border} p-1 sm:p-1.5 md:p-2 mb-6 sm:mb-8 md:mb-12`}>
+                <div className="rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm">
                   {feature.demoComponent ? (
                     <div className="w-full">
                       {React.createElement(feature.demoComponent!)}
                     </div>
                   ) : (
-                    <div className="aspect-[16/9] flex items-center justify-center p-12">
-                      <div className="text-center space-y-6">
-                        <div className={`inline-flex p-6 rounded-2xl bg-slate-200/50 dark:bg-white/5 ${feature.color.text}`}>
-                          {feature.icon}
+                    <div className="aspect-[16/9] flex items-center justify-center p-6 sm:p-8 md:p-12">
+                      <div className="text-center space-y-4 sm:space-y-6">
+                        <div className={`inline-flex p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-slate-200/50 dark:bg-white/5 ${feature.color.text}`}>
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12">
+                            {React.cloneElement(feature.icon as React.ReactElement, { className: "w-full h-full" })}
+                          </div>
                         </div>
-                        <p className="text-slate-500 dark:text-zinc-400 max-w-md mx-auto">
+                        <p className="text-sm sm:text-base text-slate-500 dark:text-zinc-400 max-w-md mx-auto px-4">
                           {feature.screenshot.placeholder}
                         </p>
                       </div>

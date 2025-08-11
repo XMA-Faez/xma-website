@@ -39,7 +39,7 @@ const CustomNode = ({ data }: { data: any }) => {
 
   const getNodeStyles = () => {
     const baseStyles =
-      "glass-primary backdrop-blur-xl rounded-2xl border-2 min-w-[160px] shadow-xl transition-all duration-500 transform-gpu";
+      "glass-primary backdrop-blur-xl rounded-lg sm:rounded-xl md:rounded-2xl border-2 min-w-[120px] sm:min-w-[140px] md:min-w-[160px] shadow-xl transition-all duration-500 transform-gpu";
 
     switch (type) {
       case "trigger":
@@ -100,11 +100,11 @@ const CustomNode = ({ data }: { data: any }) => {
         />
       )}
 
-      <div className="relative p-6">
-        <div className="flex flex-col items-center gap-4">
+      <div className="relative p-3 sm:p-4 md:p-6">
+        <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
           <div className="relative">
             <motion.div
-              className={`p-3 rounded-xl ${getIconColor()} bg-white/20 dark:bg-black/20 backdrop-blur-sm`}
+              className={`p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl ${getIconColor()} bg-white/20 dark:bg-black/20 backdrop-blur-sm`}
               animate={isActive ? { rotate: [0, 5, -5, 0] } : {}}
               transition={{
                 duration: 0.5,
@@ -112,16 +112,16 @@ const CustomNode = ({ data }: { data: any }) => {
                 repeatDelay: 2,
               }}
             >
-              {React.cloneElement(icon, { className: "w-6 h-6" })}
+              {React.cloneElement(icon, { className: "w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" })}
             </motion.div>
 
             {isCompleted && !isActive && (
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                className="absolute -top-1 -right-1 bg-emerald-500 text-white rounded-full p-1"
+                className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 bg-emerald-500 text-white rounded-full p-0.5 sm:p-1"
               >
-                <CheckCircle2 className="w-4 h-4" />
+                <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4" />
               </motion.div>
             )}
 
@@ -129,18 +129,18 @@ const CustomNode = ({ data }: { data: any }) => {
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
-                className="absolute -top-1 -right-1 bg-blue-500 text-white rounded-full p-1"
+                className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 bg-blue-500 text-white rounded-full p-0.5 sm:p-1"
               >
-                <Zap className="w-4 h-4" />
+                <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
               </motion.div>
             )}
           </div>
 
-          <div className="text-center space-y-2">
-            <h4 className="font-bold text-base text-slate-900 dark:text-white leading-tight">
+          <div className="text-center space-y-1 sm:space-y-1.5 md:space-y-2">
+            <h4 className="font-bold text-xs sm:text-sm md:text-base text-slate-900 dark:text-white leading-tight">
               {title}
             </h4>
-            <p className="text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-[10px] sm:text-xs md:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed px-1">
               {description}
             </p>
           </div>
@@ -153,60 +153,68 @@ const CustomNode = ({ data }: { data: any }) => {
 };
 
 // Define initial nodes in horizontal layout with fixed positions
-const initialNodes = [
-  {
-    id: "1",
-    type: "custom",
-    position: { x: 50, y: 150 },
-    sourcePosition: Position.Right,
-    targetPosition: Position.Left,
-    data: {
-      title: "New Lead",
-      description: "Captured from website form",
-      icon: <Users />,
-      type: "trigger",
+const getInitialNodes = () => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const spacing = isMobile ? 200 : 300;
+  const yPos = isMobile ? 100 : 150;
+  
+  return [
+    {
+      id: "1",
+      type: "custom",
+      position: { x: 20, y: yPos },
+      sourcePosition: Position.Right,
+      targetPosition: Position.Left,
+      data: {
+        title: "New Lead",
+        description: "Captured from form",
+        icon: <Users />,
+        type: "trigger",
+      },
     },
-  },
-  {
-    id: "2",
-    type: "custom",
-    position: { x: 350, y: 150 },
-    sourcePosition: Position.Right,
-    targetPosition: Position.Left,
-    data: {
-      title: "Lead Scoring",
-      description: "AI analyzes lead quality & intent",
-      icon: <Filter />,
-      type: "condition",
+    {
+      id: "2",
+      type: "custom",
+      position: { x: 20 + spacing, y: yPos },
+      sourcePosition: Position.Right,
+      targetPosition: Position.Left,
+      data: {
+        title: "Lead Scoring",
+        description: "AI analyzes quality",
+        icon: <Filter />,
+        type: "condition",
+      },
     },
-  },
-  {
-    id: "3",
-    type: "custom",
-    position: { x: 650, y: 150 },
-    sourcePosition: Position.Right,
-    targetPosition: Position.Left,
-    data: {
-      title: "WhatsApp Outreach",
-      description: "Personalized welcome message",
-      icon: <MessageCircle />,
-      type: "action",
+    {
+      id: "3",
+      type: "custom",
+      position: { x: 20 + spacing * 2, y: yPos },
+      sourcePosition: Position.Right,
+      targetPosition: Position.Left,
+      data: {
+        title: "WhatsApp",
+        description: "Welcome message",
+        icon: <MessageCircle />,
+        type: "action",
+      },
     },
-  },
-  {
-    id: "4",
-    type: "custom",
-    position: { x: 950, y: 150 },
-    sourcePosition: Position.Right,
-    targetPosition: Position.Left,
-    data: {
-      title: "Email Sequence",
-      description: "Add to nurturing campaign",
-      icon: <Mail />,
-      type: "action",
+    {
+      id: "4",
+      type: "custom",
+      position: { x: 20 + spacing * 3, y: yPos },
+      sourcePosition: Position.Right,
+      targetPosition: Position.Left,
+      data: {
+        title: "Email",
+        description: "Nurture campaign",
+        icon: <Mail />,
+        type: "action",
+      },
     },
-  },
-];
+  ];
+};
+
+const initialNodes = getInitialNodes();
 
 const initialEdges = [
   {
@@ -240,6 +248,16 @@ const AutomationFlowDemo = () => {
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [isPlaying, setIsPlaying] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
+  
+  React.useEffect(() => {
+    const handleResize = () => {
+      const newNodes = getInitialNodes();
+      setNodes(newNodes);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [setNodes]);
   
   // Custom node change handler that prevents position changes
   const handleNodesChange = React.useCallback((changes: any) => {
@@ -292,9 +310,9 @@ const AutomationFlowDemo = () => {
   }, [isPlaying, nodes.length, setNodes, setEdges]);
 
   return (
-    <div className="w-full h-full glass-primary backdrop-blur-xl rounded-2xl overflow-hidden border border-slate-200/50 dark:border-zinc-800/50">
+    <div className="w-full h-full glass-primary backdrop-blur-xl rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden border border-slate-200/50 dark:border-zinc-800/50">
       {/* React Flow Container */}
-      <div className="relative" style={{ width: "100%", height: "400px" }}>
+      <div className="relative w-full h-[250px] sm:h-[350px] md:h-[400px]">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -315,15 +333,15 @@ const AutomationFlowDemo = () => {
           zoomOnPinch={false}
           zoomOnDoubleClick={false}
           fitView
-          fitViewOptions={{ padding: 0.15 }}
+          fitViewOptions={{ padding: 0.1 }}
           className="react-flow-subflows-example"
           style={{ backgroundColor: "transparent" }}
         >
           <Background
             color="hsl(215 20% 90%)"
-            gap={24}
+            gap={16}
             size={1}
-            className="opacity-30 dark:opacity-20"
+            className="opacity-20 sm:opacity-25 md:opacity-30 dark:opacity-20"
           />
         </ReactFlow>
       </div>

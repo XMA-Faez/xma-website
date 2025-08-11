@@ -276,78 +276,109 @@ export const WhatsAppInboxDemo: React.FC = () => {
   const [customers] = useState(initialCustomers);
   const [selectedCustomer, setSelectedCustomer] = useState(customers[0]);
   const [messages, setMessages] = useState(conversationMessages[customers[0].id] || []);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showChat, setShowChat] = useState(false);
 
   useEffect(() => {
     // Update messages when customer selection changes
     setMessages(conversationMessages[selectedCustomer?.id] || []);
   }, [selectedCustomer]);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handleCustomerSelect = (customer: Customer) => {
+    setSelectedCustomer(customer);
+    if (isMobile) {
+      setShowChat(true);
+    }
+  };
+
   return (
-    <div className="w-full h-full bg-white dark:bg-zinc-900 rounded-xl overflow-hidden">
+    <div className="w-full h-full bg-white dark:bg-zinc-900 rounded-lg sm:rounded-xl overflow-hidden">
       {/* Header */}
-      <div className="bg-emerald-500 text-white p-4">
+      <div className="bg-emerald-500 text-white p-3 sm:p-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <MessageCircle className="w-6 h-6" />
+          <div className="flex items-center gap-2 sm:gap-3">
+            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
             <div>
-              <h3 className="font-semibold text-lg">Conversations</h3>
+              <h3 className="font-semibold text-base sm:text-lg">Conversations</h3>
             </div>
           </div>
+          {isMobile && showChat && (
+            <button
+              onClick={() => setShowChat(false)}
+              className="text-white text-sm"
+            >
+              Back
+            </button>
+          )}
         </div>
       </div>
 
-      <div className="flex min-h-[800px]">
+      <div className="flex min-h-[400px] sm:min-h-[600px] md:min-h-[800px]">
         {/* Customer List */}
-        <div className="w-2/5 border-r border-slate-200 dark:border-zinc-700 bg-slate-50 dark:bg-zinc-800">
-          <div className="p-3 border-b border-slate-200 dark:border-zinc-700">
-            <h4 className="font-medium text-slate-900 dark:text-white">Conversations</h4>
+        <div className={`${isMobile ? (showChat ? 'hidden' : 'w-full') : 'w-2/5'} sm:w-2/5 sm:block border-r border-slate-200 dark:border-zinc-700 bg-slate-50 dark:bg-zinc-800`}>
+          <div className="p-2 sm:p-3 border-b border-slate-200 dark:border-zinc-700">
+            <h4 className="font-medium text-sm sm:text-base text-slate-900 dark:text-white">Conversations</h4>
           </div>
           
           <div className="overflow-y-auto">
             {customers.map((customer) => (
               <div
                 key={customer.id}
-                onClick={() => setSelectedCustomer(customer)}
-                className={`p-3 border-b border-slate-100 dark:border-zinc-700 cursor-pointer hover:bg-white dark:hover:bg-zinc-700 transition-colors ${
+                onClick={() => handleCustomerSelect(customer)}
+                className={`p-2 sm:p-3 border-b border-slate-100 dark:border-zinc-700 cursor-pointer hover:bg-white dark:hover:bg-zinc-700 transition-colors ${
                   selectedCustomer?.id === customer.id ? "bg-white dark:bg-zinc-700" : ""
                 }`}
               >
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center text-white font-medium text-sm relative">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center text-white font-medium text-xs sm:text-sm relative flex-shrink-0">
                     {customer.avatar}
                     {customer.unreadCount > 0 && (
-                      <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-xs text-white">
+                      <div className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-red-500 rounded-full flex items-center justify-center text-[10px] sm:text-xs text-white">
                         {customer.unreadCount}
                       </div>
                     )}
                   </div>
                   
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <h5 className="font-medium text-slate-900 dark:text-white text-sm truncate">
+                    <div className="flex items-center justify-between mb-0.5 sm:mb-1">
+                      <h5 className="font-medium text-slate-900 dark:text-white text-xs sm:text-sm truncate">
                         {customer.name}
                       </h5>
                       <div className="flex items-center gap-1">
-                        <div className={`px-1.5 py-0.5 rounded text-xs ${getPriorityColor(customer.priority)}`}>
+                        <div className={`px-1 sm:px-1.5 py-0.5 rounded text-[10px] sm:text-xs ${getPriorityColor(customer.priority)}`}>
                           {customer.priority}
                         </div>
                       </div>
                     </div>
                     
-                    <p className="text-xs text-slate-600 dark:text-zinc-400 mb-1">
+                    <p className="text-[10px] sm:text-xs text-slate-600 dark:text-zinc-400 mb-0.5 sm:mb-1">
                       {customer.company}
                     </p>
                     
-                    <p className="text-xs text-slate-500 dark:text-zinc-500 truncate mb-1">
+                    <p className="text-[10px] sm:text-xs text-slate-500 dark:text-zinc-500 truncate mb-0.5 sm:mb-1">
                       {customer.lastMessage}
                     </p>
                     
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-slate-400 dark:text-zinc-500">
+                      <span className="text-[10px] sm:text-xs text-slate-400 dark:text-zinc-500">
                         {customer.timestamp}
                       </span>
-                      <div className={`px-2 py-0.5 rounded text-xs ${getStatusColor(customer.status)}`}>
-                        {customer.assignedAgent ? `${customer.status} • ${customer.assignedAgent}` : customer.status}
+                      <div className={`px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-xs ${getStatusColor(customer.status)}`}>
+                        <span className="hidden sm:inline">
+                          {customer.assignedAgent ? `${customer.status} • ${customer.assignedAgent}` : customer.status}
+                        </span>
+                        <span className="sm:hidden">
+                          {customer.status}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -358,52 +389,52 @@ export const WhatsAppInboxDemo: React.FC = () => {
         </div>
 
         {/* Chat Area */}
-        <div className="flex-1 flex flex-col">
+        <div className={`${isMobile ? (showChat ? 'flex-1' : 'hidden') : 'flex-1'} sm:flex sm:flex-1 flex-col`}>
           {/* Chat Header */}
-          <div className="p-4 border-b border-slate-200 dark:border-zinc-700 bg-white dark:bg-zinc-900">
+          <div className="p-3 sm:p-4 border-b border-slate-200 dark:border-zinc-700 bg-white dark:bg-zinc-900">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center text-white font-medium">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center text-white font-medium text-xs sm:text-base">
                   {selectedCustomer?.avatar}
                 </div>
-                <div>
-                  <h4 className="font-semibold text-slate-900 dark:text-white">
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-semibold text-sm sm:text-base text-slate-900 dark:text-white truncate">
                     {selectedCustomer?.name}
                   </h4>
-                  <p className="text-sm text-slate-500 dark:text-zinc-400">
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-zinc-400 truncate">
                     {selectedCustomer?.company} • {selectedCustomer?.status}
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-slate-400 cursor-pointer hover:text-emerald-500" />
-                <User className="w-5 h-5 text-slate-400 cursor-pointer hover:text-emerald-500" />
+              <div className="flex items-center gap-1 sm:gap-2">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 cursor-pointer hover:text-emerald-500" />
+                <User className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 cursor-pointer hover:text-emerald-500" />
               </div>
             </div>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 p-4 overflow-y-auto bg-slate-50 dark:bg-zinc-800">
+          <div className="flex-1 p-3 sm:p-4 overflow-y-auto bg-slate-50 dark:bg-zinc-800">
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`mb-4 flex ${message.sender === "agent" ? "justify-end" : "justify-start"}`}
+                className={`mb-3 sm:mb-4 flex ${message.sender === "agent" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-xs px-4 py-2 rounded-2xl ${
+                  className={`max-w-[75%] sm:max-w-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl ${
                     message.sender === "agent"
                       ? "bg-emerald-500 text-white rounded-br-sm"
                       : "bg-white dark:bg-zinc-700 text-slate-900 dark:text-white border border-slate-200 dark:border-zinc-600 rounded-bl-sm"
                   }`}
                 >
-                  <p className="text-sm">{message.text}</p>
-                  <div className={`flex items-center gap-1 mt-1 justify-end ${
+                  <p className="text-xs sm:text-sm">{message.text}</p>
+                  <div className={`flex items-center gap-1 mt-0.5 sm:mt-1 justify-end ${
                     message.sender === "agent" ? "text-emerald-100" : "text-slate-400 dark:text-zinc-500"
                   }`}>
-                    <span className="text-xs">{message.timestamp}</span>
+                    <span className="text-[10px] sm:text-xs">{message.timestamp}</span>
                     {message.sender === "agent" && (
-                      <CheckCheck className="w-3 h-3" />
+                      <CheckCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                     )}
                   </div>
                 </div>

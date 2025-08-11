@@ -50,15 +50,15 @@ const AIMessage: React.FC<{ message: ChatMessage; showActions?: boolean }> = ({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className={`flex gap-3 mb-6 ${isAI ? "" : "flex-row-reverse"}`}
+      className={`flex gap-2 sm:gap-3 mb-4 sm:mb-6 ${isAI ? "" : "flex-row-reverse"}`}
     >
       {/* Avatar */}
-      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+      <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
         isAI 
           ? "bg-gradient-to-br from-blue-500 to-cyan-500 text-white" 
           : "bg-gradient-to-br from-slate-500 to-slate-600 text-white"
       }`}>
-        {isAI ? <Brain className="w-4 h-4" /> : <User className="w-4 h-4" />}
+        {isAI ? <Brain className="w-3 h-3 sm:w-4 sm:h-4" /> : <User className="w-3 h-3 sm:w-4 sm:h-4" />}
       </div>
 
       <div className={`flex-1 ${isAI ? "" : "flex flex-col items-end"}`}>
@@ -66,7 +66,7 @@ const AIMessage: React.FC<{ message: ChatMessage; showActions?: boolean }> = ({
         <motion.div
           initial={{ scale: 0.95 }}
           animate={{ scale: 1 }}
-          className={`inline-block max-w-sm p-3 rounded-2xl ${
+          className={`inline-block max-w-[80%] sm:max-w-sm p-2 sm:p-3 rounded-xl sm:rounded-2xl ${
             isAI 
               ? "bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 text-slate-900 dark:text-white rounded-tl-md border border-blue-200 dark:border-blue-800"
               : "bg-gradient-to-br from-slate-100 to-slate-50 dark:from-zinc-800 dark:to-zinc-700 text-slate-900 dark:text-white rounded-tr-md"
@@ -74,16 +74,16 @@ const AIMessage: React.FC<{ message: ChatMessage; showActions?: boolean }> = ({
         >
           {message.typing ? (
             <div className="flex items-center gap-2">
-              <div className="flex gap-1">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" />
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-100" />
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-200" />
+              <div className="flex gap-0.5 sm:gap-1">
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce" />
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce delay-100" />
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full animate-bounce delay-200" />
               </div>
-              <span className="text-sm text-blue-600 dark:text-blue-400">AI thinking...</span>
+              <span className="text-xs sm:text-sm text-blue-600 dark:text-blue-400">AI thinking...</span>
             </div>
           ) : (
             <>
-              <p className="text-sm leading-relaxed">{message.text}</p>
+              <p className="text-xs sm:text-sm leading-relaxed">{message.text}</p>
               
               {/* Action Buttons */}
               {showActions && message.actions && message.actions.length > 0 && (
@@ -91,14 +91,14 @@ const AIMessage: React.FC<{ message: ChatMessage; showActions?: boolean }> = ({
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="mt-3 flex flex-wrap gap-2"
+                  className="mt-2 sm:mt-3 flex flex-wrap gap-1.5 sm:gap-2"
                 >
                   {message.actions.map((action, index) => (
                     <motion.button
                       key={index}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
+                      className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg text-[10px] sm:text-xs font-medium transition-all ${
                         action.type === "book" 
                           ? "bg-blue-500 hover:bg-blue-600 text-white"
                           : action.type === "schedule"
@@ -118,13 +118,13 @@ const AIMessage: React.FC<{ message: ChatMessage; showActions?: boolean }> = ({
         </motion.div>
 
         {/* Timestamp */}
-        <div className={`text-xs text-slate-500 dark:text-zinc-400 mt-1 ${
+        <div className={`text-[10px] sm:text-xs text-slate-500 dark:text-zinc-400 mt-0.5 sm:mt-1 ${
           isAI ? "text-left" : "text-right"
         }`}>
           {message.timestamp}
           {isAI && (
-            <span className="ml-2 inline-flex items-center gap-1">
-              <Zap className="w-3 h-3 text-blue-500" />
+            <span className="ml-1 sm:ml-2 inline-flex items-center gap-0.5 sm:gap-1">
+              <Zap className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-blue-500" />
               <span className="text-blue-500">AI</span>
             </span>
           )}
@@ -196,38 +196,38 @@ export const AIAssistantDemo: React.FC = () => {
   }, [currentStep]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl overflow-hidden flex flex-col">
+    <div className="w-full h-full bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg sm:rounded-xl overflow-hidden flex flex-col">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-            <Brain className="w-5 h-5" />
+      <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-3 sm:p-4">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 flex items-center justify-center">
+            <Brain className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
           <div>
-            <h2 className="text-lg font-semibold">AI Assistant</h2>
-            <div className="flex items-center gap-2 text-blue-100">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm">Online 24/7</span>
+            <h2 className="text-base sm:text-lg font-semibold">AI Assistant</h2>
+            <div className="flex items-center gap-1.5 sm:gap-2 text-blue-100">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="text-xs sm:text-sm">Online 24/7</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Chat Messages */}
-      <div className="flex-1 overflow-y-auto p-4 min-h-[1024px]">
+      <div className="flex-1 overflow-y-auto p-3 sm:p-4 min-h-[900px]">
         {messages.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-12"
+            className="text-center py-8 sm:py-12"
           >
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white">
-              <Brain className="w-6 h-6" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white">
+              <Brain className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+            <h3 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-white mb-1.5 sm:mb-2">
               AI Assistant Ready
             </h3>
-            <p className="text-slate-600 dark:text-zinc-400 text-sm">
+            <p className="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm px-4">
               Watch how our AI handles inquiries and books appointments
             </p>
           </motion.div>

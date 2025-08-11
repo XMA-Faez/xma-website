@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DollarSign, TrendingUp } from "lucide-react";
 
 interface Deal {
@@ -105,40 +105,77 @@ const initialStages: Stage[] = [
   }
 ];
 
-const DealCard: React.FC<{ deal: Deal }> = ({ deal }) => {
+const DealCard: React.FC<{ deal: Deal; isMobile?: boolean }> = ({ deal, isMobile = false }) => {
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case "high": return "bg-red-100 text-red-700 border-red-200";
-      case "medium": return "bg-yellow-100 text-yellow-700 border-yellow-200";
-      case "low": return "bg-green-100 text-green-700 border-green-200";
-      default: return "bg-gray-100 text-gray-700 border-gray-200";
+      case "high": return "text-red-600";
+      case "medium": return "text-yellow-600";
+      case "low": return "text-green-600";
+      default: return "text-gray-600";
     }
   };
 
+  if (isMobile) {
+    // Simplified mobile card
+    return (
+      <div className="bg-white dark:bg-zinc-800 rounded-lg p-2 border border-slate-200 dark:border-zinc-700">
+        <div className="flex items-center gap-2 mb-1">
+          <div className="w-6 h-6 rounded-full bg-slate-600 flex items-center justify-center text-white font-semibold text-[10px]">
+            {deal.avatar}
+          </div>
+          <div className="flex-1 min-w-0">
+            <h4 className="font-semibold text-slate-900 dark:text-white text-xs truncate">
+              {deal.name}
+            </h4>
+          </div>
+          <div className={`${getPriorityColor(deal.priority)}`}>
+            <div className="w-2 h-2 rounded-full bg-current" />
+          </div>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="font-bold text-slate-900 dark:text-white text-xs">
+            ${(deal.value / 1000).toFixed(0)}k
+          </span>
+          <span className="text-[10px] text-blue-500 font-medium">
+            {deal.probability}%
+          </span>
+        </div>
+        
+        <div className="w-full bg-slate-200 dark:bg-zinc-700 rounded-full h-1 mt-1">
+          <div
+            className="bg-blue-500 h-1 rounded-full transition-all duration-300"
+            style={{ width: `${deal.probability}%` }}
+          />
+        </div>
+      </div>
+    );
+  }
+
+  // Desktop card
   return (
     <div className="bg-white dark:bg-zinc-800 rounded-xl p-3 border border-slate-200 dark:border-zinc-700">
-    
       <div className="flex items-start justify-between mb-2">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center text-white font-semibold text-xs">
             {deal.avatar}
           </div>
-          <div>
-            <h4 className="font-semibold text-slate-900 dark:text-white text-sm">
+          <div className="min-w-0 flex-1">
+            <h4 className="font-semibold text-slate-900 dark:text-white text-sm truncate">
               {deal.name}
             </h4>
-            <p className="text-xs text-slate-500 dark:text-zinc-400">
+            <p className="text-xs text-slate-500 dark:text-zinc-400 truncate">
               {deal.company}
             </p>
           </div>
         </div>
-        <div className={`px-2 py-1 rounded-full text-xs font-medium border ${getPriorityColor(deal.priority)}`}>
+        <div className={`px-2 py-1 rounded-full text-xs font-medium border ${getPriorityColor(deal.priority).replace('text-', 'border-').replace('600', '200')} ${getPriorityColor(deal.priority).replace('600', '700')} ${getPriorityColor(deal.priority).replace('text-', 'bg-').replace('600', '100')}`}>
           {deal.priority}
         </div>
       </div>
 
       <div className="flex items-center gap-2 mb-2">
-        <DollarSign className="w-3 h-3 text-green-500" />
+        <DollarSign className="w-3 h-3 text-green-500 flex-shrink-0" />
         <span className="font-bold text-slate-900 dark:text-white text-sm">
           ${deal.value.toLocaleString()}
         </span>
@@ -152,7 +189,7 @@ const DealCard: React.FC<{ deal: Deal }> = ({ deal }) => {
 
       <div className="w-full bg-slate-200 dark:bg-zinc-700 rounded-full h-1.5">
         <div
-          className="bg-blue-500 h-1.5 rounded-full"
+          className="bg-blue-500 h-1.5 rounded-full transition-all duration-300"
           style={{ width: `${deal.probability}%` }}
         />
       </div>
@@ -160,7 +197,35 @@ const DealCard: React.FC<{ deal: Deal }> = ({ deal }) => {
   );
 };
 
-const StageColumn: React.FC<{ stage: Stage }> = ({ stage }) => {
+const StageColumn: React.FC<{ stage: Stage; isMobile?: boolean }> = ({ stage, isMobile = false }) => {
+  if (isMobile) {
+    // Mobile: Simplified vertical layout
+    return (
+      <div className="w-full">
+        <div className={`bg-gradient-to-r ${stage.color} rounded-t-lg p-2`}>
+          <div className="flex items-center justify-between text-white">
+            <h3 className="font-semibold text-xs">{stage.name}</h3>
+            <div className="flex items-center gap-2">
+              <span className="text-xs opacity-90">{stage.deals.length}</span>
+              <span className="text-[10px] opacity-75">
+                ${(stage.deals.reduce((sum, deal) => sum + deal.value, 0) / 1000).toFixed(0)}k
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-slate-50 dark:bg-zinc-900/50 p-2 rounded-b-lg border-2 border-t-0 border-slate-200 dark:border-zinc-700">
+          <div className="space-y-2">
+            {stage.deals.map((deal) => (
+              <DealCard key={deal.id} deal={deal} isMobile={true} />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Desktop layout
   return (
     <div className="flex-1 min-w-[200px]">
       <div className={`bg-gradient-to-r ${stage.color} rounded-t-xl p-3`}>
@@ -173,12 +238,10 @@ const StageColumn: React.FC<{ stage: Stage }> = ({ stage }) => {
         </div>
       </div>
 
-      <div className="bg-slate-50 dark:bg-zinc-900/50 min-h-[400px] p-3 rounded-b-xl border-2 border-slate-200 dark:border-zinc-700">
+      <div className="bg-slate-50 dark:bg-zinc-900/50 min-h-[400px] p-3 rounded-b-xl border-2 border-t-0 border-slate-200 dark:border-zinc-700">
         <div className="space-y-3">
           {stage.deals.map((deal) => (
-            <div key={deal.id}>
-              <DealCard deal={deal} />
-            </div>
+            <DealCard key={deal.id} deal={deal} isMobile={false} />
           ))}
         </div>
       </div>
@@ -188,9 +251,58 @@ const StageColumn: React.FC<{ stage: Stage }> = ({ stage }) => {
 
 export const PipelineVisualization: React.FC = () => {
   const [stages, setStages] = useState(initialStages);
+  const [isMobile, setIsMobile] = useState(false);
+  const [selectedStage, setSelectedStage] = useState(0);
 
-  // Remove animation - show static pipeline
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
+  if (isMobile) {
+    // Mobile: Show one stage at a time with navigation
+    return (
+      <div className="w-full h-full bg-gradient-to-br from-slate-50 to-white dark:from-zinc-900 dark:to-zinc-800 rounded-lg p-3">
+        {/* Header */}
+        <div className="mb-3">
+          <h3 className="text-base font-bold text-slate-900 dark:text-white">
+            Sales Pipeline
+          </h3>
+          <p className="text-slate-600 dark:text-zinc-400 text-xs">
+            Swipe to navigate stages
+          </p>
+        </div>
+
+        {/* Stage Navigation */}
+        <div className="flex gap-1 mb-3 overflow-x-auto pb-2">
+          {stages.map((stage, index) => (
+            <button
+              key={stage.id}
+              onClick={() => setSelectedStage(index)}
+              className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+                selectedStage === index
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-slate-200 dark:bg-zinc-700 text-slate-600 dark:text-zinc-300'
+              }`}
+            >
+              {stage.name} ({stage.deals.length})
+            </button>
+          ))}
+        </div>
+
+        {/* Current Stage */}
+        <div className="overflow-y-auto max-h-[400px]">
+          <StageColumn stage={stages[selectedStage]} isMobile={true} />
+        </div>
+      </div>
+    );
+  }
+
+  // Desktop layout
   return (
     <div className="w-full h-full bg-gradient-to-br from-slate-50 to-white dark:from-zinc-900 dark:to-zinc-800 rounded-xl p-4 overflow-hidden">
       {/* Header */}
@@ -206,7 +318,7 @@ export const PipelineVisualization: React.FC = () => {
       {/* Pipeline Stages */}
       <div className="flex gap-4 overflow-x-auto pb-4">
         {stages.map(stage => (
-          <StageColumn key={stage.id} stage={stage} />
+          <StageColumn key={stage.id} stage={stage} isMobile={false} />
         ))}
       </div>
     </div>
