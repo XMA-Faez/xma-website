@@ -86,7 +86,7 @@ const structuredData = {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+971-50-123-4567",
+        telephone: "+971-50-363-6856",
         contactType: "customer service",
         areaServed: "AE",
         availableLanguage: ["English", "Arabic"]

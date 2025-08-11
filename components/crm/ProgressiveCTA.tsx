@@ -71,7 +71,7 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
           },
           {
             text: "Chat on WhatsApp",
-            href: "https://wa.me/971501234567",
+            href: "https://wa.me/971503636856",
             variant: "secondary",
             icon: <MessageCircle className="w-5 h-5" />,
             color: "emerald",
@@ -143,8 +143,8 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
             color: "emerald",
           },
           {
-            text: "Call +971 50 123 4567",
-            href: "tel:+971501234567",
+            text: "Call +971 50 363 6856",
+            href: "tel:+971503636856",
             variant: "secondary",
             icon: <Phone className="w-5 h-5" />,
           },
@@ -183,8 +183,8 @@ const ProgressiveCTA: React.FC<ProgressiveCTAProps> = ({ position }) => {
             icon: <Calendar className="w-5 h-5" />,
           },
           {
-            text: "Call +971 50 123 4567",
-            href: "tel:+971501234567",
+            text: "Call +971 50 363 6856",
+            href: "tel:+971503636856",
             variant: "secondary",
             icon: <Phone className="w-5 h-5" />,
             color: "emerald",
