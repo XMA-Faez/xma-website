@@ -225,9 +225,9 @@ const StageColumn: React.FC<{ stage: Stage; isMobile?: boolean }> = ({ stage, is
     );
   }
 
-  // Desktop layout
+  // Desktop/Tablet layout
   return (
-    <div className="flex-1 min-w-[200px]">
+    <div className="flex-1 min-w-[280px] sm:min-w-[320px] md:min-w-[360px] lg:min-w-[400px]">
       <div className={`bg-gradient-to-r ${stage.color} rounded-t-xl p-3`}>
         <div className="flex items-center justify-between text-white">
           <h3 className="font-semibold text-sm">{stage.name}</h3>
