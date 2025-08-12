@@ -230,7 +230,7 @@ const ModularFAQ: React.FC = () => {
       id: "pricing-cost",
       question: "How much does the CRM cost?",
       answer:
-        "Plans start from AED 299/month for small businesses, with enterprise options available. We offer 14-day free trials, no setup fees, and month-to-month billing. The ROI typically pays for itself within the first month through increased lead conversion.",
+        "Our annual subscription is AED 5,000, offering a cost-effective solution for businesses that want long-term value. We also provide 14-day free trials, no setup fees, and the flexibility of month-to-month billing.",
       category: "pricing",
       tags: ["cost", "plans", "trial"],
       popularity: 96,
@@ -505,7 +505,7 @@ const ModularFAQ: React.FC = () => {
                         className="overflow-hidden"
                       >
                         <div className="px-6 pb-6">
-                          <div className="pl-8">
+                          <div className="">
                             <p className="text-slate-700 dark:text-zinc-300 leading-relaxed mb-4">
                               {faq.answer}
                             </p>

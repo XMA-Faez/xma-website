@@ -13,7 +13,6 @@ const products = [
     accentColor: "from-emerald-400 to-green-300",
     glowColor: "shadow-emerald-500/20",
     borderColor: "border-emerald-400/30",
-    badge: "Annual"
   },
   {
     title: "Lead Generator",
@@ -22,7 +21,6 @@ const products = [
     accentColor: "from-blue-400 to-indigo-400",
     glowColor: "shadow-blue-500/20",
     borderColor: "border-blue-400/30",
-    badge: "Popular"
   }
 ];
 
@@ -64,15 +62,6 @@ function Products() {
                   </h3>
                   <div className={`w-12 h-0.5 bg-gradient-to-r ${product.accentColor}`}></div>
                 </div>
-                {product.badge && (
-                  <span className={`px-4 py-2 text-xs font-semibold rounded-2xl glass-float ${
-                    product.badge === 'Popular' ? 'text-blue-400' :
-                    product.badge === 'Premium' ? 'text-purple-400' :
-                    'text-emerald-400'
-                  }`}>
-                    {product.badge}
-                  </span>
-                )}
               </div>
               
               <p className="text-slate-700 dark:text-white/90 mb-8 leading-relaxed text-lg drop-shadow-sm">
