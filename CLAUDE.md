@@ -21,11 +21,6 @@ Ask me questions before anything else to get more context and produce the best p
 # Development
 npm run dev          # Start development server (localhost:3000)
 bun dev             # Alternative with Bun runtime
-
-# Build & Deploy  
-npm run build       # Production build
-npm run start       # Start production server
-npm run lint        # ESLint checking
 ```
 
 ## Architecture Overview

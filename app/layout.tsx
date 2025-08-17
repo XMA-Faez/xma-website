@@ -10,6 +10,7 @@ import Footer from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { QueryProvider } from "@/components/providers/QueryProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -62,13 +63,16 @@ export default function RootLayout({
           disableTransitionOnChange={false}
         >
           <Theme grayColor="gray" hasBackground={false} radius="full">
-            <PostHogProvider>
+            <QueryProvider>
+              <PostHogProvider>
               {/* <AnimatedCursorComponent /> */}
               <Header />
               <SpeedInsights />
               <main className="bg-slate-50 dark:bg-zinc-950">{children}</main>
               <Analytics />
               <Footer />
+              </PostHogProvider>
+            </QueryProvider>
               <style>
                 {`
               .dark,
@@ -78,7 +82,6 @@ export default function RootLayout({
               }
             `}
               </style>
-            </PostHogProvider>
           </Theme>
         </ThemeProvider>
       </body>
