@@ -10,6 +10,7 @@ import Footer from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
 import { PostHogProvider } from "@/components/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { GoogleTagManager } from "@/components/GoogleTagManager";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -63,6 +64,7 @@ export default function RootLayout({
         >
           <Theme grayColor="gray" hasBackground={false} radius="full">
             <PostHogProvider>
+              <GoogleTagManager />
               {/* <AnimatedCursorComponent /> */}
               <Header />
               <SpeedInsights />
