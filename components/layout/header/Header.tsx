@@ -93,7 +93,7 @@ export function Header() {
                   pathname === "/services/crm-solution" ? "emerald" : "blue"
                 }
               >
-                {pathname === "/services/crm-solution" ? "Book CRM Demo" : "Book Your Call Now"}
+                {pathname === "/services/crm-solution" ? "Book CRM Demo" : "Book Your Call"}
               </ScanningButton>
             </Link>
           </div>

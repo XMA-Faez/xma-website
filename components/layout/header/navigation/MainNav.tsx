@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { services } from "@/data/navigation";
+import { mainNavItems, services } from "@/data/navigation";
 
 export function MainNav() {
   const pathname = usePathname();
@@ -114,33 +114,21 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* About */}
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            href="/about"
-            className={`px-4 py-2 text-sm rounded-full transition-all duration-300 ${
-              pathname === "/about"
-                ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow"
-                : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105"
-            }`}
-          >
-            About
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        {/* Blog */}
-        {/* <NavigationMenuItem> */}
-        {/*   <NavigationMenuLink */}
-        {/*     href="/blog" */}
-        {/*     className={`px-4 py-2 text-sm rounded-full transition-all duration-300 ${ */}
-        {/*       pathname === "/blog" || pathname.startsWith("/blog/") */}
-        {/*         ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow" */}
-        {/*         : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105" */}
-        {/*     }`} */}
-        {/*   > */}
-        {/*     Blog */}
-        {/*   </NavigationMenuLink> */}
-        {/* </NavigationMenuItem> */}
+        {/* Other Navigation Items */}
+        {mainNavItems.filter(item => item.name !== "Home" && item.name !== "Services" && item.name !== "Contact").map((item) => (
+          <NavigationMenuItem key={item.name}>
+            <NavigationMenuLink
+              href={item.href}
+              className={`px-4 py-2 text-sm rounded-full transition-all duration-300 ${
+                pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))
+                  ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow"
+                  : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105"
+              }`}
+            >
+              {item.name}
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        ))}
 
         {/* Contact */}
         <NavigationMenuItem>

@@ -50,14 +50,14 @@ const footerData = {
       text: "About Us",
       href: "/about",
     },
-    // {
-    //   text: "Blog",
-    //   href: "/blog",
-    // },
-    // {
-    //   text: "Proposal",
-    //   href: "/proposal",
-    // },
+    {
+      text: "Portfolio",
+      href: "/portfolio",
+    },
+    {
+      text: "Blog",
+      href: "/blog",
+    },
     {
       text: "Contact",
       href: "/contact",
