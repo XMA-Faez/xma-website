@@ -11,6 +11,7 @@ import { MobileNav } from "./navigation/MobileNav";
 import { ScanningButton } from "@/components/ui/ScanningButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { useTheme } from "next-themes";
+import { useTrackNavigation } from "@/hooks/useTrackEvent";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,6 +19,7 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const { theme } = useTheme();
+  const trackNavigation = useTrackNavigation();
 
   useEffect(() => {
     setMounted(true);
@@ -64,7 +66,11 @@ export function Header() {
         >
           {/* Logo */}
           <div className="flex-grow flex-shrink-0 basis-0">
-            <Link className="block w-fit" href="/">
+            <Link 
+              className="block w-fit" 
+              href="/"
+              onClick={() => trackNavigation("Logo", "/", "header")}
+            >
               {mounted && (
                 <Image
                   src={theme === 'light' ? "/XMA-01.svg" : "/XMA-White.svg"}
@@ -92,6 +98,11 @@ export function Header() {
                 color={
                   pathname === "/services/crm-solution" ? "emerald" : "blue"
                 }
+                trackingLocation="header"
+                trackingProps={{ 
+                  is_crm_page: pathname === "/services/crm-solution",
+                  destination: pathname === "/services/crm-solution" ? "/book-crm" : "/book"
+                }}
               >
                 {pathname === "/services/crm-solution" ? "Book CRM Demo" : "Book Your Call"}
               </ScanningButton>

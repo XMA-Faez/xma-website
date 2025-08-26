@@ -14,13 +14,50 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { useState } from "react";
+import { useTrackEvent } from "@/hooks/useTrackEvent";
+import { POSTHOG_EVENTS } from "@/lib/posthog-events";
 
 export default function ContactPage() {
   const [showThankYou, setShowThankYou] = useState(false);
+  const [formStarted, setFormStarted] = useState(false);
+  const trackEvent = useTrackEvent();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const formData = new FormData(e.target as HTMLFormElement);
+    const formValues = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      company: formData.get("company") as string,
+      message: formData.get("message") as string,
+    };
+    
+    // Track form submission
+    trackEvent(POSTHOG_EVENTS.CONTACT_FORM_SUBMIT, {
+      form_name: "contact_form",
+      form_location: "contact_page",
+      has_message: formValues.message?.length > 0,
+      message_length: formValues.message?.length,
+    });
+    
+    // Track lead captured
+    trackEvent(POSTHOG_EVENTS.LEAD_CAPTURED, {
+      lead_source: "contact_form",
+      company_provided: formValues.company?.length > 0,
+    });
+    
     setShowThankYou(true);
+  };
+  
+  const handleFormFocus = () => {
+    if (!formStarted) {
+      setFormStarted(true);
+      trackEvent(POSTHOG_EVENTS.FORM_START, {
+        form_name: "contact_form",
+        form_location: "contact_page",
+      });
+    }
   };
 
   return (
@@ -91,31 +128,39 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Input
+                      name="name"
                       placeholder="Your Name"
                       className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
+                      onFocus={handleFormFocus}
                       required
                     />
                   </div>
                   <div>
                     <Input
+                      name="email"
                       type="email"
                       placeholder="Email Address"
                       className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
+                      onFocus={handleFormFocus}
                       required
                     />
                   </div>
                   <div>
                     <Input
+                      name="company"
                       placeholder="Company Name"
                       className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
+                      onFocus={handleFormFocus}
                       required
                     />
                   </div>
                   <div>
                     <Textarea
+                      name="message"
                       placeholder="Your Message"
                       className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
                       rows={5}
+                      onFocus={handleFormFocus}
                       required
                     />
                   </div>
@@ -124,6 +169,8 @@ export default function ContactPage() {
                     variant="primary"
                     size="lg"
                     className="w-full"
+                    trackingLocation="contact_form"
+                    trackingProps={{ form_name: "contact_form" }}
                   >
                     Send Message
                   </ScanningButton>
@@ -146,44 +193,80 @@ export default function ContactPage() {
                     title: "Visit Us",
                     content: "Dubai, UAE",
                     color: "text-blue-400",
+                    type: "address",
+                    link: null,
                   },
                   {
                     Icon: Phone,
                     title: "Call Us",
                     content: "+971 50 363 6856",
                     color: "text-emerald-400",
+                    type: "phone",
+                    link: "tel:+971503636856",
                   },
                   {
                     Icon: Envelope,
                     title: "Email Us",
                     content: "admin@xmaagency.com",
                     color: "text-purple-400",
+                    type: "email",
+                    link: "mailto:admin@xmaagency.com",
                   },
-                ].map((item, index) => (
-                  <motion.div
-                    key={item.title}
-                    className={`flex items-center gap-4 ${index !== 2 ? "mb-8" : ""}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="w-12 h-12 rounded-full glass-secondary flex items-center justify-center">
-                      <item.Icon
-                        className={`w-6 h-6 ${item.color}`}
-                        weight="duotone"
-                      />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-slate-900 dark:text-white">
-                        {item.title}
+                ].map((item, index) => {
+                  const handleContactClick = () => {
+                    if (item.link) {
+                      trackEvent(POSTHOG_EVENTS.CONTACT_METHOD_CLICK, {
+                        contact_method: item.type,
+                        contact_value: item.content,
+                        contact_location: "contact_page",
+                      });
+                    }
+                  };
+                  
+                  const content = (
+                    <>
+                      <div className="w-12 h-12 rounded-full glass-secondary flex items-center justify-center">
+                        <item.Icon
+                          className={`w-6 h-6 ${item.color}`}
+                          weight="duotone"
+                        />
                       </div>
-                      <div className="text-slate-600 dark:text-zinc-400">
-                        {item.content}
+                      <div>
+                        <div className="font-semibold text-slate-900 dark:text-white">
+                          {item.title}
+                        </div>
+                        <div className="text-slate-600 dark:text-zinc-400">
+                          {item.content}
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </>
+                  );
+                  
+                  return (
+                    <motion.div
+                      key={item.title}
+                      className={`${index !== 2 ? "mb-8" : ""}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          onClick={handleContactClick}
+                          className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                        >
+                          {content}
+                        </a>
+                      ) : (
+                        <div className="flex items-center gap-4">
+                          {content}
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })}
               </div>
 
               {/* Schedule Meeting Card */}

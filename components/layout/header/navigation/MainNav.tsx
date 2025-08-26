@@ -10,9 +10,11 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { mainNavItems, services } from "@/data/navigation";
+import { useTrackNavigation } from "@/hooks/useTrackEvent";
 
 export function MainNav() {
   const pathname = usePathname();
+  const trackNavigation = useTrackNavigation();
 
   return (
     <NavigationMenu className="flex justify-center">
@@ -26,6 +28,7 @@ export function MainNav() {
                 ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow"
                 : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105"
             }`}
+            onClick={() => trackNavigation("Home", "/", "header")}
           >
             Home
           </NavigationMenuLink>
@@ -74,6 +77,7 @@ export function MainNav() {
                       style={{
                         animationDelay: `${index * 75}ms`,
                       }}
+                      onClick={() => trackNavigation(service.name, service.href, "header")}
                     >
                       {/* Dynamic background gradient */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-gray-500/[0.04] via-gray-400/[0.02] to-transparent" />
@@ -124,6 +128,7 @@ export function MainNav() {
                   ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow"
                   : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105"
               }`}
+              onClick={() => trackNavigation(item.name, item.href, "header")}
             >
               {item.name}
             </NavigationMenuLink>
@@ -139,6 +144,7 @@ export function MainNav() {
                 ? "text-slate-900 dark:text-white font-medium glass-primary electric-glow"
                 : "text-slate-600 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white hover:glass-tertiary hover:scale-105"
             }`}
+            onClick={() => trackNavigation("Contact", "/contact", "header")}
           >
             Contact
           </NavigationMenuLink>
