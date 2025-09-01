@@ -2,56 +2,52 @@
 
 import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { 
-  PlayCircle, 
-  Image as ImageIcon, 
-  Faders
-} from "phosphor-react";
+import { PlayCircle, Image as ImageIcon } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
-import PortfolioGallery from "@/components/portfolio/PortfolioGallery";
+import SortablePortfolioGallery from "@/components/portfolio/SortablePortfolioGallery";
 import PortfolioModal from "@/components/portfolio/PortfolioModal";
-import { 
-  CloudinaryVideo, 
-  CloudinaryGraphic 
-} from "@/lib/contentful-portfolio";
-import { usePortfolioItems } from "@/hooks/usePortfolio";
+import { ProcessedPortfolioItem, PortfolioCategory } from "@/lib/contentful-portfolio";
+import { usePortfolioItems } from "@/hooks/usePortfolioItems";
 
 // Use types from Contentful integration
-type PortfolioItem = CloudinaryVideo | CloudinaryGraphic;
-type TabType = 'videos' | 'graphics';
-type FilterType = 'all' | 'web-design' | 'branding' | 'social-media' | 'motion' | 'ui-ux';
+type TabType = "videos" | "graphics";
+type CategoryFilterType = "all" | string;
 
 const PortfolioPage = () => {
-  const [activeTab, setActiveTab] = useState<TabType>('videos');
-  // const [activeFilter, setActiveFilter] = useState<FilterType>('all'); // COMMENTED OUT
-  const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const [activeTab, setActiveTab] = useState<TabType>("videos");
+  const [activeCategory, setActiveCategory] = useState<CategoryFilterType>("all");
+  const [selectedItem, setSelectedItem] = useState<ProcessedPortfolioItem | null>(null);
 
-  // Use React Query hooks for data fetching
-  const { items: allPortfolioItems, isLoading, error } = usePortfolioItems();
+  // Use new Portfolio Items hook
+  const { items: allPortfolioItems, categories, isLoading, error, total, hasMore, refetch, loadMore } = usePortfolioItems();
 
-  // Filter items based on active tab only (no "all" option)
+  // Filter items based on active tab and category
   const filteredItems = useMemo(() => {
     let items = allPortfolioItems;
-    
+
     // Filter by tab - always filter since there's no "all" option
-    if (activeTab === 'videos') {
-      items = items.filter(item => item.type === 'video');
-    } else if (activeTab === 'graphics') {
-      items = items.filter(item => item.type === 'graphic');
+    if (activeTab === "videos") {
+      items = items.filter((item) => item.resourceType === "video");
+    } else if (activeTab === "graphics") {
+      items = items.filter((item) => item.resourceType === "image");
     }
-    
-    // Filter by category - COMMENTED OUT
-    // if (activeFilter !== 'all') {
-    //   items = items.filter(item => item.category === activeFilter);
-    // }
-    
+
+    // Filter by category
+    if (activeCategory !== "all") {
+      items = items.filter(item => item.category === activeCategory);
+    }
+
     return items;
-  }, [allPortfolioItems, activeTab]);
+  }, [allPortfolioItems, activeTab, activeCategory]);
 
   // Tab options - Only Videos and Graphics
   const tabs: { value: TabType; label: string; icon: React.ReactNode }[] = [
-    { value: 'videos', label: 'Videos', icon: <PlayCircle weight="duotone" /> },
-    { value: 'graphics', label: 'Graphics', icon: <ImageIcon weight="duotone" /> }
+    { value: "videos", label: "Videos", icon: <PlayCircle weight="duotone" /> },
+    {
+      value: "graphics",
+      label: "Graphics",
+      icon: <ImageIcon weight="duotone" />,
+    },
   ];
 
   // Filter options - COMMENTED OUT
@@ -67,12 +63,12 @@ const PortfolioPage = () => {
   */
 
   // Handle item selection
-  const handleItemSelect = (item: PortfolioItem) => {
+  const handleItemSelect = (item: ProcessedPortfolioItem) => {
     setSelectedItem(item);
   };
 
   // Handle modal navigation
-  const handleModalNavigate = (item: PortfolioItem) => {
+  const handleModalNavigate = (item: ProcessedPortfolioItem) => {
     setSelectedItem(item);
   };
 
@@ -81,19 +77,60 @@ const PortfolioPage = () => {
     setSelectedItem(null);
   };
 
+  // Handle reordering
+  const handleOrderChange = async (newOrderedItems: ProcessedPortfolioItem[]) => {
+    try {
+      // Only update items that actually changed their order
+      const orderUpdates = newOrderedItems
+        .map((item, index) => ({
+          id: item.id,
+          newOrder: index + 1,
+          oldOrder: item.order,
+        }))
+        .filter(update => update.newOrder !== update.oldOrder)
+        .map(update => ({
+          id: update.id,
+          order: update.newOrder,
+        }));
+
+      if (orderUpdates.length === 0) {
+        // No changes needed
+        return;
+      }
+
+      console.log(`Updating order for ${orderUpdates.length} items out of ${newOrderedItems.length} total`);
+
+      // Update order in Contentful
+      const { updatePortfolioItemsOrder } = await import("@/lib/contentful-portfolio");
+      const success = await updatePortfolioItemsOrder(orderUpdates);
+      
+      if (success) {
+        // Refresh data to reflect changes
+        await refetch(activeCategory === 'all' ? undefined : activeCategory);
+      } else {
+        throw new Error('Failed to update order in Contentful');
+      }
+    } catch (error) {
+      console.error('Error updating portfolio order:', error);
+      throw error; // Re-throw to let the component handle the error
+    }
+  };
+
   return (
     <div className="min-h-screen w-full relative bg-white dark:bg-black">
       {/* Background gradients */}
-      <div 
+      <div
         className="absolute inset-0 z-0 dark:hidden"
         style={{
-          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59, 130, 246, 0.12), transparent 70%), rgb(248, 250, 252)"
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59, 130, 246, 0.12), transparent 70%), rgb(248, 250, 252)",
         }}
       />
-      <div 
+      <div
         className="absolute inset-0 z-0 hidden dark:block"
         style={{
-          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59, 130, 246, 0.25), transparent 70%), #000000"
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59, 130, 246, 0.25), transparent 70%), #000000",
         }}
       />
 
@@ -110,7 +147,8 @@ const PortfolioPage = () => {
               Our Portfolio
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-zinc-300 max-w-3xl mx-auto mb-8">
-              Explore our collection of innovative designs, compelling videos, and creative solutions that drive results
+              Explore our collection of innovative designs, compelling videos,
+              and creative solutions that drive results
             </p>
           </motion.div>
         </div>
@@ -121,16 +159,17 @@ const PortfolioPage = () => {
         <div className="max-w-7xl mx-auto">
           {/* Tabs */}
           <div className="flex justify-center mb-8">
-            <div className="inline-flex bg-slate-100 dark:bg-zinc-900 rounded-full p-1">
+            <div className="inline-flex bg-slate-100 dark:bg-slate-900 rounded-full p-1">
               {tabs.map((tab) => (
                 <button
                   key={tab.value}
                   onClick={() => setActiveTab(tab.value)}
                   className={`
                     flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300
-                    ${activeTab === tab.value 
-                      ? 'bg-white dark:bg-zinc-800 text-slate-900 dark:text-white shadow-lg' 
-                      : 'text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white'
+                    ${
+                      activeTab === tab.value
+                        ? "bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-lg"
+                        : "text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white"
                     }
                   `}
                 >
@@ -141,26 +180,41 @@ const PortfolioPage = () => {
             </div>
           </div>
 
-          {/* Category Filters - COMMENTED OUT */}
-          {/* 
+          {/* Category Filters */}
           <div className="flex flex-wrap justify-center gap-3">
-            {filters.map((filter) => (
+            <button
+              onClick={() => setActiveCategory("all")}
+              className={`
+                px-4 py-2 rounded-full transition-all duration-300
+                ${activeCategory === "all"
+                  ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg'
+                  : 'bg-slate-50/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-zinc-400 hover:border-blue-500/50'
+                }
+              `}
+            >
+              All Categories
+            </button>
+            {categories.map((category) => (
               <button
-                key={filter.value}
-                onClick={() => setActiveFilter(filter.value)}
+                key={category.fields.slug}
+                onClick={() => setActiveCategory(category.fields.slug)}
                 className={`
                   px-4 py-2 rounded-full transition-all duration-300
-                  ${activeFilter === filter.value
+                  ${activeCategory === category.fields.slug
                     ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg'
                     : 'bg-slate-50/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-zinc-400 hover:border-blue-500/50'
                   }
                 `}
+                style={{
+                  backgroundColor: activeCategory === category.fields.slug && category.fields.color 
+                    ? category.fields.color 
+                    : undefined
+                }}
               >
-                {filter.label}
+                {category.fields.name}
               </button>
             ))}
           </div>
-          */}
         </div>
       </section>
 
@@ -176,20 +230,26 @@ const PortfolioPage = () => {
                 Unable to load portfolio
               </h3>
               <p className="text-slate-500 dark:text-zinc-500 mb-6">
-                {error?.message || 'Failed to load portfolio data. Please try again later.'}
+                {error?.message ||
+                  "Failed to load portfolio data. Please try again later."}
               </p>
-              <ScanningButton 
-                onClick={() => window.location.reload()} 
+              <ScanningButton
+                onClick={() => window.location.reload()}
                 variant="secondary"
               >
                 Try Again
               </ScanningButton>
             </div>
           ) : (
-            <PortfolioGallery
+            <SortablePortfolioGallery
               items={filteredItems}
               onItemSelect={handleItemSelect}
+              onOrderChange={handleOrderChange}
               isLoading={isLoading}
+              canReorder={true}
+              hasMore={hasMore}
+              onLoadMore={loadMore}
+              total={total}
             />
           )}
         </div>
@@ -217,12 +277,11 @@ const PortfolioPage = () => {
               Ready to Create Something Amazing?
             </h2>
             <p className="text-lg text-slate-600 dark:text-zinc-300 mb-8">
-              Let's collaborate on your next project and bring your vision to life
+              Let's collaborate on your next project and bring your vision to
+              life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ScanningButton size="lg">
-                Start Your Project
-              </ScanningButton>
+              <ScanningButton size="lg">Start Your Project</ScanningButton>
               <ScanningButton size="lg" variant="secondary">
                 Schedule Consultation
               </ScanningButton>

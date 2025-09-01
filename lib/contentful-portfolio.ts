@@ -1,5 +1,67 @@
 import { createClient } from 'contentful';
 
+// Portfolio Category interface
+export interface PortfolioCategory {
+  sys: {
+    id: string;
+  };
+  fields: {
+    name: string;
+    slug: string;
+    color?: string;
+    icon?: string;
+  };
+}
+
+// New Portfolio Item interface (separate from Gallery structure)
+export interface PortfolioItem {
+  sys: {
+    id: string;
+    createdAt: string;
+    updatedAt: string;
+  };
+  fields: {
+    title: string;
+    slug: string;
+    description?: any; // Rich text
+    media: any; // Cloudinary JSON object
+    category: PortfolioCategory;
+    tags?: string[];
+    featured?: boolean;
+    publishDate?: string;
+    order?: number;
+    isActive?: boolean;
+    customMetadata?: any;
+  };
+}
+
+// Processed Portfolio Item (ready for display)
+export interface ProcessedPortfolioItem {
+  id: string;
+  title: string;
+  slug: string;
+  description?: string;
+  media: any; // Original Cloudinary object
+  cloudinaryPublicId: string;
+  resourceType: 'video' | 'image';
+  category: string;
+  categoryData: PortfolioCategory;
+  tags: string[];
+  featured: boolean;
+  publishDate?: string;
+  order: number;
+  isActive: boolean;
+  customMetadata?: any;
+  // Generated fields
+  url: string;
+  thumbnailUrl?: string;
+  width: number;
+  height: number;
+  format: 'square' | 'landscape' | 'portrait' | 'reels';
+  type: 'video' | 'graphic';
+  loaded: boolean;
+}
+
 // Contentful types for portfolio data
 export interface CloudinaryVideo {
   id: string;
@@ -61,33 +123,58 @@ const contentfulClient = createClient({
   accessToken: CONTENTFUL_ACCESS_TOKEN!,
 });
 
-// Category mapping function
+// Category mapping function - simplified for Services/Ecommerce
 function mapToCategory(tags: string[], publicId: string): string {
   const tagLower = tags.map(tag => tag.toLowerCase());
   const idLower = publicId.toLowerCase();
 
-  if (tagLower.some(tag => tag.includes('web') || tag.includes('website')) || 
-      idLower.includes('web')) {
-    return 'web-design';
-  }
-  if (tagLower.some(tag => tag.includes('brand') || tag.includes('logo')) || 
-      idLower.includes('brand') || idLower.includes('logo')) {
-    return 'branding';
-  }
-  if (tagLower.some(tag => tag.includes('social') || tag.includes('instagram') || tag.includes('facebook')) || 
-      idLower.includes('social')) {
-    return 'social-media';
-  }
-  if (tagLower.some(tag => tag.includes('motion') || tag.includes('animation')) || 
-      idLower.includes('motion') || idLower.includes('anim')) {
-    return 'motion';
-  }
-  if (tagLower.some(tag => tag.includes('ui') || tag.includes('ux') || tag.includes('interface')) || 
-      idLower.includes('ui') || idLower.includes('ux')) {
-    return 'ui-ux';
+  // Check for ecommerce keywords
+  if (tagLower.some(tag => 
+    tag.includes('ecommerce') || 
+    tag.includes('shop') || 
+    tag.includes('store') || 
+    tag.includes('product') ||
+    tag.includes('cart')
+  ) || idLower.includes('ecommerce') || idLower.includes('shop')) {
+    return 'ecommerce';
   }
   
-  return 'web-design'; // Default category
+  // Default to services for everything else
+  return 'services';
+}
+
+// Fetch categories from Contentful
+export async function fetchPortfolioCategories(): Promise<PortfolioCategory[]> {
+  try {
+    const response = await contentfulClient.getEntries<PortfolioCategory['fields']>({
+      content_type: 'portfolioCategory',
+    });
+    
+    return response.items;
+  } catch (error) {
+    console.error('Error fetching portfolio categories:', error);
+    // Return default categories if fetch fails
+    return [
+      {
+        sys: { id: 'default-services' },
+        fields: {
+          name: 'Services',
+          slug: 'services',
+          color: 'hsl(217, 91%, 60%)',
+          icon: 'Briefcase'
+        }
+      },
+      {
+        sys: { id: 'default-ecommerce' },
+        fields: {
+          name: 'Ecommerce',
+          slug: 'ecommerce',
+          color: 'hsl(161, 84%, 50%)',
+          icon: 'ShoppingCart'
+        }
+      }
+    ];
+  }
 }
 
 // Format mapping function
@@ -120,6 +207,7 @@ async function fetchGallery(tags?: string[]): Promise<GalleryResponse> {
     }
 
     const gallery = entries.items[0];
+    console.log('Fetched gallery:', gallery);
     
     // Process videos from cloudinaryVideos field
     const allVideos = (gallery.fields.cloudinaryVideos as any[] || [])
@@ -253,7 +341,213 @@ export async function fetchCloudinaryGraphics(tags?: string[]): Promise<Cloudina
   }
 }
 
-// Export main gallery fetch function
+// Export main gallery fetch function (KEEP EXISTING FOR OTHER SYSTEMS)
 export async function fetchPortfolioData(tags?: string[]): Promise<GalleryResponse> {
   return await fetchGallery(tags);
+}
+
+// NEW PORTFOLIO ITEM FUNCTIONS (separate from Gallery)
+
+// Fetch Portfolio Items from Contentful with pagination
+export async function fetchPortfolioItems(
+  categorySlug?: string,
+  limit: number = 20,
+  skip: number = 0
+): Promise<{ items: ProcessedPortfolioItem[]; total: number; hasMore: boolean }> {
+  try {
+    let query: any = {
+      content_type: 'portfolioItem',
+      include: 2, // Include referenced categories
+      'fields.isActive': true,
+      order: 'fields.order,-sys.createdAt', // Order by order field, then by creation date
+      limit: Math.min(limit, 100), // Cap at 100 to avoid rate limits
+      skip,
+    };
+
+    // If filtering by category, first get the category ID
+    if (categorySlug && categorySlug !== 'all') {
+      const categoriesResponse = await contentfulClient.getEntries({
+        content_type: 'portfolioCategory',
+        'fields.slug': categorySlug,
+        limit: 1,
+      });
+      
+      if (categoriesResponse.items.length > 0) {
+        const categoryId = categoriesResponse.items[0].sys.id;
+        query['fields.category.sys.id'] = categoryId;
+      } else {
+        // Category not found, return empty results
+        return {
+          items: [],
+          total: 0,
+          hasMore: false,
+        };
+      }
+    }
+
+    const response = await contentfulClient.getEntries<PortfolioItem['fields']>(query);
+    
+    const items = response.items.map(processPortfolioItem);
+    const hasMore = response.skip + response.items.length < response.total;
+    
+    return {
+      items,
+      total: response.total,
+      hasMore,
+    };
+  } catch (error) {
+    console.error('Error fetching portfolio items:', error);
+    return {
+      items: [],
+      total: 0,
+      hasMore: false,
+    };
+  }
+}
+
+// Process a single portfolio item
+function processPortfolioItem(item: any): ProcessedPortfolioItem {
+  const fields = item.fields;
+  const category = fields.category?.fields || { name: 'Uncategorized', slug: 'uncategorized' };
+  const media = fields.media;
+  
+  if (!media) {
+    throw new Error(`Portfolio item ${item.sys.id} is missing media field`);
+  }
+
+  // Extract data from Cloudinary media object
+  const publicId = media.public_id;
+  const resourceType = media.resource_type; // 'video' or 'image'
+  const width = media.width || (resourceType === 'video' ? 1920 : 1200);
+  const height = media.height || (resourceType === 'video' ? 1080 : 1200);
+  
+  // Generate Cloudinary URLs from the media object
+  let url: string;
+  let thumbnailUrl: string;
+  
+  if (resourceType === 'video') {
+    // Use secure_url if available, otherwise construct URL
+    url = media.secure_url || `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/video/upload/f_auto,q_auto/${publicId}`;
+    thumbnailUrl = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/video/upload/so_0,f_auto,q_auto,w_400/${publicId}.jpg`;
+  } else {
+    // For images
+    url = media.secure_url || `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_auto/${publicId}`;
+    thumbnailUrl = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_auto,w_400/${publicId}`;
+  }
+  
+  return {
+    id: item.sys.id,
+    title: fields.title,
+    slug: fields.slug,
+    description: fields.description ? extractTextFromRichText(fields.description) : undefined,
+    media: media, // Store original Cloudinary object
+    cloudinaryPublicId: publicId,
+    resourceType: resourceType as 'video' | 'image',
+    category: category.slug,
+    categoryData: {
+      sys: { id: fields.category?.sys?.id || 'unknown' },
+      fields: category
+    },
+    tags: media.tags || fields.tags || [], // Use tags from media or fields
+    featured: fields.featured || false,
+    publishDate: fields.publishDate,
+    order: fields.order || 0,
+    isActive: fields.isActive !== false,
+    customMetadata: fields.customMetadata,
+    // Generated fields
+    url,
+    thumbnailUrl,
+    width,
+    height,
+    format: getFormatFromAspectRatio(width, height),
+    type: resourceType === 'video' ? 'video' : 'graphic',
+    loaded: false,
+  };
+}
+
+// Extract plain text from Contentful Rich Text
+function extractTextFromRichText(richText: any): string {
+  if (!richText || !richText.content) return '';
+  
+  return richText.content
+    .map((node: any) => {
+      if (node.nodeType === 'paragraph' && node.content) {
+        return node.content
+          .filter((textNode: any) => textNode.nodeType === 'text')
+          .map((textNode: any) => textNode.value)
+          .join('');
+      }
+      return '';
+    })
+    .join(' ')
+    .trim();
+}
+
+// Fetch featured portfolio items
+export async function fetchFeaturedPortfolioItems(limit: number = 6): Promise<ProcessedPortfolioItem[]> {
+  try {
+    const response = await contentfulClient.getEntries<PortfolioItem['fields']>({
+      content_type: 'portfolioItem',
+      include: 2,
+      'fields.isActive': true,
+      'fields.featured': true,
+      limit,
+      order: 'fields.order,-sys.createdAt',
+    });
+    
+    return response.items.map(processPortfolioItem);
+  } catch (error) {
+    console.error('Error fetching featured portfolio items:', error);
+    return [];
+  }
+}
+
+// Get portfolio items by category
+export async function fetchPortfolioItemsByCategory(categorySlug: string): Promise<ProcessedPortfolioItem[]> {
+  const result = await fetchPortfolioItems(categorySlug, 100); // Get more items for category view
+  return result.items;
+}
+
+// Get portfolio item by slug
+export async function fetchPortfolioItemBySlug(slug: string): Promise<ProcessedPortfolioItem | null> {
+  try {
+    const response = await contentfulClient.getEntries<PortfolioItem['fields']>({
+      content_type: 'portfolioItem',
+      include: 2,
+      'fields.slug': slug,
+      'fields.isActive': true,
+      limit: 1,
+    });
+    
+    if (response.items.length === 0) return null;
+    
+    return processPortfolioItem(response.items[0]);
+  } catch (error) {
+    console.error('Error fetching portfolio item by slug:', error);
+    return null;
+  }
+}
+
+// Update portfolio item order (requires Management API)
+export async function updatePortfolioItemsOrder(itemUpdates: { id: string; order: number }[]): Promise<boolean> {
+  try {
+    // This needs to run on the server side since management token should not be exposed to client
+    const response = await fetch('/api/portfolio/reorder', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ itemUpdates }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    return result.success;
+  } catch (error) {
+    console.error('Error updating portfolio items order:', error);
+    return false;
+  }
 }
