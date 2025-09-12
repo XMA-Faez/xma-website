@@ -23,21 +23,22 @@ export const metadata: Metadata = {
 }
 
 interface BlogPageProps {
-  searchParams: {
+  searchParams: Promise<{
     page?: string
     search?: string
     category?: string
     tag?: string
-  }
+  }>
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const currentPage = parseInt(searchParams.page || '1')
+  const params = await searchParams
+  const currentPage = parseInt(params.page || '1')
   const postsPerPage = 20
   const skip = (currentPage - 1) * postsPerPage
 
   const [blogData, categories, tags] = await Promise.all([
-    getAllBlogPosts(postsPerPage, skip, searchParams.search, searchParams.category, searchParams.tag),
+    getAllBlogPosts(postsPerPage, skip, params.search, params.category, params.tag),
     getAllCategories(),
     getAllTags(),
   ])
@@ -55,15 +56,15 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         </div>
 
         <div className="mb-8">
-          <BlogSearch initialValue={searchParams.search} />
+          <BlogSearch initialValue={params.search} />
         </div>
 
         <div className="mb-8">
           <BlogFilters
             categories={categories}
             tags={tags}
-            selectedCategory={searchParams.category}
-            selectedTag={searchParams.tag}
+            selectedCategory={params.category}
+            selectedTag={params.tag}
           />
         </div>
 
@@ -75,7 +76,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               currentPage={currentPage}
               totalPages={totalPages}
               baseUrl="/blog"
-              searchParams={searchParams}
+              searchParams={params}
             />
           </div>
         )}

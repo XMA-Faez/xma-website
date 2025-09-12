@@ -100,7 +100,7 @@ export async function getAllCategories() {
 
   const categories = new Set<string>()
   response.items.forEach(item => {
-    item.fields.categories?.forEach(category => categories.add(category))
+    item.fields?.categories?.forEach(category => categories.add(category))
   })
 
   return Array.from(categories).sort()
@@ -114,7 +114,7 @@ export async function getAllTags() {
 
   const tags = new Set<string>()
   response.items.forEach(item => {
-    item.fields.tags?.forEach(tag => tags.add(tag))
+    item.fields?.tags?.forEach(tag => tags.add(tag))
   })
 
   return Array.from(tags).sort()
