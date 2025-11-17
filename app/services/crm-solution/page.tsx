@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://xma-agency.com"),
   alternates: {
     canonical: "/services/crm-solution",
   },

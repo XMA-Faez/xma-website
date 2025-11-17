@@ -26,6 +26,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.xma.ae"),
   title: "XMA Agency",
   description: "XMA Agency is a digital marketing agency.",
   appleWebApp: {
@@ -67,7 +68,6 @@ export default function RootLayout({
           href="/logos/xma/SVG/Logo Dark.svg"
           media="(prefers-color-scheme: dark)"
         />
-        <link rel="canonical" href="https://www.xma.ae/" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
