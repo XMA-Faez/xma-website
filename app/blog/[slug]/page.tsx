@@ -31,6 +31,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return {
     title: post.fields.metaTitle || post.fields.title,
     description: post.fields.metaDescription || post.fields.excerpt,
+    alternates: {
+      canonical: `/blog/${params.slug}`,
+    },
     openGraph: {
       title: post.fields.metaTitle || post.fields.title,
       description: post.fields.metaDescription || post.fields.excerpt,

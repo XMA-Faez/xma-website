@@ -27,6 +27,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.xma.ae"),
+  alternates: {
+    canonical: "/",
+  },
   title: "XMA Agency",
   description: "XMA Agency is a digital marketing agency.",
   appleWebApp: {
