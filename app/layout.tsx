@@ -67,6 +67,7 @@ export default function RootLayout({
           href="/logos/xma/SVG/Logo Dark.svg"
           media="(prefers-color-scheme: dark)"
         />
+        <link rel="canonical" href="https://www.xma.ae/" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
