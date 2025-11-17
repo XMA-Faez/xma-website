@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/contentful'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://xma.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.xma.ae'
   
   const blogPosts = await getAllBlogPosts(1000)
   
