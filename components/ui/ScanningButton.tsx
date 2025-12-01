@@ -62,6 +62,7 @@ const scanningButtonVariants = cva(
         purple: "",
         amber: "",
         neutral: "",
+        white: "",
       },
     },
     compoundVariants: [
@@ -160,6 +161,25 @@ const scanningButtonVariants = cva(
         className:
           "text-slate-700 hover:text-white bg-white/70 border border-slate-500/50 hover:shadow-[0_0_20px_rgba(148,163,184,0.3)] dark:text-zinc-400 dark:hover:text-white dark:bg-zinc-900/50 dark:border-zinc-500/30 dark:hover:shadow-[0_0_20px_rgba(163,163,163,0.3)] [--gradient-from:transparent] [--gradient-to:transparent] hover:[--gradient-from:hsl(215_28%_39%/0.6)] hover:[--gradient-to:hsl(210_40%_46%/0.4)] dark:hover:[--gradient-from:hsl(215_28%_39%/0.25)] dark:hover:[--gradient-to:hsl(240_4%_46%/0.15)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
       },
+      // White variants
+      {
+        variant: "primary",
+        color: "white",
+        className:
+          "text-blue-600 dark:text-blue-600 border border-white/80 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] [--gradient-from:hsl(0_0%_100%/0.95)] [--gradient-to:hsl(0_0%_96%/0.9)] hover:[--gradient-from:hsl(0_0%_100%/1)] hover:[--gradient-to:hsl(0_0%_98%/0.95)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
+      {
+        variant: "secondary",
+        color: "white",
+        className:
+          "text-slate-700 dark:text-white border border-white/60 hover:shadow-[0_0_30px_rgba(255,255,255,0.3),inset_0_0_20px_rgba(255,255,255,0.1)] [--gradient-from:hsl(0_0%_100%/0.2)] [--gradient-to:hsl(0_0%_96%/0.1)] hover:[--gradient-from:hsl(0_0%_100%/0.3)] hover:[--gradient-to:hsl(0_0%_98%/0.2)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
+      {
+        variant: "outline",
+        color: "white",
+        className:
+          "text-white hover:text-slate-800 bg-transparent border border-white/50 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] [--gradient-from:transparent] [--gradient-to:transparent] hover:[--gradient-from:hsl(0_0%_100%/0.9)] hover:[--gradient-to:hsl(0_0%_96%/0.8)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
     ],
     defaultVariants: {
       variant: "primary",
@@ -178,9 +198,21 @@ interface ScanningButtonProps
 }
 
 const ScanningButton = React.forwardRef<HTMLButtonElement, ScanningButtonProps>(
-  ({ children, variant, size, color, className, trackingLocation, trackingProps, ...props }, ref) => {
+  (
+    {
+      children,
+      variant,
+      size,
+      color,
+      className,
+      trackingLocation,
+      trackingProps,
+      ...props
+    },
+    ref,
+  ) => {
     const trackCTA = useTrackCTA();
-    
+
     const getShimmerColor = () => {
       switch (color) {
         case "emerald":
@@ -191,6 +223,8 @@ const ScanningButton = React.forwardRef<HTMLButtonElement, ScanningButtonProps>(
           return "rgba(251, 191, 36, 0.3)";
         case "neutral":
           return "rgba(212, 212, 212, 0.25)";
+        case "white":
+          return "rgba(59, 130, 246, 0.2)";
         case "blue":
         default:
           return "rgba(255, 255, 255, 0.2)";
@@ -200,15 +234,10 @@ const ScanningButton = React.forwardRef<HTMLButtonElement, ScanningButtonProps>(
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       // Track the CTA click event
       if (trackingLocation) {
-        const buttonText = typeof children === 'string' ? children : 'button';
-        trackCTA(buttonText, trackingLocation, {
-          button_variant: variant,
-          button_size: size,
-          button_color: color,
-          ...trackingProps,
-        });
+        const buttonText = typeof children === "string" ? children : "button";
+        trackCTA(buttonText, trackingLocation, trackingProps);
       }
-      
+
       // Call original onClick if provided
       props.onClick?.(e);
     };

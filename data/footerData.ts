@@ -35,16 +35,6 @@ const footerData = {
       },
     ],
   },
-  services: [
-    {
-      text: "CRM Solutions",
-      href: "/services/crm-solution",
-    },
-    {
-      text: "Lead Generator",
-      href: "/",
-    }
-  ],
   quickLinks: [
     {
       text: "About Us",

@@ -16,14 +16,9 @@ import { useTrackNavigation } from "@/hooks/useTrackEvent";
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
-  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const { theme } = useTheme();
   const trackNavigation = useTrackNavigation();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,27 +54,23 @@ export function Header() {
           }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
           className={`flex py-4 items-center justify-between text-slate-900 dark:text-white container px-8 mx-auto ${
-            !isScrolled
-              ? "bg-transparent"
-              : "glass-nav"
+            !isScrolled ? "bg-transparent" : "glass-nav"
           }`}
         >
           {/* Logo */}
-          <div className="flex-grow flex-shrink-0 basis-0">
-            <Link 
-              className="block w-fit" 
+          <div className="flex-grow h-full flex-shrink-0 basis-0">
+            <Link
+              className="block w-fit"
               href="/"
               onClick={() => trackNavigation("Logo", "/", "header")}
             >
-              {mounted && (
-                <Image
-                  src={theme === 'light' ? "/XMA-01.svg" : "/XMA-White.svg"}
-                  alt="XMA Logo"
-                  width={50}
-                  height={50}
-                  priority
-                />
-              )}
+              <Image
+                src={theme === "light" ? "/XMA-01.svg" : "/XMA-White.svg"}
+                alt="XMA Logo"
+                width={50}
+                height={50}
+                priority
+              />
             </Link>
           </div>
 
@@ -91,7 +82,11 @@ export function Header() {
           {/* Theme Toggle and CTA Button */}
           <div className="flex-grow flex-shrink-0 basis-0 flex justify-end items-center gap-4">
             <ThemeToggle />
-            <Link href={pathname === "/services/crm-solution" ? "/book-crm" : "/book"}>
+            <Link
+              href={
+                pathname === "/services/crm-solution" ? "/book-crm" : "/book"
+              }
+            >
               <ScanningButton
                 variant="primary"
                 size="sm"
@@ -99,12 +94,17 @@ export function Header() {
                   pathname === "/services/crm-solution" ? "emerald" : "blue"
                 }
                 trackingLocation="header"
-                trackingProps={{ 
+                trackingProps={{
                   is_crm_page: pathname === "/services/crm-solution",
-                  destination: pathname === "/services/crm-solution" ? "/book-crm" : "/book"
+                  destination:
+                    pathname === "/services/crm-solution"
+                      ? "/book-crm"
+                      : "/book",
                 }}
               >
-                {pathname === "/services/crm-solution" ? "Book CRM Demo" : "Book Your Call"}
+                {pathname === "/services/crm-solution"
+                  ? "Book CRM Demo"
+                  : "Book Your Call"}
               </ScanningButton>
             </Link>
           </div>
@@ -114,17 +114,15 @@ export function Header() {
           className={`${isScrolled ? "glass-nav" : "bg-transparent"}
             flex h-full items-center text-slate-900 dark:text-white px-8 mx-auto duration-300 transition-all`}
         >
-          <div className="flex-grow flex-shrink-0 basis-0">
+          <div className="flex-grow h-full flex items-center flex-shrink-0 basis-0">
             <Link className="block w-fit" href="/">
-              {mounted && (
-                <Image
-                  src={theme === 'light' ? "/XMA-01.svg" : "/XMA-White.svg"}
-                  alt="XMA Logo"
-                  width={50}
-                  height={50}
-                  priority
-                />
-              )}
+              <Image
+                src={theme === "light" ? "/XMA-01.svg" : "/XMA-White.svg"}
+                alt="XMA Logo"
+                width={100}
+                height={50}
+                priority
+              />
             </Link>
           </div>
 

@@ -51,27 +51,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
-              Our Services
-            </h3>
-            <ul className="space-y-3">
-              {footerData.services.map((service, index) => {
-                return (
-                  <li key={index}>
-                    <a
-                      href={service.href}
-                      className="flex items-center gap-2 text-slate-600 dark:text-zinc-300 hover:text-blue-400 transition-colors cursor-pointer"
-                    >
-                      <span>{service.text}</span>
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
