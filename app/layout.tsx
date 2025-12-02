@@ -12,6 +12,7 @@ import { PostHogProvider } from "@/components/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { GlobalAnalyticsProvider } from "@/components/tracking/GlobalAnalyticsProvider";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -56,7 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -64,10 +67,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WDR7CP7Z');`,
           }}
-        />
-        <meta
-          name="google-site-verification"
-          content="b4Ruz4qrwE5l_HVaxaP5_Nysz4MGIQaCWg8xYkKrJcM"
         />
         <link
           rel="icon"
@@ -104,7 +103,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   {/* <AnimatedCursorComponent /> */}
                   <Header />
                   <SpeedInsights />
-                  <main className="bg-slate-50 dark:bg-zinc-950">{children}</main>
+                  <main className="bg-slate-50 dark:bg-zinc-950">
+                    {children}
+                  </main>
                   <Analytics />
                   <Footer />
                 </GlobalAnalyticsProvider>
