@@ -14,14 +14,6 @@ const products = [
     glowColor: "shadow-emerald-500/20",
     borderColor: "border-emerald-400/30",
   },
-  {
-    title: "Lead Generator",
-    description: "Complete lead generation package with professional ads, CRM setup, and campaign management to get you started.",
-    features: ["20 Professional Ads (10 Static + 10 Video)", "CRM System Setup", "Ad Campaign Setup", "1 Month Management"],
-    accentColor: "from-blue-400 to-indigo-400",
-    glowColor: "shadow-blue-500/20",
-    borderColor: "border-blue-400/30",
-  }
 ];
 
 function Products() {

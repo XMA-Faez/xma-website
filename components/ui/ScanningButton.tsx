@@ -43,7 +43,7 @@ if (
 }
 
 const scanningButtonVariants = cva(
-  "group relative font-medium rounded-lg overflow-hidden ease-out transform-gpu [transition:background_0.3s_ease-out,box-shadow_0.3s_ease-out,--gradient-from_0.3s_ease-out,--gradient-to_0.3s_ease-out]",
+  "group relative font-medium rounded-lg overflow-hidden ease-out transform-gpu whitespace-nowrap [transition:background_0.3s_ease-out,box-shadow_0.3s_ease-out,--gradient-from_0.3s_ease-out,--gradient-to_0.3s_ease-out]",
   {
     variants: {
       variant: {

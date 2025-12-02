@@ -32,10 +32,6 @@ const faqCategories = [
     icon: Package,
     questions: [
       {
-        q: "What exactly do I get with the Lead Generator package?",
-        a: "You receive 20 professionally created ads (10 static, 10 video), complete CRM system setup, ad campaign configuration, and one month of professional ad management to ensure optimal performance."
-      },
-      {
         q: "What's included in monthly subscriptions?",
         a: "Depending on your tier, you get CRM subscription, ad management, monthly graphics (1-8), WhatsApp marketing, AI chatbot, and video content. All plans include performance monitoring and optimization."
       },

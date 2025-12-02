@@ -100,9 +100,9 @@ const RealEstateClient = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-3xl capitalize md:text-7xl text-center md:text-left font-bold mb-8 text-slate-900 dark:text-white"
               >
-                Most property ads attract browsers.{" "}
+                Most property ads attract browsers{" "}
                 <span className="text-blue-500">
-                  Yours will attract buyers.
+                  Yours will attract buyers
                 </span>
               </motion.h1>
               <motion.p
@@ -133,7 +133,7 @@ const RealEstateClient = () => {
                     destination: "/book-crm",
                   }}
                 >
-                  Book Your Strategy Call
+                  <Link href="/book">Book Your Strategy Call</Link>
                 </ScanningButton>
               </motion.div>
             </div>
@@ -535,17 +535,14 @@ const RealEstateClient = () => {
                 viewport={{ once: true }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <Link
-                  href="/book"
-                  className=""
-                >
+                <Link href="/book" className="">
                   <ScanningButton
                     variant="primary"
                     size="lg"
                     color="white"
                     className=""
                   >
-                    Book Your Strategy Call
+                    <Link href="/book">Book Your Strategy Call</Link>
                   </ScanningButton>
                 </Link>
               </motion.div>

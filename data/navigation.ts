@@ -1,4 +1,4 @@
-import { Video, BarChart3, Bot, MessageSquare, Sparkles } from "lucide-react";
+import { Video, BarChart3, Bot, MessageSquare } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 interface NavItem {
@@ -45,12 +45,5 @@ export const services: ServiceItem[] = [
     href: "/services/crm-solution",
     icon: Bot,
     description: "Transform your lead management with intelligent automation",
-  },
-  {
-    name: "Lead Generator",
-    href: "#",
-    icon: Sparkles,
-    description: "Advanced lead generation system to grow your business",
-    comingSoon: true,
   },
 ];

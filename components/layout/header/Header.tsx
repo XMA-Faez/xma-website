@@ -22,7 +22,7 @@ export function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
+      setIsDesktop(window.innerWidth >= 1024);
     };
 
     handleResize();

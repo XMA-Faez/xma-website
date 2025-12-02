@@ -17,6 +17,7 @@ import {
   ChartLine,
 } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import Link from "next/link";
 
 // Types
 interface CalculatorInputs {
@@ -109,15 +110,16 @@ const LeadCostCalculator: React.FC = () => {
       const cpl = estimatedCPL;
       const estimatedLeads = Math.floor(inputs.monthlyBudget / cpl);
       const estimatedViewings = Math.floor(
-        estimatedLeads * CONVERSION_RATES.leadToViewing
+        estimatedLeads * CONVERSION_RATES.leadToViewing,
       );
       const estimatedDeals = Math.max(
         1,
-        Math.floor(estimatedViewings * CONVERSION_RATES.viewingToDeal)
+        Math.floor(estimatedViewings * CONVERSION_RATES.viewingToDeal),
       );
 
       const commissionRate = COMMISSION_RATES[inputs.projectType];
-      const potentialCommission = estimatedDeals * inputs.propertyValue * commissionRate;
+      const potentialCommission =
+        estimatedDeals * inputs.propertyValue * commissionRate;
 
       const costPerViewing =
         estimatedViewings > 0
@@ -133,7 +135,7 @@ const LeadCostCalculator: React.FC = () => {
           ? Math.round(
               ((potentialCommission - inputs.monthlyBudget) /
                 inputs.monthlyBudget) *
-                100
+                100,
             )
           : 0;
 
@@ -183,8 +185,7 @@ const LeadCostCalculator: React.FC = () => {
             Lead Cost Calculator
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
-            Estimate Your{" "}
-            <span className="text-blue-500">Cost Per Lead</span>
+            Estimate Your <span className="text-blue-500">Cost Per Lead</span>
           </h2>
           <p className="text-xl text-slate-600 dark:text-gray-400 max-w-2xl mx-auto">
             See projected lead costs and ROI based on your property type and
@@ -259,7 +260,8 @@ const LeadCostCalculator: React.FC = () => {
                       onClick={() =>
                         setInputs((prev) => ({
                           ...prev,
-                          propertyType: option.value as CalculatorInputs["propertyType"],
+                          propertyType:
+                            option.value as CalculatorInputs["propertyType"],
                         }))
                       }
                       className={`p-4 rounded-xl border-2 transition-all duration-300 flex items-center gap-3 ${
@@ -570,7 +572,7 @@ const LeadCostCalculator: React.FC = () => {
                                 5,
                                 (results.estimatedDeals /
                                   results.estimatedLeads) *
-                                  100
+                                  100,
                               )}%`,
                             }}
                           />
@@ -638,12 +640,8 @@ const LeadCostCalculator: React.FC = () => {
                               - Lead-to-viewing rate: 18% (industry benchmark)
                             </p>
                             <p>- Viewing-to-deal rate: 8% (conservative)</p>
-                            <p>
-                              - Off-plan commission: 5% | Secondary: 2%
-                            </p>
-                            <p>
-                              - CPL varies by property type and value tier
-                            </p>
+                            <p>- Off-plan commission: 5% | Secondary: 2%</p>
+                            <p>- CPL varies by property type and value tier</p>
                             <p className="mt-2 text-slate-500 dark:text-zinc-600">
                               Actual results may vary based on market
                               conditions, ad quality, and sales performance.
@@ -653,10 +651,10 @@ const LeadCostCalculator: React.FC = () => {
                       </AnimatePresence>
 
                       <ScanningButton color="blue" size="lg" className="w-full">
-                        <div className="flex items-center gap-2">
+                        <Link href="/book" className="flex items-center gap-2">
                           Book Your Strategy Call
                           <ArrowRight className="w-5 h-5" />
-                        </div>
+                        </Link>
                       </ScanningButton>
                     </div>
                   </motion.div>
