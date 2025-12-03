@@ -1,18 +1,16 @@
 // Cloudinary URL optimization utilities
 
 export function optimizeCloudinaryVideoUrl(url: string): string {
-  // Apply transformations to reduce video size and bandwidth
-  // q_auto = automatic quality
+  if (!url.includes('cloudinary.com')) return url;
+
+  // q_auto:good = good quality balance
   // f_auto = automatic format (webm for modern browsers)
   // vc_auto = automatic video codec
-  // w_256 = max width 256px (matches w-64 display size)
-  
-  if (!url.includes('cloudinary.com')) return url;
-  
-  // Replace /upload/ with /upload/transformations/
+  // w_720 = 720p width
+  // br_2000k = limit bitrate to 2mbps for streaming
   return url.replace(
     '/video/upload/',
-    '/video/upload/q_auto,f_auto,vc_auto,w_512,c_scale/'
+    '/video/upload/q_auto:good,f_auto,vc_auto,w_720,c_scale,br_2000k/'
   );
 }
 

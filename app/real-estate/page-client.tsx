@@ -11,19 +11,19 @@ import {
   CalendarCheck,
 } from "phosphor-react";
 import { optimizeCloudinaryVideoUrl } from "@/utils/cloudinary";
-import adCarouselData from "@/data/adCarousel";
+import realEstateCarouselData from "@/data/realEstateCarousel";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { RealEstateFeaturesSection } from "@/components/real-estate/FeaturesSection";
 import LeadCostCalculator from "@/components/real-estate/LeadCostCalculator";
 import WhatsAppWidget from "@/components/real-estate/WhatsAppWidget";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import { LazyVideo } from "@/components/ui/LazyVideo";
 import Link from "next/link";
 
 const RealEstateClient = () => {
   const [openFAQ, setOpenFAQ] = useState<string[]>([]);
 
-  // Select first 12 videos for the hero marquee (6 per column, duplicated for infinite scroll)
-  const propertyVideos = adCarouselData.slice(0, 6);
+  const propertyVideos = realEstateCarouselData;
 
   const toggleFAQ = (id: string) => {
     setOpenFAQ((prev) =>
@@ -156,14 +156,10 @@ const RealEstateClient = () => {
                           className="relative w-full flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10"
                           style={{ aspectRatio: "9/16" }}
                         >
-                          <video
+                          <LazyVideo
                             src={optimizeCloudinaryVideoUrl(video.url)}
                             poster={video.thumbnail}
                             className="w-full h-full object-cover"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
@@ -184,14 +180,10 @@ const RealEstateClient = () => {
                           className="relative w-full flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10"
                           style={{ aspectRatio: "9/16" }}
                         >
-                          <video
+                          <LazyVideo
                             src={optimizeCloudinaryVideoUrl(video.url)}
                             poster={video.thumbnail}
                             className="w-full h-full object-cover"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
