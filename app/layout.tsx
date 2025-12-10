@@ -39,15 +39,20 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
       {
         url: "/logos/xma/SVG/Logo Light.svg",
         media: "(prefers-color-scheme: light)",
+        type: "image/svg+xml",
       },
       {
         url: "/logos/xma/SVG/Logo Dark.svg",
         media: "(prefers-color-scheme: dark)",
+        type: "image/svg+xml",
       },
     ],
+    shortcut: "/favicon.ico",
+    apple: "/web-app-manifest-192x192.png",
   },
 };
 
@@ -82,14 +87,17 @@ gtag('js', new Date());
 gtag('config', 'AW-17530915091');`,
           }}
         />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link
           rel="icon"
           href="/logos/xma/SVG/Logo Light.svg"
+          type="image/svg+xml"
           media="(prefers-color-scheme: light)"
         />
         <link
           rel="icon"
           href="/logos/xma/SVG/Logo Dark.svg"
+          type="image/svg+xml"
           media="(prefers-color-scheme: dark)"
         />
       </head>
