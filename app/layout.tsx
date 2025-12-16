@@ -87,6 +87,11 @@ gtag('js', new Date());
 gtag('config', 'AW-17530915091');`,
           }}
         />
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="54YwLrhms6OQtemWpi9xNQ"
+          strategy="afterInteractive"
+        />
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link
           rel="icon"
