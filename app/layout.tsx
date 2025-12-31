@@ -105,6 +105,10 @@ gtag('config', 'AW-17530915091');`,
           type="image/svg+xml"
           media="(prefers-color-scheme: dark)"
         />
+        <meta
+          name="google-site-verification"
+          content="b4Ruz4qrwE5l_HVaxaP5_Nysz4MGIQaCWg8xYkKrJcM"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
