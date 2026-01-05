@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import RealEstateClient from "./real-estate/page-client";
+import HomeClient from "@/components/home/HomeClient";
 
 export const metadata: Metadata = {
-  title: "Real Estate Ad Management | Meta & Google Ads | XMA",
-  description: "Fill your pipeline with qualified property leads. Specialized Meta & Google ad campaigns for UAE real estate professionals. From solo agents to brokerages.",
+  title: "Luxury Car Rental Marketing | Increase Bookings | XMA",
+  description:
+    "Turn luxury car inquiries into confirmed bookings. We help UAE luxury car rental companies increase their booking rate through conversion optimization, WhatsApp automation, and premium branding.",
   keywords: [
-    "real estate ads Dubai",
-    "property lead generation UAE",
-    "real estate marketing agency",
-    "Facebook ads for realtors",
-    "Google ads real estate",
-    "Dubai property advertising",
-    "real estate agent marketing",
-    "property leads Dubai",
-    "real estate digital marketing",
-    "agent lead generation"
+    "luxury car rental marketing Dubai",
+    "car rental advertising UAE",
+    "exotic car rental leads",
+    "luxury vehicle marketing",
+    "car rental booking optimization",
+    "WhatsApp automation car rental",
+    "luxury car rental agency",
+    "Dubai car rental marketing",
+    "premium car rental advertising",
+    "car rental conversion optimization",
   ],
   authors: [{ name: "XMA Agency" }],
   creator: "XMA Agency",
@@ -29,16 +30,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Real Estate Ad Management | Qualified Leads for UAE Agents",
-    description: "Stop wasting ad spend on unqualified leads. We deliver serious buyers and tenants ready to view your properties.",
+    title: "Luxury Car Rental Marketing | Turn Inquiries Into Bookings",
+    description:
+      "Stop losing bookings to slow response times and weak follow-up. We optimize your entire conversion funnel for luxury car rentals in the UAE.",
     url: "/",
     siteName: "XMA Agency",
     images: [
       {
-        url: "/images/real-estate-og.jpg",
+        url: "/images/luxury-car-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Real estate ad management and lead generation results",
+        alt: "Luxury car rental marketing and booking optimization",
       },
     ],
     locale: "en_AE",
@@ -46,9 +48,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Real Estate Ad Management | Qualified Leads for UAE Agents",
-    description: "Stop wasting ad spend on unqualified leads. We deliver serious buyers and tenants ready to view your properties.",
-    images: ["/images/real-estate-twitter.jpg"],
+    title: "Luxury Car Rental Marketing | Turn Inquiries Into Bookings",
+    description:
+      "Stop losing bookings to slow response times and weak follow-up. We optimize your entire conversion funnel for luxury car rentals in the UAE.",
+    images: ["/images/luxury-car-twitter.jpg"],
     creator: "@xmaagency",
   },
   robots: {
@@ -77,44 +80,46 @@ const structuredData = {
         "@type": "ImageObject",
         url: "https://www.xma.ae/images/logo.png",
         width: 200,
-        height: 60
+        height: 60,
       },
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
-        availableLanguage: ["English", "Arabic"]
-      }
+        availableLanguage: ["English"],
+      },
     },
     {
       "@type": "WebPage",
       "@id": "https://www.xma.ae/#webpage",
       url: "https://www.xma.ae",
-      name: "Real Estate Ad Management | Meta & Google Ads for UAE Agents",
-      description: "Fill your pipeline with qualified property leads. Specialized Meta & Google ad campaigns for UAE real estate professionals.",
+      name: "Luxury Car Rental Marketing | Increase Bookings | XMA",
+      description:
+        "Turn luxury car inquiries into confirmed bookings. Conversion optimization, WhatsApp automation, and premium branding for UAE luxury car rental companies.",
       inLanguage: "en-AE",
       isPartOf: {
-        "@id": "https://www.xma.ae/#website"
+        "@id": "https://www.xma.ae/#website",
       },
       about: {
-        "@id": "https://www.xma.ae/#organization"
+        "@id": "https://www.xma.ae/#organization",
       },
-      dateModified: new Date().toISOString()
+      dateModified: new Date().toISOString(),
     },
     {
       "@type": "Service",
-      name: "Real Estate Ad Management",
-      description: "Complete Meta and Google ad management service for UAE real estate professionals, delivering qualified buyer and tenant leads.",
+      name: "Luxury Car Rental Marketing",
+      description:
+        "Complete marketing and conversion optimization service for UAE luxury car rental companies, delivering increased booking rates through WhatsApp automation, premium branding, and qualified lead generation.",
       provider: {
-        "@id": "https://www.xma.ae/#organization"
+        "@id": "https://www.xma.ae/#organization",
       },
       serviceType: "Digital Marketing",
       areaServed: "United Arab Emirates",
       audience: {
         "@type": "Audience",
-        audienceType: "Real estate agents, teams, and brokerages"
-      }
-    }
-  ]
+        audienceType: "Luxury car rental business owners and operators",
+      },
+    },
+  ],
 };
 
 export default function Home() {
@@ -126,7 +131,7 @@ export default function Home() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <RealEstateClient />
+      <HomeClient />
     </>
   );
 }

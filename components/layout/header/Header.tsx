@@ -44,7 +44,7 @@ export function Header() {
     <motion.nav
       className={`${
         isScrolled ? "" : ""
-      } fixed top-0 left-1/2 max-w-7xl -translate-x-1/2 transform z-50 h-16 w-full`}
+      } fixed top-0 left-1/2 max-w-6xl xl:max-w-7xl -translate-x-1/2 transform z-50 h-16 w-full`}
     >
       {isDesktop ? (
         <motion.div

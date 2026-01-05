@@ -4,6 +4,7 @@ import footerData from "@/data/footerData";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Section from "@/components/home/sections/Section";
 
 const Footer = () => {
   const [mounted, setMounted] = useState(false);
@@ -14,8 +15,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="py-12 bg-white/60 dark:bg-black/40 backdrop-blur-sm border-t border-slate-200/60 dark:border-zinc-800/60">
-      <div className="container mx-auto px-6">
+    <footer className="bg-white/60 dark:bg-black/40 backdrop-blur-sm border-t border-slate-200/60 dark:border-zinc-800/60">
+      <Section size="xl" padding="sm">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
@@ -49,6 +50,25 @@ const Footer = () => {
                 );
               })}
             </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+              Services
+            </h3>
+            <ul className="space-y-3">
+              {footerData.services.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-slate-600 dark:text-zinc-300 hover:text-blue-400 transition-colors"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Quick Links */}
@@ -94,8 +114,8 @@ const Footer = () => {
             })}
           </div>
         </div>
-      </div>
-    </div>
+      </Section>
+    </footer>
   );
 };
 

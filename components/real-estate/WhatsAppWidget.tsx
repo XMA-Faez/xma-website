@@ -11,7 +11,7 @@ interface WhatsAppWidgetProps {
 
 const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
   phoneNumber = "971503636856",
-  message = "Hi, I'm interested in learning more about your real estate ad management services.",
+  message = "Hi, I'm interested in learning more about your luxury car rental marketing services.",
 }) => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
