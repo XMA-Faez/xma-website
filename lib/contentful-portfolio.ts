@@ -232,28 +232,6 @@ async function fetchGallery(tags?: string[]): Promise<GalleryResponse> {
   }
 }
 
-// Export individual fetch functions
-export async function fetchCloudinaryVideos(tags?: string[]): Promise<CloudinaryVideo[]> {
-  try {
-    const gallery = await fetchGallery(tags);
-    return gallery.videos;
-  } catch (error) {
-    console.error('Error fetching videos:', error);
-    return [];
-  }
-}
-
-export async function fetchCloudinaryGraphics(tags?: string[]): Promise<CloudinaryGraphic[]> {
-  try {
-    const gallery = await fetchGallery(tags);
-    return gallery.graphics;
-  } catch (error) {
-    console.error('Error fetching graphics:', error);
-    return [];
-  }
-}
-
-// Export main gallery fetch function
 export async function fetchPortfolioData(tags?: string[]): Promise<GalleryResponse> {
   return await fetchGallery(tags);
 }

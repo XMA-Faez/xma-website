@@ -19,8 +19,19 @@ import {
   Lightning
 } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
-import LogoMarquee from "@/components/vsl/LogoMarquee";
+import { LogoMarquee, type Logo } from "@/components/ui/LogoMarquee";
 import Link from "next/link";
+
+const clientLogos: Logo[] = [
+  { src: "/logos/packman_Logo.png", alt: "Packman", width: 120 },
+  { src: "/logos/Casapons.png", alt: "Casapons", width: 120 },
+  { src: "/logos/DXtreme.svg", alt: "DXtreme", width: 110 },
+  { src: "/logos/4Matic.jpg", alt: "4Matic", width: 100 },
+  { src: "/logos/wyz-logo.png", alt: "WYZ", width: 100 },
+  { src: "/logos/Tick.webp", alt: "Tick", width: 90 },
+  { src: "/logos/ASUS.png", alt: "ASUS", width: 90 },
+  { src: "/logos/TFG.png", alt: "TFG", width: 80 },
+];
 
 const AboutUsPage = () => {
   return (
@@ -298,7 +309,7 @@ const AboutUsPage = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <LogoMarquee />
+            <LogoMarquee logos={clientLogos} speed="normal" />
           </motion.div>
         </div>
       </section>

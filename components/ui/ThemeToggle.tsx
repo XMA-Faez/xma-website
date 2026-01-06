@@ -72,7 +72,7 @@ export function ThemeToggle() {
   );
 }
 
-export function ThemeToggleLarge() {
+function ThemeToggleLarge() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 

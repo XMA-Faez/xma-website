@@ -4,7 +4,7 @@ import footerData from "@/data/footerData";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import Section from "@/components/home/sections/Section";
+import Section from "@/components/ui/section";
 
 const Footer = () => {
   const [mounted, setMounted] = useState(false);

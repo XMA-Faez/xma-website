@@ -5,9 +5,7 @@
 /* Add these to your globals.css file */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
-/* React Flow styles */
-@import "@xyflow/react/dist/style.css";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
 
 @layer base {
   :root {
@@ -78,6 +76,12 @@
       "calt" 1;
     font-family: "Inter", sans-serif;
   }
+}
+
+/* Editorial Serif Headlines */
+.font-display {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-feature-settings: "liga" 1, "kern" 1;
 }
 
 /* Custom scrollbar for modern browsers */
@@ -480,6 +484,24 @@
 
 .animate-liquid-pulse {
   animation: liquid-pulse 2s ease-in-out infinite;
+}
+
+/* Horizontal Marquee Animation for Logo Strip */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 25s linear infinite;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
 }
 
 .bg-gradient-radial {

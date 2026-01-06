@@ -249,7 +249,7 @@ const StageColumn: React.FC<{ stage: Stage; isMobile?: boolean }> = ({ stage, is
   );
 };
 
-export const PipelineVisualization: React.FC = () => {
+const PipelineVisualization: React.FC = () => {
   const [stages, setStages] = useState(initialStages);
   const [isMobile, setIsMobile] = useState(false);
   const [selectedStage, setSelectedStage] = useState(0);

@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import HomeClient from "@/components/home/HomeClient";
+import HeroSection from "@/components/home/sections/HeroSection";
+import SocialProofStrip from "@/components/home/sections/SocialProofStrip";
+import ProblemSection from "@/components/home/sections/ProblemSection";
+import SolutionSection from "@/components/home/sections/SolutionSection";
+import ProofSection from "@/components/home/sections/ProofSection";
+import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
+import CTASection from "@/components/home/sections/CTASection";
 
 export const metadata: Metadata = {
   title: "Luxury Car Rental Marketing | Increase Bookings | XMA",
@@ -131,7 +137,16 @@ export default function Home() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <HomeClient />
+      <div className="min-h-screen w-full relative bg-white dark:bg-black">
+        <HeroSection />
+        <SocialProofStrip />
+        <ProblemSection />
+        <SolutionSection />
+        <ProofSection />
+        <CTASection />
+
+        <WhatsAppWidget />
+      </div>
     </>
   );
 }

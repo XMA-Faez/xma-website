@@ -313,7 +313,7 @@ const getChannelColor = (channel: ChannelType) => {
   }
 };
 
-export const WhatsAppInboxDemo: React.FC = () => {
+const WhatsAppInboxDemo: React.FC = () => {
   const [customers] = useState(initialCustomers);
   const [selectedCustomer, setSelectedCustomer] = useState(customers[0]);
   const [messages, setMessages] = useState(conversationMessages[customers[0].id] || []);

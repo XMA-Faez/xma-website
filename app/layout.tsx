@@ -2,29 +2,16 @@ import { Theme } from "@radix-ui/themes";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 
 import Footer from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
-import { PostHogProvider } from "@/components/PostHogProvider";
+import { PostHogProvider } from "@/components/providers/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { GlobalAnalyticsProvider } from "@/components/tracking/GlobalAnalyticsProvider";
 import Script from "next/script";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.xma.ae"),
@@ -106,9 +93,7 @@ gtag('config', 'AW-17530915091');`,
           media="(prefers-color-scheme: dark)"
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WDR7CP7Z"

@@ -27,6 +27,19 @@ export default {
           900: "oklch(0.269 0.082 17.29 / <alpha-value>)",
           950: "oklch(0.206 0.062 16.79 / <alpha-value>)",
         },
+        gold: {
+          50: "oklch(0.966 0.011 54.55 / <alpha-value>)",
+          100: "oklch(0.925 0.026 54.57 / <alpha-value>)",
+          200: "oklch(0.849 0.06 56.1 / <alpha-value>)",
+          300: "oklch(0.782 0.1 60.58 / <alpha-value>)",
+          400: "oklch(0.705 0.091 61.58 / <alpha-value>)",
+          500: "oklch(0.627 0.08 60.97 / <alpha-value>)",
+          600: "oklch(0.531 0.068 61.51 / <alpha-value>)",
+          700: "oklch(0.436 0.056 60.39 / <alpha-value>)",
+          800: "oklch(0.329 0.042 61.15 / <alpha-value>)",
+          900: "oklch(0.235 0.03 63.31 / <alpha-value>)",
+          950: "oklch(0.19 0.025 60.16 / <alpha-value>)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -105,9 +118,14 @@ export default {
         "110": "1.1",
         "120": "1.2",
       },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
       animation: {
         "marquee-up": "marquee-up 30s linear infinite",
         "marquee-down": "marquee-down 30s linear infinite",
+        "marquee-left": "marquee-left 25s linear infinite",
       },
       keyframes: {
         "marquee-up": {
@@ -117,6 +135,10 @@ export default {
         "marquee-down": {
           "0%": { transform: "translateY(-50%)" },
           "100%": { transform: "translateY(0)" },
+        },
+        "marquee-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

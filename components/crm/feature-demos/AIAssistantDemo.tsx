@@ -134,7 +134,7 @@ const AIMessage: React.FC<{ message: ChatMessage; showActions?: boolean }> = ({
   );
 };
 
-export const AIAssistantDemo: React.FC = () => {
+const AIAssistantDemo: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [currentStep, setCurrentStep] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);

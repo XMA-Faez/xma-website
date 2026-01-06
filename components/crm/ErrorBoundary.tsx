@@ -183,7 +183,7 @@ class CRMErrorBoundary extends Component<Props, State> {
 export default CRMErrorBoundary;
 
 // Functional component wrapper for easier usage
-export const withErrorBoundary = <P extends object>(
+const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
   fallback?: ReactNode,
   onError?: (error: Error, errorInfo: ErrorInfo) => void

@@ -13,7 +13,7 @@ import UAESuccessStories from "@/components/crm/UAESuccessStories";
 import ProgressiveCTA from "@/components/crm/ProgressiveCTA";
 import ModularFAQ from "@/components/crm/ModularFAQ";
 import CRMErrorBoundary from "@/components/crm/ErrorBoundary";
-import WebVitalsReporter from "@/components/performance/WebVitalsReporter";
+import WebVitalsReporter from "@/components/providers/WebVitalsReporter";
 import { ScanningButton } from "@/components/ui/ScanningButton";
 import { Badge } from "@/components/ui/Badge";
 
