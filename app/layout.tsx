@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 
-import Footer from "@/components/layout/footer/Footer";
-import { Header } from "@/components/layout/header/Header";
+import Footer from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
 import { PostHogProvider } from "@/components/providers/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QueryProvider } from "@/components/providers/QueryProvider";

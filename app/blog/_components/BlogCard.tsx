@@ -1,6 +1,6 @@
 'use client'
 
-import { BlogPost } from '@/lib/contentful'
+import { BlogPost } from '../_lib/contentful'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, Tag } from 'lucide-react'

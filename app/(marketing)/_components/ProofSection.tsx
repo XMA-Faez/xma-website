@@ -4,8 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Image as ImageIcon } from "phosphor-react";
 import Link from "next/link";
-import { usePortfolioItems } from "@/hooks/usePortfolio";
-import type { CloudinaryVideo, CloudinaryGraphic } from "@/lib/contentful-portfolio";
+import { usePortfolioItems } from "@/app/portfolio/_hooks/usePortfolio";
+import type { CloudinaryVideo, CloudinaryGraphic } from "@/app/portfolio/_lib/contentful-portfolio";
 import Section from "@/components/ui/section";
 
 const ProofSection = () => {

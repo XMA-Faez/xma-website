@@ -3,7 +3,7 @@ import {
   fetchPortfolioData,
   type CloudinaryVideo,
   type CloudinaryGraphic
-} from "@/lib/contentful-portfolio";
+} from "../_lib/contentful-portfolio";
 
 const portfolioKeys = {
   all: ['portfolio'] as const,

@@ -4,17 +4,16 @@ import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { 
   PlayCircle, 
-  Image as ImageIcon, 
-  Faders
+  Image as ImageIcon
 } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
-import PortfolioGallery from "@/components/portfolio/PortfolioGallery";
-import PortfolioModal from "@/components/portfolio/PortfolioModal";
-import { 
-  CloudinaryVideo, 
-  CloudinaryGraphic 
-} from "@/lib/contentful-portfolio";
-import { usePortfolioItems } from "@/hooks/usePortfolio";
+import PortfolioGallery from "./_components/PortfolioGallery";
+import PortfolioModal from "./_components/PortfolioModal";
+import {
+  CloudinaryVideo,
+  CloudinaryGraphic
+} from "./_lib/contentful-portfolio";
+import { usePortfolioItems } from "./_hooks/usePortfolio";
 
 // Use types from Contentful integration
 type PortfolioItem = CloudinaryVideo | CloudinaryGraphic;

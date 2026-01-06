@@ -1,14 +1,14 @@
-import { getBlogPostBySlug, getRelatedPosts } from '@/lib/contentful'
-
-export const revalidate = 3600
-import { BlogContent } from '@/components/blog/BlogContent'
-import { RelatedPosts } from '@/components/blog/RelatedPosts'
-import { SocialShare } from '@/components/blog/SocialShare'
-import { BlogCTA } from '@/components/blog/BlogCTA'
+import { getBlogPostBySlug, getRelatedPosts } from '../_lib/contentful'
+import { BlogContent } from '../_components/BlogContent'
+import { RelatedPosts } from '../_components/RelatedPosts'
+import { SocialShare } from '../_components/SocialShare'
+import { BlogCTA } from '../_components/BlogCTA'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import { Calendar, Clock, User, Tag } from 'lucide-react'
+
+export const revalidate = 3600
 
 interface BlogPostPageProps {
   params: {

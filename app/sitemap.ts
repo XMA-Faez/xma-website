@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getAllBlogPosts } from '@/lib/contentful'
+import { getAllBlogPosts } from '@/app/blog/_lib/contentful'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.xma.ae'

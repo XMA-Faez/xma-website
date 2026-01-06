@@ -1,11 +1,11 @@
-import { getAllBlogPosts, getAllCategories, getAllTags } from '@/lib/contentful'
+import { getAllBlogPosts, getAllCategories, getAllTags } from './_lib/contentful'
+import { BlogGrid } from './_components/BlogGrid'
+import { BlogFilters } from './_components/BlogFilters'
+import { BlogSearch } from './_components/BlogSearch'
+import { Pagination } from './_components/Pagination'
+import { Metadata } from 'next'
 
 export const revalidate = 3600
-import { BlogGrid } from '@/components/blog/BlogGrid'
-import { BlogFilters } from '@/components/blog/BlogFilters'
-import { BlogSearch } from '@/components/blog/BlogSearch'
-import { Pagination } from '@/components/blog/Pagination'
-import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog | XMA - Digital Marketing Insights',

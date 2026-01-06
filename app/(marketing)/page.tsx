@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import HeroSection from "@/components/home/sections/HeroSection";
-import SocialProofStrip from "@/components/home/sections/SocialProofStrip";
-import ProblemSection from "@/components/home/sections/ProblemSection";
-import SolutionSection from "@/components/home/sections/SolutionSection";
-import ProofSection from "@/components/home/sections/ProofSection";
-import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
-import CTASection from "@/components/home/sections/CTASection";
+import HeroSection from "./_components/HeroSection";
+import SocialProofStrip from "./_components/SocialProofStrip";
+import ProblemSection from "./_components/ProblemSection";
+import SolutionSection from "./_components/SolutionSection";
+import ProofSection from "./_components/ProofSection";
+import WhatsAppWidget from "./_components/WhatsAppWidget";
+import CTASection from "./_components/CTASection";
 
 export const metadata: Metadata = {
   title: "Luxury Car Rental Marketing | Increase Bookings | XMA",

@@ -17,7 +17,7 @@ import {
   WhatsAppInboxDemo,
   AIAssistantDemo,
   AutomationFlowDemo,
-} from "@/components/crm/feature-demos";
+} from "./feature-demos";
 
 interface Feature {
   id: string;

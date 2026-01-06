@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import BookingIframe from "@/components/vsl/BookingIframe";
+import BookingIframe from "./_components/BookingIframe";
 
 export default function BookPage() {
   return (

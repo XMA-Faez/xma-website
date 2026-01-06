@@ -1,6 +1,6 @@
 'use client'
 
-import { BlogPost } from '@/lib/contentful'
+import { BlogPost } from '../_lib/contentful'
 import { BlogCard } from './BlogCard'
 
 interface RelatedPostsProps {
