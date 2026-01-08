@@ -1,14 +1,14 @@
 import { MetadataRoute } from 'next'
-import { getAllBlogPosts } from '@/app/blog/_lib/contentful'
+import { getBlogPostsForSitemap } from '@/sanity/lib/blog'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.xma.ae'
 
-  const blogPosts = await getAllBlogPosts(1000)
+  const blogPosts = await getBlogPostsForSitemap()
 
-  const blogSitemap = blogPosts.posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.fields.slug}`,
-    lastModified: new Date(post.sys.updatedAt),
+  const blogSitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug.current}`,
+    lastModified: new Date(post._updatedAt),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
@@ -26,7 +26,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.9,
     },
-    // Service pages (high priority - revenue generating)
     {
       url: `${baseUrl}/services/crm-solution`,
       lastModified: new Date(),
@@ -51,7 +50,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // Important business pages
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
@@ -82,7 +80,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-    // Legal pages (lower priority but important for compliance)
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),

@@ -5,8 +5,6 @@ import type { Metadata } from "next";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 
-import Footer from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
 import { PostHogProvider } from "@/components/providers/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QueryProvider } from "@/components/providers/QueryProvider";
@@ -112,14 +110,9 @@ gtag('config', 'AW-17530915091');`,
             <QueryProvider>
               <PostHogProvider>
                 <GlobalAnalyticsProvider>
-                  {/* <AnimatedCursorComponent /> */}
-                  <Header />
                   <SpeedInsights />
-                  <main className="bg-slate-50 dark:bg-zinc-950">
-                    {children}
-                  </main>
+                  {children}
                   <Analytics />
-                  <Footer />
                 </GlobalAnalyticsProvider>
               </PostHogProvider>
             </QueryProvider>

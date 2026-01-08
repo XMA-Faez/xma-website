@@ -3,17 +3,23 @@
   "entry": [
     "app/**/page.tsx",
     "app/**/layout.tsx",
-    "app/api/**/route.ts"
+    "app/api/**/route.ts",
+    "sanity.config.ts",
+    "sanity.cli.ts"
   ],
   "project": ["**/*.{ts,tsx}"],
   "ignore": [
     "**/*.d.ts",
-    "docs/**/*"
+    "docs/**/*",
+    "scripts/**/*"
   ],
   "ignoreDependencies": [
     "@types/*",
     "framer-motion",
-    "postcss-load-config"
+    "postcss-load-config",
+    "sharp",
+    "@img/sharp-linux-x64",
+    "rxjs"
   ],
   "next": true
 }
