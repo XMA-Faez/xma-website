@@ -22,10 +22,10 @@ const ProblemSection = () => {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 dark:text-white mb-4 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl/[1.2] font-semibold text-slate-900 dark:text-white mb-4">
             Most luxury car rental companies don&apos;t have a traffic problem.
           </h2>
-          <p className="text-3xl md:text-4xl font-display font-semibold text-blue-500">
+          <p className="text-3xl md:text-4xl font-semibold text-blue-500">
             They have a conversion problem.
           </p>
         </motion.div>
@@ -65,7 +65,7 @@ const ProblemSection = () => {
           viewport={{ once: true }}
           className="border-l-4 border-blue-500 pl-6 py-2"
         >
-          <p className="text-xl md:text-2xl font-display text-slate-700 dark:text-gray-300 italic">
+          <p className="text-xl md:text-2xl text-slate-700 dark:text-gray-300 italic">
             &ldquo;Most agencies stop at leads. We optimize for bookings.&rdquo;
           </p>
         </motion.blockquote>

@@ -10,6 +10,27 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { GlobalAnalyticsProvider } from "@/components/tracking/GlobalAnalyticsProvider";
 import Script from "next/script";
+import {
+  DM_Sans,
+  Inter,
+  Manrope,
+  Outfit,
+  Zalando_Sans,
+} from "next/font/google";
+
+const primaryFont = Manrope({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-primary",
+});
+
+const secondaryFont = DM_Sans({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-secondary",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.xma.ae"),
@@ -45,7 +66,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <Script
           id="gtm-script"
@@ -91,7 +112,7 @@ gtag('config', 'AW-17530915091');`,
           media="(prefers-color-scheme: dark)"
         />
       </head>
-      <body className={`antialiased`}>
+      <body className={`antialiased ${primaryFont.variable} ${secondaryFont.variable}`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WDR7CP7Z"

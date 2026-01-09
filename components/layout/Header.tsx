@@ -50,11 +50,11 @@ export function Header() {
         <motion.div
           animate={{
             marginTop: !isScrolled ? 0 : "16px",
-            borderRadius: !isScrolled ? "0px" : "24px",
+            borderRadius: !isScrolled ? "100px" : "100px",
           }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
           className={`flex py-4 items-center justify-between text-slate-900 dark:text-white container px-8 mx-auto ${
-            !isScrolled ? "bg-transparent" : "glass-nav"
+            !isScrolled ? "bg-transparent" : "backdrop-blur-lg bg-white/50 border border-slate-300/50 dark:bg-zinc-800/50 dark:border-zinc-700/50"
           }`}
         >
           {/* Logo */}
@@ -67,7 +67,7 @@ export function Header() {
               <Image
                 src={theme === "light" ? "/XMA-01.svg" : "/XMA-White.svg"}
                 alt="XMA Logo"
-                width={50}
+                width={100}
                 height={50}
                 priority
               />
@@ -91,7 +91,7 @@ export function Header() {
                 variant="primary"
                 size="sm"
                 color={
-                  pathname === "/services/crm-solution" ? "emerald" : "blue"
+                  pathname === "/services/crm-solution" ? "emerald" : "white"
                 }
                 trackingLocation="header"
                 trackingProps={{

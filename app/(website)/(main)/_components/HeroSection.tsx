@@ -6,6 +6,7 @@ import { ScanningButton } from "@/components/ui/ScanningButton";
 import Link from "next/link";
 import { CaretDown } from "phosphor-react";
 import Image from "next/image";
+import BlackGradient from "@/public/black-gradient.jpg"
 
 const HeroSection = () => {
   const scrollToSystem = () => {
@@ -17,43 +18,26 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-16 md:pb-24 px-4">
+      {/* Premium Black Gradient Background */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={BlackGradient}
+          alt=""
+          fill
+          className="object-cover pointer-events-none select-none"
+          priority
+        />
+      </div>
+
       {/* Background Image */}
       <div className="absolute inset-0 z-10">
         <Image
           src="/porsche.png"
           alt="Luxury Porsche"
-          fill
-          className="object-contain object-bottom z-10 relative bottom-0 w-full h-auto -scale-x-100 pointer-events-none"
+          className="object-contain absolute bottom-0 right-0 w-full max-w-[103rem] object-bottom -scale-x-100 pointer-events-none select-none"
           priority
-        />
-        {/* Diagonal Fade Grid Background - Top Right */}
-        <div
-          className="absolute inset-0 z-0 dark:hidden block"
-          style={{
-            backgroundImage: `
-linear-gradient(to right, hsl(200deg,30%, 80%) 1px, transparent 1px),
-linear-gradient(to bottom, hsl(200deg,30%, 80%) 1px, transparent 1px)
-`,
-            backgroundSize: "32px 32px",
-            WebkitMaskImage:
-              "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
-            maskImage:
-              "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
-          }}
-        />
-        <div
-          className="absolute inset-0 z-0 hidden dark:block"
-          style={{
-            backgroundImage: `
-linear-gradient(to right, #222222 1px, transparent 1px),
-linear-gradient(to bottom, #222222 1px, transparent 1px)
-`,
-            backgroundSize: "32px 32px",
-            WebkitMaskImage:
-              "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
-            maskImage:
-              "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
-          }}
+          width={1000}
+          height={1000}
         />
       </div>
 
@@ -68,10 +52,9 @@ linear-gradient(to bottom, #222222 1px, transparent 1px)
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-900 dark:text-white leading-tight"
+              className="bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-5xl/[1.07] font-bold tracking-tight text-transparent md:text-7xl/[1.07] pb-2"
             >
-              Turn Luxury Car Inquiries Into{" "}
-              <span className="text-blue-500">Confirmed Bookings</span>
+              Turn Luxury Car Inquiries Into Confirmed Bookings
             </motion.h1>
 
             <motion.p
@@ -89,12 +72,12 @@ linear-gradient(to bottom, #222222 1px, transparent 1px)
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col items-start sm:flex-row gap-4"
             >
               <ScanningButton
                 variant="primary"
-                size="lg"
-                color="blue"
+                size="sm"
+                color="white"
                 trackingLocation="hero"
                 trackingProps={{
                   page: "home",
@@ -104,16 +87,15 @@ linear-gradient(to bottom, #222222 1px, transparent 1px)
                 <Link href="/book">Book a Strategy Call</Link>
               </ScanningButton>
 
-              <button
+              <ScanningButton
                 onClick={scrollToSystem}
-                className="group flex items-center justify-center gap-2 px-6 py-4 text-slate-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors font-medium bg-white/50 dark:bg-black/30 backdrop-blur-sm rounded-lg"
+                variant="outline"
+                color="white"
+                size="sm"
+                className="flex"
               >
                 See How It Works
-                <CaretDown
-                  className="w-4 h-4 group-hover:translate-y-1 transition-transform"
-                  weight="bold"
-                />
-              </button>
+              </ScanningButton>
             </motion.div>
           </motion.div>
         </div>

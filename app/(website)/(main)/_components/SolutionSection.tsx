@@ -52,7 +52,7 @@ const SolutionSection = () => {
           <span className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-4 block">
             The System
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white mb-6 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white mb-6 leading-[1.1]">
             The Luxury{" "}
             <span className="text-blue-500">Booking System</span>
           </h2>
