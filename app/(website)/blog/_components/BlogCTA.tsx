@@ -26,13 +26,6 @@ export function BlogCTA() {
               Get Started Today
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            
-            <Link 
-              href="/services"
-              className="inline-flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-gray-300 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-zinc-700 hover:border-zinc-600"
-            >
-              Explore Our Services
-            </Link>
           </div>
         </div>
       </div>
