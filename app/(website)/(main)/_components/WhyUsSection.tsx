@@ -57,8 +57,8 @@ const WhyUsSection = () => {
         <span className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-4 block">
           Why Choose Us
         </span>
-        <h2 className="text-4xl md:text-5xl font-semibold text-white mb-4 leading-[1.1]">
-          What Makes Us <span className="text-blue-500">Different</span>
+        <h2 className="heading-section text-white mb-4">
+          What Makes Us Different
         </h2>
         <p className="text-lg text-gray-400 max-w-xl mx-auto">
           We&apos;re not just another marketing agency. We&apos;re specialists.

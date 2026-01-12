@@ -73,9 +73,8 @@ const FAQPage = () => {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 dark:text-white mb-4 leading-[1.1]">
-              Frequently Asked{" "}
-              <span className="text-blue-500">Questions</span>
+            <h1 className="heading-section lg:text-6xl text-slate-900 dark:text-white mb-4">
+              Frequently Asked Questions
             </h1>
             <p className="text-lg text-slate-600 dark:text-gray-400">
               Everything you need to know about working with us

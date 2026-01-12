@@ -53,8 +53,8 @@ const FAQSection = () => {
         <span className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-4 block">
           FAQ
         </span>
-        <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white mb-4 leading-[1.1]">
-          Common <span className="text-blue-500">Questions</span>
+        <h2 className="heading-section text-slate-900 dark:text-white mb-4">
+          Common Questions
         </h2>
         <p className="text-lg text-slate-600 dark:text-gray-400 max-w-2xl mx-auto">
           Everything you need to know about working with us

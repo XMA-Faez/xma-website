@@ -53,7 +53,7 @@ const SolutionSection = () => {
           <span className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-4 block">
             The System
           </span>
-          <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white mb-6 leading-[1.1]">
+          <h2 className="heading-section text-slate-900 dark:text-white mb-6">
             The Luxury Booking System
           </h2>
           <p className="text-lg text-slate-600 dark:text-gray-400 mb-8">

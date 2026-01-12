@@ -146,6 +146,8 @@ export interface Gallery {
   _id: string
   _type: 'gallery'
   title: string
+  slug: SanitySlug
+  description?: string
   cloudinaryVideos: CloudinaryAsset[]
   cloudinaryGraphics: CloudinaryAsset[]
 }

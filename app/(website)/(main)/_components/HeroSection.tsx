@@ -6,7 +6,7 @@ import { ScanningButton } from "@/components/ui/ScanningButton";
 import Link from "next/link";
 import { CaretDown } from "phosphor-react";
 import Image from "next/image";
-import BlackGradient from "@/public/black-gradient.jpg"
+import BlackGradient from "@/public/black-gradient.jpg";
 
 const HeroSection = () => {
   const scrollToSystem = () => {
@@ -17,12 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section
-      style={{
-        height: "80vh",
-        minHeight: "720px",
-      }}
-      className="relative md:min-h-screen flex items-center pt-20 pb-8 md:pb-24 px-4">
+    <section className="relative md:min-h-screen flex items-center pt-20 pb-8 md:pb-24 px-4 min-h-[720px]">
       {/* Premium Black Gradient Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -57,7 +52,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-5xl/[1.07] font-bold tracking-tight text-transparent md:text-7xl/[1.07] pb-2"
+              className="heading-hero pb-2"
             >
               Turn Luxury Car Inquiries Into Confirmed Bookings
             </motion.h1>

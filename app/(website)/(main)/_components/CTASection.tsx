@@ -102,7 +102,7 @@ const CTASection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-[1.1]"
+            className="heading-section lg:text-6xl text-white mb-6"
           >
             Ready to Turn Inquiries Into Bookings?
           </motion.h2>

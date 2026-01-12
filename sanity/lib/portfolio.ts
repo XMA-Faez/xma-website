@@ -7,9 +7,18 @@ import type {
   GalleryResponse,
 } from './types'
 
-const galleryQuery = `*[_type == "gallery"][0]{
+const galleryBySlugQuery = `*[_type == "gallery" && slug.current == $slug][0]{
   _id,
   title,
+  "slug": slug.current,
+  cloudinaryVideos,
+  cloudinaryGraphics
+}`
+
+const defaultGalleryQuery = `*[_type == "gallery"][0]{
+  _id,
+  title,
+  "slug": slug.current,
   cloudinaryVideos,
   cloudinaryGraphics
 }`
@@ -157,9 +166,16 @@ function transformCloudinaryAssetToGraphic(
   }
 }
 
-export async function fetchPortfolioData(tags?: string[]): Promise<GalleryResponse> {
+export interface FetchPortfolioOptions {
+  gallerySlug?: string
+  tags?: string[]
+}
+
+export async function fetchPortfolioData(options?: FetchPortfolioOptions): Promise<GalleryResponse> {
   try {
-    const gallery = await client.fetch<Gallery | null>(galleryQuery)
+    const gallery = options?.gallerySlug
+      ? await client.fetch<Gallery | null>(galleryBySlugQuery, { slug: options.gallerySlug })
+      : await client.fetch<Gallery | null>(defaultGalleryQuery)
 
     if (!gallery) {
       return {
@@ -182,6 +198,7 @@ export async function fetchPortfolioData(tags?: string[]): Promise<GalleryRespon
       transformCloudinaryAssetToGraphic(asset, index)
     )
 
+    const tags = options?.tags
     const videos = tags?.length
       ? allVideos.filter((video) => video.tags.some((tag) => tags.includes(tag)))
       : allVideos

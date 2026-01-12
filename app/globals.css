@@ -842,3 +842,20 @@ button::after {
 .section-padding {
   @apply py-12 lg:py-24 px-4;
 }
+
+@layer utilities {
+  .heading-gradient {
+    @apply bg-gradient-to-br bg-clip-text text-transparent font-bold tracking-tight;
+    --tw-gradient-from: oklch(1 0 0);
+    --tw-gradient-to: oklch(0.55 0.02 260);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .heading-hero {
+    @apply heading-gradient text-5xl/[1.07] md:text-7xl/[1.07];
+  }
+
+  .heading-section {
+    @apply text-4xl md:text-5xl font-semibold leading-[1.1];
+  }
+}

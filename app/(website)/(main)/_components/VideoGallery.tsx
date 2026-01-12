@@ -13,7 +13,7 @@ type GalleryItem = {
 };
 
 const PhotoGallerySkiper = () => {
-  const { items, isLoading } = usePortfolioItems();
+  const { items, isLoading } = usePortfolioItems({ gallerySlug: 'homepage' });
 
   const galleryItems: GalleryItem[] = useMemo(() => {
     if (isLoading || items.length === 0) {

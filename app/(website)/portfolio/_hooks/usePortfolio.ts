@@ -1,16 +1,17 @@
 import { useQuery } from '@tanstack/react-query'
-import { fetchPortfolioData } from '@/sanity/lib/portfolio'
+import { fetchPortfolioData, type FetchPortfolioOptions } from '@/sanity/lib/portfolio'
 import type { CloudinaryVideo, CloudinaryGraphic } from '@/sanity/lib/types'
 
 const portfolioKeys = {
   all: ['portfolio'] as const,
-  data: (tags?: string[]) => [...portfolioKeys.all, 'data', tags] as const,
+  data: (gallerySlug?: string, tags?: string[]) =>
+    [...portfolioKeys.all, 'data', gallerySlug, tags] as const,
 }
 
-const usePortfolio = (tags?: string[]) => {
+const usePortfolio = (options?: FetchPortfolioOptions) => {
   return useQuery({
-    queryKey: portfolioKeys.data(tags),
-    queryFn: () => fetchPortfolioData(tags),
+    queryKey: portfolioKeys.data(options?.gallerySlug, options?.tags),
+    queryFn: () => fetchPortfolioData(options),
     staleTime: 5 * 60 * 1000,
     gcTime: 10 * 60 * 1000,
     retry: 2,
@@ -18,8 +19,8 @@ const usePortfolio = (tags?: string[]) => {
   })
 }
 
-export const usePortfolioItems = (tags?: string[]) => {
-  const { data, isLoading, error } = usePortfolio(tags)
+export const usePortfolioItems = (options?: FetchPortfolioOptions) => {
+  const { data, isLoading, error } = usePortfolio(options)
 
   const allItems: (CloudinaryVideo | CloudinaryGraphic)[] = [
     ...(data?.videos || []),

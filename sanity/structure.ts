@@ -10,12 +10,11 @@ export const structure: StructureResolver = (S) =>
         .child(S.documentTypeList('blogPost').title('Blog Posts')),
       S.divider(),
       S.listItem()
-        .title('Portfolio Gallery')
+        .title('Galleries')
         .schemaType('gallery')
         .child(
-          S.document()
-            .schemaType('gallery')
-            .documentId('gallery')
-            .title('Portfolio Gallery')
+          S.documentTypeList('gallery')
+            .title('Galleries')
+            .defaultOrdering([{ field: 'title', direction: 'asc' }])
         ),
     ])

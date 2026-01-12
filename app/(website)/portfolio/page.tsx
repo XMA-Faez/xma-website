@@ -19,7 +19,7 @@ const PortfolioPage = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
 
   // Use React Query hooks for data fetching
-  const { items: allPortfolioItems, isLoading, error } = usePortfolioItems();
+  const { items: allPortfolioItems, isLoading, error } = usePortfolioItems({ gallerySlug: 'portfolio' });
 
   // Filter items based on active tab only (no "all" option)
   const filteredItems = useMemo(() => {

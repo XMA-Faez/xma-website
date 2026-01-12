@@ -37,7 +37,7 @@ const StackingServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white"
+            className="heading-section text-white"
           >
             The Luxury Booking System
           </motion.h2>
