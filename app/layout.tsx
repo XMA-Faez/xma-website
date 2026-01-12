@@ -124,7 +124,7 @@ gtag('config', 'AW-17530915091');`,
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          forcedTheme="dark"
           disableTransitionOnChange={false}
         >
           <Theme grayColor="gray" hasBackground={false} radius="full">
@@ -142,7 +142,7 @@ gtag('config', 'AW-17530915091');`,
               .dark,
               .dark-theme,
               :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
-                --color-background: #080808;
+                --color-background: #0a0a0a;
               }
             `}
             </style>

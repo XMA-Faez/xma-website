@@ -17,7 +17,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-16 md:pb-24 px-4">
+    <section
+      style={{
+        height: "80vh",
+        minHeight: "720px",
+      }}
+      className="relative md:min-h-screen flex items-center pt-20 pb-8 md:pb-24 px-4">
       {/* Premium Black Gradient Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -42,7 +47,7 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-6xl xl:max-w-7xl mx-auto w-full relative z-10">
-        <div className="max-w-2xl sm:mb-64">
+        <div className="max-w-2xl mb-16 sm:mb-64">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

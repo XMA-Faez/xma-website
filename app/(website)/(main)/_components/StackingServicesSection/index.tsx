@@ -21,8 +21,8 @@ const StackingServicesSection = () => {
       className="relative"
       style={{ height: `${(totalCards + 1) * 70}vh` }}
     >
-      <div className="sticky top-0 h-screen flex items-center justify-center">
-        <div className="absolute top-8 left-1/2 -translate-x-1/2 text-center z-10 pointer-events-none">
+      <div className="sticky top-0 h-screen flex flex-col">
+        <div className="pt-32 pb-4 text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,13 +37,13 @@ const StackingServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-semibold text-slate-900 dark:text-white"
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white"
           >
-            The Luxury <span className="text-blue-500">Booking System</span>
+            The Luxury Booking System
           </motion.h2>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="flex-1 relative">
           {services.map((service, index) => (
             <CardWithAnimation
               key={service.id}
@@ -53,25 +53,6 @@ const StackingServicesSection = () => {
               scrollYProgress={scrollYProgress}
             />
           ))}
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-          <motion.div
-            className="flex items-center gap-2"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            viewport={{ once: true }}
-          >
-            {services.map((_, index) => (
-              <ScrollIndicatorDot
-                key={index}
-                index={index}
-                totalCards={totalCards}
-                scrollYProgress={scrollYProgress}
-              />
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>
@@ -96,6 +77,7 @@ const CardWithAnimation = ({
   const cardMid = (cardStart + cardEnd) / 2;
 
   const isFirstCard = index === 0;
+  const isLastCard = index === totalCards - 1;
 
   const y = useTransform(
     scrollYProgress,
@@ -105,8 +87,14 @@ const CardWithAnimation = ({
 
   const scale = useTransform(
     scrollYProgress,
+    [cardEnd, Math.min(cardEnd + 0.1, 1)],
+    isLastCard ? [1, 1] : [1, 0.92 - index * 0.02]
+  );
+
+  const opacity = useTransform(
+    scrollYProgress,
     [cardEnd, Math.min(cardEnd + 0.15, 1)],
-    [1, 0.95 - index * 0.01]
+    isLastCard ? [1, 1] : [1, 0]
   );
 
   return (
@@ -115,40 +103,7 @@ const CardWithAnimation = ({
       index={index}
       y={y}
       scale={scale}
-    />
-  );
-};
-
-interface ScrollIndicatorDotProps {
-  index: number;
-  totalCards: number;
-  scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
-}
-
-const ScrollIndicatorDot = ({
-  index,
-  totalCards,
-  scrollYProgress,
-}: ScrollIndicatorDotProps) => {
-  const cardStart = index / totalCards;
-  const cardEnd = (index + 1) / totalCards;
-
-  const dotOpacity = useTransform(
-    scrollYProgress,
-    [cardStart - 0.05, cardStart, cardEnd, cardEnd + 0.05],
-    [0.3, 1, 1, 0.3]
-  );
-
-  const dotScale = useTransform(
-    scrollYProgress,
-    [cardStart - 0.05, cardStart, cardEnd, cardEnd + 0.05],
-    [1, 1.5, 1.5, 1]
-  );
-
-  return (
-    <motion.div
-      style={{ opacity: dotOpacity, scale: dotScale }}
-      className="w-2 h-2 rounded-full bg-blue-500"
+      opacity={opacity}
     />
   );
 };

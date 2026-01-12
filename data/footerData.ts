@@ -35,35 +35,39 @@ const footerData = {
       href: "/portfolio",
     },
     {
-      text: "About Us",
+      text: "About",
       href: "/about",
     },
     {
       text: "Blog",
       href: "/blog",
     },
+    {
+      text: "Contact",
+      href: "/contact",
+    },
   ],
   services: [
     {
-      text: "Conversion Websites",
-      href: "/#luxury-booking-system",
+      text: "XMA CRM System",
+      href: "/services/crm-solution",
     },
-    {
-      text: "Ad Creatives",
-      href: "/#luxury-booking-system",
-    },
-    {
-      text: "Paid Advertising",
-      href: "/#luxury-booking-system",
-    },
-    {
-      text: "WhatsApp Automation",
-      href: "/#luxury-booking-system",
-    },
-    {
-      text: "Custom CRM",
-      href: "/#luxury-booking-system",
-    },
+    // {
+    //   text: "Conversion Websites",
+    //   href: "/#luxury-booking-system",
+    // },
+    // {
+    //   text: "Ad Creatives",
+    //   href: "/#luxury-booking-system",
+    // },
+    // {
+    //   text: "Paid Advertising",
+    //   href: "/#luxury-booking-system",
+    // },
+    // {
+    //   text: "WhatsApp Automation",
+    //   href: "/#luxury-booking-system",
+    // },
   ],
   legal: [
     {

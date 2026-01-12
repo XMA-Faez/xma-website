@@ -53,7 +53,7 @@ const GalleryContent = ({ items }: { items: GalleryItem[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: gallery,
-    offset: ["start end", "end start"],
+    offset: ["start 0.9", "end 0.1"],
   });
 
   const { height, width } = dimension;
@@ -63,15 +63,15 @@ const GalleryContent = ({ items }: { items: GalleryItem[] }) => {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
-  const x = useTransform(scrollYProgress, [0, 1], [0, width * 0.5]);
-  const x2 = useTransform(scrollYProgress, [0, 1], [0, width * 0.8]);
-  const x3 = useTransform(scrollYProgress, [0, 1], [0, width * 0.3]);
-  const x4 = useTransform(scrollYProgress, [0, 1], [0, width * 0.6]);
+  const x = useTransform(scrollYProgress, [0, 1], [0, -width * 0.8]);
+  const x2 = useTransform(scrollYProgress, [0, 1], [0, width * 0.9]);
+  const x3 = useTransform(scrollYProgress, [0, 1], [0, -width * 0.6]);
+  const x4 = useTransform(scrollYProgress, [0, 1], [0, width * 0.7]);
 
   useEffect(() => {
     const resize = () => {
       setDimension({ width: window.innerWidth, height: window.innerHeight });
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 450);
     };
 
     window.addEventListener("resize", resize);
@@ -100,7 +100,7 @@ const GalleryContent = ({ items }: { items: GalleryItem[] }) => {
         ref={gallery}
         className={`relative box-border flex overflow-hidden ${
           isMobile
-            ? "h-auto flex-col gap-0 p-0"
+            ? "h-auto flex-col gap-4 p-0"
             : "h-[175vh] flex-row gap-[2vw] p-[2vw]"
         }`}
       >
@@ -135,7 +135,7 @@ const Column = ({ items, y, x, isMobile }: ColumnProps) => {
     <motion.div
       className={
         isMobile
-          ? "relative -left-[45%] flex h-[250px] w-full flex-row gap-4 first:left-[-45%] [&:nth-child(2)]:left-[-80%] [&:nth-child(3)]:left-[-30%]"
+          ? "relative flex h-[320px] w-full flex-row gap-3 first:left-[10%] [&:nth-child(2)]:left-[-70%] [&:nth-child(3)]:left-[5%]"
           : "relative -top-[45%] flex h-full w-1/4 min-w-[250px] flex-col gap-[2vw] first:top-[-45%] [&:nth-child(2)]:top-[-95%] [&:nth-child(3)]:top-[-45%] [&:nth-child(4)]:top-[-75%]"
       }
       style={isMobile ? { x } : { y }}
@@ -143,8 +143,8 @@ const Column = ({ items, y, x, isMobile }: ColumnProps) => {
       {items.map((item, i) => (
         <div
           key={i}
-          className={`group relative overflow-hidden ${
-            isMobile ? "h-full w-[250px] min-w-[250px]" : "h-full w-full"
+          className={`group relative overflow-hidden rounded-lg ${
+            isMobile ? "h-full w-[180px] min-w-[180px] aspect-[9/16]" : "h-full w-full"
           }`}
         >
           <video

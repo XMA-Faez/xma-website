@@ -20,7 +20,8 @@ const systemComponents = [
   {
     icon: FilmStrip,
     title: "High-End Ad Creatives",
-    description: "Video, graphics, and photography aligned with luxury perception.",
+    description:
+      "Video, graphics, and photography aligned with luxury perception.",
   },
   {
     icon: Target,
@@ -53,8 +54,7 @@ const SolutionSection = () => {
             The System
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white mb-6 leading-[1.1]">
-            The Luxury{" "}
-            <span className="text-blue-500">Booking System</span>
+            The Luxury Booking System
           </h2>
           <p className="text-lg text-slate-600 dark:text-gray-400 mb-8">
             Everything we do is designed to increase your booking rate.
@@ -85,10 +85,7 @@ const SolutionSection = () => {
               className="flex gap-5"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                <item.icon
-                  className="w-6 h-6 text-blue-500"
-                  weight="duotone"
-                />
+                <item.icon className="w-6 h-6 text-blue-500" weight="duotone" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">

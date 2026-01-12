@@ -10,7 +10,7 @@ import { PhotoGallerySkiper } from './VideoGallery'
 const ProofSection = () => {
   return (
     <Section size="xl" className="!px-0">
-      <div className="px-4 md:px-6 lg:px-8 mb-12">
+      <div className="px-4 md:px-6 lg:px-8 mb-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const ProofSection = () => {
           <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white mb-4 leading-[1.1]">
             Real Work. <span className="text-blue-500">Real Upgrades.</span>
           </h2>
-          <p className="text-lg text-slate-600 dark:text-gray-400 max-w-xl">
+          <p className="text-lg text-slate-600 dark:text-gray-400 max-w-xl mx-auto">
             We don&apos;t hide behind reports. We show the work.
           </p>
         </motion.div>
@@ -31,7 +31,7 @@ const ProofSection = () => {
 
       <PhotoGallerySkiper />
 
-      <div className="px-4 md:px-6 lg:px-8 mt-12">
+      <div className="px-4 md:px-6 lg:px-8 mt-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
