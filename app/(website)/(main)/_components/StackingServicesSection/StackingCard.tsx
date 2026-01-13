@@ -38,7 +38,7 @@ const StackingCard = ({ service, index, y, scale, opacity }: StackingCardProps) 
         `}
       >
         <div className="w-full md:w-1/2 aspect-square p-4 md:p-5 lg:p-6">
-          <ServiceVisual theme={service.visualTheme} />
+          <ServiceVisual theme={service.visualTheme} iconName={service.iconName} />
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col justify-center p-5 md:p-6 lg:p-10">

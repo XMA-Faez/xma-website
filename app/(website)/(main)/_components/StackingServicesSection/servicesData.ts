@@ -1,12 +1,3 @@
-import {
-  Globe,
-  FilmStrip,
-  Target,
-  WhatsappLogo,
-  Database,
-  type Icon,
-} from "phosphor-react";
-
 export type ServiceVisualTheme =
   | "website"
   | "creatives"
@@ -16,7 +7,7 @@ export type ServiceVisualTheme =
 
 export interface Service {
   id: string;
-  icon: Icon;
+  iconName: string;
   title: string;
   description: string;
   features: string[];
@@ -26,7 +17,7 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "website",
-    icon: Globe,
+    iconName: "solar:monitor-smartphone-bold",
     title: "Conversion-Optimized Website",
     description:
       "Built to push visitors toward action, not just look good. Every element is designed to convert browsers into bookers.",
@@ -40,7 +31,7 @@ export const services: Service[] = [
   },
   {
     id: "creatives",
-    icon: FilmStrip,
+    iconName: "solar:clapperboard-play-bold",
     title: "High-End Ad Creatives",
     description:
       "Video, graphics, and photography aligned with luxury perception. Content that stops the scroll and commands attention.",
@@ -54,7 +45,7 @@ export const services: Service[] = [
   },
   {
     id: "paid-ads",
-    icon: Target,
+    iconName: "solar:target-bold",
     title: "Paid Ads That Qualify Leads",
     description:
       "No cheap clicks. No random traffic. We target high-intent prospects ready to book luxury vehicles.",
@@ -66,23 +57,23 @@ export const services: Service[] = [
     ],
     visualTheme: "paidAds",
   },
-  {
-    id: "whatsapp",
-    icon: WhatsappLogo,
-    title: "WhatsApp Automation",
-    description:
-      "Instant replies without sounding robotic. Automated sequences that feel human and close deals while you sleep.",
-    features: [
-      "Instant response within seconds",
-      "Intelligent follow-up sequences",
-      "Lead qualification flows",
-      "Booking confirmation automation",
-    ],
-    visualTheme: "whatsapp",
-  },
+  // {
+  //   id: "whatsapp",
+  //   iconName: "solar:whatsapp-bold",
+  //   title: "WhatsApp Automation",
+  //   description:
+  //     "Instant replies without sounding robotic. Automated sequences that feel human and close deals while you sleep.",
+  //   features: [
+  //     "Instant response within seconds",
+  //     "Intelligent follow-up sequences",
+  //     "Lead qualification flows",
+  //     "Booking confirmation automation",
+  //   ],
+  //   visualTheme: "whatsapp",
+  // },
   {
     id: "crm",
-    icon: Database,
+    iconName: "solar:server-square-cloud-bold",
     title: "Custom CRM Built for Rentals",
     description:
       "Every inquiry tracked. Every opportunity followed. A system designed specifically for luxury car rental operations.",

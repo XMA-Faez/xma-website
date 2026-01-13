@@ -2,60 +2,62 @@
 
 import { motion } from "framer-motion";
 import type { ServiceVisualTheme } from "./servicesData";
+import ServiceIcon from "./ServiceIcon";
 
 interface ServiceVisualProps {
   theme: ServiceVisualTheme;
+  iconName: string;
 }
 
 const visualStyles: Record<ServiceVisualTheme, { gradient: string; accent: string }> = {
   website: {
     gradient: `
-      radial-gradient(ellipse 80% 50% at 20% 80%, oklch(0.45 0.15 220 / 0.6), transparent 50%),
-      radial-gradient(ellipse 60% 60% at 80% 20%, oklch(0.5 0.18 200 / 0.5), transparent 50%),
-      radial-gradient(ellipse 50% 50% at 50% 50%, oklch(0.35 0.1 240 / 0.3), transparent 60%),
-      linear-gradient(180deg, oklch(0.12 0.02 250), oklch(0.08 0.01 240))
+      radial-gradient(ellipse 80% 50% at 20% 80%, oklch(0.35 0.15 260 / 0.5), transparent 50%),
+      radial-gradient(ellipse 60% 60% at 80% 20%, oklch(0.4 0.18 280 / 0.4), transparent 50%),
+      radial-gradient(ellipse 50% 50% at 50% 50%, oklch(0.25 0.1 260 / 0.3), transparent 60%),
+      linear-gradient(180deg, oklch(0.1 0.02 260), oklch(0.06 0.01 270))
     `,
-    accent: "oklch(0.6 0.2 210)",
+    accent: "oklch(0.55 0.22 260)",
   },
   creatives: {
     gradient: `
-      radial-gradient(ellipse 70% 60% at 70% 70%, oklch(0.4 0.18 280 / 0.6), transparent 50%),
-      radial-gradient(ellipse 50% 50% at 30% 30%, oklch(0.5 0.2 250 / 0.5), transparent 50%),
-      conic-gradient(from 180deg at 50% 50%, oklch(0.2 0.08 280 / 0.3), oklch(0.15 0.05 250 / 0.2), oklch(0.2 0.08 280 / 0.3)),
-      linear-gradient(135deg, oklch(0.1 0.03 280), oklch(0.08 0.02 250))
+      radial-gradient(ellipse 70% 60% at 70% 70%, oklch(0.4 0.2 350 / 0.5), transparent 50%),
+      radial-gradient(ellipse 50% 50% at 30% 30%, oklch(0.45 0.18 30 / 0.4), transparent 50%),
+      conic-gradient(from 180deg at 50% 50%, oklch(0.2 0.1 350 / 0.3), oklch(0.15 0.08 30 / 0.2), oklch(0.2 0.1 350 / 0.3)),
+      linear-gradient(135deg, oklch(0.1 0.03 350), oklch(0.06 0.02 30))
     `,
-    accent: "oklch(0.55 0.2 270)",
+    accent: "oklch(0.65 0.28 350)",
   },
   paidAds: {
     gradient: `
-      radial-gradient(ellipse 60% 80% at 30% 20%, oklch(0.45 0.2 250 / 0.6), transparent 50%),
-      radial-gradient(ellipse 80% 50% at 70% 80%, oklch(0.4 0.15 230 / 0.5), transparent 50%),
-      radial-gradient(circle at 50% 50%, oklch(0.3 0.12 240 / 0.4), transparent 40%),
-      linear-gradient(225deg, oklch(0.12 0.04 250), oklch(0.06 0.02 230))
+      radial-gradient(ellipse 60% 80% at 30% 20%, oklch(0.5 0.15 95 / 0.4), transparent 50%),
+      radial-gradient(ellipse 80% 50% at 70% 80%, oklch(0.45 0.12 70 / 0.3), transparent 50%),
+      radial-gradient(circle at 50% 50%, oklch(0.35 0.1 95 / 0.3), transparent 40%),
+      linear-gradient(225deg, oklch(0.12 0.03 95), oklch(0.06 0.02 70))
     `,
-    accent: "oklch(0.55 0.22 245)",
+    accent: "oklch(0.88 0.2 95)",
   },
   whatsapp: {
     gradient: `
-      radial-gradient(ellipse 70% 70% at 80% 30%, oklch(0.45 0.15 170 / 0.5), transparent 50%),
-      radial-gradient(ellipse 60% 60% at 20% 70%, oklch(0.5 0.18 220 / 0.5), transparent 50%),
-      radial-gradient(ellipse 40% 40% at 50% 50%, oklch(0.4 0.12 190 / 0.3), transparent 50%),
-      linear-gradient(160deg, oklch(0.1 0.03 200), oklch(0.08 0.02 180))
+      radial-gradient(ellipse 70% 70% at 80% 30%, oklch(0.45 0.15 165 / 0.5), transparent 50%),
+      radial-gradient(ellipse 60% 60% at 20% 70%, oklch(0.5 0.18 180 / 0.4), transparent 50%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, oklch(0.4 0.12 165 / 0.3), transparent 50%),
+      linear-gradient(160deg, oklch(0.1 0.03 165), oklch(0.06 0.02 180))
     `,
-    accent: "oklch(0.55 0.18 160)",
+    accent: "oklch(0.85 0.2 165)",
   },
   crm: {
     gradient: `
-      radial-gradient(ellipse 50% 70% at 20% 30%, oklch(0.4 0.12 250 / 0.5), transparent 50%),
-      radial-gradient(ellipse 70% 50% at 80% 70%, oklch(0.35 0.08 230 / 0.4), transparent 50%),
-      linear-gradient(45deg, oklch(0.15 0.03 250 / 0.5) 25%, transparent 25%, transparent 75%, oklch(0.15 0.03 250 / 0.5) 75%),
-      linear-gradient(135deg, oklch(0.1 0.02 240), oklch(0.06 0.01 250))
+      radial-gradient(ellipse 50% 70% at 20% 30%, oklch(0.35 0.18 285 / 0.5), transparent 50%),
+      radial-gradient(ellipse 70% 50% at 80% 70%, oklch(0.3 0.15 260 / 0.4), transparent 50%),
+      linear-gradient(45deg, oklch(0.15 0.08 285 / 0.4) 25%, transparent 25%, transparent 75%, oklch(0.15 0.08 285 / 0.4) 75%),
+      linear-gradient(135deg, oklch(0.08 0.04 285), oklch(0.05 0.02 260))
     `,
-    accent: "oklch(0.45 0.1 250)",
+    accent: "oklch(0.5 0.28 285)",
   },
 };
 
-const ServiceVisual = ({ theme }: ServiceVisualProps) => {
+const ServiceVisual = ({ theme, iconName }: ServiceVisualProps) => {
   const styles = visualStyles[theme];
 
   return (
@@ -112,6 +114,10 @@ const ServiceVisual = ({ theme }: ServiceVisualProps) => {
             backgroundSize: "40px 40px",
           }}
         />
+      </div>
+
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <ServiceIcon icon={iconName} theme={theme} size="lg" />
       </div>
 
       <div
