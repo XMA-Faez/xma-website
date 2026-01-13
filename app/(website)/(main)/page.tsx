@@ -138,7 +138,7 @@ export default function Home() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <div className="min-h-screen w-full relative bg-zinc-900">
+      <div className="min-h-screen w-full relative bg-zinc-950">
         <HeroSection />
         <SocialProofStrip />
         <StackingServicesSection />
