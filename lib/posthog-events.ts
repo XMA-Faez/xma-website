@@ -61,27 +61,27 @@ export interface BaseEventProperties {
   referrer?: string;
 }
 
-export interface CTAEventProperties extends BaseEventProperties {
+interface CTAEventProperties extends BaseEventProperties {
   button_text: string;
   button_location: string;
   button_variant?: string;
   destination_url?: string;
 }
 
-export interface NavigationEventProperties extends BaseEventProperties {
+interface NavigationEventProperties extends BaseEventProperties {
   link_text: string;
   link_url: string;
   navigation_section: "header" | "footer" | "mobile_menu";
 }
 
-export interface FormEventProperties extends BaseEventProperties {
+interface FormEventProperties extends BaseEventProperties {
   form_name: string;
   field_name?: string;
   form_step?: number;
   total_steps?: number;
 }
 
-export interface VideoEventProperties extends BaseEventProperties {
+interface VideoEventProperties extends BaseEventProperties {
   video_title?: string;
   video_url: string;
   video_duration?: number;
@@ -89,19 +89,19 @@ export interface VideoEventProperties extends BaseEventProperties {
   completion_percentage?: number;
 }
 
-export interface ScrollDepthProperties extends BaseEventProperties {
+interface ScrollDepthProperties extends BaseEventProperties {
   depth_percentage: 25 | 50 | 75 | 100;
   pixel_depth: number;
   page_height: number;
 }
 
-export interface ServiceEventProperties extends BaseEventProperties {
+interface ServiceEventProperties extends BaseEventProperties {
   service_name: string;
   service_category?: string;
   interaction_type?: string;
 }
 
-export interface BlogEventProperties extends BaseEventProperties {
+interface BlogEventProperties extends BaseEventProperties {
   post_title?: string;
   post_slug?: string;
   post_category?: string;
@@ -109,7 +109,7 @@ export interface BlogEventProperties extends BaseEventProperties {
   search_query?: string;
 }
 
-export interface PortfolioEventProperties extends BaseEventProperties {
+interface PortfolioEventProperties extends BaseEventProperties {
   item_title?: string;
   item_category?: string;
   filter_value?: string;

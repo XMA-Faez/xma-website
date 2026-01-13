@@ -71,7 +71,7 @@ const scanningButtonVariants = cva(
         variant: "primary",
         color: "blue",
         className:
-          "text-white dark:text-white border border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] dark:border-blue-500/30 [--gradient-from:hsl(214_100%_27%/0.8)] [--gradient-to:hsl(214_100%_37%/0.6)] hover:[--gradient-from:hsl(214_100%_47%/0.85)] hover:[--gradient-to:hsl(214_100%_57%/0.7)] dark:[--gradient-from:hsl(214_100%_47%/0.25)] dark:[--gradient-to:hsl(214_100%_57%/0.15)] dark:hover:[--gradient-from:hsl(214_100%_47%/0.22)] dark:hover:[--gradient-to:hsl(214_100%_57%/0.12)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+          "text-white dark:text-white border border-blue-500/60 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] dark:border-blue-500/30 [--gradient-from:hsl(214_100%_27%)] [--gradient-to:hsl(214_100%_37%)] hover:[--gradient-from:hsl(214_100%_47%/0.85)] hover:[--gradient-to:hsl(214_100%_57%/0.7)] dark:[--gradient-from:hsl(214_100%_17%)] dark:[--gradient-to:hsl(214_100%_7%)] dark:hover:[--gradient-from:hsl(214_100%_17%)] dark:hover:[--gradient-to:hsl(214_100%_7%)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
       },
       {
         variant: "secondary",
@@ -166,7 +166,7 @@ const scanningButtonVariants = cva(
         variant: "primary",
         color: "white",
         className:
-          "text-blue-600 dark:text-blue-600 border border-white/80 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] [--gradient-from:hsl(0_0%_100%/0.95)] [--gradient-to:hsl(0_0%_96%/0.9)] hover:[--gradient-from:hsl(0_0%_100%/1)] hover:[--gradient-to:hsl(0_0%_98%/0.95)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+          "text-black dark:text-black border border-white/80 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] [--gradient-from:hsl(0_0%_100%/0.95)] [--gradient-to:hsl(0_0%_96%/0.9)] hover:[--gradient-from:hsl(0_0%_100%/1)] hover:[--gradient-to:hsl(0_0%_98%/0.95)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
       },
       {
         variant: "secondary",

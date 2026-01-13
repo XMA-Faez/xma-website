@@ -38,4 +38,3 @@ export const QueryProvider: React.FC<QueryProviderProps> = ({ children }) => {
   );
 };
 
-export default QueryProvider;

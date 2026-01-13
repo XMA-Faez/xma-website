@@ -105,9 +105,14 @@ export default {
         "110": "1.1",
         "120": "1.2",
       },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
       animation: {
         "marquee-up": "marquee-up 30s linear infinite",
         "marquee-down": "marquee-down 30s linear infinite",
+        "marquee-left": "marquee-left 25s linear infinite",
       },
       keyframes: {
         "marquee-up": {
@@ -117,6 +122,10 @@ export default {
         "marquee-down": {
           "0%": { transform: "translateY(-50%)" },
           "100%": { transform: "translateY(0)" },
+        },
+        "marquee-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

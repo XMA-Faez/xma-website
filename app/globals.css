@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add these to your globals.css file */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
-/* React Flow styles */
-@import "@xyflow/react/dist/style.css";
-
 @layer base {
   :root {
     /* Light Mode Variables */
@@ -41,7 +34,7 @@
 
   .dark {
     /* Dark Mode Variables */
-    --background: 240 10% 3.9%;
+    --background: 0 0% 4%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -60,7 +53,7 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 217 91% 60%;
-    --bg: #000000;
+    --bg: #0a0a0a;
     --fg: #ededed;
     --primary: #f0f0f0;
     --secondary: cyan;
@@ -71,12 +64,6 @@
 @layer base {
   * {
     @apply border-border;
-  }
-  body {
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1;
-    font-family: "Inter", sans-serif;
   }
 }
 
@@ -171,27 +158,6 @@
   @apply bg-white/50 border border-slate-300/50 dark:bg-zinc-900/50 dark:border-zinc-700/50;
 }
 
-/* Navigation Glass - WITH BACKDROP BLUR */
-.glass-nav {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.6)
-  );
-  backdrop-filter: blur(24px) saturate(200%);
-  -webkit-backdrop-filter: blur(24px) saturate(200%);
-  border: 1px solid rgba(59, 130, 246, 0.1);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-}
-
-.dark .glass-nav {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
-  backdrop-filter: blur(24px) saturate(200%);
-  -webkit-backdrop-filter: blur(24px) saturate(200%);
-  border: 1px solid rgba(59, 130, 246, 0.1);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-}
-
 /* Hero Glass Overlay */
 .glass-hero {
   background: linear-gradient(
@@ -202,8 +168,8 @@
     rgba(59, 130, 246, 0.06) 75%,
     rgba(14, 165, 233, 0.1) 100%
   );
-  backdrop-filter: blur(32px) saturate(180%) brightness(110%);
-  -webkit-backdrop-filter: blur(32px) saturate(180%) brightness(110%);
+  backdrop-filter: blur(10px) saturate(180%) brightness(110%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%) brightness(110%);
   border: 1px solid rgba(59, 130, 246, 0.15);
 }
 
@@ -482,6 +448,24 @@
   animation: liquid-pulse 2s ease-in-out infinite;
 }
 
+/* Horizontal Marquee Animation for Logo Strip */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 25s linear infinite;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
 .bg-gradient-radial {
   background: radial-gradient(var(--tw-gradient-stops));
 }
@@ -529,6 +513,17 @@
 body {
   color: var(--fg);
   background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-primary);
+}
+
+p,
+span {
+  font-family: var(--font-secondary);
 }
 
 h1 {
@@ -712,25 +707,25 @@ button::after {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 0 0% 4%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 0 0% 6%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
+    --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 14%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 0 0% 84%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -846,4 +841,21 @@ button::after {
 
 .section-padding {
   @apply py-12 lg:py-24 px-4;
+}
+
+@layer utilities {
+  .heading-gradient {
+    @apply bg-gradient-to-br bg-clip-text text-transparent font-bold tracking-tight;
+    --tw-gradient-from: oklch(1 0 0);
+    --tw-gradient-to: oklch(0.55 0.02 260);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .heading-hero {
+    @apply heading-gradient text-5xl/[1.07] md:text-7xl/[1.07];
+  }
+
+  .heading-section {
+    @apply text-4xl md:text-5xl font-semibold leading-[1.1];
+  }
 }

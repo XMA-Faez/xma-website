@@ -2,28 +2,34 @@ import { Theme } from "@radix-ui/themes";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 
-import Footer from "@/components/layout/footer/Footer";
-import { Header } from "@/components/layout/header/Header";
-import { PostHogProvider } from "@/components/PostHogProvider";
+import { PostHogProvider } from "@/components/providers/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { GlobalAnalyticsProvider } from "@/components/tracking/GlobalAnalyticsProvider";
 import Script from "next/script";
+import {
+  DM_Sans,
+  Inter,
+  Manrope,
+  Outfit,
+  Zalando_Sans,
+} from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const primaryFont = Manrope({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-primary",
 });
 
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const secondaryFont = DM_Sans({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-secondary",
 });
 
 export const metadata: Metadata = {
@@ -60,7 +66,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <Script
           id="gtm-script"
@@ -110,9 +116,7 @@ gtag('config', 'AW-17530915091');`,
           content="b4Ruz4qrwE5l_HVaxaP5_Nysz4MGIQaCWg8xYkKrJcM"
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`antialiased ${primaryFont.variable} ${secondaryFont.variable}`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WDR7CP7Z"
@@ -124,21 +128,16 @@ gtag('config', 'AW-17530915091');`,
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          forcedTheme="dark"
           disableTransitionOnChange={false}
         >
           <Theme grayColor="gray" hasBackground={false} radius="full">
             <QueryProvider>
               <PostHogProvider>
                 <GlobalAnalyticsProvider>
-                  {/* <AnimatedCursorComponent /> */}
-                  <Header />
                   <SpeedInsights />
-                  <main className="bg-slate-50 dark:bg-zinc-950">
-                    {children}
-                  </main>
+                  {children}
                   <Analytics />
-                  <Footer />
                 </GlobalAnalyticsProvider>
               </PostHogProvider>
             </QueryProvider>
@@ -147,7 +146,7 @@ gtag('config', 'AW-17530915091');`,
               .dark,
               .dark-theme,
               :is(.dark, .dark-theme) :where(.radix-themes:not(.light, .light-theme)) {
-                --color-background: #080808;
+                --color-background: #0a0a0a;
               }
             `}
             </style>

@@ -1,20 +1,10 @@
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Video,
-  BarChart3,
-  Bot,
-  MessageSquare,
-  Shield,
-  FileText,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Shield, FileText } from "lucide-react";
 
 const footerData = {
   company: {
     name: "XMA Agency",
     description:
-      "Premier digital marketing agency specializing in video production, CRM integration, and performance marketing. Transform your business with our comprehensive digital solutions.",
+      "We help UAE luxury car rental companies turn inquiries into confirmed bookings through conversion-optimized websites, WhatsApp automation, and high-end ad creatives.",
     contact: [
       {
         icon: Phone,
@@ -37,12 +27,16 @@ const footerData = {
   },
   quickLinks: [
     {
-      text: "About Us",
-      href: "/about",
+      text: "Book a Strategy Call",
+      href: "/book",
     },
     {
       text: "Portfolio",
       href: "/portfolio",
+    },
+    {
+      text: "About",
+      href: "/about",
     },
     {
       text: "Blog",
@@ -52,6 +46,28 @@ const footerData = {
       text: "Contact",
       href: "/contact",
     },
+  ],
+  services: [
+    {
+      text: "XMA CRM System",
+      href: "/services/crm-solution",
+    },
+    // {
+    //   text: "Conversion Websites",
+    //   href: "/#luxury-booking-system",
+    // },
+    // {
+    //   text: "Ad Creatives",
+    //   href: "/#luxury-booking-system",
+    // },
+    // {
+    //   text: "Paid Advertising",
+    //   href: "/#luxury-booking-system",
+    // },
+    // {
+    //   text: "WhatsApp Automation",
+    //   href: "/#luxury-booking-system",
+    // },
   ],
   legal: [
     {

@@ -6,7 +6,7 @@ interface NavItem {
   href: string;
 }
 
-export interface ServiceItem extends NavItem {
+interface ServiceItem extends NavItem {
   icon: LucideIcon;
   description: string;
   comingSoon?: boolean;
