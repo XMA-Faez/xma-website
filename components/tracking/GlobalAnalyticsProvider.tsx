@@ -2,11 +2,17 @@
 
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 import { useTimeOnPage } from "@/hooks/useTimeOnPage";
+import { useAttribution } from "@/hooks/useAttribution";
+import { AttributionProvider } from "@/components/providers/AttributionProvider";
 
-export function GlobalAnalyticsProvider({ children }: { children: React.ReactNode }) {
-  // Enable global tracking for all pages
+export function GlobalAnalyticsProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   useScrollDepthTracking();
   useTimeOnPage();
-  
-  return <>{children}</>;
+  useAttribution();
+
+  return <AttributionProvider>{children}</AttributionProvider>;
 }
