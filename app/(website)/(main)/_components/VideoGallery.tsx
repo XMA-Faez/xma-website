@@ -101,7 +101,7 @@ const GalleryContent = ({ items }: { items: GalleryItem[] }) => {
         className={`relative box-border flex overflow-hidden ${
           isMobile
             ? "h-auto flex-col gap-4 p-0"
-            : "h-[175vh] flex-row gap-[2vw] p-[2vw]"
+            : "h-[175vh] flex-row gap-[2vw]"
         }`}
       >
         {isMobile ? (

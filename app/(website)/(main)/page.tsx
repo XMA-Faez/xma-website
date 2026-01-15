@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import HeroSection from "./_components/HeroSection";
 import SocialProofStrip from "./_components/SocialProofStrip";
 import StackingServicesSection from "./_components/StackingServicesSection";
+import WebsitesShowcaseSection from "./_components/WebsitesShowcaseSection";
 import ProofSection from "./_components/ProofSection";
 import FAQSection from "./_components/FAQSection";
 import WhyUsSection from "./_components/WhyUsSection";
-import WhatsAppWidget from "./_components/WhatsAppWidget";
 import CTASection from "./_components/CTASection";
 
 export const metadata: Metadata = {
@@ -142,11 +142,11 @@ export default function Home() {
         <HeroSection />
         <SocialProofStrip />
         <StackingServicesSection />
+        <WebsitesShowcaseSection />
         <ProofSection />
         <FAQSection />
         <WhyUsSection />
         <CTASection />
-        <WhatsAppWidget />
       </div>
     </>
   );

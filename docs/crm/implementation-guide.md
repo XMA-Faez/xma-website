@@ -10,16 +10,16 @@ This guide provides step-by-step implementation instructions for transforming th
 
 ```bash
 # Interactive features
-npm install zustand react-hook-form @hookform/resolvers zod recharts
+bun add zustand react-hook-form @hookform/resolvers zod recharts
 
 # Internationalization
-npm install next-intl @formatjs/intl-localematcher
+bun add next-intl @formatjs/intl-localematcher
 
 # Validation and utilities
-npm install validator dompurify date-fns
+bun add validator dompurify date-fns
 
 # Development dependencies
-npm install -D @types/validator @types/dompurify
+bun add -D @types/validator @types/dompurify
 ```
 
 ### 1.2 Project Structure Setup

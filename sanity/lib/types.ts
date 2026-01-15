@@ -151,3 +151,21 @@ export interface Gallery {
   cloudinaryVideos: CloudinaryAsset[]
   cloudinaryGraphics: CloudinaryAsset[]
 }
+
+export interface ShowcaseWebsite {
+  _id: string
+  _type: 'showcaseWebsite'
+  title: string
+  slug: SanitySlug
+  thumbnail: SanityImage
+  externalUrl: string
+  orderRank?: string
+  featured: boolean
+}
+
+export interface ShowcaseWebsiteCard {
+  _id: string
+  title: string
+  thumbnailUrl: string
+  externalUrl: string
+}

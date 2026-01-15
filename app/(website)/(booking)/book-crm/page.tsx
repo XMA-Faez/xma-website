@@ -3,8 +3,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Users, ChartBar, Lightning, Target } from "phosphor-react";
+import { useBookingTracking } from "@/hooks/useBookingTracking";
 
 export default function BookCRMPage() {
+  useBookingTracking({ bookingType: "crm" });
+
   React.useEffect(() => {
     // Load the form embed script
     const script = document.createElement('script');

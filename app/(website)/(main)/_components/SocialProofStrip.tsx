@@ -5,14 +5,12 @@ import { motion } from "framer-motion";
 import { LogoMarquee, type Logo } from "@/components/ui/LogoMarquee";
 
 const clientLogos: Logo[] = [
-  { src: "/logos/4Matic.jpg", alt: "4Matic", width: 100 },
-  { src: "/logos/ASUS.png", alt: "ASUS", width: 90 },
-  { src: "/logos/Casapons.png", alt: "Casapons", width: 120 },
-  { src: "/logos/DXtreme.svg", alt: "DXtreme", width: 110 },
-  { src: "/logos/TFG.png", alt: "TFG", width: 80 },
-  { src: "/logos/Tick.webp", alt: "Tick", width: 90 },
-  { src: "/logos/wyz-logo.png", alt: "WYZ", width: 100 },
-  { src: "/logos/packman_Logo.png", alt: "Packman", width: 110 },
+  { src: "/logos/4MAticlogo.png", alt: "4Matic", height: 40 },
+  { src: "/logos/ASUS-logo.png", alt: "ASUS", height: 130 },
+  { src: "/logos/DXtreme.png", alt: "DXtreme", height: 40 },
+  { src: "/logos/Tick.webp", alt: "Tick", height: 45 },
+  { src: "/logos/packman_Logo.png", alt: "Packman", height: 60 },
+  { src: "/logos/dreamdrives-logo.svg", alt: "Dream Drives", height: 50 },
 ];
 
 const SocialProofStrip = () => {
@@ -26,7 +24,7 @@ const SocialProofStrip = () => {
           viewport={{ once: true }}
           className="text-center text-sm text-slate-500 dark:text-gray-500 mb-6"
         >
-          Trusted by luxury car rental businesses across the UAE
+          Trusted by businesses across the UAE
         </motion.p>
 
         <motion.div

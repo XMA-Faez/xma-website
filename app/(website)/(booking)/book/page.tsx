@@ -3,8 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BookingIframe from "./_components/BookingIframe";
+import { useBookingTracking } from "@/hooks/useBookingTracking";
 
 export default function BookPage() {
+  useBookingTracking({ bookingType: "strategy" });
   return (
     <div className="min-h-screen w-full relative bg-white dark:bg-black">
       {/* Light mode background */}
