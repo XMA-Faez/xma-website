@@ -24,7 +24,7 @@ const HeroSection = () => {
           src={BlackGradient}
           alt=""
           fill
-          className="object-cover pointer-events-none select-none"
+          className="pointer-events-none select-none"
           priority
         />
       </div>
@@ -54,7 +54,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="heading-hero pb-2"
             >
-              Turn Luxury Car Inquiries Into Confirmed Bookings
+              Premium Websites For Luxury Car Rentals
             </motion.h1>
 
             <motion.p
@@ -63,9 +63,8 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-slate-600 dark:text-gray-400 mb-8 leading-relaxed"
             >
-              We help UAE luxury car rental companies increase their booking
-              rate by fixing what most agencies ignore: conversion, follow-up,
-              and WhatsApp response speed.
+              We craft websites that look as premium as your fleet — and
+              convert visitors into bookings.
             </motion.p>
 
             <motion.div
@@ -87,15 +86,15 @@ const HeroSection = () => {
                 <Link href="/book">Book a Strategy Call</Link>
               </ScanningButton>
 
-              <ScanningButton
-                onClick={scrollToSystem}
-                variant="outline"
-                color="white"
-                size="sm"
-                className="flex"
-              >
-                See How It Works
-              </ScanningButton>
+              {/* <ScanningButton */}
+              {/*   onClick={scrollToSystem} */}
+              {/*   variant="outline" */}
+              {/*   color="white" */}
+              {/*   size="sm" */}
+              {/*   className="flex" */}
+              {/* > */}
+              {/*   See How It Works */}
+              {/* </ScanningButton> */}
             </motion.div>
           </motion.div>
         </div>
