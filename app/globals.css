@@ -852,7 +852,7 @@ button::after {
   }
 
   .heading-hero {
-    @apply heading-gradient text-5xl/[1.07] md:text-7xl/[1.07];
+    @apply heading-gradient text-5xl/[1.07] md:text-6xl/[1.07];
   }
 
   .heading-section {
