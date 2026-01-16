@@ -1,6 +1,7 @@
 import type { StructureResolver } from 'sanity/structure'
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 
-export const structure: StructureResolver = (S) =>
+export const structure: StructureResolver = (S, context) =>
   S.list()
     .title('Content')
     .items([
@@ -17,4 +18,11 @@ export const structure: StructureResolver = (S) =>
             .title('Galleries')
             .defaultOrdering([{ field: 'title', direction: 'asc' }])
         ),
+      S.divider(),
+      orderableDocumentListDeskItem({
+        type: 'showcaseWebsite',
+        title: 'Showcase Websites',
+        S,
+        context,
+      }),
     ])

@@ -1,8 +1,9 @@
 "use client";
 
 import { motion, MotionValue } from "framer-motion";
-import type { Service } from "./servicesData";
+import type { Service, ServiceVisualTheme } from "./servicesData";
 import ServiceVisual from "./ServiceVisual";
+import { serviceColors } from "./serviceColors";
 
 interface StackingCardProps {
   service: Service;
@@ -14,6 +15,7 @@ interface StackingCardProps {
 
 const StackingCard = ({ service, index, y, scale, opacity }: StackingCardProps) => {
   const isEven = index % 2 === 1;
+  const themeColor = serviceColors[service.visualTheme].hex;
 
   return (
     <motion.div
@@ -23,19 +25,13 @@ const StackingCard = ({ service, index, y, scale, opacity }: StackingCardProps) 
         opacity,
         zIndex: index + 1,
       }}
-      className="absolute inset-0 flex items-center justify-center will-change-transform px-4 md:px-8"
+      className="absolute inset-0 flex items-center justify-center will-change-transform"
     >
       <div
-        className={`
-          w-full max-w-6xl h-auto
-          rounded-2xl md:rounded-3xl
-          bg-zinc-900/90
-          border border-white/10
-          shadow-2xl shadow-black/50
-          overflow-hidden
-          flex flex-col md:flex-row
-          ${isEven ? "md:flex-row-reverse" : "md:flex-row"}
-        `}
+        className={`w-full max-w-7xl h-auto rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl shadow-black/50 overflow-hidden flex flex-col ${isEven ? "md:flex-row-reverse" : "md:flex-row"}`}
+        style={{
+          background: `linear-gradient(135deg, ${themeColor}15 0%, oklch(0.15 0.01 0 / 0.95) 100%)`,
+        }}
       >
         <div className="w-full md:w-1/2 aspect-square p-4 md:p-5 lg:p-6">
           <ServiceVisual theme={service.visualTheme} iconName={service.iconName} />

@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import HeroSection from "./_components/HeroSection";
 import SocialProofStrip from "./_components/SocialProofStrip";
+import BrowserShowcaseSection from "./_components/BrowserShowcaseSection";
+import BenefitsSection from "./_components/BenefitsSection";
 import StackingServicesSection from "./_components/StackingServicesSection";
 import ProofSection from "./_components/ProofSection";
 import FAQSection from "./_components/FAQSection";
 import WhyUsSection from "./_components/WhyUsSection";
-import WhatsAppWidget from "./_components/WhatsAppWidget";
 import CTASection from "./_components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Luxury Car Rental Marketing | Increase Bookings | XMA",
+  title: "Premium Websites for Luxury Car Rentals | XMA",
   description:
-    "Turn luxury car inquiries into confirmed bookings. We help UAE luxury car rental companies increase their booking rate through conversion optimization, WhatsApp automation, and premium branding.",
+    "We craft websites that look as premium as your fleet — and convert visitors into bookings. Premium web design for luxury car rental companies.",
   keywords: [
     "luxury car rental marketing Dubai",
     "car rental advertising UAE",
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Luxury Car Rental Marketing | Turn Inquiries Into Bookings",
+    title: "Premium Websites for Luxury Car Rentals | XMA",
     description:
-      "Stop losing bookings to slow response times and weak follow-up. We optimize your entire conversion funnel for luxury car rentals in the UAE.",
+      "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
     url: "/",
     siteName: "XMA Agency",
     images: [
@@ -55,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Car Rental Marketing | Turn Inquiries Into Bookings",
+    title: "Premium Websites for Luxury Car Rentals | XMA",
     description:
-      "Stop losing bookings to slow response times and weak follow-up. We optimize your entire conversion funnel for luxury car rentals in the UAE.",
+      "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
     images: ["/images/luxury-car-twitter.jpg"],
     creator: "@xmaagency",
   },
@@ -99,9 +100,9 @@ const structuredData = {
       "@type": "WebPage",
       "@id": "https://www.xma.ae/#webpage",
       url: "https://www.xma.ae",
-      name: "Luxury Car Rental Marketing | Increase Bookings | XMA",
+      name: "Premium Websites for Luxury Car Rentals | XMA",
       description:
-        "Turn luxury car inquiries into confirmed bookings. Conversion optimization, WhatsApp automation, and premium branding for UAE luxury car rental companies.",
+        "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
       inLanguage: "en-AE",
       isPartOf: {
         "@id": "https://www.xma.ae/#website",
@@ -113,13 +114,13 @@ const structuredData = {
     },
     {
       "@type": "Service",
-      name: "Luxury Car Rental Marketing",
+      name: "Premium Website Design for Luxury Car Rentals",
       description:
-        "Complete marketing and conversion optimization service for UAE luxury car rental companies, delivering increased booking rates through WhatsApp automation, premium branding, and qualified lead generation.",
+        "Premium website design and development for luxury car rental companies. We craft websites that look as premium as your fleet and convert visitors into bookings.",
       provider: {
         "@id": "https://www.xma.ae/#organization",
       },
-      serviceType: "Digital Marketing",
+      serviceType: "Web Design and Development",
       areaServed: "United Arab Emirates",
       audience: {
         "@type": "Audience",
@@ -141,12 +142,13 @@ export default function Home() {
       <div className="min-h-screen w-full relative bg-zinc-950">
         <HeroSection />
         <SocialProofStrip />
+        <BrowserShowcaseSection />
+        <BenefitsSection />
         <StackingServicesSection />
         <ProofSection />
         <FAQSection />
         <WhyUsSection />
         <CTASection />
-        <WhatsAppWidget />
       </div>
     </>
   );

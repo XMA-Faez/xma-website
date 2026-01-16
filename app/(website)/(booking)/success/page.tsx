@@ -1,10 +1,28 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useEffect, useRef } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
+import { useConversionTracking } from "@/hooks/useConversionTracking";
 
 export default function SuccessPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const { trackPaymentCompleted } = useConversionTracking();
+  const hasTracked = useRef(false);
+
+  useEffect(() => {
+    if (hasTracked.current) return;
+    hasTracked.current = true;
+
+    const bookingType = searchParams.get("type") as "strategy" | "crm" | null;
+    const value = searchParams.get("value");
+
+    trackPaymentCompleted(value ? parseFloat(value) : undefined, "USD", {
+      booking_type: bookingType || "strategy",
+      source: "success_page",
+    });
+  }, [searchParams, trackPaymentCompleted]);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
