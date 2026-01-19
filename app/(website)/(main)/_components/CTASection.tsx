@@ -7,7 +7,7 @@ import LeadForm from "@/app/(website)/(booking)/book/_components/LeadForm";
 
 const CTASection = () => {
   return (
-    <div className="relative min-h-[70vh] flex items-center">
+    <div className="relative min-h-svh md:min-h-[70vh] flex items-center overflow-x-clip">
       <div
         className="absolute inset-0"
         style={{
@@ -20,16 +20,16 @@ const CTASection = () => {
         }}
       />
 
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none overflow-clip">
         <motion.div
-          className="absolute w-64 h-64 rounded-full"
+          className="absolute w-64 h-64 rounded-full will-change-transform"
           style={{
             background: `radial-gradient(circle, oklch(0.5 0.18 250), transparent 70%)`,
             top: "10%",
             right: "15%",
           }}
           animate={{
-            scale: [1, 1.2, 1],
+            scale: [1, 1.1, 1],
             opacity: [0.15, 0.25, 0.15],
           }}
           transition={{
@@ -39,14 +39,14 @@ const CTASection = () => {
           }}
         />
         <motion.div
-          className="absolute w-96 h-96 rounded-full"
+          className="absolute w-96 h-96 rounded-full will-change-transform hidden md:block"
           style={{
             background: `radial-gradient(circle, oklch(0.4 0.15 220), transparent 70%)`,
             bottom: "5%",
             left: "10%",
           }}
           animate={{
-            scale: [1.1, 1, 1.1],
+            scale: [1, 1.05, 1],
             opacity: [0.12, 0.22, 0.12],
           }}
           transition={{
@@ -57,14 +57,14 @@ const CTASection = () => {
           }}
         />
         <motion.div
-          className="absolute w-48 h-48 rounded-full"
+          className="absolute w-48 h-48 rounded-full will-change-transform hidden md:block"
           style={{
             background: `radial-gradient(circle, oklch(0.45 0.2 280), transparent 70%)`,
             top: "50%",
             left: "60%",
           }}
           animate={{
-            scale: [1, 1.15, 1],
+            scale: [1, 1.08, 1],
             opacity: [0.1, 0.2, 0.1],
           }}
           transition={{
@@ -133,7 +133,7 @@ const CTASection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 min-h-[520px] md:min-h-[480px]"
           >
             <div className="mb-6 text-center">
               <h3 className="text-xl font-semibold text-white mb-2">
