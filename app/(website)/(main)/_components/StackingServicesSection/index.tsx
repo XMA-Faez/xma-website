@@ -30,7 +30,7 @@ const StackingServicesSection = () => {
             viewport={{ once: true }}
             className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-2 block"
           >
-            The System
+            Our Services
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -39,7 +39,7 @@ const StackingServicesSection = () => {
             viewport={{ once: true }}
             className="heading-section text-white"
           >
-            The Luxury Booking System
+            Everything You Need to Scale
           </motion.h2>
         </div>
 

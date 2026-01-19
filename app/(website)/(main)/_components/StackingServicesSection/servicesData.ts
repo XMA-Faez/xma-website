@@ -16,20 +16,6 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "website",
-    iconName: "solar:monitor-smartphone-bold",
-    title: "Conversion-Optimized Website",
-    description:
-      "Built to push visitors toward action, not just look good. Every element is designed to convert browsers into bookers.",
-    features: [
-      "Mobile-first luxury experience",
-      "WhatsApp integration built-in",
-      "Speed-optimized for UAE networks",
-      "Trust signals strategically placed",
-    ],
-    visualTheme: "website",
-  },
-  {
     id: "creatives",
     iconName: "solar:clapperboard-play-bold",
     title: "High-End Ad Creatives",

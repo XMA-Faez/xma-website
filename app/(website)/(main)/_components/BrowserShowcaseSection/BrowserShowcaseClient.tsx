@@ -60,7 +60,7 @@ const BrowserShowcaseClient = ({ websites }: BrowserShowcaseClientProps) => {
           activeIndex={activeIndex}
           onTabChange={handleTabChange}
         />
-        <BrowserAddressBar url={activeWebsite.externalUrl} onVisit={handleVisit} />
+        <BrowserAddressBar url={activeWebsite.externalUrl} />
         <BrowserContent
           websites={websites}
           activeIndex={activeIndex}

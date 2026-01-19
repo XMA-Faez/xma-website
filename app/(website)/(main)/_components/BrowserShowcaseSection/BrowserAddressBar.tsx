@@ -1,11 +1,10 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { Lock, ArrowUpRight } from 'lucide-react'
+import { Lock } from 'lucide-react'
 
 interface BrowserAddressBarProps {
   url: string
-  onVisit?: () => void
 }
 
 const formatDisplayUrl = (url: string): string => {
@@ -17,7 +16,7 @@ const formatDisplayUrl = (url: string): string => {
   }
 }
 
-const BrowserAddressBar = ({ url, onVisit }: BrowserAddressBarProps) => {
+const BrowserAddressBar = ({ url }: BrowserAddressBarProps) => {
   return (
     <div className="flex items-center gap-3 px-4 py-2 bg-zinc-900 border-b border-white/5">
       <div className="flex items-center gap-2 flex-1 px-3 py-1.5 rounded-md bg-zinc-800/80 border border-white/5">
@@ -35,16 +34,6 @@ const BrowserAddressBar = ({ url, onVisit }: BrowserAddressBarProps) => {
           </motion.span>
         </AnimatePresence>
       </div>
-      {onVisit && (
-        <button
-          onClick={onVisit}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-primary-400 hover:text-primary-300 transition-colors rounded-md hover:bg-white/5"
-          aria-label={`Visit ${formatDisplayUrl(url)}`}
-        >
-          Visit
-          <ArrowUpRight className="w-3.5 h-3.5" />
-        </button>
-      )}
     </div>
   )
 }

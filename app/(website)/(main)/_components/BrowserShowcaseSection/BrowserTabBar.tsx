@@ -1,63 +1,108 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
-import type { ShowcaseWebsiteCard } from '@/sanity/lib/types'
-import Image from 'next/image'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import type { ShowcaseWebsiteCard } from "@/sanity/lib/types";
+import Image from "next/image";
+import { Globe } from "lucide-react";
 
 interface BrowserTabBarProps {
-  websites: ShowcaseWebsiteCard[]
-  activeIndex: number
-  onTabChange: (index: number) => void
+  websites: ShowcaseWebsiteCard[];
+  activeIndex: number;
+  onTabChange: (index: number) => void;
 }
 
-const extractDomain = (url: string): string => {
+const getBaseUrl = (url: string): string => {
   try {
-    const urlObj = new URL(url)
-    return urlObj.hostname
+    const urlObj = new URL(url);
+    return `${urlObj.protocol}//${urlObj.hostname}`;
   } catch {
-    return url
+    return url;
   }
+};
+
+const getFaviconSources = (url: string): string[] => {
+  const baseUrl = getBaseUrl(url);
+  return [
+    `${baseUrl}/favicon.ico`,
+    `${baseUrl}/favicon.png`,
+    `${baseUrl}/icon.png`,
+    `${baseUrl}/apple-touch-icon.png`,
+  ];
+};
+
+interface FaviconProps {
+  url: string;
 }
 
-const getFaviconUrl = (url: string): string => {
-  const domain = extractDomain(url)
-  return `https://www.google.com/s2/favicons?domain=${domain}&sz=32`
-}
+const Favicon = ({ url }: FaviconProps) => {
+  const sources = getFaviconSources(url);
+  const [sourceIndex, setSourceIndex] = useState(0);
+  const [hasError, setHasError] = useState(false);
+
+  const handleError = () => {
+    if (sourceIndex < sources.length - 1) {
+      setSourceIndex(sourceIndex + 1);
+    } else {
+      setHasError(true);
+    }
+  };
+
+  if (hasError) {
+    return <Globe className="w-4 h-4 text-neutral-500" />;
+  }
+
+  return (
+    <Image
+      src={sources[sourceIndex]}
+      alt=""
+      width={16}
+      height={16}
+      className="object-contain"
+      unoptimized
+      onError={handleError}
+    />
+  );
+};
 
 const truncateTitle = (title: string, maxLength: number = 18): string => {
-  if (title.length <= maxLength) return title
-  return `${title.slice(0, maxLength)}...`
-}
+  if (title.length <= maxLength) return title;
+  return `${title.slice(0, maxLength)}...`;
+};
 
 const tabVariants = {
   initial: { opacity: 0, y: -10 },
   animate: { opacity: 1, y: 0 },
-}
+};
 
-const BrowserTabBar = ({ websites, activeIndex, onTabChange }: BrowserTabBarProps) => {
+const BrowserTabBar = ({
+  websites,
+  activeIndex,
+  onTabChange,
+}: BrowserTabBarProps) => {
   const handleKeyDown = (event: React.KeyboardEvent, currentIndex: number) => {
-    const lastIndex = websites.length - 1
+    const lastIndex = websites.length - 1;
 
     switch (event.key) {
-      case 'ArrowRight':
-        event.preventDefault()
-        onTabChange(currentIndex === lastIndex ? 0 : currentIndex + 1)
-        break
-      case 'ArrowLeft':
-        event.preventDefault()
-        onTabChange(currentIndex === 0 ? lastIndex : currentIndex - 1)
-        break
-      case 'Home':
-        event.preventDefault()
-        onTabChange(0)
-        break
-      case 'End':
-        event.preventDefault()
-        onTabChange(lastIndex)
-        break
+      case "ArrowRight":
+        event.preventDefault();
+        onTabChange(currentIndex === lastIndex ? 0 : currentIndex + 1);
+        break;
+      case "ArrowLeft":
+        event.preventDefault();
+        onTabChange(currentIndex === 0 ? lastIndex : currentIndex - 1);
+        break;
+      case "Home":
+        event.preventDefault();
+        onTabChange(0);
+        break;
+      case "End":
+        event.preventDefault();
+        onTabChange(lastIndex);
+        break;
     }
-  }
+  };
 
   return (
     <div
@@ -66,7 +111,7 @@ const BrowserTabBar = ({ websites, activeIndex, onTabChange }: BrowserTabBarProp
       className="flex items-end gap-1 px-2 pt-2 bg-zinc-800/50 overflow-x-auto scrollbar-hide"
     >
       {websites.map((website, index) => {
-        const isActive = index === activeIndex
+        const isActive = index === activeIndex;
 
         return (
           <motion.button
@@ -83,36 +128,30 @@ const BrowserTabBar = ({ websites, activeIndex, onTabChange }: BrowserTabBarProp
             onClick={() => onTabChange(index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
             className={cn(
-              'relative flex items-center gap-2 px-3 py-2 rounded-t-lg min-w-[120px] max-w-[180px]',
-              'text-sm font-medium transition-colors duration-200',
-              'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900',
+              "relative flex items-center gap-2 px-3 py-2 rounded-t-lg min-w-[160px] max-w-[180px] mb-2",
+              "text-sm font-medium transition-colors duration-200",
+              "focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900",
               isActive
-                ? 'bg-zinc-900 text-white'
-                : 'bg-zinc-800/70 text-neutral-400 hover:text-neutral-200 hover:bg-zinc-800'
+                ? "bg-zinc-900 text-white"
+                : "bg-zinc-800/70 text-neutral-400 hover:text-neutral-200 hover:bg-zinc-800",
             )}
           >
-            <div className="relative w-4 h-4 flex-shrink-0">
-              <Image
-                src={getFaviconUrl(website.externalUrl)}
-                alt=""
-                fill
-                className="object-contain"
-                unoptimized
-              />
+            <div className="flex items-center justify-center w-4 h-4 flex-shrink-0">
+              <Favicon url={website.externalUrl} />
             </div>
             <span className="truncate">{truncateTitle(website.title)}</span>
             {isActive && (
               <motion.div
                 layoutId="activeTabIndicator"
                 className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-500"
-                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                transition={{ type: "spring", stiffness: 500, damping: 30 }}
               />
             )}
           </motion.button>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default BrowserTabBar
+export default BrowserTabBar;

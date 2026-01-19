@@ -6,6 +6,7 @@ const showcaseQuery = `*[_type == "showcaseWebsite" && featured == true] | order
   _id,
   title,
   thumbnail,
+  mobileThumbnail,
   externalUrl
 }`;
 
@@ -23,6 +24,9 @@ export async function getFeaturedShowcaseWebsites(
       thumbnailUrl: website.thumbnail
         ? urlFor(website.thumbnail).quality(95).auto("format").url()
         : "",
+      mobileThumbnailUrl: website.mobileThumbnail
+        ? urlFor(website.mobileThumbnail).quality(95).auto("format").url()
+        : undefined,
       externalUrl: website.externalUrl,
     }));
   } catch (error) {

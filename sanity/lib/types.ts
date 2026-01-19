@@ -158,6 +158,7 @@ export interface ShowcaseWebsite {
   title: string
   slug: SanitySlug
   thumbnail: SanityImage
+  mobileThumbnail?: SanityImage
   externalUrl: string
   orderRank?: string
   featured: boolean
@@ -167,5 +168,6 @@ export interface ShowcaseWebsiteCard {
   _id: string
   title: string
   thumbnailUrl: string
+  mobileThumbnailUrl?: string
   externalUrl: string
 }

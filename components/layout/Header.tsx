@@ -31,6 +31,7 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
 

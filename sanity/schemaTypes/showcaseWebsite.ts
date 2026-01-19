@@ -35,6 +35,15 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'mobileThumbnail',
+      title: 'Mobile Thumbnail',
+      description: 'Mobile screenshot of the website (recommended: 390x844)',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'externalUrl',
       title: 'Website URL',
       type: 'url',
