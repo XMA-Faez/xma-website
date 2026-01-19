@@ -27,12 +27,13 @@ const HeroSection = () => {
           className="pointer-events-none select-none"
           priority
         />
+        <div className="bg-gradient-to-b from-transparent to-black absolute inset-0 z-0"></div>
       </div>
 
       {/* Background Image */}
       <div className="absolute inset-0 z-10">
         <Image
-          src="/porsche.png"
+          src="/car.png"
           alt="Luxury Porsche"
           className="object-contain absolute bottom-0 right-0 w-full max-w-[103rem] object-bottom -scale-x-100 pointer-events-none select-none"
           priority
