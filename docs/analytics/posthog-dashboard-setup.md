@@ -7,7 +7,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 | Dashboard | Purpose | Priority |
 |-----------|---------|----------|
 | Executive Overview | High-level business metrics | ⭐ High |
-| Booking Funnel | Conversion tracking | ⭐ High |
+| Conversions | Booking completion tracking | ⭐ High |
 | Lead Generation | Form & contact metrics | ⭐ High |
 | Engagement & Content | User behavior | Medium |
 | Attribution & Marketing | Traffic sources | Medium |
@@ -66,43 +66,11 @@ This guide provides the complete configuration for setting up analytics dashboar
 
 ---
 
-## 2. Booking Funnel Dashboard
+## 2. Conversions Dashboard
 
-**Description**: Track the complete booking journey from page view to completed booking
+**Description**: Track completed bookings and conversion metrics
 
-### Insight 2.1: Booking Conversion Funnel
-- **Type**: Funnel
-- **Steps**:
-  1. `booking_page_view` - "Viewed Booking Page"
-  2. `booking_widget_interaction` - "Interacted with Widget"
-  3. `high_engagement_session` - "High Engagement (2+ min)"
-  4. `booking_completed` - "Completed Booking"
-- **Conversion window**: 7 days
-- **Display**: Horizontal funnel
-
-### Insight 2.2: Booking Page Views by Type
-- **Type**: Trends
-- **Event**: `booking_page_view`
-- **Math**: Total count
-- **Breakdown**: `booking_type` (strategy vs crm)
-- **Date range**: Last 30 days
-- **Display**: Bar chart
-
-### Insight 2.3: Booking Abandonment Rate
-- **Type**: Trends
-- **Event**: `booking_abandoned`
-- **Math**: Total count
-- **Date range**: Last 30 days
-- **Display**: Line graph
-
-### Insight 2.4: Average Time to Widget Interaction
-- **Type**: Trends
-- **Event**: `booking_widget_interaction`
-- **Math**: Average of `time_on_page_seconds`
-- **Date range**: Last 30 days
-- **Display**: Bold number
-
-### Insight 2.5: Completed Bookings Over Time
+### Insight 2.1: Completed Bookings Over Time
 - **Type**: Trends
 - **Event**: `booking_completed`
 - **Math**: Total count
@@ -110,12 +78,43 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Interval**: Day
 - **Display**: Line graph
 
-### Insight 2.6: Booking Abandonment Reasons
+### Insight 2.2: Bookings by Type
 - **Type**: Trends
-- **Event**: `booking_abandoned`
-- **Breakdown**: `engagement_level`
+- **Event**: `booking_completed`
+- **Math**: Total count
+- **Breakdown**: `booking_type` (strategy vs crm)
+- **Date range**: Last 30 days
+- **Display**: Bar chart
+
+### Insight 2.3: Conversion by Traffic Source
+- **Type**: Trends
+- **Event**: `booking_completed`
+- **Math**: Total count
+- **Breakdown**: `first_touch_source`
 - **Date range**: Last 30 days
 - **Display**: Pie chart
+
+### Insight 2.4: Total Bookings (Bold Number)
+- **Type**: Trends
+- **Event**: `booking_completed`
+- **Math**: Total count
+- **Date range**: Last 30 days
+- **Display**: Bold number
+
+### Insight 2.5: Weekly Booking Trend
+- **Type**: Trends
+- **Event**: `booking_completed`
+- **Math**: Total count
+- **Date range**: Last 12 weeks
+- **Interval**: Week
+- **Display**: Bar chart
+
+### Insight 2.6: Conversion Value
+- **Type**: Trends
+- **Event**: `booking_completed`
+- **Math**: Sum of `value`
+- **Date range**: Last 30 days
+- **Display**: Bold number
 
 ---
 
@@ -273,8 +272,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Type**: Funnel
 - **Steps**:
   1. `landing_page_view` - "First Visit"
-  2. `booking_page_view` - "Viewed Booking"
-  3. `booking_completed` - "Converted"
+  2. `booking_completed` - "Converted"
 - **Conversion window**: 30 days
 - **Breakdown**: `traffic_source`
 - **Display**: Funnel with breakdown
@@ -362,7 +360,6 @@ This guide provides the complete configuration for setting up analytics dashboar
 
 4. **Create Cohorts** (optional but recommended)
    - [ ] "Converted Users" - users who triggered `booking_completed`
-   - [ ] "High Intent Users" - users who triggered `high_engagement_session`
    - [ ] "Form Abandoners" - users who triggered `form_start` but not `contact_form_submit`
 
 ---
@@ -376,11 +373,7 @@ These are the custom events defined in `lib/posthog-events.ts`:
 | `scroll_depth` | User scrolled to 25%, 50%, 75%, or 100% |
 | `time_on_page` | Periodic time tracking (every 30s) |
 | `page_exit` | User left the page |
-| `booking_page_view` | User viewed booking page |
-| `booking_widget_interaction` | User engaged with booking widget (30s+) |
 | `booking_completed` | Booking was completed |
-| `booking_abandoned` | User left booking page without completing |
-| `high_engagement_session` | User spent 2+ minutes on booking page |
 | `form_start` | User started filling a form |
 | `contact_form_submit` | Contact form was submitted |
 | `lead_captured` | Lead was successfully captured |

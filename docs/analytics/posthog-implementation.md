@@ -33,13 +33,9 @@ GlobalAnalyticsProvider
 | `landing_page_view` | New session starts | `landing_page`, `traffic_source`, `utm_*`, `is_first_session` |
 | `attribution_captured` | UTM params detected | `utm_source`, `utm_medium`, `utm_campaign` |
 
-### Booking Funnel Events
+### Conversion Events
 | Event | Trigger | Key Properties |
 |-------|---------|----------------|
-| `booking_page_view` | User lands on /book or /book-crm | `booking_type` |
-| `booking_widget_interaction` | 30s on booking page | `booking_type`, `time_on_booking_page` |
-| `high_engagement_session` | 2min on booking page | `booking_type`, `likely_completing_form` |
-| `booking_abandoned` | Page exit without conversion | `booking_type`, `time_on_booking_page` |
 | `booking_completed` | Successful booking | `booking_type`, `first_touch_*`, `last_touch_*` |
 
 ### Experiment Events
@@ -62,23 +58,6 @@ const { getFirstTouchAttribution, getLastTouchAttribution } = useAttribution();
 **Storage Keys:**
 - `xma_first_touch_attribution` - First visit attribution (never overwritten)
 - `xma_attribution` - Last touch attribution (updated each session)
-
-### `useBookingTracking(options)`
-Tracks booking page engagement with time-based thresholds.
-
-```tsx
-import { useBookingTracking } from "@/hooks/useBookingTracking";
-
-// In booking page component
-useBookingTracking({ bookingType: "strategy" });
-// or
-useBookingTracking({ bookingType: "crm" });
-```
-
-**Options:**
-- `bookingType`: "strategy" | "crm"
-- `engagementThresholdSeconds`: Default 30
-- `highEngagementThresholdSeconds`: Default 120
 
 ### `useConversionTracking()`
 Tracks conversions with full attribution data.
@@ -159,7 +138,7 @@ import { HeadlineExperiment } from "@/components/experiments";
 | Dashboard | Purpose |
 |-----------|---------|
 | **Executive Overview** | DAUs, traffic, conversions, web vitals |
-| **Booking Funnel** | Full booking conversion path |
+| **Conversions** | Booking completion tracking |
 | **Lead Generation** | Form performance and leads |
 | **Engagement & Content** | Scroll depth, time on page |
 | **Attribution & Marketing** | UTM tracking, traffic sources |
@@ -167,36 +146,28 @@ import { HeadlineExperiment } from "@/components/experiments";
 
 ### Funnels to Create
 
-**1. Primary Conversion Funnel**
+**1. Engagement to Conversion**
 ```
-$pageview → booking_page_view → booking_widget_interaction → booking_completed
-```
-
-**2. Engagement to Conversion**
-```
-$pageview → scroll_depth (≥50%) → cta_button_click → booking_page_view → booking_completed
+$pageview → scroll_depth (≥50%) → cta_button_click → booking_completed
 ```
 
-**3. Contact Form Funnel**
+**2. Contact Form Funnel**
 ```
 form_start → contact_form_submit → lead_captured
 ```
 
 ### Cohorts to Define
 
-1. **High-Intent Non-Converters**
-   - `booking_page_view` = true AND `booking_completed` = false
-
-2. **Engaged Non-Converters**
+1. **Engaged Non-Converters**
    - `scroll_depth` >= 75% AND `time_on_page` >= 60s AND `has_converted` = false
 
-3. **Paid Traffic**
+2. **Paid Traffic**
    - `$current_utm_medium` = "cpc" OR `$current_utm_medium` = "paid"
 
-4. **First-Time Converters**
+3. **First-Time Converters**
    - `has_converted` = true AND `first_conversion_date` in last 30 days
 
-5. **Form Abandoners**
+4. **Form Abandoners**
    - `form_start` = true AND `contact_form_submit` = false
 
 ### Feature Flags to Configure
@@ -213,15 +184,6 @@ form_start → contact_form_submit → lead_captured
 2. Open DevTools → Application → Local Storage
 3. Verify `xma_first_touch_attribution` and `xma_attribution` keys exist
 4. Check PostHog for `landing_page_view` event with UTM data
-
-### Funnel Testing
-1. Navigate: Homepage → Click CTA → /book page
-2. Stay 30+ seconds on booking page
-3. Leave the page
-4. Check PostHog for events:
-   - `booking_page_view`
-   - `booking_widget_interaction`
-   - `booking_abandoned`
 
 ### Experiment Testing
 1. Enable feature flag in PostHog dashboard

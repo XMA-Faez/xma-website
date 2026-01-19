@@ -53,12 +53,8 @@ export const POSTHOG_EVENTS = {
   LANDING_PAGE_VIEW: "landing_page_view",
   ATTRIBUTION_CAPTURED: "attribution_captured",
 
-  // Booking Funnel Events
-  BOOKING_PAGE_VIEW: "booking_page_view",
-  BOOKING_WIDGET_INTERACTION: "booking_widget_interaction",
+  // Conversion Events
   BOOKING_COMPLETED: "booking_completed",
-  BOOKING_ABANDONED: "booking_abandoned",
-  HIGH_ENGAGEMENT_SESSION: "high_engagement_session",
 
   // Experiment Events
   EXPERIMENT_VIEWED: "experiment_viewed",
@@ -158,10 +154,8 @@ interface AttributionEventProperties extends BaseEventProperties {
 
 interface BookingEventProperties extends BaseEventProperties {
   booking_type: "strategy" | "crm";
-  booking_step?: string;
-  time_on_booking_page?: number;
-  engagement_threshold_seconds?: number;
-  likely_completing_form?: boolean;
+  value?: number;
+  currency?: string;
 }
 
 interface ConversionEventProperties extends BaseEventProperties {
