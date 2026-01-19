@@ -9,8 +9,8 @@ import { PhotoGallerySkiper } from './VideoGallery'
 
 const ProofSection = () => {
   return (
-    <Section size="xl">
-      <div className="mb-6 text-center">
+    <Section size="xl" className="!px-0 sm:px-0">
+      <div className="mb-6 text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

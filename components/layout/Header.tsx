@@ -40,7 +40,7 @@ export function Header() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-1/2 max-w-6xl xl:max-w-7xl -translate-x-1/2 transform z-50 h-16 w-full px-4 md:px-6"
+      className="fixed top-0 left-1/2 max-w-6xl xl:max-w-7xl -translate-x-1/2 transform z-50 h-16 w-full sm:px-4 md:px-6"
     >
       {isDesktop ? (
         <motion.div
