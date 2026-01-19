@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CaretDown } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
 import Link from "next/link";
+import { useTrackCTA } from "@/hooks/useTrackEvent";
 
 const faqData = [
   {
@@ -41,6 +42,7 @@ const faqData = [
 
 const FAQPage = () => {
   const [openFAQ, setOpenFAQ] = useState<string[]>([]);
+  const trackCTA = useTrackCTA();
 
   const toggleFAQ = (id: string) => {
     setOpenFAQ((prev) =>
@@ -151,11 +153,12 @@ const FAQPage = () => {
               variant="primary"
               size="md"
               color="blue"
-              trackingLocation="faq-page"
-              trackingProps={{
-                page: "faq",
-                section: "bottom-cta",
-              }}
+              onClick={() =>
+                trackCTA("Book a Strategy Call", "faq-page", {
+                  page: "faq",
+                  section: "bottom-cta",
+                })
+              }
             >
               <Link href="/book">Book a Strategy Call</Link>
             </ScanningButton>

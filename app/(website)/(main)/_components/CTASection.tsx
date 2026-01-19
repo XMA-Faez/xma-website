@@ -2,13 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ScanningButton } from "@/components/ui/ScanningButton";
-import Link from "next/link";
 import Section from "@/components/ui/section";
+import LeadForm from "@/app/(website)/(booking)/book/_components/LeadForm";
 
 const CTASection = () => {
   return (
-    <div className="relative min-h-[70vh] flex items-center overflow-hidden">
+    <div className="relative min-h-[70vh] flex items-center">
       <div
         className="absolute inset-0"
         style={{
@@ -21,7 +20,7 @@ const CTASection = () => {
         }}
       />
 
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
         <motion.div
           className="absolute w-64 h-64 rounded-full"
           style={{
@@ -78,7 +77,7 @@ const CTASection = () => {
       </div>
 
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(to right, oklch(1 0 0) 1px, transparent 1px),
@@ -89,64 +88,64 @@ const CTASection = () => {
       />
 
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{
           boxShadow: "inset 0 0 100px oklch(0 0 0 / 0.4)",
         }}
       />
 
-      <Section size="lg" padding="lg" className="relative z-10 w-full">
-        <div className="text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <Section size="xl" padding="lg" className="relative z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="heading-section lg:text-6xl text-white mb-6"
+            className="text-center lg:text-left"
           >
-            Ready to Turn Inquiries Into Bookings?
-          </motion.h2>
+            <h2 className="heading-section lg:text-6xl text-white mb-6">
+              Ready to Turn Inquiries Into Bookings?
+            </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto"
-          >
-            Book a strategy call. We&apos;ll review your current setup and show
-            you exactly where bookings are leaking.
-          </motion.p>
+            <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl mx-auto lg:mx-0">
+              Share your goals with us and we&apos;ll show you exactly where
+              bookings are leaking and how to fix them.
+            </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <ScanningButton
-              variant="primary"
-              size="lg"
-              color="white"
-              trackingLocation="cta-section"
-              trackingProps={{
-                page: "home",
-                section: "cta",
-              }}
-            >
-              <Link href="/book">Book a Strategy Call</Link>
-            </ScanningButton>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-white/60">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                <span>Free consultation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>24hr response</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span>No commitment</span>
+              </div>
+            </div>
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-white/50 text-sm mt-8"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8"
           >
-            No commitment required. See if we&apos;re a good fit.
-          </motion.p>
+            <div className="mb-6 text-center">
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Get Started Today
+              </h3>
+              <p className="text-white/60 text-sm">
+                Fill out the form and we&apos;ll be in touch within 24 hours
+              </p>
+            </div>
+
+            <LeadForm variant="compact" source="cta_section" />
+          </motion.div>
         </div>
       </Section>
     </div>

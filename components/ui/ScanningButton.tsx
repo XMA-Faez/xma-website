@@ -2,7 +2,6 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { useTrackCTA } from "@/hooks/useTrackEvent";
 
 // CSS @property definitions for smooth gradient transitions
 const cssProperties = `
@@ -193,26 +192,10 @@ interface ScanningButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof scanningButtonVariants> {
   children: React.ReactNode;
-  trackingLocation?: string; // Optional location identifier for event tracking
-  trackingProps?: Record<string, unknown>; // Additional properties for event tracking
 }
 
 const ScanningButton = React.forwardRef<HTMLButtonElement, ScanningButtonProps>(
-  (
-    {
-      children,
-      variant,
-      size,
-      color,
-      className,
-      trackingLocation,
-      trackingProps,
-      ...props
-    },
-    ref,
-  ) => {
-    const trackCTA = useTrackCTA();
-
+  ({ children, variant, size, color, className, ...props }, ref) => {
     const getShimmerColor = () => {
       switch (color) {
         case "emerald":
@@ -232,13 +215,6 @@ const ScanningButton = React.forwardRef<HTMLButtonElement, ScanningButtonProps>(
     };
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      // Track the CTA click event
-      if (trackingLocation) {
-        const buttonText = typeof children === "string" ? children : "button";
-        trackCTA(buttonText, trackingLocation, trackingProps);
-      }
-
-      // Call original onClick if provided
       props.onClick?.(e);
     };
 

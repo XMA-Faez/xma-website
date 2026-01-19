@@ -7,8 +7,11 @@ import Link from "next/link";
 import { CaretDown } from "phosphor-react";
 import Image from "next/image";
 import BlackGradient from "@/public/black-gradient.jpg";
+import { useTrackCTA } from "@/hooks/useTrackEvent";
 
 const HeroSection = () => {
+  const trackCTA = useTrackCTA();
+
   const scrollToSystem = () => {
     const systemSection = document.getElementById("luxury-booking-system");
     if (systemSection) {
@@ -78,11 +81,12 @@ const HeroSection = () => {
                 variant="primary"
                 size="sm"
                 color="white"
-                trackingLocation="hero"
-                trackingProps={{
-                  page: "home",
-                  section: "hero",
-                }}
+                onClick={() =>
+                  trackCTA("Book a Strategy Call", "hero", {
+                    page: "home",
+                    section: "hero",
+                  })
+                }
               >
                 <Link href="/book">Book a Strategy Call</Link>
               </ScanningButton>

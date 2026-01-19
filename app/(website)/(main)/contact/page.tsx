@@ -2,63 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Envelope } from "phosphor-react";
 import { ScanningButton } from "@/components/ui/ScanningButton";
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { useState } from "react";
 import { useTrackEvent } from "@/hooks/useTrackEvent";
 import { POSTHOG_EVENTS } from "@/lib/posthog-events";
+import LeadForm from "@/app/(website)/(booking)/book/_components/LeadForm";
 
 export default function ContactPage() {
-  const [showThankYou, setShowThankYou] = useState(false);
-  const [formStarted, setFormStarted] = useState(false);
   const trackEvent = useTrackEvent();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const formData = new FormData(e.target as HTMLFormElement);
-    const formValues = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      company: formData.get("company") as string,
-      message: formData.get("message") as string,
-    };
-    
-    // Track form submission
-    trackEvent(POSTHOG_EVENTS.CONTACT_FORM_SUBMIT, {
-      form_name: "contact_form",
-      form_location: "contact_page",
-      has_message: formValues.message?.length > 0,
-      message_length: formValues.message?.length,
-    });
-    
-    // Track lead captured
-    trackEvent(POSTHOG_EVENTS.LEAD_CAPTURED, {
-      lead_source: "contact_form",
-      company_provided: formValues.company?.length > 0,
-    });
-    
-    setShowThankYou(true);
-  };
-  
-  const handleFormFocus = () => {
-    if (!formStarted) {
-      setFormStarted(true);
-      trackEvent(POSTHOG_EVENTS.FORM_START, {
-        form_name: "contact_form",
-        form_location: "contact_page",
-      });
-    }
-  };
 
   return (
     <div className="min-h-screen w-full relative bg-white dark:bg-black">
@@ -125,56 +76,7 @@ export default function ContactPage() {
                 <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
                   Send us a message
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Input
-                      name="name"
-                      placeholder="Your Name"
-                      className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
-                      onFocus={handleFormFocus}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="Email Address"
-                      className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
-                      onFocus={handleFormFocus}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="company"
-                      placeholder="Company Name"
-                      className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
-                      onFocus={handleFormFocus}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      className="bg-slate-100/50 dark:bg-zinc-800/50 border-slate-300 dark:border-zinc-700 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-zinc-400"
-                      rows={5}
-                      onFocus={handleFormFocus}
-                      required
-                    />
-                  </div>
-                  <ScanningButton
-                    type="submit"
-                    variant="primary"
-                    size="lg"
-                    className="w-full"
-                    trackingLocation="contact_form"
-                    trackingProps={{ form_name: "contact_form" }}
-                  >
-                    Send Message
-                  </ScanningButton>
-                </form>
+                <LeadForm source="contact_page" />
               </div>
             </motion.div>
 
@@ -270,30 +172,30 @@ export default function ContactPage() {
               </div>
 
               {/* Schedule Meeting Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <div className="glass-secondary rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
-                    Schedule a Meeting
-                  </h3>
-                  <p className="text-slate-600 dark:text-zinc-400 mb-6">
-                    Book a consultation with our team to discuss your project in
-                    detail.
-                  </p>
-
-                  <ScanningButton
-                    variant="primary"
-                    size="lg"
-                    color="blue"
-                  >
-                    Book Now
-                  </ScanningButton>
-                </div>
-              </motion.div>
+              {/* <motion.div */}
+              {/*   initial={{ opacity: 0, y: 20 }} */}
+              {/*   whileInView={{ opacity: 1, y: 0 }} */}
+              {/*   transition={{ duration: 0.6, delay: 0.4 }} */}
+              {/*   viewport={{ once: true }} */}
+              {/* > */}
+              {/*   <div className="glass-secondary rounded-2xl p-8"> */}
+              {/*     <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white"> */}
+              {/*       Schedule a Meeting */}
+              {/*     </h3> */}
+              {/*     <p className="text-slate-600 dark:text-zinc-400 mb-6"> */}
+              {/*       Book a consultation with our team to discuss your project in */}
+              {/*       detail. */}
+              {/*     </p> */}
+              {/**/}
+              {/*     <ScanningButton */}
+              {/*       variant="primary" */}
+              {/*       size="lg" */}
+              {/*       color="blue" */}
+              {/*     > */}
+              {/*       Book Now */}
+              {/*     </ScanningButton> */}
+              {/*   </div> */}
+              {/* </motion.div> */}
 
               {/* Business Hours Card */}
               <motion.div
@@ -339,20 +241,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Thank You Dialog */}
-      <AlertDialog open={showThankYou} onOpenChange={setShowThankYou}>
-        <AlertDialogContent className="bg-white dark:bg-zinc-900 border-slate-200 dark:border-zinc-800">
-          <AlertDialogHeader>
-            <AlertDialogTitle className="text-slate-900 dark:text-white">
-              Thank You!
-            </AlertDialogTitle>
-            <AlertDialogDescription className="text-slate-600 dark:text-zinc-300">
-              We've received your message and will get back to you within 24
-              hours.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-        </AlertDialogContent>
-      </AlertDialog>
     </div>
   );
 }

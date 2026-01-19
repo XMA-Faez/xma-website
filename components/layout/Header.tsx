@@ -9,13 +9,14 @@ import { usePathname } from "next/navigation";
 import { MainNav } from "./navigation/MainNav";
 import { MobileNav } from "./navigation/MobileNav";
 import { ScanningButton } from "@/components/ui/ScanningButton";
-import { useTrackNavigation } from "@/hooks/useTrackEvent";
+import { useTrackNavigation, useTrackCTA } from "@/hooks/useTrackEvent";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
   const pathname = usePathname();
   const trackNavigation = useTrackNavigation();
+  const trackCTA = useTrackCTA();
 
   useEffect(() => {
     const handleResize = () => {
@@ -88,13 +89,16 @@ export function Header() {
                 color={
                   pathname === "/services/crm-solution" ? "emerald" : "white"
                 }
-                trackingLocation="header"
-                trackingProps={{
-                  is_crm_page: pathname === "/services/crm-solution",
-                  destination:
-                    pathname === "/services/crm-solution"
-                      ? "/book-crm"
-                      : "/book",
+                onClick={() => {
+                  const isCrmPage = pathname === "/services/crm-solution";
+                  trackCTA(
+                    isCrmPage ? "Book CRM Demo" : "Book Your Call",
+                    "header",
+                    {
+                      is_crm_page: isCrmPage,
+                      destination: isCrmPage ? "/book-crm" : "/book",
+                    },
+                  );
                 }}
               >
                 {pathname === "/services/crm-solution"

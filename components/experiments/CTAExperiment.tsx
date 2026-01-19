@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ScanningButton } from "@/components/ui/ScanningButton";
 import { useExperiment } from "@/hooks/useExperiment";
+import { useTrackCTA } from "@/hooks/useTrackEvent";
 
 type CTAVariant = "control" | "urgency" | "benefit" | "social_proof";
 
@@ -56,6 +57,7 @@ export function CTAExperiment({
     isLoading,
     trackConversion,
   } = useExperiment<CTAVariant>("hero_cta_variant", "control");
+  const trackCTA = useTrackCTA();
 
   if (isLoading) {
     return (
@@ -89,6 +91,10 @@ export function CTAExperiment({
       cta_location: location,
       cta_text: content.text,
     });
+    trackCTA(content.text, location, {
+      experiment: "hero_cta_variant",
+      variant: experimentVariant,
+    });
   };
 
   return (
@@ -97,11 +103,6 @@ export function CTAExperiment({
         variant={variant}
         size={size}
         color={color}
-        trackingLocation={location}
-        trackingProps={{
-          experiment: "hero_cta_variant",
-          variant: experimentVariant,
-        }}
         onClick={handleClick}
         className={className}
       >
