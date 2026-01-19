@@ -1,6 +1,6 @@
 import type { ServiceVisualTheme } from "./servicesData";
 
-export interface ServiceColor {
+interface ServiceColor {
   hex: string;
   oklch: string;
   tailwind: string;
@@ -40,10 +40,10 @@ export const serviceColors: Record<ServiceVisualTheme, ServiceColor> = {
   },
 };
 
-export const getServiceColorHex = (theme: ServiceVisualTheme): string => {
+const getServiceColorHex = (theme: ServiceVisualTheme): string => {
   return serviceColors[theme].hex;
 };
 
-export const getServiceColorOklch = (theme: ServiceVisualTheme): string => {
+const getServiceColorOklch = (theme: ServiceVisualTheme): string => {
   return serviceColors[theme].oklch;
 };

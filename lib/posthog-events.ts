@@ -143,7 +143,7 @@ export interface AttributionData {
   attribution_type: "first_touch" | "last_touch";
 }
 
-export interface AttributionEventProperties extends BaseEventProperties {
+interface AttributionEventProperties extends BaseEventProperties {
   landing_page: string;
   traffic_source: string;
   utm_source?: string;
@@ -156,7 +156,7 @@ export interface AttributionEventProperties extends BaseEventProperties {
   is_first_session?: boolean;
 }
 
-export interface BookingEventProperties extends BaseEventProperties {
+interface BookingEventProperties extends BaseEventProperties {
   booking_type: "strategy" | "crm";
   booking_step?: string;
   time_on_booking_page?: number;
@@ -164,7 +164,7 @@ export interface BookingEventProperties extends BaseEventProperties {
   likely_completing_form?: boolean;
 }
 
-export interface ConversionEventProperties extends BaseEventProperties {
+interface ConversionEventProperties extends BaseEventProperties {
   conversion_type: string;
   conversion_value?: number;
   conversion_currency?: string;
@@ -179,7 +179,7 @@ export interface ConversionEventProperties extends BaseEventProperties {
   last_touch_referrer?: string;
 }
 
-export interface ExperimentEventProperties extends BaseEventProperties {
+interface ExperimentEventProperties extends BaseEventProperties {
   experiment_key: string;
   variant: string;
   conversion_type?: string;
