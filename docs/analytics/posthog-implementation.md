@@ -152,6 +152,19 @@ import { HeadlineExperiment } from "@/components/experiments";
 
 ## PostHog Dashboard Setup
 
+> **📊 Full Dashboard Guide**: See [posthog-dashboard-setup.md](./posthog-dashboard-setup.md) for complete dashboard configurations with 36 insights across 6 dashboards.
+
+### Recommended Dashboards
+
+| Dashboard | Purpose |
+|-----------|---------|
+| **Executive Overview** | DAUs, traffic, conversions, web vitals |
+| **Booking Funnel** | Full booking conversion path |
+| **Lead Generation** | Form performance and leads |
+| **Engagement & Content** | Scroll depth, time on page |
+| **Attribution & Marketing** | UTM tracking, traffic sources |
+| **A/B Testing** | Experiment results |
+
 ### Funnels to Create
 
 **1. Primary Conversion Funnel**
@@ -162,6 +175,11 @@ $pageview → booking_page_view → booking_widget_interaction → booking_compl
 **2. Engagement to Conversion**
 ```
 $pageview → scroll_depth (≥50%) → cta_button_click → booking_page_view → booking_completed
+```
+
+**3. Contact Form Funnel**
+```
+form_start → contact_form_submit → lead_captured
 ```
 
 ### Cohorts to Define
@@ -177,6 +195,9 @@ $pageview → scroll_depth (≥50%) → cta_button_click → booking_page_view �
 
 4. **First-Time Converters**
    - `has_converted` = true AND `first_conversion_date` in last 30 days
+
+5. **Form Abandoners**
+   - `form_start` = true AND `contact_form_submit` = false
 
 ### Feature Flags to Configure
 

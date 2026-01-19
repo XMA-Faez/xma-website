@@ -8,21 +8,22 @@ import { useConversionTracking } from "@/hooks/useConversionTracking";
 function SuccessContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { trackPaymentCompleted } = useConversionTracking();
+  const { trackBookingCompleted } = useConversionTracking();
   const hasTracked = useRef(false);
 
   useEffect(() => {
     if (hasTracked.current) return;
     hasTracked.current = true;
 
-    const bookingType = searchParams.get("type") as "strategy" | "crm" | null;
+    const bookingType = (searchParams.get("type") as "strategy" | "crm") || "strategy";
     const value = searchParams.get("value");
 
-    trackPaymentCompleted(value ? parseFloat(value) : undefined, "USD", {
-      booking_type: bookingType || "strategy",
+    trackBookingCompleted(bookingType, {
       source: "success_page",
+      value: value ? parseFloat(value) : undefined,
+      currency: "USD",
     });
-  }, [searchParams, trackPaymentCompleted]);
+  }, [searchParams, trackBookingCompleted]);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
