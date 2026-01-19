@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { useConversionTracking } from "@/hooks/useConversionTracking";
 
-export default function SuccessPage() {
+function SuccessContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { trackPaymentCompleted } = useConversionTracking();
@@ -82,5 +82,13 @@ export default function SuccessPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={null}>
+      <SuccessContent />
+    </Suspense>
   );
 }
