@@ -1,29 +1,57 @@
 "use client";
 
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { CheckCircle2, ArrowLeft } from "lucide-react";
-import { useConversionTracking } from "@/hooks/useConversionTracking";
+import { CheckCircle2, ArrowLeft, Mail, MessageSquare } from "lucide-react";
+
+type SuccessType = "strategy" | "crm" | "lead";
+
+interface SuccessConfig {
+  title: string;
+  description: string;
+  nextSteps: string[];
+}
+
+const successConfigs: Record<SuccessType, SuccessConfig> = {
+  lead: {
+    title: "Thank You! We'll Be in Touch Soon",
+    description:
+      "We've received your message and our team will review it shortly. Expect to hear from us within 24 hours.",
+    nextSteps: [
+      "Our team will review your inquiry",
+      "We'll reach out within 24 hours to discuss your needs",
+      "You'll receive a customized proposal based on your requirements",
+    ],
+  },
+  strategy: {
+    title: "Payment Successful!",
+    description:
+      "Thank you for your purchase. We have received your payment and will process your order shortly.",
+    nextSteps: [
+      "You'll receive a confirmation email with your order details",
+      "Our team will contact you within 24 hours",
+      "We'll schedule a kickoff meeting to discuss your requirements",
+    ],
+  },
+  crm: {
+    title: "Payment Successful!",
+    description:
+      "Thank you for your purchase. We have received your payment and will process your order shortly.",
+    nextSteps: [
+      "You'll receive a confirmation email with your order details",
+      "Our team will contact you within 24 hours",
+      "We'll schedule a kickoff meeting to discuss your requirements",
+    ],
+  },
+};
 
 function SuccessContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { trackBookingCompleted } = useConversionTracking();
-  const hasTracked = useRef(false);
 
-  useEffect(() => {
-    if (hasTracked.current) return;
-    hasTracked.current = true;
-
-    const bookingType = (searchParams.get("type") as "strategy" | "crm") || "strategy";
-    const value = searchParams.get("value");
-
-    trackBookingCompleted(bookingType, {
-      source: "success_page",
-      value: value ? parseFloat(value) : undefined,
-      currency: "USD",
-    });
-  }, [searchParams, trackBookingCompleted]);
+  const successType = (searchParams.get("type") as SuccessType) || "lead";
+  const config = successConfigs[successType] || successConfigs.lead;
+  const isLead = successType === "lead";
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
@@ -36,31 +64,37 @@ function SuccessContent() {
 
             <div className="space-y-6 flex-1">
               <div className="space-y-2">
-                <h1 className="text-2xl font-bold text-white">
-                  Payment Successful!
-                </h1>
-                <p className="text-zinc-400 text-sm">
-                  Thank you for your purchase. We have received your payment and
-                  will process your order shortly.
-                </p>
+                <h1 className="text-2xl font-bold text-white">{config.title}</h1>
+                <p className="text-zinc-400 text-sm">{config.description}</p>
               </div>
 
               <div className="space-y-4 border-t border-zinc-800 pt-6">
                 <div className="space-y-2">
-                  <h2 className="font-medium text-xl text-white">Next steps:</h2>
+                  <h2 className="font-medium text-xl text-white">
+                    {isLead ? "What happens next:" : "Next steps:"}
+                  </h2>
                   <ul className="text-sm text-zinc-400 space-y-1">
-                    <li>
-                      • You'll receive a confirmation email with your order
-                      details
-                    </li>
-                    <li>• Our team will contact you within 24 hours</li>
-                    <li>
-                      • We'll schedule a kickoff meeting to discuss your
-                      requirements
-                    </li>
+                    {config.nextSteps.map((step, index) => (
+                      <li key={index}>• {step}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
+
+              {isLead && (
+                <div className="flex items-center gap-3 p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
+                  <MessageSquare className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                  <p className="text-sm text-zinc-300">
+                    Need immediate assistance? Email us directly at{" "}
+                    <a
+                      href="mailto:support@xmaagency.com"
+                      className="text-blue-400 hover:text-blue-300 underline"
+                    >
+                      support@xmaagency.com
+                    </a>
+                  </p>
+                </div>
+              )}
 
               <div className="flex items-center justify-between pt-4">
                 <button
@@ -73,9 +107,10 @@ function SuccessContent() {
 
                 <a
                   href="mailto:support@xmaagency.com"
-                  className="text-sm text-red-400 hover:text-red-300"
+                  className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-300"
                 >
-                support@xmaagency.com
+                  <Mail className="h-4 w-4" />
+                  support@xmaagency.com
                 </a>
               </div>
             </div>

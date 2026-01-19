@@ -7,7 +7,6 @@ This guide provides the complete configuration for setting up analytics dashboar
 | Dashboard | Purpose | Priority |
 |-----------|---------|----------|
 | Executive Overview | High-level business metrics | ⭐ High |
-| Conversions | Booking completion tracking | ⭐ High |
 | Lead Generation | Form & contact metrics | ⭐ High |
 | Engagement & Content | User behavior | Medium |
 | Attribution & Marketing | Traffic sources | Medium |
@@ -17,7 +16,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 
 ## 1. Executive Overview Dashboard
 
-**Description**: High-level business metrics: traffic, engagement, conversions, and performance
+**Description**: High-level business metrics: traffic, engagement, leads, and performance
 
 ### Insight 1.1: Daily Active Users
 - **Type**: Trends
@@ -34,9 +33,9 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 7 days
 - **Display**: Table
 
-### Insight 1.3: Total Conversions
+### Insight 1.3: Total Leads
 - **Type**: Trends
-- **Event**: `booking_completed`
+- **Event**: `lead_form_submitted`
 - **Math**: Total count
 - **Date range**: Last 30 days
 - **Display**: Bold number
@@ -66,87 +65,41 @@ This guide provides the complete configuration for setting up analytics dashboar
 
 ---
 
-## 2. Conversions Dashboard
+## 2. Lead Generation Dashboard
 
-**Description**: Track completed bookings and conversion metrics
+**Description**: Lead form performance and contact engagement metrics
 
-### Insight 2.1: Completed Bookings Over Time
+### Insight 2.1: Lead Form Submissions Over Time
 - **Type**: Trends
-- **Event**: `booking_completed`
+- **Event**: `lead_form_submitted`
 - **Math**: Total count
 - **Date range**: Last 30 days
-- **Interval**: Day
 - **Display**: Line graph
 
-### Insight 2.2: Bookings by Type
+### Insight 2.2: Total Leads (Bold Number)
 - **Type**: Trends
-- **Event**: `booking_completed`
+- **Event**: `lead_form_submitted`
 - **Math**: Total count
-- **Breakdown**: `booking_type` (strategy vs crm)
+- **Date range**: Last 30 days
+- **Display**: Bold number
+
+### Insight 2.3: Leads by Source
+- **Type**: Trends
+- **Event**: `lead_form_submitted`
+- **Math**: Total count
+- **Breakdown**: `source`
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 2.3: Conversion by Traffic Source
+### Insight 2.4: Leads by Form Variant
 - **Type**: Trends
-- **Event**: `booking_completed`
+- **Event**: `lead_form_submitted`
 - **Math**: Total count
-- **Breakdown**: `first_touch_source`
+- **Breakdown**: `form_variant`
 - **Date range**: Last 30 days
 - **Display**: Pie chart
 
-### Insight 2.4: Total Bookings (Bold Number)
-- **Type**: Trends
-- **Event**: `booking_completed`
-- **Math**: Total count
-- **Date range**: Last 30 days
-- **Display**: Bold number
-
-### Insight 2.5: Weekly Booking Trend
-- **Type**: Trends
-- **Event**: `booking_completed`
-- **Math**: Total count
-- **Date range**: Last 12 weeks
-- **Interval**: Week
-- **Display**: Bar chart
-
-### Insight 2.6: Conversion Value
-- **Type**: Trends
-- **Event**: `booking_completed`
-- **Math**: Sum of `value`
-- **Date range**: Last 30 days
-- **Display**: Bold number
-
----
-
-## 3. Lead Generation Dashboard
-
-**Description**: Contact form performance, lead capture, and form engagement metrics
-
-### Insight 3.1: Contact Form Funnel
-- **Type**: Funnel
-- **Steps**:
-  1. `form_start` - "Started Form"
-  2. `contact_form_submit` - "Submitted Form"
-  3. `lead_captured` - "Lead Captured"
-- **Conversion window**: 1 day
-- **Display**: Horizontal funnel
-
-### Insight 3.2: Form Submissions Over Time
-- **Type**: Trends
-- **Event**: `contact_form_submit`
-- **Math**: Total count
-- **Date range**: Last 30 days
-- **Display**: Line graph
-
-### Insight 3.3: Leads by Source
-- **Type**: Trends
-- **Event**: `lead_captured`
-- **Math**: Total count
-- **Breakdown**: `lead_source`
-- **Date range**: Last 30 days
-- **Display**: Bar chart
-
-### Insight 3.4: Contact Method Clicks
+### Insight 2.5: Contact Method Clicks
 - **Type**: Trends
 - **Event**: `contact_method_click`
 - **Math**: Total count
@@ -154,27 +107,21 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Pie chart
 
-### Insight 3.5: Form Abandonment
+### Insight 2.6: Weekly Lead Trend
 - **Type**: Trends
-- **Event**: `form_abandon`
+- **Event**: `lead_form_submitted`
 - **Math**: Total count
-- **Date range**: Last 30 days
-- **Display**: Line graph
-
-### Insight 3.6: Form Start to Submit Rate
-- **Type**: Funnel
-- **Steps**:
-  1. `form_start`
-  2. `contact_form_submit`
-- **Display**: Bold number (conversion %)
+- **Date range**: Last 12 weeks
+- **Interval**: Week
+- **Display**: Bar chart
 
 ---
 
-## 4. Engagement & Content Dashboard
+## 3. Engagement & Content Dashboard
 
 **Description**: User engagement metrics: scroll depth, time on page, content interaction
 
-### Insight 4.1: Scroll Depth Distribution
+### Insight 3.1: Scroll Depth Distribution
 - **Type**: Trends
 - **Event**: `scroll_depth`
 - **Math**: Unique users
@@ -182,7 +129,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 7 days
 - **Display**: Bar chart
 
-### Insight 4.2: Average Time on Page
+### Insight 3.2: Average Time on Page
 - **Type**: Trends
 - **Event**: `time_on_page`
 - **Math**: Average of `duration_seconds`
@@ -190,7 +137,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 7 days
 - **Display**: Table
 
-### Insight 4.3: Page Exit Points
+### Insight 3.3: Page Exit Points
 - **Type**: Trends
 - **Event**: `page_exit`
 - **Math**: Total count
@@ -198,15 +145,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 7 days
 - **Display**: Table
 
-### Insight 4.4: FAQ Interactions
-- **Type**: Trends
-- **Event**: `faq_expand`
-- **Math**: Total count
-- **Breakdown**: `question`
-- **Date range**: Last 30 days
-- **Display**: Table
-
-### Insight 4.5: CTA Button Clicks
+### Insight 3.4: CTA Button Clicks
 - **Type**: Trends
 - **Event**: `cta_button_click`
 - **Math**: Total count
@@ -214,7 +153,15 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 4.6: Users Reaching 100% Scroll
+### Insight 3.5: CTA Clicks by Location
+- **Type**: Trends
+- **Event**: `cta_button_click`
+- **Math**: Total count
+- **Breakdown**: `button_location`
+- **Date range**: Last 30 days
+- **Display**: Pie chart
+
+### Insight 3.6: Users Reaching 100% Scroll
 - **Type**: Trends
 - **Event**: `scroll_depth`
 - **Filter**: `depth_percentage` = 100
@@ -224,27 +171,19 @@ This guide provides the complete configuration for setting up analytics dashboar
 
 ---
 
-## 5. Attribution & Marketing Dashboard
+## 4. Attribution & Marketing Dashboard
 
 **Description**: UTM tracking, traffic sources, and marketing campaign performance
 
-### Insight 5.1: Conversions by First Touch Source
+### Insight 4.1: Leads by First Touch Source
 - **Type**: Trends
-- **Event**: `booking_completed`
+- **Event**: `lead_form_submitted`
 - **Math**: Total count
 - **Breakdown**: Person property `$initial_utm_source`
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 5.2: Conversions by Last Touch Source
-- **Type**: Trends
-- **Event**: `booking_completed`
-- **Math**: Total count
-- **Breakdown**: Person property `$current_utm_source`
-- **Date range**: Last 30 days
-- **Display**: Bar chart
-
-### Insight 5.3: Landing Page Performance
+### Insight 4.2: Landing Page Performance
 - **Type**: Trends
 - **Event**: `landing_page_view`
 - **Math**: Unique users
@@ -252,7 +191,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Table
 
-### Insight 5.4: Traffic by UTM Campaign
+### Insight 4.3: Traffic by UTM Campaign
 - **Type**: Trends
 - **Event**: `$pageview`
 - **Math**: Unique users
@@ -260,7 +199,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 5.5: Attribution Captured Events
+### Insight 4.4: Attribution Captured Events
 - **Type**: Trends
 - **Event**: `attribution_captured`
 - **Math**: Total count
@@ -268,22 +207,30 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Pie chart
 
-### Insight 5.6: First Visit to Conversion Path
+### Insight 4.5: First Visit to Lead Funnel
 - **Type**: Funnel
 - **Steps**:
   1. `landing_page_view` - "First Visit"
-  2. `booking_completed` - "Converted"
+  2. `lead_form_submitted` - "Lead Submitted"
 - **Conversion window**: 30 days
 - **Breakdown**: `traffic_source`
 - **Display**: Funnel with breakdown
 
+### Insight 4.6: Header Navigation Clicks
+- **Type**: Trends
+- **Event**: `header_navigation_click`
+- **Math**: Total count
+- **Breakdown**: `link_text`
+- **Date range**: Last 30 days
+- **Display**: Bar chart
+
 ---
 
-## 6. A/B Testing Dashboard
+## 5. A/B Testing Dashboard
 
 **Description**: Experiment results for hero CTA and headline variants
 
-### Insight 6.1: Hero CTA Experiment - Exposures
+### Insight 5.1: Hero CTA Experiment - Exposures
 - **Type**: Trends
 - **Event**: `experiment_viewed`
 - **Filter**: `experiment_key` = `hero_cta_variant`
@@ -292,7 +239,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 6.2: Hero CTA Experiment - Conversions
+### Insight 5.2: Hero CTA Experiment - Conversions
 - **Type**: Trends
 - **Event**: `experiment_converted`
 - **Filter**: `experiment_key` = `hero_cta_variant`
@@ -301,7 +248,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 6.3: Hero CTA Conversion Funnel by Variant
+### Insight 5.3: Hero CTA Conversion Funnel by Variant
 - **Type**: Funnel
 - **Steps**:
   1. `experiment_viewed` (filter: `experiment_key` = `hero_cta_variant`)
@@ -309,7 +256,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Breakdown**: `variant`
 - **Display**: Funnel
 
-### Insight 6.4: Hero Headline Experiment - Exposures
+### Insight 5.4: Hero Headline Experiment - Exposures
 - **Type**: Trends
 - **Event**: `experiment_viewed`
 - **Filter**: `experiment_key` = `hero_headline_variant`
@@ -318,7 +265,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 6.5: Hero Headline Experiment - Conversions
+### Insight 5.5: Hero Headline Experiment - Conversions
 - **Type**: Trends
 - **Event**: `experiment_converted`
 - **Filter**: `experiment_key` = `hero_headline_variant`
@@ -327,7 +274,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 - **Date range**: Last 30 days
 - **Display**: Bar chart
 
-### Insight 6.6: Overall Experiment Performance
+### Insight 5.6: Overall Experiment Performance
 - **Type**: Trends
 - **Event**: `experiment_converted`
 - **Math**: Unique users
@@ -343,8 +290,7 @@ This guide provides the complete configuration for setting up analytics dashboar
 
 1. **Create Dashboards**
    - [ ] Executive Overview (pin to home)
-   - [ ] Booking Funnel (pin to home)
-   - [ ] Lead Generation
+   - [ ] Lead Generation (pin to home)
    - [ ] Engagement & Content
    - [ ] Attribution & Marketing
    - [ ] A/B Testing
@@ -359,8 +305,8 @@ This guide provides the complete configuration for setting up analytics dashboar
    - [ ] `hero_headline_variant` with variants: control, problem_focused, outcome_focused, question
 
 4. **Create Cohorts** (optional but recommended)
-   - [ ] "Converted Users" - users who triggered `booking_completed`
-   - [ ] "Form Abandoners" - users who triggered `form_start` but not `contact_form_submit`
+   - [ ] "Lead Submitters" - users who triggered `lead_form_submitted`
+   - [ ] "Engaged Non-Converters" - users with 75%+ scroll depth but no lead submitted
 
 ---
 
@@ -370,21 +316,17 @@ These are the custom events defined in `lib/posthog-events.ts`:
 
 | Event | Description |
 |-------|-------------|
+| `header_navigation_click` | User clicked a navigation link in header |
+| `cta_button_click` | User clicked a CTA button |
+| `contact_method_click` | User clicked phone/email/whatsapp |
+| `lead_form_submitted` | Lead form was submitted |
 | `scroll_depth` | User scrolled to 25%, 50%, 75%, or 100% |
 | `time_on_page` | Periodic time tracking (every 30s) |
 | `page_exit` | User left the page |
-| `booking_completed` | Booking was completed |
-| `form_start` | User started filling a form |
-| `contact_form_submit` | Contact form was submitted |
-| `lead_captured` | Lead was successfully captured |
-| `contact_method_click` | User clicked phone/email/whatsapp |
-| `cta_button_click` | User clicked a CTA button |
 | `landing_page_view` | First page view in session |
 | `attribution_captured` | UTM parameters were captured |
 | `experiment_viewed` | User was exposed to an experiment |
 | `experiment_converted` | User converted in an experiment |
-| `web_vital_measured` | Core Web Vital was recorded |
-| `faq_expand` | User expanded an FAQ item |
 
 ---
 

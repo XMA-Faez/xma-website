@@ -1,48 +1,13 @@
 export const POSTHOG_EVENTS = {
   // Navigation Events
   HEADER_NAV_CLICK: "header_navigation_click",
-  FOOTER_LINK_CLICK: "footer_link_click",
-  MOBILE_MENU_TOGGLE: "mobile_menu_toggle",
 
   // CTA & Conversion Events
   CTA_CLICK: "cta_button_click",
-  BOOK_DEMO_CLICK: "book_demo_click",
-  CONTACT_FORM_SUBMIT: "contact_form_submit",
   CONTACT_METHOD_CLICK: "contact_method_click",
 
-  // Service Events
-  SERVICE_VIEW: "service_page_view",
-  SERVICE_FEATURE_INTERACT: "service_feature_interaction",
-  PRICING_VIEW: "pricing_section_view",
-  FAQ_EXPAND: "faq_expand",
-
-  // Blog Events
-  BLOG_POST_VIEW: "blog_post_view",
-  BLOG_CATEGORY_FILTER: "blog_category_filter",
-  BLOG_SEARCH: "blog_search",
-  RELATED_POST_CLICK: "related_post_click",
-
-  // Portfolio Events
-  PORTFOLIO_VIEW: "portfolio_page_view",
-  PORTFOLIO_ITEM_CLICK: "portfolio_item_click",
-  PORTFOLIO_FILTER: "portfolio_filter",
-
-  // Video & Media Events
-  VIDEO_PLAY: "video_play",
-  VIDEO_PAUSE: "video_pause",
-  VIDEO_COMPLETE: "video_completion",
-  IMAGE_GALLERY_INTERACT: "image_gallery_interaction",
-
-  // Form Events
-  FORM_START: "form_start",
-  FORM_FIELD_COMPLETE: "form_field_complete",
-  FORM_ABANDON: "form_abandon",
-  LEAD_CAPTURED: "lead_captured",
-
-  // Payment Events
-  CHECKOUT_STARTED: "checkout_started",
-  PAYMENT_SUCCESS: "payment_success",
-  PAYMENT_FAILED: "payment_failed",
+  // Lead Events
+  LEAD_FORM_SUBMITTED: "lead_form_submitted",
 
   // Engagement Events
   SCROLL_DEPTH: "scroll_depth",
@@ -53,17 +18,13 @@ export const POSTHOG_EVENTS = {
   LANDING_PAGE_VIEW: "landing_page_view",
   ATTRIBUTION_CAPTURED: "attribution_captured",
 
-  // Conversion Events
-  BOOKING_COMPLETED: "booking_completed",
-
   // Experiment Events
   EXPERIMENT_VIEWED: "experiment_viewed",
   EXPERIMENT_CONVERTED: "experiment_converted",
 } as const;
 
-export type EventName = typeof POSTHOG_EVENTS[keyof typeof POSTHOG_EVENTS];
+export type EventName = (typeof POSTHOG_EVENTS)[keyof typeof POSTHOG_EVENTS];
 
-// Event property types for consistency
 export interface BaseEventProperties {
   page_path: string;
   page_title?: string;
@@ -72,58 +33,23 @@ export interface BaseEventProperties {
   referrer?: string;
 }
 
-interface CTAEventProperties extends BaseEventProperties {
+export interface CTAEventProperties extends BaseEventProperties {
   button_text: string;
   button_location: string;
   button_variant?: string;
   destination_url?: string;
 }
 
-interface NavigationEventProperties extends BaseEventProperties {
+export interface NavigationEventProperties extends BaseEventProperties {
   link_text: string;
   link_url: string;
   navigation_section: "header" | "footer" | "mobile_menu";
 }
 
-interface FormEventProperties extends BaseEventProperties {
-  form_name: string;
-  field_name?: string;
-  form_step?: number;
-  total_steps?: number;
-}
-
-interface VideoEventProperties extends BaseEventProperties {
-  video_title?: string;
-  video_url: string;
-  video_duration?: number;
-  video_current_time?: number;
-  completion_percentage?: number;
-}
-
-interface ScrollDepthProperties extends BaseEventProperties {
+export interface ScrollDepthProperties extends BaseEventProperties {
   depth_percentage: 25 | 50 | 75 | 100;
   pixel_depth: number;
   page_height: number;
-}
-
-interface ServiceEventProperties extends BaseEventProperties {
-  service_name: string;
-  service_category?: string;
-  interaction_type?: string;
-}
-
-interface BlogEventProperties extends BaseEventProperties {
-  post_title?: string;
-  post_slug?: string;
-  post_category?: string;
-  post_tags?: string[];
-  search_query?: string;
-}
-
-interface PortfolioEventProperties extends BaseEventProperties {
-  item_title?: string;
-  item_category?: string;
-  filter_value?: string;
 }
 
 export interface AttributionData {
@@ -139,7 +65,7 @@ export interface AttributionData {
   attribution_type: "first_touch" | "last_touch";
 }
 
-interface AttributionEventProperties extends BaseEventProperties {
+export interface AttributionEventProperties extends BaseEventProperties {
   landing_page: string;
   traffic_source: string;
   utm_source?: string;
@@ -152,29 +78,15 @@ interface AttributionEventProperties extends BaseEventProperties {
   is_first_session?: boolean;
 }
 
-interface BookingEventProperties extends BaseEventProperties {
-  booking_type: "strategy" | "crm";
-  value?: number;
-  currency?: string;
-}
-
-interface ConversionEventProperties extends BaseEventProperties {
-  conversion_type: string;
-  conversion_value?: number;
-  conversion_currency?: string;
-  conversion_source?: string;
-  first_touch_source?: string;
-  first_touch_medium?: string;
-  first_touch_campaign?: string;
-  first_touch_landing_page?: string;
-  last_touch_source?: string;
-  last_touch_medium?: string;
-  last_touch_campaign?: string;
-  last_touch_referrer?: string;
-}
-
-interface ExperimentEventProperties extends BaseEventProperties {
+export interface ExperimentEventProperties extends BaseEventProperties {
   experiment_key: string;
   variant: string;
   conversion_type?: string;
+}
+
+export interface LeadFormEventProperties extends BaseEventProperties {
+  source: string;
+  form_variant?: string;
+  has_company?: boolean;
+  has_message?: boolean;
 }

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document describes the analytics implementation using PostHog for conversion tracking, attribution, and A/B testing.
+This document describes the analytics implementation using PostHog for lead tracking, attribution, and A/B testing.
 
 ## Excluded Pages
 
@@ -27,16 +27,30 @@ GlobalAnalyticsProvider
 
 ## Event Categories
 
+### Navigation Events
+| Event | Trigger | Key Properties |
+|-------|---------|----------------|
+| `header_navigation_click` | Header nav link clicked | `link_text`, `link_url`, `navigation_section` |
+
+### CTA & Lead Events
+| Event | Trigger | Key Properties |
+|-------|---------|----------------|
+| `cta_button_click` | CTA button clicked | `button_text`, `button_location`, `button_variant` |
+| `contact_method_click` | Phone/email/WhatsApp clicked | `contact_method`, `page_path` |
+| `lead_form_submitted` | Lead form submitted | `source`, `form_variant`, `has_company`, `has_message` |
+
+### Engagement Events
+| Event | Trigger | Key Properties |
+|-------|---------|----------------|
+| `scroll_depth` | Scroll thresholds reached | `depth_percentage`, `pixel_depth`, `page_height` |
+| `time_on_page` | Periodic (every 30s) | `duration_seconds`, `page_path` |
+| `page_exit` | User leaves page | `exit_type`, `duration_seconds` |
+
 ### Attribution Events
 | Event | Trigger | Key Properties |
 |-------|---------|----------------|
 | `landing_page_view` | New session starts | `landing_page`, `traffic_source`, `utm_*`, `is_first_session` |
 | `attribution_captured` | UTM params detected | `utm_source`, `utm_medium`, `utm_campaign` |
-
-### Conversion Events
-| Event | Trigger | Key Properties |
-|-------|---------|----------------|
-| `booking_completed` | Successful booking | `booking_type`, `first_touch_*`, `last_touch_*` |
 
 ### Experiment Events
 | Event | Trigger | Key Properties |
@@ -45,6 +59,21 @@ GlobalAnalyticsProvider
 | `experiment_converted` | User converts after seeing variant | `experiment_key`, `variant`, `conversion_type` |
 
 ## Hooks Reference
+
+### `useTrackEvent()`
+Base hook for firing custom events with automatic page context.
+
+```tsx
+import { useTrackEvent } from "@/hooks/useTrackEvent";
+import { POSTHOG_EVENTS } from "@/lib/posthog-events";
+
+const trackEvent = useTrackEvent();
+
+trackEvent(POSTHOG_EVENTS.CTA_CLICK, {
+  button_text: "Book a Call",
+  button_location: "hero",
+});
+```
 
 ### `useAttribution()`
 Captures and persists UTM parameters and referrer data.
@@ -58,21 +87,6 @@ const { getFirstTouchAttribution, getLastTouchAttribution } = useAttribution();
 **Storage Keys:**
 - `xma_first_touch_attribution` - First visit attribution (never overwritten)
 - `xma_attribution` - Last touch attribution (updated each session)
-
-### `useConversionTracking()`
-Tracks conversions with full attribution data.
-
-```tsx
-import { useConversionTracking } from "@/hooks/useConversionTracking";
-
-const { trackConversion, trackBookingCompleted, trackPaymentCompleted } = useConversionTracking();
-
-// Track a booking
-trackBookingCompleted("strategy", { additional: "props" });
-
-// Track a payment
-trackPaymentCompleted(499, "USD", { plan: "premium" });
-```
 
 ### `useExperiment(key, defaultVariant)`
 A/B testing with PostHog feature flags.
@@ -131,14 +145,13 @@ import { HeadlineExperiment } from "@/components/experiments";
 
 ## PostHog Dashboard Setup
 
-> **📊 Full Dashboard Guide**: See [posthog-dashboard-setup.md](./posthog-dashboard-setup.md) for complete dashboard configurations with 36 insights across 6 dashboards.
+> **📊 Full Dashboard Guide**: See [posthog-dashboard-setup.md](./posthog-dashboard-setup.md) for complete dashboard configurations with insights across 5 dashboards.
 
 ### Recommended Dashboards
 
 | Dashboard | Purpose |
 |-----------|---------|
-| **Executive Overview** | DAUs, traffic, conversions, web vitals |
-| **Conversions** | Booking completion tracking |
+| **Executive Overview** | DAUs, traffic, leads, web vitals |
 | **Lead Generation** | Form performance and leads |
 | **Engagement & Content** | Scroll depth, time on page |
 | **Attribution & Marketing** | UTM tracking, traffic sources |
@@ -146,29 +159,26 @@ import { HeadlineExperiment } from "@/components/experiments";
 
 ### Funnels to Create
 
-**1. Engagement to Conversion**
+**1. Engagement to Lead**
 ```
-$pageview → scroll_depth (≥50%) → cta_button_click → booking_completed
+$pageview → scroll_depth (≥50%) → cta_button_click → lead_form_submitted
 ```
 
-**2. Contact Form Funnel**
+**2. Landing to Lead**
 ```
-form_start → contact_form_submit → lead_captured
+landing_page_view → lead_form_submitted
 ```
 
 ### Cohorts to Define
 
 1. **Engaged Non-Converters**
-   - `scroll_depth` >= 75% AND `time_on_page` >= 60s AND `has_converted` = false
+   - `scroll_depth` >= 75% AND `time_on_page` >= 60s AND no `lead_form_submitted`
 
 2. **Paid Traffic**
    - `$current_utm_medium` = "cpc" OR `$current_utm_medium` = "paid"
 
-3. **First-Time Converters**
-   - `has_converted` = true AND `first_conversion_date` in last 30 days
-
-4. **Form Abandoners**
-   - `form_start` = true AND `contact_form_submit` = false
+3. **Lead Submitters**
+   - `lead_form_submitted` in last 30 days
 
 ### Feature Flags to Configure
 
