@@ -26,11 +26,8 @@ const BenefitsSection = () => {
         <span className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-4 block">
           Benefits
         </span>
-        <h2 className="heading-section text-white">
-          Websites that{" "}
-          <span className="text-primary-400">convert visitors</span>
-          <br />
-          into <span className="text-primary-400">paying customers</span>.
+        <h2 className="heading-section text-white max-w-3xl text-center mx-auto">
+          Websites that convert visitors into paying customers
         </h2>
       </motion.div>
 
