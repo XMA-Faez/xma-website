@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { services } from "./servicesData";
 import StackingCard from "./StackingCard";
+import Section from "@/components/ui/section";
 
 const StackingServicesSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -15,10 +16,12 @@ const StackingServicesSection = () => {
   });
 
   return (
-    <section
+    <Section
       ref={sectionRef}
       id="services"
       className="relative"
+      padding="md"
+      size="xl"
       style={{ height: `${(totalCards + 1) * 70}vh` }}
     >
       <div className="sticky top-0 h-screen flex flex-col">
@@ -55,7 +58,7 @@ const StackingServicesSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -40,7 +40,7 @@ export function Header() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-1/2 max-w-6xl xl:max-w-7xl -translate-x-1/2 transform z-50 h-16 w-full"
+      className="fixed top-0 left-1/2 max-w-6xl xl:max-w-7xl -translate-x-1/2 transform z-50 h-16 w-full px-4 md:px-6"
     >
       {isDesktop ? (
         <motion.div
@@ -49,7 +49,7 @@ export function Header() {
             borderRadius: !isScrolled ? "100px" : "100px",
           }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
-          className={`flex py-4 items-center justify-between text-slate-900 dark:text-white container px-8 mx-auto ${
+          className={`flex py-4 items-center justify-between text-slate-900 dark:text-white px-8 mx-auto ${
             !isScrolled ? "bg-transparent" : "backdrop-blur-lg bg-white/50 border border-slate-300/50 dark:bg-zinc-800/50 dark:border-zinc-700/50"
           }`}
         >
