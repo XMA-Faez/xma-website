@@ -4,7 +4,7 @@ const footerData = {
   company: {
     name: "XMA Agency",
     description:
-      "We help UAE luxury car rental companies turn inquiries into confirmed bookings through conversion-optimized websites, WhatsApp automation, and high-end ad creatives.",
+      "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
     contact: [
       {
         icon: Phone,
