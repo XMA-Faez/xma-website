@@ -4,6 +4,14 @@ import { usePostHog } from "posthog-js/react";
 import { useCallback } from "react";
 import type { BaseEventProperties, EventName } from "@/lib/posthog-events";
 
+const EXCLUDED_PATHS = ["/studio"];
+
+function isExcludedPath(pathname: string): boolean {
+  return EXCLUDED_PATHS.some(
+    (excluded) => pathname === excluded || pathname.startsWith(`${excluded}/`)
+  );
+}
+
 export function useTrackEvent() {
   const posthog = usePostHog();
 
@@ -11,8 +19,13 @@ export function useTrackEvent() {
     (eventName: EventName | string, properties?: Record<string, unknown>) => {
       if (!posthog) return;
 
+      const currentPath =
+        typeof window !== "undefined" ? window.location.pathname : "";
+
+      if (isExcludedPath(currentPath)) return;
+
       const baseProperties: Partial<BaseEventProperties> = {
-        page_path: typeof window !== "undefined" ? window.location.pathname : "",
+        page_path: currentPath,
         page_title: typeof document !== "undefined" ? document.title : "",
         timestamp: new Date().toISOString(),
         referrer: typeof document !== "undefined" ? document.referrer : "",

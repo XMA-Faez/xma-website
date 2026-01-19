@@ -4,6 +4,17 @@
 
 This document describes the analytics implementation using PostHog for conversion tracking, attribution, and A/B testing.
 
+## Excluded Pages
+
+The following pages are excluded from PostHog analytics tracking:
+
+- `/studio` and all sub-routes (Sanity CMS)
+
+This is implemented in:
+- `components/providers/PostHogProvider.tsx` - pageview tracking
+- `hooks/useTrackEvent.ts` - all custom event tracking
+- `hooks/useAttribution.ts` - attribution tracking
+
 ## Architecture
 
 ```

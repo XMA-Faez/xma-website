@@ -29,13 +29,21 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
+const EXCLUDED_PATHS = ["/studio"];
+
+function isExcludedPath(pathname: string): boolean {
+  return EXCLUDED_PATHS.some(
+    (excluded) => pathname === excluded || pathname.startsWith(`${excluded}/`)
+  );
+}
+
 function PostHogPageView() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const posthog = usePostHog();
 
   useEffect(() => {
-    if (pathname && posthog) {
+    if (pathname && posthog && !isExcludedPath(pathname)) {
       let url = window.origin + pathname;
       const search = searchParams.toString();
       if (search) {

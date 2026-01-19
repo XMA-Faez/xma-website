@@ -1,15 +1,23 @@
 "use client";
 
 import { useEffect, useCallback } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, usePathname } from "next/navigation";
 import { usePostHog } from "posthog-js/react";
 import type { AttributionData } from "@/lib/posthog-events";
 
 const FIRST_TOUCH_KEY = "xma_first_touch_attribution";
 const LAST_TOUCH_KEY = "xma_attribution";
+const EXCLUDED_PATHS = ["/studio"];
+
+function isExcludedPath(pathname: string): boolean {
+  return EXCLUDED_PATHS.some(
+    (excluded) => pathname === excluded || pathname.startsWith(`${excluded}/`)
+  );
+}
 
 export function useAttribution() {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const posthog = usePostHog();
 
   const captureAttribution = useCallback((): AttributionData | null => {
@@ -53,6 +61,8 @@ export function useAttribution() {
   }, [searchParams]);
 
   useEffect(() => {
+    if (isExcludedPath(pathname)) return;
+
     const currentAttribution = captureAttribution();
     if (!currentAttribution) return;
 
@@ -89,7 +99,7 @@ export function useAttribution() {
       $current_utm_campaign: currentAttribution.utm_campaign,
       $current_referrer: currentAttribution.referrer,
     });
-  }, [captureAttribution, posthog]);
+  }, [captureAttribution, pathname, posthog]);
 
   const getFirstTouchAttribution = useCallback((): AttributionData | null => {
     if (typeof window === "undefined") return null;
