@@ -42,6 +42,20 @@ const nextConfig: NextConfig = {
     ];
   },
   skipTrailingSlashRedirect: true,
+  async redirects() {
+    return [
+      {
+        source: "/blog/real-estate-digital-marketing-in-dubai",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/blog/real-estate-marketing-lead-generation",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
