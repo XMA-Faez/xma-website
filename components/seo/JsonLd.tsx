@@ -49,7 +49,7 @@ const localBusinessSchema = {
     addressCountry: "AE",
     addressLocality: "Dubai",
   },
-  priceRange: "$$",
+  priceRange: "$$$",
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

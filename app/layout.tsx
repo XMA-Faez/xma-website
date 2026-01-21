@@ -38,8 +38,58 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "XMA Agency",
-  description: "XMA Agency is a digital marketing agency.",
+  title: {
+    default: "XMA Agency | Premium Web Design for Luxury Car Rentals",
+    template: "%s | XMA Agency",
+  },
+  description:
+    "We craft websites that look as premium as your fleet. Specialized web design for luxury car rental companies in Dubai and UAE.",
+  keywords: [
+    "luxury car rental website",
+    "car rental web design",
+    "Dubai web agency",
+    "premium website design",
+    "automotive web design",
+  ],
+  authors: [{ name: "XMA Agency", url: "https://www.xma.ae" }],
+  creator: "XMA Agency",
+  publisher: "XMA Agency",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.xma.ae",
+    siteName: "XMA Agency",
+    title: "XMA Agency | Premium Web Design for Luxury Car Rentals",
+    description:
+      "We craft websites that look as premium as your fleet. Specialized web design for luxury car rental companies in Dubai and UAE.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1920,
+        height: 1080,
+        alt: "XMA Agency - Premium Web Design",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "XMA Agency | Premium Web Design for Luxury Car Rentals",
+    description:
+      "We craft websites that look as premium as your fleet. Specialized web design for luxury car rental companies.",
+    images: ["/og-image.png"],
+    creator: "@xma_agency",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   appleWebApp: {
     title: "XMA Agency",
     statusBarStyle: "black-translucent",
