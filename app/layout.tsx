@@ -9,6 +9,7 @@ import { PostHogProvider } from "@/components/providers/PostHogProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { GlobalAnalyticsProvider } from "@/components/tracking/GlobalAnalyticsProvider";
+import { JsonLd } from "@/components/seo/JsonLd";
 import Script from "next/script";
 import {
   DM_Sans,
@@ -97,6 +98,7 @@ gtag('config', 'AW-17530915091');`,
         />
       </head>
       <body className={`antialiased ${primaryFont.variable} ${secondaryFont.variable}`}>
+        <JsonLd />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WDR7CP7Z"
