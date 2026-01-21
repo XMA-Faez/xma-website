@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "XMA Agency",
     images: [
       {
-        url: "/images/luxury-car-og.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Luxury car rental marketing and booking optimization",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Premium Websites for Luxury Car Rentals | XMA",
     description:
       "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
-    images: ["/images/luxury-car-twitter.jpg"],
+    images: ["/og-image.png"],
     creator: "@xmaagency",
   },
   robots: {
