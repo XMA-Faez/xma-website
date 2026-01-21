@@ -46,20 +46,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
-      {
-        url: "/logos/xma/SVG/Logo Light.svg",
-        media: "(prefers-color-scheme: light)",
-        type: "image/svg+xml",
-      },
-      {
-        url: "/logos/xma/SVG/Logo Dark.svg",
-        media: "(prefers-color-scheme: dark)",
-        type: "image/svg+xml",
-      },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/web-app-manifest-192x192.png",
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -97,19 +90,6 @@ gtag('config', 'AW-17530915091');`,
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="54YwLrhms6OQtemWpi9xNQ"
           strategy="afterInteractive"
-        />
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
-        <link
-          rel="icon"
-          href="/logos/xma/SVG/Logo Light.svg"
-          type="image/svg+xml"
-          media="(prefers-color-scheme: light)"
-        />
-        <link
-          rel="icon"
-          href="/logos/xma/SVG/Logo Dark.svg"
-          type="image/svg+xml"
-          media="(prefers-color-scheme: dark)"
         />
         <meta
           name="google-site-verification"
