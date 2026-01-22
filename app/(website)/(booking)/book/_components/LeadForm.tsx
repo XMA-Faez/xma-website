@@ -13,6 +13,7 @@ import { ScanningButton } from "@/components/ui/ScanningButton";
 import { cn } from "@/lib/utils";
 import { useTrackEvent } from "@/hooks/useTrackEvent";
 import { POSTHOG_EVENTS } from "@/lib/posthog-events";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 interface LeadFormData {
   name: string;
@@ -151,6 +152,14 @@ export function LeadForm({
       });
 
       trackEvent(POSTHOG_EVENTS.LEAD_FORM_SUBMITTED, {
+        source,
+        form_variant: variant,
+        has_company: !!formData.company,
+        has_message: !!formData.message,
+      });
+
+      sendGTMEvent({
+        event: "lead_form_submitted",
         source,
         form_variant: variant,
         has_company: !!formData.company,
