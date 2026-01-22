@@ -147,7 +147,7 @@ export default function Home() {
         <StackingServicesSection />
         <ProofSection />
         <FAQSection />
-        <WhyUsSection />
+        {/* <WhyUsSection /> */}
         <CTASection />
       </div>
     </>

@@ -1,7 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Section from "@/components/ui/section";
+import { ScanningButton } from "@/components/ui/ScanningButton";
+import { useTrackCTA } from "@/hooks/useTrackEvent";
 import BenefitCard from "./BenefitCard";
 import { benefits } from "./benefitsData";
 
@@ -13,6 +16,7 @@ const CornerDot = ({ position }: { position: string }) => (
 
 const BenefitsSection = () => {
   const columns = 3;
+  const trackCTA = useTrackCTA();
 
   return (
     <Section id="benefits" size="xl" padding="md">
@@ -56,6 +60,30 @@ const BenefitsSection = () => {
           </div>
         </div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mt-12 text-center"
+      >
+        <Link href="/book">
+          <ScanningButton
+            variant="primary"
+            size="md"
+            color="white"
+            onClick={() =>
+              trackCTA("Book a Strategy Call", "benefits", {
+                page: "home",
+                section: "benefits",
+              })
+            }
+          >
+            Book a Strategy Call
+          </ScanningButton>
+        </Link>
+      </motion.div>
     </Section>
   );
 };

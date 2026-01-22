@@ -5,9 +5,13 @@ import { motion } from 'motion/react'
 import { ArrowRight } from 'phosphor-react'
 import Link from 'next/link'
 import Section from '@/components/ui/section'
+import { ScanningButton } from '@/components/ui/ScanningButton'
+import { useTrackCTA } from '@/hooks/useTrackEvent'
 import { PhotoGallerySkiper } from './VideoGallery'
 
 const ProofSection = () => {
+  const trackCTA = useTrackCTA()
+
   return (
     <Section size="xl" className="!px-0 sm:px-0">
       <div className="mb-6 text-center px-4">
@@ -31,22 +35,6 @@ const ProofSection = () => {
 
       <PhotoGallerySkiper />
 
-      <div className="px-4 md:px-6 lg:px-8 mt-12 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center gap-2 text-blue-500 font-medium hover:gap-3 transition-all duration-300"
-          >
-            View Full Portfolio
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </motion.div>
-      </div>
     </Section>
   )
 }

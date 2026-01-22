@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { CaretDown } from "phosphor-react";
 import Section from "@/components/ui/section";
+import { ScanningButton } from "@/components/ui/ScanningButton";
+import { useTrackCTA } from "@/hooks/useTrackEvent";
 
 const faqData = [
   {
@@ -34,6 +37,7 @@ const faqData = [
 
 const FAQSection = () => {
   const [openItems, setOpenItems] = useState<string[]>([]);
+  const trackCTA = useTrackCTA();
 
   const toggleItem = (id: string) => {
     setOpenItems((prev) =>
@@ -118,6 +122,33 @@ const FAQSection = () => {
           );
         })}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="mt-12 text-center max-w-3xl mx-auto"
+      >
+        <p className="text-slate-600 dark:text-gray-400 mb-4">
+          Still have questions? Let&apos;s talk.
+        </p>
+        <Link href="/book">
+          <ScanningButton
+            variant="primary"
+            size="md"
+            color="white"
+            onClick={() =>
+              trackCTA("Book a Strategy Call", "faq", {
+                page: "home",
+                section: "faq",
+              })
+            }
+          >
+            Book a Strategy Call
+          </ScanningButton>
+        </Link>
+      </motion.div>
     </Section>
   );
 };

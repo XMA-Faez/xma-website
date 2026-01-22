@@ -2,7 +2,7 @@
 
 import { usePostHog } from "posthog-js/react";
 import { useCallback } from "react";
-import type { BaseEventProperties, EventName } from "@/lib/posthog-events";
+import { POSTHOG_EVENTS, type BaseEventProperties, type EventName } from "@/lib/posthog-events";
 
 const EXCLUDED_PATHS = ["/studio"];
 
@@ -48,7 +48,7 @@ export function useTrackCTA() {
 
   return useCallback(
     (buttonText: string, location: string, additionalProps?: Record<string, unknown>) => {
-      trackEvent("cta_button_click", {
+      trackEvent(POSTHOG_EVENTS.CTA_CLICK, {
         button_text: buttonText,
         button_location: location,
         ...additionalProps,

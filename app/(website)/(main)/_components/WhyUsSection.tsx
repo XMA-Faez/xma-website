@@ -1,7 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Section from "@/components/ui/section";
+import { ScanningButton } from "@/components/ui/ScanningButton";
+import { useTrackCTA } from "@/hooks/useTrackEvent";
 import { Target, Timer, Car } from "phosphor-react";
 import type { Icon } from "phosphor-react";
 
@@ -45,6 +48,8 @@ const cardVariants = {
 };
 
 const WhyUsSection = () => {
+  const trackCTA = useTrackCTA();
+
   return (
     <Section id="why-us" size="xl" padding="lg">
       <motion.div
