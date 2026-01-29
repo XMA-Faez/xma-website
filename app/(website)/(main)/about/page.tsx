@@ -22,11 +22,13 @@ import Link from "next/link";
 
 const clientLogos: Logo[] = [
   { src: "/logos/4MAticlogo.png", alt: "4Matic", height: 40 },
-  { src: "/logos/ASUS-logo.png", alt: "ASUS", height: 130 },
+  { src: "/logos/ASUS-logo.png", alt: "ASUS", height: 30 },
   { src: "/logos/DXtreme.png", alt: "DXtreme", height: 40 },
   { src: "/logos/Tick.webp", alt: "Tick", height: 45 },
   { src: "/logos/packman_Logo.png", alt: "Packman", height: 60 },
   { src: "/logos/dreamdrives-logo.svg", alt: "Dream Drives", height: 50 },
+  { src: "/logos/baggagetaxi.webp", alt: "Dream Drives", height: 50 },
+  { src: "/logos/nbf-logo.png", alt: "Dream Drives", height: 50 },
 ];
 
 const AboutUsPage = () => {
