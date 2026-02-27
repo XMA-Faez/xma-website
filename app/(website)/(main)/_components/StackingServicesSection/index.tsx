@@ -1,114 +1,26 @@
-"use client";
-
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { services } from "./servicesData";
-import StackingCard from "./StackingCard";
+import ServiceCard from "./ServiceCard";
 import Section from "@/components/ui/section";
 
-const StackingServicesSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const totalCards = services.length;
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
-
+const ServicesSection = () => {
   return (
-    <Section
-      ref={sectionRef}
-      id="services"
-      className="relative"
-      padding="md"
-      size="xl"
-      style={{ height: `${(totalCards + 1) * 70}vh` }}
-    >
-      <div className="sticky top-0 h-screen flex flex-col">
-        <div className="pt-32 pb-4 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-2 block"
-          >
-            Our Services
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="heading-section text-white"
-          >
-            Everything You Need to Scale
-          </motion.h2>
-        </div>
+    <Section id="services" padding="md" size="xl">
+      <div className="text-center mb-12 md:mb-16">
+        <span className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-2 block">
+          Our Services
+        </span>
+        <h2 className="heading-section text-white">
+          Everything You Need to Scale
+        </h2>
+      </div>
 
-        <div className="flex-1 relative">
-          {services.map((service, index) => (
-            <CardWithAnimation
-              key={service.id}
-              service={service}
-              index={index}
-              totalCards={totalCards}
-              scrollYProgress={scrollYProgress}
-            />
-          ))}
-        </div>
+      <div className="flex flex-col gap-6 md:gap-8">
+        {services.map((service, index) => (
+          <ServiceCard key={service.id} service={service} index={index} />
+        ))}
       </div>
     </Section>
   );
 };
 
-interface CardWithAnimationProps {
-  service: (typeof services)[0];
-  index: number;
-  totalCards: number;
-  scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
-}
-
-const CardWithAnimation = ({
-  service,
-  index,
-  totalCards,
-  scrollYProgress,
-}: CardWithAnimationProps) => {
-  const cardStart = index / totalCards;
-  const cardEnd = (index + 1) / totalCards;
-  const cardMid = (cardStart + cardEnd) / 2;
-
-  const isFirstCard = index === 0;
-  const isLastCard = index === totalCards - 1;
-
-  const y = useTransform(
-    scrollYProgress,
-    [cardStart, cardMid],
-    isFirstCard ? ["0%", "0%"] : ["100%", "0%"]
-  );
-
-  const scale = useTransform(
-    scrollYProgress,
-    [cardEnd, Math.min(cardEnd + 0.1, 1)],
-    isLastCard ? [1, 1] : [1, 0.92 - index * 0.02]
-  );
-
-  const opacity = useTransform(
-    scrollYProgress,
-    [cardEnd, Math.min(cardEnd + 0.15, 1)],
-    isLastCard ? [1, 1] : [1, 0]
-  );
-
-  return (
-    <StackingCard
-      service={service}
-      index={index}
-      y={y}
-      scale={scale}
-      opacity={opacity}
-    />
-  );
-};
-
-export default StackingServicesSection;
+export default ServicesSection;

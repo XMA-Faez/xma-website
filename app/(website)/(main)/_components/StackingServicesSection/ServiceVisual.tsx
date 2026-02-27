@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import type { ServiceVisualTheme } from "./servicesData";
 import ServiceIcon from "./ServiceIcon";
 import { serviceColors } from "./serviceColors";
@@ -68,40 +65,21 @@ const ServiceVisual = ({ theme, iconName }: ServiceVisualProps) => {
         style={{ background: styles.gradient }}
       />
 
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
+      <div className="absolute inset-0">
+        <div
           className="absolute w-32 h-32 rounded-full opacity-20"
           style={{
             background: `radial-gradient(circle, ${styles.accent}, transparent 70%)`,
             top: "20%",
             left: "60%",
           }}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.3, 0.2],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
         />
-        <motion.div
+        <div
           className="absolute w-48 h-48 rounded-full opacity-15"
           style={{
             background: `radial-gradient(circle, ${styles.accent}, transparent 70%)`,
             bottom: "10%",
             left: "20%",
-          }}
-          animate={{
-            scale: [1.1, 1, 1.1],
-            opacity: [0.15, 0.25, 0.15],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
           }}
         />
 

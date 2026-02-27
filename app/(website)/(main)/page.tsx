@@ -3,7 +3,7 @@ import HeroSection from "./_components/HeroSection";
 import SocialProofStrip from "./_components/SocialProofStrip";
 import BrowserShowcaseSection from "./_components/BrowserShowcaseSection";
 import BenefitsSection from "./_components/BenefitsSection";
-import StackingServicesSection from "./_components/StackingServicesSection";
+import ServicesSection from "./_components/StackingServicesSection";
 import ProofSection from "./_components/ProofSection";
 import FAQSection from "./_components/FAQSection";
 import WhyUsSection from "./_components/WhyUsSection";
@@ -144,7 +144,7 @@ export default function Home() {
         <SocialProofStrip />
         <BrowserShowcaseSection />
         <BenefitsSection />
-        <StackingServicesSection />
+        <ServicesSection />
         <ProofSection />
         <FAQSection />
         {/* <WhyUsSection /> */}
