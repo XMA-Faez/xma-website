@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import HeroSection from "./_components/HeroSection";
-import SocialProofStrip from "./_components/SocialProofStrip";
-import BrowserShowcaseSection from "./_components/BrowserShowcaseSection";
-import BenefitsSection from "./_components/BenefitsSection";
-import ServicesSection from "./_components/StackingServicesSection";
-import ProofSection from "./_components/ProofSection";
-import FAQSection from "./_components/FAQSection";
-import WhyUsSection from "./_components/WhyUsSection";
-import CTASection from "./_components/CTASection";
+import Hero from "@/components/landing-page/hero/Hero";
+import About from "@/components/landing-page/about-section/About";
+import Products from "@/components/landing-page/products/Products";
+import Process from "@/components/landing-page/process/Process";
+import FAQ from "@/components/landing-page/faq/FAQ";
 
 export const metadata: Metadata = {
   title: "Premium Websites for Luxury Car Rentals | XMA",
@@ -139,16 +135,12 @@ export default function Home() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <div className="min-h-screen w-full relative bg-zinc-950">
-        <HeroSection />
-        <SocialProofStrip />
-        <BrowserShowcaseSection />
-        <BenefitsSection />
-        <ServicesSection />
-        <ProofSection />
-        <FAQSection />
-        {/* <WhyUsSection /> */}
-        <CTASection />
+      <div className="relative w-full">
+        <Hero />
+        <About />
+        <Products />
+        <Process />
+        <FAQ />
       </div>
     </>
   );
