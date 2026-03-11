@@ -34,17 +34,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    default: "XMA Agency | Premium Web Design for Luxury Car Rentals",
+    default: "XMA Agency | Growth Systems Built to Scale Revenue",
     template: "%s | XMA Agency",
   },
   description:
-    "We craft websites that look as premium as your fleet. Specialized web design for luxury car rental companies in Dubai and UAE.",
+    "XMA designs and implements the marketing, sales, and conversion systems companies need to generate leads, acquire customers, and grow revenue predictably.",
   keywords: [
-    "luxury car rental website",
-    "car rental web design",
-    "Dubai web agency",
-    "premium website design",
-    "automotive web design",
+    "growth systems agency",
+    "lead generation Dubai",
+    "marketing infrastructure",
+    "sales pipeline automation",
+    "revenue growth agency",
   ],
   authors: [{ name: "XMA Agency", url: "https://www.xma.ae" }],
   creator: "XMA Agency",
@@ -54,23 +54,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.xma.ae",
     siteName: "XMA Agency",
-    title: "XMA Agency | Premium Web Design for Luxury Car Rentals",
+    title: "XMA Agency | Growth Systems Built to Scale Revenue",
     description:
-      "We craft websites that look as premium as your fleet. Specialized web design for luxury car rental companies in Dubai and UAE.",
+      "XMA designs and implements the marketing, sales, and conversion systems companies need to generate leads, acquire customers, and grow revenue predictably.",
     images: [
       {
         url: "/og-image.png",
         width: 1920,
         height: 1080,
-        alt: "XMA Agency - Premium Web Design",
+        alt: "XMA Agency - Growth Systems Built to Scale Revenue",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "XMA Agency | Premium Web Design for Luxury Car Rentals",
+    title: "XMA Agency | Growth Systems Built to Scale Revenue",
     description:
-      "We craft websites that look as premium as your fleet. Specialized web design for luxury car rental companies.",
+      "XMA designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue.",
     images: ["/og-image.png"],
     creator: "@xma_agency",
   },

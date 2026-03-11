@@ -12,63 +12,53 @@ export interface Service {
   description: string;
   features: string[];
   visualTheme: ServiceVisualTheme;
+  href: string;
 }
 
 export const services: Service[] = [
   {
-    id: "creatives",
-    iconName: "solar:clapperboard-play-bold",
-    title: "High-End Ad Creatives",
-    description:
-      "Video, graphics, and photography aligned with luxury perception. Content that stops the scroll and commands attention.",
-    features: [
-      "Cinematic video production",
-      "Premium photography direction",
-      "Social-first creative formats",
-      "A/B tested for performance",
-    ],
-    visualTheme: "creatives",
-  },
-  {
-    id: "paid-ads",
+    id: "lead-generation",
     iconName: "solar:target-bold",
-    title: "Paid Ads That Qualify Leads",
+    title: "Lead Generation",
     description:
-      "No cheap clicks. No random traffic. We target high-intent prospects ready to book luxury vehicles.",
+      "Precision-targeted Google & Meta ad campaigns that deliver qualified leads ready to convert. No wasted spend — every dirham drives measurable pipeline growth.",
     features: [
-      "Meta & Google Ads expertise",
-      "Lookalike audience targeting",
-      "Retargeting sequences",
-      "Cost-per-booking optimization",
+      "Google & Meta Ads management",
+      "Audience targeting & retargeting",
+      "Conversion tracking & optimization",
+      "Monthly performance reporting",
     ],
     visualTheme: "paidAds",
+    href: "/services/lead-generation",
   },
-  // {
-  //   id: "whatsapp",
-  //   iconName: "solar:whatsapp-bold",
-  //   title: "WhatsApp Automation",
-  //   description:
-  //     "Instant replies without sounding robotic. Automated sequences that feel human and close deals while you sleep.",
-  //   features: [
-  //     "Instant response within seconds",
-  //     "Intelligent follow-up sequences",
-  //     "Lead qualification flows",
-  //     "Booking confirmation automation",
-  //   ],
-  //   visualTheme: "whatsapp",
-  // },
+  {
+    id: "website-creation",
+    iconName: "solar:monitor-bold",
+    title: "Premium Website Creation",
+    description:
+      "Conversion-optimized websites built on Next.js and Sanity CMS — engineered for speed, designed for trust, and structured to turn visitors into customers.",
+    features: [
+      "Custom Next.js development",
+      "Sanity CMS integration",
+      "Sub-2-second load times",
+      "Conversion-focused UX design",
+    ],
+    visualTheme: "website",
+    href: "/services/website-creation",
+  },
   {
     id: "crm",
     iconName: "solar:server-square-cloud-bold",
-    title: "Custom CRM Built for Rentals",
+    title: "CRM & Automations",
     description:
-      "Every inquiry tracked. Every opportunity followed. A system designed specifically for luxury car rental operations.",
+      "AI-powered WhatsApp CRM that captures every inquiry, automates follow-ups, and turns conversations into revenue — 24/7 without missing a beat.",
     features: [
-      "Pipeline visibility dashboard",
-      "Automated task assignments",
-      "Customer history tracking",
-      "Revenue reporting & analytics",
+      "WhatsApp Business integration",
+      "AI chatbot with 95% accuracy",
+      "Visual sales pipeline",
+      "Smart automation workflows",
     ],
     visualTheme: "crm",
+    href: "/services/crm-solution",
   },
 ];

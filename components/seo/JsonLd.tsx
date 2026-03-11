@@ -14,7 +14,7 @@ const organizationSchema = {
   },
   image: "https://www.xma.ae/icon-512x512.png",
   description:
-    "XMA Agency is a digital marketing agency specializing in web design for luxury car rental companies.",
+    "XMA Agency designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue predictably.",
   sameAs: [
     "https://www.instagram.com/xma.agency",
     "https://www.linkedin.com/company/xma-agency",

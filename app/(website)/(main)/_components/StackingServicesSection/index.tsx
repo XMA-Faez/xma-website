@@ -10,8 +10,12 @@ const ServicesSection = () => {
           Our Services
         </span>
         <h2 className="heading-section text-white">
-          Everything You Need to Scale
+          Precision Marketing, Engineered to Scale
         </h2>
+        <p className="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">
+          Three integrated services that turn ad spend into qualified leads,
+          visitors into customers, and inquiries into revenue.
+        </p>
       </div>
 
       <div className="flex flex-col gap-6 md:gap-8">

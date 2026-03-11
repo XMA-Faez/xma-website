@@ -4,7 +4,7 @@ const footerData = {
   company: {
     name: "XMA Agency",
     description:
-      "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
+      "XMA designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue.",
     contact: [
       {
         icon: Phone,
@@ -27,47 +27,43 @@ const footerData = {
   },
   quickLinks: [
     {
-      text: "Book a Strategy Call",
-      href: "/book",
+      text: "Book a Call",
+      href: "/apply",
     },
     {
-      text: "Portfolio",
-      href: "/portfolio",
+      text: "Case Studies",
+      href: "/case-studies",
+    },
+    {
+      text: "Insights",
+      href: "/insights",
     },
     {
       text: "About",
       href: "/about",
     },
-    {
-      text: "Blog",
-      href: "/blog",
-    },
-    {
-      text: "Contact",
-      href: "/contact",
-    },
   ],
-  services: [
+  solutions: [
     {
-      text: "XMA CRM System",
-      href: "/services/crm-solution",
+      text: "Growth Launch System",
+      href: "/solutions/growth-launch-system",
     },
-    // {
-    //   text: "Conversion Websites",
-    //   href: "/#luxury-booking-system",
-    // },
-    // {
-    //   text: "Ad Creatives",
-    //   href: "/#luxury-booking-system",
-    // },
-    // {
-    //   text: "Paid Advertising",
-    //   href: "/#luxury-booking-system",
-    // },
-    // {
-    //   text: "WhatsApp Automation",
-    //   href: "/#luxury-booking-system",
-    // },
+    {
+      text: "E-Commerce Revenue Engine",
+      href: "/solutions/ecommerce-revenue-engine",
+    },
+    {
+      text: "B2B Lead Generation",
+      href: "/solutions/b2b-lead-generation",
+    },
+    {
+      text: "CRM & Revenue System",
+      href: "/solutions/crm-revenue-system",
+    },
+    {
+      text: "Conversion Acceleration",
+      href: "/solutions/conversion-acceleration",
+    },
   ],
   legal: [
     {

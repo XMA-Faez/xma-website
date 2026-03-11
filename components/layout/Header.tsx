@@ -1,15 +1,27 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { MainNav } from "./navigation/MainNav";
 import { MobileNav } from "./navigation/MobileNav";
 import { ScanningButton } from "@/components/ui/ScanningButton";
 import { useTrackNavigation, useTrackCTA } from "@/hooks/useTrackEvent";
+
+const SCROLLED_VARIANT = { marginTop: "16px", borderRadius: "100px" };
+const DEFAULT_VARIANT = { marginTop: 0, borderRadius: "100px" };
+
+const CRM_PATHS = ["/solutions/crm-revenue-system", "/services/crm-solution"];
+
+function getHeaderCTA(pathname: string) {
+  if (CRM_PATHS.some((path) => pathname.startsWith(path))) {
+    return { label: "Book a Demo", href: "/book-crm", color: "emerald" as const };
+  }
+  return { label: "Book a Call", href: "/book", color: "blue" as const };
+}
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,6 +29,8 @@ export function Header() {
   const pathname = usePathname();
   const trackNavigation = useTrackNavigation();
   const trackCTA = useTrackCTA();
+  const scrollRafRef = useRef<number>(0);
+  const cta = getHeaderCTA(pathname);
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,16 +42,22 @@ export function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = useCallback(() => {
+    if (scrollRafRef.current) return;
+    scrollRafRef.current = requestAnimationFrame(() => {
       setIsScrolled(window.scrollY > 0);
-    };
+      scrollRafRef.current = 0;
+    });
+  }, []);
+
+  useEffect(() => {
     handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current);
+    };
+  }, [pathname, handleScroll]);
 
   return (
     <motion.nav
@@ -45,10 +65,7 @@ export function Header() {
     >
       {isDesktop ? (
         <motion.div
-          animate={{
-            marginTop: !isScrolled ? 0 : "16px",
-            borderRadius: !isScrolled ? "100px" : "100px",
-          }}
+          animate={isScrolled ? SCROLLED_VARIANT : DEFAULT_VARIANT}
           transition={{ ease: "easeInOut", duration: 0.3 }}
           className={`flex py-4 items-center justify-between text-slate-900 dark:text-white px-8 mx-auto ${
             !isScrolled ? "bg-transparent" : "backdrop-blur-lg bg-white/50 border border-slate-300/50 dark:bg-zinc-800/50 dark:border-zinc-700/50"
@@ -78,32 +95,18 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="flex-grow flex-shrink-0 basis-0 flex justify-end items-center gap-4">
-            <Link
-              href={
-                pathname === "/services/crm-solution" ? "/book-crm" : "/book"
-              }
-            >
+            <Link href={cta.href}>
               <ScanningButton
                 variant="primary"
                 size="sm"
-                color={
-                  pathname === "/services/crm-solution" ? "emerald" : "white"
-                }
+                color={cta.color}
                 onClick={() => {
-                  const isCrmPage = pathname === "/services/crm-solution";
-                  trackCTA(
-                    isCrmPage ? "Book CRM Demo" : "Book Your Call",
-                    "header",
-                    {
-                      is_crm_page: isCrmPage,
-                      destination: isCrmPage ? "/book-crm" : "/book",
-                    },
-                  );
+                  trackCTA(cta.label, "header", {
+                    destination: cta.href,
+                  });
                 }}
               >
-                {pathname === "/services/crm-solution"
-                  ? "Book CRM Demo"
-                  : "Book Your Call"}
+                {cta.label}
               </ScanningButton>
             </Link>
           </div>

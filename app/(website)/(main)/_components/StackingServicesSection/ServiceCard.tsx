@@ -1,15 +1,29 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import type { Service } from "./servicesData";
 import ServiceVisual from "./ServiceVisual";
 import { serviceColors } from "./serviceColors";
+import { ScanningButton } from "@/components/ui/ScanningButton";
 
 interface ServiceCardProps {
   service: Service;
   index: number;
 }
 
+const themeToButtonColor = {
+  paidAds: "amber",
+  website: "blue",
+  crm: "purple",
+  creatives: "purple",
+  whatsapp: "emerald",
+} as const;
+
 const ServiceCard = ({ service, index }: ServiceCardProps) => {
   const isEven = index % 2 === 1;
   const themeColor = serviceColors[service.visualTheme].hex;
+  const buttonColor = themeToButtonColor[service.visualTheme];
 
   return (
     <div
@@ -27,9 +41,18 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
           {service.title}
         </h3>
 
-        <p className="text-sm sm:text-base lg:text-lg text-gray-400 leading-relaxed">
+        <p className="text-sm sm:text-base lg:text-lg text-gray-400 leading-relaxed mb-6">
           {service.description}
         </p>
+
+        <Link href={service.href} className="self-start">
+          <ScanningButton color={buttonColor} variant="primary" size="md">
+            <span className="flex items-center gap-2">
+              Learn More
+              <ArrowRight className="w-4 h-4" />
+            </span>
+          </ScanningButton>
+        </Link>
       </div>
     </div>
   );

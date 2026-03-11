@@ -267,7 +267,7 @@ const BusinessAssessment: React.FC = () => {
               <Shield className="w-4 h-4" />
               Assessment Complete
             </Badge>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
               Your Business
               <span className="bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent"> Assessment Results</span>
             </h2>
@@ -288,7 +288,7 @@ const BusinessAssessment: React.FC = () => {
               <h3 className={`text-2xl font-bold mb-2 ${getCategoryColor(result.category)}`}>
                 {result.title}
               </h3>
-              <p className="text-slate-600 dark:text-zinc-300 text-lg max-w-2xl mx-auto">
+              <p className="text-zinc-300 text-lg max-w-2xl mx-auto">
                 {result.description}
               </p>
             </div>
@@ -320,7 +320,7 @@ const BusinessAssessment: React.FC = () => {
                     <div className="text-2xl font-bold text-emerald-400 mb-1">
                       {Math.round(categoryPercentage)}%
                     </div>
-                    <div className="text-sm text-slate-500 dark:text-zinc-400 capitalize">
+                    <div className="text-sm text-zinc-400 capitalize">
                       {category}
                     </div>
                   </div>
@@ -332,7 +332,7 @@ const BusinessAssessment: React.FC = () => {
             <div className="mb-8">
               <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-emerald-400" />
-                <span className="text-slate-900 dark:text-white">Priority Recommendations</span>
+                <span className="text-white">Priority Recommendations</span>
               </h4>
               <div className="space-y-3">
                 {result.recommendations.map((rec, index) => (
@@ -349,7 +349,7 @@ const BusinessAssessment: React.FC = () => {
                     } flex items-center justify-center text-white text-sm font-bold`}>
                       {index + 1}
                     </div>
-                    <span className="text-slate-700 dark:text-zinc-300">{rec}</span>
+                    <span className="text-zinc-300">{rec}</span>
                   </motion.div>
                 ))}
               </div>
@@ -366,7 +366,7 @@ const BusinessAssessment: React.FC = () => {
               
               <button
                 onClick={resetAssessment}
-                className="px-8 py-4 rounded-2xl glass-primary hover:glass-secondary font-medium text-slate-900 dark:text-white"
+                className="px-8 py-4 rounded-2xl glass-primary hover:glass-secondary font-medium text-white"
               >
                 Retake Assessment
               </button>
@@ -391,11 +391,11 @@ const BusinessAssessment: React.FC = () => {
             <BarChart3 className="w-4 h-4" />
             Business Assessment
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
             Assess Your
             <span className="bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent"> Lead Management</span>
           </h2>
-          <p className="text-xl text-slate-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
             Quick 7-question assessment to identify opportunities for improvement in your UAE business
           </p>
         </motion.div>
@@ -403,14 +403,14 @@ const BusinessAssessment: React.FC = () => {
         {/* Progress Bar */}
         <div className="mb-8">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-slate-500 dark:text-zinc-400">
+            <span className="text-sm text-zinc-400">
               Question {currentStep + 1} of {questions.length}
             </span>
             <span className="text-sm text-emerald-400 font-medium">
               {Math.round(progress)}% Complete
             </span>
           </div>
-          <div className="w-full bg-slate-200 dark:bg-zinc-800 rounded-full h-2">
+          <div className="w-full bg-zinc-800 rounded-full h-2">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
@@ -429,7 +429,7 @@ const BusinessAssessment: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="p-8 rounded-3xl glass-primary"
           >
-            <h3 className="text-2xl font-bold mb-8 text-center text-slate-900 dark:text-white">
+            <h3 className="text-2xl font-bold mb-8 text-center text-white">
               {currentQuestion.question}
             </h3>
 
@@ -451,7 +451,7 @@ const BusinessAssessment: React.FC = () => {
                     <div className={`flex-shrink-0 p-3 rounded-xl ${
                       answers[currentQuestion.id] === option.value
                         ? 'bg-emerald-500/20 text-emerald-400'
-                        : 'bg-slate-200 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400'
+                        : 'bg-zinc-800 text-zinc-400'
                     }`}>
                       {option.icon}
                     </div>
@@ -459,7 +459,7 @@ const BusinessAssessment: React.FC = () => {
                       <div className={`font-medium ${
                         answers[currentQuestion.id] === option.value
                           ? 'text-emerald-400'
-                          : 'text-slate-700 dark:text-zinc-200'
+                          : 'text-zinc-200'
                       }`}>
                         {option.label}
                       </div>
@@ -479,8 +479,8 @@ const BusinessAssessment: React.FC = () => {
                 disabled={currentStep === 0}
                 className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium ${
                   currentStep === 0
-                    ? 'opacity-50 cursor-not-allowed glass-primary text-slate-500 dark:text-zinc-500'
-                    : 'glass-primary hover:glass-secondary hover:scale-105 text-slate-900 dark:text-white'
+                    ? 'opacity-50 cursor-not-allowed glass-primary text-zinc-500'
+                    : 'glass-primary hover:glass-secondary hover:scale-105 text-white'
                 }`}
               >
                 <ArrowLeft className="w-5 h-5" />

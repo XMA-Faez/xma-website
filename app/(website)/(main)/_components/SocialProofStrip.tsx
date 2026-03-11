@@ -24,7 +24,7 @@ const SocialProofStrip = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center text-sm text-slate-500 dark:text-gray-500 mb-6"
+          className="text-center text-sm text-zinc-500 mb-6"
         >
           Trusted by businesses across the UAE
         </motion.p>

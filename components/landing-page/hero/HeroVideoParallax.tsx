@@ -113,24 +113,29 @@ export const HeroVideoParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl z-10 relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      {/* Glassmorphism hero container */}
       <div className="rounded-3xl p-8 md:p-12">
-        <h1 className="text-2xl pointer-events-none md:text-6xl text-balance capitalize font-bold text-slate-900 dark:text-white drop-shadow-lg">
-          Unlimited Growth with subscription-based lead generation
+        <h1 className="max-w-2xl text-2xl pointer-events-none md:text-6xl text-balance font-bold text-white drop-shadow-lg">
+          Growth Systems Built to{" "}
+          <span className="heading-gradient">Scale Revenue</span>
         </h1>
-        <p className="max-w-2xl text-base pointer-events-none md:text-xl mt-8 mb-lg text-slate-700 dark:text-white/90 drop-shadow-sm">
-          From SMART ads and campaign management to message marketing, Lead Flow
-          provides everything you need.
+        <p className="max-w-2xl text-base pointer-events-none md:text-xl mt-8 mb-lg text-white/90 drop-shadow-sm">
+          XMA designs and implements the marketing, sales, and conversion
+          systems companies need to generate leads, acquire customers, and
+          grow revenue predictably.
         </p>
-        <div className="mt-8">
-          <Link href="#booking-widget" scroll={true} className="inline-block">
-            <ScanningButton className="backdrop-blur-md" variant="primary" size="md">
-              Book Discovery Call
+        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <Link href="/apply" className="inline-block">
+            <ScanningButton className="backdrop-blur-md" variant="primary" size="md" color="blue">
+              Book a Call
+            </ScanningButton>
+          </Link>
+          <Link href="#solutions" className="inline-block">
+            <ScanningButton className="backdrop-blur-md" variant="outline" size="md">
+              Explore Solutions
             </ScanningButton>
           </Link>
         </div>
       </div>
-      
     </div>
   );
 };
@@ -196,10 +201,6 @@ export const VideoCard = ({
           preload="none"
         />
       </div>
-      {/* <div className="absolute inset-0 h-full w-full opacity-0 group-hover/video:opacity-80 bg-black transition-opacity pointer-events-none rounded-lg"></div> */}
-      {/* <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/video:opacity-100 text-white"> */}
-      {/*   {video.title || video.public_id} */}
-      {/* </h2> */}
     </m.div>
   );
 };

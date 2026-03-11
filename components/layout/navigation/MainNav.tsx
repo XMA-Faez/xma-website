@@ -11,13 +11,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { mainNavItems, services } from "@/data/navigation";
+import { mainNavItems, solutions } from "@/data/navigation";
 import { useTrackNavigation } from "@/hooks/useTrackEvent";
 
 const NAV_LINK_CLASSES =
   "px-4 py-2 text-sm transition-colors duration-200 text-zinc-400 hover:text-white";
 
-const EXCLUDED_NAV_ITEMS = ["Home", "Services", "Contact"];
+const EXCLUDED_NAV_ITEMS = ["Home", "Solutions"];
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,7 @@ export function MainNav() {
             }}
             onPointerDown={(e) => e.preventDefault()}
           >
-            Services
+            Solutions
             <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -60,20 +60,20 @@ export function MainNav() {
             className="min-w-[160px] rounded-2xl border border-zinc-700/50 bg-zinc-900/80 backdrop-blur-xl p-1 shadow-lg data-[state=closed]:slide-out-to-bottom-2 data-[state=open]:slide-in-from-bottom-2 duration-200"
           >
             <DropdownMenuGroup>
-              {services.map((service) => (
+              {solutions.map((solution) => (
                 <DropdownMenuItem
-                  key={service.name}
+                  key={solution.name}
                   asChild
                   className="cursor-pointer rounded-xl px-3 py-2 text-zinc-300 hover:text-white focus:bg-white/10 focus:text-white"
                 >
                   <Link
-                    href={service.href}
+                    href={solution.href}
                     onClick={() => {
                       setIsOpen(false);
-                      trackNavigation(service.name, service.href, "header");
+                      trackNavigation(solution.name, solution.href, "header");
                     }}
                   >
-                    {service.name}
+                    {solution.name}
                   </Link>
                 </DropdownMenuItem>
               ))}
@@ -92,14 +92,6 @@ export function MainNav() {
           {item.name}
         </Link>
       ))}
-
-      <Link
-        href="/contact"
-        className={NAV_LINK_CLASSES}
-        onClick={() => trackNavigation("Contact", "/contact", "header")}
-      >
-        Contact
-      </Link>
     </nav>
   );
 }

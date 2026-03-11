@@ -3,43 +3,14 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-// CSS @property definitions for smooth gradient transitions
-const cssProperties = `
-  @property --gradient-from {
-    syntax: '<color>';
-    initial-value: transparent;
-    inherits: false;
-  }
-  
-  @property --gradient-to {
-    syntax: '<color>';
-    initial-value: transparent;
-    inherits: false;
-  }
-  
-  @property --gradient-from-hover {
-    syntax: '<color>';
-    initial-value: transparent;
-    inherits: false;
-  }
-  
-  @property --gradient-to-hover {
-    syntax: '<color>';
-    initial-value: transparent;
-    inherits: false;
-  }
-`;
-
-// Inject CSS @property definitions once
-if (
-  typeof document !== "undefined" &&
-  !document.getElementById("scanning-button-properties")
-) {
-  const style = document.createElement("style");
-  style.id = "scanning-button-properties";
-  style.textContent = cssProperties;
-  document.head.appendChild(style);
-}
+const SHIMMER_COLORS: Record<string, string> = {
+  emerald: "rgba(52, 211, 153, 0.3)",
+  purple: "rgba(196, 181, 253, 0.3)",
+  amber: "rgba(251, 191, 36, 0.3)",
+  neutral: "rgba(212, 212, 212, 0.25)",
+  white: "rgba(59, 130, 246, 0.2)",
+  blue: "rgba(255, 255, 255, 0.2)",
+};
 
 const scanningButtonVariants = cva(
   "group relative font-medium rounded-lg overflow-hidden ease-out transform-gpu whitespace-nowrap [transition:background_0.3s_ease-out,box-shadow_0.3s_ease-out,--gradient-from_0.3s_ease-out,--gradient-to_0.3s_ease-out]",
@@ -196,27 +167,7 @@ interface ScanningButtonProps
 
 const ScanningButton = React.forwardRef<HTMLButtonElement, ScanningButtonProps>(
   ({ children, variant, size, color, className, ...props }, ref) => {
-    const getShimmerColor = () => {
-      switch (color) {
-        case "emerald":
-          return "rgba(52, 211, 153, 0.3)";
-        case "purple":
-          return "rgba(196, 181, 253, 0.3)";
-        case "amber":
-          return "rgba(251, 191, 36, 0.3)";
-        case "neutral":
-          return "rgba(212, 212, 212, 0.25)";
-        case "white":
-          return "rgba(59, 130, 246, 0.2)";
-        case "blue":
-        default:
-          return "rgba(255, 255, 255, 0.2)";
-      }
-    };
-
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      props.onClick?.(e);
-    };
+    const shimmerColor = SHIMMER_COLORS[color ?? "blue"] ?? SHIMMER_COLORS.blue;
 
     return (
       <motion.button
@@ -225,14 +176,13 @@ const ScanningButton = React.forwardRef<HTMLButtonElement, ScanningButtonProps>(
           scanningButtonVariants({ variant, size, color, className }),
         )}
         {...props}
-        onClick={handleClick}
       >
         {/* Shimmer effect on hover */}
         <div className="absolute inset-0 overflow-hidden rounded-inherit">
           <div
             className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out skew-x-12"
             style={{
-              background: `linear-gradient(90deg, transparent, ${getShimmerColor()}, transparent)`,
+              background: `linear-gradient(90deg, transparent, ${shimmerColor}, transparent)`,
             }}
           />
         </div>

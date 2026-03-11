@@ -24,10 +24,10 @@ const ProofSection = () => {
           <span className="text-sm uppercase tracking-wider text-blue-500 font-semibold mb-4 block">
             Our Work
           </span>
-          <h2 className="heading-section text-slate-900 dark:text-white mb-4">
+          <h2 className="heading-section text-white mb-4">
             Real Work. Real Upgrades.
           </h2>
-          <p className="text-lg text-slate-600 dark:text-gray-400 max-w-xl mx-auto">
+          <p className="text-lg text-zinc-400 max-w-xl mx-auto">
             We don&apos;t hide behind reports. We show the work.
           </p>
         </motion.div>

@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --gradient-from {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --gradient-to {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --gradient-from-hover {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --gradient-to-hover {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
 @layer base {
   :root {
     /* Light Mode Variables */

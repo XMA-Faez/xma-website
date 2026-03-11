@@ -182,17 +182,17 @@ const StreamlinedFeatures: React.FC = () => {
                     {index + 1}
                   </div>
                 </div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4 px-2">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 px-2">
                   {feature.title}
                 </h3>
-                <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-zinc-300 max-w-3xl mx-auto px-2">
+                <p className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto px-2">
                   {feature.description}
                 </p>
               </div>
 
               {/* Demo Container - Now Full Width */}
               <div className={`rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden bg-gradient-to-br ${feature.color.bg} backdrop-blur-xl border ${feature.color.border} p-1 sm:p-1.5 md:p-2 mb-6 sm:mb-8 md:mb-12`}>
-                <div className="rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm">
+                <div className="rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900/80 backdrop-blur-sm">
                   {feature.demoComponent ? (
                     <div className="w-full">
                       {React.createElement(feature.demoComponent!)}
@@ -200,12 +200,12 @@ const StreamlinedFeatures: React.FC = () => {
                   ) : (
                     <div className="aspect-[16/9] flex items-center justify-center p-6 sm:p-8 md:p-12">
                       <div className="text-center space-y-4 sm:space-y-6">
-                        <div className={`inline-flex p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-slate-200/50 dark:bg-white/5 ${feature.color.text}`}>
+                        <div className={`inline-flex p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-white/5 ${feature.color.text}`}>
                           <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12">
                             {React.cloneElement(feature.icon as React.ReactElement, { className: "w-full h-full" })}
                           </div>
                         </div>
-                        <p className="text-sm sm:text-base text-slate-500 dark:text-zinc-400 max-w-md mx-auto px-4">
+                        <p className="text-sm sm:text-base text-zinc-400 max-w-md mx-auto px-4">
                           {feature.screenshot.placeholder}
                         </p>
                       </div>
@@ -214,22 +214,6 @@ const StreamlinedFeatures: React.FC = () => {
                 </div>
               </div>
 
-              {/* Feature Benefits */}
-              {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
-              {/*   {feature.details.map((detail, idx) => ( */}
-              {/*     <motion.div */}
-              {/*       key={idx} */}
-              {/*       initial={{ opacity: 0, y: 20 }} */}
-              {/*       whileInView={{ opacity: 1, y: 0 }} */}
-              {/*       transition={{ duration: 0.4, delay: idx * 0.1 }} */}
-              {/*       viewport={{ once: true }} */}
-              {/*       className="flex items-start gap-3 p-4 rounded-xl bg-slate-50/50 dark:bg-zinc-800/50" */}
-              {/*     > */}
-              {/*       <Check className={`w-5 h-5 ${feature.color.text} flex-shrink-0 mt-0.5`} /> */}
-              {/*       <p className="text-slate-700 dark:text-zinc-300">{detail}</p> */}
-              {/*     </motion.div> */}
-              {/*   ))} */}
-              {/* </div> */}
             </div>
           </motion.div>
         ))}

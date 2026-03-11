@@ -1,25 +1,39 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Hero from "@/components/landing-page/hero/Hero";
-import About from "@/components/landing-page/about-section/About";
-import Products from "@/components/landing-page/products/Products";
-import Process from "@/components/landing-page/process/Process";
-import FAQ from "@/components/landing-page/faq/FAQ";
+import CredibilityStrip from "./_components/CredibilityStrip";
+
+const ProblemSection = dynamic(() => import("./_components/ProblemSection"));
+const XMASolutionSection = dynamic(
+  () => import("./_components/XMASolutionSection"),
+);
+const SolutionsOverviewSection = dynamic(
+  () => import("./_components/SolutionsOverviewSection"),
+);
+const BrowserShowcaseSection = dynamic(
+  () => import("./_components/BrowserShowcaseSection"),
+);
+const FounderSection = dynamic(() => import("./_components/FounderSection"));
+const QualificationCTA = dynamic(
+  () => import("./_components/QualificationCTA"),
+);
 
 export const metadata: Metadata = {
-  title: "Premium Websites for Luxury Car Rentals | XMA",
+  title: "Growth Systems Built to Scale Revenue | XMA",
   description:
-    "We craft websites that look as premium as your fleet — and convert visitors into bookings. Premium web design for luxury car rental companies.",
+    "XMA designs and implements the marketing, sales, and conversion systems companies need to generate leads, acquire customers, and grow revenue predictably.",
   keywords: [
-    "luxury car rental marketing Dubai",
-    "car rental advertising UAE",
-    "exotic car rental leads",
-    "luxury vehicle marketing",
-    "car rental booking optimization",
-    "WhatsApp automation car rental",
-    "luxury car rental agency",
-    "Dubai car rental marketing",
-    "premium car rental advertising",
-    "car rental conversion optimization",
+    "growth systems agency Dubai",
+    "lead generation systems",
+    "marketing infrastructure",
+    "sales pipeline automation",
+    "revenue growth agency",
+    "B2B lead generation",
+    "e-commerce revenue engine",
+    "CRM automation",
+    "conversion optimization",
+    "digital marketing Dubai",
   ],
   authors: [{ name: "XMA Agency" }],
   creator: "XMA Agency",
@@ -34,9 +48,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Premium Websites for Luxury Car Rentals | XMA",
+    title: "Growth Systems Built to Scale Revenue | XMA",
     description:
-      "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
+      "XMA designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue predictably.",
     url: "/",
     siteName: "XMA Agency",
     images: [
@@ -44,7 +58,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Luxury car rental marketing and booking optimization",
+        alt: "XMA Agency - Growth Systems Built to Scale Revenue",
       },
     ],
     locale: "en_AE",
@@ -52,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium Websites for Luxury Car Rentals | XMA",
+    title: "Growth Systems Built to Scale Revenue | XMA",
     description:
-      "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
+      "XMA designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue.",
     images: ["/og-image.png"],
     creator: "@xmaagency",
   },
@@ -96,9 +110,9 @@ const structuredData = {
       "@type": "WebPage",
       "@id": "https://www.xma.ae/#webpage",
       url: "https://www.xma.ae",
-      name: "Premium Websites for Luxury Car Rentals | XMA",
+      name: "Growth Systems Built to Scale Revenue | XMA",
       description:
-        "We craft websites that look as premium as your fleet — and convert visitors into bookings.",
+        "XMA designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue predictably.",
       inLanguage: "en-AE",
       isPartOf: {
         "@id": "https://www.xma.ae/#website",
@@ -110,17 +124,17 @@ const structuredData = {
     },
     {
       "@type": "Service",
-      name: "Premium Website Design for Luxury Car Rentals",
+      name: "Growth Systems for Businesses",
       description:
-        "Premium website design and development for luxury car rental companies. We craft websites that look as premium as your fleet and convert visitors into bookings.",
+        "XMA designs and implements integrated marketing, sales, and conversion systems that help companies generate leads, acquire customers, and grow revenue predictably.",
       provider: {
         "@id": "https://www.xma.ae/#organization",
       },
-      serviceType: "Web Design and Development",
+      serviceType: "Growth Systems and Marketing Infrastructure",
       areaServed: "United Arab Emirates",
       audience: {
         "@type": "Audience",
-        audienceType: "Luxury car rental business owners and operators",
+        audienceType: "Growth-focused businesses ready to scale",
       },
     },
   ],
@@ -137,10 +151,21 @@ export default function Home() {
       />
       <div className="relative w-full">
         <Hero />
-        <About />
-        <Products />
-        <Process />
-        <FAQ />
+        <CredibilityStrip />
+        {/* <ProblemSection /> */}
+        <XMASolutionSection />
+        <SolutionsOverviewSection />
+        <Suspense
+          fallback={
+            <div className="mx-auto max-w-7xl px-4 py-16">
+              <div className="h-96 animate-pulse rounded-2xl bg-zinc-900/50" />
+            </div>
+          }
+        >
+          <BrowserShowcaseSection />
+        </Suspense>
+        <FounderSection />
+        <QualificationCTA />
       </div>
     </>
   );

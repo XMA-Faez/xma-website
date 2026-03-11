@@ -1,18 +1,9 @@
-"use client";
-
 import footerData from "@/data/footerData";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import React from "react";
 import Section from "@/components/ui/section";
 
 const Footer = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <footer className="bg-white/60 dark:bg-black/40 backdrop-blur-sm border-t border-slate-200/60 dark:border-zinc-800/60">
@@ -20,15 +11,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            {mounted && (
-              <Image
-                src={theme === "light" ? "/XMA-01.svg" : "/XMA-White.svg"}
-                alt="XMA Logo"
-                width={200}
-                height={200}
-                className="mb-4"
-              />
-            )}
+            <Image
+              src="/XMA-White.svg"
+              alt="XMA Logo"
+              width={200}
+              height={200}
+              className="mb-4"
+            />
             <p className="text-slate-600 dark:text-zinc-300 mb-6">
               {footerData.company.description}
             </p>
@@ -52,13 +41,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
-              Services
+              Solutions
             </h3>
             <ul className="space-y-3">
-              {footerData.services.map((link, index) => (
+              {footerData.solutions.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
