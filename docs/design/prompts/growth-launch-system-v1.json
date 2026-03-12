@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Growth Launch System",
+    "variation": "1 - Foundation Assembly",
+    "accent_color": "deep purple",
+    "accent_oklch": "oklch(0.65 0.2 300)",
+    "concept": "A website wireframe rendered as a three-dimensional architectural construct, with distinct UI modules floating inward and snapping into their designated positions on the page skeleton. The visual metaphor communicates the systematic, modular approach to building a complete digital presence from precisely engineered components."
+  },
+  "core": {
+    "subject": "A large, vertically-oriented website wireframe structure rendered as a translucent dark glass slab floating above a subtle purple grid platform. The wireframe shows distinct rectangular slots and placeholder regions arranged in a classic landing page layout - hero area at the top, feature blocks in the middle, and a footer zone at the bottom. Several modular UI blocks are caught mid-flight, drifting inward from the periphery and magnetically snapping into their designated positions on the wireframe, each trailing faint purple particle streams. The modules that have already locked in glow with thin purple border lines, while empty slots pulse with a dim purple dotted outline awaiting their components.",
+    "scene": "The entire scene floats in a deep void environment. Below the wireframe slab, a subtle perspective grid of thin purple lines extends outward and fades into darkness, establishing spatial depth and a sense of digital terrain. The grid lines are razor-thin, barely visible, serving as a grounding plane rather than a dominant element. The wireframe structure is centered and slightly rotated to reveal its three-dimensional thickness.",
+    "objects": [
+      "A large translucent dark glass wireframe slab approximately 3:4 proportions standing vertically, with recessed rectangular slots carved into its surface to receive modules - the slots have thin purple dotted outlines indicating empty positions waiting to be filled.",
+      "A hero module block with a frosted dark surface and a thin purple border, currently mid-snap into the top slot of the wireframe, slightly offset with a 2-degree rotation suggesting it is about to lock in perfectly flush.",
+      "Three feature card modules of equal size arranged in a horizontal row, two already locked into the mid-section of the wireframe with settled purple edge glow, and one still floating 15cm away trailing purple particle dust as it approaches its position.",
+      "A navigation bar module - a slim horizontal rectangle with subtle purple line accents - already locked into the very top of the wireframe, fully integrated with a satisfied dim purple glow along its edges.",
+      "A footer module resting at the bottom of the wireframe, partially transparent, with micro purple circuit-line patterns etched into its surface suggesting interconnected systems beneath the surface.",
+      "Small purple magnetic alignment guides - thin crossing lines that appear between approaching modules and their target slots, visualizing the precision snap-to-grid behavior like design software alignment indicators.",
+      "A cluster of tiny detached UI micro-elements (icons, toggle shapes, circular avatars rendered as abstract dark shapes with purple outlines) orbiting slowly near the wireframe, waiting to be placed into the modules once they are assembled."
+    ],
+    "actions": [
+      "The hero module is actively snapping into its slot with a slight motion blur on its trailing edge and a burst of purple micro-particles at the contact point where module meets wireframe.",
+      "The third feature card is drifting inward from the right side of the frame, rotating slowly to align with its target orientation, trailing a thin purple particle stream behind it.",
+      "Purple alignment guide lines are appearing and disappearing between modules and their slots, flickering with a precise, calculated energy that suggests intelligent placement.",
+      "The already-locked modules pulse with a very subtle breathing purple glow along their edges, indicating they are active and integrated into the system."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with purple as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should feel a sense of order emerging from complexity - each module finding its exact place in a larger system. The image communicates that building a growth launch system is not chaotic improvisation but a precise, modular assembly of proven components into a cohesive whole."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary purple accent rim light from behind-right, casting thin purple edge highlights on all 3D objects. Tertiary subtle purple fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep purple (oklch 0.65 0.2 300) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated purple (oklch 0.4 0.12 300) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic purple on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 50,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the purple-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Modules drift with a slow, magnetic pull toward their slots - not falling but guided, as if drawn by invisible alignment forces. Locked modules rest with physical weight and permanence.",
+      "structural_believability": true,
+      "structural_details": "The wireframe slab has visible thickness and structural integrity. Modules fit flush into their recessed slots with precise tolerances. The navigation bar spans the full width convincingly. Feature cards are uniformly sized and evenly spaced."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "wireframe_slab": "Dark translucent glass with a matte frosted finish, approximately 15% opacity allowing faint internal structure lines to be visible. Surface has micro-texture similar to sandblasted obsidian. Purple wireframe grid lines are embedded within the glass volume, not painted on the surface.",
+      "grid_platform": "Razor-thin purple lines on an invisible plane, with each line having a subtle gradient falloff - brighter at intersections, dimmer between them. The grid extends approximately 3x the slab width before fading to nothing.",
+      "void_background": "Pure matte black with zero reflectivity, creating an infinite depth sensation. No visible floor, walls, or ceiling beyond the grid platform."
+    },
+    "module_surfaces": {
+      "hero_module": "Dark charcoal matte surface with a subtle brushed-metal micro-texture, thin purple border line (1px equivalent) with soft inner glow. Surface has very faint embossed placeholder shapes suggesting image and text regions without any readable content.",
+      "feature_cards": "Slightly lighter charcoal than the hero module, with a smooth matte finish and rounded corners (8px equivalent radius). Each card has a thin purple top-edge accent line and a faint purple icon placeholder circle in the upper portion.",
+      "navigation_bar": "Near-black matte surface, extremely slim profile, with evenly spaced purple dot accents suggesting navigation link positions. Subtle purple underline on one dot suggesting an active state.",
+      "footer_module": "Darkest charcoal, slightly textured with micro circuit-line patterns in very dim purple (2-3% opacity), suggesting hidden complexity and interconnected systems beneath the visible surface."
+    },
+    "transparency": "The main wireframe slab is semi-transparent frosted dark glass - modules behind the slab are faintly visible as dark silhouettes. The empty module slots show a subtle purple dotted outline through the glass. Locked-in modules become opaque once seated, creating a visual distinction between integrated and pending components."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of purple light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Slight two-point perspective with the wireframe slab angled to show both its face and its left edge, converging toward two distant vanishing points. The grid platform reinforces the perspective with its receding lines.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The wireframe slab is positioned along the left-center vertical third line, with the hero module snap-point occurring at the upper-right third intersection. The grid platform horizon sits along the lower horizontal third line.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Floating micro UI elements and purple particle dust at the bottom-left corner (slight bokeh blur)",
+      "Mid-ground: The wireframe slab with snapping modules - primary focal plane (sharp focus)",
+      "Background: Fading purple grid lines and scattered distant particles (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters from the upper-left following the key light direction, lands on the hero module snapping into place, then travels downward along the wireframe slab through the feature cards to the footer, and finally follows the grid lines outward into the dark void - a top-to-bottom flow mirroring how a website is actually built and read."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic 3D render of a dark tech product visualization depicting a website wireframe assembly scene. A large vertically-oriented translucent dark glass slab floats above a subtle purple perspective grid in a deep black void environment. The slab has recessed rectangular slots carved into its surface forming a classic landing page layout with hero area, feature blocks, and footer zones. Several modular UI blocks rendered in dark charcoal matte material with thin deep purple border accents are caught mid-flight, drifting inward and magnetically snapping into their designated positions on the wireframe skeleton. A hero module with brushed-metal micro-texture hovers at the top slot, slightly offset with motion blur on its trailing edge and a burst of purple micro-particles at the contact point. Three feature card modules sit in the mid-section, two already locked in with settled purple edge glow and one still approaching from the right trailing purple particle dust. A slim navigation bar module with purple dot accents is already integrated at the top. A footer module with micro circuit-line patterns in dim purple rests at the bottom. Small purple magnetic alignment guide lines flicker between approaching modules and their targets. Tiny detached UI micro-elements with purple outlines orbit nearby. The scene is lit with a primary cool-neutral key light from upper-left at 45 degrees, a purple accent rim light from behind-right casting thin purple edge highlights, and a subtle purple under-glow from below the platform. Materials include sandblasted obsidian-like frosted dark glass for the slab, matte charcoal surfaces for modules, and razor-thin purple grid lines on the platform. Camera at three-quarter view slightly above eye level, 50mm focal length, f/4 depth of field with sharp focus on the central assembly and gentle bokeh on periphery. Sparse purple light dust particles float in the mid-ground. Film grain at 2-3% opacity. Deep purple oklch 0.65 0.2 300 is the sole accent color on strict monochromatic black. Dark premium cinematic aesthetic inspired by Linear, Vercel, and Stripe marketing imagery. --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic 3D render in a dark premium tech aesthetic showing a website wireframe assembly scene. A large vertically-oriented translucent dark glass slab floats above a subtle deep purple perspective grid in a pitch-black void environment. The slab has recessed rectangular slots forming a landing page layout with hero, feature, and footer zones. Several modular UI blocks in dark charcoal matte material with thin deep purple border accents drift inward and magnetically snap into their positions on the wireframe. A hero module with brushed-metal texture hovers near the top slot with slight motion blur and purple micro-particle burst at the contact point. Three feature cards sit in the mid-section - two locked in with purple edge glow, one approaching from the right trailing purple particles. A slim navigation bar with purple dot accents is integrated at the top. A footer module with faint purple circuit patterns sits at the bottom. Purple magnetic alignment guides flicker between modules and slots. Tiny UI micro-elements with purple outlines orbit nearby. Lighting consists of a cool-neutral key light from upper-left, a purple accent rim light from behind-right casting thin purple edge highlights, and subtle purple under-glow from below. The wireframe slab is sandblasted obsidian-like frosted dark glass with embedded purple grid lines. Camera is at three-quarter view slightly above eye level, 50mm lens, f/4 depth of field. Sparse purple light dust particles float in the scene. Very subtle film grain texture. Deep purple is the only accent color - no warm tones, no neon, no bloom effects. No text, labels, logos, or human figures anywhere. Inspired by Linear app, Vercel, and Stripe abstract product visualizations. Cinematic, moody, editorial feel with generous dark negative space. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, cinematic dark tech product visualization, professional studio quality, physically based rendering, sharp detail, clean anti-aliased edges, professional color grading, high dynamic range. A large vertically-oriented translucent dark frosted glass slab floats above a subtle deep purple perspective grid in a pitch-black void. The slab contains recessed rectangular slots forming a website landing page wireframe layout. Multiple dark charcoal matte UI module blocks with thin deep purple border accents are caught mid-assembly, drifting inward and snapping magnetically into their designated wireframe positions. A hero module with brushed-metal micro-texture approaches the top slot with motion blur and purple particle burst at contact. Three feature cards in the mid-section - two locked in with purple edge glow, one floating inward trailing purple particle dust. Navigation bar module with purple dot accents locked at top. Footer module with dim purple circuit-line patterns at bottom. Purple magnetic alignment guide lines flicker between modules and slots. Tiny orbiting UI micro-elements with purple outlines. Cool-neutral key light from upper-left at 45 degrees defines matte surfaces. Purple accent rim light from behind-right casts thin purple edge highlights on all objects. Subtle purple under-glow from below the platform. Sandblasted obsidian frosted dark glass slab material with embedded purple wireframe lines. Matte charcoal module surfaces with rounded corners. Razor-thin purple grid lines on ground plane fading to darkness. Three-quarter camera view slightly above eye level, 50mm focal length, f/4 depth of field, sharp mid-ground focus with gentle peripheral bokeh. Sparse purple light dust micro-particles at 5-10% opacity. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 as sole accent on monochromatic near-black palette. No text, no labels, no people, no logos, no warm colors, no neon glow, no bloom, no bright white. Dark premium editorial aesthetic inspired by Linear, Vercel, and Stripe product imagery. Wide 16:9."
+  }
+}

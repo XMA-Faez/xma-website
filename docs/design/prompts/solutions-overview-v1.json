@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Solutions Overview",
+    "variation": "1 - Hub-and-Spoke System Network",
+    "accent_color": "deep blue",
+    "accent_oklch": "oklch(0.6 0.2 250)",
+    "concept": "A central command hub radiates five distinct spokes outward to satellite system modules, each representing a different XMA solution. The visual metaphor communicates that all growth systems originate from and connect back to a unified strategic core, emphasizing integration and orchestration over isolated tactics."
+  },
+  "core": {
+    "subject": "A large, faceted polyhedron sits at the center of the composition, its matte dark surface etched with thin blue wireframe lines that pulse faintly along geometric seams. Five rigid spokes extend outward from the polyhedron's faces at equal angular intervals, each spoke a slender cylindrical beam of frosted dark glass with a blue-lit core running through its center like fiber optics. At the terminus of each spoke, a distinct satellite module floats - each module a different geometric primitive (cube, octahedron, torus, pyramid, dodecahedron) - all rendered in the same dark matte material but differentiated by their shape and the pattern of blue circuit traces etched into their surfaces.",
+    "scene": "The entire assembly hovers above a vast, perfectly flat platform made of near-black brushed metal with an ultra-fine blue grid etched into its surface at 5cm intervals. The grid lines glow with barely perceptible blue luminescence, fading to invisible at the platform edges. The platform extends outward before dissolving into a pure black void. Beneath the central hub, a faint circular pool of blue light reflects upward, casting subtle caustic patterns onto the hub's underside.",
+    "objects": [
+      "Central polyhedron hub - a truncated icosahedron approximately 40cm in diameter, matte charcoal surface with beveled edges catching blue rim light, thin blue wireframe overlay tracing every geometric face boundary.",
+      "Five cylindrical spoke beams - each roughly 30cm long and 3cm in diameter, made of frosted dark glass with a luminous blue fiber-optic core running through the center, emitting controlled linear light along their length.",
+      "Satellite module one - a perfect cube with chamfered edges, dark gunmetal finish, with a single blue circuit-trace pattern spiraling across one visible face like a printed circuit board.",
+      "Satellite module two - an octahedron suspended at spoke end, slightly smaller than the cube, with blue edge highlights and a subtle internal glow visible through hairline seams between its faces.",
+      "Satellite module three - a torus (ring shape) oriented vertically, dark matte material with blue pinstripe lines running along its outer circumference at regular intervals, slowly rotating.",
+      "Satellite module four - a low pyramid with truncated apex, featuring a frosted glass cap on top that emits a soft blue glow downward across its dark angled faces.",
+      "Satellite module five - a dodecahedron with each pentagonal face slightly recessed, creating shadow wells that are filled with deep blue ambient light, giving it a jewel-like quality."
+    ],
+    "actions": [
+      "Faint pulses of blue light travel along the spoke beams from the central hub outward to each satellite module in a slow, rhythmic sequence - not simultaneous, but staggered like a heartbeat distributing energy.",
+      "The torus module rotates slowly on its vertical axis, its blue pinstripes creating a subtle moir\u00e9 pattern as the surface turns.",
+      "Micro-particles of blue light drift upward from the platform grid beneath the central hub, rising gently like digital embers before fading at shoulder height.",
+      "The circuit traces on the cube module flicker with sequential illumination, suggesting data flowing through pathways in a controlled, deliberate pattern."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with blue as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should immediately grasp the idea of a centralized system that powers and connects multiple specialized functions. The radial symmetry communicates balance and comprehensive coverage, while the distinct shapes of each satellite module suggest specialized capabilities unified under one architecture. The overall feeling is one of quiet, engineered precision - a machine that works in concert."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary blue accent rim light from behind-right, casting thin blue edge highlights on all 3D objects. Tertiary subtle blue fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep blue (oklch 0.6 0.2 250) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated blue (oklch 0.35 0.12 250) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic blue on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the blue-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The central hub and spokes form a rigid structural assembly that appears to hover magnetically above the platform - a faint blue reflection on the platform beneath it sells the floating illusion. Satellite modules are firmly attached at spoke ends, not drifting freely.",
+      "structural_believability": true,
+      "structural_details": "The spokes connect to the hub at clearly defined junction points with visible mechanical couplings - small collar rings where spoke meets hub face. Each satellite module has a matching collar socket where the spoke terminates, suggesting engineered precision rather than arbitrary floating."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "hub_exterior": "Matte dark charcoal with extremely fine micro-texture resembling sandblasted titanium - absorbs most light but catches blue rim lighting on beveled edges with a subtle satin sheen.",
+      "spoke_beams": "Frosted dark glass cylinder exterior (70% opacity) encasing a bright blue luminous core - the glass diffuses the internal light into a soft linear glow, with the core remaining sharper and more saturated at the center.",
+      "platform": "Near-black brushed metal with directional grain running front-to-back - the grain catches blue grid light at grazing angles, creating subtle anisotropic reflections that emphasize perspective depth."
+    },
+    "module_surfaces": {
+      "cube_module": "Gunmetal dark chrome with a slight satin finish - more reflective than the hub but not mirror-like, allowing blue circuit traces to read clearly as etched luminous channels recessed 0.5mm into the surface.",
+      "octahedron_module": "Same matte charcoal as the hub but with sharper, knife-edge creases that catch rim light as crisp blue lines - hairline seams between faces allow faint internal blue light to leak through.",
+      "torus_module": "Dark matte rubber-like material with subtle grip texture - the blue pinstripe lines are inlaid flush with the surface, appearing as illuminated channels rather than painted-on marks.",
+      "pyramid_and_dodecahedron": "Dark anodized aluminum appearance with subtle warm-shift-free metallic quality - the pyramid's glass cap is frosted semi-transparent with 40% opacity, while the dodecahedron's recessed faces create shadow pools lit by ambient blue bounce light."
+    },
+    "transparency": "Frosted glass elements maintain 40-70% opacity with soft light diffusion - no crystal-clear transparency. Internal blue light sources are visible as soft gradients through the glass rather than sharp point sources. The spoke beam glass has a slight bluish tint from the internal core light."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of blue light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the central composition."
+  },
+  "composition": {
+    "perspective": "Slightly elevated three-quarter perspective that reveals the radial symmetry of the hub-and-spoke layout - the viewer looks down at roughly 25 degrees, seeing the central hub prominently with spokes extending outward in a star pattern, two spokes reaching toward the viewer and three reaching away at varying angles.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central hub sits at the intersection of the center-left vertical third and upper horizontal third. The two forward-reaching spokes extend into the lower-left and lower-right quadrants, while the three rearward spokes fill the upper portion of the frame, creating a balanced inverted-triangle weight distribution.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Two satellite modules (cube and torus) at the ends of forward-reaching spokes, positioned in the lower third of the frame with slight bokeh blur on their nearest edges (slight bokeh blur)",
+      "Mid-ground: Central polyhedron hub and the spoke junction area - the primary focal point with maximum sharpness and detail (sharp focus)",
+      "Background: Three remaining satellite modules receding into the dark void, progressively softer focus and slightly reduced opacity, with the farthest module barely distinguishable from the darkness (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters at the bright blue-lit central hub, then follows the spoke beams outward in a clockwise spiral - first to the nearest foreground cube module, then sweeping right to the torus, up to the rear modules, and back to center. The pulsing light animations along the spokes reinforce this radial reading pattern, always drawing attention back to the hub as the gravitational center of the composition."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of a dark tech hub-and-spoke network floating above a near-black brushed metal platform with faint blue grid lines. A large truncated icosahedron sits at the center, its matte charcoal surface etched with thin glowing deep blue wireframe lines tracing every geometric face. Five rigid cylindrical spokes of frosted dark glass extend outward from the hub, each containing a luminous blue fiber-optic core that pulses with traveling light. At each spoke terminus floats a distinct geometric satellite module - a chamfered cube with blue circuit traces, an octahedron with blue-lit seams, a slowly rotating torus with blue pinstripe channels, a truncated pyramid with a frosted glass cap glowing blue, and a dodecahedron with recessed faces pooling deep blue light. The platform beneath features an ultra-fine blue grid that fades at the edges into pure black void. Sparse micro-particles of blue light dust float in the mid-ground. Primary key light from upper-left at 45 degrees with cool 5500K temperature creates subtle matte surface definition. Blue accent rim light from behind-right casts thin edge highlights on all objects. Subtle blue under-glow from the platform illuminates lower surfaces. All materials are dark - sandblasted titanium matte finish on the hub, gunmetal satin chrome on modules, frosted semi-transparent glass on spokes. Camera at three-quarter elevated angle, 55mm focal length, f/4 depth of field with sharp focus on the central hub and gentle falloff on peripheral modules. Moody low-key atmosphere with 4:1 lighting ratio, deep soft shadows, no specular highlights. Subtle 2-3% film grain texture. Dark premium tech product visualization inspired by Linear and Vercel marketing aesthetics. Deep blue oklch accent color only, strict monochromatic blue on black palette --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of a hub-and-spoke system network floating in a dark void. At the center, a large truncated icosahedron made of matte dark charcoal material has thin glowing deep blue wireframe lines tracing every geometric face boundary. Five rigid cylindrical spokes extend outward from the hub - each spoke is frosted dark glass encasing a luminous blue fiber-optic core that pulses with traveling light energy. At the end of each spoke, a distinct satellite module floats: a chamfered cube with blue circuit-board traces etched into its gunmetal surface, an octahedron with blue light leaking through hairline seams, a slowly rotating torus with inlaid blue pinstripe channels, a truncated pyramid with a frosted blue-glowing glass cap, and a dodecahedron with recessed pentagonal faces pooling deep blue light. The entire assembly hovers above a vast near-black brushed metal platform with an ultra-fine blue grid etched into its surface. The grid fades to invisible at the platform edges, which dissolve into pure black void. Key light comes from upper-left at 45 degrees with cool neutral temperature, just enough to define surfaces. Blue accent rim light from behind-right creates thin edge highlights. Subtle blue under-glow from the platform. Deep blue is the only accent color - no warm tones, no other colors. Sparse floating micro-particles of blue light dust in the mid-ground. Camera positioned at three-quarter elevated angle, 55mm lens, medium depth of field with the hub in sharp focus and outer modules softening. Matte dark surfaces with sandblasted titanium texture on the hub, satin gunmetal on modules. Very subtle 2-3% film grain. Dark premium tech aesthetic inspired by Linear app and Vercel marketing visuals. Moody, low-key lighting with deep soft shadows. No text, no people, no logos, no bright white surfaces, no neon glow or bloom effects. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. A hub-and-spoke network system floating above a near-black brushed metal platform with ultra-fine glowing deep blue grid lines. Central subject is a truncated icosahedron hub of matte charcoal sandblasted titanium finish, etched with thin luminous blue wireframe traces on every face boundary. Five frosted dark glass cylindrical spokes extend radially outward, each containing a bright blue fiber-optic core emitting controlled linear light with traveling pulses. Five satellite modules at spoke termini: chamfered gunmetal cube with recessed blue circuit traces, sharp-edged octahedron with blue light leaking through hairline face seams, vertically oriented torus with inlaid blue pinstripe channels slowly rotating, truncated pyramid with semi-transparent frosted glass cap glowing blue downward, dodecahedron with recessed pentagonal faces pooling deep blue ambient light. Platform grid fades into pure black void environment. Key light upper-left 45 degrees at 5500K cool neutral, blue accent rim light from behind-right, subtle blue fill from below platform. 4:1 key-to-fill lighting ratio creating moody low-key atmosphere. Deep soft-edged shadows, no specular highlights. Camera three-quarter elevated view 25 degrees above horizontal, 55mm focal length, f/4 aperture with sharp central focus and gentle peripheral falloff. Sparse blue micro-particles floating in mid-ground at 5-10% opacity. Materials: sandblasted titanium matte hub, gunmetal satin chrome modules, frosted 40-70% opacity glass spokes. Deep blue oklch(0.6 0.2 250) as sole accent color on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no warm colors, no neon glow, no bloom effects, no bright white surfaces. Wide 16:9."
+  }
+}

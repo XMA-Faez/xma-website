@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "E-Commerce Revenue Engine",
+    "variation": "1 - Revenue Pipeline Flow",
+    "accent_color": "deep cyan",
+    "accent_oklch": "oklch(0.7 0.15 195)",
+    "concept": "A horizontal multi-stage pipeline stretching across the composition, with distinct processing stages connected by transparent tubes carrying flowing cyan particles. Each stage transforms raw materials into refined revenue outputs, visualizing the systematic conversion journey from visitor to paying customer to repeat buyer."
+  },
+  "core": {
+    "subject": "A sleek horizontal pipeline structure spanning the full width of the composition, consisting of five distinct processing modules connected by transparent cylindrical tubes. Each module is a dark matte geometric housing with a unique internal mechanism visible through frosted glass panels - the leftmost module is a wide intake funnel, followed by progressively refined stages that narrow and intensify, culminating in a polished output chamber on the right that emits concentrated cyan light. Small luminous cyan particles flow through the transparent connecting tubes between modules, accelerating and brightening as they move from left to right through each successive processing stage.",
+    "scene": "A dark expansive void environment with a long narrow matte black platform serving as the ground plane, oriented horizontally to support the full length of the pipeline. The platform has barely visible thin cyan grid lines etched at regular intervals. The pipeline structure sits centered on the platform at a slight upward angle from left to right, suggesting progression and growth. Faint cyan reflections from the particle flow play across the platform surface beneath the transparent tubes, creating subtle light caustics on the dark ground.",
+    "objects": [
+      "Intake funnel module - a wide conical opening on the far left with dark brushed steel walls flaring outward, thin cyan edge lighting tracing the funnel rim, the interior showing a spiral guide channel that directs incoming particles downward into the first connecting tube, the funnel mouth emitting a subtle cyan glow from accumulated particle energy",
+      "Filter stage module - the second housing from the left, a compact rectangular box with frosted glass side panels revealing internal mesh screens arranged in parallel layers, cyan particles passing through the screens and separating into a focused stream, rejected particles fading into dim gray wisps that dissipate downward",
+      "Processing core module - the central and largest module, a cylindrical chamber with dark carbon fiber housing and a large frosted glass viewport showing internal rotating ring mechanisms, cyan particles spiraling through the rings and gaining brightness and speed, the chamber emitting the strongest cyan glow of all modules",
+      "Optimization module - the fourth stage, a sleek hexagonal housing with dark anodized aluminum panels, internal prism-like structures visible through narrow glass slits that split and recombine the cyan particle stream into a tighter more intense beam, precision engineering aesthetic",
+      "Output chamber - the rightmost module, a polished dark glass dome with a narrow focused output port, the concentrated cyan particle stream emerging as a tight bright beam, the dome interior showing accumulated bright cyan energy pooling before emission",
+      "Transparent connecting tubes - four cylindrical glass tubes connecting each module to the next, dark tinted glass with visible cyan particle streams flowing through them at increasing speeds left to right, each tube slightly narrower than the previous one indicating progressive refinement and concentration",
+      "Flow particles - hundreds of small luminous cyan spheres of varying sizes traveling through the tubes and modules, dimmer and more dispersed at the intake end, brighter and more concentrated at the output end, leaving faint trailing light streaks as they move"
+    ],
+    "actions": [
+      "Cyan particles are actively flowing from left to right through the entire pipeline system, with visible acceleration at each stage transition - particles enter the intake funnel slowly and scattered, then move faster and more focused through each subsequent module",
+      "Inside the central processing core, the ring mechanisms are captured mid-rotation, creating spiral motion trails from the cyan particles passing through them, suggesting active transformation and value-adding processing",
+      "At the filter stage, a visible separation is occurring - bright cyan particles pass through the mesh screens while dim gray particles are being deflected downward, illustrating qualification and sorting",
+      "The output beam emerging from the final chamber pulses with concentrated energy, small bright cyan sparks radiating outward from the emission point suggesting high-value output being generated"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with cyan as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The emotional narrative is 'raw opportunity being systematically refined into concentrated revenue through an engineered process.' The viewer should feel the momentum and inevitability of the left-to-right flow - once something enters the pipeline, the system processes it with mechanical precision. This directly represents the e-commerce revenue engine concept of building a systematic, repeatable machine that converts traffic into revenue at every stage."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary cyan accent rim light from behind-right, casting thin cyan edge highlights on all 3D objects. Tertiary subtle cyan fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep cyan (oklch 0.7 0.15 195) as the sole accent color. Secondary accent is a slightly desaturated cyan (oklch 0.4 0.10 195) for deeper shadows and subtle gradients. No warm colors. Strict monochromatic cyan on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal), oriented to show the full horizontal span of the pipeline with slight perspective convergence",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport through semi-transparent elements",
+      "global_illumination": "Subtle GI bounce from cyan-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The pipeline structure sits solidly on the platform with proper weight distribution. Particles inside the tubes follow fluid dynamics - flowing smoothly along curved paths with natural acceleration through narrowing sections.",
+      "structural_believability": true,
+      "structural_details": "Each module has proper mechanical housing geometry with visible seams, bolts, and panel joins. The transparent tubes have realistic wall thickness and connect to modules via dark metal flanges with proper coupling geometry."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "platform": "Matte dark carbon fiber texture with extremely subtle directional grain, non-reflective except for faint cyan caustic light patterns from the particle flow in the tubes above",
+      "module_housings": "Dark brushed steel with micro-texture grain running horizontally, non-reflective matte finish with subtle edge chamfers catching cyan rim light, panel seams visible as thin dark recessed lines",
+      "connecting_tubes": "Dark tinted borosilicate glass with high clarity, slightly smoky tint allowing the cyan particle streams to be clearly visible inside, the tube walls catch subtle reflections from the flowing particles creating internal caustic patterns"
+    },
+    "module_surfaces": {
+      "intake_funnel": "Dark brushed steel with spiral guide channels milled into the interior surface, thin cyan edge lighting embedded in the funnel rim as a recessed LED-like strip, the interior surface has a slight satin finish",
+      "filter_screens": "Fine dark metal mesh with regular grid pattern, semi-transparent when viewed through frosted glass side panels, the mesh catches cyan particle light creating a dotted glow pattern",
+      "processing_rings": "Polished dark chrome concentric rings with precision machined edges, the ring surfaces have mirror-like quality that reflects the spiral cyan particle trails, mounted on dark metal bearings",
+      "output_dome": "Polished dark glass with high-gloss finish and subtle internal depth, the dome interior pools accumulated cyan light creating a gradient from dim at the edges to bright at the output port center"
+    },
+    "transparency": "Connecting tubes are clear dark-tinted glass with visible wall thickness and proper refraction of cyan particle light. Module frosted glass panels are translucent with 40-60% opacity, revealing internal mechanisms as softened silhouettes with bright cyan highlights bleeding through. Output dome is polished glass with high clarity and internal reflections."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of cyan light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Slightly elevated three-quarter view emphasizing the horizontal span of the pipeline, with natural perspective convergence making the intake funnel on the left appear slightly larger than the output chamber on the right",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central processing core sits at the intersection of center gridlines. The intake funnel occupies the left third and the output chamber occupies the right third, creating balanced horizontal distribution across the frame.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Platform edge and closest connecting tube section (slight bokeh blur)",
+      "Mid-ground: All five pipeline modules and connecting tubes (sharp focus)",
+      "Background: Particle trail remnants and dissipating filter rejects fading into void (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining the premium editorial feel",
+    "visual_flow": "The eye enters from the left at the wide intake funnel, follows the horizontal flow of cyan particles through each successive stage, accelerating rightward through the narrowing tubes, and exits at the concentrated output beam on the right - a clear left-to-right reading path that mirrors the revenue conversion journey"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A sleek horizontal multi-stage pipeline system on a dark matte platform, five distinct processing modules connected by transparent dark-tinted glass tubes carrying flowing luminous cyan particles. The leftmost module is a wide brushed steel intake funnel with cyan-lit rim, followed by a rectangular filter stage with frosted glass panels showing internal mesh screens, a central cylindrical processing core with rotating ring mechanisms visible through a large viewport, a hexagonal optimization module with internal prism structures, and a polished dark glass output dome emitting a concentrated cyan beam. Cyan particles flow left to right through the tubes, dim and scattered at intake, bright and concentrated at output, accelerating through each stage. Transparent tubes narrow progressively showing refinement. Inside the filter stage, bright cyan particles pass through while dim gray rejects dissipate downward. The processing core shows spiral particle trails through rotating chrome rings. Dark void environment, matte carbon fiber platform with faint cyan grid lines, subtle cyan caustic light patterns on the platform from particle flow above. Dramatic cinematic lighting, cool key light upper-left, cyan rim light from behind-right, subtle cyan under-glow. Near-black palette with deep cyan oklch(0.7 0.15 195) as sole accent. Three-quarter elevated view, 55mm lens, medium depth of field. Hyperrealistic 3D render, studio quality, physically based rendering, precise edge definition, subtle film grain --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a sleek horizontal multi-stage pipeline system sitting on a dark matte carbon fiber platform with faint cyan grid lines. Five distinct dark processing modules are connected by transparent dark-tinted glass tubes carrying flowing luminous cyan particles. From left to right: a wide brushed steel intake funnel with cyan-lit rim and spiral guide channels inside, a rectangular filter module with frosted glass panels revealing internal mesh screens separating bright cyan particles from dim gray rejects, a central cylindrical processing core with dark carbon fiber housing and a large viewport showing rotating polished chrome ring mechanisms with spiral cyan particle trails, a hexagonal optimization module in dark anodized aluminum with narrow glass slits showing internal prism structures splitting and recombining the particle stream, and a polished dark glass output dome emitting a tight concentrated cyan beam from its focused output port. Hundreds of small luminous cyan spheres flow through the tubes, dimmer and scattered at the intake end, brighter and concentrated at the output end, leaving faint trailing light streaks. Tubes narrow progressively left to right. Deep void environment, pure darkness surrounding the pipeline. Dramatic cinematic lighting: cool key light from upper-left at 45 degrees, cyan accent rim light from behind-right casting thin edge highlights, subtle cyan fill from below the platform creating caustic light patterns. Color palette strictly near-black to dark charcoal with deep cyan as the only accent color. Three-quarter view from slightly above eye level, 55mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors, no neon glow or bloom. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A sleek horizontal multi-stage pipeline system spanning a dark matte carbon fiber platform with faint cyan grid lines. Five processing modules connected by transparent dark-tinted glass tubes carrying flowing luminous cyan particles. Leftmost is a wide brushed steel intake funnel with cyan-lit rim and spiral interior channels. Second is a rectangular filter module with frosted glass panels showing mesh screens - bright cyan particles pass through while dim gray rejects dissipate. Center is a large cylindrical processing core with dark carbon fiber housing, a frosted glass viewport reveals rotating polished chrome ring mechanisms creating spiral cyan particle trails inside. Fourth is a hexagonal dark anodized aluminum optimization module with narrow glass slits showing prism structures splitting and recombining the particle stream. Rightmost is a polished dark glass output dome with concentrated cyan beam emerging from its focused port. Hundreds of luminous cyan spheres flow left to right through the tubes, becoming brighter and more concentrated at each stage, leaving trailing light streaks. Tubes narrow progressively. Subtle cyan caustic patterns play on the platform surface beneath the tubes. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left 45 degrees, cyan rim light behind-right, subtle cyan under-glow. Near-black to charcoal palette with deep cyan oklch(0.7 0.15 195) as sole accent. Three-quarter elevated view, 55mm lens, medium depth of field, rule of thirds. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

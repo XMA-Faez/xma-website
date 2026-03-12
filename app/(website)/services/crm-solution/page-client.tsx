@@ -115,7 +115,7 @@ const CRMPageClient = () => {
                 }}
               >
                 <Image
-                  src="/solutions/crm-revenue-system-desktop.png"
+                  src="/crm-screenshot.png"
                   alt="XMA CRM dashboard showing opportunities pipeline with lead management, sales tracking, and multi-channel communication features"
                   width={1920}
                   height={1080}

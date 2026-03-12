@@ -123,7 +123,7 @@ function deriveAccentTokens(accentColor?: string): AccentTokens {
 
 function mapAccentToButtonColor(
   accentColor?: string,
-): "blue" | "emerald" | "purple" | "amber" {
+): "blue" | "cyan" | "emerald" | "purple" | "pink" | "amber" {
   if (!accentColor) return "blue";
   const hueMatch = accentColor.match(
     /oklch\(\s*[\d.]+\s+[\d.]+\s+([\d.]+)/,
@@ -132,8 +132,10 @@ function mapAccentToButtonColor(
   const hue = parseFloat(hueMatch[1]);
   if (hue >= 270 && hue <= 330) return "purple";
   if (hue >= 40 && hue <= 90) return "amber";
-  if (hue >= 120 && hue <= 200) return "blue";
-  if (hue > 330 || hue < 20) return "purple";
+  if (hue >= 170 && hue <= 210) return "cyan";
+  if (hue >= 120 && hue < 170) return "emerald";
+  if (hue > 210 && hue < 270) return "blue";
+  if (hue > 330 || hue < 20) return "pink";
   return "blue";
 }
 
@@ -157,7 +159,6 @@ export default function SolutionPageTemplate({
       <SolutionIncluded included={data.included} accent={accent} />
       <SolutionProcess process={data.process} accent={accent} />
       <SolutionOutcomes outcomes={data.outcomes} />
-      <CaseStudiesPreview />
       <SolutionCTA cta={data.cta} accent={accent} buttonColor={buttonColor} />
     </div>
   );
@@ -170,7 +171,7 @@ function SolutionHero({
 }: {
   hero: SolutionPageData["hero"];
   accent: AccentTokens;
-  buttonColor: "blue" | "emerald" | "purple" | "amber";
+  buttonColor: "blue" | "cyan" | "emerald" | "purple" | "pink" | "amber";
 }) {
   return (
     <div className="relative min-h-[70vh] flex items-center overflow-x-clip">
@@ -191,7 +192,7 @@ function SolutionHero({
         }}
       />
       <Section size="xl" padding="lg" className="relative z-10">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl flex flex-col items-center mx-auto text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -453,7 +454,7 @@ function SolutionIncluded({
           return (
             <div
               key={item.title}
-              className={`glass-primary rounded-2xl p-8 ${index % 2 === 1 ? "sm:translate-y-4" : ""}`}
+              className={`glass-primary rounded-2xl p-8`}
             >
               {Icon && (
                 <div
@@ -495,7 +496,7 @@ function SolutionProcess({
       </h2>
 
       <div className="relative max-w-4xl mx-auto">
-        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-zinc-800" />
+        <div className="hidden md:block absolute left-1/2 top-2 bottom-2 w-px -translate-x-1/2 bg-zinc-800" />
         <div className="md:hidden absolute left-6 top-0 bottom-0 w-px bg-zinc-800" />
 
         <div className="flex flex-col gap-12">
@@ -519,7 +520,7 @@ function SolutionProcess({
                     </div>
                   </div>
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white border z-10 order-2 shrink-0"
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white border z-10 order-2 shrink-0 backdrop-blur-md"
                     style={{
                       backgroundColor: accent.bg,
                       borderColor: accent.border,
@@ -647,7 +648,7 @@ function SolutionCTA({
 }: {
   cta: SolutionPageData["cta"];
   accent: AccentTokens;
-  buttonColor: "blue" | "emerald" | "purple" | "amber";
+  buttonColor: "blue" | "cyan" | "emerald" | "purple" | "pink" | "amber";
 }) {
   return (
     <div className="relative overflow-x-clip">

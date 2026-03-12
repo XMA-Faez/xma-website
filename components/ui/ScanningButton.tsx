@@ -5,7 +5,9 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 const SHIMMER_COLORS: Record<string, string> = {
   emerald: "rgba(52, 211, 153, 0.3)",
+  cyan: "rgba(34, 211, 238, 0.3)",
   purple: "rgba(196, 181, 253, 0.3)",
+  pink: "rgba(236, 72, 153, 0.3)",
   amber: "rgba(251, 191, 36, 0.3)",
   neutral: "rgba(212, 212, 212, 0.25)",
   white: "rgba(59, 130, 246, 0.2)",
@@ -28,8 +30,10 @@ const scanningButtonVariants = cva(
       },
       color: {
         blue: "",
+        cyan: "",
         emerald: "",
         purple: "",
+        pink: "",
         amber: "",
         neutral: "",
         white: "",
@@ -74,6 +78,25 @@ const scanningButtonVariants = cva(
         className:
           "text-emerald-700 hover:text-white bg-white/70 border border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] dark:text-emerald-400 dark:hover:text-white dark:bg-zinc-900/50 dark:border-emerald-500/30 [--gradient-from:transparent] [--gradient-to:transparent] hover:[--gradient-from:hsl(160_84%_39%/0.6)] hover:[--gradient-to:hsl(158_64%_52%/0.4)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
       },
+      // Cyan variants
+      {
+        variant: "primary",
+        color: "cyan",
+        className:
+          "text-white dark:text-white border border-cyan-500/60 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] dark:border-cyan-500/30 [--gradient-from:hsl(187_86%_33%/0.8)] [--gradient-to:hsl(189_94%_43%/0.6)] hover:[--gradient-from:hsl(189_94%_43%/0.85)] hover:[--gradient-to:hsl(187_86%_53%/0.7)] dark:[--gradient-from:hsl(187_86%_53%/0.25)] dark:[--gradient-to:hsl(189_94%_43%/0.15)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
+      {
+        variant: "secondary",
+        color: "cyan",
+        className:
+          "text-cyan-700 dark:text-cyan-300 border border-cyan-500/60 hover:shadow-[0_0_30px_rgba(6,182,212,0.4),inset_0_0_20px_rgba(6,182,212,0.15)] dark:border-cyan-500/25 [--gradient-from:hsl(187_86%_53%/0.4)] [--gradient-to:hsl(189_94%_43%/0.25)] hover:[--gradient-from:hsl(187_86%_53%/0.5)] hover:[--gradient-to:hsl(189_94%_43%/0.35)] dark:[--gradient-from:hsl(187_86%_53%/0.08)] dark:[--gradient-to:hsl(189_94%_43%/0.05)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
+      {
+        variant: "outline",
+        color: "cyan",
+        className:
+          "text-cyan-700 hover:text-white bg-white/70 border border-cyan-500/50 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] dark:text-cyan-400 dark:hover:text-white dark:bg-zinc-900/50 dark:border-cyan-500/30 [--gradient-from:transparent] [--gradient-to:transparent] hover:[--gradient-from:hsl(189_94%_43%/0.6)] hover:[--gradient-to:hsl(187_86%_53%/0.4)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
       // Purple variants
       {
         variant: "primary",
@@ -92,6 +115,25 @@ const scanningButtonVariants = cva(
         color: "purple",
         className:
           "text-purple-700 hover:text-white bg-white/70 border border-purple-500/50 hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] dark:text-purple-400 dark:hover:text-white dark:bg-zinc-900/50 dark:border-purple-500/30 [--gradient-from:transparent] [--gradient-to:transparent] hover:[--gradient-from:hsl(262_83%_58%/0.6)] hover:[--gradient-to:hsl(270_91%_65%/0.4)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
+      // Pink variants
+      {
+        variant: "primary",
+        color: "pink",
+        className:
+          "text-white dark:text-white border border-pink-500/60 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] dark:border-pink-500/30 [--gradient-from:hsl(330_81%_50%/0.8)] [--gradient-to:hsl(340_82%_58%/0.6)] hover:[--gradient-from:hsl(335_78%_52%/0.85)] hover:[--gradient-to:hsl(340_82%_58%/0.7)] dark:[--gradient-from:hsl(330_81%_50%/0.25)] dark:[--gradient-to:hsl(340_82%_58%/0.15)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
+      {
+        variant: "secondary",
+        color: "pink",
+        className:
+          "text-pink-700 dark:text-pink-300 border border-pink-500/60 hover:shadow-[0_0_30px_rgba(236,72,153,0.4),inset_0_0_20px_rgba(236,72,153,0.15)] dark:border-pink-500/25 [--gradient-from:hsl(330_81%_50%/0.4)] [--gradient-to:hsl(340_82%_58%/0.25)] hover:[--gradient-from:hsl(330_81%_50%/0.5)] hover:[--gradient-to:hsl(340_82%_58%/0.35)] dark:[--gradient-from:hsl(330_81%_50%/0.08)] dark:[--gradient-to:hsl(340_82%_58%/0.05)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
+      },
+      {
+        variant: "outline",
+        color: "pink",
+        className:
+          "text-pink-700 hover:text-white bg-white/70 border border-pink-500/50 hover:shadow-[0_0_20px_rgba(236,72,153,0.3)] dark:text-pink-400 dark:hover:text-white dark:bg-zinc-900/50 dark:border-pink-500/30 [--gradient-from:transparent] [--gradient-to:transparent] hover:[--gradient-from:hsl(335_78%_52%/0.6)] hover:[--gradient-to:hsl(330_81%_50%/0.4)] [background:linear-gradient(to_bottom_right,var(--gradient-from),var(--gradient-to))]",
       },
       // Amber variants
       {

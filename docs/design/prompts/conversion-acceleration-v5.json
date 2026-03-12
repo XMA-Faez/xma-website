@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Conversion Acceleration",
+    "variation": "5 - Velocity Arrows",
+    "accent_color": "deep rose",
+    "accent_oklch": "oklch(0.68 0.2 350)",
+    "concept": "Multiple arrow vectors converge from wide outer positions toward a central funnel structure, accelerating as they approach and passing through the funnel at high velocity to emerge as a concentrated tight beam of rose light. The arrows represent scattered traffic being focused and accelerated into high-velocity conversions. The convergence pattern creates a powerful sense of directional momentum and purposeful acceleration."
+  },
+  "core": {
+    "subject": "A central funnel structure rendered as a sleek dark metallic cone sits at the center of the composition, its wide intake facing the upper-left and its narrow output pointing toward the lower-right. Converging toward the funnel's wide intake from multiple directions, twelve to fifteen elongated arrow vectors streak through space - each arrow is a tapered geometric shape with rose-lit leading edges and motion-blur trailing tails. The arrows originate from scattered wide positions around the periphery, their paths curving inward toward the funnel's mouth. As arrows enter the funnel, they compress and accelerate, emerging from the narrow output as a single concentrated tight beam of intense rose light - a focused high-velocity conversion stream that extends toward the lower-right of the frame before dispersing into bright rose particles.",
+    "scene": "A dark expansive void environment with a matte black platform beneath the funnel structure, thin rose grid lines etched into its surface. The arrow vectors create dramatic directional lines across the composition, sweeping from the outer edges inward toward the central funnel. The scene is dominated by the sense of motion and convergence - everything moves toward the center and accelerates through the funnel. The contrast between the scattered wide approach paths and the single concentrated exit beam tells the story of conversion acceleration - many inputs, one focused output.",
+    "objects": [
+      "Central funnel cone - a sleek dark metallic cone with wide circular intake opening on the upper-left side and narrow output aperture on the lower-right side, rendered in dark anodized aluminum with thin rose accent lines tracing its conical surface geometry, the intake rim has a polished edge catching rose light, the output aperture has a precision-machined rim glowing with concentrated rose energy",
+      "Converging arrow vectors - twelve to fifteen elongated tapered arrow shapes streaming from peripheral positions toward the funnel intake, each arrow approximately 4-6 inches in visual length, dark metallic body with rose-lit sharp leading edge and directional motion-blur trailing tail that fades to transparency, arrows closer to the funnel are more rose-tinted and appear faster than distant ones",
+      "Velocity acceleration zone - the space immediately around the funnel intake where arrows curve sharply inward and compress together, rose energy arcs between converging arrows in this zone suggesting magnetic attraction, the arrows in this zone appear elongated by speed-blur",
+      "Concentrated output beam - a tight focused beam of intense rose light emerging from the funnel's narrow output aperture, approximately 3px wide expanding slightly to 6px, bright rose core with precise falloff edges, the beam extends toward the lower-right before dispersing into bright rose conversion particles",
+      "Dispersion particles - small bright rose spheres and geometric fragments at the output beam's terminus where the concentrated energy disperses, scattered in a small cone pattern suggesting successful conversion delivery to multiple endpoints",
+      "Funnel interior glow - visible through the semi-transparent cone walls, a compressed mass of rose energy where the arrows merge and compress inside the funnel, the internal glow intensifies from intake to output creating a visible acceleration gradient",
+      "Trajectory traces - faint rose dotted lines showing the curved flight paths of the arrows from their peripheral origins to the funnel intake, like contrails that map the convergence pattern, very low opacity at the periphery brightening as they approach the funnel"
+    ],
+    "actions": [
+      "The arrow vectors are captured mid-flight with strong motion blur on their trailing edges, creating a dynamic frozen-motion sense of high-speed convergence toward the funnel from all directions",
+      "Rose energy arcs crackle between closely spaced arrows in the acceleration zone near the funnel intake, suggesting the compression and merging process as multiple inputs are combined",
+      "The concentrated output beam pulses with subtle energy waves traveling from funnel output toward the dispersion point, indicating continuous high-velocity conversion throughput",
+      "Trajectory trace dotted lines shimmer with faint rose luminosity, appearing to track and guide each arrow along its optimal convergence path toward the funnel"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with rose/pink as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors outside the rose spectrum"
+    ],
+    "notes": "The emotional narrative is 'transforming scattered momentum into focused high-velocity conversions.' The viewer should feel the kinetic energy and purposeful direction of the converging arrows - this is not passive filtering but active acceleration and focusing. The many-to-one convergence pattern directly visualizes the conversion optimization process: capturing traffic from multiple sources and channels, focusing it through an optimized funnel, and producing concentrated high-quality conversions. The diagonal composition creates maximum dynamic energy."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary rose/pink accent rim light from behind-right, casting thin rose edge highlights on all 3D objects. Tertiary subtle rose fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep rose (oklch 0.68 0.2 350) as the sole accent color. Secondary accent is a slightly desaturated rose (oklch 0.4 0.12 350) for deeper shadows and subtle gradients. No warm yellows/oranges. Strict monochromatic rose/pink on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 60,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport",
+      "global_illumination": "Subtle GI bounce from rose-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The funnel cone sits grounded on the platform with structural weight. The arrow vectors follow curved trajectories that suggest gravitational or magnetic attraction toward the funnel. The output beam follows a straight path from the aperture with proper light physics. Dispersion particles scatter in a physically plausible cone pattern.",
+      "structural_believability": true,
+      "structural_details": "The funnel cone has proper conical geometry with consistent wall thickness visible at the intake and output rims. The arrow vectors have aerodynamic tapered shapes with consistent proportions. The internal compression glow follows the conical narrowing logically."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "funnel_cone": "Dark anodized aluminum with subtle directional brushed grain following the conical taper, thin rose accent lines tracing geometric surface panels, polished intake rim catching rose light with controlled specular reflection, precision-machined output rim with concentrated rose energy glow at the aperture edge",
+      "arrow_vectors": "Dark metallic tapered bodies with a slightly iridescent dark rose sheen on leading edges, motion-blur trailing tails that fade from solid dark metal to transparent wisps, the surface finish transitions from matte on the body to polished on the sharp leading tip",
+      "platform": "Matte dark carbon fiber texture with extremely subtle directional grain, faint rose grid lines at 40px intervals, soft rose light pooling beneath the funnel from internal glow scatter, faint trajectory trace reflections visible on the surface"
+    },
+    "module_surfaces": {
+      "trajectory_traces": "Faint rose dotted lines rendered as small evenly spaced luminous dots (1px) at very low opacity (8-12%), the dots brighten gradually as they approach the funnel, creating ghostly flight path indicators that map the convergence pattern",
+      "acceleration_zone_arcs": "Thin crackling rose energy arc lines between closely spaced arrows near the funnel intake, rendered as jagged luminous filaments with bright rose core and rapid falloff, suggesting electromagnetic compression forces",
+      "output_beam": "Tight focused beam with bright rose core (oklch 0.68 0.2 350 at full intensity) and precise soft falloff edges, subtle energy wave ripples visible as slight brightness modulations traveling along the beam length from funnel toward dispersion point",
+      "dispersion_particles": "Small bright rose spheres (2-4px) and tiny geometric fragments (triangles, diamonds) scattered in a forward-facing cone pattern at the beam terminus, each particle has a subtle motion trail suggesting recent ejection from the beam"
+    },
+    "transparency": "The funnel cone has semi-transparency at approximately 20% allowing the internal compression glow to be visible through the walls - brighter rose energy near the output end. The arrow trailing tails fade to full transparency over their length. The trajectory traces are nearly fully transparent with only the rose dots visible."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black",
+      "Extremely subtle atmospheric haze at distance - background elements slightly hazed",
+      "No fog, no volumetric lighting shafts - atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of rose light dust scattered throughout mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at edges."
+  },
+  "composition": {
+    "perspective": "Dynamic diagonal perspective with the funnel oriented upper-left to lower-right, creating maximum kinetic energy and directional flow across the frame",
+    "framing": "rule_of_thirds",
+    "framing_details": "The funnel intake sits near the upper-left third intersection and the output aperture sits near the lower-right third intersection, creating a strong diagonal axis. Converging arrows fill the upper-left and left portions of the frame. The output beam and dispersion particles occupy the lower-right quadrant. This diagonal placement maximizes the sense of directional acceleration.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Nearest arrow vectors passing close to camera and trajectory traces (slight bokeh blur)",
+      "Mid-ground: Central funnel cone, acceleration zone, and nearest converging arrows (sharp focus)",
+      "Background: Most distant peripheral arrows and their faint trajectory traces (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining premium editorial feel",
+    "visual_flow": "The eye follows the converging arrow vectors from the periphery inward toward the funnel intake at upper-left, then tracks through the funnel diagonally to the output aperture, then follows the concentrated beam toward the lower-right dispersion point - a powerful diagonal sweep that creates maximum dynamic energy and mirrors the conversion acceleration journey from scattered traffic to focused results"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A sleek dark anodized aluminum funnel cone oriented diagonally from upper-left to lower-right on a dark matte platform with rose grid lines. Wide circular intake faces upper-left with polished rim, narrow output aperture faces lower-right glowing with concentrated rose energy. Twelve to fifteen elongated tapered arrow vectors streak from peripheral positions toward the funnel intake - dark metallic bodies with rose-lit sharp leading edges and motion-blur trailing tails fading to transparency. Arrows closer to funnel are more rose-tinted and speed-blurred. In the acceleration zone near the intake, rose energy arcs crackle between closely spaced converging arrows. Faint rose dotted trajectory traces map curved flight paths from periphery to funnel. Through semi-transparent cone walls, compressed rose energy glows brighter toward the output end. From the output aperture, a tight concentrated beam of intense rose light extends toward lower-right, energy wave pulses traveling along its length, dispersing at terminus into bright rose spheres and geometric fragment particles. Deep void environment, pure darkness. Cinematic lighting: cool key light upper-left, rose rim light behind-right, rose under-glow. Near-black palette with deep rose oklch(0.68 0.2 350) sole accent. Dynamic diagonal composition, 60mm lens, medium depth of field, rule of thirds. Hyperrealistic 3D render, studio quality, PBR --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a sleek dark anodized aluminum funnel cone oriented diagonally from upper-left to lower-right on a matte black platform with faint rose grid lines. The wide circular intake opening faces upper-left with a polished rim catching rose light. The narrow output aperture faces lower-right, its precision-machined rim glowing with concentrated rose energy. Twelve to fifteen elongated tapered arrow vectors stream from scattered peripheral positions toward the funnel intake - each arrow has a dark metallic body with a rose-lit sharp leading edge and directional motion-blur trailing tail that fades to transparency. Arrows nearer the funnel appear faster and more rose-tinted. In the acceleration zone near the intake, thin rose energy arcs crackle between closely converging arrows. Faint rose dotted lines trace the curved flight paths from periphery to funnel. Through the semi-transparent cone walls, compressed rose energy is visible glowing brighter from intake to output. From the narrow output, a tight concentrated beam of intense rose light extends toward the lower-right with subtle energy wave pulses, dispersing at its terminus into bright rose spheres and tiny geometric particles in a cone pattern. Deep void environment, pure darkness background. Cinematic dramatic lighting: cool key light upper-left at 45 degrees, rose accent rim light from behind-right, subtle rose fill from below. Materials include dark brushed aluminum cone, metallic arrow bodies, carbon fiber platform. Strictly near-black to charcoal with deep rose as only accent. Dynamic diagonal composition, 60mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors outside rose, no bloom. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A sleek dark anodized aluminum funnel cone oriented diagonally upper-left to lower-right on matte black carbon fiber platform with rose grid lines at 40px intervals. Wide circular intake upper-left with polished rim, narrow output aperture lower-right with precision-machined rim and concentrated rose energy glow. Twelve to fifteen elongated tapered arrow vectors streak from scattered peripheral positions toward funnel intake - dark metallic bodies with rose-lit leading edges, motion-blur trailing tails fading transparent, arrows nearer funnel more rose-tinted and speed-stretched. Acceleration zone near intake: rose energy arcs crackle between converging arrows, electromagnetic compression forces. Faint rose dotted trajectory traces map curved flight paths at 8-12% opacity brightening near funnel. Semi-transparent cone walls reveal internal compressed rose energy gradient intensifying toward output. Tight concentrated output beam of intense rose light from aperture extending lower-right, energy wave pulses along length, dispersing at terminus into bright rose spheres and geometric fragments in forward cone pattern. Deep void, pure darkness, subtle center vignette. Cinematic lighting: cool key light upper-left 45 degrees 5500K, rose rim light behind-right, rose under-glow. Sparse rose micro-particles at 5-10% opacity. Dynamic diagonal three-quarter view, 60mm lens, medium depth of field, rule of thirds diagonal axis. Muted palette: near-black to charcoal with deep rose oklch(0.68 0.2 350) sole accent. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

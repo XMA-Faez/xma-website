@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Solutions Overview",
+    "variation": "4 - Orbital Architecture",
+    "accent_color": "deep blue",
+    "accent_oklch": "oklch(0.6 0.2 250)",
+    "concept": "Concentric orbital rings surround a dense central core, with distinct modules locked in stable orbits at different distances. The visual metaphor draws from planetary systems and atomic structure - a gravitational center of strategy holds specialized solution modules in predictable, reliable orbits, communicating that growth systems operate with scientific precision and natural order."
+  },
+  "core": {
+    "subject": "A dense, spherical core of dark polished material sits at the absolute center, approximately 12cm in diameter, its surface a perfect dark sphere with a subtle blue equatorial band glowing faintly around its midsection. Three concentric orbital rings encircle this core at different distances, angles, and scales - the innermost ring is tight and nearly circular, the middle ring is wider and tilted at 30 degrees from the inner, and the outermost ring is the widest and tilted at 60 degrees, creating a gyroscopic three-axis arrangement. Each ring carries two to three distinct modules locked at fixed positions along its circumference, like stations on an orbital track.",
+    "scene": "The entire orbital assembly floats above a broad circular platform of dark volcanic stone texture with a subtle crystalline grain visible at close range. The platform surface has three concentric circular grooves etched into it, aligned directly below each orbital ring, with faint blue light pooling in these grooves as if the rings cast orbital shadow-trails on the surface below. The void beyond the platform is absolute black, with the platform's circular edge creating a clear horizon boundary between the structured space and nothingness.",
+    "objects": [
+      "Central core sphere - a 12cm perfect sphere of dark polished material resembling black pearl or hematite, with a 3mm-wide equatorial band of blue luminescence running around its midsection, casting faint blue caustic light onto the inner surface of the nearest orbital ring.",
+      "Inner orbital ring - a thin torus of dark brushed metal, approximately 25cm diameter, with two modules locked on opposite sides. The ring has fine graduated markings etched into its surface like a precision measurement instrument, barely visible except where blue light catches them.",
+      "Middle orbital ring - wider diameter at approximately 40cm, tilted 30 degrees from the inner ring's plane, carrying three modules spaced at 120-degree intervals. This ring is made of a slightly different alloy - darker with a subtle blue-tinted anodized finish.",
+      "Outer orbital ring - the largest at approximately 60cm diameter, tilted 60 degrees from the inner ring, carrying two modules on one hemisphere. This ring is the thinnest and most delicate, with perforated sections creating a dashed-line appearance in some segments.",
+      "Inner ring modules - two compact capsule shapes (elongated rounded cylinders, 4cm long) mounted on the ring via small gimbal brackets, each capsule having a single blue indicator light at one end and dark matte ceramic surface.",
+      "Middle ring modules - three hexagonal prism shapes (3cm across) seated in recessed cradles on the ring surface, each with different patterns of blue micro-LED dots on their hexagonal faces suggesting different system identities.",
+      "Outer ring modules - two larger flat disc shapes (5cm diameter, 1cm thick) mounted perpendicular to the ring surface like solar panels, each disc having a grid of etched blue circuit lines on its face and a dark reflective backing."
+    ],
+    "actions": [
+      "The three orbital rings rotate at different speeds and in different directions - the inner ring moves clockwise slowly, the middle ring counter-clockwise at moderate speed, and the outer ring clockwise at the slowest speed, creating a mesmerizing gyroscopic motion pattern.",
+      "The equatorial band on the central sphere pulses with a slow breathing rhythm, its blue glow intensifying and dimming over a 5-second cycle, acting as the system's central timing signal.",
+      "Faint blue arc-trails follow behind each module along its orbital path, like afterimage traces that persist for about 15 degrees of arc before fading, visualizing the module's recent trajectory.",
+      "The blue light in the platform's concentric grooves shifts in brightness corresponding to the nearest orbital ring's rotational position - brightening as a module passes overhead and dimming as it moves away."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with blue as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The orbital metaphor communicates that XMA's solutions exist in a precisely calibrated system where each component has its designated role and trajectory. Nothing is random - every module orbits at the right distance and speed relative to the strategic core. The viewer should feel the satisfaction of mechanical precision and the elegance of systems that move in harmony, like clockwork or celestial mechanics."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary blue accent rim light from behind-right, casting thin blue edge highlights on all 3D objects. Tertiary subtle blue fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep blue (oklch 0.6 0.2 250) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated blue (oklch 0.35 0.12 250) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic blue on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the blue-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The orbital rings and their modules convey the impression of centripetal motion - modules appear to be held in place by the rotation of their rings rather than by static mounting alone. The central sphere hovers at the geometric center of the ring system with the platform reflection below confirming its position. The concentric grooves in the platform directly below each ring suggest gravitational influence zones.",
+      "structural_believability": true,
+      "structural_details": "Each module is mechanically attached to its ring via visible mounting hardware - gimbal brackets for capsules, recessed cradles for hexagonal prisms, and perpendicular post mounts for disc shapes. The rings themselves are continuous solid torus shapes with no visible breaks or joints, suggesting precision manufacturing. The ring tilts are geometrically consistent - they intersect the central sphere's equatorial plane at predictable angles."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "central_sphere": "Polished dark hematite or black pearl finish - highly reflective with a deep, jewel-like quality that shows distorted reflections of the surrounding rings. The blue equatorial band is recessed 1mm into the surface, appearing as an illuminated channel rather than surface paint.",
+      "orbital_rings": "Dark brushed metal (inner ring in titanium grey, middle ring in blue-anodized dark alloy, outer ring in raw dark steel) - each ring has a subtly different surface treatment to differentiate them while maintaining the monochromatic palette. All show fine machining marks visible at close inspection.",
+      "platform": "Dark volcanic stone with visible crystalline grain structure - basalt-like with occasional micro-sparkle points where mineral inclusions catch the blue light. The concentric grooves are precision-cut channels 2mm wide and 1mm deep, with smooth polished walls that capture and reflect blue light."
+    },
+    "module_surfaces": {
+      "capsule_modules": "Matte dark ceramic with a fine eggshell texture - smooth but not glossy. The blue indicator light at one end is a tiny recessed LED behind a frosted lens cap, casting a precise cone of blue light forward along the capsule's axis.",
+      "hexagonal_prism_modules": "Dark anodized aluminum with razor-sharp edges and flat matte faces. The blue micro-LED dot patterns on each hexagonal face are different - one has a grid pattern, one has a radial pattern, one has a diagonal stripe pattern - providing differentiation.",
+      "disc_modules": "Front face is dark matte with blue circuit line etchings in a grid pattern. Back face is dark mirror-reflective, catching and reflecting the orbital ring and core sphere in distorted miniature. Edge is a thin chamfered ring of brushed dark metal.",
+      "orbital_arc_trails": "Semi-transparent blue luminous streaks that follow behind each module - brightest at the module attachment point and fading linearly along 15 degrees of arc. The trails have soft edges and approximately 20% opacity at their brightest point."
+    },
+    "transparency": "The central sphere's equatorial band has a slight subsurface scattering quality - the blue light appears to emanate from within the sphere rather than from a surface coating, with a 2-3mm glow penetration depth visible at the band edges. The arc trails behind modules are the only transparent elements, rendered as additive blue light with no solid geometry."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of blue light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the central composition."
+  },
+  "composition": {
+    "perspective": "Three-quarter elevated view that reveals the gyroscopic three-axis arrangement of the orbital rings - from this angle, all three rings are clearly distinguishable as separate tilted planes rather than overlapping circles. The viewer looks slightly down at the assembly, seeing the central sphere nestled within the ring intersections and the platform below providing depth reference.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central sphere sits precisely at the center intersection of the thirds grid. The outermost orbital ring extends to fill the middle 70% of the frame, with the ring's upper arc touching the upper third line and its lower arc crossing the lower third. The platform edge is visible along the bottom quarter of the frame, with the concentric grooves creating leading lines that converge on the center.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: The nearest arc segment of the outer ring and its two disc modules, positioned in the lower-right with subtle edge bokeh creating depth separation (slight bokeh blur)",
+      "Mid-ground: The central sphere, inner ring with capsule modules, and the middle ring's nearest modules - the primary focus zone with maximum detail and sharpness (sharp focus)",
+      "Background: The far arcs of the middle and outer rings receding behind the sphere, their modules smaller and less defined, with the platform's far edge dissolving into void (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye is drawn to the glowing blue equatorial band of the central sphere, then spirals outward following the inner ring's rotation direction to its capsule modules. The eye then jumps to the middle ring (tilted differently, creating visual tension) and traces it to the hexagonal modules. Finally, the eye reaches the outer ring and disc modules at the composition periphery before the arc trails guide it back inward toward the center. The gyroscopic rotation creates an implicit circular reading pattern that mirrors the orbital motion itself."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of an orbital architecture system - a polished dark hematite sphere with a glowing blue equatorial band at the center, encircled by three concentric orbital rings tilted at different angles creating a gyroscopic three-axis arrangement. Inner ring is dark brushed titanium at 25cm diameter carrying two capsule modules in gimbal brackets with blue indicator lights. Middle ring is blue-anodized dark alloy at 40cm diameter tilted 30 degrees carrying three hexagonal prism modules in recessed cradles with different blue micro-LED dot patterns. Outer ring is perforated raw dark steel at 60cm diameter tilted 60 degrees carrying two flat disc modules mounted perpendicular with blue circuit grid etchings and mirror-reflective backing. Each ring rotates in different directions at different speeds - inner clockwise, middle counter-clockwise, outer slow clockwise. Faint blue arc-trails follow behind each module along 15 degrees of orbital path at 20% opacity. The assembly floats above a dark volcanic basalt platform with crystalline grain texture and three concentric precision-cut grooves glowing with blue light corresponding to ring positions. Central sphere's equatorial band pulses with 5-second breathing rhythm. Camera three-quarter elevated angle revealing gyroscopic ring arrangement, 55mm lens, f/4 depth of field. Key light upper-left 45 degrees 5500K, blue rim light behind-right, blue under-fill from platform grooves. Deep soft shadows, 4:1 moody low-key ratio. Dark premium tech visualization, subtle 2-3% film grain --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of an orbital architecture system floating in darkness. At the center, a polished dark sphere resembling black pearl or hematite, approximately 12cm diameter, has a glowing deep blue equatorial band recessed into its surface. Three concentric orbital rings encircle this core at different angles: an inner brushed titanium ring (25cm diameter) carrying two small capsule modules with blue indicator lights in gimbal brackets, a middle blue-anodized alloy ring (40cm diameter) tilted 30 degrees carrying three hexagonal prism modules with different blue LED dot patterns in recessed cradles, and an outer perforated dark steel ring (60cm diameter) tilted 60 degrees carrying two flat disc modules with blue circuit grid etchings mounted perpendicular to the ring. The three rings rotate in different directions at different speeds, creating a gyroscopic motion pattern. Faint blue arc-trails of light follow behind each module along its orbital path. The assembly floats above a broad circular platform of dark volcanic stone with crystalline grain texture. Three concentric grooves in the platform glow with blue light directly below each orbital ring. The sphere's equatorial band pulses with a slow breathing rhythm. Key light from upper-left at 5500K, blue accent rim light from behind-right, blue under-glow from platform grooves. Deep blue is the only accent color - strict monochromatic. Camera at three-quarter elevated angle, 55mm lens, medium depth of field focusing on the central sphere and inner ring. No text, no people, no logos, no warm colors, no neon glow or bloom effects. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. Orbital architecture system with polished dark hematite central sphere featuring recessed glowing deep blue equatorial band at 12cm diameter. Three concentric orbital rings in gyroscopic three-axis arrangement: inner ring dark brushed titanium 25cm diameter with two capsule modules in gimbal brackets each having blue indicator LED, middle ring blue-anodized dark alloy 40cm diameter tilted 30 degrees with three hexagonal prism modules in recessed cradles showing different blue micro-LED dot patterns, outer ring perforated raw dark steel 60cm diameter tilted 60 degrees with two flat disc modules mounted perpendicular featuring blue circuit grid etchings and dark mirror-reflective backing. Rings rotating different directions at different speeds creating gyroscopic motion with faint 20% opacity blue arc-trails following modules along 15 degrees of orbital path. Dark volcanic basalt platform with crystalline grain texture below, three precision-cut concentric grooves glowing blue corresponding to ring positions. Sphere equatorial band pulsing 5-second breathing rhythm. Key light upper-left 45 degrees 5500K cool neutral, blue rim light behind-right, blue fill from platform grooves. 4:1 key-to-fill moody low-key atmosphere. Camera three-quarter elevated revealing gyroscopic ring arrangement, 55mm focal length, f/4 aperture. Deep blue oklch(0.6 0.2 250) sole accent color on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no warm colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

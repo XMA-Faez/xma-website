@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "solution": "CRM & Revenue System",
+    "variation": "1 — Single Source of Truth",
+    "accent_color": "magenta/pink-purple",
+    "accent_oklch": "oklch(0.50 0.30 285)",
+    "concept": "Multiple scattered data sources floating in space — a spreadsheet fragment, email envelope, WhatsApp chat bubble, phone icon — all dim and disconnected. Magenta glowing lines pull from each source into a central sleek CRM dashboard screen that organizes everything into a clean pipeline view with deal cards in columns. Chaos converging into order."
+  },
+  "core": {
+    "subject": "A sleek central CRM dashboard screen floating at a slight angle on a dark matte pedestal, displaying an organized Kanban-style pipeline view with neat vertical columns and small rectangular deal cards arranged in rows within each column. Surrounding the dashboard in a wide scattered orbit, five to seven disconnected data source objects float in dim gray tones — a spreadsheet grid fragment with empty cells, an email envelope slightly open, a WhatsApp-style chat bubble with placeholder line marks, a phone handset icon, a clipboard with checkmark silhouette, a calendar grid fragment, and a small contact card with avatar placeholder circle. From each scattered source, a thin luminous magenta connection line stretches inward toward the central dashboard, converging and feeding into its pipeline columns as if all fragmented data is being magnetically pulled into a single unified system.",
+    "scene": "A dark expansive void environment with a single matte black rectangular platform serving as the ground plane. The platform has barely visible thin magenta grid lines etched into its surface at 40px intervals. The central dashboard screen is the focal point and brightest element, elevated slightly above the platform on a thin dark metal stand. The scattered data source objects occupy the space around and above the dashboard at varying distances and heights, creating a three-dimensional cloud of disconnected information being drawn inward. The overall scene reads as chaos on the periphery converging into order at the center — fragmentation becoming unification.",
+    "objects": [
+      "Central CRM dashboard screen — a thin rectangular display panel angled 15 degrees from vertical, showing a pipeline view with five vertical columns of decreasing width left to right, each column containing 2-4 small rectangular deal cards with subtle magenta edge accents, the screen surface is dark with frosted glass panel quality and magenta UI element highlights on column headers and card borders",
+      "Spreadsheet fragment — a floating rectangular grid of 4x6 empty cells rendered in dim gray wireframe lines, slightly rotated and tilted, appearing abandoned and disorganized, with one corner fading into transparency as if dissolving",
+      "Email envelope — a classic envelope shape in dark brushed metal with a dim gray finish, slightly open with a subtle paper edge visible, floating at upper-left of the composition, trailing a thin magenta connection line toward the dashboard",
+      "WhatsApp chat bubble — a rounded rectangle speech bubble shape in dark matte material with three small horizontal placeholder lines inside suggesting message text, floating at the right side of the composition, a magenta line pulling from its base toward the dashboard",
+      "Phone handset icon — a classic telephone receiver shape in dark brushed steel, slightly tilted, floating below and to the left of the dashboard, with a faint magenta connection line stretching from its earpiece toward the central screen",
+      "Clipboard with checkmark — a small clipboard shape with a circular checkmark silhouette embossed on its surface, dark anodized aluminum, floating at upper-right trailing a magenta line inward",
+      "Calendar grid fragment — a small square grid of date cells in dim gray wireframe, partially transparent at its edges, floating behind and above the dashboard at distance",
+      "Contact card — a small rectangular card with a circular avatar placeholder and two horizontal line placeholders below it, dark matte material, floating near the bottom-right of the composition",
+      "Magenta connection lines — thin luminous fiber-optic-style lines, one extending from each scattered data source toward the central dashboard, each line slightly curved with gentle arc, glowing brightest at the dashboard end where they converge, the lines pulse with traveling light particles moving toward center",
+      "Dark matte pedestal platform — rectangular, slightly elevated from the void floor, with subtle magenta grid lines and soft edge beveling",
+      "Thin dark metal display stand — supporting the central dashboard screen, minimal and industrial in design"
+    ],
+    "actions": [
+      "The scattered data source objects are captured mid-convergence — they are oriented and angled toward the central dashboard as if being pulled by magnetic attraction, some closer than others suggesting different stages of integration",
+      "Magenta connection lines pulse with small traveling light particles that move from the scattered sources toward the dashboard, indicating active data flow and synchronization happening in real time",
+      "The deal cards within the dashboard pipeline columns emit a subtle magenta glow as new data arrives, as if being populated and enriched by the incoming data streams from each source",
+      "The scattered source objects closer to the dashboard appear slightly brighter and more magenta-tinted than those further away, suggesting that proximity to the system activates and illuminates them",
+      "A subtle ripple of magenta energy emanates from the dashboard screen surface where connection lines terminate, indicating successful data ingestion"
+    ],
+    "constraints": [
+      "No text, labels, numbers, or readable words anywhere in the image — placeholder lines and shapes only",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks — the chat bubble and phone are generic shapes, not branded",
+      "No bright white surfaces — everything should be dark-toned with magenta pink-purple as the only accent color",
+      "No ambient glow halos or bloom effects — lighting should be precise and controlled",
+      "No photographic realism — this is a stylized 3D render, not a photo",
+      "The scattered data sources must clearly read as disconnected and fragmented — they should not appear organized or grouped",
+      "The central dashboard must clearly read as organized and structured — clean columns, neat cards, systematic layout"
+    ],
+    "notes": "The emotional narrative is 'ending the chaos of scattered data by unifying everything into one system.' The viewer should immediately feel the tension between the disorganized peripheral sources and the clean organized center. This directly addresses the pain point of leads living in spreadsheets, inboxes, and WhatsApp with no single source of truth. The convergence motion — chaos pulling into order — is the key visual story. The magenta connection lines are the critical element that ties the composition together and shows active unification."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with low intensity — just enough to define the matte surfaces and edges of the scattered data objects. Secondary magenta accent rim light from behind the central dashboard, casting thin magenta edge highlights on the dashboard frame and nearby floating objects. Tertiary subtle magenta fill from below the platform, creating soft under-glow on the dashboard stand and platform surface. The connection lines and dashboard UI elements serve as practical light sources, casting faint magenta illumination on nearby surfaces. The lighting tells a story: dim gray periphery (disconnected data) versus warm magenta center (unified system). Overall lighting ratio approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with magenta pink-purple (oklch 0.50 0.30 285) as the sole accent color appearing in connection lines, dashboard UI highlights, grid lines, and convergence glow effects. Secondary accent is a slightly desaturated magenta (oklch 0.35 0.20 285) for deeper shadows and subtle gradients on closer objects. The scattered data sources are rendered in neutral dim gray tones with no color — they gain magenta tinting only as they approach the central dashboard. No warm gold colors. No cool blues. Strict monochromatic magenta on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 50,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent — the central dashboard and nearest converging objects are in sharp focus, distant scattered sources have gentle soft focus, foreground platform edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the dashboard screen face while revealing the three-dimensional arrangement of scattered sources around it",
+      "shot_type": "medium-wide shot — the central dashboard fills approximately 40% of the frame height with the scattered sources occupying the surrounding space, breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "1:1"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile — adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on the glossy dashboard screen surface, realistic light transport through semi-transparent frosted glass panels, and proper magenta light bounce from connection lines onto nearby objects",
+      "global_illumination": "Subtle GI bounce from the magenta-lit dashboard and connection lines onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Scattered data source objects float with implied weightlessness but are oriented toward the central dashboard as if under magnetic attraction — not randomly scattered. The dashboard and platform feel grounded and heavy, providing visual stability at the center of the composition.",
+      "structural_believability": true,
+      "structural_details": "The dashboard screen has proper panel thickness and is mounted on a structurally sound stand. The scattered objects are recognizable as their real-world counterparts — envelope has proper flap geometry, spreadsheet has regular grid spacing, phone has ergonomic curves."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "dashboard_screen": "Thin display panel with dark frosted glass surface, subtle internal magenta glow from UI elements, thin dark metal bezel frame with slightly polished edges catching magenta rim light, the pipeline columns and deal cards rendered as subtle raised frosted glass layers within the screen",
+      "dashboard_stand": "Thin dark brushed steel column with matte black base plate, minimal and industrial, non-reflective except for faint magenta light reflections from the screen above",
+      "platform": "Matte dark carbon fiber texture with extremely subtle directional grain visible only at close inspection, non-reflective except for faint magenta grid line reflections"
+    },
+    "scattered_source_surfaces": {
+      "spreadsheet_fragment": "Thin wireframe grid lines in dull flat gray, semi-transparent at edges as if dissolving, matte non-reflective material with no luminosity",
+      "email_envelope": "Dark brushed aluminum with flat gray finish, subtle paper texture visible at the open flap edge, no reflective sheen",
+      "chat_bubble": "Dark matte polymer with slightly rounded edges, placeholder lines inside rendered as thin gray indentations, the surface picks up faint magenta tint when close to connection lines",
+      "phone_handset": "Dark brushed steel with ergonomic curves, subtle micro-texture on grip areas, dim and non-luminous",
+      "clipboard_and_calendar": "Dark anodized aluminum with embossed detail, flat and unreflective in their disconnected state"
+    },
+    "connection_lines": "Thin luminous fiber-optic-style lines with bright magenta core and soft falloff, approximately 2px visual width, with small traveling light particles (bright magenta dots) moving along the line toward the dashboard center, the lines glow brightest at the dashboard convergence point",
+    "transparency": "The dashboard screen has frosted glass quality with subtle internal depth — UI elements appear as layered translucent surfaces. The spreadsheet and calendar fragments have partial edge transparency suggesting dissolution and impermanence."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls — pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance — the furthest scattered data sources appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts — the atmosphere is clean and controlled"
+    ],
+    "time_season": ["Timeless — no natural time indicators, this is an artificial/digital environment"],
+    "particles": [
+      "Sparse floating micro-particles of magenta light dust scattered throughout the mid-ground around the connection lines, very small (1-2px), very low opacity (5-10%), suggesting active data transfer energy",
+      "Traveling light dots on connection lines — small bright magenta particles moving along each connection line from source toward dashboard at varying speeds",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient — marginally lighter (2-3% brighter) in the center where the dashboard sits, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the central unified system."
+  },
+  "composition": {
+    "perspective": "Three-quarter isometric-influenced view — not true isometric but a natural camera perspective that gives dimensional depth while keeping the dashboard screen face readable",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central dashboard sits at the intersection of the center-third gridlines, slightly right of center. Scattered data sources occupy all four quadrants of the frame, creating a radial composition converging on the center. The connection lines create visual rays pointing inward, reinforcing the convergence motif.",
+    "subject_placement": "centered",
+    "depth_layers": [
+      "Foreground: Platform edge and closest scattered source object (slight bokeh blur)",
+      "Mid-ground: Central dashboard, connection lines, and nearest converging sources (sharp focus)",
+      "Background: Most distant scattered sources and calendar fragment (soft focus, lower opacity)"
+    ],
+    "negative_space": "Dark negative space between the scattered sources creates visual breathing room and emphasizes the disconnected nature of the peripheral data. The space between sources and the central dashboard is traversed only by the thin connection lines, making the convergence motion feel purposeful across empty distance.",
+    "visual_flow": "The eye is drawn first to the bright central dashboard (highest contrast element), then follows the connection lines outward to discover each scattered data source, then traces the lines back inward to the center — creating a pulsing in-out reading pattern that reinforces the convergence narrative"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "visible grid or wireframe in the background void",
+      "bright white surfaces",
+      "warm gold color tones",
+      "cool blue color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A sleek CRM dashboard screen floating at a slight angle on a dark matte pedestal, displaying an organized Kanban-style pipeline view with neat columns and small deal cards. Surrounding the dashboard in scattered orbit, dim gray disconnected data source objects float — a spreadsheet grid fragment, an email envelope, a chat bubble, a phone handset, a clipboard, a calendar fragment, a contact card. From each scattered source, a thin luminous magenta fiber-optic connection line stretches inward toward the central dashboard, converging on its pipeline columns with traveling light particles flowing toward center. Dark void environment, matte black platform with faint magenta grid lines. Scattered sources in dull gray gain magenta tint as they approach the dashboard. Cinematic dramatic lighting, primary key light from upper-left, magenta accent rim light from behind dashboard, subtle magenta under-glow from platform. Near-black palette with magenta pink-purple sole accent. Three-quarter view from slightly above, 50mm lens, medium depth of field, rule of thirds composition. Hyperrealistic 3D render, studio quality, precise edge definition, subtle film grain, physically based rendering --ar 1:1 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, cool blues, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a sleek CRM dashboard screen floating at a slight angle on a dark matte pedestal surface with faint magenta grid lines. The dashboard displays an organized Kanban-style pipeline view with five neat vertical columns containing small rectangular deal cards with magenta edge accents. Surrounding the dashboard in a scattered three-dimensional orbit, five to seven disconnected data source objects float in dim gray tones — a spreadsheet grid fragment with empty cells partially dissolving at edges, an email envelope in dark brushed aluminum slightly open, a rounded chat bubble with placeholder lines inside, a phone handset in dark brushed steel, a clipboard with checkmark silhouette, a calendar grid fragment, and a small contact card with avatar placeholder. From each scattered source, a thin luminous magenta fiber-optic connection line stretches inward toward the central dashboard, each line gently curved with traveling bright magenta light particles flowing toward the center. Closer sources appear slightly magenta-tinted while distant ones remain gray. The environment is a deep dark void with the platform as the only ground plane. Dramatic cinematic lighting: cool key light from upper-left defining matte surfaces, magenta accent rim light from behind the dashboard casting pink-purple edge highlights, subtle magenta fill from below the platform. Materials include frosted glass dashboard surface with internal magenta UI glow, dark brushed metal scattered objects, luminous fiber-optic connection lines, and matte carbon fiber platform. Color palette strictly near-black to dark charcoal with magenta pink-purple as the only accent. Shot from three-quarter view slightly above eye level, 50mm equivalent lens, medium depth of field. No text, no people, no logos, no bright white surfaces, no warm colors, no cool blues, no neon glow or bloom effects. Square format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A sleek CRM dashboard screen floats at a slight angle on a dark matte carbon fiber pedestal with faint magenta grid lines etched into its surface. The dashboard shows an organized Kanban-style pipeline view — five vertical columns with small deal cards in rows, dark frosted glass surface with magenta UI element highlights on column headers and card borders. Surrounding the dashboard in scattered orbit, disconnected data source objects float in dim gray tones: a spreadsheet grid fragment dissolving at edges, a dark brushed aluminum email envelope slightly open, a matte polymer chat bubble with placeholder lines, a dark brushed steel phone handset, a dark anodized aluminum clipboard with checkmark embossing, a semi-transparent calendar grid fragment, and a small contact card with avatar placeholder. From each scattered source, a thin luminous magenta fiber-optic connection line curves inward toward the central dashboard, bright magenta core with soft falloff, small traveling light particles moving along each line toward center convergence point. Sources closer to dashboard show faint magenta tinting, distant ones remain gray. Subtle magenta energy ripple emanates from dashboard where lines terminate. Deep void environment, pure darkness with subtle center-brightening vignette. Dramatic cinematic lighting: cool key light upper-left at 45 degrees, magenta rim light from behind dashboard, subtle magenta under-glow from platform. Sparse magenta micro-particles float at low opacity. Three-quarter view from slightly above eye level, 50mm lens, medium depth of field, rule of thirds framing. Muted color profile: near-black to charcoal with magenta pink-purple oklch(0.50 0.30 285) as sole accent. No text, no people, no logos, no warm colors, no cool blues, no bloom. Square 1:1."
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Solutions Overview",
+    "variation": "3 - Unified Command Dashboard",
+    "accent_color": "deep blue",
+    "accent_oklch": "oklch(0.6 0.2 250)",
+    "concept": "A set of frosted glass dashboard panels arranged in an arc formation, each displaying abstract system metrics and data visualizations representing different XMA solutions. The metaphor is a unified command center where all growth systems are monitored and orchestrated from a single vantage point - visibility and control across the entire operation."
+  },
+  "core": {
+    "subject": "Five tall rectangular frosted glass panels are arranged in a gentle concave arc, as if wrapping partially around the viewer's position. Each panel is roughly the proportions of a tall monitor (3:5 ratio), tilted slightly backward at 10 degrees from vertical, and displays different abstract data visualizations rendered as blue-on-dark graphics. The panels vary subtly in height - the center panel is tallest, with the flanking panels stepping down symmetrically, creating an architectural crown shape. A low horizontal console shelf connects the base of all five panels, unifying them into a single command station.",
+    "scene": "The dashboard arc sits atop a broad raised platform of dark carbon fiber material, elevated two steps above the surrounding floor plane. The floor extends outward as a near-black surface with extremely faint concentric ring patterns etched in blue, radiating outward from beneath the platform like sonar waves. The dark void surrounds everything, but the area immediately around the dashboard has a marginally warmer ambient light level, as if the panels themselves provide enough illumination to define the local space without breaking the overall darkness.",
+    "objects": [
+      "Center panel - the tallest glass panel displays an abstract topographic contour map with layered blue elevation lines, suggesting terrain being surveyed. The contour lines pulse with subtle brightness variation, as if the terrain is being actively scanned.",
+      "Left-center panel - shows a cascading waterfall chart of horizontal bars at varying lengths, rendered in two shades of blue (bright accent and desaturated deep), representing comparative metrics across systems with bars that slowly extend and retract.",
+      "Right-center panel - displays a radial gauge cluster, three concentric ring gauges with segmented arcs filled to different levels in blue, each ring rotating independently at barely perceptible speed.",
+      "Far-left panel - features a network graph of small nodes and connecting lines arranged in a hierarchical tree structure, with occasional blue pulses traveling down from the root node to leaf nodes.",
+      "Far-right panel - shows an abstract timeline with vertical blue markers at irregular intervals along a horizontal axis, each marker a different height, with a slow-moving blue scan line sweeping left to right across the timeline.",
+      "Console shelf - a horizontal slab of dark frosted glass connecting all panel bases, approximately 10cm tall and running the full arc width, with subtle blue indicator dots along its front edge at regular intervals like status LEDs.",
+      "Floating data motes - tiny blue geometric shapes (triangles, squares, circles) that drift slowly upward from the console shelf surface, rising about 20cm before fading out, suggesting real-time data being processed and released."
+    ],
+    "actions": [
+      "The topographic contour map on the center panel shifts its elevation pattern slowly, as if the terrain is morphing in real-time - contour lines sliding and reforming in a continuous geological survey animation.",
+      "The scan line on the far-right timeline panel sweeps steadily from left to right, leaving a subtle blue luminous trail that fades over 2 seconds, creating a temporal trace effect.",
+      "Data motes rise from the console shelf in small clusters of 3-4, each cluster emerging at a different point along the shelf and drifting upward at slightly different speeds before dissolving.",
+      "The radial gauge rings on the right-center panel rotate at three different speeds - the outer ring barely moving, the middle ring at moderate speed, and the inner ring slightly faster - creating a mechanical clock-like visual rhythm."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with blue as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should feel like they are standing at a command center with comprehensive visibility across all systems. The five panels represent different perspectives on the same unified growth engine - metrics, relationships, timelines, terrain, and performance. The concave arc creates an intimate, focused environment that communicates control and mastery over complexity."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary blue accent rim light from behind-right, casting thin blue edge highlights on all 3D objects. Tertiary subtle blue fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep blue (oklch 0.6 0.2 250) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated blue (oklch 0.35 0.12 250) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic blue on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the blue-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "All panels are firmly planted on the console shelf and platform - they stand upright under their own structural weight with no floating or levitation. The console shelf rests solidly on the raised platform. Only the tiny data motes defy gravity as they float upward, but their small scale makes this feel like particle behavior rather than structural impossibility.",
+      "structural_believability": true,
+      "structural_details": "Each panel has a visible thickness of approximately 3cm, with dark metal edge frames providing structural rigidity. The console shelf acts as a continuous base rail that mechanically connects all panels, with visible junction brackets where each panel meets the shelf. The raised platform has two visible steps with dark metal nosing on each step edge."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "glass_panels": "Frosted semi-transparent dark glass at approximately 60% opacity - the glass has a slight blue-grey tint and shows the data visualizations as luminous blue graphics that appear to float within the glass depth rather than on its surface. Panel edges are framed in dark brushed titanium.",
+      "console_shelf": "Dark frosted glass matching the panels but fully opaque, with a polished top surface that shows faint reflections of the panel graphics above. The front edge has a 2mm chamfer with a thin blue LED strip embedded.",
+      "platform": "Dark carbon fiber weave pattern - the characteristic crosshatch texture is visible at close range, with a satin-matte finish that absorbs most light but shows subtle blue highlights at grazing angles from the panel glow."
+    },
+    "module_surfaces": {
+      "contour_map_graphics": "Thin blue luminous lines with varying brightness to suggest elevation - brighter lines represent higher contours. The lines have a soft 1px glow envelope that prevents them from looking razor-harsh against the dark glass.",
+      "bar_chart_graphics": "Solid blue rectangular bars with rounded ends, rendered in two tones - bright accent blue for primary bars and desaturated deep blue for secondary bars. Each bar has a subtle gradient from bright at the leading edge to slightly dimmer at the trailing edge.",
+      "gauge_graphics": "Concentric ring arcs with segmented fills - each segment is a rounded rectangle following the ring curvature, with filled segments in bright blue and empty segments in very faint blue outline only. Ring borders are thin dark grey.",
+      "network_graph_graphics": "Small circular nodes (3-4mm) connected by thin straight lines, rendered in consistent blue with brighter nodes at hierarchy tops and dimmer nodes at leaves. Pulse animations travel as brightened segments moving along the connection lines."
+    },
+    "transparency": "Panel glass maintains consistent 60% opacity with frosted diffusion. The data visualizations appear to exist at a depth of approximately 5mm within the glass rather than on the surface, creating a parallax effect when viewed from different angles. The console shelf is opaque but its polished top surface creates 20% reflectivity for panel graphics."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of blue light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the central composition."
+  },
+  "composition": {
+    "perspective": "The camera faces the concave side of the panel arc from a three-quarter elevated angle, as if the viewer is standing slightly above and to the right of where an operator would sit. This reveals the arc curvature clearly, shows the front faces of all five panels with their data visualizations legible, and exposes the console shelf and platform structure below.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The center (tallest) panel aligns with the center-right vertical third, its top reaching the upper horizontal third line. The arc of panels spans the full middle horizontal band of the frame. The platform and console shelf sit along the lower horizontal third, providing a solid visual base. The stepping-down height of flanking panels creates a natural pyramidal composition.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: The far-left panel edge and a portion of the console shelf closest to the camera, with subtle bokeh softening (slight bokeh blur)",
+      "Mid-ground: The center three panels and main console area - the primary focal zone with maximum sharpness, all data visualizations clearly rendered (sharp focus)",
+      "Background: The far-right panel receding into the dark void, the concentric floor rings extending outward, and scattered data motes rising and fading (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters at the tallest center panel - the brightest concentration of data visualization graphics - then sweeps left following the arc to the network graph panel, drops down to the console shelf LED strip which acts as a horizontal guide line, follows it right past the center to the timeline panel, then lifts up to the rising data motes before settling back on the radial gauges at right-center. The concave arc naturally wraps the viewer's attention inward, preventing the eye from escaping to the void."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of a unified command dashboard - five tall frosted glass panels arranged in a concave arc on a raised dark carbon fiber platform in a black void. The center panel is tallest with flanking panels stepping down symmetrically creating a crown silhouette. Each panel is dark frosted glass at 60% opacity with dark titanium edge frames, displaying different abstract blue data visualizations that appear embedded within the glass depth. Center panel shows a morphing topographic contour map with layered blue elevation lines, left-center has a cascading waterfall chart of horizontal bars in two blue tones, right-center features three concentric ring gauges with segmented blue arc fills rotating independently, far-left displays a hierarchical network graph with pulsing node connections, far-right shows a timeline with vertical markers and a sweeping blue scan line. A dark opaque console shelf connects all panel bases with embedded blue LED indicator strip along its front edge. Tiny blue geometric data motes rise from the console shelf and dissolve upward. The raised platform has two steps with dark metal nosing, surrounded by a near-black floor with faint concentric sonar ring patterns in blue. Camera three-quarter elevated view facing the concave arc interior, 55mm lens, f/4 medium depth of field. Key light upper-left 45 degrees 5500K, blue rim light behind-right, subtle blue under-fill. 4:1 moody low-key lighting. Dark premium tech aesthetic, physically based materials, subtle 2-3% film grain --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of a unified command dashboard floating in darkness. Five tall rectangular frosted glass panels are arranged in a gentle concave arc on a raised dark carbon fiber platform. The center panel is tallest, with flanking panels stepping down symmetrically to create a crown-like silhouette. Each panel is dark frosted glass with approximately 60% opacity, framed in dark brushed titanium, displaying different abstract data visualizations in deep blue: the center panel shows a topographic contour map with layered blue elevation lines that slowly morph, the left-center shows a waterfall chart of horizontal bars in two blue tones, the right-center displays three concentric ring gauges with segmented arc fills at different levels, the far-left features a hierarchical network graph with blue node pulses, and the far-right shows a timeline with vertical markers and a sweeping blue scan line. A dark opaque glass console shelf connects all panel bases, with tiny blue LED indicator dots along its front edge. Small blue geometric shapes (triangles, squares, circles) float upward from the console shelf surface, dissolving after rising 20cm. The platform sits two steps above a near-black floor with faint concentric ring patterns etched in blue like sonar waves. The visualizations appear to float 5mm within the glass depth. Key light from upper-left at cool 5500K, blue accent rim light from behind-right, subtle blue under-glow. Deep blue is the only accent color. Camera at three-quarter elevated angle, 55mm lens, medium depth of field. No text, no people, no logos, no warm colors, no neon glow or bloom effects. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. Unified command dashboard of five tall frosted dark glass panels arranged in concave arc formation on raised dark carbon fiber platform. Center panel tallest at 3:5 proportions, flanking panels step down symmetrically creating crown silhouette, all tilted 10 degrees backward. Each panel 60% opacity frosted glass with dark titanium edge frames displaying abstract blue-on-dark data visualizations embedded within glass depth: morphing topographic contour map with layered blue elevation lines, cascading waterfall chart of horizontal bars in bright and desaturated blue tones, three concentric radial gauge rings with segmented blue arc fills rotating at different speeds, hierarchical network graph with pulsing blue node connections, timeline with vertical blue markers and sweeping scan line leaving luminous trail. Dark opaque glass console shelf connecting all panel bases with 2mm chamfered front edge containing thin blue LED strip and blue indicator dots. Tiny blue geometric data motes (triangles squares circles) rising from console shelf dissolving at 20cm height. Platform elevated two steps with dark metal nosing above near-black floor with faint concentric sonar ring patterns in blue. Key light upper-left 45 degrees 5500K, blue rim light behind-right, blue under-fill from platform. 4:1 key-to-fill ratio moody low-key atmosphere. Camera three-quarter elevated facing concave arc interior, 55mm focal length, f/4 aperture. Deep blue oklch(0.6 0.2 250) sole accent color. Subtle 2-3% film grain. No text, no people, no logos, no warm colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

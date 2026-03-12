@@ -16,8 +16,8 @@ const data: SolutionPageData = {
     title: "B2B Lead Generation System",
     subtitle:
       "A system designed to generate qualified leads and build predictable sales pipelines.",
-    image: "/solutions/b2b-lead-generation-desktop.png",
-    mobileImage: "/solutions/b2b-lead-generation-mobile.png",
+    image: "/solutions/lead-generation-desktop.png",
+    mobileImage: "/solutions/lead-generation-mobile.png",
   },
   problem: {
     headline: "Why B2B Lead Generation Fails",

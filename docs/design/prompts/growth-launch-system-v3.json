@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Growth Launch System",
+    "variation": "3 - Launch Sequence",
+    "accent_color": "deep purple",
+    "accent_oklch": "oklch(0.65 0.2 300)",
+    "concept": "A vertical stack of platform stages resembling a rocket launch assembly, with each tier representing a phase of the growth system. The lowest stage is grounded and stable, while the upper stages show increasing activation energy - culminating in a controlled ignition burst of purple energy at the top. The metaphor conveys sequential, systematic launch preparation where every stage must be built before liftoff."
+  },
+  "core": {
+    "subject": "A towering vertical stack of five distinct hexagonal platform stages, each separated by slim structural connectors, forming a launch-tower-like assembly floating above a dark grid plane. The bottom stage is the widest and most grounded - a thick, solid dark platform with subtle mechanical detail. Each successive stage above is slightly narrower, creating a tapered silhouette. The topmost stage is the smallest and most energized, featuring a concentrated burst of purple energy particles erupting upward from its center in a controlled, directional column - not an explosion but a focused ignition stream. Purple energy conduits run vertically along the exterior of the stack, connecting each stage with glowing purple channel lines that pulse with visible energy moving upward from base to apex.",
+    "scene": "The launch assembly floats in a deep black void, centered above a circular dark platform with concentric purple ring lines radiating outward like a landing pad. Faint purple grid lines extend from the base in all directions. The vertical energy column at the top illuminates the surrounding void slightly, creating a cone of dim purple light that fades quickly. The overall impression is of a controlled, engineered launch sequence at the moment of ignition.",
+    "objects": [
+      "The base stage - the widest hexagonal platform, approximately 40% of the total stack width, with thick dark walls, visible mechanical panel seams, and small purple indicator dots along its edges suggesting active monitoring systems. Surface has an industrial matte finish with recessed ventilation-like grooves.",
+      "The second stage - slightly narrower, with a smoother surface finish and three purple-lit ports on each face, connected to the base by six slim dark structural pylons with purple accent lines running along their length.",
+      "The third middle stage - a transitional platform with semi-transparent frosted dark glass panels on its sides, allowing a faint view of internal purple energy channels. This stage has visible purple conduit junctions where energy lines merge and redirect upward.",
+      "The fourth stage - narrow and angular, with sharp geometric facets and pronounced purple edge lighting. Surface material shifts to a polished dark composite with subtle reflective properties. Small purple energy arcs jump between contact points on its upper surface.",
+      "The topmost stage - the smallest and most concentrated, featuring a central aperture from which a focused column of purple energy particles erupts vertically upward. The aperture has a mechanical iris-like detail rendered in dark metal with purple-lit segments.",
+      "Vertical purple energy conduits running along the exterior of the stack - three main channels equally spaced around the hexagonal perimeter, rendered as slim tubes with visible purple energy flowing upward inside them, creating a sense of sequential power transfer.",
+      "A circular base landing pad below the entire assembly - a flat dark disc with concentric purple ring lines radiating outward, plus six radial purple guide lines extending to the edges, resembling a high-tech launch platform or targeting reticle."
+    ],
+    "actions": [
+      "Purple energy visibly flows upward through the exterior conduit channels, moving from the base stage toward the apex in pulsing waves, with brighter concentrations at each stage junction where the energy transfers between platforms.",
+      "The topmost stage is actively igniting - a focused column of purple energy particles streams upward from the central aperture, with the particles dense and bright near the opening and dispersing into finer, dimmer dust as they rise.",
+      "Small purple energy arcs crackle between contact points on the fourth stage surface, suggesting the system is under load and channeling power to the ignition point above.",
+      "The purple indicator dots on the base stage pulse in a sequential pattern - a slow clockwise rotation suggesting active systems monitoring and countdown progression."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with purple as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should feel the momentum of a system building toward critical mass - each stage contributing its function until the accumulated energy reaches the point of launch. This communicates that the Growth Launch System is sequential and cumulative, with each component enabling the next until the entire system achieves operational velocity."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary purple accent rim light from behind-right, casting thin purple edge highlights on all 3D objects. Tertiary subtle purple fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep purple (oklch 0.65 0.2 300) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated purple (oklch 0.4 0.12 300) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic purple on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 50,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the purple-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The assembly has a clear weight hierarchy - the massive base stage feels heavy and grounded, while upper stages feel progressively lighter and more energized. The structural pylons between stages convey load-bearing tension. The energy column at the top streams upward against gravity with convincing particle physics.",
+      "structural_believability": true,
+      "structural_details": "Each stage connects to the next via visible structural pylons that appear engineered for load transfer. The tapering profile follows logical structural proportions. The hexagonal geometry is consistent across all stages. Energy conduits follow plausible routing paths along the exterior."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "base_stage": "Heavy industrial matte dark charcoal with visible panel seam lines, recessed hex-bolt patterns, and ventilation groove details. Surface has a rough machined-metal micro-texture suggesting durability and mass. Purple indicator dots are flush-mounted LED-like points.",
+      "structural_pylons": "Slim cylindrical dark metallic connectors with a brushed-steel finish, each featuring a single purple accent line running along its length. The connectors have visible mounting flanges at top and bottom where they attach to platform undersides.",
+      "landing_pad": "Ultra-thin dark matte disc with precision-etched concentric purple rings and radial lines. The etching has a laser-cut quality - perfectly uniform line weights with subtle inner luminosity."
+    },
+    "module_surfaces": {
+      "mid_stages": "Progressively smoother and more refined surfaces from bottom to top. The second stage has an industrial matte finish, the third features frosted dark glass panel inserts revealing internal purple energy channels, the fourth has a polished dark composite surface with subtle reflective sheen.",
+      "top_stage": "Polished dark obsidian-like material with the highest surface refinement in the assembly. The central iris aperture is rendered in segmented dark metal with purple-lit gaps between segments. The surface catches purple rim light with precise specular highlights.",
+      "energy_conduits": "Slim transparent tubes with visible purple energy plasma flowing inside - the tube walls are dark glass, and the energy within has varying density and brightness as it pulses upward in wave patterns.",
+      "energy_column": "Dense purple particle stream near the aperture opening, with particles ranging from bright concentrated points to dim scattered dust as they disperse upward. The stream has a slight helical twist suggesting rotational energy."
+    },
+    "transparency": "The third middle stage has frosted dark glass side panels at 25% transparency, revealing abstract internal energy routing as dim purple channels. The energy conduit tubes are transparent dark glass containing visible purple plasma. The top ignition column is a particle effect rather than a solid - individual particles are visible within the stream."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of purple light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Low three-quarter view looking slightly upward at the assembly stack, emphasizing its vertical height and the upward directionality of the energy flow. Single-point perspective with the vanishing point positioned above the frame, pulling the eye upward.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The base stage sits along the lower horizontal third line, the middle transitional stage occupies the center intersection, and the ignition burst at the top reaches into the upper third zone. The vertical energy column aligns with the right vertical third line, creating asymmetric balance.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: The landing pad concentric rings and lower edge of the base stage (slight bokeh blur)",
+      "Mid-ground: The full five-stage assembly stack with energy conduits and structural pylons (sharp focus)",
+      "Background: The dispersing purple energy column particles and ambient light dust above the assembly (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters at the solid, grounded base stage at the bottom-left, follows the purple energy conduits and structural pylons upward through each progressively more energized stage, accelerates through the fourth stage with its crackling arcs, and launches out the top with the purple energy column - a powerful bottom-to-top trajectory that communicates sequential activation and cumulative momentum."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic 3D render of a dark tech product visualization showing a vertical launch sequence assembly. Five distinct hexagonal platform stages are stacked vertically with slim structural pylon connectors between them, forming a tapered tower floating above a circular dark landing pad with concentric purple ring lines in a deep black void. The bottom stage is the widest with thick industrial matte dark charcoal surfaces, visible panel seams, recessed ventilation grooves, and small purple indicator dots pulsing along its edges. Each successive stage narrows and becomes more refined - the second has smooth surfaces with purple-lit ports, the third middle stage features frosted dark glass panels revealing internal purple energy channels, the fourth has polished dark composite surfaces with small purple energy arcs jumping between contact points. The topmost smallest stage features a mechanical iris aperture in dark metal with purple-lit segments, from which a focused column of dense purple energy particles erupts vertically upward, dispersing into finer dust as it rises with a slight helical twist. Three vertical purple energy conduits run along the exterior connecting all stages, with visible purple plasma flowing upward in pulsing waves, brighter at each stage junction. The landing pad below has precision-etched concentric purple rings and six radial guide lines. Cool-neutral key light from upper-left, purple accent rim light from behind-right, subtle purple under-glow from below. Low three-quarter camera view looking slightly upward, 50mm lens, f/4 depth of field. Sparse purple micro-particles throughout. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic black. Cinematic premium aesthetic inspired by Linear, Vercel, and Stripe imagery. --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic 3D render in dark premium tech aesthetic depicting a vertical launch sequence assembly. Five hexagonal platform stages stack vertically with slim structural pylons between them, forming a tapered tower floating above a circular dark landing pad with concentric deep purple ring lines in a pitch-black void. The bottom stage is widest with industrial matte dark charcoal surfaces, panel seams, ventilation grooves, and pulsing purple indicator dots. Stages narrow progressively upward - second stage has smooth surfaces with purple-lit ports, third middle stage has frosted dark glass panels revealing internal purple energy channels, fourth has polished dark composite with small purple energy arcs at contact points. The topmost stage features a mechanical iris aperture in dark metal with purple-lit segments, erupting a focused column of purple energy particles that stream upward with helical twist, dense near the opening and dispersing into finer dust above. Three exterior purple energy conduits connect all stages with visible purple plasma flowing upward in pulsing waves. Landing pad has laser-etched concentric purple rings and radial guide lines. Cool-neutral key light from upper-left at 45 degrees, purple accent rim light from behind-right, subtle purple under-glow. Low three-quarter camera view looking slightly upward, 50mm focal length, f/4 depth of field. Sparse purple light dust particles. Subtle film grain. Deep purple is the only accent color. No text, labels, logos, people, warm colors, neon glow, or bloom. Inspired by Linear, Vercel, and Stripe product visualization. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, cinematic dark tech product visualization, professional studio quality, physically based rendering, sharp detail, clean anti-aliased edges, professional color grading, high dynamic range. Five hexagonal platform stages stacked vertically in a tapered tower formation with slim dark structural pylon connectors, floating above a circular dark landing pad with concentric deep purple ring lines in a deep black void. Bottom stage widest with industrial matte dark charcoal, panel seams, ventilation grooves, pulsing purple indicator dots. Second stage has smooth surfaces with three purple-lit ports per face. Third middle stage features frosted dark glass panels revealing internal purple energy channels at conduit junctions. Fourth stage has polished dark composite surfaces with purple energy arcs at contact points. Topmost smallest stage has mechanical iris aperture in dark segmented metal with purple-lit gaps, erupting a focused column of dense purple energy particles streaming upward with helical twist, dispersing into fine dust. Three exterior transparent tube energy conduits run vertically with visible purple plasma flowing upward in pulsing waves, brighter at stage junctions. Landing pad with laser-etched concentric purple rings and six radial guide lines. Cool-neutral key light upper-left 45 degrees. Purple accent rim light behind-right. Subtle purple under-glow. Low three-quarter view looking slightly upward, 50mm lens, f/4 depth of field. Sharp focus on assembly stack. Sparse purple micro-particles at 5-10% opacity. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic near-black. No text, no labels, no people, no logos, no warm colors, no neon, no bloom, no bright white. Premium editorial aesthetic. Wide 16:9."
+  }
+}

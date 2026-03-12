@@ -20,7 +20,7 @@ const footerData = {
       },
       {
         icon: MapPin,
-        text: "Dubai, UAE",
+        text: "M44, The Curve Building, Al Qouz 3, Dubai, UAE",
         isClickable: false,
       },
     ],
@@ -31,12 +31,12 @@ const footerData = {
       href: "/apply",
     },
     {
-      text: "Case Studies",
-      href: "/case-studies",
+      text: "Portfolio",
+      href: "/portfolio",
     },
     {
-      text: "Insights",
-      href: "/insights",
+      text: "Blog",
+      href: "/blog",
     },
     {
       text: "About",
@@ -58,7 +58,7 @@ const footerData = {
     },
     {
       text: "CRM & Revenue System",
-      href: "/solutions/crm-revenue-system",
+      href: "/solutions/crm-system",
     },
     {
       text: "Conversion Acceleration",

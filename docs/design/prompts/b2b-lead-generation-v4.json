@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "B2B Lead Generation",
+    "variation": "4 - Signal Propagation Network",
+    "accent_color": "deep amber",
+    "accent_oklch": "oklch(0.75 0.16 65)",
+    "concept": "A central outreach hub node sending amber signal pulses outward through a branching network graph. Nodes light up sequentially as they receive and relay the signal, creating a wave of activation spreading across the network. The visualization represents multi-touch outreach campaigns where initial contact triggers a cascade of connections - each activated node becomes a relay point that extends the signal's reach deeper into the prospect network."
+  },
+  "core": {
+    "subject": "A prominent central hub node sits at the left-center of the composition, a large faceted dark polyhedron with a bright amber core that serves as the signal origin point. From this hub, six primary transmission branches extend outward and rightward in an asymmetric branching tree pattern, each branch splitting into secondary and tertiary forks. Along these branches, approximately forty to fifty network nodes are distributed at junction points and endpoints. A visible wave front of amber activation is mid-propagation through the network - nodes behind the wave front glow with amber activation energy, nodes at the wave front are in the process of lighting up with amber surface veins spreading across their dark shells, and nodes ahead of the wave front remain dark and dormant, waiting for the signal to reach them.",
+    "scene": "The branching network extends across a wide dark void with a subtle near-black platform beneath the hub node's base area. Faint amber transmission-path traces are etched into the platform surface radiating outward from the hub like circuit board traces, extending only partway before the platform dissolves into the void. The network branches extend freely into unsupported dark space beyond the platform edge.",
+    "objects": [
+      "Central outreach hub node - a large truncated icosahedron approximately 20cm in diameter, made of dark matte titanium-textured shell with a bright amber energy core visible through precisely machined ventilation-slot openings in each pentagonal face. The hub radiates concentrated amber warmth from its center, serving as the unmistakable origin point of all outgoing signals.",
+      "Primary transmission branches - six rigid dark metallic conduit tubes (approximately 2cm diameter) extending outward from the hub at different angles in an asymmetric fan pattern reaching rightward. Each conduit has a frosted dark glass window strip along its top surface revealing the amber signal energy flowing through its interior.",
+      "Activated network nodes (behind the wave front) - fifteen to twenty faceted dark polyhedrons of various sizes (4-8cm) glowing with full amber activation, their surfaces covered in bright amber circuit-trace veins that pulse steadily. These nodes have already received and processed the outreach signal, now serving as active relay points.",
+      "Activating nodes (at the wave front) - four to six nodes caught in the moment of receiving the signal, their dark shells showing amber veins spreading across their surfaces in real-time like liquid amber crawling through etched channels. They are partially lit - one side glowing amber while the far side remains dark, creating a dramatic transition effect.",
+      "Dormant nodes (ahead of the wave front) - ten to fifteen completely dark polyhedrons with no amber energy, made of inert matte charcoal material with visible but unlit circuit-trace channels on their surfaces waiting to be activated. They sit silently at upcoming junction points and branch endpoints.",
+      "Signal relay pulses - bright amber light concentrations traveling along the conduit branches as visible energy packets, each pulse approximately 3cm long, moving outward from activated nodes toward dormant ones at the wave front, creating a sense of directed momentum.",
+      "Branch junction couplings - small dark mechanical collar assemblies where conduit branches split into secondary forks, each coupling featuring a tiny amber indicator light confirming active signal routing through that junction. The couplings have visible hex-bolt fastener details suggesting engineered precision."
+    ],
+    "actions": [
+      "The amber activation wave front advances through the network in a visible cascade - as signal relay pulses reach dormant nodes, those nodes transition from dark to fully amber-activated over a brief illumination sequence, their circuit-trace channels flooding with amber energy from the contact point outward across the surface.",
+      "The central hub node emits a rhythmic amber pulse every few seconds, sending a new concentrated signal packet outward through all six primary branches simultaneously, maintaining continuous outreach pressure across the entire network.",
+      "Already-activated nodes relay received signals onward by generating their own secondary pulses that travel down branching conduits to the next set of dormant nodes, demonstrating the multi-touch chain reaction of effective outreach campaigns.",
+      "At the activating wave-front nodes, amber veins spread visibly across their dark surfaces in a crackling organic pattern, like amber lightning crawling through etched channels, dramatizing the moment of prospect engagement and response."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with amber as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No warm colors outside the amber/gold spectrum",
+      "No cartoon or anime styling - maintain engineered realism"
+    ],
+    "notes": "The viewer should feel the kinetic energy of an outreach campaign in active propagation. The wave front creates a dramatic before-and-after boundary in the same image - activated territory behind, untouched territory ahead. The branching structure communicates that each successful contact opens pathways to multiple new prospects. The hub's continuous pulsing suggests a system that does not send one message and wait, but maintains persistent multi-touch pressure across every reachable channel simultaneously."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary amber accent rim light from behind-right, casting thin amber/gold edge highlights on all 3D objects. Tertiary subtle amber fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep amber (oklch 0.75 0.16 65) as the sole accent color. Secondary accent is a slightly desaturated amber (oklch 0.45 0.10 65) for deeper shadows and subtle gradients. Amber is the designated warm accent for this solution - no cool accent colors. Strict monochromatic amber/gold on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate light transport through frosted glass conduit windows and realistic amber energy reflections on dark metallic node surfaces",
+      "global_illumination": "Subtle GI bounce from amber-activated nodes onto nearby conduit surfaces and adjacent dormant nodes, creating localized warm ambient zones that advance with the wave front"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The hub node sits with structural weight on the platform area. Conduit branches extend outward with rigid structural integrity, maintaining straight lines between junction points without sagging. Nodes at junction points appear mechanically coupled to their conduit feeds rather than floating freely.",
+      "structural_believability": true,
+      "structural_details": "Every conduit-to-node connection features visible mechanical junction hardware with collar couplings and hex fasteners. Branch splits occur at precisely engineered fork assemblies. The entire network reads as installed infrastructure rather than organic growth - every connection is deliberate and manufactured."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "hub_node_shell": "Matte dark titanium with fine sandblasted micro-texture, precisely machined ventilation slots on each pentagonal face with clean laser-cut edges. The shell absorbs ambient light but catches amber rim highlights on its beveled geometric edges.",
+      "conduit_branches": "Dark anodized aluminum tubes with matte finish and fine circumferential machining marks. The frosted glass window strip along the top is recessed 1mm into the tube surface with clean routed channel edges, the glass at 55% opacity diffusing the amber signal energy within into a soft linear glow.",
+      "platform_surface": "Near-black brushed steel with directional grain and faint amber circuit-trace patterns etched into the surface radiating from the hub base, the traces following the same branching geometry as the conduit network above."
+    },
+    "module_surfaces": {
+      "activated_nodes": "Dark metallic polyhedron shells with bright amber circuit-trace veins covering every face - the veins are etched channels filled with luminescent amber material, creating a warm network pattern across the matte dark base surface. Edges catch amber rim light as crisp highlights.",
+      "activating_nodes": "Dark metallic shells in mid-transition - amber vein channels are partially filled, the amber liquid-light visibly spreading from the signal-input face across adjacent faces. The unfilled portions show empty dark channels awaiting activation, creating a dramatic half-lit effect.",
+      "dormant_nodes": "Inert matte charcoal polyhedrons with visible but completely unlit circuit-trace channel patterns etched into their surfaces. The empty channels read as dark recessed grooves, suggesting latent infrastructure waiting for activation energy.",
+      "signal_pulses": "Concentrated amber energy packets with bright leading edges and soft trailing gradients, approximately 3cm long, traveling through conduit interiors visible through the frosted glass window strips as moving bright spots."
+    },
+    "transparency": "Conduit window strips are frosted glass at 55% opacity, diffusing signal pulse energy into soft amber glow. Hub ventilation slots are open apertures revealing the bright amber core directly. Activated node circuit veins are opaque luminescent channels. Signal pulses are visible as moving bright concentrations through semi-transparent conduit glass."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions beyond the network extent",
+      "Extremely subtle atmospheric haze at distance - the farthest dormant nodes and branch endpoints appear slightly softened, adding depth",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of amber light dust concentrated near the activation wave front, very small (1-2px), very low opacity (5-10%), suggesting energy discharge from the activation process",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle gradient - slightly lighter on the left side where the hub and activated network territory sits, fading to deeper black on the right where dormant territory awaits. This asymmetric gradient reinforces the left-to-right propagation direction."
+  },
+  "composition": {
+    "perspective": "Three-quarter elevated view from slightly front-left, allowing the viewer to see the hub node prominently on the left side with the branching network extending rightward and slightly away, revealing both the activated territory behind the wave front and the dormant territory ahead of it.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central hub node sits at the left vertical third line intersection with the center horizontal third. The activation wave front runs roughly along the center vertical third line, creating a dramatic visual boundary between amber-activated territory on the left two-thirds and dark dormant territory on the right third. The most dramatic activating nodes sit near the center of the frame.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: One or two activated nodes and a conduit branch nearest the camera on the lower-left, rendered with slight bokeh blur on their nearest edges (slight bokeh blur)",
+      "Mid-ground: The hub node, the activation wave front with its transitioning nodes, and the primary branch network - maximum sharpness and detail on activating nodes caught in mid-transition (sharp focus)",
+      "Background: Dormant nodes and distant branch endpoints receding into the dark void on the right side, progressively softer and dimmer (soft focus, lower opacity)"
+    ],
+    "negative_space": "Dark void space surrounds the network on all sides, with particularly generous negative space above and below the branching structure. The dark dormant territory on the right side serves as anticipatory negative space - empty but about to be filled",
+    "visual_flow": "The eye enters at the bright amber hub node on the left, drawn by its concentrated intensity and central mass. It then follows the conduit branches rightward along the natural branching direction, accelerating through the activated territory and arriving at the dramatic wave front where nodes are caught in mid-activation. The half-lit transitioning nodes create the strongest visual tension and hold attention. The eye then peers ahead into the dark dormant territory, anticipating the signal's continued advance, before tracing back along the branching structure to the hub. This creates a left-to-right momentum reading that mirrors the signal propagation itself."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "cool color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of a signal propagation network in dark void space. A large truncated icosahedron hub node of matte dark titanium with bright amber core visible through machined ventilation slots sits at left-center, emitting amber signal pulses through six primary dark anodized aluminum conduit branches extending rightward in an asymmetric branching tree. Each conduit has a frosted dark glass window strip at 55% opacity revealing amber energy flowing inside. Forty to fifty network nodes distributed at branch junctions and endpoints. Fifteen to twenty activated nodes behind the wave front glow with full amber circuit-trace veins covering their dark polyhedron shells, bright luminescent channels etched into matte surfaces. Four to six nodes at the wave front caught in mid-activation with amber veins spreading across their surfaces like liquid light flooding dark channels, one side glowing while the far side remains dark. Ten to fifteen completely dormant dark charcoal nodes ahead of the wave front with visible but unlit circuit-trace channels waiting for activation. Bright amber signal pulses travel through conduits as visible 3cm energy packets with soft trailing gradients. Dark mechanical collar junction couplings with hex-bolt fasteners at every branch split. Near-black brushed steel platform beneath hub with faint amber circuit traces. Primary key light upper-left 45 degrees cool 5500K. Amber rim light from behind-right. Subtle amber fill from below. Deep soft shadows at 4:1 ratio. Sparse amber micro-particles near wave front. Subtle 2-3% film grain. Camera three-quarter elevated view from front-left, 55mm, f/4 with sharp focus on wave-front transition nodes. Dark premium tech inspired by Linear and Vercel. Strict amber-gold on black --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, cool colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of a signal propagation network in a dark void. A large truncated icosahedron hub node made of matte dark titanium with a bright amber energy core visible through precisely machined ventilation slots sits at the left-center, serving as the signal origin. Six primary dark anodized aluminum conduit branches extend rightward in an asymmetric branching tree, each conduit featuring a frosted dark glass window strip along its top revealing amber signal energy flowing within. Approximately forty to fifty network nodes are distributed at junction points and endpoints throughout the branching structure. Behind an advancing wave front, fifteen to twenty nodes glow with full amber activation - their dark polyhedron shells covered in bright amber circuit-trace veins etched as luminescent channels. At the wave front, four to six nodes are caught in mid-activation with amber veins visibly spreading across their surfaces from the signal-input side - one half glowing amber while the opposite side remains dark in dramatic transition. Ahead of the wave front, ten to fifteen completely dormant dark charcoal nodes sit with visible but unlit circuit-trace channel patterns awaiting activation. Bright amber signal pulses travel through conduits as concentrated 3cm energy packets. Dark mechanical collar couplings with hex-bolt details at branch junction splits. A near-black brushed steel platform beneath the hub has faint amber circuit traces radiating outward. Key light from upper-left at 45 degrees, cool 5500K. Amber rim light from behind-right. Deep soft shadows. Sparse amber micro-particles near the wave front. Film grain 2-3%. Camera three-quarter elevated from front-left, 55mm, medium depth of field. Strict amber-gold on black. No cool tones. No text, no people, no logos, no bright white, no neon glow or bloom. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. Signal propagation network in dark void. Large truncated icosahedron hub of matte dark titanium with bright amber core through machined ventilation slots at left-center. Six dark anodized aluminum conduit branches extending rightward in asymmetric branching tree with frosted glass window strips at 55% opacity showing amber energy flow. Forty to fifty network nodes at branch junctions. Fifteen to twenty fully activated nodes behind wave front with bright amber circuit-trace veins covering dark polyhedron shells. Four to six mid-activation nodes at wave front with amber veins spreading across surfaces like liquid light - one side amber, far side dark. Ten to fifteen dormant dark charcoal nodes ahead with unlit circuit channels. Amber signal pulses as 3cm energy packets with trailing gradients moving through conduits. Dark mechanical collar junction couplings with hex-bolt fasteners at branch splits. Near-black brushed steel platform beneath hub with faint amber circuit traces. Key light upper-left 45 degrees 5500K cool neutral, amber accent rim light from behind-right, subtle amber fill from below. 4:1 key-to-fill ratio. Deep soft-edged shadows. Camera three-quarter elevated from front-left, 55mm focal length, f/4 aperture. Sharp focus on wave-front transition nodes. Sparse amber micro-particles near activation zone at 5-10% opacity. Matte titanium hub, anodized aluminum conduits, frosted glass windows, luminescent amber circuit veins. Deep amber oklch(0.75 0.16 65) sole accent on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no cool colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

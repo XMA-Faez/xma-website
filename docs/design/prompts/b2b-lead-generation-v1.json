@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "B2B Lead Generation",
+    "variation": "1 - Corporate Hierarchy Web",
+    "accent_color": "deep amber",
+    "accent_oklch": "oklch(0.75 0.16 65)",
+    "concept": "An org-chart-like graph structure with C-suite decision-maker nodes at the top connected by authority lines to department cluster nodes below. The hierarchy reveals the power structure within a target company - bright amber nodes mark key decision-makers while dimmer nodes represent secondary contacts, communicating that effective B2B lead generation requires understanding organizational authority and mapping the chain of command before outreach."
+  },
+  "core": {
+    "subject": "A vertical hierarchical network graph hovers in dark space, structured like an inverted tree with a single large polyhedral node at the apex representing the CEO-level decision-maker, glowing with intense amber light from within its faceted dark shell. Below it, three mid-tier executive nodes connect via rigid authority-line beams, each slightly smaller and dimmer, branching further into clusters of six to eight smaller department-level nodes arranged in three distinct groupings at the base. The entire structure reads as a corporate power map rendered in physical engineered materials - dark metal frames with amber energy flowing downward through the chain of command, each level of the hierarchy visually distinct in brightness and scale.",
+    "scene": "The hierarchical graph assembly floats above a wide, perfectly flat platform of near-black brushed steel with an ultra-fine amber grid etched into its surface at 4cm intervals. The grid lines emit barely perceptible amber luminescence that fades to invisible at the platform edges. The platform extends outward before dissolving into pure black void. Beneath the apex node, a faint amber light pool reflects upward, casting warm caustic patterns onto the node's underside and the uppermost authority-line beams.",
+    "objects": [
+      "Apex decision-maker node - a faceted truncated octahedron approximately 15cm in diameter, matte dark graphite shell with beveled edges catching amber rim light, a bright amber core visible through geometric seam gaps between each face, pulsing slowly with concentrated warm authority energy.",
+      "Three mid-tier executive nodes - each a chamfered dodecahedron roughly 10cm across, dark gunmetal finish with satin sheen, amber circuit-trace patterns etched into two visible faces like position-authority indicators, glowing at roughly 60% the intensity of the apex node to communicate subordinate rank.",
+      "Authority-line beams connecting apex to mid-tier - rigid cylindrical rods of frosted dark glass approximately 20cm long and 2cm in diameter, each containing an amber fiber-optic core that carries visible light pulses downward from the apex, symbolizing delegated decision-making authority.",
+      "Department cluster nodes - eighteen to twenty small icosahedrons (4-6cm each) arranged in three distinct clusters beneath each mid-tier node, made of dark matte carbon-fiber-textured material with only faint amber edge highlights, representing rank-and-file contacts of lower outreach priority.",
+      "Secondary connection filaments - thin dark wire-like strands (1cm diameter) linking mid-tier nodes to their department clusters, made of dark brushed metal with intermittent amber pinpoint lights along their length like status indicators on a network cable.",
+      "Floating data-tag plates - small rectangular wafer-thin dark glass panels (3cm x 1.5cm) hovering beside each mid-tier and apex node, their surfaces showing abstract amber waveform patterns suggesting contact intelligence data attached to each key decision-maker.",
+      "Platform anchor points - three faint amber circles on the platform surface directly beneath each department cluster, glowing softly upward like landing pads, visually grounding the floating hierarchy to the base plane and reinforcing the vertical organizational structure."
+    ],
+    "actions": [
+      "Amber light pulses travel downward through the authority-line beams from the apex node to mid-tier nodes in a slow deliberate rhythm - each pulse representing a delegation of decision-making power flowing through the corporate hierarchy.",
+      "The apex node's internal amber core brightens and dims in a slow breathing cycle, its light intensity subtly affecting the brightness of all connected nodes below it as if the entire hierarchy responds to the leader's energy.",
+      "Faint amber micro-particles drift downward from the mid-tier nodes toward the department clusters like settling data dust, suggesting intelligence being distributed and cataloged across the organizational map.",
+      "The floating data-tag plates beside the apex node rotate very slowly on their vertical axis, their amber waveform surface patterns shifting subtly as if updating in real-time with new contact intelligence."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with amber as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No warm colors outside the amber/gold spectrum",
+      "No cartoon or anime styling - maintain engineered realism"
+    ],
+    "notes": "The viewer should immediately understand the concept of a corporate hierarchy being mapped for strategic outreach. The vertical arrangement with the brightest node at top communicates that B2B lead generation starts with identifying the decision-maker at the top and understanding how authority flows downward. The diminishing brightness from apex to base reinforces prioritization - not all contacts are equal, and the system identifies who matters most."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary amber accent rim light from behind-right, casting thin amber/gold edge highlights on all 3D objects. Tertiary subtle amber fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep amber (oklch 0.75 0.16 65) as the sole accent color. Secondary accent is a slightly desaturated amber (oklch 0.45 0.10 65) for deeper shadows and subtle gradients. Amber is the designated warm accent for this solution - no cool accent colors. Strict monochromatic amber/gold on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass authority-line beams",
+      "global_illumination": "Subtle GI bounce from amber-lit node surfaces onto nearby dark surfaces, creating realistic warm color bleeding at junction contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The entire hierarchy assembly hovers magnetically above the platform - faint amber reflections on the platform beneath each cluster sell the floating illusion. Authority-line beams maintain rigid structural alignment, not drooping or flexing.",
+      "structural_believability": true,
+      "structural_details": "Authority-line beams connect to nodes at clearly defined junction sockets with visible mechanical collar couplings - small precision rings where beam meets node face. The hierarchy maintains strict geometric alignment suggesting engineered infrastructure rather than organic growth."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "apex_node_exterior": "Matte dark graphite with extremely fine micro-texture resembling sandblasted titanium - absorbs most light but catches amber rim lighting on beveled facet edges with a subtle satin sheen. Seam gaps between faces are precisely 1mm wide, revealing the bright amber core within.",
+      "authority_line_beams": "Frosted dark glass cylinder exterior (65% opacity) encasing a bright amber luminous core - the glass diffuses the internal light into a soft warm linear glow, with the core remaining sharper and more saturated at the center axis.",
+      "platform": "Near-black brushed steel with directional grain running front-to-back - the grain catches amber grid light at grazing angles, creating subtle anisotropic reflections that emphasize perspective depth."
+    },
+    "module_surfaces": {
+      "mid_tier_nodes": "Dark gunmetal chrome with a satin finish - moderately reflective, allowing amber circuit-trace etchings to read clearly as luminous channels recessed 0.5mm into the surface. Each node has a slightly different trace pattern to suggest distinct executive roles.",
+      "department_cluster_nodes": "Dark matte carbon-fiber-textured composite - tightly woven cross-hatch pattern visible at close inspection. Only the sharpest edges catch the faintest amber rim light, keeping these nodes visually subordinate to the brighter hierarchy above.",
+      "data_tag_plates": "Wafer-thin dark frosted glass (50% opacity) with amber waveform patterns visible as subsurface luminous traces - the patterns are abstract rhythmic lines, not text, suggesting encoded intelligence data.",
+      "connection_filaments": "Dark brushed stainless steel wire with matte finish - intermittent amber pinpoint LEDs embedded at 3cm intervals along each filament, creating a subtle dotted-line effect."
+    },
+    "transparency": "Frosted glass elements maintain 50-70% opacity with soft amber light diffusion. Internal amber light sources appear as warm gradients through the glass rather than sharp point sources. The authority-line beam glass has a slight golden tint from the amber core light."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of amber light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), drifting slowly downward to reinforce the hierarchical top-down visual flow",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the apex node."
+  },
+  "composition": {
+    "perspective": "Slightly elevated three-quarter perspective that reveals the vertical hierarchy from apex to base clusters - the viewer looks across at roughly 25 degrees above horizontal, seeing the apex node prominently at the upper portion with authority lines cascading downward to department clusters in the lower frame.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The apex decision-maker node sits at the intersection of the center-left vertical third and upper horizontal third. The three mid-tier executive nodes span the middle horizontal band. Department cluster nodes fill the lower third, grounding the hierarchy with visual weight at the base.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Two department clusters at the left and right lower frame edges, their small nodes rendered with slight bokeh blur on nearest surfaces (slight bokeh blur)",
+      "Mid-ground: The apex node and its authority-line connections to mid-tier executives - the primary focal point with maximum sharpness and detail (sharp focus)",
+      "Background: The rearmost department cluster and data-tag plates receding into dark void, progressively softer focus (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space flanks the composition on both sides and above the apex node, preventing it from feeling crowded and maintaining the premium editorial feel",
+    "visual_flow": "The eye enters at the bright amber apex node at the top, drawn by its superior intensity. It then follows the authority-line beams downward in a branching pattern - left to the first mid-tier node, across to the center, then right - before cascading further down to the department clusters at the base. The downward light pulses along the beams reinforce this top-down reading pattern, mirroring how B2B prospecting starts at the top of the org chart."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "cool color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of a dark tech corporate hierarchy network graph floating above a near-black brushed steel platform with faint amber grid lines. At the apex, a large faceted truncated octahedron of matte dark graphite glows with intense amber light through geometric seam gaps between each face, representing the CEO-level decision-maker. Three mid-tier chamfered dodecahedron executive nodes in dark gunmetal satin chrome connect below via rigid frosted dark glass authority-line beams containing luminous amber fiber-optic cores carrying visible downward light pulses. Amber circuit-trace patterns etched into executive node surfaces as recessed luminous channels. Beneath each mid-tier node, clusters of eighteen to twenty small dark carbon-fiber-textured icosahedrons represent department-level contacts with only faint amber edge highlights, connected by thin dark brushed metal filaments with intermittent amber pinpoint indicator lights. Wafer-thin dark frosted glass data-tag plates hover beside key nodes showing abstract amber waveform subsurface patterns suggesting contact intelligence. The apex node burns brightest, mid-tier nodes glow at 60% intensity, department nodes show only faint amber edge highlights - a clear visual hierarchy of prospect priority. Faint amber circles glow on the platform beneath each cluster as anchor points. Platform grid fades into pure black void. Sparse amber micro-particles drift downward through the scene. Primary key light from upper-left at 45 degrees with cool 5500K temperature. Amber accent rim light from behind-right casts thin gold edge highlights on all objects. Subtle amber under-glow from the platform. Materials include sandblasted titanium matte on apex node, gunmetal satin chrome on executives, carbon-fiber composite on department nodes. Camera at three-quarter elevated angle, 55mm focal length, f/4 depth of field with sharp focus on apex and mid-tier nodes. Moody low-key atmosphere with 4:1 lighting ratio, deep soft shadows. Subtle 2-3% film grain. Dark premium tech visualization inspired by Linear and Vercel marketing aesthetics. Deep amber oklch accent only, strict monochromatic amber-gold on black palette --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, cool colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of a corporate hierarchy network graph floating in a dark void. At the top, a large faceted truncated octahedron made of matte dark graphite has bright amber light glowing through precisely cut 1mm seam gaps between each geometric face, representing the apex decision-maker. Three mid-tier chamfered dodecahedron nodes of dark gunmetal satin chrome connect below via rigid frosted dark glass cylindrical beams, each beam encasing a luminous amber fiber-optic core with light pulses traveling downward through the chain of command. Amber circuit-trace patterns are etched as recessed luminous channels into the executive node surfaces, each with a slightly different pattern suggesting distinct roles. Below each mid-tier node, clusters of small dark carbon-fiber-textured icosahedrons represent department contacts, connected by thin brushed metal filaments with tiny amber indicator lights spaced along their length. Wafer-thin dark frosted glass plates hover beside key nodes showing abstract amber waveform patterns suggesting contact intelligence data. The apex node glows brightest, mid-tier nodes at moderate intensity, department nodes show only faint amber edge highlights - creating a clear brightness hierarchy matching corporate authority. The assembly floats above a vast near-black brushed steel platform with an ultra-fine amber grid etched into its surface, fading at edges into pure black void. Faint amber circles glow on the platform beneath each cluster as anchor points. Key light from upper-left at 45 degrees with cool neutral 5500K temperature. Amber accent rim light from behind-right casting thin edge highlights. Subtle amber under-glow from platform. Deep amber is the only accent color - no cool tones. Sparse amber micro-particles drift downward. Camera at three-quarter elevated angle, 55mm lens, medium depth of field with hierarchy center in sharp focus. Very subtle 2-3% film grain. Dark premium tech aesthetic inspired by Linear app and Vercel visuals. No text, no people, no logos, no bright white, no neon glow or bloom. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. A corporate hierarchy network graph floating above a near-black brushed steel platform with ultra-fine glowing amber grid lines. Apex node is a faceted truncated octahedron of matte dark graphite with bright amber core visible through 1mm geometric seam gaps between faces, representing the CEO decision-maker. Three mid-tier dark gunmetal chamfered dodecahedron executive nodes below, connected by rigid frosted dark glass authority-line beams with amber fiber-optic cores carrying downward light pulses. Amber circuit traces etched as recessed luminous channels into executive node surfaces with slightly different patterns per node. Eighteen to twenty small dark carbon-fiber-textured icosahedrons in three department clusters at the base, connected by thin brushed metal filaments with amber pinpoint indicator lights at 3cm intervals. Wafer-thin dark frosted glass data-tag plates beside key nodes with abstract amber waveform subsurface patterns. Brightness hierarchy mirrors corporate authority - apex brightest, mid-tier moderate, department nodes faintest edge highlights only. Amber anchor circles on platform beneath clusters. Platform fades into pure black void. Key light upper-left 45 degrees 5500K cool neutral, amber accent rim light from behind-right, subtle amber fill from below platform. 4:1 key-to-fill lighting ratio, moody low-key atmosphere. Deep soft-edged shadows, no specular highlights. Camera three-quarter elevated view 25 degrees above horizontal, 55mm focal length, f/4 aperture, sharp central focus with gentle peripheral falloff. Sparse amber micro-particles drifting downward at 5-10% opacity. Materials: sandblasted titanium matte apex, gunmetal satin chrome executives, carbon-fiber composite department nodes. Deep amber oklch(0.75 0.16 65) as sole accent color on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no cool colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Conversion Acceleration",
+    "variation": "3 - Funnel Tightening",
+    "accent_color": "deep rose",
+    "accent_oklch": "oklch(0.68 0.2 350)",
+    "concept": "A multi-stage conversion funnel with visible stage separators is being physically compressed and tightened by mechanical clamp rings that glow with rose energy. Acceleration arrows sweep along the funnel's exterior surface, and the funnel walls visibly narrow at each stage. The visual metaphor is reducing leakage and speeding up the conversion process - literally tightening the funnel so nothing escapes."
+  },
+  "core": {
+    "subject": "A tall vertical conversion funnel structure composed of four distinct cylindrical stages stacked top to bottom, each stage slightly narrower than the one above, rendered in dark translucent glass with visible seam lines between stages. Around each stage transition, a sleek mechanical compression ring clamps the funnel - dark metallic bands with rose-lit inner edges that squeeze the funnel walls inward at the transition points. Along the exterior surface of the funnel, swept-back acceleration arrow shapes in rose light trace downward paths, suggesting increased velocity through each stage. The bottom stage is the narrowest and brightest, with concentrated rose light emanating from its exit point - a tight circular aperture glowing with intense rose radiance representing high-quality conversions emerging.",
+    "scene": "A dark expansive void environment with a matte black platform featuring faint rose grid lines. The funnel structure stands vertically at center, its tallest stage at top and narrowest at bottom, creating a clear top-to-bottom compression narrative. Rose light intensifies from top to bottom - the upper stage is dimly lit while the bottom stage glows brightest, communicating acceleration and concentration. The mechanical compression rings add an industrial precision quality, suggesting engineered optimization rather than passive filtering.",
+    "objects": [
+      "Stage one cylinder - the widest and topmost funnel section rendered in dark translucent glass with very faint rose tint, interior visible through the walls showing sparse scattered particles entering the wide opening, thin rose wireframe lines trace the cylindrical surface geometry",
+      "Stage two cylinder - slightly narrower than stage one, darker glass with moderate rose tint, more concentrated particles visible inside moving faster, the walls show subtle inward curvature where the compression ring above has tightened the transition",
+      "Stage three cylinder - noticeably narrower with clearer glass and stronger rose tint, particles inside are dense and fast-moving, visible acceleration compared to upper stages, the walls are distinctly compressed inward by flanking rings",
+      "Stage four cylinder - the narrowest and brightest stage at the bottom, glass walls glow with rose internal light, particles inside are highly concentrated and moving rapidly toward the exit aperture, this stage represents the final conversion acceleration",
+      "Compression rings - four dark metallic bands positioned at each stage transition point, brushed dark steel with rose-lit inner edges and small rose indicator nodes at cardinal points, they visually clamp and tighten the funnel at each narrowing point suggesting mechanical precision optimization",
+      "Acceleration arrows - six to eight swept-back arrow shapes rendered as thin rose light traces on the exterior funnel surface, pointing downward and curving along the cylindrical walls, increasing in brightness and speed-blur toward the bottom stages, suggesting accelerating velocity",
+      "Exit aperture - a tight circular opening at the very bottom of the funnel, glowing with concentrated intense rose light, small bright conversion particles emerging from it in a focused stream onto the platform below"
+    ],
+    "actions": [
+      "Particles flow downward through the funnel stages with visibly increasing speed - sparse and slow at the wide top, dense and rapid at the narrow bottom - communicating conversion acceleration through the tightened stages",
+      "The compression rings appear to actively squeeze inward with subtle rose energy arcs between their cardinal indicator nodes, suggesting the optimization mechanism is engaged and working in real-time",
+      "Acceleration arrows on the funnel exterior pulse with rose light traveling downward along their length, creating a motion blur effect that intensifies toward the bottom stages",
+      "Concentrated conversion particles emerge from the exit aperture in a tight focused stream, bright rose dots dispersing slightly as they contact the platform surface below"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with rose/pink as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors outside the rose spectrum"
+    ],
+    "notes": "The emotional narrative is 'systematically tightening every stage of the funnel to eliminate leakage and accelerate conversions.' The viewer should feel the mechanical precision of optimization - this is not a passive funnel that simply filters, but an actively compressed and accelerated system. The progressive intensification of rose light from top to bottom tells the story of increasing value concentration. The compression rings are the hero element - they represent the optimization interventions that make the funnel work harder."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary rose/pink accent rim light from behind-right, casting thin rose edge highlights on all 3D objects. Tertiary subtle rose fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep rose (oklch 0.68 0.2 350) as the sole accent color. Secondary accent is a slightly desaturated rose (oklch 0.4 0.12 350) for deeper shadows and subtle gradients. No warm yellows/oranges. Strict monochromatic rose/pink on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 60,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport",
+      "global_illumination": "Subtle GI bounce from rose-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The funnel structure stands vertically with proper gravitational grounding on the platform. Particles inside obey downward flow. The compression rings are mounted at structural transition points with mechanical believability. The exit stream disperses slightly upon contacting the platform surface.",
+      "structural_believability": true,
+      "structural_details": "Each funnel stage has consistent glass wall thickness. The compression rings have proper mechanical band construction with visible fastening nodes. The narrowing between stages is smooth and structurally logical. The exit aperture has proper circular geometry with edge thickness."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "funnel_glass": "Dark translucent glass with progressive rose tinting - nearly clear charcoal at the top stage, deepening to rich rose-tinted glass at the bottom stage, approximately 25-40% transparency allowing interior particle flow to be visible, thin rose wireframe accent lines tracing cylindrical surface geometry",
+      "compression_rings": "Dark brushed steel mechanical bands with matte finish, rose-lit inner edges where the ring contacts the funnel glass, small polished rose indicator nodes at four cardinal points on each ring, micro-chamfered outer edges catching rim light",
+      "platform": "Matte dark carbon fiber texture with extremely subtle directional grain, faint rose grid lines at 40px intervals, concentrated rose light pool directly below the funnel exit aperture where conversion particles land"
+    },
+    "module_surfaces": {
+      "acceleration_arrows": "Thin luminous rose light traces rendered as swept-back arrow silhouettes on the funnel exterior, approximately 1-2px width with directional motion blur trailing behind each arrowhead, brightness increasing from dim at top to vivid at bottom stages",
+      "interior_particles": "Small spherical particles ranging from dim gray at the top stage to bright rose at the bottom stage, increasing in density and apparent speed with each lower stage, the brightest particles cluster near the exit aperture",
+      "exit_aperture": "Circular opening with polished dark metal rim edge, intense concentrated rose illumination from within creating a focused glow, the rim has thin precision-machined beveling",
+      "indicator_nodes": "Small polished rose-tinted metal spheres at compression ring cardinal points, softly self-illuminated with controlled rose radiance, no bloom or halo"
+    },
+    "transparency": "The funnel glass uses progressive transparency - the top stage is more opaque and darker, each subsequent stage becomes slightly more transparent and rose-tinted, allowing the bottom stage to show the most interior detail. The compression rings are fully opaque dark metal. The acceleration arrows are fully luminous with no transparency."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black",
+      "Extremely subtle atmospheric haze at distance - background elements slightly hazed",
+      "No fog, no volumetric lighting shafts - atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of rose light dust scattered throughout mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at edges."
+  },
+  "composition": {
+    "perspective": "Slightly off-center three-quarter view allowing the cylindrical depth of the funnel stages and the mechanical detail of the compression rings to be visible",
+    "framing": "rule_of_thirds",
+    "framing_details": "The funnel structure is vertically centered with its widest top stage at the upper third line and the exit aperture near the lower third line. The compression rings align with horizontal guide points creating natural visual pause points at each stage transition.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Platform edge and exit particle stream (slight bokeh blur)",
+      "Mid-ground: Full funnel structure with compression rings and acceleration arrows (sharp focus)",
+      "Background: Top of funnel opening and sparse entering particles (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining premium editorial feel",
+    "visual_flow": "The eye enters at the wide funnel mouth at top and is pulled downward by the acceleration arrows and increasing rose brightness, pausing at each compression ring before continuing down to the concentrated exit aperture - a strong top-to-bottom directional reading that mirrors the conversion acceleration journey"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A tall vertical conversion funnel of four stacked cylindrical glass stages on a dark matte platform with rose grid lines, each stage narrower than the one above. Dark translucent glass with progressive rose tinting - nearly clear at top, rich rose at bottom. At each stage transition, sleek dark brushed steel compression rings clamp the funnel with rose-lit inner edges and cardinal indicator nodes. Six to eight swept-back acceleration arrow shapes in rose light trace downward paths along the funnel exterior, intensifying toward the bottom. Interior particles flow downward with increasing speed and density - sparse gray at top, dense bright rose at bottom. The narrowest bottom stage glows brightest with concentrated rose light, terminating in a tight circular exit aperture of intense rose radiance with conversion particles emerging in a focused stream. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left, rose rim light behind-right, rose under-glow. Near-black palette with deep rose oklch(0.68 0.2 350) sole accent. Three-quarter view slightly above eye level, 60mm lens, medium depth of field, rule of thirds. Hyperrealistic 3D render, studio quality, precise edges, film grain, PBR --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a tall vertical conversion funnel composed of four distinct cylindrical glass stages stacked top to bottom on a matte black platform with faint rose grid lines. Each stage is narrower than the one above, rendered in dark translucent glass with progressive rose tinting - faint at top, rich at bottom. Around each stage transition, sleek dark brushed steel compression rings clamp the funnel inward, with rose-lit inner edges and small polished rose indicator nodes at four cardinal points. Along the funnel exterior, six to eight swept-back acceleration arrow shapes rendered as thin rose light traces point downward with motion blur, brightening toward the bottom. Inside the funnel, particles flow downward with visibly increasing speed - sparse and gray at the wide top, dense and bright rose at the narrow bottom. The bottom stage is the narrowest and brightest, terminating in a tight circular exit aperture glowing with intense concentrated rose light, conversion particles emerging in a focused stream onto the platform below. Deep void environment, pure darkness. Cinematic lighting: cool key light upper-left at 45 degrees, rose accent rim light from behind-right, subtle rose fill from below. Materials include translucent glass with varying rose tint, brushed steel compression bands, carbon fiber platform. Strictly near-black to charcoal with deep rose as the only accent. Three-quarter view, 60mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors outside rose, no bloom. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A tall vertical conversion funnel of four stacked cylindrical dark glass stages stands on a matte black carbon fiber platform with faint rose grid lines. Stages narrow progressively top to bottom - widest and dimmest at top, narrowest and brightest rose-tinted at bottom. Dark brushed steel compression rings clamp each stage transition with rose-lit inner edges and polished rose indicator nodes at cardinal points, rose energy arcs between nodes. Swept-back acceleration arrows in rose light trace downward along funnel exterior with motion blur intensifying toward bottom stages. Interior particles flow with increasing velocity - sparse gray at top becoming dense bright rose at bottom. Bottom stage terminates in tight circular exit aperture of concentrated intense rose radiance, focused conversion particle stream emerging onto platform creating a rose light pool below. Deep void, pure darkness with subtle center vignette. Cinematic lighting: cool key light upper-left 45 degrees 5500K, rose rim light behind-right, rose under-glow. Sparse rose micro-particles at 5-10% opacity. Three-quarter view slightly above, 60mm lens, medium depth of field, rule of thirds vertical composition. Muted palette: near-black to charcoal with deep rose oklch(0.68 0.2 350) sole accent. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

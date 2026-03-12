@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "E-Commerce Revenue Engine",
+    "variation": "2 - Engine Mechanics",
+    "accent_color": "deep cyan",
+    "accent_oklch": "oklch(0.7 0.15 195)",
+    "concept": "A literal commerce engine rendered as interlocking gears, pistons, and drive mechanisms - industrial machinery reimagined as a sleek dark-tech powerplant. The mechanical components work in synchronized motion, with cyan energy flowing through the system like lubricant and fuel, representing the precision-engineered revenue machine that powers e-commerce growth."
+  },
+  "core": {
+    "subject": "A compact vertical engine block floating slightly above a dark platform, composed of interlocking precision gears, reciprocating pistons, drive shafts, and cam mechanisms - all rendered in dark premium materials. The engine has a central large drive gear with teeth meshing into four smaller secondary gears arranged around it, each secondary gear connected to a piston assembly that pumps vertically. Cyan energy flows through channels carved into the gear faces and along piston shafts like luminous hydraulic fluid, the entire mechanism captured mid-cycle with pistons at different stroke positions showing active synchronized operation.",
+    "scene": "A dark void environment with a circular matte black platform beneath the floating engine assembly. The platform has concentric cyan ring markings etched into its surface radiating outward from the center point directly below the engine. The engine hovers approximately six inches above the platform, a subtle cyan energy field visible in the gap between the engine base and the platform surface. The scene conveys raw mechanical power harnessed into precise, controlled operation - every component working in concert.",
+    "objects": [
+      "Central drive gear - a large precision-machined gear with 32 teeth, dark tungsten carbide material with polished tooth faces, thin cyan energy channels running along the face of the gear between teeth in a radial pattern, the gear hub showing a hexagonal drive socket with cyan illumination visible deep inside, approximately 8 inches in diameter",
+      "Secondary gears - four smaller gears (approximately 3 inches diameter each) positioned at 90-degree intervals around the central gear, teeth meshing precisely, each gear made of dark brushed steel with cyan luminous channel accents on their faces, each connected to a piston rod at its eccentric pin",
+      "Piston assemblies - four dark chrome piston-and-cylinder sets, each connected to a secondary gear via a connecting rod, pistons captured at different stroke positions (one at top dead center, one at bottom, two mid-stroke) showing the synchronized four-phase cycle, cylinder walls have frosted glass sections revealing the cyan energy within",
+      "Drive shafts and bearings - dark polished steel shafts connecting gear hubs, supported by precision bearing housings with visible ball-bearing rows, the bearings have thin cyan light rings indicating active rotation and proper lubrication",
+      "Cam mechanism - a secondary cam shaft running horizontally behind the main gear assembly, with oval cam lobes in dark hardened steel, actuating small valve-like components that regulate the flow of cyan energy through the system",
+      "Hydraulic channels - a network of thin channels and tubes carved into and connecting the major components, carrying luminous cyan fluid that serves as both lubricant and power medium, the fluid visible through frosted glass tube sections at key junction points",
+      "Flywheel - a heavy dark metal disc mounted on the main drive shaft behind the central gear, with precision balance weights and a polished rim that catches cyan rim lighting, providing visual mass and momentum to the composition"
+    ],
+    "actions": [
+      "The four pistons are captured at different positions in their stroke cycle, implying continuous reciprocating motion - the connecting rods show the dynamic geometry of the crank mechanism at four distinct phase angles, conveying perpetual mechanical rhythm",
+      "Cyan hydraulic fluid is flowing through the channel network, with brighter concentrations visible at high-pressure points near the piston heads and dimmer flow in the return channels, suggesting a complete pressurized circulation system",
+      "The central drive gear and secondary gears are shown with subtle motion blur on their tooth edges, indicating active rotation while keeping the gear body details sharp, the mesh points between gears showing precise tooth engagement",
+      "Small cyan energy sparks arc at the gear mesh points where teeth engage and disengage, suggesting the mechanical conversion of raw energy into controlled rotational power"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with cyan as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The emotional narrative is 'a precision-engineered machine that converts raw inputs into powerful, reliable output through mechanical excellence.' The viewer should feel the satisfying complexity of a well-built engine - every gear meshing perfectly, every piston firing in sequence, every channel flowing smoothly. This represents the e-commerce revenue engine as a literal engine - something you build once, maintain carefully, and it runs powerfully and predictably."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary cyan accent rim light from behind-right, casting thin cyan edge highlights on all 3D objects. Tertiary subtle cyan fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep cyan (oklch 0.7 0.15 195) as the sole accent color. Secondary accent is a slightly desaturated cyan (oklch 0.4 0.10 195) for deeper shadows and subtle gradients. No warm colors. Strict monochromatic cyan on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal), angled to show the gear mesh engagement and piston stroke positions clearly",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport through semi-transparent elements",
+      "global_illumination": "Subtle GI bounce from cyan-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The engine assembly hovers with implied magnetic levitation above the platform, but all internal components show proper mechanical relationships - gears mesh at correct pitch circles, pistons align with cylinder bores, connecting rods show proper geometric angles for their respective crank positions.",
+      "structural_believability": true,
+      "structural_details": "Every mechanical component follows real engineering geometry - involute gear tooth profiles, proper piston-to-bore clearances, correct connecting rod length-to-crank-radius ratios, bearings with visible ball elements at correct spacing. The engine reads as a machine that could actually function."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "platform": "Matte dark carbon fiber texture with concentric cyan ring markings etched into the surface, non-reflective except for faint cyan energy reflections from the hovering engine above",
+      "gear_bodies": "Dark tungsten carbide with a dense matte finish and extremely subtle metallic flake visible at close inspection, the gear faces are precision-ground flat with micro-machining marks visible as fine concentric circles, tooth flanks are polished smooth for proper mesh engagement",
+      "piston_cylinders": "Dark chrome cylinder walls with high-polish interior finish, frosted glass viewing sections at mid-cylinder revealing cyan hydraulic fluid inside, external cylinder surfaces have dark anodized aluminum heat-sink fins"
+    },
+    "module_surfaces": {
+      "piston_heads": "Polished dark chrome with machined crown geometry, the compression face has a subtle dish contour, thin cyan energy ring around the piston ring grooves",
+      "connecting_rods": "Dark forged steel with I-beam cross section, polished bearing surfaces at both ends, the rod body has subtle forging grain texture visible under close inspection",
+      "cam_lobes": "Hardened dark steel with mirror-polished lobe surfaces for smooth actuation, the base circle and lobe profile showing proper automotive cam geometry",
+      "flywheel": "Heavy dark cast metal with precision-machined rim, balance drill holes visible at specific angular positions, the rim edge polished to catch cyan rim lighting as a thin bright line"
+    },
+    "transparency": "Frosted glass sections on piston cylinders are translucent with 50% opacity, showing cyan hydraulic fluid as glowing liquid inside. Hydraulic channel tubes at junction points are clear dark-tinted glass revealing the flowing cyan luminous fluid within. The energy field between engine base and platform is a subtle semi-transparent cyan gradient."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of cyan light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Three-quarter front view with slight upward angle to emphasize the vertical stacking of the engine components and show the gear-piston relationship clearly, natural perspective convergence adding depth",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central drive gear sits at the vertical center, with pistons extending into the upper third and the platform occupying the lower third. The engine assembly is centered horizontally with equal negative space on both sides.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Nearest piston assembly and platform edge (slight bokeh blur)",
+      "Mid-ground: Central drive gear, secondary gears, and hydraulic channel network (sharp focus)",
+      "Background: Flywheel, cam mechanism, and rear piston assemblies (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining the premium editorial feel",
+    "visual_flow": "The eye is drawn first to the central drive gear as the largest and most detailed element, then follows the meshing teeth outward to discover each secondary gear and its connected piston, then traces the cyan hydraulic channels connecting everything into a unified system - a radial reading pattern emanating from the mechanical center"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A precision-engineered engine block floating above a dark circular platform with concentric cyan ring markings, composed of interlocking gears, pistons, drive shafts, and cam mechanisms in dark premium materials. Central large drive gear in dark tungsten carbide with 32 teeth and radial cyan energy channels on its face, four smaller secondary gears meshing at 90-degree intervals, each connected via dark forged steel connecting rods to chrome piston assemblies at different stroke positions. Frosted glass cylinder sections reveal luminous cyan hydraulic fluid flowing inside. A network of thin hydraulic channels carries cyan fluid between all components. A heavy dark flywheel with precision balance weights mounted on the rear drive shaft. Cam shaft with polished lobes actuating flow regulators. Small cyan energy sparks arc at gear mesh points. Subtle motion blur on gear tooth edges implies rotation. The engine hovers with a faint cyan energy field visible between its base and the platform. Dark void environment, matte carbon fiber platform. Dramatic cinematic lighting, cool key light upper-left, cyan rim light behind-right, subtle cyan under-glow. Near-black palette with deep cyan oklch(0.7 0.15 195) as sole accent. Three-quarter view slightly above eye level, 55mm lens, medium depth of field. Hyperrealistic 3D render, studio quality, physically based rendering --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a precision-engineered engine block hovering above a dark circular matte carbon fiber platform with concentric cyan ring markings etched into its surface. The engine is composed of interlocking dark tungsten carbide gears, dark chrome pistons in cylinders, dark forged steel connecting rods, polished drive shafts in precision bearings, and a cam mechanism with hardened steel lobes. The central large drive gear has 32 teeth with thin cyan energy channels running radially across its face, four smaller secondary gears mesh precisely at 90-degree intervals around it. Each secondary gear connects via a connecting rod to a piston assembly - all four pistons captured at different stroke positions showing the synchronized cycle. Frosted glass sections on the cylinder walls reveal luminous cyan hydraulic fluid flowing inside. A network of thin channels and frosted glass tubes carries glowing cyan fluid between all components. A heavy dark metal flywheel with balance drill holes is mounted on the rear drive shaft. Small cyan sparks arc at gear mesh engagement points. A subtle cyan energy field glows in the gap between engine base and platform. Deep void environment, pure darkness surrounding. Dramatic cinematic lighting: cool key light upper-left at 45 degrees, cyan accent rim light from behind-right, subtle cyan fill from below platform. Strictly near-black to charcoal palette with deep cyan as the only accent color. Three-quarter view from slightly above, 55mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors, no bloom effects. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A precision-engineered engine block hovers above a dark circular matte carbon fiber platform with concentric cyan ring markings. The engine comprises interlocking dark tungsten carbide gears, dark chrome pistons in cylinders with frosted glass viewing sections, dark forged steel connecting rods with polished bearing ends, drive shafts in precision bearing housings with cyan light rings, and a cam shaft with mirror-polished hardened steel lobes. Central large drive gear with 32 teeth and radial cyan energy channels meshes with four smaller secondary gears at 90-degree intervals. Each secondary gear connects to a piston assembly - four pistons at different stroke positions showing the mechanical cycle. Luminous cyan hydraulic fluid flows through frosted glass cylinder sections and a network of hydraulic channels connecting all components. Heavy dark cast metal flywheel with balance weights on the rear shaft. Cyan sparks arc at gear mesh points. Subtle motion blur on gear tooth edges. Faint cyan energy field between engine base and platform. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left, cyan rim light behind-right, cyan under-glow from platform. Near-black to charcoal palette with deep cyan oklch(0.7 0.15 195) as sole accent. Three-quarter view slightly above eye level, 55mm lens, medium depth of field, rule of thirds. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

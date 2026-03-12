@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "solution": "CRM & Revenue System",
+    "variation": "2 — The Pipeline Dashboard",
+    "accent_color": "magenta/pink-purple",
+    "accent_oklch": "oklch(0.50 0.30 285)",
+    "concept": "A large sleek dashboard screen floating at slight angle showing Kanban-style sales pipeline with deal cards moving through stages left to right. Small automation bolt icons between stages indicate automated transitions. Below, revenue forecasting bar chart glows softly. Full visibility into every deal."
+  },
+  "core": {
+    "subject": "A large sleek rectangular dashboard display screen floating at a 10-degree angle on a dark matte pedestal, its surface showing a detailed Kanban-style sales pipeline with six vertical stage columns stretching left to right across the screen. Each column contains three to five small rectangular deal cards stacked vertically with subtle spacing between them. The leftmost column is tallest and most populated with cards in dim neutral tones, while columns progressively to the right have fewer but brighter magenta-glowing cards — representing deals advancing through qualification, proposal, negotiation, and close stages. Between each column, small lightning bolt automation icons float just above the divider lines, rendered in bright magenta, suggesting automated stage transitions. Below the main pipeline view on the lower third of the screen, a horizontal revenue forecasting bar chart shows six bars of increasing height glowing with progressive magenta intensity, the tallest bar at the right edge pulsing with brightest magenta luminance. The entire screen composition conveys complete pipeline visibility and data-driven forecasting.",
+    "scene": "A dark minimal environment with the dashboard screen as the dominant commanding element. The screen hovers above a dark matte rectangular platform on a thin dark metal stand with a minimalist T-shaped base. Behind and below the main screen, two smaller secondary display panels float at wider angles — one showing a miniature conversion funnel diagram and the other showing a circular gauge chart — both in subdued magenta tones at lower opacity, providing context without competing for attention. The dark void environment has no visible walls, floor beyond the platform, or horizon line. A subtle magenta glow radiates from the screen surface onto the platform below and the stand, creating a soft reflected light pool that is the primary ambient light source in the lower portion of the composition.",
+    "objects": [
+      "Primary dashboard screen — a large thin rectangular display (approximately 16:10 proportions) with razor-thin dark metal bezel, dark frosted glass surface with magenta UI elements, six Kanban columns with thin vertical divider lines in dim magenta, column header bars at top with subtle gradient, the screen has slight edge curvature at corners",
+      "Deal cards — small rectangular cards (approximately 15x10mm visual scale) within each Kanban column, each card has a thin magenta left-border accent, a subtle frosted glass surface darker than the column background, and two to three thin horizontal placeholder lines suggesting deal information, cards in later stages glow brighter with more saturated magenta borders",
+      "Automation bolt icons — six small lightning bolt shapes (one between each pair of adjacent columns), rendered in bright polished magenta metal with subtle inner glow, hovering just above the column divider lines at mid-height, suggesting automated workflows triggering stage transitions",
+      "Revenue forecasting bar chart — positioned in the lower third of the screen, six vertical bars of progressively increasing height from left to right, each bar rendered as a frosted glass column with magenta fill that intensifies with height, the tallest bar has a subtle pulsing glow at its top edge, thin horizontal grid lines behind the bars in very dim magenta",
+      "Secondary display panel left — a smaller floating screen at wider angle behind the primary screen, showing a miniature funnel diagram in dim magenta wireframe, at approximately 60% opacity",
+      "Secondary display panel right — a smaller floating screen showing a circular gauge/donut chart in dim magenta, at approximately 50% opacity, further back than the left panel",
+      "Display stand — thin dark brushed steel column with T-shaped matte black base, minimal industrial aesthetic, catching faint magenta reflections from the screen above",
+      "Dark matte pedestal platform — rectangular, slightly elevated from the void floor, with subtle magenta grid lines at 40px intervals and soft edge beveling",
+      "Magenta light pool — soft reflected magenta light on the platform surface directly below the screen, creating an oval-shaped illumination zone that grounds the floating display"
+    ],
+    "actions": [
+      "Deal cards appear to be in motion from left to right across the pipeline columns — some cards are captured mid-transition between columns, hovering in the gap between stages with a subtle magenta motion trail behind them, indicating deals progressing through the sales pipeline",
+      "The automation bolt icons pulse with a rhythmic magenta glow, each bolt at a slightly different phase of its pulse cycle, suggesting continuous automated workflow activity across all pipeline stages",
+      "The revenue forecasting bars in the lower chart area appear to be growing upward — the rightmost bars have a subtle upward motion blur at their top edges, suggesting projections being calculated and updated in real time",
+      "A faint particle stream of tiny magenta dots flows from the leftmost column toward the right across the pipeline, following the deal cards' progression path, representing deal flow momentum",
+      "The secondary background screens slowly rotate at their angles, catching occasional magenta highlights as they shift, suggesting a living multi-screen analytics environment"
+    ],
+    "constraints": [
+      "No text, labels, numbers, or readable words anywhere — all UI elements use placeholder lines and abstract shapes only",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces — the screen surface should be dark with magenta UI elements, not a white interface on a dark background",
+      "No ambient glow halos or bloom effects — the magenta lighting is precise and controlled",
+      "No photographic realism — this is a stylized 3D render",
+      "The Kanban column structure must be immediately recognizable as a pipeline/board view — clear vertical columns with cards",
+      "The left-to-right progression must be visually clear — more cards and dimmer on left, fewer and brighter on right"
+    ],
+    "notes": "The emotional narrative is 'complete visibility into your entire sales pipeline and revenue forecast.' The viewer should feel the power of seeing every deal's status at a glance — no guesswork, no hidden information. The automation bolts between stages communicate that deals don't just sit in stages waiting for manual action — the system moves things forward automatically. The revenue forecast bar chart grounds the pipeline visualization in actual business outcomes: revenue. This directly addresses the pain point of having no pipeline visibility and not knowing where deals stand."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization with dashboard UI aesthetic, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and premium SaaS analytics interfaces rendered as physical objects",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 40 degrees, cool-neutral temperature (5500K) with low intensity — defining the screen bezels, stand, and platform surfaces. The dashboard screen itself is the dominant light source — its UI elements emit controlled magenta light that illuminates the bezel frame, stand, platform below, and nearby secondary screens. The automation bolt icons serve as small bright magenta point lights. The revenue chart bars provide graduated magenta light from dim (short bars) to bright (tall bars) across the lower screen. Secondary subtle fill from the right at very low intensity prevents the screen's right side from going completely dark. The lighting creates a theater-like effect where the screen commands attention against the dark surroundings. Overall ratio approximately 5:1 screen-to-ambient.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal for all structural elements and environment, with magenta pink-purple (oklch 0.50 0.30 285) as the sole accent color appearing in all UI elements, bolt icons, bar chart fills, grid lines, and reflected light. A desaturated magenta (oklch 0.35 0.20 285) appears in background screen elements and dim UI lines. Deal cards progress from neutral dark gray (early stages) to rich magenta (late stages), telling the qualification color story within the pipeline. No other colors present."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium-shallow",
+      "aperture_effects": "f/3.5 equivalent — the primary dashboard screen is in razor-sharp focus, secondary background screens fall into noticeable soft focus with gentle bokeh, the platform edge closest to camera has subtle blur",
+      "angle": "Slightly below eye level looking up at approximately 10 degrees, and 25 degrees to the right — this gives the dashboard a commanding presence and allows the full pipeline to be readable while showing the screen's physical dimensionality and the light pool on the platform below",
+      "shot_type": "medium shot — the primary dashboard screen fills approximately 55% of the frame width with secondary screens visible at the periphery and platform below"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "1:1"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile — adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections of magenta UI elements on the glossy screen bezel, light transport from screen surface onto platform and stand, and the soft magenta reflection pool on the platform",
+      "global_illumination": "Important for the screen's magenta light bouncing onto the stand, platform, and nearby secondary screens, creating natural color bleeding and illumination in the immediate vicinity of the display"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The primary screen and stand are solidly grounded on the platform with visual weight. Secondary screens float with implied mounting (as if on articulated arms not fully visible). The automation bolt icons hover between columns with deliberate positioning.",
+      "structural_believability": true,
+      "structural_details": "The screen has proper panel thickness visible at edges, the stand supports the screen's weight convincingly, the T-base provides stable grounding. UI elements within the screen have consistent spacing and alignment suggesting a real interface."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "screen_surface": "Dark frosted glass with subtle internal depth, UI elements appear as luminous magenta layers within the glass, the surface has very faint reflectivity catching environmental light — not a flat matte LCD but a premium glass display with visible depth between UI layers",
+      "screen_bezel": "Razor-thin dark anodized aluminum frame with micro-chamfered edges that catch magenta light from the screen, creating a thin bright edge highlight around the display perimeter",
+      "stand_column": "Dark brushed stainless steel cylinder with subtle directional grain, matte finish that catches faint magenta reflections from the screen above",
+      "platform": "Matte dark carbon fiber texture with extremely subtle directional grain, non-reflective except where the magenta light pool creates a soft luminous oval reflection"
+    },
+    "ui_elements": {
+      "kanban_columns": "Thin vertical divider lines in dim magenta with subtle transparency, column header bars as slightly brighter magenta gradient strips at the top of each column",
+      "deal_cards": "Small frosted glass rectangles darker than column background, thin magenta left-border accent of increasing intensity from left to right columns, thin horizontal placeholder lines in subtle gray within each card",
+      "automation_bolts": "Small lightning bolt shapes in polished bright magenta metal with inner glow emanating from the bolt center, hovering with no visible mount between columns",
+      "forecast_bars": "Frosted glass columns with magenta gradient fill, the fill intensity increases with bar height, thin horizontal grid lines in very dim magenta behind the bars, the tallest bar has a subtle bright cap at its top edge"
+    },
+    "secondary_screens": "Smaller display panels with same dark glass surface quality as the primary but at reduced opacity and brightness, their UI content (funnel diagram, gauge chart) rendered as dim magenta wireframe shapes",
+    "transparency": "The screen surface has frosted glass quality with visible layered depth between UI elements. Deal cards have subtle transparency showing the column background behind them. Forecast bars have glass-like clarity with magenta fill visible through their surfaces."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls — pure darkness fading to black in all directions",
+      "Very subtle atmospheric haze around the secondary screens at distance, adding depth separation from the primary display",
+      "No fog, no volumetric lighting shafts — the atmosphere is clean and controlled"
+    ],
+    "time_season": ["Timeless — no natural time indicators, this is an artificial/digital environment"],
+    "particles": [
+      "Faint magenta particle stream flowing left to right across the pipeline columns on the primary screen, very small dots (1px) at low opacity (8-12%), suggesting deal flow momentum",
+      "Sparse floating micro-particles of magenta light in the space between primary and secondary screens, very low opacity (5%), suggesting an active digital environment",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with the magenta light pool on the platform providing the only environmental illumination beyond the screens themselves. Extremely subtle radial gradient — marginally brighter behind the primary screen, fading to pure black at frame edges."
+  },
+  "composition": {
+    "perspective": "Slightly below eye level with three-quarter rotation — the primary screen has commanding presence looking slightly down at the viewer, reinforcing the feeling of a powerful analytics command center",
+    "framing": "rule_of_thirds",
+    "framing_details": "The primary dashboard screen's center sits at the upper-third horizontal line and center vertical line. The platform and light pool occupy the lower third. Secondary screens occupy the left-third and right-third zones at the mid-ground depth. The pipeline's left-to-right flow aligns with the natural left-to-right reading direction.",
+    "subject_placement": "centered_upper",
+    "depth_layers": [
+      "Foreground: Platform front edge with subtle focus falloff and magenta light pool",
+      "Mid-ground: Primary dashboard screen and stand in sharp focus — the hero element",
+      "Background: Secondary display panels in soft focus at reduced opacity, dark void beyond"
+    ],
+    "negative_space": "Dark space above the dashboard and in the void beyond provides premium breathing room. The space between the primary and secondary screens creates depth separation. The overall composition is clean and uncluttered despite the data-rich screen content.",
+    "visual_flow": "The eye enters at the bright primary dashboard screen (highest contrast), reads the pipeline left to right across the Kanban columns, drops down to the revenue forecast bar chart growing left to right, then discovers the secondary screens in the background — creating an information hierarchy that mirrors how a sales leader would actually read their CRM dashboard"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "visible grid or wireframe in the background void",
+      "bright white surfaces",
+      "warm gold color tones",
+      "cool blue color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A large sleek rectangular dashboard display screen floating at 10-degree angle on a dark matte pedestal with thin dark metal stand, showing a detailed Kanban-style sales pipeline with six vertical columns stretching left to right. Each column has 3-5 small frosted glass deal cards with magenta left-border accents, cards progressing from dim gray in leftmost column to bright glowing magenta in rightmost. Small bright magenta lightning bolt automation icons hover between each column pair suggesting automated transitions. Lower third of screen shows revenue forecasting bar chart with six bars of increasing height glowing progressive magenta. Two smaller secondary screens float behind at wider angles showing miniature funnel and gauge charts in subdued magenta. Dark void environment, matte black platform with faint magenta grid lines, soft magenta light pool reflected on platform below screen. Cinematic dramatic lighting, cool key from upper-left, screen as dominant magenta light source. Near-black palette with magenta pink-purple sole accent. Slightly below eye level three-quarter view, 55mm lens, medium-shallow depth of field. Hyperrealistic 3D render, studio quality, precise edge definition, subtle film grain --ar 1:1 --s 200 --no text, labels, numbers, people, bright white, neon glow, bloom, cartoon, anime, warm colors, cool blues, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a large sleek rectangular dashboard display screen floating at a 10-degree angle on a dark matte carbon fiber pedestal, mounted on a thin dark brushed steel stand with T-shaped base. The dark frosted glass screen surface shows a Kanban-style sales pipeline with six vertical columns stretching left to right, separated by thin magenta divider lines with subtle gradient column headers. Each column contains 3-5 small frosted glass deal cards with thin magenta left-border accents — cards in the leftmost column are dim neutral gray, progressively brightening to rich glowing magenta in the rightmost column, showing deals advancing through pipeline stages. Between each pair of columns, a small bright polished magenta lightning bolt icon hovers, suggesting automated stage transitions. The screen's lower third shows a revenue forecasting bar chart with six vertical frosted glass bars of increasing height, each filled with magenta gradient that intensifies with height, the tallest bar pulsing with bright magenta at its top. Behind the primary screen, two smaller secondary display panels float at wider angles — one showing a miniature funnel diagram, the other a circular gauge chart — both in subdued dim magenta at reduced opacity. The screen emits controlled magenta light that illuminates its bezel, stand, and creates a soft magenta light pool on the platform surface below. Deep dark void environment with no visible boundaries. Cool neutral key light from upper-left, the screen as the dominant magenta light source. Near-black palette with magenta pink-purple as the sole accent. Shot from slightly below eye level with three-quarter rotation, 55mm lens, medium-shallow depth of field. No text, no numbers, no people, no logos, no bright white, no warm colors. Square format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A large sleek dashboard display screen floats at 10-degree angle on dark matte carbon fiber pedestal with thin brushed steel stand. Dark frosted glass screen shows Kanban-style sales pipeline — six vertical columns left to right with thin magenta dividers and gradient column headers. Columns contain 3-5 small frosted glass deal cards each with magenta left-border accents, cards progress from dim gray leftmost to bright glowing magenta rightmost representing deal advancement. Small bright polished magenta lightning bolt automation icons hover between each column pair. Lower third shows revenue forecasting bar chart — six frosted glass bars increasing height left to right with magenta gradient fill intensifying with height, tallest bar pulsing bright at top edge. Two smaller secondary screens float behind at wider angles showing dim magenta funnel and gauge wireframes at reduced opacity. Screen emits magenta light onto bezel, stand, and platform creating soft reflected light pool. Faint magenta particle stream flows left to right across pipeline. Deep void environment, pure darkness with subtle center brightening. Cool key light upper-left, screen as dominant light source. Sparse magenta micro-particles float between screens. Slightly below eye level three-quarter view, 55mm lens, medium-shallow depth of field, rule of thirds. Muted color profile: near-black to charcoal with magenta pink-purple oklch(0.50 0.30 285) as sole accent. No text, no numbers, no people, no logos, no warm colors, no bloom. Square 1:1."
+  }
+}

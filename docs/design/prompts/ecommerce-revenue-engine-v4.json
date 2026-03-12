@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "E-Commerce Revenue Engine",
+    "variation": "4 - Revenue Loop Cycle",
+    "accent_color": "deep cyan",
+    "accent_oklch": "oklch(0.7 0.15 195)",
+    "concept": "A circular orbital system showing the continuous revenue cycle - acquisition, conversion, fulfillment, retention, and upsell - as five distinct station modules arranged in a ring formation connected by a flowing cyan orbital track. Particles circulate endlessly through the loop, growing brighter with each revolution, representing the compounding nature of a well-built e-commerce engine where each cycle feeds the next."
+  },
+  "core": {
+    "subject": "Five distinct station modules arranged in a circular ring formation, connected by a continuous orbital track that forms a tilted elliptical loop. Each station is a unique geometric housing representing a stage of the revenue cycle - an acquisition beacon tower, a conversion press mechanism, a fulfillment dispatch hub, a retention magnetic core, and an upsell amplifier column. Luminous cyan particles travel along the orbital track in a clockwise direction, passing through each station in sequence and visibly growing brighter and larger after each station they traverse, suggesting compounding value with every revolution of the cycle.",
+    "scene": "A dark void environment with a circular matte black platform beneath the orbital ring formation. The ring is tilted approximately 30 degrees from horizontal toward the viewer, giving a clear view of all five stations and the connecting orbital track. The platform has thin cyan radial lines emanating from its center outward like clock markings, aligned with the positions of each station. Beneath the orbital track, faint cyan light traces the path on the platform surface as a shadow-projection of the loop above. The scene conveys perpetual motion - a self-sustaining cycle that generates increasing returns.",
+    "objects": [
+      "Acquisition beacon - positioned at the top of the ring (12 o'clock), a tall narrow tower structure in dark brushed steel with a cyan beacon light at its apex that pulses directionally toward the orbital track, the tower has antenna-like extensions that reach outward as if capturing signals, the base sits on a small dark platform section with an intake port where dim cyan particles first enter the loop",
+      "Conversion press - at the 2 o'clock position, a compact mechanical press mechanism with two dark chrome plates that narrow into a V-shape, the orbital track passes through the narrow gap between the plates, particles entering are compressed and emerge slightly brighter and more defined, the press plates have thin cyan hydraulic lines running along their edges",
+      "Fulfillment dispatch - at the 5 o'clock position, a hub-shaped module with a central dark cylinder and four small outward-extending dispatch arms, the orbital track passes through the central cylinder where particles receive a momentary bright cyan pulse, small secondary particle trails branch off from the dispatch arms and arc away into the void suggesting outbound deliveries",
+      "Retention core - at the 7 o'clock position, a spherical magnetic core module encased in a dark metal cradle, the orbital track curves tightly around the sphere with particles clearly being pulled inward and accelerated as they slingshot around it, the sphere surface has thin cyan magnetic field lines visible as glowing contours",
+      "Upsell amplifier - at the 10 o'clock position, a tall columnar structure with internal stacked resonator rings visible through frosted glass panels, the orbital track passes vertically through the column and particles exit noticeably brighter and larger than they entered, the resonator rings pulse with cyan energy in sequence as particles pass through them",
+      "Orbital track - a continuous dark metal rail with a U-channel groove, tilted as an elliptical loop connecting all five stations, the rail surface has thin cyan edge lighting along both sides of the groove, particles travel within the groove along the track, the track has subtle gradation marks between stations",
+      "Circulating particles - luminous cyan spheres of varying sizes traveling clockwise along the orbital track, the particles at the acquisition beacon are small and dim, growing progressively brighter and larger as they pass through each successive station, particles completing a full revolution are distinctly larger and more luminous than new entrants"
+    ],
+    "actions": [
+      "Cyan particles are circulating clockwise along the orbital track in a continuous stream, with visible acceleration around the retention core slingshot and visible brightening after passing through the upsell amplifier, creating a dynamic sense of perpetual cycling motion",
+      "At the acquisition beacon, new dim particles are being introduced into the loop from external capture - faint cyan trails lead from the antenna extensions inward to the track intake port, showing new traffic entering the system",
+      "The conversion press plates pulse with a brief compression animation - particles entering the gap are slightly elongated under pressure before emerging rounder and brighter on the other side, representing the conversion transformation",
+      "Small secondary particle trails branch off from the fulfillment dispatch arms, arcing gracefully outward into the void like sparks, representing orders being shipped and delivered to customers outside the system"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with cyan as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The emotional narrative is 'revenue that compounds with every cycle - each revolution through the system makes the next one more valuable.' The viewer should feel the satisfying perpetual motion of a self-sustaining loop, where every stage adds value and feeds the next. This represents the core philosophy of the e-commerce revenue engine: building a cyclical system where acquisition feeds conversion, conversion feeds fulfillment, fulfillment feeds retention, and retention feeds upsell, which in turn drives more acquisition."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary cyan accent rim light from behind-right, casting thin cyan edge highlights on all 3D objects. Tertiary subtle cyan fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep cyan (oklch 0.7 0.15 195) as the sole accent color. Secondary accent is a slightly desaturated cyan (oklch 0.4 0.10 195) for deeper shadows and subtle gradients. No warm colors. Strict monochromatic cyan on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal), positioned to show the tilted orbital ring with clear visibility of all five station modules",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport through semi-transparent elements",
+      "global_illumination": "Subtle GI bounce from cyan-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The orbital ring and stations float with implied structural support from the track itself - the ring is a self-supporting structure. Particles follow the track groove with proper centripetal behavior around curves, accelerating at the retention core slingshot with correct orbital mechanics.",
+      "structural_believability": true,
+      "structural_details": "Each station module has distinct architectural geometry appropriate to its function - the beacon has proper antenna proportions, the press has realistic mechanical plate geometry, the dispatch hub has proper radial symmetry, the retention core has spherical magnetic housing, the amplifier has correct columnar stacking."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "platform": "Matte dark carbon fiber with thin cyan radial lines emanating from center, the orbital track path projected as a faint cyan elliptical shadow on the platform surface below the ring",
+      "orbital_track": "Dark brushed steel rail with precision-machined U-channel groove, thin cyan LED-like edge lighting along both groove walls, the track surface has subtle wear patterns suggesting continuous use, dark metal support brackets connect the track between stations",
+      "station_bases": "Dark anodized aluminum mounting plates with recessed bolt patterns, each station base integrating seamlessly into the orbital track at its junction point"
+    },
+    "module_surfaces": {
+      "beacon_tower": "Dark brushed steel vertical structure with antenna extensions in thin dark rod stock, the beacon apex is a small frosted glass dome containing a bright cyan point light, the tower body has vertical panel seams and small ventilation slot details",
+      "press_plates": "Dark chrome compression plates with polished inner faces, thin cyan hydraulic tubes running along the outer edges, the plate edges are chamfered with precision machining marks visible on the approach surfaces",
+      "dispatch_hub": "Dark matte polymer central cylinder with four thin dark metal dispatch arms extending radially, each arm tipped with a small cyan-lit emission point, the cylinder surface has hexagonal panel texture",
+      "retention_sphere": "Dark polished metal sphere with visible magnetic field contour lines as thin raised cyan-lit ridges spiraling around the surface, encased in a dark metal three-ring gimbal cradle that allows the sphere to appear free-floating within its housing"
+    },
+    "transparency": "The upsell amplifier column has frosted glass panels at 50% opacity revealing the internal stacked resonator rings as dark metal discs with cyan-lit rims. The acquisition beacon dome is frosted glass with 60% opacity containing a bright cyan point source. Particle trails have varying transparency based on their age - newer trails are more transparent, older ones more opaque and bright."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of cyan light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Elevated three-quarter view showing the tilted elliptical ring from above and slightly to the right, giving clear sightlines to all five stations while emphasizing the circular nature of the loop through the elliptical foreshortening",
+    "framing": "rule_of_thirds",
+    "framing_details": "The orbital ring occupies the central two-thirds of the frame. The acquisition beacon at the top aligns with the upper-third horizontal line. The fulfillment dispatch and retention core at the bottom align with the lower-third line. The center of the ring ellipse is positioned at the frame center.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Nearest section of orbital track and closest station module (slight bokeh blur)",
+      "Mid-ground: Central area of the ring showing the track, flowing particles, and majority of stations (sharp focus)",
+      "Background: Far side of the orbital ring and distant station modules (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining the premium editorial feel",
+    "visual_flow": "The eye enters at the acquisition beacon (the tallest element at top), follows the clockwise particle flow around the ring through conversion press, down to fulfillment dispatch, around the retention core slingshot, up through the upsell amplifier, and back to acquisition - completing a full visual loop that the viewer naturally wants to retrace, reinforcing the cyclical revenue concept"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Five distinct station modules arranged in a tilted elliptical ring formation on a dark circular platform with cyan radial markings, connected by a continuous dark steel orbital track with cyan edge lighting. At 12 o'clock, an acquisition beacon tower in dark brushed steel with cyan-lit apex dome and antenna extensions. At 2 o'clock, a conversion press with two dark chrome compression plates forming a V-gap that particles pass through. At 5 o'clock, a fulfillment dispatch hub with dark central cylinder and four radial arms with cyan-lit tips, small particle trails arcing outward. At 7 o'clock, a retention magnetic core - a dark polished sphere with cyan magnetic contour lines in a gimbal cradle, particles slingshotting around it with acceleration. At 10 o'clock, an upsell amplifier column with frosted glass panels showing stacked resonator rings pulsing cyan. Luminous cyan particles circulate clockwise along the orbital track, growing progressively brighter and larger after each station - dim at acquisition, brilliant after upsell. The orbital path projects as a faint cyan shadow on the dark platform below. Deep void environment, pure darkness. Dramatic cinematic lighting, cool key light upper-left, cyan rim light behind-right, cyan under-glow. Near-black palette with deep cyan oklch(0.7 0.15 195) as sole accent. Elevated three-quarter view, 55mm lens, medium depth of field. Hyperrealistic 3D render, studio quality, physically based rendering --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of five distinct station modules arranged in a tilted elliptical ring formation above a dark circular matte carbon fiber platform with thin cyan radial lines. A continuous dark brushed steel orbital track with a U-channel groove and cyan edge lighting connects all five stations. At the top, an acquisition beacon tower in dark brushed steel with a frosted glass dome containing a bright cyan light and antenna extensions reaching outward. At the upper-right, a conversion press mechanism with two dark chrome plates narrowing to a V-gap. At the lower-right, a fulfillment dispatch hub with a dark hexagonal-textured cylinder and four radial arms tipped with cyan emission points, small particle trails arcing outward into the void. At the lower-left, a retention magnetic core - a dark polished sphere with cyan magnetic field contour ridges, encased in a three-ring dark metal gimbal cradle. At the upper-left, an upsell amplifier column with frosted glass panels revealing stacked dark metal resonator rings with cyan-lit rims. Luminous cyan particles circulate clockwise along the track, growing progressively brighter and larger after each station - smallest and dimmest at acquisition entry, largest and brightest completing the loop after upsell. Faint cyan orbital path shadow projected on the platform. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left, cyan rim light behind-right, cyan under-glow. Strictly near-black to charcoal with deep cyan as sole accent. Elevated three-quarter view, 55mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors, no bloom. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. Five station modules in a tilted elliptical ring on a dark circular carbon fiber platform with cyan radial markings. Dark brushed steel orbital track with U-channel groove and cyan edge lighting connects them. Acquisition beacon at top: dark steel tower with frosted glass dome housing cyan point light, antenna extensions. Conversion press at upper-right: two dark chrome plates forming V-gap compression zone with cyan hydraulic lines. Fulfillment dispatch at lower-right: dark hexagonal cylinder hub with four radial arms tipped cyan, small particle trails arcing outward as deliveries. Retention core at lower-left: dark polished sphere with cyan magnetic contour ridges in three-ring gimbal cradle, particles slingshotting around with acceleration. Upsell amplifier at upper-left: columnar structure with frosted glass panels showing stacked resonator rings pulsing cyan in sequence. Luminous cyan particles circulate clockwise, growing brighter and larger after each station - dim at entry, brilliant after full revolution. Faint cyan orbital shadow on platform below. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left 45 degrees, cyan rim light behind-right, cyan under-glow. Near-black to charcoal with deep cyan oklch(0.7 0.15 195) as sole accent. Elevated three-quarter view, 55mm lens, medium depth of field, rule of thirds. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

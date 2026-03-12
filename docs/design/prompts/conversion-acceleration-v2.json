@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Conversion Acceleration",
+    "variation": "2 - Optimization Dashboard",
+    "accent_color": "deep rose",
+    "accent_oklch": "oklch(0.68 0.2 350)",
+    "concept": "Multiple floating glass dashboard panels arranged in a curved command-center formation, each displaying different funnel analytics visualizations - conversion rates as gauge dials, funnel stage dropoff as waterfall charts, and heatmap grids. The panels float at varying depths and angles, connected by thin rose data streams, creating the feeling of a comprehensive optimization control room suspended in darkness."
+  },
+  "core": {
+    "subject": "Five to seven translucent glass dashboard panels of varying sizes float in a sweeping curved arrangement resembling a mission control console, each panel displaying different abstract funnel analytics visualizations rendered as rose-tinted silhouette graphics. The largest central panel shows a stepped funnel waterfall visualization with decreasing bars from left to right, each bar edge-lit in rose. Flanking panels display circular gauge dial shapes, grid-based heatmap patterns, and paired comparison bar clusters. The panels are arranged in a gentle concave arc facing the viewer, tilted at slightly different angles, connected at their bases by thin rose data stream lines that flow between them suggesting real-time data synchronization.",
+    "scene": "A dark expansive void environment with a subtle matte black floor plane featuring barely visible rose grid lines. The curved arrangement of floating panels creates a command-center atmosphere, with the largest panel at center and smaller panels stepping back in space on either side. Rose light emanates from the panel surfaces and data visualizations, casting soft reflections on the floor plane below. The scene communicates total visibility and control over conversion metrics - every angle measured, every drop-off point identified.",
+    "objects": [
+      "Central waterfall panel - the largest floating glass panel approximately 40% of frame width, displaying a stepped waterfall funnel visualization with five decreasing rectangular bars arranged left to right, each bar rendered as a frosted glass block with rose-lit edges showing progressive narrowing, the panel frame is thin dark brushed steel with rose accent corner nodes",
+      "Gauge dial panel - a medium floating glass panel to the upper-left showing two circular gauge dial shapes with rose-colored arc indicators at different fill levels (one at roughly 75%, one at roughly 45%), suggesting conversion rate metrics, thin rose needle indicators pointing to current values",
+      "Heatmap grid panel - a medium floating glass panel to the upper-right displaying a rectangular grid of small squares in varying shades from dark charcoal to bright rose, creating a heatmap pattern that suggests page interaction density or click distribution",
+      "Comparison bar panel - a smaller floating glass panel to the lower-left showing three pairs of horizontal bars side by side, one bar in each pair brighter rose than the other, suggesting before/after or variant comparison metrics",
+      "Trend line panel - a smaller floating glass panel to the lower-right displaying a gently ascending curve rendered as a thin rose line with small data point nodes along its length, suggesting improving conversion performance over time",
+      "Data stream connections - thin luminous rose fiber-optic lines connecting the base edges of adjacent panels, flowing left to right with small traveling light particles, suggesting synchronized real-time data flowing between all dashboard views",
+      "Micro-indicator nodes - tiny rose-lit geometric points (diamonds and circles) floating at the connection junctions between panels, pulsing subtly to indicate active data processing"
+    ],
+    "actions": [
+      "Small traveling light particles flow along the data stream connections between panels in a left-to-right cascade, indicating real-time data synchronization across all dashboard views",
+      "The gauge dial needles on the gauge panel appear captured mid-sweep, suggesting metrics actively updating and conversion rates climbing",
+      "The heatmap grid squares pulse with varying rose intensity in a subtle wave pattern, suggesting live interaction data being mapped and visualized",
+      "A faint rose reflection of the panel array shimmers on the dark floor plane below, creating depth and grounding the floating elements"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with rose/pink as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors outside the rose spectrum"
+    ],
+    "notes": "The emotional narrative is 'total visibility over every conversion metric from one command center.' The viewer should feel empowered by the comprehensive analytics display - nothing hidden, everything measured and optimized. The curved multi-panel arrangement creates a sense of professional authority and sophisticated tooling. The synchronized data streams between panels reinforce that all metrics are connected and inform each other."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary rose/pink accent rim light from behind-right, casting thin rose edge highlights on all 3D objects. Tertiary subtle rose fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep rose (oklch 0.68 0.2 350) as the sole accent color. Secondary accent is a slightly desaturated rose (oklch 0.4 0.12 350) for deeper shadows and subtle gradients. No warm yellows/oranges. Strict monochromatic rose/pink on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 60,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport",
+      "global_illumination": "Subtle GI bounce from rose-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The floating panels hover with implied anti-gravity stability at consistent heights, their arrangement suggesting intentional positioning rather than random drift. The data stream connections between panels add structural coherence to the floating arrangement.",
+      "structural_believability": true,
+      "structural_details": "Each panel has consistent glass thickness and proper steel frame construction. The curved arrangement follows a logical concave arc as if designed as a unified console. Panel sizes decrease logically from center outward."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "panel_glass": "Dark frosted glass with approximately 35% transparency, rose-tinted visualization elements visible as shallow relief patterns on the inner surface, subtle internal refraction where data graphics appear, thin dark steel bezels framing each panel with polished rose accent corners",
+      "floor_plane": "Matte dark carbon fiber texture with extremely subtle directional grain, near-invisible rose grid lines at 40px intervals, soft rose reflections from floating panels above creating depth",
+      "panel_frames": "Thin dark brushed steel bezels with micro-chamfered edges, non-reflective matte finish except for small rose-lit corner nodes that glow subtly at frame intersections"
+    },
+    "module_surfaces": {
+      "waterfall_bars": "Frosted glass blocks with rose-lit edges, each bar slightly more transparent than the next suggesting data flowing through stages, the tallest bar has the brightest rose edge and the shortest has the dimmest",
+      "gauge_dials": "Thin rose arc indicators rendered as luminous curved lines on the glass surface, needle indicators as sharp thin rose lines with bright endpoint dots, background dial markings as very faint gray etchings",
+      "heatmap_squares": "Tiny recessed squares in the glass surface ranging from near-black to bright rose, creating a tactile grid texture with varying luminosity, edges between squares barely visible as dark hairlines",
+      "data_streams": "Thin luminous fiber-optic-style lines with bright rose core and soft falloff, approximately 2px visual width, with small traveling light particles moving along the lines between panels"
+    },
+    "transparency": "All panels use dark frosted glass with rose-tinted visualization elements visible through the semi-transparent surface. The central largest panel has slightly higher transparency than the flanking panels, drawing focus. Data stream connections are fully luminous with no transparency."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black",
+      "Extremely subtle atmospheric haze at distance - background elements slightly hazed",
+      "No fog, no volumetric lighting shafts - atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of rose light dust scattered throughout mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at edges."
+  },
+  "composition": {
+    "perspective": "Frontal view with slight upward angle, as if the viewer is seated at a command console looking up at the curved panel array",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central waterfall panel sits at the center of the frame. The flanking panels extend along the horizontal center line, creating a wide panoramic band of information. The upper and lower thirds provide dark breathing room with data streams occupying the lower connection zone.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Nearest panel edges and data stream connections (slight bokeh blur)",
+      "Mid-ground: Central waterfall panel and immediately adjacent gauge and heatmap panels (sharp focus)",
+      "Background: Outermost flanking panels stepping back in space (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining premium editorial feel",
+    "visual_flow": "The eye is drawn first to the brightest central waterfall panel, then sweeps along the curved arc left and right to discover flanking panels, then drops down to follow the data stream connections linking them - a horizontal sweep pattern reinforcing the command-center panoramic feel"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Five to seven translucent dark frosted glass dashboard panels float in a sweeping curved command-center arrangement on a dark matte platform with faint rose grid lines. The largest central panel displays a stepped waterfall funnel visualization with five decreasing frosted glass bars edge-lit in rose. Flanking panels show circular gauge dials with rose arc indicators at different fill levels, a rectangular heatmap grid of squares ranging from charcoal to bright rose, paired comparison horizontal bars in rose tints, and an ascending trend line with rose data point nodes. Panels have thin dark brushed steel bezels with rose-lit corner nodes. Thin luminous rose fiber-optic data stream lines connect panel bases with traveling light particles flowing left to right. Tiny rose-lit geometric indicator nodes pulse at connection junctions. Deep void environment, pure darkness background. Dramatic cinematic lighting: cool key light upper-left 45 degrees, rose accent rim light behind-right, subtle rose under-glow. Soft rose reflections shimmer on the dark floor plane. Near-black palette with deep rose oklch(0.68 0.2 350) sole accent. Frontal view with slight upward angle, 60mm lens, medium depth of field, rule of thirds. Hyperrealistic 3D render, studio quality, precise edges, subtle film grain, physically based rendering --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of five to seven translucent dark frosted glass dashboard panels floating in a sweeping curved command-center arrangement above a matte black platform with faint rose grid lines. The largest central panel displays a stepped waterfall funnel visualization - five decreasing rectangular frosted glass bars with rose-lit edges. Flanking panels at varying depths show abstract analytics: two circular gauge dials with rose arc indicators at 75% and 45% fill, a rectangular heatmap grid of small squares ranging from dark charcoal to bright rose, paired horizontal comparison bars with one bar brighter rose than the other in each pair, and a gently ascending trend curve as a thin rose line with data point nodes. Each panel has thin dark brushed steel bezels with small rose-lit corner accent nodes. Thin luminous rose fiber-optic data stream lines connect the bases of adjacent panels, with small traveling light particles flowing left to right indicating real-time synchronization. Deep void environment, pure darkness. Cinematic dramatic lighting: cool-neutral key light from upper-left, rose accent rim light from behind-right casting thin edge highlights, subtle rose fill from below. Soft rose reflections on the dark floor plane. Color palette strictly near-black to dark charcoal with deep rose as the only accent. Frontal view with slight upward angle, 60mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors outside rose, no bloom or neon glow. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. Five to seven translucent dark frosted glass dashboard panels float in a curved command-center concave arc above a matte black carbon fiber platform with faint rose grid lines at 40px intervals. Central largest panel shows a stepped waterfall funnel - five decreasing frosted glass bars with rose-lit edges, tallest brightest, shortest dimmest. Flanking panels at varying depths display abstract analytics: circular gauge dials with rose arc indicators, a heatmap grid of squares from charcoal to bright rose, paired horizontal comparison bars in rose tints, an ascending trend curve as thin rose line with node markers. Thin dark brushed steel bezels frame each panel with rose-lit corner accent nodes. Luminous rose fiber-optic data streams connect panel bases, small traveling light particles flowing left to right between panels. Tiny pulsing rose geometric indicator nodes at connection junctions. Deep void environment, pure darkness with subtle center vignette. Cinematic lighting: cool key light upper-left 45 degrees 5500K, rose rim light behind-right, rose under-glow from platform. Sparse rose micro-particles at 5-10% opacity. Soft rose panel reflections on dark floor. Frontal view slight upward angle, 60mm lens, medium depth of field, rule of thirds. Muted palette: near-black to charcoal with deep rose oklch(0.68 0.2 350) sole accent. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

@@ -21,10 +21,9 @@ Always use `bun` — never `npm` or `yarn`.
 
 **Route structure** uses grouped routes under `app/(website)/`:
 - `(main)/` — homepage, about, contact, FAQ, and all primary pages:
-  - `solutions/` — solutions overview and 5 individual solution pages (growth-launch-system, ecommerce-revenue-engine, b2b-lead-generation, crm-revenue-system, conversion-acceleration)
+  - `solutions/` — solutions overview and 5 individual solution pages (growth-launch-system, ecommerce-engine, b2b-lead-generation, crm-system, conversion-acceleration)
   - `apply/` — application form for prospective clients
   - `case-studies/` — case studies showcase
-  - `insights/` — insights/blog (reuses Sanity blog infrastructure)
 - `blog/` — blog listing and `[slug]` detail (legacy, kept live)
 - `(booking)/` — book, book-crm, success, cancel (legacy, kept live)
 - `(legal)/` — privacy-policy, terms-conditions

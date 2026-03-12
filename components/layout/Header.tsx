@@ -14,7 +14,7 @@ import { useTrackNavigation, useTrackCTA } from "@/hooks/useTrackEvent";
 const SCROLLED_VARIANT = { marginTop: "16px", borderRadius: "100px" };
 const DEFAULT_VARIANT = { marginTop: 0, borderRadius: "100px" };
 
-const CRM_PATHS = ["/solutions/crm-revenue-system", "/services/crm-solution"];
+const CRM_PATHS = ["/solutions/crm-system", "/services/crm-solution"];
 
 function getHeaderCTA(pathname: string) {
   if (CRM_PATHS.some((path) => pathname.startsWith(path))) {

@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     "CRM software Dubai",
   ],
   alternates: {
-    canonical: "/solutions/crm-revenue-system",
+    canonical: "/solutions/crm-system",
   },
   openGraph: {
     title: "AI WhatsApp CRM | 67% More Leads for UAE Businesses",
     description:
       "Stop losing WhatsApp leads to poor follow-up. Our AI-powered CRM automates conversations and converts more inquiries into paying customers.",
-    url: "/solutions/crm-revenue-system",
+    url: "/solutions/crm-system",
     siteName: "XMA Agency",
     images: [
       {

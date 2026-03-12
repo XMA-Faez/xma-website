@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Conversion Acceleration",
+    "variation": "4 - A/B Test Chamber",
+    "accent_color": "deep rose",
+    "accent_oklch": "oklch(0.68 0.2 350)",
+    "concept": "Two parallel transparent test chambers stand side by side like scientific experiment containers, each housing a different abstract page layout variant. One chamber shows stronger performance indicators - taller metric columns, brighter rose energy levels, and a prominent rising indicator - while the other shows weaker results. A central evaluator mechanism between them scans both chambers and routes a beam of rose light toward the winning chamber, visualizing the scientific rigor of A/B testing."
+  },
+  "core": {
+    "subject": "Two tall rectangular transparent chambers stand parallel on a shared dark platform, separated by a central vertical evaluator mechanism. Each chamber is a glass-walled enclosure containing an abstract representation of a page variant - simplified geometric block layouts with varying proportions and arrangements. The left chamber (Variant A) contains shorter metric column blocks with dim rose tint and a subtle declining indicator arc. The right chamber (Variant B) contains taller metric column blocks with bright rose illumination and a prominent ascending indicator arc. Between them, the evaluator mechanism - a sleek vertical dark metal column with scanning sensor nodes - has completed its analysis and projects a bright rose light beam toward the winning Variant B chamber, while a thin dim connection to Variant A fades.",
+    "scene": "A dark expansive void environment with a shared matte black platform beneath both chambers, connected by thin rose grid lines that run continuously under the full arrangement. The two chambers are identical in external construction - same size, same frame material - but their internal contents tell dramatically different performance stories. The evaluator mechanism stands as an impartial judge between them. The scene communicates scientific experimentation and data-driven decision making - controlled conditions, measured outcomes, clear winner selection.",
+    "objects": [
+      "Chamber A (left) - a tall rectangular glass enclosure with thin dark steel frame edges, interior contains a simplified page layout variant represented as geometric block arrangements: a header bar, two content rectangles, and a call-to-action button shape, all rendered in dim gray with faint rose accents, three metric column blocks of modest height rise from the chamber floor with rose-tinted tops at 30-50% fill, a subtle declining arc indicator traces above the columns in dim rose",
+      "Chamber B (right) - identical external glass enclosure to Chamber A, but interior contains a different geometric block layout arrangement: a wider header bar, one prominent content rectangle, and a larger call-to-action button shape, all rendered in brighter rose-tinted tones, five metric column blocks of tall height rise from the chamber floor with vivid rose-tinted tops at 70-90% fill, a prominent ascending arc indicator traces above the columns in bright rose",
+      "Central evaluator mechanism - a sleek vertical dark metal column positioned equidistant between both chambers, featuring three sensor node rings stacked vertically (small horizontal disc shapes with rose edge lighting), the column has micro-textured dark brushed steel surface, from the middle sensor node a bright rose evaluation beam extends toward Chamber B while a dim fading connection trails toward Chamber A",
+      "Performance indicator arcs - thin curved lines above the metric columns inside each chamber, declining arc in Chamber A rendered as dim desaturated rose, ascending arc in Chamber B rendered as bright vivid rose, these arcs suggest trend direction and momentum",
+      "Metric column blocks - rectangular vertical bars rising from each chamber floor, varying in height to represent performance metrics, rendered as frosted glass blocks with rose-lit top edges, taller and brighter in Chamber B, shorter and dimmer in Chamber A",
+      "Evaluation beam - a focused rose light beam projecting from the evaluator's middle sensor toward Chamber B, wider and brighter at the chamber contact point, the beam passes through Chamber B's glass wall and illuminates its interior contents with rose light",
+      "Platform connection grid - thin rose grid lines running continuously beneath both chambers and the evaluator, connecting the entire experimental setup as a unified test environment"
+    ],
+    "actions": [
+      "The evaluator mechanism's sensor nodes rotate very slowly around the central column, scanning beams sweeping horizontally as if continuously measuring both chambers even after a winner has been identified",
+      "The rose evaluation beam projected toward Chamber B pulses with subtle energy waves traveling from evaluator to chamber, indicating active data-driven selection in progress",
+      "The metric columns inside Chamber B emit faint upward-rising rose particle wisps from their tops, suggesting growth and momentum, while Chamber A's columns are static and inert",
+      "The glass walls of Chamber B glow slightly brighter where the evaluation beam contacts them, creating a focused illumination patch that highlights the winning variant's superior layout"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with rose/pink as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors outside the rose spectrum"
+    ],
+    "notes": "The emotional narrative is 'scientific experimentation that reveals what actually converts.' The viewer should feel the rigor and objectivity of the testing process - identical conditions, different variables, measurable outcomes, clear winner. The two-chamber setup directly visualizes A/B testing as a physical experiment. The evaluator mechanism represents the analytics system that makes the decision based on data, not guesswork. The contrast between the dim underperforming variant and the bright winning variant creates immediate visual clarity."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary rose/pink accent rim light from behind-right, casting thin rose edge highlights on all 3D objects. Tertiary subtle rose fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep rose (oklch 0.68 0.2 350) as the sole accent color. Secondary accent is a slightly desaturated rose (oklch 0.4 0.12 350) for deeper shadows and subtle gradients. No warm yellows/oranges. Strict monochromatic rose/pink on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 60,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport",
+      "global_illumination": "Subtle GI bounce from rose-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Both chambers rest firmly on the shared platform with proper weight and grounding. The metric columns inside stand vertically from the chamber floors. The evaluator mechanism is solidly mounted between the chambers. The evaluation beam follows a straight horizontal path with proper light physics.",
+      "structural_believability": true,
+      "structural_details": "Both chambers have identical external construction with consistent glass thickness and steel frame dimensions. The evaluator column has proper cylindrical geometry with mounted sensor ring hardware. The interior geometric block layouts have proper rectangular proportions and spatial arrangement within the chambers."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "chamber_glass": "Dark transparent glass walls with approximately 40% transparency, thin dark steel frame edges with micro-chamfered corners, Chamber A glass has neutral dark tint while Chamber B glass has subtle warm rose tint from the evaluation beam illumination, both chambers show faint interior reflections",
+      "evaluator_column": "Dark brushed steel cylinder with vertical micro-texture grain, matte finish with subtle rose reflections from the evaluation beam, the surface has a precision-engineered quality with no imperfections",
+      "platform": "Matte dark carbon fiber texture with extremely subtle directional grain, continuous thin rose grid lines connecting beneath both chambers and evaluator at 40px intervals, soft rose light pooling beneath Chamber B from the evaluation beam's downward scatter"
+    },
+    "module_surfaces": {
+      "metric_columns_a": "Short frosted glass rectangular blocks with dim desaturated rose-tinted top edges, matte translucent surfaces showing minimal internal illumination, static and inert appearance suggesting stagnant performance",
+      "metric_columns_b": "Tall frosted glass rectangular blocks with vivid bright rose-tinted top edges, semi-transparent surfaces with visible internal rose illumination, faint upward particle wisps rising from tops suggesting active growth momentum",
+      "sensor_nodes": "Horizontal disc shapes mounted on the evaluator column, dark anodized metal with thin rose-lit circumference edges, slow rotational motion implied by slight directional blur, three nodes stacked vertically at even intervals",
+      "evaluation_beam": "Focused rose light beam approximately 4px wide at origin expanding to 8px at Chamber B contact point, bright rose core with soft falloff edges, subtle energy wave pulses visible traveling along its length from evaluator toward winning chamber"
+    },
+    "transparency": "Both chamber glass walls are transparent enough to clearly see interior contents, with Chamber B slightly more illuminated from within. The metric column blocks use frosted glass with varying opacity - dimmer blocks are more opaque, brighter blocks more transparent. The evaluation beam is fully luminous with no transparency."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black",
+      "Extremely subtle atmospheric haze at distance - background elements slightly hazed",
+      "No fog, no volumetric lighting shafts - atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of rose light dust scattered throughout mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at edges."
+  },
+  "composition": {
+    "perspective": "Symmetrical three-quarter view allowing both chambers and the central evaluator to be fully visible, with slight rightward emphasis to highlight the winning Chamber B",
+    "framing": "rule_of_thirds",
+    "framing_details": "Chamber A occupies the left third of the frame, Chamber B occupies the right third, and the evaluator mechanism sits at the vertical center line. The evaluation beam crosses horizontally from center to right, creating directional emphasis toward the winning variant. The upper third contains the performance indicator arcs and chamber tops, the lower third shows the platform and metric column bases.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Nearest chamber glass wall surface and platform edge (slight bokeh blur)",
+      "Mid-ground: Both chambers, evaluator mechanism, and evaluation beam (sharp focus)",
+      "Background: Rear chamber glass walls and distant void (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining premium editorial feel",
+    "visual_flow": "The eye first compares both chambers horizontally (left to right), notices the brightness difference, then follows the evaluation beam from the center evaluator rightward to Chamber B - a horizontal comparative reading pattern that mirrors the A/B testing decision process of weighing options and selecting a winner"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Two tall rectangular transparent glass chambers stand parallel on a shared dark matte platform with rose grid lines, separated by a sleek vertical dark brushed steel evaluator column with three sensor disc nodes with rose-lit edges. Chamber A (left) contains abstract geometric page layout blocks in dim gray with short frosted glass metric columns at 30-50% fill and a declining arc indicator in dim rose. Chamber B (right) contains a different geometric layout in brighter rose tones with tall metric columns at 70-90% fill and a prominent ascending arc in bright rose, faint particle wisps rising from column tops. The evaluator projects a focused rose light beam toward the winning Chamber B while a dim fading connection trails to Chamber A. Sensor nodes rotate slowly with scanning beams. Interior block layouts are simplified geometric shapes - header bars, content rectangles, button shapes. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left, rose rim light behind-right, rose under-glow. Near-black palette with deep rose oklch(0.68 0.2 350) sole accent. Three-quarter view slightly above, 60mm lens, medium depth of field, rule of thirds. Hyperrealistic 3D render, studio quality, precise edges, film grain, PBR --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of two tall rectangular transparent glass chambers standing parallel on a shared matte black platform with faint rose grid lines. Between them stands a sleek vertical dark brushed steel evaluator column with three horizontal sensor disc nodes edged in rose light. Chamber A on the left contains abstract geometric page layout blocks in dim gray - a header bar, content rectangles, and button shape - with three short frosted glass metric columns at modest height showing dim rose-tinted tops and a subtle declining arc indicator in desaturated rose above. Chamber B on the right contains a different geometric block layout arrangement in brighter rose-tinted tones - wider header, prominent content block, larger button shape - with five tall metric columns at high fill showing vivid rose-tinted tops with faint upward particle wisps, and a prominent ascending arc in bright rose. From the evaluator's middle sensor, a focused rose light beam projects toward Chamber B, illuminating its glass wall and interior, while a dim fading connection trails to Chamber A. Deep void environment, pure darkness. Cinematic lighting: cool key light upper-left, rose accent rim light behind-right, subtle rose fill below. Strictly near-black to charcoal with deep rose as sole accent. Three-quarter view, 60mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors outside rose, no bloom. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. Two tall rectangular transparent dark glass chambers stand parallel on a shared matte black carbon fiber platform with continuous rose grid lines at 40px intervals. Between them, a sleek dark brushed steel evaluator column with three stacked horizontal sensor disc nodes edged in rose light, rotating slowly with scanning capability. Chamber A left: abstract geometric page layout in dim gray - header bar, content rectangles, button shape - three short frosted glass metric columns 30-50% fill with dim rose tops, subtle declining arc indicator in desaturated rose. Chamber B right: different geometric layout in rose-tinted tones - wider header, prominent content block, larger button - five tall metric columns 70-90% fill with vivid rose tops, faint upward particle wisps, prominent ascending arc in bright rose. Evaluator projects focused rose beam toward winning Chamber B, energy wave pulses traveling along beam, dim fading connection to Chamber A. Chamber B glass glows where beam contacts. Deep void, pure darkness, subtle center vignette. Cinematic lighting: cool key light upper-left 45 degrees, rose rim light behind-right, rose under-glow. Sparse rose micro-particles at 5-10% opacity. Symmetrical three-quarter view slight rightward emphasis, 60mm lens, medium depth of field, rule of thirds. Muted palette: near-black to charcoal with deep rose oklch(0.68 0.2 350) sole accent. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

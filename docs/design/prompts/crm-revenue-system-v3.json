@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "solution": "CRM & Revenue System",
+    "variation": "3 — Automation Workflows",
+    "accent_color": "magenta/pink-purple",
+    "accent_oklch": "oklch(0.50 0.30 285)",
+    "concept": "Isometric view of an automation workflow system — a flow diagram of 3D blocks connected by glowing magenta pathways. Blocks represent triggers (lead enters), conditions (if qualified), and actions (send email, assign to rep, create task). Pathways pulse with light showing data flowing. A clock icon suggests time-based sequences."
+  },
+  "core": {
+    "subject": "An isometric arrangement of nine to twelve three-dimensional geometric blocks of varying shapes positioned on a dark matte surface, connected by glowing magenta pathway lines that form a branching automation workflow diagram. The blocks are differentiated by shape to represent workflow elements: rounded rectangular trigger blocks (representing events like a lead entering the system), diamond-shaped condition blocks (representing if-then decision points), and square action blocks (representing automated responses). The pathway lines flow from a single large trigger block at the top-left, branch at diamond condition blocks into two paths, and terminate at multiple action blocks distributed across the layout. A prominent clock gear icon sits near the workflow's entry point, suggesting time-based trigger sequences and scheduled automation. Each pathway pulses with traveling magenta light particles flowing along the connection lines from triggers through conditions to actions, visualizing data moving through automated decision trees.",
+    "scene": "A dark expansive environment viewed from an isometric camera angle (approximately 45 degrees from above). The workflow blocks and pathways sit on a large dark matte platform with an isometric grid pattern etched in very faint magenta lines. The layout resembles a technical flowchart rendered as a physical 3D diorama — precise, engineered, and systematic. The blocks cast subtle shadows on the platform surface. Behind the main workflow, at greater distance and lower opacity, a second smaller workflow arrangement is partially visible — suggesting this is one of many automation sequences running simultaneously. The overall scene feels like looking into the inner workings of an intelligent system — the automation engine that runs without human intervention.",
+    "objects": [
+      "Primary trigger block — a large rounded rectangular 3D block in dark frosted glass with magenta edge lighting and a subtle envelope silhouette embossed on its top face (representing a lead entering), positioned at the top-left of the isometric layout as the workflow's starting point, slightly taller than other blocks",
+      "Secondary trigger block — a medium rounded rectangular block with a form/document silhouette on its top face, positioned below the primary trigger, connected by a short magenta pathway, representing a form submission trigger",
+      "Condition diamond blocks — three diamond-shaped (rotated square) 3D blocks with frosted glass surfaces and bright magenta edge lighting, each representing a decision point, positioned at key branching points in the workflow where pathways split into two directions",
+      "Action blocks (email) — two square 3D blocks with a simplified envelope silhouette on top, dark metal with magenta accent edges, positioned at pathway endpoints representing automated email actions",
+      "Action block (assign) — a square block with a small person silhouette icon on top, representing automatic assignment to a sales representative",
+      "Action block (task) — a square block with a checkmark silhouette on top, representing automated task creation",
+      "Action block (notification) — a square block with a bell silhouette on top, representing automated notification sending",
+      "Clock gear icon — a prominent gear shape with clock hands visible on its face, rendered in dark brushed metal with magenta edge accents and subtle inner glow, positioned near the primary trigger block suggesting time-based scheduling",
+      "Magenta pathway lines — luminous connection lines running along the isometric grid between blocks, each approximately 3px visual width with bright magenta core and soft falloff, the lines make 90-degree turns following the isometric grid angles, with small directional arrow shapes at each block entry point",
+      "Traveling light particles — small bright magenta dots that move along the pathway lines from triggers to conditions to actions, multiple particles in flight simultaneously at different positions, creating a sense of continuous data flow",
+      "Branching junction nodes — small circular magenta-glowing nodes at each point where a pathway splits into two directions at a condition block, brighter than the pathways themselves",
+      "Dark matte isometric platform — large flat surface with very faint isometric grid pattern in dim magenta, providing the ground plane for the entire workflow layout"
+    ],
+    "actions": [
+      "Traveling light particles flow continuously along the pathway lines from the trigger blocks through condition diamonds and onward to action blocks — the flow is unidirectional and purposeful, showing automation in active operation",
+      "At each condition diamond block, the traveling light particle splits into two smaller particles that take different branching paths — visualizing the if-then decision logic in real time",
+      "The clock gear icon slowly rotates, its clock hands ticking, suggesting scheduled time-based triggers firing at regular intervals to initiate workflow sequences",
+      "Action blocks at the pathway endpoints pulse with a brief magenta flash as light particles arrive — indicating the automated action being executed (email sent, rep assigned, task created)",
+      "A subtle wave of magenta illumination ripples outward from the primary trigger block at intervals, traveling along all connected pathways simultaneously, representing a new lead entering the system and triggering the full automation cascade"
+    ],
+    "constraints": [
+      "No text, labels, numbers, or readable words anywhere — block types are identified by silhouette icons only",
+      "No human figures, hands, or faces — the person silhouette on the assign block is an abstract icon only",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces — all blocks and surfaces are dark-toned with magenta as the only accent color",
+      "No ambient glow halos or bloom effects — magenta lighting is precise and architectural",
+      "The isometric perspective must be consistent across all elements — no perspective distortion, all angles follow isometric grid rules",
+      "The workflow must clearly read as a flowchart/decision tree — trigger leads to condition leads to branching leads to actions",
+      "Pathway flow direction must be visually unambiguous — from trigger entry to action endpoints"
+    ],
+    "notes": "The emotional narrative is 'your follow-ups and workflows run automatically while you focus on selling.' The viewer should see a sophisticated automation engine with multiple decision paths and actions — not a simple linear sequence but a branching intelligent system. The clock element communicates that this runs on schedule, not just on-demand. The traveling light particles make the static flowchart feel alive and actively processing. This directly addresses the pain point of manual follow-ups wasting sales team time — the system handles it all systematically."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization with isometric engineering diagram aesthetics, inspired by Linear app marketing visuals, workflow automation tool interfaces rendered as physical dioramas, and precision engineering schematics",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-right at 50 degrees matching the isometric viewing angle, cool-neutral temperature (5500K) with moderate intensity — defining the 3D block forms with clear light and shadow sides following isometric conventions. The magenta pathway lines serve as linear light sources, casting subtle magenta glow on the platform surface alongside them and on the lower edges of adjacent blocks. Condition diamond blocks emit slightly brighter magenta edge light than other blocks, emphasizing their decision-point importance. The clock gear icon has subtle warm-tinted magenta inner glow. Shadow sides of blocks are deep and dark, creating strong form definition. Overall lighting ratio approximately 4:1 lit-to-shadow side on blocks.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal for blocks, platform, and environment. Magenta pink-purple (oklch 0.50 0.30 285) is the sole accent appearing in pathway lines, block edge lighting, traveling particles, grid lines, and junction nodes. A desaturated magenta (oklch 0.35 0.20 285) appears in the isometric grid pattern and block shadow-side accents. Block top-face silhouette icons are rendered in slightly lighter gray than the block surface — subtle embossing, not colored. No other accent colors."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 65,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/5.6 equivalent — the central workflow area (condition blocks and primary branching) is in sharpest focus, the trigger blocks at top-left and action blocks at bottom-right have subtle softening, maintaining readability across the full layout while adding depth",
+      "angle": "True isometric view — camera positioned at 45 degrees above the horizontal plane looking down, rotated 30 degrees from front face, creating the classic isometric projection where vertical edges remain vertical and horizontal planes recede at consistent angles",
+      "shot_type": "full shot — the entire workflow layout from trigger entry to action endpoints fits within the frame with generous margins"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "1:1"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity for tactile texture without degrading the precise geometric forms",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate shadows cast by 3D blocks onto the platform, magenta light bounce from pathway lines onto adjacent block surfaces, and subtle reflections on frosted glass block surfaces",
+      "global_illumination": "Magenta light from pathways bounces subtly onto the platform surface and lower edges of adjacent blocks, creating realistic color bleeding that reinforces the visual connection between the pathway network and the blocks"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "All blocks sit solidly on the platform surface with proper grounding and contact shadows. The clock gear icon hovers near the trigger block with deliberate positioning. Traveling light particles follow the pathway lines precisely.",
+      "structural_believability": true,
+      "structural_details": "Blocks have consistent proportions and clean geometric forms — rounded rectangles, diamonds, and squares are precisely constructed. The isometric grid ensures all elements align to a consistent spatial system. Pathways connect at exact block edge midpoints."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "trigger_blocks": "Dark frosted glass with 15-20% internal opacity, magenta edge lighting on all twelve edges of the rectangular form, top face has subtle embossed silhouette icon slightly raised from the surface, the glass has visible depth and internal scattering of magenta edge light",
+      "condition_diamonds": "Dark frosted glass rotated 45 degrees to create diamond orientation, brighter magenta edge lighting than trigger blocks emphasizing their decision-point role, internal light scattering creates visible magenta glow through the glass volume",
+      "action_blocks": "Dark anodized aluminum with fine brushed texture, magenta accent on top edges only, top face silhouette icons as subtle embossed relief in slightly lighter gray, more solid and opaque than trigger and condition blocks — suggesting concrete actions",
+      "platform": "Matte dark composite surface with isometric grid pattern etched at very low contrast in dim magenta, the grid lines are visible enough to establish spatial structure but not competing with the workflow elements"
+    },
+    "pathway_elements": {
+      "connection_lines": "Luminous magenta lines with bright core and soft falloff edge glow, following isometric grid angles with precise 90-degree turns, approximately 3px visual width, casting subtle magenta light onto the platform surface below",
+      "traveling_particles": "Small bright magenta spherical dots (2-3px) moving along pathway centerlines, each with a tiny trailing tail of diminishing brightness suggesting motion direction",
+      "junction_nodes": "Small circular magenta-glowing nodes (5px diameter) at pathway branching points, brighter than the pathway lines, with subtle concentric ring glow pattern",
+      "directional_arrows": "Tiny magenta arrowhead shapes at block entry points indicating flow direction, integrated into the pathway line endings"
+    },
+    "clock_gear": "Dark brushed steel gear with eight teeth, clock hands on the face rendered as thin magenta lines, the gear teeth edges catch magenta light, subtle inner glow from behind the clock face, the gear has proper mechanical engineering detail — tooth profiles, hub center, face depth",
+    "transparency": "Trigger and condition blocks have frosted glass translucency allowing internal magenta light scattering to be visible. Action blocks are opaque. Pathway lines are luminous and opaque. The platform is opaque with etched grid detail."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment viewed from above at isometric angle — no visible horizon, walls, or boundaries",
+      "Very subtle atmospheric depth haze — the background workflow arrangement at distance appears slightly hazed, separating it from the primary workflow",
+      "No fog, no volumetric lighting shafts — clean and precise digital environment"
+    ],
+    "time_season": ["Timeless — no natural time indicators, this is an artificial/digital environment"],
+    "particles": [
+      "Primary particle system: traveling magenta dots along pathway lines, 8-12 particles in flight simultaneously across the full workflow, creating a sense of continuous active automation",
+      "Sparse ambient magenta micro-particles floating above the platform surface at very low opacity (5-8%), particularly concentrated near active junction nodes",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness viewed from above, the platform edges fade into black void. Extremely subtle radial gradient — marginally brighter (2-3%) in the center of the workflow layout, fading to pure black at frame edges. The distant secondary workflow provides subtle depth without competing for attention."
+  },
+  "composition": {
+    "perspective": "True isometric projection — consistent angle across all elements, vertical edges remain vertical, horizontal planes recede at 30-degree angles, creating the characteristic isometric grid that perfectly suits technical diagrams and workflow visualizations",
+    "framing": "rule_of_thirds",
+    "framing_details": "The primary trigger block sits at the upper-left third intersection. The central condition diamonds occupy the middle third. Action blocks distribute across the lower-right area. The overall workflow flows from upper-left to lower-right, creating a diagonal primary axis that follows the natural reading pattern of flowcharts.",
+    "subject_placement": "balanced_diagonal",
+    "depth_layers": [
+      "Background: Dark void and distant secondary workflow at low opacity",
+      "Ground plane: Isometric platform with faint grid pattern",
+      "Primary layer: Workflow blocks, pathway lines, and traveling particles in sharp focus",
+      "Accent layer: Clock gear icon floating slightly above the platform near the trigger block"
+    ],
+    "negative_space": "Dark space at the upper-right and lower-left of the frame balances the diagonal workflow layout. The isometric grid implies spatial extension beyond the visible workflow, suggesting this system is part of a larger automation infrastructure. Space between blocks allows pathway lines to be clearly readable.",
+    "visual_flow": "The eye enters at the primary trigger block (upper-left, largest element), follows the magenta pathways downward and rightward through condition diamonds (bright decision points draw attention), branches with the pathways to discover the multiple action block endpoints — creating a flowchart reading experience that mirrors how automation logic actually works: trigger, decide, act"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range",
+      "isometric precision"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm gold color tones",
+      "cool blue color tones",
+      "complementary color accents",
+      "multiple accent colors",
+      "perspective distortion breaking isometric consistency"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Isometric view of an automation workflow system on a dark matte platform with faint magenta isometric grid. Nine to twelve 3D geometric blocks connected by glowing magenta pathway lines forming a branching flowchart. Rounded rectangular trigger blocks in dark frosted glass with envelope and form silhouettes on top faces and magenta edge lighting. Diamond-shaped condition blocks with bright magenta edges at branching decision points. Square action blocks in dark anodized aluminum with embossed silhouettes — envelope, person, checkmark, bell. Luminous magenta pathways with 90-degree turns flow from trigger blocks through condition diamonds branching to action endpoints. Small bright magenta traveling particles flow along pathways showing active automation. A dark brushed steel clock gear with magenta clock hands near the trigger entry. Condition diamonds brighter than other blocks. Blocks cast subtle shadows on platform. Distant secondary workflow at low opacity in background. Cool key light from upper-right matching isometric angle, magenta pathway lines as linear light sources. Near-black palette with magenta pink-purple sole accent. True isometric camera at 45 degrees above, 65mm lens, medium depth of field. Hyperrealistic 3D render, studio quality, isometric precision --ar 1:1 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, warm colors, cool blues, multiple accent colors, perspective distortion",
+    "dalle3": "A hyperrealistic 3D render in true isometric perspective of an automation workflow system. Nine to twelve three-dimensional geometric blocks sit on a large dark matte platform with a very faint magenta isometric grid pattern. Rounded rectangular trigger blocks in dark frosted glass with magenta edge lighting have subtle envelope and form silhouettes embossed on their top faces. Three diamond-shaped condition blocks in brighter magenta-edged frosted glass represent decision branching points. Square action blocks in dark anodized aluminum with embossed silhouette icons — envelopes for email, person shape for assignment, checkmark for tasks, bell for notifications. Glowing luminous magenta pathway lines connect all blocks following isometric grid angles with precise 90-degree turns, flowing from the primary trigger block at upper-left through condition diamonds that branch into multiple paths terminating at action blocks. Small bright magenta traveling particles move along the pathway lines from triggers through conditions to actions, multiple particles in flight simultaneously. At branching points, circular magenta junction nodes glow brighter than pathways. A prominent dark brushed steel clock gear with magenta clock hands and edge accents sits near the trigger entry suggesting time-based scheduling. Blocks cast subtle shadows on the platform. A second smaller workflow is partially visible at distance and lower opacity. Cool neutral key light from upper-right at 50 degrees, magenta pathways as linear light sources casting glow on platform. Near-black palette with magenta pink-purple as the sole accent. True isometric camera angle, 65mm equivalent lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors. Square format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization, true isometric perspective. Automation workflow system on dark matte platform with faint magenta isometric grid. Rounded rectangular trigger blocks in dark frosted glass with magenta edge lighting and embossed envelope and form silhouettes. Three diamond-shaped condition blocks with bright magenta edges at branching decision points. Square dark anodized aluminum action blocks with embossed silhouettes — envelope, person, checkmark, bell icons. Luminous magenta pathway lines connect blocks following isometric angles with 90-degree turns, flowing upper-left to lower-right. Small bright magenta traveling particles flow along pathways continuously — splitting at condition diamonds into branching paths. Circular magenta junction nodes glow at branch points. Dark brushed steel clock gear with magenta clock hands near trigger entry, slowly rotating. Action blocks pulse with magenta flash as particles arrive. Blocks cast proper shadows on platform. Distant secondary workflow at low opacity provides depth. Cool key light upper-right at 50 degrees, magenta pathways as linear light sources with glow on platform. Sparse magenta micro-particles above platform. True isometric camera 45 degrees above, 65mm lens, medium depth of field, rule of thirds diagonal layout. Muted color profile: near-black to charcoal with magenta pink-purple oklch(0.50 0.30 285) as sole accent. No text, no people, no logos, no warm colors, no bloom. Square 1:1."
+  }
+}

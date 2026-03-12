@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Conversion Acceleration",
+    "variation": "1 - Split-Path Funnel",
+    "accent_color": "deep rose",
+    "accent_oklch": "oklch(0.68 0.2 350)",
+    "concept": "A wide funnel shape splits into two diverging paths mid-way - an A path and a B path - each rendered as translucent glass corridors with different internal data overlay patterns. The winning path glows brighter with rose highlights while the losing path dims, visualizing real-time A/B test optimization and the power of data-driven conversion decisions."
+  },
+  "core": {
+    "subject": "A large stylized conversion funnel rendered in dark frosted glass sits at the center of the composition, its wide mouth opening upward and narrowing downward before splitting into two diverging transparent corridors - one angling left and one angling right. The left corridor (Path A) is slightly dimmer with muted gray data overlays visible through its translucent walls, while the right corridor (Path B) pulses with bright rose-colored data streams and metric indicators visible through its glass surfaces. At the divergence point, a sleek diamond-shaped decision node emits thin rose light beams that scan both paths. The winning Path B terminates in a bright rose conversion point - a glowing geometric node - while Path A fades into darkness.",
+    "scene": "A dark expansive void environment with a single matte black rectangular platform serving as the ground plane. The platform has barely visible thin rose grid lines etched into its surface at 40px intervals. The split funnel structure is the dominant central element, elevated slightly above the platform. Rose-tinted light emanates from the winning path corridor and the decision node, casting subtle reflections on the platform surface below. The overall scene reads as a scientific experiment in progress - testing, measuring, and selecting the optimal conversion path.",
+    "objects": [
+      "Central conversion funnel - a wide-mouthed tapered structure rendered in dark frosted glass with thin rose edge lines tracing its contours, the interior visible through semi-transparent walls showing abstract data flow particles descending through it, approximately 60% of frame height",
+      "Divergence node - a diamond-shaped crystalline structure at the funnel's split point, dark obsidian material with bright rose internal illumination, thin scanning beams extending left and right into both path corridors, functioning as the visual A/B test decision engine",
+      "Path A corridor - a translucent rectangular tunnel angling to the left from the divergence node, rendered in darker frosted glass with dim gray data overlay patterns visible on its inner walls - bar chart silhouettes and declining metric curves, the corridor gradually dims and narrows toward its terminal end",
+      "Path B corridor - a translucent rectangular tunnel angling to the right from the divergence node, rendered in clearer frosted glass with bright rose data overlay patterns on its inner walls - ascending metric curves and percentage indicators as abstract shapes, the corridor maintains its width and glows with rose interior light",
+      "Conversion endpoint - a geometric octahedral node at the terminus of Path B, polished dark metal with bright rose facet edges, emitting a controlled rose glow that illuminates the end of the winning path corridor",
+      "Floating data overlay panels - three small rectangular glass panels hovering alongside the paths at varying heights, each showing abstract comparison visualizations as rose-tinted silhouettes - paired bar charts, split pie shapes, and diverging line graph forms, no readable text or numbers",
+      "Flow particles - small rose-colored luminous spheres flowing down through the funnel and predominantly streaming into Path B, with only a trickle entering Path A, visualizing traffic allocation shifting toward the winning variant"
+    ],
+    "actions": [
+      "Rose-colored flow particles stream downward through the funnel mouth and accelerate at the divergence point, with approximately 70% of particles routing into the brighter Path B corridor and 30% dimly flowing into Path A, showing real-time traffic reallocation",
+      "The divergence node diamond pulses with a subtle rose heartbeat rhythm, its scanning beams flickering between the two paths as if continuously evaluating performance data",
+      "The floating data overlay panels rotate very slowly on their vertical axes, their rose-tinted comparison visualizations suggesting ongoing analysis and measurement",
+      "A subtle wave of rose energy propagates from the conversion endpoint backward through Path B toward the divergence node, indicating successful conversion signal feedback"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with rose/pink as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors outside the rose spectrum"
+    ],
+    "notes": "The emotional narrative is 'scientific precision in choosing what converts best.' The viewer should feel the clarity of data-driven decision making - two paths tested, one clearly winning. The split-path metaphor directly addresses conversion optimization through A/B testing. The dimming of the losing path and brightening of the winning path creates an immediate visual hierarchy that communicates optimization without words."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary rose/pink accent rim light from behind-right, casting thin rose edge highlights on all 3D objects. Tertiary subtle rose fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep rose (oklch 0.68 0.2 350) as the sole accent color. Secondary accent is a slightly desaturated rose (oklch 0.4 0.12 350) for deeper shadows and subtle gradients. No warm yellows/oranges. Strict monochromatic rose/pink on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 60,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport",
+      "global_illumination": "Subtle GI bounce from rose-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The funnel structure feels grounded and architecturally stable on its platform, while the flow particles obey gravitational descent through the funnel. Floating data panels hover with implied anti-gravity stability.",
+      "structural_believability": true,
+      "structural_details": "The funnel has proper architectural thickness and glass panel construction. The divergence node sits at a structurally logical junction point. Both path corridors have consistent wall thickness and proper geometric angling."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "funnel_body": "Dark frosted glass with approximately 30% transparency, thin rose-colored edge lines tracing structural seams, subtle internal refraction visible where flow particles pass through, matte exterior with polished interior surface",
+      "platform": "Matte dark carbon fiber texture with extremely subtle directional grain, non-reflective except for faint rose grid line reflections and light spillage from the funnel above",
+      "divergence_node": "Polished dark obsidian with crystalline facets, semi-transparent with bright rose internal core illumination bleeding through facet edges, sharp geometric cuts with precise edge definition"
+    },
+    "module_surfaces": {
+      "path_a_corridor": "Darker frosted glass with approximately 20% transparency, dim gray data overlay patterns etched into inner walls as subtle relief textures, surfaces slightly dusty and unreflective suggesting underperformance",
+      "path_b_corridor": "Clearer frosted glass with approximately 40% transparency, rose-tinted data overlay patterns glowing softly on inner walls, surfaces cleaner and more polished than Path A suggesting optimization success",
+      "conversion_endpoint": "Polished dark gunmetal octahedron with rose-lit facet edges, each face slightly concave with mirror-like reflectivity catching rose light from the corridor",
+      "data_overlay_panels": "Ultra-thin dark glass rectangles with rose-tinted silhouette visualizations visible as shallow etched relief on the surface, edges beveled with thin rose accent lines"
+    },
+    "transparency": "The funnel body and both path corridors use layered frosted glass with varying opacity - the winning path is more transparent to suggest clarity and openness, while the losing path is more opaque to suggest obscurity. The divergence node has crystalline transparency with internal rose light bleeding through its faceted geometry."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black",
+      "Extremely subtle atmospheric haze at distance - background elements slightly hazed",
+      "No fog, no volumetric lighting shafts - atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of rose light dust scattered throughout mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at edges."
+  },
+  "composition": {
+    "perspective": "Three-quarter front view with slight elevation, allowing the viewer to see down into the funnel mouth and follow both diverging paths clearly",
+    "framing": "rule_of_thirds",
+    "framing_details": "The divergence node sits at the center intersection of the rule-of-thirds grid. The funnel mouth occupies the upper third. Path A extends toward the lower-left third and Path B toward the lower-right third, creating a balanced Y-shaped composition.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Platform edge and nearest floating data panel (slight bokeh blur)",
+      "Mid-ground: Central funnel, divergence node, and both path corridors (sharp focus)",
+      "Background: Conversion endpoint glow and furthest data panel (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining premium editorial feel",
+    "visual_flow": "The eye enters at the wide funnel mouth at top, follows the flow particles downward to the bright divergence node, then is pulled rightward along the brighter Path B toward the glowing conversion endpoint - a top-to-bottom then left-to-right reading pattern that mirrors the conversion journey"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A large stylized conversion funnel rendered in dark frosted glass sits at center on a dark matte platform with faint rose grid lines, its wide mouth opening upward and narrowing before splitting into two diverging transparent corridors - Path A angles left in darker dimmer glass with gray data overlays, Path B angles right in clearer glass glowing with bright rose data patterns and ascending metric curve silhouettes. At the split point a polished obsidian diamond-shaped decision node emits rose scanning beams into both paths. Rose-colored luminous flow particles stream down through the funnel, 70% routing into the brighter Path B, 30% dimly entering Path A. Path B terminates in a glowing octahedral conversion endpoint in dark gunmetal with rose-lit facet edges. Three small floating glass data panels hover alongside showing abstract rose-tinted comparison visualizations - paired bars, split shapes, diverging curves. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left, rose accent rim light from behind-right, subtle rose under-glow from platform. Near-black palette with deep rose oklch(0.68 0.2 350) as sole accent. Three-quarter view slightly above eye level, 60mm lens, medium depth of field, rule of thirds. Hyperrealistic 3D render, studio quality, precise edges, subtle film grain, physically based rendering --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a large stylized conversion funnel rendered in dark frosted glass on a matte black platform with faint rose grid lines. The funnel has a wide mouth opening upward, narrowing downward before splitting into two diverging transparent corridors at a polished obsidian diamond-shaped decision node that emits rose scanning beams. The left corridor (Path A) is dimmer with gray data overlay patterns on its inner walls showing declining metric curves. The right corridor (Path B) glows with bright rose data patterns showing ascending curves, clearer glass, more polished surfaces. Rose-colored luminous spheres flow down through the funnel, predominantly streaming into the brighter Path B. Path B terminates in a glowing dark gunmetal octahedral conversion endpoint with rose-lit facet edges. Three small floating glass panels hover alongside showing abstract rose-tinted comparison visualizations - no readable text. Deep void environment, pure darkness background. Dramatic cinematic lighting: cool-neutral key light from upper-left at 45 degrees, rose accent rim light from behind-right casting thin rose edge highlights, subtle rose fill from below platform. Materials include frosted glass funnel with varying transparency, crystalline obsidian decision node with internal rose illumination, carbon fiber platform texture. Color palette strictly near-black to dark charcoal with deep rose as the only accent color. Three-quarter view from slightly above eye level, 60mm equivalent lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors outside rose spectrum, no bloom or neon glow. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A large conversion funnel in dark frosted glass sits on a matte black carbon fiber platform with faint rose grid lines etched at 40px intervals. Wide mouth opens upward, narrows, then splits into two diverging transparent corridors at a central diamond-shaped obsidian decision node with bright rose internal illumination and thin scanning beams extending into both paths. Path A corridor angles left - darker frosted glass, dim gray data overlays showing declining curves, gradually narrowing and dimming. Path B corridor angles right - clearer frosted glass, bright rose data patterns showing ascending metrics, maintaining width, glowing with rose interior light. Rose luminous flow particles stream through the funnel, 70% routing into Path B, 30% into Path A. Path B terminates in a polished dark gunmetal octahedral conversion endpoint with rose-lit facet edges emitting controlled glow. Three ultra-thin floating glass data panels hover at varying heights showing abstract rose-tinted comparison silhouettes. Deep void environment, pure darkness with subtle center-brightening vignette. Cinematic dramatic lighting: cool key light upper-left 45 degrees 5500K, rose rim light behind-right, subtle rose under-glow. Sparse rose micro-particles float at 5-10% opacity. Three-quarter view slightly above eye level, 60mm lens, medium depth of field, rule of thirds. Muted palette: near-black to charcoal with deep rose oklch(0.68 0.2 350) as sole accent. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

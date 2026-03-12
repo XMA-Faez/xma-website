@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Solutions Overview",
+    "variation": "2 - Constellation Map",
+    "accent_color": "deep blue",
+    "accent_oklch": "oklch(0.6 0.2 250)",
+    "concept": "An interconnected constellation of star-nodes suspended in dark space, connected by thin luminous pathways that form an organic growth ecosystem. The metaphor draws from celestial navigation - each star-node is a fixed reference point in a larger system, and the connecting lines reveal the hidden architecture that ties all growth strategies into a coherent map."
+  },
+  "core": {
+    "subject": "A cluster of nine crystalline star-nodes of varying sizes are arranged in an asymmetric but balanced constellation pattern, each node a small multifaceted gem-like polyhedron emitting a controlled blue glow from its core. The largest node sits slightly above center, roughly the size of a tennis ball, while the others range down to marble-sized, creating a natural visual hierarchy. Thin luminous blue filament lines connect specific nodes to each other in a deliberate network pattern - not every node connects to every other, but the topology forms a coherent web with no isolated nodes.",
+    "scene": "The constellation floats in a vast dark void above a broad elliptical platform of polished obsidian-like material. The platform surface is almost mirror-dark, reflecting the blue node lights as soft, distorted pools of color on its surface. A faint cartographic grid of extremely thin blue lines is embossed into the platform surface in a radial pattern emanating from the center, suggesting a navigation chart or star map. The platform edges dissolve into darkness with no hard boundary.",
+    "objects": [
+      "Primary star-node - the largest polyhedron, a rhombicosidodecahedron approximately 8cm diameter, with a bright blue point-light core visible through semi-transparent smoky dark crystal facets, casting tiny blue caustic reflections onto nearby filaments.",
+      "Four medium star-nodes - each a different Archimedean solid (truncated tetrahedron, cuboctahedron, truncated cube, snub cube) at 4-5cm diameter, with dimmer blue cores and matte dark crystal surfaces that catch rim light on their faceted edges.",
+      "Four small star-nodes - simple geometric forms (icosahedron, octahedron, tetrahedron, cube) at 2-3cm diameter, positioned at the constellation periphery with the faintest blue internal glow, appearing as distant stars.",
+      "Connecting filaments - hair-thin luminous blue lines (approximately 1mm diameter) stretching between connected nodes, each filament slightly curved rather than ruler-straight, suggesting organic growth pathways rather than rigid engineering.",
+      "Platform cartographic grid - concentric ellipses and radial lines embossed into the obsidian platform surface, glowing with barely perceptible blue luminescence, resembling an antique celestial navigation chart rendered in digital light.",
+      "Floating coordinate markers - tiny blue dots (2-3mm) suspended at specific intersections of the cartographic grid above the platform surface, like holographic waypoints marking key positions in the constellation map.",
+      "Reflection pools - soft, slightly distorted reflections of each star-node visible on the polished obsidian platform surface below, creating visual depth and grounding the floating constellation to the platform."
+    ],
+    "actions": [
+      "Subtle pulses of blue light travel along the connecting filaments between nodes, moving at different speeds on different pathways - some fast and direct, others slow and meandering, suggesting varied types of data or energy exchange between system components.",
+      "The primary star-node's internal core light breathes slowly - a gentle sinusoidal brightening and dimming over a 4-second cycle, acting as the heartbeat of the entire constellation.",
+      "Two of the smallest peripheral nodes rotate very slowly on their axes, their faceted surfaces catching and releasing blue rim light in a twinkling pattern that mimics actual starlight.",
+      "The coordinate markers above the platform grid flicker intermittently and at random intervals, like distant signal beacons confirming the active status of different map sectors."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with blue as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The constellation metaphor communicates that XMA's solutions form a navigable ecosystem - not a random collection of services, but a charted territory with known pathways between systems. The viewer should feel the quiet vastness of strategic possibility, as if looking at a map of interconnected growth opportunities. The varying node sizes communicate natural hierarchy without rigidity."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary blue accent rim light from behind-right, casting thin blue edge highlights on all 3D objects. Tertiary subtle blue fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep blue (oklch 0.6 0.2 250) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated blue (oklch 0.35 0.12 250) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic blue on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the blue-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The star-nodes float in a stable constellation pattern with no visible supports, but their reflections on the obsidian platform below ground them visually. The filament connections between nodes provide implicit structural reasoning for their positions - they appear held in place by the network tension rather than defying gravity arbitrarily.",
+      "structural_believability": true,
+      "structural_details": "The connecting filaments have a very slight catenary curve suggesting real physical tension between nodes. Where filaments meet a node surface, they connect at facet vertices - natural junction points on the crystalline geometry - rather than arbitrarily piercing flat surfaces."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "star_node_crystal": "Semi-transparent smoky dark crystal with high refractive index - faceted surfaces show subtle internal reflections and caustic light patterns from the blue core. Surface has a polished but not mirror-like finish, closer to smoked quartz or dark tourmaline in appearance.",
+      "connecting_filaments": "Ultra-thin luminous blue material resembling fiber optic glass - the filament itself is nearly invisible but the blue light traveling through it renders it visible as a glowing line against the dark void. Slight volumetric scattering makes the filament appear slightly thicker than its actual geometry.",
+      "obsidian_platform": "Mirror-dark polished obsidian with extremely subtle depth - the surface appears to have 2-3mm of transparent depth before hitting the opaque black base, giving reflections a slightly submerged quality rather than sitting cleanly on top."
+    },
+    "module_surfaces": {
+      "primary_node": "The brightest and most transparent of all nodes - approximately 50% opacity crystal with visible blue core light creating internal caustic patterns across facets. Edge bevels catch rim light as sharp blue lines.",
+      "medium_nodes": "Darker and more opaque than the primary (30% opacity), with the blue core visible as a diffuse internal glow rather than a sharp point. Each has slightly different crystal clarity to differentiate them subtly.",
+      "small_nodes": "Nearly opaque smoky crystal with only the faintest blue glow visible from within - they read more as dark geometric shapes with blue-tinted edges than as light sources.",
+      "coordinate_markers": "Tiny solid blue light points with no visible physical form - pure concentrated light dots that appear holographic, casting no shadows but contributing subtle blue illumination to the platform surface directly below them."
+    },
+    "transparency": "Crystal node transparency follows a hierarchy: the primary node is most transparent (50%) revealing complex internal light caustics, medium nodes are semi-opaque (30%) showing diffuse internal glow, and small peripheral nodes are nearly opaque (10%) with light visible only at facet edges. All crystal surfaces have high refractive index creating slight visual distortion of elements seen through them."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of blue light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the central composition."
+  },
+  "composition": {
+    "perspective": "Gently elevated bird's-eye perspective at approximately 30 degrees from horizontal, allowing the viewer to read the constellation map layout clearly while still perceiving the three-dimensional depth of nodes floating at different heights above the platform. The slight rightward rotation reveals the connecting filament network as a legible web rather than overlapping lines.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The primary (largest) star-node is positioned at the upper-left third intersection, slightly above center. The constellation extends asymmetrically - more nodes reach into the right and lower portions of the frame, creating a sense of growth and expansion from the primary node outward. The obsidian platform occupies the lower 40% of the frame, providing visual weight and grounding.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Two small peripheral star-nodes in the lower-left area with their platform reflections, closest to the camera with subtle edge bokeh (slight bokeh blur)",
+      "Mid-ground: The primary star-node and three medium nodes forming the constellation core, all connecting filaments clearly visible and sharply rendered (sharp focus)",
+      "Background: Two small and one medium node receding into the upper-right void, their blue glows dimming with distance and their crystal forms softening into the atmospheric haze (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye is drawn first to the primary star-node at upper-left (brightest point), then follows the connecting filaments downward and rightward through the medium nodes like tracing a constellation with one's finger. The eye then drops to the platform surface where the reflections create a mirrored secondary reading of the composition, before floating back up to the peripheral nodes. The asymmetric node distribution creates a natural left-to-right reading direction that aligns with the sense of growth and expansion."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of a constellation map network floating above a polished obsidian platform in a dark void. Nine crystalline star-nodes of varying sizes arranged in an asymmetric constellation pattern - the largest node is a rhombicosidodecahedron of semi-transparent smoky dark crystal with a bright blue point-light core casting caustic reflections, surrounded by four medium Archimedean solid nodes and four small peripheral geometric nodes, all with deep blue internal glows of decreasing intensity. Hair-thin luminous blue filament lines connect specific nodes in a deliberate network topology, each filament slightly curved like organic growth pathways with traveling blue light pulses moving at different speeds. The obsidian platform has a mirror-dark polished surface reflecting the blue node lights as soft distorted pools, with a faint cartographic grid of concentric ellipses and radial lines embossed into the surface in barely perceptible blue luminescence. Tiny holographic blue coordinate marker dots float above grid intersections. Camera at gentle bird's-eye perspective 30 degrees from horizontal, 55mm lens, f/4 depth of field. Primary key light upper-left 45 degrees at 5500K cool neutral, blue rim light from behind-right, subtle blue fill from below. Crystal materials range from 50% opacity on primary node to 10% on smallest nodes, all with high refractive index and caustic patterns. Sparse blue micro-particles in mid-ground. 4:1 moody low-key lighting ratio with deep soft shadows. Subtle 2-3% film grain. Dark premium tech aesthetic inspired by Linear and Vercel --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of a constellation map - nine crystalline star-nodes of varying sizes floating above a polished obsidian platform in deep darkness. The largest node is a multifaceted rhombicosidodecahedron made of semi-transparent smoky dark crystal with a bright deep blue point-light core visible through its facets, casting tiny caustic reflections. Four medium-sized nodes (truncated tetrahedron, cuboctahedron, truncated cube, snub cube) float at mid-distance with dimmer blue cores. Four small nodes (icosahedron, octahedron, tetrahedron, cube) mark the constellation periphery with the faintest blue internal glow. Hair-thin luminous blue filament lines connect specific nodes in a deliberate network pattern - each filament slightly curved, with traveling blue light pulses moving along them at different speeds. The obsidian platform below is mirror-dark and polished, reflecting the blue node lights as soft distorted pools. A faint cartographic grid of concentric ellipses and radial lines is embossed into the platform surface, glowing with barely perceptible blue luminescence like a celestial navigation chart. Tiny blue holographic coordinate marker dots hover above grid intersections. Crystal transparency follows a hierarchy - primary node 50% opacity, medium nodes 30%, small nodes nearly opaque. Key light from upper-left at cool 5500K temperature, blue accent rim light from behind-right, subtle blue under-glow from platform. Deep blue is the only accent color. Sparse floating micro-particles of blue light dust in the mid-ground. Camera at gentle elevated angle, 55mm lens, medium depth of field. Moody low-key atmosphere, no text, no people, no logos, no warm colors, no neon glow or bloom. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. A constellation map of nine crystalline star-nodes floating above a mirror-dark polished obsidian platform in deep void. Primary node is a rhombicosidodecahedron of semi-transparent smoky dark crystal at 50% opacity with bright deep blue point-light core casting internal caustic facet reflections, approximately 8cm diameter. Four medium Archimedean solid nodes at 4-5cm with dimmer blue cores at 30% crystal opacity. Four small peripheral geometric nodes at 2-3cm with faintest blue glow at 10% opacity. Hair-thin luminous blue filament connections between specific nodes in deliberate network topology, each filament slightly curved with traveling blue light pulses at varied speeds. Obsidian platform surface reflects node lights as soft distorted blue pools, embossed with faint cartographic grid of concentric ellipses and radial lines in barely perceptible blue luminescence. Tiny holographic blue coordinate markers float at grid intersections. Key light upper-left 45 degrees 5500K cool neutral temperature, blue accent rim light behind-right, subtle blue fill from below platform. 4:1 key-to-fill ratio creating moody low-key atmosphere. Crystal materials with high refractive index showing caustic light patterns. Camera gentle bird's-eye 30 degrees from horizontal, 55mm focal length, f/4 aperture. Sparse blue micro-particles 5-10% opacity floating in mid-ground. Deep blue oklch(0.6 0.2 250) sole accent color on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no warm colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "B2B Lead Generation",
+    "variation": "5 - Account Web Architecture",
+    "accent_color": "deep amber",
+    "accent_oklch": "oklch(0.75 0.16 65)",
+    "concept": "Large company-node clusters rendered as complex internal micro-networks of departments connected externally by deal-flow bridge connections to a central hub node representing the agency. The visualization shows the multi-threaded approach to account-based prospecting - rather than pursuing a single contact at each target company, the system maps entire organizational networks and maintains multiple simultaneous connection threads into each account, all orchestrated from a central strategic hub."
+  },
+  "core": {
+    "subject": "A central agency hub node sits prominently in the composition, a precision-engineered dark polyhedron with amber-lit structural seams and a steady amber core glow. Radiating outward from this hub, five deal-flow bridge connections extend to five large company-node clusters arranged in a loose semicircle. Each company cluster is rendered as a complex internal micro-network - a cluster of twelve to twenty small department nodes interconnected by fine internal filaments, all contained within a faint hexagonal boundary outline that defines the company's organizational perimeter. The bridge connections from the central hub do not terminate at a single point on each company cluster but branch into three to four separate threads that connect to different department nodes within the same cluster, visualizing the multi-threaded penetration strategy of account-based prospecting.",
+    "scene": "The entire account web floats above a vast near-black brushed metal platform with a subtle amber radial grid pattern emanating from the central hub's position. The grid lines are concentric circles crossed by radial spokes, suggesting a strategic radar-like mapping overlay. The platform extends outward before fading into pure black void at the edges.",
+    "objects": [
+      "Central agency hub - a chamfered cuboctahedron approximately 18cm across, made of matte dark aerospace-grade aluminum with precision-machined faces. Every structural edge is inlaid with a thin amber-lit channel creating a warm wireframe skeleton over the dark solid form. A bright amber energy core glows steadily through four symmetrically placed circular viewport windows on the hub's larger faces.",
+      "Five company-node clusters - each a grouping of twelve to twenty small dark metallic nodes (3-5mm each) arranged in organic cloud formations, interconnected by fine amber internal filaments. Each cluster is bounded by a faint hexagonal wireframe outline approximately 15cm across, rendered as thin dark metal edges with barely perceptible amber edge glow, defining the organizational boundary of each target company.",
+      "Multi-threaded deal-flow bridges - five primary conduit bundles extending from the hub, each bundle splitting into three to four separate thin dark glass tubes before reaching its target company cluster. Each tube connects to a different department node within the cluster, and each tube contains a thin amber fiber-optic core. The splitting occurs at a visible branch manifold junction partway along each bridge.",
+      "Internal department nodes within clusters - small faceted dark polyhedrons of slightly varying shapes (cubes, octahedrons, tetrahedrons) representing different departments. Nodes that are connected to the hub's bridge threads glow with moderate amber activation, while unconnected nodes within the same cluster remain darker, showing which departments have active agency engagement.",
+      "Internal cluster filaments - hair-thin amber connections between department nodes within each company cluster, creating mini-network webs that show internal organizational relationships. Some filaments are brighter where they connect two hub-engaged departments, suggesting information flowing between contacted departments within the same company.",
+      "Branch manifold junctions - dark mechanical splitting assemblies positioned partway along each deal-flow bridge where the single conduit from the hub fans out into three to four separate threads. Each manifold has a small amber indicator light and visible precision hardware - threaded collars, micro-fasteners - suggesting engineered routing infrastructure.",
+      "Strategic status indicators - tiny amber geometric markers (diamonds, triangles) positioned at the boundary edge of each company cluster nearest the hub, suggesting the engagement status or priority level of each target account. Each cluster has a different number of markers indicating varying levels of penetration progress."
+    ],
+    "actions": [
+      "Amber signal pulses travel outward from the central hub through the deal-flow bridge conduits, splitting at the manifold junctions into parallel threads that deliver signals simultaneously to multiple department nodes within each company cluster - visualizing coordinated multi-threaded outreach hitting several contacts at the same company at once.",
+      "Within activated company clusters, amber energy ripples propagate through internal filaments from hub-connected department nodes to their internal neighbors, suggesting that agency engagement with one department creates informational ripple effects through the target company's internal network.",
+      "The central hub pulses with a steady amber rhythm, each pulse sending a new wave of signals through all five bridge bundles simultaneously, demonstrating the system's capacity to maintain parallel engagement across multiple target accounts without losing coordination.",
+      "Strategic status indicators at cluster boundaries flash with brief amber intensity when incoming signals arrive at their respective company clusters, acknowledging receipt and suggesting real-time tracking of multi-account campaign activity."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with amber as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No warm colors outside the amber/gold spectrum",
+      "No cartoon or anime styling - maintain engineered realism"
+    ],
+    "notes": "The viewer should grasp three key ideas simultaneously: first, that each target company is not a single contact but an entire organizational network to be mapped and understood; second, that the approach is multi-threaded - engaging multiple departments within the same company rather than relying on a single point of contact; third, that all of this is orchestrated from a central strategic hub that coordinates parallel engagement across multiple accounts. The architecture communicates systematic, intelligent, coordinated prospecting at scale."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary amber accent rim light from behind-right, casting thin amber/gold edge highlights on all 3D objects. Tertiary subtle amber fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep amber (oklch 0.75 0.16 65) as the sole accent color. Secondary accent is a slightly desaturated amber (oklch 0.45 0.10 65) for deeper shadows and subtle gradients. Amber is the designated warm accent for this solution - no cool accent colors. Strict monochromatic amber/gold on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate light transport through dark glass conduit tubes and realistic amber reflections on the hub's viewport windows and metallic cluster node surfaces",
+      "global_illumination": "Subtle GI bounce from amber-activated department nodes onto adjacent internal cluster nodes and nearby conduit surfaces, creating localized warm ambient zones within each company cluster"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The central hub sits with structural authority on the platform surface, its weight implied by a subtle amber reflection pool beneath it. Company clusters float at consistent elevation as if held in position by the tensioned bridge connections from the hub. Bridge conduits maintain taut structural lines between hub and clusters without sagging.",
+      "structural_believability": true,
+      "structural_details": "Every conduit-to-hub connection features a visible mechanical port coupling with threaded collar hardware. Branch manifold junctions show precision-engineered splitting assemblies with visible micro-fastener details. Company cluster boundary hexagons are rigid wireframe structures, not soft outlines. Internal department nodes sit at filament junction points with apparent mechanical contact."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "agency_hub": "Matte dark aerospace-grade aluminum with extremely fine anodized surface texture, precision-machined flat faces with visible tool-path micro-marks under close inspection. Amber-lit edge channels are 1mm wide inlaid strips of luminescent material flush with the surface. Viewport windows are circular dark glass with 60% opacity revealing the bright amber core within.",
+      "deal_flow_bridges": "Dark glass tubes with 55% opacity and frosted exterior texture, each tube approximately 1cm diameter containing a thin amber fiber-optic core. The glass diffuses the internal amber light into a soft warm glow. Tubes bundle together where they leave the hub, then separate at the manifold junction.",
+      "platform": "Near-black brushed metal with fine directional grain, subtle amber radial grid pattern of concentric circles and radial spokes etched at barely perceptible depth. The grid is brightest near the hub and fades to invisible at the platform edges."
+    },
+    "module_surfaces": {
+      "company_cluster_nodes": "Small faceted dark metallic polyhedrons with brushed gunmetal finish. Hub-connected nodes show moderate amber activation with amber surface veins partially illuminated. Unconnected nodes within the same cluster are darker with only the faintest amber edge reflection, creating an internal brightness contrast within each cluster.",
+      "cluster_boundary_hexagons": "Thin dark metal wireframe edges (0.5mm diameter rods) forming hexagonal outlines around each company cluster, with barely perceptible amber edge glow suggesting energized perimeters. The wireframe is rigid and geometric, not organic.",
+      "internal_filaments": "Hair-thin amber luminescent threads connecting department nodes within each cluster in web patterns, with varying brightness - brightest between two hub-engaged nodes, dimmer between engaged and unengaged nodes, dimmest between two unengaged nodes.",
+      "manifold_junctions": "Dark precision-machined metal assemblies with visible threaded collars, micro-fastener hex bolts, and a central amber indicator LED. Each manifold has a slightly different geometry reflecting the specific branching pattern of its bridge bundle - some split into three threads, others into four."
+    },
+    "transparency": "Deal-flow bridge glass tubes maintain 55% opacity with frosted exterior diffusing internal amber fiber-optic glow. Hub viewport windows are dark glass at 60% opacity revealing the bright amber core. Cluster boundary hexagons are opaque dark metal wireframe. Internal filaments are opaque luminescent threads of varying brightness."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions beyond the account web structure",
+      "Extremely subtle atmospheric haze at distance - the farthest company clusters appear slightly softened, adding depth to the semicircular arrangement",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of amber light dust scattered through the spaces between the hub and company clusters, very small (1-2px), very low opacity (5-10%), suggesting ambient data exchange activity across the account web",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient centered on the hub position - marginally lighter (2-3% brighter) at the hub, fading to pure black beyond the company cluster semicircle. This creates subtle vignetting that draws the eye to the central orchestration point."
+  },
+  "composition": {
+    "perspective": "Elevated three-quarter perspective at approximately 30 degrees above horizontal, looking down at the account web to reveal the semicircular arrangement of company clusters around the central hub, the branching deal-flow bridges visible as they extend and split, and the internal micro-network structure within each company cluster visible from above.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The central agency hub sits at the center-left intersection of the rule-of-thirds grid, with the semicircle of company clusters arcing from the upper-left third through the right side to the lower-left third. The most complex deal-flow bridge bundle (with the most thread splits) extends toward the right third, creating the strongest visual activity in that area. Two company clusters sit in the foreground lower portion, two in the background upper area, and one directly to the right of the hub.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Two company clusters nearest the camera in the lower frame, their internal node networks and boundary hexagons rendered with slight bokeh blur on nearest edges (slight bokeh blur)",
+      "Mid-ground: The central agency hub, the deal-flow bridge bundles with their manifold junctions, and the company cluster directly to the right - maximum sharpness on the hub and the most complex bridge splitting assembly (sharp focus)",
+      "Background: Two company clusters receding into the upper dark void, their internal structures softer and dimmer, bridge connections thinner and less detailed (soft focus, lower opacity)"
+    ],
+    "negative_space": "Dark void space fills the interior of the semicircle between the hub and clusters (traversed by bridge connections) and extends generously beyond the clusters into the surrounding darkness. The space between clusters is deliberate - each target account is a distinct territory separated by strategic void",
+    "visual_flow": "The eye enters at the bright central hub with its concentrated amber core energy and structural prominence. It then traces outward along the deal-flow bridge bundles, pausing at each manifold junction to observe the thread-splitting mechanism, before arriving at the company clusters. Within each cluster, the eye explores the internal micro-network of connected and unconnected department nodes, registering the multi-threaded engagement pattern. The semicircular arrangement guides the eye in an arc from one cluster to the next, comparing their internal structures and engagement levels, before returning to the hub as the orchestrating center. This creates a hub-and-spoke reading pattern with exploratory loops into each company territory."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "cool color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of an account web architecture floating above a near-black brushed metal platform with subtle amber radial grid of concentric circles and spokes. A central chamfered cuboctahedron agency hub of matte dark aerospace aluminum with amber-lit edge channels and four circular viewport windows revealing a bright amber core. Five large company-node clusters arranged in a semicircle around the hub, each cluster containing twelve to twenty small dark metallic polyhedron department nodes interconnected by hair-thin amber internal filaments forming micro-network webs. Each cluster bounded by faint dark metal hexagonal wireframe outlines with barely perceptible amber edge glow. Five multi-threaded deal-flow bridge bundles of frosted dark glass tubes at 55% opacity connecting hub to clusters, each bundle splitting at a visible dark mechanical manifold junction into three to four separate threads that connect to different department nodes within the same cluster. Hub-connected nodes glow with moderate amber activation while unconnected nodes in the same cluster remain darker. Manifold junctions feature threaded collars micro-fastener hex bolts and amber indicator LEDs. Amber signal pulses travel from hub through bridges splitting at manifolds into parallel threads reaching multiple departments simultaneously. Internal amber ripples propagate through cluster filaments from engaged to neighboring nodes. Strategic amber geometric status markers at cluster boundary edges. Primary key light upper-left 45 degrees cool 5500K. Amber rim light from behind-right. Subtle amber fill from below. Deep soft shadows at 4:1 ratio. Sparse amber micro-particles between hub and clusters. Film grain 2-3%. Camera elevated three-quarter view 30 degrees, 55mm, f/4 with sharp focus on hub and nearest manifold junction. Dark premium tech inspired by Linear and Vercel. Strict amber-gold on black --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, cool colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of an account-based prospecting web architecture floating above a near-black brushed metal platform with a subtle amber radial grid of concentric circles and spokes. A central chamfered cuboctahedron agency hub made of matte dark aerospace-grade aluminum has every structural edge inlaid with thin amber-lit channels and four circular dark glass viewport windows revealing a bright amber energy core. Five large company-node clusters are arranged in a semicircle around the hub, each containing twelve to twenty small dark metallic polyhedron department nodes of varying shapes interconnected by hair-thin amber internal filaments forming complex micro-network webs within each cluster. Each cluster is bounded by a faint dark metal hexagonal wireframe outline with barely perceptible amber edge glow defining the company's organizational perimeter. Five deal-flow bridge bundles of frosted dark glass tubes extend from the hub, each splitting at a visible dark mechanical manifold junction partway along into three to four separate threads that connect to different department nodes within the same cluster, visualizing multi-threaded engagement. Nodes connected to hub threads glow with moderate amber activation while unconnected nodes in the same cluster remain darker. Manifold junctions feature precision hardware with threaded collars, micro-fastener hex bolts, and amber indicator LEDs. Amber signal pulses travel from hub through bridges and split at manifolds. Internal amber ripples propagate within clusters. Tiny amber geometric status markers at cluster boundaries. Key light from upper-left at 45 degrees, cool 5500K. Amber rim light from behind-right. Deep soft shadows. Platform grid fades at edges into void. Sparse amber micro-particles. Film grain 2-3%. Elevated three-quarter view, 55mm lens. Strict amber-gold on black. No cool tones. No text, no people, no logos, no bright white, no neon glow or bloom. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. Account web architecture above near-black brushed metal platform with subtle amber radial grid of concentric circles and spokes. Central chamfered cuboctahedron agency hub of matte dark aerospace aluminum with 1mm amber-lit edge channels and four circular dark glass viewport windows at 60% opacity revealing bright amber core. Five company-node clusters in semicircle around hub, each containing twelve to twenty small dark metallic polyhedron department nodes interconnected by hair-thin amber internal filaments. Faint dark metal hexagonal wireframe boundaries around each cluster with amber edge glow. Five frosted dark glass tube bridge bundles at 55% opacity from hub splitting at dark mechanical manifold junctions with threaded collars and hex fasteners into three to four separate threads connecting to different department nodes per cluster. Hub-connected nodes with moderate amber activation, unconnected cluster nodes darker. Amber signal pulses splitting at manifolds into parallel threads. Internal amber ripples through cluster filaments. Tiny amber geometric status markers at cluster boundaries. Key light upper-left 45 degrees 5500K cool neutral, amber accent rim light from behind-right, subtle amber fill from below. 4:1 key-to-fill ratio. Deep soft-edged shadows. Camera elevated three-quarter view 30 degrees, 55mm focal length, f/4 aperture. Sharp focus on hub and nearest manifold. Sparse amber micro-particles at 5-10% opacity. Matte aerospace aluminum hub, frosted glass bridges, brushed gunmetal cluster nodes, dark metal wireframe boundaries. Deep amber oklch(0.75 0.16 65) sole accent on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no cool colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

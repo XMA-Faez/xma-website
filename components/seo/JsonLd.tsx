@@ -46,8 +46,9 @@ const localBusinessSchema = {
   url: "https://www.xma.ae",
   address: {
     "@type": "PostalAddress",
-    addressCountry: "AE",
+    streetAddress: "M44, The Curve Building, Al Qouz 3",
     addressLocality: "Dubai",
+    addressCountry: "AE",
   },
   priceRange: "$$$",
   openingHoursSpecification: {

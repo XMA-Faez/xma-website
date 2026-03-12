@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "solution": "CRM & Revenue System",
+    "variation": "5 — Before and After",
+    "accent_color": "magenta/pink-purple",
+    "accent_oklch": "oklch(0.50 0.30 285)",
+    "concept": "Split composition — left side shows chaotic desk scene with scattered sticky notes, multiple phone screens, spreadsheet fragments, disconnected data in dim gray tones. Right side shows a single clean organized CRM interface screen glowing magenta with neat pipeline columns, contact cards, automation indicators. Clear visual divider between halves. Transformation story."
+  },
+  "core": {
+    "subject": "A horizontally split composition divided into two distinct halves by a thin vertical luminous magenta divider line running from top to bottom of the frame at the exact center. The left half depicts a chaotic arrangement of disconnected data fragments floating in disarray — scattered sticky note squares at various angles, two small phone screen shapes showing different disconnected interfaces, a spreadsheet grid fragment with empty cells, loose contact card rectangles overlapping haphazardly, a small calendar fragment, and clipboard shapes — all rendered in dim flat gray tones with no organization, no connections between them, slightly askew and overlapping in a visual mess that conveys fragmentation and inefficiency. The right half depicts a single sleek CRM dashboard screen centered and clean, displaying an organized pipeline interface with four neat vertical columns containing aligned deal cards, a small contact card panel with avatar placeholder circles in tidy rows, small automation bolt icons indicating active workflows, and a miniature revenue chart in the lower portion — all rendered with magenta accent lighting, organized alignment, and glowing UI elements that convey clarity, control, and systematic order. The contrast between left chaos and right order is dramatic and immediate.",
+    "scene": "A dark environment where the two halves share the same dark void background but have distinctly different energy and treatment. The left half has a slightly warmer gray tone to its darkness suggesting the dull reality of manual processes — its scattered elements float in disorganized space above a barely visible dark surface with no grid or structure. The right half has the characteristic dark-with-magenta-accent treatment — its dashboard sits on a subtle dark platform with faint magenta grid lines, magenta accent lighting creating a precise technical atmosphere. The central divider line is the compositional anchor — a thin luminous magenta vertical line that acts as the transformation boundary. Where the line meets scattered elements from the left side, subtle magenta particles emanate rightward, suggesting the data being transformed and organized as it crosses to the right. The overall scene reads as a before-and-after comparison — a transformation story told in a single frame.",
+    "objects": [
+      "Central magenta divider line — a thin vertical luminous magenta line (approximately 2px visual width with soft glow falloff) running the full height of the frame at the exact horizontal center, the line has a subtle pulsing brightness variation along its length, small magenta particles drift from left to right across the line especially near the middle",
+      "Left-side sticky notes — five to seven small square shapes at various random angles and positions, dim flat gray matte material with slightly different gray shades (suggesting different ages/sources), some overlapping, some partially out of frame, each with two to three thin horizontal line indentations suggesting scribbled content",
+      "Left-side phone screens — two small rectangular phone-shaped screens at different angles, one showing a simplified chat interface outline and the other showing a contact list outline, both in dim gray with no color, tilted and not aligned to any grid",
+      "Left-side spreadsheet fragment — a rectangular grid of cells (approximately 5x8) in thin gray wireframe lines, tilted at 15 degrees, some cells slightly distorted suggesting manual/messy data entry, floating near the upper-left area",
+      "Left-side contact cards — three to four small rectangular cards scattered at random overlapping angles, each with a small circular avatar placeholder and horizontal line placeholders, dim gray matte material, disconnected from each other",
+      "Left-side calendar and clipboard — a small calendar grid fragment and a clipboard shape with checkmarks, both in dim gray, partially hidden behind other scattered elements, adding to the visual clutter",
+      "Right-side CRM dashboard screen — a sleek thin rectangular display with dark frosted glass surface and razor-thin dark metal bezel, centered in the right half, showing an organized pipeline interface with four neat vertical columns separated by thin magenta divider lines, column headers with subtle magenta gradient, and 2-4 small deal cards per column with magenta left-border accents",
+      "Right-side contact panel — a small section of the dashboard showing contact cards in tidy rows, each with circular avatar placeholder and horizontal info lines, all uniformly sized and perfectly aligned, subtle magenta accent on active contacts",
+      "Right-side automation bolt icons — small magenta lightning bolt shapes within the dashboard display near stage transitions and workflow indicators, suggesting automated processes running",
+      "Right-side revenue mini-chart — a small bar chart in the lower portion of the dashboard with four ascending bars glowing with progressive magenta intensity, suggesting revenue growth and forecasting",
+      "Right-side platform — a subtle dark matte surface below the dashboard with faint magenta grid lines at 40px intervals, providing structured ground that contrasts with the left side's structureless void",
+      "Transformation particles — small magenta dots drifting from the left side across the central divider toward the right side, concentrated at mid-height, suggesting data being transformed from chaotic to organized as it crosses the boundary"
+    ],
+    "actions": [
+      "The scattered left-side elements appear to drift slightly toward the central divider, as if being pulled by the organized system on the right — some elements closer to the divider show the faintest hint of magenta tinting at their edges nearest the line",
+      "Small magenta transformation particles move from left to right across the divider line, representing fragmented data being captured, cleaned, and organized by the CRM system",
+      "The right-side dashboard UI elements glow with steady magenta illumination, the pipeline cards subtly pulsing as if receiving new data from the transformation flow",
+      "The central divider line pulses with a gentle traveling wave of brightness moving from bottom to top, suggesting continuous active transformation",
+      "The automation bolt icons on the right side flash with subtle magenta pulses at intervals, indicating automated workflows processing the incoming data"
+    ],
+    "constraints": [
+      "No text, labels, numbers, or readable words anywhere — all interface elements use placeholder lines and abstract shapes only",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces — the left side uses dim grays, the right side uses dark tones with magenta accents",
+      "No ambient glow halos or bloom effects — magenta lighting is precise and controlled",
+      "The split must be exactly at the center — neither half dominates in frame space, the comparison is equal and balanced",
+      "The left side must clearly read as chaotic and disorganized — random angles, overlapping, no alignment",
+      "The right side must clearly read as organized and systematic — clean alignment, consistent spacing, structured layout",
+      "The contrast between left and right must be dramatic and immediately apparent"
+    ],
+    "notes": "The emotional narrative is 'this is what your sales operation looks like without a CRM versus with one.' The viewer should instantly feel the pain of the left side (that's me right now) and the relief of the right side (that's where I want to be). This directly addresses all three pain points simultaneously: scattered data (visible in the disconnected left-side elements), manual follow-ups (no automation indicators on the left), and no pipeline visibility (no organized pipeline on the left versus a clear one on the right). The transformation particles crossing the divider are critical — they show this isn't just two separate states but an active transformation process that XMA facilitates. The magenta divider line is both a compositional device and a metaphor for the moment of implementing the CRM system."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization with before-after comparison aesthetic, inspired by Linear app marketing visuals, SaaS transformation marketing imagery, and premium split-frame editorial design",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "The two halves have intentionally different lighting treatments to reinforce the contrast. Left half: dim, flat, directionless ambient light at low intensity — the scattered elements have minimal shadows and no accent lighting, creating a dull uninspiring appearance. The light is slightly warm-gray (suggesting old office fluorescence) but very desaturated. Right half: dramatic cool key light from upper-right at 45 degrees defining the dashboard form with clear highlights and shadows. Magenta accent rim light from behind the dashboard. Magenta fill from the dashboard UI elements casting controlled magenta light on the bezel and platform. The lighting ratio is deliberately unbalanced — the right side is approximately 3x more visually energized than the left. The central divider line emits its own magenta illumination that casts subtle light on elements within 5mm of either side.",
+    "color_profile": "muted",
+    "color_details": "Left half: strictly neutral gray palette — near-black background with dim gray (oklch 0.30 0 0) scattered elements, no color accent whatsoever, intentionally flat and lifeless. Right half: near-black to dark charcoal background with magenta pink-purple (oklch 0.50 0.30 285) as the accent in all UI elements, grid lines, automation icons, and chart fills. The central divider and transformation particles are magenta. The color story is gray lifelessness transforming into magenta-accented vitality. A desaturated magenta (oklch 0.35 0.20 285) appears in the right side's subtle background gradients."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 50,
+      "depth_of_field": "shallow-medium",
+      "aperture_effects": "f/3.5 equivalent — the central divider zone and elements immediately adjacent to it on both sides are in sharpest focus, creating a 'transformation zone' of clarity. Elements at the far left and far right of the frame have gentle soft focus, naturally directing attention to the center where the transformation happens",
+      "angle": "Straight-on front view with minimal elevation (approximately 5 degrees above horizontal), creating a flat confrontational comparison that forces the viewer to see both halves equally — no angle preference for either side",
+      "shot_type": "wide shot — both halves fill the frame edge to edge horizontally, with the full left-side chaos and right-side dashboard visible, moderate vertical breathing room above and below"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "1:1"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity, slightly more visible on the left side (3%) than the right side (2%) to subtly reinforce the quality differential",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on the right-side dashboard screen surface, magenta light transport from UI elements to bezel and platform, and subtle magenta illumination from the divider line onto nearby elements on both sides",
+      "global_illumination": "Important for the right side — magenta light from the dashboard bounces onto the platform and bezel naturally. The left side has minimal GI contribution, reinforcing its flat lifeless quality."
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Left side: scattered elements float in disorganized space with no consistent gravitational direction — some tilted, some overlapping, suggesting they were tossed carelessly. Right side: the dashboard is solidly mounted, cards are properly aligned within the interface, the platform is grounded — everything has structural order and proper placement.",
+      "structural_believability": true,
+      "structural_details": "Left-side elements are recognizable everyday objects (sticky notes, phone shapes, spreadsheets) but rendered abstractly without text. Right-side dashboard has proper screen panel thickness, bezel construction, and interface layout consistency. The divider line is a visual element, not a physical object."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "left_side_elements": "Dull flat matte gray material with no reflectivity, no luminosity, and no surface interest — sticky notes have papery matte texture, phone shapes have dull plastic, spreadsheet and cards have flat gray material — intentionally uninspiring and lifeless",
+      "right_side_dashboard": "Dark frosted glass screen surface with internal magenta UI glow, thin dark anodized aluminum bezel with micro-chamfered edges catching magenta light, the screen has visible depth between UI layers — premium and precise",
+      "right_side_platform": "Matte dark carbon fiber texture with faint magenta grid lines, providing structured grounding that contrasts with the left side's unstructured void",
+      "divider_line": "Luminous magenta fiber-optic-style vertical line with bright core and soft lateral glow falloff, the line has slight brightness variation along its length suggesting energy movement"
+    },
+    "left_side_details": {
+      "sticky_notes": "Flat matte gray squares with subtle papery texture, slightly different gray values per note (ranging oklch 0.25-0.35 0 0), thin horizontal indentation lines on surface",
+      "phone_screens": "Small rectangular shapes with dark dull plastic frames and dim gray screen surfaces, simplified interface outlines visible as slightly lighter gray wireframe on the screens",
+      "spreadsheet_fragment": "Thin gray wireframe grid lines forming cell rectangles, the material is semi-transparent at edges as if deteriorating, flat and two-dimensional feeling",
+      "contact_cards": "Small matte gray rectangles with circular indent (avatar placeholder) and horizontal line indents, overlapping carelessly"
+    },
+    "right_side_details": {
+      "pipeline_columns": "Thin vertical magenta divider lines with subtle transparency, column header bars as magenta gradient strips, deal cards as small frosted glass rectangles with magenta left-border accents and dim horizontal placeholder lines",
+      "automation_bolts": "Small bright magenta lightning bolt shapes with subtle inner glow, integrated within the dashboard display",
+      "revenue_chart": "Small ascending bar chart with frosted glass bars filled with progressive magenta gradient"
+    },
+    "transformation_particles": "Small magenta glowing dots (2-3px) drifting left to right across the divider line, each with a tiny motion trail, the particles are brightest at the divider crossing point and fade slightly as they travel rightward toward the dashboard",
+    "transparency": "Right-side dashboard has frosted glass depth. Left-side spreadsheet fragment has edge transparency. Divider line has glow transparency. All other elements are opaque."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment — both halves share the same dark background but with subtly different treatment: left side is pure neutral dark, right side has the faintest magenta tint in the darkness near the dashboard",
+      "No fog, no volumetric lighting — the atmosphere is clean",
+      "The divider line creates a subtle atmospheric boundary — the air on the right side near the dashboard has the faintest hint of magenta atmospheric scattering from the screen's light"
+    ],
+    "time_season": ["Timeless — no natural time indicators, this is an artificial/digital environment"],
+    "particles": [
+      "Transformation particles crossing the divider line from left to right, concentrated at mid-height of the frame, approximately 15-20 particles visible at any moment in various stages of crossing",
+      "On the right side only, sparse floating magenta micro-particles near the dashboard at very low opacity (5-8%), suggesting the active digital environment of the CRM system",
+      "No particles on the left side — it is static and lifeless",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Both halves have near-black backgrounds (#0A0A0C equivalent). The right half has an extremely subtle magenta radial gradient centered on the dashboard (2-3% brighter) creating natural focus. The left half has no gradient — uniformly dark, reinforcing its lifeless quality. The contrast in background treatment is subtle but contributes to the overall transformation narrative."
+  },
+  "composition": {
+    "perspective": "Near-frontal view with minimal elevation — a confrontational split-frame that demands the viewer compare both halves equally, no angular bias toward either side",
+    "framing": "split_center",
+    "framing_details": "The frame is divided exactly in half vertically by the magenta divider line. Left half contains scattered elements distributed randomly with no compositional order — intentional visual chaos. Right half contains the dashboard centered with structured composition — intentional visual order. The divider line sits precisely on the center vertical axis. The scattered left-side elements are densest near the center (near the divider) and sparse at the far left, creating visual weight that pulls toward the transformation point. The right-side dashboard is slightly offset toward the divider, also creating weight near the center.",
+    "subject_placement": "split_balanced",
+    "depth_layers": [
+      "Background: Dark void on both sides with subtle differentiation in treatment",
+      "Mid-ground left: Scattered gray elements in disorganized arrangement (moderate focus)",
+      "Focal plane: Central divider zone — the divider line, nearest elements on both sides, and transformation particles (sharpest focus)",
+      "Mid-ground right: CRM dashboard and platform (sharp focus falling to moderate at far right)",
+      "Ambient layer: Magenta micro-particles on right side only"
+    ],
+    "negative_space": "On the left side, negative space is chaotic — it exists between randomly scattered elements and feels messy and unintentional. On the right side, negative space is deliberate and clean — generous dark space around the dashboard creating premium breathing room. This contrast in how negative space is handled reinforces the chaos-versus-order narrative.",
+    "visual_flow": "The eye is drawn first to the bright magenta divider line (strongest contrast in the frame), then naturally looks left (chaos) and right (order) to understand the comparison. The transformation particles guide the eye from left to right, reinforcing the before-to-after narrative direction. On the right side, the dashboard's pipeline reads left to right internally. The overall flow mirrors reading direction — moving from the problem (left/before) toward the solution (right/after)."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range",
+      "split composition",
+      "before and after contrast"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting on the right side",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm gold color tones",
+      "cool blue color tones",
+      "complementary color accents",
+      "multiple accent colors",
+      "color on the left side"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Split composition divided by a thin luminous magenta vertical line at exact center. Left half: chaotic arrangement of disconnected elements in dim flat gray — scattered sticky note squares at random angles, two phone screens with dim outlines, a tilted spreadsheet grid fragment, overlapping contact cards, calendar and clipboard shapes — all dull gray matte with no color no organization floating in dark structureless void. Right half: a sleek CRM dashboard screen in dark frosted glass with magenta UI elements — organized pipeline with four neat columns of deal cards with magenta borders, tidy contact rows with avatar placeholders, small magenta automation bolt icons, ascending revenue bar chart with magenta gradient fills — all on a dark platform with faint magenta grid lines. Small magenta transformation particles drift left to right across the divider. Left side has flat dim ambient lighting, right side has dramatic key light with magenta accent rim and UI glow. Near-black palette, left side strictly gray, right side magenta pink-purple sole accent. Frontal view minimal elevation, 50mm lens, shallow-medium depth sharpest at center divider zone. Hyperrealistic 3D render, studio quality, before-after contrast --ar 1:1 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, warm colors, cool blues, multiple accent colors, color on left side",
+    "dalle3": "A hyperrealistic 3D render with a horizontally split composition divided at the exact center by a thin luminous magenta vertical line running top to bottom. The left half shows a chaotic arrangement of disconnected data fragments floating in disorganized dark space: five to seven dim flat gray sticky note squares at random angles with thin line indentations, two small phone-shaped screens with dull gray interface outlines tilted at different angles, a spreadsheet grid fragment of thin gray wireframe cells tilted 15 degrees, three to four small gray contact cards scattered and overlapping with circular avatar placeholders, a calendar grid fragment and clipboard shape partially hidden behind other elements — all in dull matte gray material with no color accent, no organization, and no structure. The right half shows a single sleek CRM dashboard screen centered on a dark platform with faint magenta grid lines: dark frosted glass surface with thin dark metal bezel, four neat vertical pipeline columns with magenta dividers and header gradients, 2-4 small frosted glass deal cards per column with magenta left-border accents, a tidy contact panel with uniformly aligned avatar cards, small bright magenta lightning bolt automation icons, and a small ascending bar chart with magenta gradient fills in the lower portion. Small magenta glowing particles drift from left to right across the divider line suggesting data transformation. Left side has flat dim ambient lighting with no shadows or accents. Right side has dramatic cool key light from upper-right with magenta accent rim light and UI element illumination. Near-black background on both sides, left side strictly neutral gray elements, right side magenta pink-purple as sole accent. Frontal view at 5 degrees elevation, 50mm lens, shallow-medium depth of field sharpest at center divider. No text, no people, no logos, no bright white. Square format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization, split before-after composition. Thin luminous magenta vertical divider line at exact frame center top to bottom. Left half: chaotic disconnected data fragments in dim flat gray on dark structureless void — scattered sticky note squares at random angles with line indentations, two dull phone screens with gray interface outlines, tilted spreadsheet grid fragment, overlapping gray contact cards with avatar placeholders, calendar and clipboard fragments — all dull matte gray, no color, no organization, intentionally lifeless. Right half: sleek CRM dashboard on dark platform with faint magenta grid lines — dark frosted glass screen with thin metal bezel, four neat pipeline columns with magenta dividers, deal cards with magenta left-borders, tidy contact rows, bright magenta automation bolt icons, ascending bar chart with magenta gradient. Small magenta transformation particles drift left to right across divider. Left side flat dim ambient light, right side dramatic key light upper-right with magenta rim and UI glow. Elements near divider in sharpest focus. Left strictly neutral gray palette, right magenta pink-purple oklch(0.50 0.30 285) sole accent on near-black. Frontal view minimal elevation, 50mm lens, shallow-medium depth of field. No text, no people, no logos, no warm colors, no bloom, no color on left side. Square 1:1."
+  }
+}

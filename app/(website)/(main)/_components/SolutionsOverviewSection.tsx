@@ -59,7 +59,7 @@ const featuredSolutions: SolutionFeature[] = [
     title: "CRM & Revenue System",
     description:
       "Organize leads, automate follow-ups, and manage the sales pipeline. Full visibility into every deal from first touch to close.",
-    href: "/solutions/crm-revenue-system",
+    href: "/solutions/crm-system",
     features: [
       "CRM setup & configuration",
       "Multi-channel lead capture",

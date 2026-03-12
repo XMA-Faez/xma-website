@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const data: SolutionPageData = {
   slug: "ecommerce-revenue-engine",
-  accentColor: "oklch(0.7 0.15 195)",
+  accentColor: "oklch(0.8285 0.1234 198.3)",
   hero: {
     badge: "XMA Solution",
     title: "E-Commerce Revenue Engine",

@@ -10,8 +10,8 @@ interface SolutionItem extends NavItem {
 export const mainNavItems: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "Solutions", href: "/solutions" },
-  { name: "Case Studies", href: "/case-studies" },
-  { name: "Insights", href: "/insights" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
 
@@ -33,7 +33,7 @@ export const solutions: SolutionItem[] = [
   },
   {
     name: "CRM & Revenue System",
-    href: "/solutions/crm-revenue-system",
+    href: "/solutions/crm-system",
     description: "Lead organization, automation, and pipeline management",
   },
   {

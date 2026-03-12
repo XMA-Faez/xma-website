@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "E-Commerce Revenue Engine",
+    "variation": "5 - Cascade Revenue Streams",
+    "accent_color": "deep cyan",
+    "accent_oklch": "oklch(0.7 0.15 195)",
+    "concept": "A cascading waterfall structure where a single primary revenue stream splits into multiple branching secondary streams at each descending tier, then those branches split again into tertiary streams - visualizing the multiplication of revenue channels from a single system. Each tier is a dark sculptural shelf that catches and redirects the luminous cyan flow, creating an ever-widening cascade of branching revenue."
+  },
+  "core": {
+    "subject": "A vertical cascade structure composed of four descending tiers of dark sculptural shelves, arranged in a stepped pyramid formation. At the apex, a single narrow source channel delivers a concentrated stream of luminous cyan particles downward onto the first tier shelf. That shelf has two carved divergence channels that split the stream into two separate flows, each dropping to the second tier. The second tier has four channels that split each incoming flow again, creating four streams dropping to the third tier. The third tier splits into eight channels, and the fourth lowest tier catches all eight streams in a wide collection array of small individual basins - the cascade widening at each level from one source to many outputs, visualizing revenue multiplication.",
+    "scene": "A dark void environment with a tall narrow matte black platform structure supporting the cascade tiers. The platform is architectural - stepped like a ziggurat or inverted pyramid, wider at the base than the top. Each tier shelf protrudes from the central support column at increasing widths as they descend. Thin cyan light traces the edges of each tier shelf. The overall structure is centered in the composition with the apex source at the top and the widest collection array at the bottom, creating a triangular visual silhouette. Cyan particle light from the flowing streams illuminates the dark shelf surfaces from above, creating dynamic light play on the sculptural forms.",
+    "objects": [
+      "Source emitter - a small dark cylindrical nozzle at the very top of the structure, emitting a single concentrated beam of luminous cyan particles downward, the nozzle has a dark metal collar with thin cyan ring lighting at its base, the emitted stream is tight and bright as it exits the nozzle",
+      "First tier shelf - a narrow dark sculptural shelf protruding from the central column, with a smooth concave receiving surface that catches the source stream and two precisely carved V-shaped divergence channels that split the flow into two equal streams, the shelf edges have thin chamfered profiles with cyan light tracing the front lip",
+      "Second tier shelf - a wider dark shelf below the first, with two receiving points aligned beneath the first tier's outputs and four divergence channels that split each incoming stream again, the shelf surface is polished dark stone with subtle concentric ripple textures where streams impact",
+      "Third tier shelf - wider still, with four receiving points and eight divergence channels, the shelf material showing more intricate carved channel patterns as the routing becomes more complex, thin cyan guide ridges between channels directing the particle flows precisely",
+      "Fourth tier collection array - the widest bottom level, consisting of eight individual small basins arranged in a row, each catching one of the final branched streams, the basins are small dark polished metal cups that pool with accumulated luminous cyan, each basin glowing with increasing intensity as it fills",
+      "Central support column - a dark architectural pillar with stepped setbacks at each tier, the column has vertical panel seams and subtle recessed detail, thin cyan accent lines running vertically along its corners connecting the tiers visually",
+      "Cascade particle streams - luminous cyan particles flowing downward through the system, the single source stream splitting into two at the first tier, four at the second, eight at the third, each split stream thinner but collectively covering more width, the particles leave trailing light streaks as they fall between tiers creating a web of cyan light paths"
+    ],
+    "actions": [
+      "The single source stream impacts the first tier shelf and visibly divides into two diverging streams at the carved V-channels, the splitting moment captured with a small spray of scattered cyan particles at the division point suggesting dynamic fluid behavior",
+      "At each subsequent tier, the splitting process repeats - incoming streams hit receiving points and divide again through carved channels, with the splitting becoming more refined and the individual streams becoming thinner but more numerous at each level",
+      "The cyan particle streams are in active freefall between tiers, following graceful parabolic arcs rather than straight vertical drops, creating curved curtains of falling cyan light between each shelf level",
+      "The collection basins at the bottom tier are actively filling with pooled cyan liquid-light, with the most central basins fuller and brighter than the outer ones, suggesting the system is actively operating and accumulating revenue"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with cyan as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The emotional narrative is 'one system that multiplies revenue into many streams - building once and harvesting everywhere.' The viewer should feel the satisfying inevitability of the cascade - once the source flow begins, the branching is automatic and each tier multiplies the output. This represents the e-commerce revenue engine philosophy of creating systematic multiplication: one product line becomes multiple channels, one channel becomes multiple touchpoints, one customer becomes multiple transactions. The widening silhouette from apex to base visually communicates growth and expansion."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary cyan accent rim light from behind-right, casting thin cyan edge highlights on all 3D objects. Tertiary subtle cyan fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep cyan (oklch 0.7 0.15 195) as the sole accent color. Secondary accent is a slightly desaturated cyan (oklch 0.4 0.10 195) for deeper shadows and subtle gradients. No warm colors. Strict monochromatic cyan on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal), positioned to show the full vertical cascade from source to collection with clear visibility of the branching pattern at each tier",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport through semi-transparent elements",
+      "global_illumination": "Subtle GI bounce from cyan-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Particle streams follow proper parabolic freefall trajectories between tiers, with appropriate acceleration under gravity. The impact points on each tier shelf show realistic fluid dynamics - splashing, dividing, and redirecting with proper momentum conservation. Collection basins show liquid surface properties with meniscus curves at edges.",
+      "structural_believability": true,
+      "structural_details": "The stepped ziggurat support column has proper structural engineering - wider base supporting the cantilevered tier shelves above, each tier shelf proportioned realistically for its span. The carved divergence channels have proper hydraulic geometry with smooth radius curves at split points."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "support_column": "Dark architectural concrete with subtle aggregate texture visible at close inspection, vertical panel seams as thin recessed lines, thin cyan accent light strips running vertically along the four corner edges, the surface absorbs light giving it a massive solid appearance",
+      "tier_shelves": "Dark polished basalt stone with extremely subtle crystalline sparkle in the grain, the receiving surfaces are concave with smooth polished finish showing impact ripple textures where particle streams hit, the carved divergence channels have precision-cut walls with sharp geometric edges",
+      "collection_basins": "Dark polished metal cups with mirror-finish interiors that reflect the pooled cyan light, thin dark metal rims with chamfered edges, each basin sits in a recessed socket on the lowest tier shelf"
+    },
+    "module_surfaces": {
+      "source_nozzle": "Dark chrome cylindrical nozzle with precision-bore interior, dark metal collar with recessed cyan ring lighting at the base, the nozzle tip has a slight flare that shapes the emitted particle stream",
+      "channel_walls": "Precision-cut dark stone with polished smooth faces inside the V-shaped divergence channels, thin cyan guide ridges between adjacent channels as slightly raised stone fins that prevent stream cross-contamination",
+      "tier_edges": "Thin chamfered front lips on each shelf with cyan light embedded in the chamfer like recessed edge LED strips, the lip profile is a precise 45-degree bevel",
+      "impact_surfaces": "Polished dark stone with concentric ripple patterns radiating from the stream impact points, the ripples are subtle raised texture suggesting accumulated erosion from continuous particle flow"
+    },
+    "transparency": "The cyan particle streams are semi-transparent luminous flows with varying density - the single source stream is dense and opaque-bright, while the many branched streams at lower tiers are thinner and more transparent. Collection basin pools are translucent cyan liquid-light with proper depth-dependent opacity, deeper near center and translucent at edges. The parabolic freefall arcs between tiers have a curtain-like semi-transparency with individual particle resolution visible."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of cyan light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Slightly elevated three-quarter front view emphasizing the vertical cascade and the widening triangular silhouette from apex source to base collection array, with natural perspective diminution adding scale",
+    "framing": "rule_of_thirds",
+    "framing_details": "The source nozzle at the apex aligns with the upper-third horizontal line. The central tiers occupy the middle third. The collection basin array at the base aligns with the lower-third line. The central support column aligns with the vertical center axis, with the cascade branching symmetrically to both sides.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Nearest edge of lowest tier shelf and front collection basins (slight bokeh blur)",
+      "Mid-ground: Central tiers, branching channels, and freefall particle curtains (sharp focus)",
+      "Background: Source nozzle at apex and rear edges of upper tiers (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining the premium editorial feel",
+    "visual_flow": "The eye enters at the bright source nozzle at the apex, follows the single concentrated stream downward to the first split, then fans outward following the multiplying branches through each successive tier, arriving at the wide array of glowing collection basins at the base - a top-to-bottom, narrow-to-wide reading path that mirrors the revenue multiplication story from single system to many revenue streams"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A vertical cascading waterfall structure with four descending dark sculptural tiers arranged in a stepped pyramid, widening from a narrow apex to a broad base. At the top, a dark chrome source nozzle with cyan ring lighting emits a single concentrated stream of luminous cyan particles downward. The first dark polished basalt tier shelf catches the stream and splits it through two carved V-channels into two diverging flows. The second wider tier splits those into four streams. The third wider tier splits into eight streams. The bottom tier has eight individual dark polished metal collection basins in a row, each catching one branched stream and pooling with luminous cyan liquid-light. Between tiers, particle streams follow graceful parabolic freefall arcs creating curtains of falling cyan light. A dark architectural concrete support column with stepped setbacks supports the tiers, thin cyan accent strips along its vertical corners. Carved divergence channels have precision-cut stone walls with cyan guide ridges between them. Impact points show concentric ripple textures. Tier shelf edges have chamfered lips with embedded cyan light. Deep void environment, pure darkness. Dramatic cinematic lighting, cool key light upper-left, cyan rim light behind-right, cyan under-glow. Near-black palette with deep cyan oklch(0.7 0.15 195) as sole accent. Elevated three-quarter view, 55mm lens, medium depth of field. Hyperrealistic 3D render, studio quality, physically based rendering --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a vertical cascading structure with four descending tiers of dark sculptural shelves arranged in a stepped pyramid formation, widening from a narrow apex to a broad base. At the very top, a small dark chrome cylindrical nozzle with a cyan ring light at its base emits a single concentrated stream of luminous cyan particles downward onto the first tier. The first tier is a narrow dark polished basalt shelf with a concave receiving surface and two precisely carved V-shaped divergence channels that split the stream into two equal flows dropping to the second tier. The second wider tier has four divergence channels splitting each incoming stream again. The third tier is wider still with eight channels and more intricate carved routing patterns with thin cyan guide ridges. The fourth and widest bottom tier has eight individual dark polished metal collection basins arranged in a row, each catching one final branched stream and pooling with glowing cyan liquid-light. Between tiers, particle streams follow parabolic freefall arcs creating graceful curtains of falling cyan light. A dark architectural concrete support column with stepped setbacks and thin cyan accent light strips supports all four tiers. Split points show small sprays of scattered cyan particles. Concentric ripple textures mark impact surfaces. Tier edges have chamfered lips with embedded cyan lighting. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left, cyan rim light behind-right, cyan under-glow. Strictly near-black to charcoal with deep cyan as sole accent. Elevated three-quarter front view, 55mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors, no bloom. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A vertical cascading waterfall structure with four descending tiers of dark sculptural shelves in a stepped pyramid formation widening from narrow apex to broad base. Dark chrome source nozzle at top with cyan ring lighting emits a single concentrated luminous cyan particle stream downward. First tier: narrow dark polished basalt shelf with concave receiving surface and two carved V-channels splitting the stream into two flows. Second tier: wider shelf with four divergence channels splitting streams again. Third tier: wider still with eight channels and intricate carved routing with cyan guide ridges. Fourth tier: eight individual dark polished metal collection basins in a row, each pooling with luminous cyan liquid-light. Particle streams follow parabolic freefall arcs between tiers creating curtains of falling cyan light. Dark architectural concrete support column with stepped setbacks, vertical panel seams, thin cyan accent light strips on corners. Split points show scattered particle sprays. Concentric ripple impact textures on receiving surfaces. Chamfered tier edges with embedded cyan lighting. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left 45 degrees, cyan rim light behind-right, cyan under-glow. Near-black to charcoal palette with deep cyan oklch(0.7 0.15 195) as sole accent. Elevated three-quarter front view, 55mm lens, medium depth of field, rule of thirds. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

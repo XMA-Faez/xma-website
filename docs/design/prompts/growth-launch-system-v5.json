@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Growth Launch System",
+    "variation": "5 - Architect's Scaffold",
+    "accent_color": "deep purple",
+    "accent_oklch": "oklch(0.65 0.2 300)",
+    "concept": "A large structural scaffold framework rendered as an open architectural skeleton, with system panels and operational modules sliding into place along guide rails and locking into the framework's mounting points. The metaphor communicates that the Growth Launch System provides the foundational framework and structure into which all business systems are methodically installed - a scaffold that organizes and supports every component."
+  },
+  "core": {
+    "subject": "A monumental open-frame scaffold structure - an architectural skeleton made of dark metallic beams, cross-braces, and horizontal rails arranged in a regular three-dimensional grid pattern. The framework stands approximately five levels tall and three bays wide, with each bay defined by vertical columns and horizontal beams forming rectangular openings. Into these openings, dark operational panels and system modules are sliding along visible guide rails - some panels are fully seated and locked with purple edge indicators confirming integration, others are mid-slide caught in motion along their rails, and several openings remain empty with purple guide rail tracks visible and waiting. The overall impression is of a building under systematic construction where the skeleton is complete and the systems are being installed methodically, bay by bay.",
+    "scene": "The scaffold structure stands on a dark reflective surface that mirrors the purple accent lines of the framework faintly. The void behind and above is pure darkness. Thin purple measurement lines and alignment markers float near the structure, suggesting precise engineering tolerances. The reflective ground surface extends a short distance before fading to pure black, grounding the structure without creating an environment.",
+    "objects": [
+      "The primary scaffold framework - dark metallic beams arranged in a regular 3D grid, five levels tall by three bays wide by two bays deep. Vertical columns have a square cross-section with beveled edges. Horizontal beams connect columns at each level. Cross-braces in an X pattern reinforce the rear face of each bay. All beam intersections have visible joint nodes - darker, slightly larger cubic connectors where beams meet.",
+      "Guide rail tracks - slim purple-lit channels running horizontally along the inner edges of each bay opening, forming the path along which panels slide into position. The rails have a mechanical precision quality with small detent markers at the locking position.",
+      "Three fully installed system panels - dark matte rectangular slabs seated flush within their bay openings, with thin purple border lines along all four edges confirming locked status. Each panel has a subtly different surface treatment suggesting different system functions: one has horizontal line textures, another has a grid of small purple dot indicators, the third has a smooth surface with a single central purple accent element.",
+      "Two panels mid-slide - caught in the act of moving along their guide rails into their designated bays. One is approximately 70% inserted with its leading edge already within the bay and its trailing edge still protruding, showing the rail engagement mechanism. The other is just beginning entry, barely 20% in, with visible momentum suggested by a faint purple motion trail.",
+      "Four empty bay openings - rectangular voids in the framework with clearly visible purple guide rail tracks and small purple detent markers at the locking point, awaiting their panels. The emptiness of these bays creates contrast with the installed ones.",
+      "Floating purple alignment markers near the structure - thin crosshair-like symbols and angular measurement indicators hovering at key structural points, suggesting active precision monitoring of the installation process. These are holographic in quality - thin purple lines with no solid surface.",
+      "A staging area at the base-left of the structure where three additional panels rest on a dark platform at a slight angle, queued for installation. These panels have dim purple edge outlines indicating they are prepared and assigned to specific bays."
+    ],
+    "actions": [
+      "The 70%-inserted panel is actively sliding along its guide rails with a controlled, mechanical motion - the rail engagement points show thin purple friction lines, and the leading edge of the panel approaches its locking detent with precise alignment.",
+      "The 20%-entry panel has just engaged its guide rails, with a small purple spark at the rail contact point suggesting initial mechanical engagement and the beginning of the guided insertion sequence.",
+      "Purple status pulses travel along the framework beams from recently installed panels outward to the joint nodes, propagating a network confirmation signal that visually demonstrates how each installed component connects to and activates the broader system.",
+      "The floating alignment markers near empty bays rotate slowly, maintaining positional tracking and readiness indicators for the next panel installations."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with purple as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should feel the reassurance of structure - that there is a robust, engineered framework ready to receive and organize every component of their business growth system. The scaffold communicates that nothing is ad hoc; every element has a designated place, a guide rail to get there, and a locking mechanism to secure it. This is architecture, not improvisation."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary purple accent rim light from behind-right, casting thin purple edge highlights on all 3D objects. Tertiary subtle purple fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep purple (oklch 0.65 0.2 300) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated purple (oklch 0.4 0.12 300) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic purple on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 50,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the purple-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The scaffold framework has convincing structural weight - vertical columns appear to bear load, horizontal beams span between supports logically, and cross-braces provide realistic lateral stability. Panels slide horizontally along rails with gravity-neutral guided motion, not falling but mechanically driven.",
+      "structural_believability": true,
+      "structural_details": "The scaffold follows real structural engineering principles - columns are evenly spaced, beams maintain consistent cross-sections, joint nodes distribute loads to multiple members, and cross-bracing provides triangulated stability. Panel sizes match their bay openings precisely with consistent clearance gaps."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "scaffold_beams": "Dark gunmetal matte finish with a fine-grain sandblasted texture, featuring subtle purple accent lines running along the center of each beam face. Beam edges are precisely beveled at 45 degrees, catching purple rim light as thin bright lines. Joint nodes are a slightly darker shade with a machined-smooth finish.",
+      "reflective_ground": "Dark mirror-like surface with approximately 15% reflectivity - enough to create dim reflections of the scaffold's purple accent lines but not bright enough to create a distracting mirror image. The reflection fades quickly with distance.",
+      "guide_rails": "Slim channels with a polished dark chrome finish and continuous thin purple illumination along their length, with small raised detent bumps at the panel locking positions. The rails have a mechanical precision that suggests CNC-machined tolerances."
+    },
+    "module_surfaces": {
+      "installed_panels": "Dark matte rectangular slabs with varied surface treatments - horizontal line textures on one suggesting data flow, small purple dot grid on another suggesting monitoring points, smooth surface with central accent on the third suggesting a primary control interface. All share thin purple border lines confirming locked status.",
+      "in_transit_panels": "Identical dark matte material to installed panels but with slightly brighter purple edge glow suggesting active state. The leading edges show faint purple friction marks where they contact the guide rails. Trailing edges have a very subtle motion blur.",
+      "queued_panels": "Resting on the staging platform with dim purple edge outlines at 40% brightness compared to active panels. Surfaces are clean and pristine, awaiting deployment. They lean at a slight angle suggesting organized storage.",
+      "alignment_markers": "Pure purple holographic lines with no material substance - razor-thin crosshair patterns and angular measurement indicators rendered as luminous line geometry floating in space at 60% opacity."
+    },
+    "transparency": "No transparent elements - the scaffold framework is entirely open (you see through the structural gaps, not through materials). The openness of the scaffold provides the visual depth, with installed panels being fully opaque and empty bays allowing sight lines through to the rear cross-bracing and the void beyond."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of purple light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Classic architectural three-quarter perspective showing two visible faces of the scaffold framework - the front face with panel bays clearly visible and the right side face receding in perspective. Strong parallel convergence toward a right vanishing point emphasizes the structural depth and regularity of the framework grid.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The scaffold framework is positioned with its left-front column along the left vertical third line. The most active panel installation - the 70% inserted module - occurs at the upper-right third intersection, drawing the eye to the primary action. The staging area with queued panels occupies the lower-left zone.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: The staging platform with queued panels and the lower-front corner of the scaffold showing beam detail and ground reflections (slight bokeh blur)",
+      "Mid-ground: The main scaffold framework with active panel installations, guide rails, and alignment markers (sharp focus)",
+      "Background: The rear cross-bracing visible through empty bays, distant structural elements, and scattered purple particles (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters at the staging area in the lower-left where queued panels wait, follows the guide rail direction rightward and upward to the panel just beginning rail engagement, continues along the rail path to the 70%-inserted panel in the center-right, and then scans the installed panels with their confirmed purple borders - a diagonal flow from lower-left to upper-right that communicates progressive installation and systematic completion."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic 3D render of a dark tech product visualization showing an architect's scaffold framework with system panels being installed. A monumental open-frame dark metallic scaffold structure stands five levels tall and three bays wide on a dark reflective surface, made of gunmetal sandblasted beams with purple accent center-lines, beveled edges catching purple rim light, square cross-section columns, horizontal connecting beams, and X-pattern cross-braces on the rear face. Cubic joint nodes at all beam intersections in darker machined-smooth finish. Slim purple-illuminated guide rail tracks run horizontally along inner bay edges with mechanical detent markers at locking positions. Three dark matte panels are fully installed in their bays with thin purple border lines confirming locked status - one with horizontal line textures, one with purple dot grid, one with smooth central accent. One panel is 70% inserted along its rails with purple friction marks at contact points and subtle motion blur. Another panel at 20% entry with purple spark at initial rail engagement. Four empty bays show purple guide rail tracks and detent markers awaiting panels. Purple holographic crosshair alignment markers float near empty bays. Staging platform at base-left holds three queued panels at slight angle with dim purple edge outlines. Purple status pulses travel along framework beams from installed panels to joint nodes. Dark reflective ground at 15% shows faint purple accent reflections. Cool-neutral key light from upper-left, purple accent rim light from behind-right, subtle purple under-glow. Classic architectural three-quarter camera perspective, 50mm lens, f/4 depth of field. Sparse purple micro-particles. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic black. Cinematic premium aesthetic inspired by Linear, Vercel, and Stripe. --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic 3D render in dark premium tech aesthetic showing a structural scaffold framework with system panels sliding into place. A monumental open-frame scaffold made of dark gunmetal sandblasted beams stands five levels tall and three bays wide on a dark subtly reflective surface in a pitch-black void. Beams have purple accent center-lines and beveled edges catching purple rim light. Square columns connect via horizontal beams at each level with X-pattern cross-braces on the rear. Cubic joint nodes at intersections. Slim purple-illuminated guide rail channels run along inner bay edges with mechanical detent markers. Three dark matte panels are fully installed with thin purple border confirmation lines - each with subtly different surface treatment suggesting different system functions. One panel is 70% along its guide rails mid-insertion with purple friction marks. Another at 20% entry with a purple spark at rail engagement. Four empty bays show visible purple rail tracks awaiting panels. Purple holographic crosshair alignment markers float near the structure. A staging platform at the base-left holds three queued panels with dim purple outlines. Purple status pulses propagate along beams from installed panels to joint nodes. Ground reflects purple accents faintly at 15% reflectivity. Cool-neutral key light from upper-left at 45 degrees, purple rim light from behind-right, subtle purple under-glow. Three-quarter architectural camera view, 50mm focal length, f/4 depth of field. Sparse purple light particles. Subtle film grain. Deep purple is the only accent color. No text, labels, logos, people, warm colors, neon glow, or bloom. Inspired by Linear, Vercel, and Stripe visualization style. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, cinematic dark tech product visualization, professional studio quality, physically based rendering, sharp detail, clean anti-aliased edges, professional color grading, high dynamic range. Monumental open-frame scaffold structure five levels tall three bays wide on dark subtly reflective surface in deep black void. Dark gunmetal sandblasted beams with purple accent center-lines and 45-degree beveled edges catching purple rim light. Square cross-section vertical columns, horizontal connecting beams at each level, X-pattern cross-braces on rear face. Darker machined-smooth cubic joint nodes at all beam intersections. Slim purple-illuminated guide rail channels along inner bay edges with mechanical detent markers at locking positions. Three dark matte panels fully installed in bays with thin purple border confirmation lines - horizontal line textures, purple dot grid, smooth central accent respectively. One panel 70% inserted along rails with purple friction marks and subtle trailing motion blur. Another at 20% entry with purple spark at initial rail engagement. Four empty bays with visible purple rail tracks and detent markers. Purple holographic crosshair alignment markers floating near structure at 60% opacity. Staging platform base-left with three queued panels at slight angle with dim purple edge outlines. Purple status pulses traveling along beams from installed panels to joint nodes. Ground at 15% reflectivity showing faint purple accent reflections fading quickly. Cool-neutral key light upper-left 45 degrees. Purple accent rim light behind-right. Subtle purple under-glow. Classic architectural three-quarter perspective, 50mm lens, f/4 depth of field. Sharp mid-ground focus, gentle peripheral bokeh. Sparse purple micro-particles 5-10% opacity. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic near-black. No text, no labels, no people, no logos, no warm colors, no neon, no bloom, no bright white. Premium editorial aesthetic. Wide 16:9."
+  }
+}

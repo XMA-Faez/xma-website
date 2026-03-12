@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "B2B Lead Generation",
+    "variation": "3 - Decision-Maker Constellation",
+    "accent_color": "deep amber",
+    "accent_oklch": "oklch(0.75 0.16 65)",
+    "concept": "A dark field of dim, small prospect nodes with key decision-maker nodes burning bright amber and larger, connected by influence lines that reveal hidden professional relationships. Like a star map where the brightest stars are the people who matter most - the visualization communicates that within any market, a small number of high-influence decision-makers disproportionately control buying power, and the system identifies and connects them through invisible relationship networks."
+  },
+  "core": {
+    "subject": "A vast dark field stretches across the frame, populated by hundreds of very small dim prospect nodes scattered at varying densities like a star field. Among them, eight to twelve nodes burn dramatically brighter and larger in deep amber - these are the key decision-makers. Thin amber influence lines connect these bright nodes to each other in a web of hidden professional relationships, while dimmer secondary lines radiate outward from bright nodes to nearby dim ones showing spheres of influence. The composition evokes a celestial navigation chart where the brightest stars form a constellation pattern that reveals the underlying power structure of a market.",
+    "scene": "A pure dark void serves as the backdrop, with no visible platform or ground plane - the constellation floats freely in space as if viewed through a telescope aimed at a professional network galaxy. An extremely subtle dark gradient provides minimal depth cues, lighter at center and darker at edges, focusing attention on the constellation core where the brightest decision-maker nodes cluster.",
+    "objects": [
+      "Eight to twelve primary decision-maker nodes - each a faceted crystalline polyhedron (5-10mm diameter) made of polished amber gemstone material with intense warm internal luminescence and clean geometric facets. Each node is slightly different in size and polyhedron type (some cuboctahedrons, some icosahedrons, some truncated tetrahedrons) suggesting different executive roles and influence levels.",
+      "Primary influence lines - thin but clearly visible amber luminescent threads connecting bright decision-maker nodes to each other in a web pattern. These lines have varying brightness - the strongest connections glow most intensely, weaker connections are dimmer - revealing the hierarchy of professional relationships between key figures.",
+      "Approximately two hundred small dim prospect nodes - tiny dark metallic spheres (1-2mm) scattered across the field at varying densities. They carry the barest amber surface sheen, visible only as faint amber pinpricks against the dark void, representing the broad market of unqualified contacts.",
+      "Secondary influence radiations - very faint amber filament lines extending from each bright decision-maker node outward to nearby dim prospect nodes in a radial pattern, suggesting each decision-maker's sphere of organizational influence over subordinates and peers.",
+      "Influence intensity halos - extremely subtle warm amber gradient zones surrounding each bright decision-maker node (not a glow or bloom, but a localized increase in the brightness of nearby dim nodes), creating soft clusters of slightly elevated activity around each key figure.",
+      "Relationship intersection markers - at points where two or more primary influence lines cross, tiny amber diamond-shaped junction markers sit at the intersection, suggesting shared connections or mutual professional networks between decision-makers.",
+      "Depth-layered node clouds - the dim prospect nodes are distributed across multiple depth planes, with closer nodes slightly larger and sharper while distant nodes are smaller and softer, creating a three-dimensional star field effect that extends the constellation deep into the frame."
+    ],
+    "actions": [
+      "Slow amber light pulses travel along the primary influence lines between decision-maker nodes, moving bidirectionally at different speeds on different connections, suggesting active relationship dynamics and ongoing professional communication between key figures.",
+      "The brightest decision-maker nodes pulse with subtle amber intensity variations on individual rhythms, each at a slightly different frequency, creating a living breathing quality to the constellation as if each executive presence radiates its own energy signature.",
+      "Faint amber energy cascades ripple outward from decision-maker nodes through the secondary influence radiations to nearby dim prospect nodes, briefly elevating those dim nodes' brightness before they settle back, suggesting the trickle-down effect of executive influence on surrounding contacts.",
+      "Sparse amber micro-particles drift very slowly through the field in gentle lateral currents, moving through the spaces between nodes like interstellar dust, adding subtle atmospheric depth to the constellation environment."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with amber as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled, the influence halos are subtle brightness zones not optical bloom",
+      "No warm colors outside the amber/gold spectrum",
+      "No cartoon or anime styling - maintain engineered realism"
+    ],
+    "notes": "The viewer should feel the strategic clarity of identifying the few people who truly matter in a vast market. The overwhelming number of dim nodes creates a visual haystack, and the bright amber decision-makers are the needles that the system has found. The influence lines reveal connections that are invisible to the naked eye - hidden professional networks that only systematic intelligence gathering can uncover. The constellation metaphor evokes both scientific precision and the timeless human act of finding patterns in apparent chaos."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary amber accent rim light from behind-right, casting thin amber/gold edge highlights on all 3D objects. Tertiary subtle amber fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep amber (oklch 0.75 0.16 65) as the sole accent color. Secondary accent is a slightly desaturated amber (oklch 0.45 0.10 65) for deeper shadows and subtle gradients. Amber is the designated warm accent for this solution - no cool accent colors. Strict monochromatic amber/gold on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate light refraction through crystalline decision-maker nodes and realistic amber light transport along influence lines",
+      "global_illumination": "Subtle GI bounce from bright decision-maker nodes onto immediately adjacent dim prospect nodes, creating localized warm color zones around key figures"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The constellation exists in a zero-gravity environment - all nodes float freely at their positions without visible support. The overall node distribution suggests organic clustering rather than rigid grid placement, with higher density near decision-makers and sparser distribution in the periphery.",
+      "structural_believability": true,
+      "structural_details": "Influence lines maintain taut geometry between connected nodes like tensioned fibers rather than sagging cables. Relationship intersection markers sit precisely at geometric crossing points. The polyhedral decision-maker nodes have exact crystalline symmetry with no warping or irregular facets."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "decision_maker_nodes": "Polished amber crystalline gemstone with flawless geometric facets, each face catching and refracting ambient light into warm spectral highlights. Internal amber luminescence creates subsurface scattering that makes each facet glow from within. Edges are precision-cut with sharp 0.1mm bevels.",
+      "influence_lines": "Ultra-thin amber luminescent fibers with smooth consistent glow, appearing as precision-drawn light threads rather than physical cables. Varying brightness levels across different lines communicate connection strength - the brightest lines are the strongest professional relationships.",
+      "void_background": "Pure matte black void with no texture or surface features, serving as the infinite dark canvas against which the constellation pattern is revealed."
+    },
+    "module_surfaces": {
+      "dim_prospect_nodes": "Tiny dark metallic spheres with brushed gunmetal finish, carrying the barest amber surface reflection visible only as a faint warm pinprick. At close range, the spheres show micro-machined surface lines suggesting stored but unactivated potential.",
+      "secondary_radiations": "Very faint amber luminescent threads at roughly 20% the brightness of primary influence lines, thin and delicate, extending radially from decision-maker nodes like spider silk catching the barest light.",
+      "intersection_markers": "Small diamond-shaped forms of dark glass with amber-lit edges, sitting at influence-line crossing points like jeweled junction nodes. Each marker is approximately 2mm across with four precisely cut faces.",
+      "depth_field_nodes": "The distant layer of prospect nodes are rendered as soft amber point sources with no discernible geometric detail, appearing as out-of-focus light points that contribute to the star field depth illusion."
+    },
+    "transparency": "Decision-maker crystalline nodes have gemstone-like transparency with internal amber refraction and subsurface scattering. Influence lines are opaque luminescent threads. Intersection markers are semi-transparent dark glass with amber edge illumination. Dim prospect nodes are fully opaque metallic spheres with surface reflection only."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line, walls, or ground plane - pure infinite darkness in all directions creating a free-floating celestial observation space",
+      "Extremely subtle atmospheric haze at distance - the farthest node layers appear slightly softened, adding convincing depth to the three-dimensional star field",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an abstract data visualization environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of amber light dust drifting in slow lateral currents through the constellation field, very small (1-2px), very low opacity (5-10%), suggesting ambient data flow between the market intelligence system nodes",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the brightest decision-maker cluster sits, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the constellation core."
+  },
+  "composition": {
+    "perspective": "Slightly elevated frontal perspective at approximately 15 degrees above horizontal, looking into the constellation field with enough depth angle to reveal the three-dimensional layering of nodes across multiple depth planes, creating a convincing star field parallax effect.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The densest cluster of bright decision-maker nodes occupies the center-left portion of the frame around the left vertical third line. The primary influence web spans across the center two-thirds. Dim prospect node density is highest in the lower half and thins toward the upper edges, grounding the constellation with visual weight below.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Several dim prospect nodes and one secondary decision-maker node nearest the camera, rendered with slight bokeh blur that transforms them into soft amber points of light (slight bokeh blur)",
+      "Mid-ground: The core constellation of bright decision-maker nodes and their primary influence line web - the central focal area with maximum sharpness and detail on crystalline facets (sharp focus)",
+      "Background: Deep layers of dim prospect nodes receding into the void as progressively smaller and softer amber pinpricks, creating the star field depth illusion (soft focus, lower opacity)"
+    ],
+    "negative_space": "The dark void between nodes IS the primary negative space, and it is abundant - the constellation should feel sparse and discovered rather than dense and cluttered, with vast dark stretches between bright nodes that emphasize the rarity of true decision-makers",
+    "visual_flow": "The eye is immediately drawn to the brightest and largest decision-maker node near the center-left third, then traces the primary influence lines outward to discover connected executives. The web pattern creates a spider-web reading path that pulls attention along each connection. After mapping the bright constellation, the eye becomes aware of the surrounding field of dim prospect nodes, appreciating the contrast between the few who matter and the many who surround them. The subtle influence radiations guide the eye back toward the bright core."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "cool color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of a decision-maker constellation floating in pure dark void. A vast dark field populated by hundreds of tiny dim brushed gunmetal prospect-node spheres scattered like a star field at varying densities. Among them, eight to twelve polished amber crystalline polyhedron nodes burn dramatically brighter and larger with intense internal luminescence and flawless geometric facets - cuboctahedrons, icosahedrons, truncated tetrahedrons of varying sizes representing key decision-makers. Thin amber luminescent influence lines connect these bright nodes in a web pattern with varying brightness indicating relationship strength. Very faint secondary amber filament radiations extend from each bright node to nearby dim ones showing spheres of executive influence. Small dark glass diamond-shaped intersection markers sit where influence lines cross. Approximately two hundred dim prospect nodes distributed across multiple depth planes creating three-dimensional star field parallax. Slow amber light pulses travel bidirectionally along influence lines. Bright nodes pulse with individual amber intensity rhythms. Sparse amber micro-particles drift in slow lateral currents through the field. No ground plane or platform - pure free-floating constellation in infinite void. Primary key light upper-left 45 degrees cool 5500K. Amber accent rim light from behind-right on crystalline nodes. Deep soft shadows. Polished amber gemstone with subsurface scattering. Brushed gunmetal dim spheres. Ultra-thin luminescent fiber connections. Camera at slightly elevated frontal view, 55mm focal length, f/4 depth of field with sharp focus on core constellation. Subtle 2-3% film grain. Vast dark negative space between nodes. Deep amber oklch accent only, strict monochromatic amber-gold on black --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, cool colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of a decision-maker constellation floating in a pure dark void with no ground plane or platform. A vast field of approximately two hundred tiny dim brushed gunmetal sphere-nodes scatter across the frame like a star field, each carrying only the barest amber surface pinprick. Among them, eight to twelve dramatically brighter and larger polished amber crystalline polyhedron nodes glow with intense warm internal luminescence and flawless geometric facets - varying types including cuboctahedrons, icosahedrons, and truncated tetrahedrons at different sizes suggesting different executive influence levels. Thin amber luminescent influence lines connect these bright decision-maker nodes to each other in a web pattern, with varying brightness levels indicating relationship strength between key figures. Very faint secondary amber filament radiations extend from each bright node outward to nearby dim prospect nodes in radial patterns showing executive spheres of influence. Small dark glass diamond-shaped intersection markers sit precisely where influence lines cross. The dim prospect nodes are distributed across multiple depth planes creating a convincing three-dimensional star field parallax effect. Slow amber light pulses travel bidirectionally along influence lines at varying speeds. Bright nodes pulse with individual rhythms. Sparse amber micro-particles drift in lateral currents. Key light from upper-left at 45 degrees, cool 5500K. Amber accent rim light from behind-right catching crystalline facets. Polished amber gemstone material with subsurface scattering on bright nodes. Brushed gunmetal on dim spheres. Ultra-thin luminescent fiber connections. Slightly elevated frontal perspective, 55mm lens, medium depth of field. Film grain 2-3%. Strict amber-gold on black palette. No cool tones. No text, no people, no logos, no bright white, no neon glow or bloom. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. Decision-maker constellation in pure dark void with no ground plane. Vast field of approximately two hundred tiny dim brushed gunmetal sphere-nodes scattered like a star field across multiple depth planes. Eight to twelve dramatically brighter larger polished amber crystalline polyhedron nodes with intense internal luminescence and flawless facets - cuboctahedrons, icosahedrons, truncated tetrahedrons at varying sizes. Thin amber luminescent influence lines connecting bright nodes in a web pattern with varying brightness for relationship strength. Faint secondary amber filament radiations extending radially from bright nodes to nearby dim ones showing spheres of influence. Small dark glass diamond-shaped intersection markers at influence-line crossings. Bidirectional amber light pulses traveling along influence lines. Individual amber intensity rhythms on bright nodes. Sparse amber micro-particles drifting laterally at 5-10% opacity. Key light upper-left 45 degrees 5500K cool neutral, amber accent rim light from behind-right. Deep soft-edged shadows. Polished amber gemstone with subsurface scattering on decision-maker nodes. Brushed gunmetal dim prospect spheres with micro-machined surface lines. Ultra-thin luminescent fiber influence lines. Dark glass intersection markers with amber-lit edges. Slightly elevated frontal perspective 15 degrees, 55mm focal length, f/4 aperture, sharp focus on core constellation with star-field depth bokeh on distant layers. Deep amber oklch(0.75 0.16 65) sole accent on strict black palette. Subtle 2-3% film grain. Abundant dark negative space between nodes. No text, no people, no logos, no cool colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

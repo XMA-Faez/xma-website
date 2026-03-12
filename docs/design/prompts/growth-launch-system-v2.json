@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "solution": "Growth Launch System",
+    "variation": "2 - Blueprint Elevation",
+    "accent_color": "deep purple",
+    "accent_oklch": "oklch(0.65 0.2 300)",
+    "concept": "A layered architectural blueprint that transitions from flat 2D line drawings at the base into fully realized 3D structures rising upward. The visual metaphor represents the transformation from planning and strategy into tangible, operational growth infrastructure - from idea to execution."
+  },
+  "core": {
+    "subject": "A multi-layered blueprint composition where the bottom layer is a flat 2D technical drawing rendered in thin purple lines on a dark surface, and as the layers ascend vertically, each successive plane gains more dimensionality, depth, and material solidity until the topmost layer is a fully extruded 3D architectural structure with real surfaces and volume. The transition from 2D to 3D happens across five distinct horizontal planes stacked with visible gaps between them, each layer hovering above the last. The 2D base layer shows precise technical line work - flowcharts, system diagrams, and connection pathways all drawn in thin purple strokes. The topmost 3D layer features solid dark structures with purple-lit edges, thick walls, and architectural detail suggesting a complete operational system ready to function.",
+    "scene": "The layered blueprint stack floats in a deep void, angled to show the vertical separation between layers. A faint purple grid on a ground plane below anchors the composition. Thin purple vertical connection lines run between corresponding points on each layer, showing how 2D plans map directly to 3D reality. The space between layers has faint purple particle dust suggesting energy and transformation occurring in the gaps.",
+    "objects": [
+      "The bottom layer - a perfectly flat dark plane with intricate 2D technical drawings rendered in thin purple line work, showing flowchart boxes, connecting arrows, circular nodes, and pathway lines that form a system architecture diagram without any readable text.",
+      "The second layer - a slightly elevated plane where the same line drawings have begun to extrude minimally, with boxes gaining 1-2mm of height and lines thickening, rendered in a slightly brighter purple with faint surface material beginning to form.",
+      "The third middle layer - a transitional plane where structures are half-extruded, showing clear 3D box shapes with visible walls but still partially transparent, edges glowing in purple, some surfaces rendered as frosted dark glass.",
+      "The fourth layer - nearly complete 3D structures with solid dark charcoal walls, purple-lit edges, and clear architectural detail including doorway-like openings, bridge connections between modules, and defined surface textures.",
+      "The topmost layer - fully realized 3D architectural structures with thick matte dark walls, precise geometric forms, interconnected walkways, and strong purple accent lighting along all edges, appearing solid, operational, and complete.",
+      "Thin purple vertical guide lines connecting corresponding structural points between all five layers, drawn as dotted or dashed lines, showing the direct relationship between the 2D plan and the 3D result.",
+      "A subtle purple radial pulse emanating from the center of the middle transitional layer, suggesting the transformation energy that converts flat plans into dimensional reality."
+    ],
+    "actions": [
+      "The layers are in a state of gradual elevation - the middle layers appear to be actively rising and gaining dimension, with subtle motion suggested by faint purple particle trails on their ascending edges.",
+      "Purple energy pulses travel upward along the vertical guide lines, moving from the 2D base toward the 3D top, visualizing the flow of planning becoming execution.",
+      "The structures on the middle transitional layer are mid-extrusion - walls are actively growing upward from their 2D footprints, caught in the act of becoming three-dimensional."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with purple as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should feel the power of systematic planning - that a well-designed blueprint inevitably rises into a fully functioning system. The vertical progression from 2D to 3D communicates that XMA's growth launch system is built from meticulous architectural thinking, not guesswork."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary purple accent rim light from behind-right, casting thin purple edge highlights on all 3D objects. Tertiary subtle purple fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep purple (oklch 0.65 0.2 300) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated purple (oklch 0.4 0.12 300) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic purple on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 50,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the purple-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Each layer hovers with stable, magnetic suspension - no wobble or instability. The gaps between layers are uniform and deliberate, suggesting precision engineering rather than random floating.",
+      "structural_believability": true,
+      "structural_details": "The 2D-to-3D transition follows logical structural rules - walls extrude from line footprints, connections maintain their topology across layers, and the final 3D structures have proper architectural proportions with load-bearing logic."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "base_2d_plane": "Ultra-thin dark matte surface resembling technical drafting paper or a dark slate, with embedded purple line work that appears etched or engraved into the surface rather than painted on. The lines have a subtle inner luminosity.",
+      "transitional_planes": "Semi-transparent frosted dark glass that becomes progressively more opaque from bottom to top. The middle layers have a smoky quartz quality - you can see through them but forms behind are distorted and muted.",
+      "ground_grid": "Near-invisible dark plane with razor-thin purple grid lines at 5% opacity, extending outward and fading into the void, serving as a spatial anchor."
+    },
+    "module_surfaces": {
+      "2d_line_structures": "Thin purple lines with a technical precision quality, perfectly straight with exact 90-degree corners, rendered at consistent 1px stroke weight. Line intersections have small purple dot nodes.",
+      "mid_extrusion_structures": "Frosted dark glass walls with purple edge accents, surfaces transitioning from transparent to opaque. Visible internal wireframe skeleton where the glass is most transparent.",
+      "complete_3d_structures": "Solid matte dark charcoal with a fine concrete-like micro-texture, strong purple accent lighting along all edges and seams. Surfaces have subtle beveled edges catching purple rim light.",
+      "connection_bridges": "Slim horizontal beams linking modules on the upper layers, rendered in dark material with purple center-line accents, suggesting data pathways and system interconnections."
+    },
+    "transparency": "Progressive transparency gradient across layers - bottom layer is opaque dark surface, middle layers are semi-transparent frosted glass revealing internal structure, top layer returns to full opacity with solid architectural materials. The vertical guide lines between layers are rendered as thin dashed lines at 30% opacity."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of purple light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Isometric-influenced three-quarter perspective that clearly shows the vertical stacking and horizontal extent of all five layers. Slight convergence toward a single upper vanishing point emphasizes the upward progression from 2D to 3D.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The middle transitional layer (the moment of transformation) sits at the center horizontal third intersection. The 2D base layer occupies the lower third zone, and the completed 3D structures crown the upper third, creating a clear bottom-to-top narrative.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Lower corner of the 2D base layer with fine purple line detail visible (slight bokeh blur)",
+      "Mid-ground: The middle three layers showing active 2D-to-3D transformation (sharp focus)",
+      "Background: The topmost completed 3D layer and scattered particles above it (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters at the flat 2D base layer at the bottom, is drawn upward by the vertical guide lines and ascending purple energy pulses, pauses at the dramatic mid-transformation layer, and continues upward to the fully realized 3D structures at the top - a bottom-to-top journey that mirrors the process of turning plans into operational systems."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic 3D render of a dark tech product visualization showing a layered blueprint elevation concept. Five distinct horizontal planes are stacked vertically with visible gaps between them, floating in a deep black void above a faint purple perspective grid. The bottom layer is a flat dark plane with intricate 2D technical drawings rendered in thin purple line work showing flowchart boxes, connecting pathways, and circular nodes. Each successive layer gains more three-dimensionality - the second layer has slightly extruded lines, the third middle layer shows half-extruded structures in frosted dark glass with purple edges, the fourth has nearly complete solid dark charcoal architectural forms with purple-lit edges, and the topmost layer features fully realized 3D structures with thick matte dark walls, interconnected walkways, and strong purple accent edge lighting. Thin purple dashed vertical guide lines connect corresponding structural points between all five layers. Purple energy pulses travel upward along these guides. Structures on the middle layer are caught mid-extrusion with walls actively growing from 2D footprints. Materials transition from etched purple lines on dark slate at the base through smoky quartz semi-transparent frosted glass in the middle to solid fine concrete-like dark charcoal with beveled purple-lit edges at the top. Cool-neutral key light from upper-left, purple accent rim light from behind-right, subtle purple under-glow from below. Camera at three-quarter isometric-influenced view, 50mm lens, f/4 depth of field. Sparse purple micro-particles between layers. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic black. Dark premium cinematic aesthetic inspired by Linear, Vercel, and Stripe marketing imagery. --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic 3D render in dark premium tech aesthetic showing a layered blueprint elevation concept. Five horizontal planes stack vertically with gaps between them, floating in a pitch-black void above a faint deep purple perspective grid. The bottom layer is a flat dark surface with intricate 2D technical line drawings in thin purple showing flowchart structures, connecting pathways, and node points - no readable text. Each layer above gains more dimensionality: the second has slightly extruded lines, the third middle layer shows half-extruded structures in frosted dark glass with purple edge glow, the fourth has nearly solid dark charcoal architectural forms with purple-lit edges and doorway openings, and the top features fully realized 3D matte dark structures with thick walls, walkway connections, and strong purple accent edge lighting. Thin purple dashed vertical guide lines connect corresponding points across all layers. Purple energy pulses travel upward along these connections. The middle layer structures are mid-extrusion with walls actively growing from their 2D footprints. Materials transition from engraved purple lines on dark slate at base, through smoky semi-transparent frosted glass at center, to solid concrete-textured dark charcoal with purple-lit beveled edges at top. Cool-neutral key light from upper-left at 45 degrees. Purple accent rim light from behind-right. Subtle purple under-glow. Isometric-influenced three-quarter camera angle, 50mm focal length, f/4 depth of field. Sparse purple light dust particles between layers. Subtle film grain. Deep purple is the only accent color. No text, labels, logos, people, warm colors, neon glow, or bloom effects. Inspired by Linear, Vercel, and Stripe product visualization style. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, cinematic dark tech product visualization, professional studio quality, physically based rendering, sharp detail, clean anti-aliased edges, professional color grading, high dynamic range. Five distinct horizontal planes stacked vertically with visible gaps, floating in deep black void above faint purple grid. Bottom layer is flat dark plane with intricate 2D technical purple line drawings - flowcharts, nodes, pathways, no text. Progressive 2D-to-3D transformation across ascending layers: second layer has minimally extruded lines in brighter purple, third middle layer shows half-extruded frosted dark glass structures with purple edges mid-transformation, fourth layer has nearly complete solid dark charcoal architectural forms with purple-lit edges and bridge connections, topmost layer features fully realized 3D matte dark structures with thick walls, walkways, and strong purple accent edge lighting. Thin purple dashed vertical guide lines connect corresponding points across all five layers. Purple energy pulses travel upward. Mid-extrusion structures caught actively growing from 2D footprints. Material progression from engraved purple lines on dark slate base through smoky quartz frosted glass middle layers to solid fine concrete-textured dark charcoal with beveled purple edges at top. Cool-neutral key light upper-left 45 degrees. Purple accent rim light behind-right. Subtle purple under-glow. Isometric-influenced three-quarter camera view slightly above eye level, 50mm lens, f/4 depth of field. Sharp mid-ground focus, gentle bokeh on periphery. Sparse purple light dust micro-particles at 5-10% opacity. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic near-black palette. No text, no labels, no people, no logos, no warm colors, no neon, no bloom, no bright white. Premium editorial aesthetic. Wide 16:9."
+  }
+}

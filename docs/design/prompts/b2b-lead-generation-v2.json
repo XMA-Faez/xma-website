@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "B2B Lead Generation",
+    "variation": "2 - Industry Cluster Map",
+    "accent_color": "deep amber",
+    "accent_oklch": "oklch(0.75 0.16 65)",
+    "concept": "Distinct industry-sector territories rendered as hexagonal island platforms connected by bridge pathways showing cross-industry prospect flows. Each territory cluster has internal node networks representing companies within that sector. The visualization represents mapping the total addressable market by industry - understanding which sectors hold the highest concentration of ideal prospects and how opportunities flow between them."
+  },
+  "core": {
+    "subject": "Seven hexagonal island platforms of varying sizes float at slightly different elevations in dark space, each representing a distinct industry sector territory. The largest central hexagon hosts a dense internal network of small interconnected company nodes with amber connection lines, while smaller peripheral hexagons hold sparser networks of fewer nodes. Narrow bridge pathways of frosted dark glass connect adjacent hexagons at their edges, with amber light pulses traveling across these bridges to represent cross-industry prospect flow between sectors. The entire assembly reads as an aerial view of a segmented market landscape where each territory has been mapped, measured, and connected into a unified prospecting infrastructure.",
+    "scene": "The hexagonal island cluster floats above a vast dark plane that extends into pure black void. Beneath each hexagon, a faint amber hexagonal shadow-glow reflects on the surface below, establishing spatial grounding. The dark plane has an extremely subtle amber hexagonal tessellation pattern barely visible near the center, suggesting the underlying grid structure of the market mapping system.",
+    "objects": [
+      "Central primary hexagon - the largest platform approximately 25cm across, constructed from layered dark slate-like stone with precisely machined edges and a 2mm amber-lit channel running along every edge. Its top surface hosts a dense network of thirty to forty tiny sphere-nodes connected by hair-thin amber filament lines forming a complex web of company relationships.",
+      "Six peripheral hexagons - each roughly 12-18cm across at varying sizes, same dark slate construction with amber edge channels, each hosting smaller networks of eight to fifteen company nodes with their own internal connection webs. Each hexagon sits at a slightly different elevation creating subtle depth variation across the cluster.",
+      "Bridge pathways - twelve narrow connecting spans of frosted dark glass (roughly 8cm long, 1.5cm wide) linking adjacent hexagons at their nearest edges, each bridge containing a thin amber fiber-optic core along its center that carries visible directional light pulses between territories.",
+      "Company nodes on platforms - tiny dark metallic spheres (2-4mm diameter) with amber surface pinpoints of light, arranged in organic cluster patterns on each hexagonal surface. Nodes on the central hexagon glow brighter and are more densely packed than those on peripheral hexagons.",
+      "Connection filaments between nodes - hair-thin amber lines connecting nodes within each hexagon in web-like patterns, with varying brightness suggesting different relationship strengths between companies. Some filaments are bright and direct, others dim and meandering.",
+      "Sector identifier markers - small geometric shapes (cube, pyramid, octahedron, etc.) sitting at the center of each peripheral hexagon, each a different dark metallic form with amber edge highlighting, differentiating sectors without using text. Each marker is unique to its territory.",
+      "Flow indicator particles - very small amber light motes traveling along the bridge pathways between hexagons in consistent directional streams, some bridges showing heavier traffic (more particles) than others, revealing which cross-industry flows carry the most prospect opportunity."
+    ],
+    "actions": [
+      "Amber light pulses travel across bridge pathways between hexagons in specific directions, some bridges carrying bidirectional flow while others show predominantly one-way traffic, illustrating the natural flow of prospect opportunities between industry sectors.",
+      "Company nodes on the central hexagon pulse in subtle rhythmic sequences as if being actively scanned and cataloged, with brief amber intensity flares rippling outward through nearby connection filaments when a node activates.",
+      "Flow indicator particles stream along bridges at varying densities - some bridges carry thick streams of amber motes while others have only sparse occasional particles, communicating which cross-industry pathways yield the highest prospect volume.",
+      "The connection filaments within each hexagon shimmer with low-level amber energy that occasionally brightens along specific pathways, suggesting the system continuously mapping and updating relationship data within each sector territory."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with amber as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No warm colors outside the amber/gold spectrum",
+      "No cartoon or anime styling - maintain engineered realism"
+    ],
+    "notes": "The viewer should immediately grasp the idea of a market segmented by industry with each segment thoroughly mapped and interconnected. The hexagonal tiling communicates systematic territorial coverage - no gaps, no overlaps, every sector accounted for. The bridges between sectors emphasize that B2B prospecting is not siloed but interconnected, with opportunities flowing between industries in measurable patterns. The dense central hexagon suggests a primary target market surrounded by adjacent opportunities."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary amber accent rim light from behind-right, casting thin amber/gold edge highlights on all 3D objects. Tertiary subtle amber fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep amber (oklch 0.75 0.16 65) as the sole accent color. Secondary accent is a slightly desaturated amber (oklch 0.45 0.10 65) for deeper shadows and subtle gradients. Amber is the designated warm accent for this solution - no cool accent colors. Strict monochromatic amber/gold on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal)",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on hexagonal platform surfaces and realistic light transport through frosted glass bridge pathways",
+      "global_illumination": "Subtle GI bounce from amber-lit edge channels and node networks onto nearby dark surfaces, creating realistic warm color bleeding at platform edges and bridge junctions"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Hexagonal platforms float at stable elevations with faint amber reflections beneath each one on the dark ground plane, selling the magnetic levitation illusion. Bridge pathways span between platforms with slight structural sag suggesting real material weight. Company nodes rest with visible contact on platform surfaces.",
+      "structural_believability": true,
+      "structural_details": "Bridge pathways connect to hexagonal platform edges at clearly defined junction mounts with visible bracket hardware. Each hexagon has layered construction with visible edge thickness suggesting solid structural mass. Sector identifier markers sit in recessed cradle mounts at each hexagon center."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "hexagonal_platforms": "Layered dark slate stone with fine sedimentary grain visible on edge cross-sections, top surfaces are precision-ground flat with a matte finish. The 2mm amber edge channels are routed into the stone with clean CNC-cut precision, filled with luminescent amber material flush to the surface.",
+      "bridge_pathways": "Frosted dark glass with 60% opacity, the glass has a slightly textured exterior finish that diffuses the internal amber fiber-optic core into a soft warm linear glow. Edges are beveled and polished, catching rim light as crisp amber lines.",
+      "ground_plane": "Near-black polished basalt with an extremely faint hexagonal tessellation pattern visible only at shallow viewing angles, the pattern lines are etched at barely perceptible depth with no luminescence, suggesting the underlying grid framework."
+    },
+    "module_surfaces": {
+      "company_nodes": "Tiny dark metallic spheres with a brushed gunmetal finish, each featuring a single amber pinpoint light on its top hemisphere like a miniature status indicator LED. Surface has micro-machined latitude-longitude grid lines barely visible at close range.",
+      "connection_filaments": "Hair-thin amber luminescent threads with smooth consistent glow along their length, no flickering or variation except brightness differences between filaments. They appear as precision-drawn light traces rather than physical wires.",
+      "sector_markers": "Dark anodized titanium geometric forms (cube, pyramid, octahedron, etc.) with amber edge highlighting on every structural crease, matte finish with fine machining marks on flat faces, each form distinct in geometry but unified in material language.",
+      "flow_particles": "Very small amber light motes (1-2px equivalent) with soft trailing glow tails extending 3-4mm behind each particle in the direction of travel, creating directional motion streaks along bridge pathways."
+    },
+    "transparency": "Bridge pathway glass maintains 60% opacity with soft internal amber diffusion. The amber edge channels on hexagons are opaque luminescent material flush-set into stone. Company nodes are fully opaque metallic. Flow particles are semi-transparent amber light with trailing opacity falloff."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - peripheral hexagons appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of amber light dust scattered throughout the mid-ground above the hexagonal cluster, very small (1-2px), very low opacity (5-10%), drifting laterally to suggest ambient data flow in the market mapping space",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the central hexagon sits, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the densest cluster."
+  },
+  "composition": {
+    "perspective": "Elevated three-quarter perspective looking down at approximately 35 degrees above horizontal, providing a near-aerial view that reveals the hexagonal tessellation pattern, the bridge connections between platforms, and the node network patterns on each platform surface.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The large central hexagon sits at the center-left intersection of the rule-of-thirds grid, with the densest cluster of bridges and flow particles concentrated in the center third. Peripheral hexagons radiate outward into the outer thirds, with two reaching toward the viewer in the lower portion and three receding into the upper background.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Two peripheral hexagons nearest the camera in the lower frame, their edges and nearest bridge connections rendered with slight bokeh blur (slight bokeh blur)",
+      "Mid-ground: The central primary hexagon with its dense node network, the busiest bridge pathways, and adjacent sector hexagons - the primary focal area with maximum sharpness (sharp focus)",
+      "Background: Two to three distant peripheral hexagons receding into the dark void, their node networks barely distinguishable, amber edge channels dimmer (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the hexagonal cluster, with the void between and around platforms contributing to the island-archipelago visual metaphor",
+    "visual_flow": "The eye enters at the bright dense central hexagon drawn by its concentration of amber node activity, then traces outward along the bridge pathways to discover peripheral industry territories. The varying flow-particle density on different bridges guides attention to the highest-traffic connections first. The eye orbits the cluster following the bridge network before returning to the central hub, creating a centripetal reading pattern that mirrors how market mapping radiates outward from a core focus."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "cool color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of an industry cluster map floating in dark void space. Seven hexagonal island platforms of dark layered slate stone at varying elevations, each with 2mm amber-lit edge channels routed with CNC precision. The largest central hexagon hosts a dense network of thirty to forty tiny dark metallic sphere-nodes connected by hair-thin amber luminescent filaments forming a complex company relationship web. Six smaller peripheral hexagons hold sparser networks of eight to fifteen nodes each with their own internal amber connection webs. Twelve narrow frosted dark glass bridge pathways connect adjacent hexagons at their edges, each bridge containing a thin amber fiber-optic core carrying visible directional light pulses between territories. Small amber flow-indicator particles stream along bridges at varying densities showing cross-industry prospect volume. Small unique dark anodized titanium geometric markers at each hexagon center differentiate sectors - cube, pyramid, octahedron forms with amber edge highlighting. Faint amber hexagonal shadow-glow beneath each platform on the near-black ground plane. Company nodes are brushed gunmetal spheres with amber pinpoint status LEDs. Primary key light from upper-left at 45 degrees with cool 5500K temperature. Amber accent rim light from behind-right. Subtle amber fill from below. Deep soft shadows with 4:1 lighting ratio. Materials include layered slate with sedimentary grain, frosted dark glass bridges at 60% opacity, brushed gunmetal nodes. Camera at elevated three-quarter angle approximately 35 degrees, 55mm focal length, f/4 depth of field. Sparse amber micro-particles drifting laterally. Subtle 2-3% film grain. Dark premium tech visualization inspired by Linear and Vercel aesthetics. Deep amber oklch accent only, strict monochromatic amber-gold on black --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, cool colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of an industry cluster map floating in a dark void. Seven hexagonal island platforms of varying sizes made from layered dark slate stone float at slightly different elevations. Each hexagon has 2mm amber-lit channels routed along every edge with CNC precision. The largest central hexagon hosts a dense internal network of thirty to forty tiny dark metallic sphere-nodes with amber pinpoint status lights, connected by hair-thin amber luminescent filaments forming a complex web of company relationships. Six smaller peripheral hexagons hold sparser networks of eight to fifteen nodes each. Twelve narrow frosted dark glass bridge pathways connect adjacent hexagons, each containing a thin amber fiber-optic core carrying visible directional light pulses between industry territories. Small amber flow-indicator particles stream along bridges at varying densities - heavier traffic on some bridges than others - showing cross-industry prospect opportunity flow. Unique small dark anodized titanium geometric markers at each hexagon center (cube, pyramid, octahedron) differentiate sectors with amber edge highlighting. Faint amber hexagonal shadow-glow reflects on the near-black basalt ground plane beneath each platform. An extremely faint hexagonal tessellation pattern on the ground suggests the underlying market grid. Key light from upper-left at 45 degrees, cool neutral 5500K. Amber accent rim light from behind-right. Subtle amber fill from below. Deep soft shadows. Layered slate with visible sedimentary grain. Frosted glass bridges at 60% opacity. Brushed gunmetal sphere nodes. Camera at elevated three-quarter view, 55mm lens. Sparse amber micro-particles. Film grain 2-3%. Strict amber-gold on black palette. No cool tones. No text, no people, no logos, no bright white, no neon glow or bloom. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. Seven hexagonal island platforms of layered dark slate stone floating at varying elevations in deep void. Each hexagon has 2mm amber-lit CNC-routed edge channels. Central largest hexagon hosts dense network of thirty to forty tiny brushed gunmetal sphere-nodes with amber pinpoint LEDs connected by hair-thin amber luminescent filaments. Six peripheral hexagons hold sparser networks of eight to fifteen nodes. Twelve frosted dark glass bridge pathways at 60% opacity connecting hexagons with amber fiber-optic cores carrying directional light pulses. Amber flow particles streaming along bridges at varying densities showing cross-industry prospect volume. Unique dark anodized titanium geometric sector markers at hexagon centers with amber edge highlighting. Faint amber hexagonal shadow-glow on near-black basalt ground beneath platforms. Faint hexagonal tessellation on ground plane. Key light upper-left 45 degrees 5500K cool neutral, amber accent rim light from behind-right, subtle amber fill from below. 4:1 key-to-fill lighting ratio, moody low-key atmosphere. Deep soft-edged shadows. Camera elevated three-quarter view 35 degrees above horizontal, 55mm focal length, f/4 aperture. Sharp focus on central hexagon with gentle peripheral falloff. Sparse amber micro-particles drifting laterally at 5-10% opacity. Layered slate with sedimentary grain, frosted glass bridges, brushed gunmetal nodes, anodized titanium markers. Deep amber oklch(0.75 0.16 65) sole accent on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no cool colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

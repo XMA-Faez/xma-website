@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Growth Launch System",
+    "variation": "4 - Building Blocks Grid",
+    "accent_color": "deep purple",
+    "accent_oklch": "oklch(0.65 0.2 300)",
+    "concept": "A field of modular cubes assembling themselves into a larger cohesive infrastructure on a dark grid surface. Individual blocks rise from the grid, translate through space, and lock into their designated positions within a growing superstructure. The metaphor communicates that a growth system is built from standardized, interchangeable components that combine into something far greater than their individual parts."
+  },
+  "core": {
+    "subject": "A three-dimensional grid surface populated with dozens of modular dark cubes in various stages of assembly. In the center-right of the composition, a partially complete superstructure rises - approximately 60% assembled - formed from cubes that have locked together with precise tolerances, their shared edges glowing with thin purple seam lines indicating successful connection. Scattered across the grid surface, individual cubes are caught in different phases of movement: some rising vertically from flush-mounted grid positions, some translating horizontally through the air, and some rotating to align before locking into the superstructure. The assembled portion of the superstructure reveals an intentional architectural form - not a random pile but an organized infrastructure with corridors, chambers, and interconnected pathways visible through gaps where blocks have not yet arrived.",
+    "scene": "A vast dark grid surface extends across the lower portion of the scene, rendered as a flat plane with thin purple grid lines forming a regular square pattern. The grid has subtle depth - each grid cell is very slightly recessed, and some cells contain cubes sitting flush, ready to be activated. The superstructure rises from this grid surface with clear structural logic. The void above is pure darkness, and the grid fades to black at the distant edges.",
+    "objects": [
+      "The partially assembled superstructure - a complex geometric form made of interlocked dark cubes approximately 60% complete, with visible architectural intent showing corridors, chambers, and interconnected pathways through the gaps. Connected cube edges glow with thin purple seam lines, and the overall form has a fortress-like quality suggesting robust infrastructure.",
+      "A cluster of five cubes caught mid-flight approaching the superstructure from the left - they travel in a loose formation, each slightly offset from the others, with thin purple trajectory lines trailing behind them showing their calculated flight paths.",
+      "Three cubes in the process of rising vertically from flush grid positions - they hover 5-10cm above their grid cells, with purple light visible in the gap between cube and grid surface, suggesting an activation or deployment mechanism.",
+      "A single cube at the moment of connection - caught exactly at the instant it locks into the superstructure, with a purple pulse rippling outward from the contact seam and tiny purple particles bursting at the junction point.",
+      "Several empty grid cells with thin purple dotted outlines in the shape of cubes, indicating reserved positions where blocks have already departed - these vacated cells have a dim purple residual glow.",
+      "A row of dormant cubes still sitting flush in the grid surface at the far edge of the scene - fully dark with no purple activation glow, suggesting reserves waiting to be called into service.",
+      "Thin purple trajectory arc lines drawn in the air between departed grid cells and their target positions on the superstructure - calculated parabolic paths showing the planned routes of cube delivery, rendered as fine dotted lines at 20% opacity."
+    ],
+    "actions": [
+      "Multiple cubes are simultaneously in transit across the scene - some rising, some translating laterally, some rotating to match their target orientation - creating a sense of coordinated parallel construction activity.",
+      "The connection cube is generating a purple pulse ripple that radiates outward along the seam lines of adjacent already-connected cubes, like a confirmation signal propagating through the network that a new component has been integrated.",
+      "The rising cubes levitate upward with a smooth, controlled ascent, purple light intensifying in the gap beneath them as they clear their grid cells and begin lateral movement toward the superstructure.",
+      "Dormant cubes at the far edge of the grid begin to show the faintest purple edge glow, suggesting they are queued for activation and will soon join the construction sequence."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with purple as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should feel a sense of intelligent, automated construction - not chaos but choreography. Every cube knows its destination, every trajectory is calculated, and the emerging superstructure is clearly the result of systematic planning. This communicates that the Growth Launch System uses proven, modular components that assemble predictably into complete business infrastructure."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary purple accent rim light from behind-right, casting thin purple edge highlights on all 3D objects. Tertiary subtle purple fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep purple (oklch 0.65 0.2 300) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated purple (oklch 0.4 0.12 300) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic purple on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 50,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the purple-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "Cubes move with deliberate, magnetically-guided trajectories - not ballistic arcs but controlled linear and curved paths suggesting intelligent guidance systems. Rising cubes accelerate smoothly. Locking cubes decelerate precisely at the connection point. The superstructure has convincing structural mass.",
+      "structural_believability": true,
+      "structural_details": "Cubes are uniformly sized with precise geometric proportions. Connected cubes share edges with zero-gap tolerances. The superstructure follows logical building principles - lower sections support upper sections, cantilevers are minimal, and the overall form has a center of gravity that makes structural sense."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "grid_surface": "Flat matte dark plane with thin purple grid lines etched into the surface at regular intervals. Grid cells are very slightly recessed (0.5mm) creating micro-shadows at cell boundaries. Flush-mounted cubes sit perfectly level with the grid surface. The grid extends broadly but fades to invisible at the scene edges.",
+      "void_space": "Pure matte black above the grid surface with zero reflectivity. The only illumination in the void comes from the purple accent lighting on the cubes and superstructure.",
+      "trajectory_lines": "Hair-thin purple dotted lines rendered at 20% opacity, showing calculated parabolic paths between departure and arrival points. Lines have a technical, computed quality with evenly-spaced dots."
+    },
+    "module_surfaces": {
+      "active_cubes_in_transit": "Dark charcoal matte surfaces with thin purple edge lines on all twelve edges. The cubes have a machined-aluminum micro-texture with very subtle surface variation. Each cube's forward-facing surfaces catch purple rim light, while trailing surfaces are in deep shadow.",
+      "connected_cubes_in_superstructure": "Identical dark charcoal matte material to active cubes, but their shared connection seams glow with thin purple lines indicating integration. The connected cubes appear slightly darker than in-transit cubes, as if they have settled and powered down their individual systems.",
+      "dormant_cubes_in_grid": "Nearly invisible dark cubes sitting flush with the grid surface, matching the grid color almost exactly. Only the faintest purple edge highlight distinguishes them from empty grid cells. They appear inert and waiting.",
+      "connection_seam_lines": "Razor-thin purple luminous lines along the shared edges of connected cubes, with subtle brightness variation - brighter at recent connection points, dimmer at established connections, suggesting a network that shows activity propagation."
+    },
+    "transparency": "No transparent elements in this variation - all cubes are solid and opaque. The visual depth comes from the grid surface extending into the distance and the gap-corridors visible within the partially assembled superstructure, where you can see through the openings between cubes to the dark interior."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of purple light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Wide three-quarter overhead view at approximately 35 degrees above horizontal and 25 degrees to the right, showing the expansive grid surface, the rising superstructure, and the distributed cube activity across the scene. Mild wide-angle distortion to capture the breadth of the construction field.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The superstructure rises from the right-center third intersection, with the grid surface extending broadly across the lower two-thirds. The cluster of in-transit cubes occupies the left third, creating a clear directional flow from source grid cells on the left to the growing superstructure on the right.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Dormant cubes and empty grid cells in the lower-left corner with fine grid line detail (slight bokeh blur)",
+      "Mid-ground: The superstructure, in-transit cubes, and active grid area - the primary construction zone (sharp focus)",
+      "Background: Distant grid edges fading to black, scattered ambient purple particles (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters at the dormant grid cubes in the lower-left, follows the activation sequence as cubes begin to glow and rise, tracks along the purple trajectory lines through the mid-air transit zone, and arrives at the superstructure in the center-right where cubes lock into place - a left-to-right flow that mirrors a manufacturing assembly line and communicates systematic, sequential construction."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic 3D render of a dark tech product visualization showing modular building blocks assembling into infrastructure. A vast dark grid surface with thin purple grid lines extends across the scene with dozens of dark charcoal cubes in various stages of assembly. In the center-right, a partially complete superstructure approximately 60% assembled rises from the grid, formed from interlocked cubes with thin purple seam lines glowing along connected edges, revealing corridors, chambers, and interconnected pathways through gaps. A cluster of five cubes approaches from the left in loose formation with thin purple trajectory trail lines. Three cubes rise vertically from flush grid positions with purple light in the gap beneath. A single cube is caught at the exact moment of connection, generating a purple pulse ripple along adjacent seams with tiny particle burst at the junction. Empty grid cells show purple dotted cube outlines where blocks departed. Dormant cubes sit flush in the far grid edge with no activation glow. Trajectory arc lines in thin purple dots at 20% opacity show calculated delivery paths. All cubes have machined-aluminum micro-texture with purple edge highlights. Connected cubes have thinner purple seams, brighter at recent connections. The grid has slightly recessed cells with micro-shadows. Cool-neutral key light from upper-left, purple accent rim light from behind-right, subtle purple under-glow. Wide three-quarter overhead camera view at 35 degrees, 50mm lens, f/4 depth of field. Sparse purple micro-particles. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic black. Cinematic premium aesthetic inspired by Linear, Vercel, and Stripe. --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic 3D render in dark premium tech aesthetic depicting modular building blocks assembling into a larger infrastructure. A vast dark grid surface with thin deep purple grid lines hosts dozens of uniform dark charcoal cubes in different assembly stages. Center-right, a partially complete superstructure rises - about 60% built - formed from interlocked cubes with thin purple seam lines along connected edges, showing visible corridors and pathways through gaps. Five cubes approach from the left in formation trailing thin purple trajectory lines. Three cubes rise vertically from flush grid positions with purple light beneath. One cube locks in at the exact connection moment with a purple pulse ripple along adjacent seams and tiny particle burst. Empty departure cells have purple dotted outlines. Dormant cubes sit flush at the far grid edge without glow. Purple dotted trajectory arcs at low opacity show calculated delivery routes. Cubes have machined-aluminum micro-texture with purple edge highlights. Grid cells are slightly recessed with micro-shadows. Cool-neutral key light from upper-left at 45 degrees, purple accent rim light from behind-right, subtle purple under-glow. Wide three-quarter overhead view at 35 degrees, 50mm focal length, f/4 depth of field. Sparse purple light dust particles. Subtle film grain. Deep purple is the only accent color. No text, labels, logos, people, warm colors, neon glow, or bloom. Inspired by Linear, Vercel, and Stripe product visualization. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, cinematic dark tech product visualization, professional studio quality, physically based rendering, sharp detail, clean anti-aliased edges, professional color grading, high dynamic range. Vast dark grid surface with thin deep purple grid lines extending across scene, dozens of uniform dark charcoal matte cubes in various assembly stages. Center-right a partially complete superstructure approximately 60% built rises from grid, interlocked cubes with thin purple seam lines along connected edges revealing corridors and interconnected pathways through gaps. Five cubes mid-flight from left in loose formation trailing thin purple trajectory lines. Three cubes rising vertically from flush grid positions with purple light in gaps beneath. Single cube at exact connection moment generating purple pulse ripple along adjacent seams with particle burst at junction. Empty departure cells with purple dotted cube outlines. Dormant flush cubes at far grid edge without activation glow. Thin purple dotted trajectory arcs at 20% opacity showing calculated delivery paths. Machined-aluminum micro-textured cube surfaces with purple edge highlights on all twelve edges. Connected cubes with thinner purple seams brighter at recent junctions. Slightly recessed grid cells with micro-shadows at boundaries. Cool-neutral key light upper-left 45 degrees. Purple accent rim light behind-right. Subtle purple under-glow. Wide three-quarter overhead view 35 degrees above horizontal, 50mm lens, f/4 depth of field. Sharp mid-ground focus, bokeh on periphery. Sparse purple micro-particles 5-10% opacity. Subtle 2-3% film grain. Deep purple oklch 0.65 0.2 300 sole accent on monochromatic near-black. No text, no labels, no people, no logos, no warm colors, no neon, no bloom, no bright white. Premium editorial aesthetic. Wide 16:9."
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "E-Commerce Revenue Engine",
+    "variation": "3 - Multi-Channel Commerce Grid",
+    "accent_color": "deep cyan",
+    "accent_oklch": "oklch(0.7 0.15 195)",
+    "concept": "Parallel vertical shopping channel streams - each representing a distinct commerce channel (storefront, marketplace, social, mobile, wholesale) - flowing downward as separate luminous cyan data streams that converge at the bottom into a single unified collection pool. The visual metaphor is multiple revenue streams being captured and consolidated through systematic multi-channel commerce infrastructure."
+  },
+  "core": {
+    "subject": "Five vertical transparent column structures arranged in a row across the composition, each column representing a distinct e-commerce channel. Each column contains a unique iconic object at its top - a storefront facade, a marketplace stall canopy, a social media card, a mobile device frame, and a wholesale shipping container - all rendered in dark materials with cyan accents. Below each object, a stream of luminous cyan data particles flows downward through the transparent column, all five streams converging at the base into a single wide collection basin that pools and consolidates the combined flow into one unified bright cyan reservoir.",
+    "scene": "A dark void environment with a wide rectangular matte black platform supporting the five column structures. The columns are evenly spaced across the platform width, creating a grid-like rhythm. The platform has thin cyan grid lines forming a perspective grid that converges toward the viewer, adding depth. At the front edge of the platform, a wide shallow basin with dark metal walls collects the converging streams, the basin surface glowing with pooled cyan energy. The overall composition reads as organized parallel infrastructure - multiple independent channels operating simultaneously but feeding into one system.",
+    "objects": [
+      "Storefront column - the leftmost transparent column with a miniature dark metal storefront facade at its top, featuring a small awning shape and display window frame with cyan edge lighting, below it a steady stream of cyan particles flows downward through the column like a contained waterfall of luminous data",
+      "Marketplace column - the second column with a small marketplace stall canopy at its top in dark brushed steel, an open table-like surface beneath with tiny product cube shapes arranged in a grid, cyan particles cascading down from the product grid through the column",
+      "Social commerce column - the center column with a social media card shape at its top, a rounded rectangle frame in dark matte material with a small circular avatar placeholder and horizontal line placeholders inside, cyan particles streaming downward from the card bottom in a pulsing rhythm",
+      "Mobile commerce column - the fourth column with a slim mobile device frame at its top in dark anodized aluminum, the screen area showing a simplified cart icon silhouette in cyan, particles flowing down from the device base through the column",
+      "Wholesale column - the rightmost column with a miniature shipping container shape at its top in dark corrugated steel texture, the container doors slightly ajar revealing cyan light inside, a thick heavy stream of cyan particles flowing down through this column suggesting bulk transactions",
+      "Transparent columns - five tall rectangular tubes of dark-tinted glass, each approximately equal height, with thin dark metal frames at corners and top/bottom, the glass walls showing subtle internal reflections of the cyan particle streams flowing within, each column has thin horizontal ring markers at intervals like measurement gradations",
+      "Collection basin - a wide shallow rectangular pool at the base where all five streams converge, dark metal walls with polished inner surfaces, the basin contains pooled luminous cyan liquid-light that swirls gently where the streams enter, brightest at the center where all flows merge"
+    ],
+    "actions": [
+      "Five parallel streams of cyan particles flow simultaneously downward through their respective columns, each stream having a slightly different flow pattern - the storefront stream is steady, the marketplace stream comes in bursts, the social stream pulses rhythmically, the mobile stream is rapid and thin, the wholesale stream is thick and heavy",
+      "At the base of each column, the streams exit through narrow openings and angle inward toward the central collection basin, the five separate flows merging into one combined current at the basin center with a visible convergence swirl pattern",
+      "The pooled cyan liquid-light in the collection basin ripples subtly where each stream enters, concentric rings spreading outward from each input point and overlapping with ripples from adjacent streams",
+      "The iconic objects at the top of each column emit subtle downward-directed cyan light, as if generating or sourcing the particle streams that flow beneath them"
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with cyan as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The emotional narrative is 'capturing revenue from every channel simultaneously and consolidating it into one measurable, manageable system.' The viewer should feel the power of parallel operation - five independent streams all working at once, none wasted, all captured. This represents the multi-channel approach of the e-commerce revenue engine where every commerce touchpoint is systematically harvested and unified. The collection basin at the bottom is the payoff - everything converges into consolidated revenue."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity. Secondary cyan accent rim light from behind-right, casting thin cyan edge highlights on all 3D objects. Tertiary subtle cyan fill from below the platform. No harsh specular highlights. All shadows are deep and soft-edged. Lighting ratio approximately 4:1 key-to-fill.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal with deep cyan (oklch 0.7 0.15 195) as the sole accent color. Secondary accent is a slightly desaturated cyan (oklch 0.4 0.10 195) for deeper shadows and subtle gradients. No warm colors. Strict monochromatic cyan on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - central subject in sharp focus, background in gentle soft focus",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal), showing both the top source objects and the bottom collection basin with proper depth",
+      "shot_type": "medium shot - main subject fills approximately 60% of frame height"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections and realistic light transport through semi-transparent elements",
+      "global_illumination": "Subtle GI bounce from cyan-lit surfaces onto nearby dark surfaces"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The particle streams flow convincingly downward under gravity, with proper acceleration - particles near the top move slower than those near the bottom. The collection basin liquid settles naturally with proper surface tension at the edges. The columns and platform sit with solid structural weight.",
+      "structural_believability": true,
+      "structural_details": "The transparent columns have proper glass thickness with dark metal corner framing providing structural rigidity. The iconic objects at the tops have recognizable real-world geometry - the storefront has proper awning angles, the shipping container has correct proportional dimensions, the mobile device has realistic aspect ratio."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "platform": "Matte dark carbon fiber with thin cyan perspective grid lines, non-reflective except for cyan light reflections from the collection basin and column streams above",
+      "column_glass": "Dark-tinted borosilicate glass with visible wall thickness, subtle internal reflections of the cyan particle streams creating mirror-like doubling effects inside the glass walls, thin dark metal corner frames with brushed steel texture",
+      "collection_basin": "Dark polished metal walls with mirror-finish interior surfaces reflecting the cyan liquid-light, the basin rim has a thin beveled edge catching cyan rim lighting, the interior shows pooled luminous cyan with realistic liquid surface properties"
+    },
+    "module_surfaces": {
+      "storefront_facade": "Dark brushed steel miniature with thin awning shape, small display window frame with recessed cyan edge LED-like strips, architectural detailing at miniature scale with proper window mullion geometry",
+      "marketplace_stall": "Dark brushed steel canopy structure with thin supports, small open table surface with tiny matte product cube shapes arranged in neat rows, the canopy has subtle corrugation texture",
+      "social_card": "Dark matte polymer rounded rectangle with smooth edges, small circular avatar placeholder as a recessed circle, horizontal line placeholders as thin raised ridges, the card bottom edge has a cyan-lit data output slot",
+      "mobile_device": "Dark anodized aluminum slim frame with proper phone aspect ratio, the screen area is dark with a simplified cart icon silhouette rendered as a thin cyan line drawing, the device base has a narrow cyan-lit output port"
+    },
+    "transparency": "Column glass walls are dark-tinted with 70% clarity, allowing the cyan particle streams inside to be clearly visible while adding subtle refraction and internal reflections. The collection basin liquid is semi-transparent luminous cyan with proper liquid surface tension, depth-dependent opacity - brighter where deeper at center, translucent at shallow edges."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of cyan light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center, fading to pure black at the edges."
+  },
+  "composition": {
+    "perspective": "Slightly elevated front-facing three-quarter view showing all five columns in a clear row with proper depth spacing, the collection basin visible at the bottom front of the composition",
+    "framing": "rule_of_thirds",
+    "framing_details": "The five columns span the middle horizontal third of the frame. The iconic source objects at the tops occupy the upper third. The collection basin and convergence zone occupy the lower third. The center column (social commerce) aligns with the vertical center axis.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: Collection basin edge and nearest column base (slight bokeh blur)",
+      "Mid-ground: All five columns with particle streams and source objects (sharp focus)",
+      "Background: Upper portions of outer columns and void space (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, maintaining the premium editorial feel",
+    "visual_flow": "The eye enters at the top row of iconic source objects, scans left to right identifying each channel type, then follows the downward flow of cyan particle streams through the columns, and arrives at the collection basin where all streams converge - a top-to-bottom reading path that mirrors the revenue collection journey from multiple sources to unified revenue"
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Five vertical transparent glass column structures in a row on a dark matte carbon fiber platform with cyan grid lines, each column containing a unique iconic commerce object at its top. Leftmost column has a miniature dark steel storefront facade with cyan-lit awning, second has a marketplace stall canopy with tiny product cubes, center has a dark matte social media card shape with avatar placeholder, fourth has a slim dark aluminum mobile device with cyan cart icon, rightmost has a dark corrugated steel shipping container with doors ajar revealing cyan light. Below each object, a stream of luminous cyan data particles flows downward through the column - each stream with unique flow patterns. All five streams exit at the base and angle inward, converging into a wide shallow dark metal collection basin at the front, pooling as swirling luminous cyan liquid-light with ripple patterns where streams enter. Dark-tinted glass columns with metal corner frames and horizontal measurement gradations. Deep void environment, pure darkness. Dramatic cinematic lighting, cool key light upper-left, cyan rim light behind-right, cyan under-glow. Near-black palette with deep cyan oklch(0.7 0.15 195) as sole accent. Three-quarter elevated view, 55mm lens, medium depth of field. Hyperrealistic 3D render, studio quality, physically based rendering --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of five vertical transparent dark-tinted glass columns arranged in a row on a wide dark matte carbon fiber platform with thin cyan perspective grid lines. Each column is framed with dark metal corners and contains a unique miniature commerce icon at its top: a dark brushed steel storefront facade with cyan-lit awning edge, a marketplace stall canopy with tiny product cube shapes below, a dark matte social media card with circular avatar placeholder, a slim dark anodized aluminum mobile device frame with cyan cart icon silhouette, and a dark corrugated steel shipping container with doors slightly ajar revealing cyan light inside. Below each icon, a stream of luminous cyan particles flows downward through the glass column - the storefront stream is steady, marketplace comes in bursts, social pulses rhythmically, mobile is rapid and thin, wholesale is thick and heavy. At the base, all five streams exit and angle inward, converging into a wide shallow dark polished metal collection basin at the platform front, the combined flow pooling as swirling luminous cyan liquid-light with concentric ripples where each stream enters. Columns have thin horizontal ring markers like measurement gradations. Deep void environment, pure darkness surrounding. Dramatic cinematic lighting: cool key light upper-left, cyan rim light behind-right, cyan under-glow from platform. Strictly near-black to charcoal with deep cyan as sole accent. Three-quarter elevated view, 55mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors, no bloom. Wide 16:9 landscape format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. Five vertical transparent dark-tinted glass column structures in a row on a wide dark matte carbon fiber platform with thin cyan grid lines. Each column topped with a unique miniature commerce icon in dark materials with cyan accents: storefront facade with cyan-lit awning, marketplace stall canopy with tiny product cubes, social media card with avatar placeholder, slim mobile device with cyan cart icon, and corrugated shipping container with doors ajar revealing cyan glow. Below each icon, luminous cyan data particles stream downward through the glass columns - each with distinct flow character: steady, bursting, pulsing, rapid, and heavy thick. Glass columns have dark metal corner frames and horizontal measurement gradations. At the base, all five streams exit and converge inward into a wide shallow dark polished metal collection basin, pooling as swirling luminous cyan liquid-light with ripple patterns at stream entry points. Deep void environment, pure darkness. Dramatic cinematic lighting: cool key light upper-left 45 degrees, cyan rim light behind-right, cyan under-glow. Near-black to charcoal palette with deep cyan oklch(0.7 0.15 195) as sole accent. Three-quarter elevated front view, 55mm lens, medium depth of field, rule of thirds. No text, no people, no logos, no warm colors, no bloom. Wide 16:9."
+  }
+}

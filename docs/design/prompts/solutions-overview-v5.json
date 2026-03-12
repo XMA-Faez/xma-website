@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "solution": "Solutions Overview",
+    "variation": "5 - Neural Growth Network",
+    "accent_color": "deep blue",
+    "accent_oklch": "oklch(0.6 0.2 250)",
+    "concept": "A branching, tree-like neural network of pathways connects specialized nodes in an organic growth pattern, evoking biological neural architecture and root systems. The metaphor communicates that growth is not mechanical but organic - XMA's solutions form a living network that branches, adapts, and grows, with each node specializing in a different function while remaining part of one interconnected organism."
+  },
+  "core": {
+    "subject": "A dense root cluster at the base of the composition sends thick primary branches upward and outward, which progressively subdivide into thinner secondary and tertiary pathways, creating a tree-like or neural dendritic structure. The branches are dark tubular forms with blue bioluminescent veins running along their surfaces. At the terminus of each major branch cluster sits a specialized node - an organic pod-like shape approximately 5-7cm in diameter, each with a unique surface texture and internal blue luminescence pattern. Five major nodes are distributed across the network, with the thickest branches leading to the largest nodes and the thinnest tendrils connecting to smaller auxiliary nodes.",
+    "scene": "The neural network grows upward from a dark terraced base structure that resembles geological strata - layered horizontal slabs of dark stone with thin blue mineral veins visible between layers. The base is roughly trapezoidal, wider at the bottom and narrowing as layers stack upward to the root cluster origin point. The void beyond is absolute darkness, but the bioluminescent blue veins on the branches cast faint localized illumination that reveals the immediate geometry of nearby branch surfaces without lighting the broader environment.",
+    "objects": [
+      "Root cluster - a dense knot of interwoven dark tubular branches at the base, approximately 15cm across, where all pathways originate. The tubes have a smooth organic surface like dark hardwood bark, with blue bioluminescent veins tracing along their lengths in patterns resembling leaf venation.",
+      "Primary branches - five thick tubes (2-3cm diameter) extending outward and upward from the root cluster, each curving in a different direction with organic grace. Their surfaces are dark matte with a subtle wood-grain texture, and the blue veins are brightest and widest on these primary pathways.",
+      "Secondary branches - thinner tubes (1-1.5cm diameter) forking off from primary branches at naturalistic angles, each subdividing once more into tertiary tendrils. The blue veins are thinner and dimmer on these secondary pathways, creating a natural luminous hierarchy.",
+      "Tertiary tendrils - the finest extensions (3-5mm diameter) reaching outward from secondary branches, some ending in tiny unopened bud shapes and others connecting laterally between different branch clusters, creating cross-links in the neural network.",
+      "Major terminal nodes - five pod-like organic shapes at the ends of primary branches, each roughly the size and shape of a large seed pod or cocoon. One has a ribbed surface like a chambered nautilus cross-section, one has a honeycomb-textured exterior, one has smooth glossy skin with visible blue veins beneath the surface, one has a faceted crystalline exterior, and one has a fibrous bark-like covering with blue light seeping through cracks.",
+      "Auxiliary micro-nodes - smaller bead-like nodes (1-2cm) scattered along secondary branches at fork points, dark and understated with single blue light points, acting as junction relays in the network.",
+      "Terraced base - four horizontal stone slabs stacked with 3mm gaps between each, the gaps revealing thin veins of blue mineral luminescence. Each slab is slightly smaller than the one below, creating a stepped pyramid base approximately 20cm tall."
+    ],
+    "actions": [
+      "Blue bioluminescent pulses travel along the branch veins from the root cluster outward toward the terminal nodes - the pulses move at organic speed, accelerating slightly on downhill slopes of the branches and slowing at upward curves, as if influenced by the branching geometry rather than uniform velocity.",
+      "The honeycomb-textured node slowly pulsates, with individual hexagonal cells on its surface brightening and dimming in a wave pattern that ripples across its face like a cellular breathing rhythm.",
+      "Some tertiary tendrils at the network periphery are visibly growing - their tips extend slowly outward into the void, leaving a faint blue bioluminescent trail as new vein channels form behind the advancing growth point.",
+      "The mineral veins between terraced base layers pulse independently from the branch veins above, creating a slower, deeper rhythm - as if the base structure has its own ancient heartbeat feeding energy up into the network roots."
+    ],
+    "constraints": [
+      "No text, labels, or readable words anywhere in the image",
+      "No human figures, hands, or faces",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces - everything should be dark-toned with blue as the only accent color",
+      "No ambient glow halos or bloom effects - lighting should be precise and controlled",
+      "No photographic realism - this is a stylized 3D render, not a photo",
+      "No warm colors except where specified"
+    ],
+    "notes": "The viewer should feel the unmistakable sense of organic growth and living systems - this is not a machine, but an organism. The branching hierarchy communicates natural scalability: the network grows by extending new branches and nodes rather than being rebuilt from scratch. Each terminal node's unique texture suggests specialized function within a unified biological architecture. The overall impression is of elegant, purposeful growth driven by an underlying intelligence."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization, inspired by Linear app marketing visuals, Vercel's developer tool imagery, and Stripe's abstract product illustrations",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with very low intensity - just enough to define the matte surfaces and edges. Secondary blue accent rim light from behind-right, casting thin blue edge highlights on all 3D objects. Tertiary subtle blue fill from below the platform, creating soft under-glow on the lower sections. No harsh specular highlights. All shadows are deep and soft-edged. The overall lighting ratio is approximately 4:1 key-to-fill, creating a moody low-key atmosphere.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal (background and surfaces) with deep blue (oklch 0.6 0.2 250) as the sole accent color appearing in edge lighting, wireframe lines, module glows, grid lines, and particle trails. Secondary accent is a slightly desaturated blue (oklch 0.35 0.12 250) for deeper shadows and subtle gradients. No warm colors. No complementary colors. Strict monochromatic blue on black."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent - the central subject is in sharp focus, background elements fall into gentle soft focus, foreground edge has very subtle bokeh blur",
+      "angle": "Three-quarter view from slightly above eye level (approximately 25 degrees above horizontal and 30 degrees to the right), giving a clear view of the main structure while revealing depth",
+      "shot_type": "medium shot - the main subject fills approximately 60% of the frame height with breathing room on all sides"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "16:9"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity to prevent the image from looking sterile - adds tactile texture without degrading detail",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate reflections on glossy surfaces and realistic light transport through semi-transparent frosted glass panels",
+      "global_illumination": "Subtle GI bounce from the blue-lit surfaces onto nearby dark surfaces, creating realistic color bleeding at contact points"
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The network grows upward from the terraced base, with branches obeying natural growth patterns - primary branches extend upward and outward with organic curves that suggest gravitational influence, thinner branches sometimes arching downward slightly under their own weight before curving back up. Terminal nodes add visible weight to branch ends, causing subtle downward sag at the final few centimeters.",
+      "structural_believability": true,
+      "structural_details": "Branch diameters taper naturally from thick primary trunks to thin tertiary tendrils - the thickness at any point is proportional to the combined cross-section of all downstream branches it supports. Fork points have smooth, bulged junctions where branch material flows organically from one pathway into two, rather than sharp mechanical splits. The terraced base layers visibly support the weight of the root cluster above."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "branch_exterior": "Dark organic material resembling ebony hardwood or dried dark bark - smooth but with visible grain directionality following the branch axis. The surface absorbs most light but reveals its texture under rim lighting, showing fine longitudinal striations. Blue bioluminescent veins sit slightly raised (0.5mm) above the branch surface, following natural venation patterns.",
+      "bioluminescent_veins": "Subsurface scattering blue luminescence - the veins appear to glow from within the branch material rather than from the surface, with light bleeding 1-2mm into the surrounding dark tissue. The blue color is most saturated at the vein center and fades to deep blue at the diffusion boundary.",
+      "terraced_base": "Dark volcanic basalt with crystalline inclusions - a heavy, geological material with visible mineral texture at close range. The thin blue mineral veins between layers have a different quality than the organic bioluminescence above - they appear as inorganic crystalline deposits that glow with a steadier, colder blue light."
+    },
+    "module_surfaces": {
+      "ribbed_nautilus_node": "Cross-sectional nautilus chamber structure in dark nacre-like material with iridescent dark blue sheen. Each chamber wall catches rim light differently, creating a subtle rainbow-free gradient of blue tones from deep to bright across the spiral sections.",
+      "honeycomb_node": "Dark matte exterior with hexagonal cells recessed 2mm into the surface, each cell acting as a tiny blue light well. The cell walls are thin dark ridges that create a strong geometric pattern contrasting with the organic branch it sits on.",
+      "smooth_glossy_node": "Polished dark surface resembling wet obsidian, with blue veins visible beneath a 1mm transparent surface layer - subsurface vascular pattern that glows faintly, creating the impression of a living organism with visible internal biology.",
+      "crystalline_node": "Faceted geometric exterior made of dark smoky crystal - each facet at a slightly different angle, catching blue light in sharp geometric highlights. The interior shows a diffuse blue glow filtered through multiple crystal layers."
+    },
+    "transparency": "The glossy node has a 1mm transparent skin layer through which subsurface blue veins are visible - not fully transparent but translucent with internal scattering. The crystalline node has smoky crystal facets at approximately 25% transparency, allowing internal blue glow to be perceived as diffused light rather than sharp sources. All bioluminescent veins use subsurface scattering rather than surface emission, creating a biological rather than electronic quality of light."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon line or walls - pure darkness fading to black in all directions",
+      "Extremely subtle atmospheric haze at distance - background elements appear slightly hazed, adding depth perception",
+      "No fog, no volumetric lighting shafts - the atmosphere is clean and controlled"
+    ],
+    "time_season": [
+      "Timeless - no natural time indicators, this is an artificial/digital environment"
+    ],
+    "particles": [
+      "Sparse floating micro-particles of blue light dust scattered throughout the mid-ground, very small (1-2px), very low opacity (5-10%), suggesting a digital environment with ambient energy",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) with an extremely subtle radial gradient - marginally lighter (2-3% brighter) in the center where the main subject is, fading to pure black at the edges. This creates subtle vignetting that draws the eye to the central composition."
+  },
+  "composition": {
+    "perspective": "Three-quarter elevated view that captures the full branching silhouette of the neural network - the viewer sees the terraced base at the bottom, the root cluster above it, and the five primary branches extending upward and outward like a dark tree canopy with glowing blue veins. The slight rightward rotation prevents any two branches from overlapping in the camera's view, allowing each terminal node to be individually visible.",
+    "framing": "rule_of_thirds",
+    "framing_details": "The root cluster sits at the lower-center third intersection, acting as the compositional anchor. The five terminal nodes are distributed across the upper two-thirds of the frame - two in the upper-left quadrant, one at the upper-right third intersection, and two in the mid-right area. The terraced base extends below the lower horizontal third, providing visual grounding. The overall silhouette forms an organic inverted triangle or tree-crown shape.",
+    "subject_placement": "balanced",
+    "depth_layers": [
+      "Foreground: One primary branch extends toward the camera in the lower-right, its terminal node (honeycomb texture) closest to the lens with subtle bokeh on its nearest surface edge (slight bokeh blur)",
+      "Mid-ground: The root cluster, terraced base, and three of the five terminal nodes occupy the central depth plane with maximum sharpness - all bioluminescent vein patterns are crisp and clearly defined (sharp focus)",
+      "Background: Two terminal nodes on branches extending away from the camera into the upper-left void, their blue veins dimmer and their organic textures softening into atmospheric haze, with the finest tertiary tendrils barely visible against the darkness (soft focus, lower opacity)"
+    ],
+    "negative_space": "Generous dark negative space surrounds the composition, preventing it from feeling crowded and maintaining the premium, editorial feel",
+    "visual_flow": "The eye enters at the terraced base and mineral veins at the bottom center, travels upward through the root cluster following the brightest bioluminescent veins, then branches outward along primary pathways. The viewer's gaze follows the thickest, brightest branch first (leading to the nearest foreground node), then traces secondary branches to discover additional nodes. The cross-linking tertiary tendrils between branch clusters guide the eye laterally, preventing it from dead-ending at any single node and instead circulating through the entire network. The growing tendril tips at the periphery draw the eye to the edges where growth is actively happening, creating a sense of living expansion."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "Hyperrealistic cinematic 3D render of a neural growth network - an organic branching tree-like structure growing upward from a dark terraced basalt base with blue mineral veins between layers. A dense root cluster of interwoven dark tubular branches sends five thick primary pathways upward and outward, each with blue bioluminescent veins tracing leaf-venation patterns along their dark bark-like surfaces. Branches progressively subdivide into thinner secondary and tertiary tendrils with proportionally dimmer blue veins creating natural luminous hierarchy. At each primary branch terminus sits a unique organic pod-node approximately 5-7cm: one with ribbed nautilus chamber cross-section in dark nacre with blue iridescence, one with honeycomb-recessed hexagonal cells glowing blue in wave patterns, one with polished glossy obsidian skin and subsurface blue vascular veins visible through 1mm transparent layer, one with smoky dark crystal facets filtering internal blue glow, one with fibrous dark bark and blue light seeping through surface cracks. Smaller auxiliary micro-nodes sit at branch fork points as blue junction relays. Blue bioluminescent pulses travel organically along veins from root to nodes at varied speeds. Growing tertiary tendrils extend into the void with trailing blue vein formation. Terraced base of four stacked dark stone slabs with 3mm gaps revealing blue crystalline mineral deposits pulsing independently. Camera three-quarter elevated view showing full branching silhouette, 55mm lens, f/4 depth of field. Key light upper-left 45 degrees 5500K, blue rim light behind-right, blue mineral under-glow. Subsurface scattering on all bioluminescent surfaces. 4:1 moody low-key lighting, subtle 2-3% film grain --ar 16:9 --s 200 --no text, labels, people, bright white, neon glow, bloom, cartoon, anime, warm colors, multiple accent colors",
+    "dalle3": "Create a hyperrealistic cinematic 3D render of a neural growth network - an organic branching structure growing upward from a dark terraced stone base in deep darkness. A dense root cluster at the base sends five thick primary branches upward and outward, each branch a dark tubular form resembling ebony hardwood with blue bioluminescent veins tracing natural venation patterns along its surface. The veins glow with subsurface scattering light, emanating from within the branch material rather than the surface. Branches progressively subdivide into thinner secondary and tertiary pathways with proportionally thinner and dimmer blue veins. At each primary branch terminus sits a unique organic pod-node: one has a ribbed nautilus cross-section in dark nacre with blue iridescence, one has a honeycomb surface with hexagonal cells pulsating blue in wave patterns, one has a polished glossy surface like wet obsidian with blue veins visible beneath a transparent skin layer, one has dark smoky crystal facets filtering internal blue glow, and one has fibrous bark with blue light seeping through surface cracks. Small auxiliary nodes sit at branch fork points as blue relay junctions. Blue bioluminescent pulses travel along the veins from root to nodes. The terraced base is four stacked dark volcanic stone slabs with thin blue mineral veins glowing between the layers. Some tertiary tendrils at the periphery are visibly growing, extending into the void with new vein channels forming behind advancing tips. Key light from upper-left at 5500K, blue rim light from behind-right, blue under-glow from mineral veins. Deep blue is the only accent color. Camera at three-quarter elevated angle, 55mm lens, medium depth of field. No text, no people, no logos, no warm colors, no neon glow or bloom effects. Wide 16:9 landscape format.",
+    "flux": "Cinematic hyperrealistic 3D render, dark premium tech product visualization, professional studio lighting, physically based rendering. Neural growth network of organic branching dark tubular pathways growing upward from terraced dark volcanic basalt base with blue crystalline mineral veins between four stacked stone layers. Dense root cluster of interwoven dark branches with ebony bark-like grain texture sends five primary pathways (2-3cm diameter) upward and outward with blue bioluminescent veins in leaf-venation patterns using subsurface scattering light bleeding 1-2mm into surrounding dark tissue. Progressive branch subdivision into secondary (1-1.5cm) and tertiary (3-5mm) tendrils with proportionally thinner dimmer blue veins creating natural luminous hierarchy. Five unique terminal pod-nodes at primary branch ends: ribbed nautilus chamber cross-section in dark nacre with blue iridescence, honeycomb exterior with recessed hexagonal cells pulsating blue in wave patterns, polished wet obsidian glossy surface with subsurface blue vascular veins beneath 1mm transparent skin, smoky dark crystal faceted exterior at 25% transparency filtering diffuse blue internal glow, fibrous dark bark covering with blue light seeping through surface cracks. Auxiliary micro-nodes at branch forks as single blue light point relay junctions. Blue bioluminescent pulses traveling organically along veins root-to-node at varied speeds. Growing tertiary tendrils extending into void with trailing blue vein formation. Key light upper-left 45 degrees 5500K, blue rim light behind-right, blue mineral under-glow from base. 4:1 key-to-fill moody low-key atmosphere. Camera three-quarter elevated showing full branching silhouette, 55mm focal length, f/4 aperture. Deep blue oklch(0.6 0.2 250) sole accent color on strict black palette. Subtle 2-3% film grain. No text, no people, no logos, no warm colors, no neon glow, no bloom, no bright white. Wide 16:9."
+  }
+}

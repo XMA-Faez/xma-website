@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "solution": "CRM & Revenue System",
+    "variation": "4 — The Revenue Loop",
+    "accent_color": "magenta/pink-purple",
+    "accent_oklch": "oklch(0.50 0.30 285)",
+    "concept": "A circular flow diagram as a 3D track/pathway forming a closed loop. Five stations around the loop: Lead Capture (a net), Qualification (a filter), Nurture (message bubble sequence), Pipeline (kanban mini-board), and Close (handshake shape). A glowing magenta orb travels the track. Continuous cycle, not one-time."
+  },
+  "core": {
+    "subject": "A three-dimensional circular track pathway forming a complete closed loop, elevated above a dark matte circular platform. The track is a sleek channel with dark metal walls and a luminous magenta strip running along its center groove, forming a ring approximately 40cm in diameter. Five distinct station structures are positioned at evenly spaced intervals around the loop, each rising above the track surface as small architectural elements. Station one (Lead Capture) features a small stylized net or funnel-mouth shape in dark metal catching incoming elements. Station two (Qualification) features a filter or sieve shape — a flat panel with small holes allowing only certain elements through. Station three (Nurture) features a cascading sequence of three small message bubble shapes arranged in a descending staircase pattern. Station four (Pipeline) features a miniature Kanban board — a small vertical panel with three tiny columns and card placeholders. Station five (Close) features an abstract handshake form — two interlocking curved shapes suggesting agreement. A single glowing magenta orb travels along the track groove, currently positioned between two stations, leaving a subtle luminous trail behind it that fades over distance — representing a deal cycling through the complete revenue system continuously.",
+    "scene": "A dark minimal environment with the circular track loop as the central sculptural element, hovering slightly above a dark matte circular pedestal platform. The platform has concentric ring engravings that echo the circular track above. The five stations rise from the track like small landmarks on a miniature landscape. The overall composition reads as a perpetual motion machine — a system that runs continuously with no beginning or end, just constant cycling. Below the track, faint magenta connection lines descend from each station to the platform surface, creating a web of subtle structural support that also suggests data connections between the stations and a central system. At the center of the circular loop, a small dark column rises from the platform supporting a subtle magenta-glowing node — the central CRM hub that all stations connect to.",
+    "objects": [
+      "Circular track pathway — a sleek ring-shaped channel approximately 40cm diameter, dark brushed metal walls (8mm height) with a luminous magenta strip running along the center groove of the track surface, the track has a slight inward cant like a racing track, smooth continuous form with no breaks or gaps emphasizing the closed-loop nature",
+      "Lead Capture station — a small stylized funnel or net mouth shape rising 15mm above the track surface, dark brushed metal frame with magenta-tinted mesh interior, positioned at the 12 o'clock position, a few small dim gray spheres are visible entering the funnel mouth from above",
+      "Qualification station — a flat filter panel shape rising 12mm above the track, dark metal frame with a grid of small circular holes, some holes have faint magenta glow suggesting active filtering criteria, positioned at approximately 2:30 on the clock face",
+      "Nurture station — three small message bubble shapes arranged in a descending cascade, each slightly smaller than the previous, dark frosted glass with thin magenta edge outlines, positioned at approximately 5 o'clock, the bubbles suggest a sequence of automated messages",
+      "Pipeline station — a miniature vertical Kanban board (approximately 15mm tall), a small dark panel with three thin columns and two to three tiny rectangular card placeholders per column, subtle magenta column dividers, positioned at approximately 7:30",
+      "Close station — an abstract handshake form created by two interlocking curved bracket shapes in polished dark metal with magenta edge highlights where they meet, positioned at approximately 10 o'clock, the interlocking suggests agreement and deal closure",
+      "Glowing magenta orb — a small (5mm diameter) bright magenta-glowing sphere with soft radial falloff light, currently traveling along the track groove between two stations, leaving a fading luminous magenta trail along the track behind it approximately 30 degrees of arc long",
+      "Secondary dim orbs — two or three additional orbs at other positions along the track, dimmer than the primary orb and smaller, suggesting multiple deals cycling through the system simultaneously at different stages",
+      "Central CRM hub node — a small dark column rising from the platform center with a magenta-glowing spherical node on top, subtle magenta connection lines radiating outward from this node to each of the five stations",
+      "Radial connection lines — thin dim magenta lines extending from the central hub node to each station, running beneath the track at platform level, suggesting data flow between the central system and each stage",
+      "Circular pedestal platform — dark matte composite with concentric ring engravings echoing the track loop above, the rings catch faint magenta light from the track and hub above"
+    ],
+    "actions": [
+      "The primary magenta orb glides smoothly along the track groove, its luminous trail fading behind it — the motion is perpetual and continuous, suggesting a deal flowing through the revenue cycle with no stopping",
+      "Secondary dimmer orbs travel at different positions around the loop, each at a different stage, showing that multiple deals move through the system simultaneously and independently",
+      "At each station the orb passes, the station briefly brightens with a pulse of magenta light — the funnel catches a new element, the filter glows as it qualifies, the bubbles illuminate as nurture messages send, the pipeline cards shift, the handshake illuminates as deals close",
+      "The central CRM hub node pulses with a gentle rhythmic magenta glow, synchronized with the orbs' movement, suggesting it orchestrates the entire cycle from the center",
+      "Faint magenta energy flows along the radial connection lines from stations toward the central hub, representing data being fed back to the CRM with each stage transition"
+    ],
+    "constraints": [
+      "No text, labels, numbers, or readable words anywhere",
+      "No human figures, hands, or faces — the handshake station uses abstract interlocking shapes, not realistic hands",
+      "No brand logos or recognizable company marks",
+      "No bright white surfaces — all elements are dark-toned with magenta as the only accent",
+      "No ambient glow halos or bloom effects — magenta lighting is precise and controlled",
+      "The circular track must clearly read as a continuous closed loop with no beginning or end — no entry or exit points",
+      "All five stations must be visually distinct from each other through shape differentiation",
+      "The perpetual motion / continuous cycle concept must be immediately apparent"
+    ],
+    "notes": "The emotional narrative is 'revenue is a continuous cycle, not a one-time event.' The viewer should see a perpetual machine where leads constantly enter, get qualified, nurtured, managed, and closed — and the cycle continues. This directly communicates that XMA's CRM system creates predictable recurring revenue through a systematic process that never stops. The central hub emphasizes that the CRM is the brain orchestrating the entire cycle. The multiple orbs show this is not a one-deal-at-a-time process but a parallel system handling many deals simultaneously. The closed loop is the critical visual — no deals fall through cracks because the system is seamless and continuous."
+  },
+  "style": {
+    "primary_style": "cinematic",
+    "sub_style": "dark tech product visualization with perpetual motion machine aesthetics, inspired by Linear app marketing visuals, precision engineering models, and abstract infographic sculptures",
+    "render_quality": "hyperrealistic",
+    "lighting": "dramatic",
+    "lighting_details": "Primary key light from upper-left at 45 degrees, cool-neutral temperature (5500K) with moderate intensity — defining the track's metallic form and station structures with clear highlights and shadows. The magenta track groove strip is a continuous linear light source, casting soft magenta illumination on the track walls and nearby platform surface. The glowing orbs serve as small but bright point light sources, casting magenta light onto the track surface and nearby station structures as they pass. The central hub node provides a subtle magenta fill light emanating from the composition's center. Station structures are primarily lit by the key light with magenta accent from the track and passing orbs. Overall lighting creates a jewel-box effect — a precious precision object illuminated against darkness.",
+    "color_profile": "muted",
+    "color_details": "Dominant palette is near-black to dark charcoal for all structural elements with magenta pink-purple (oklch 0.50 0.30 285) as the sole accent in the track groove, orb glow, station magenta details, hub node, connection lines, and concentric ring reflections. A desaturated magenta (oklch 0.35 0.20 285) appears in dim connection lines and platform ring engravings. The incoming lead shapes at the capture station are neutral gray, gaining magenta tint only when they enter the system. No other accent colors."
+  },
+  "technical": {
+    "camera": {
+      "focal_length_mm": 55,
+      "depth_of_field": "medium",
+      "aperture_effects": "f/4 equivalent — the center two-thirds of the circular track and nearest stations are in sharp focus, the far side of the loop has gentle soft focus adding depth, platform edges have subtle blur",
+      "angle": "Three-quarter elevated view at approximately 35 degrees above horizontal and 20 degrees rotated, providing a clear view of the circular track's full loop form, all five stations visible, and the central hub — the elevation is high enough to read the circular shape but low enough to see the stations' vertical dimensionality",
+      "shot_type": "medium shot — the circular track loop fills approximately 65% of the frame with the platform and dark void providing context and breathing room"
+    },
+    "resolution": {
+      "target": "4k",
+      "min_quality": "professional-quality",
+      "aspect_ratio": "1:1"
+    },
+    "rendering": {
+      "anti_aliasing": true,
+      "noise_level": "low",
+      "noise_details": "Very subtle film grain at 2-3% opacity for tactile texture",
+      "color_depth": "high",
+      "ray_tracing": "Enabled for accurate metallic reflections on the track walls, magenta light bounce from the groove strip onto track walls and stations, orb light casting accurate point-light illumination on nearby surfaces, and subtle reflections on the polished handshake station",
+      "global_illumination": "Magenta light from the track groove bounces subtly onto the platform's concentric rings below, creating warm magenta fill in the area directly beneath the track. Orb light illuminates nearby station structures as it passes."
+    },
+    "physics_accuracy": {
+      "gravity_cues": true,
+      "gravity_details": "The track structure, stations, and platform are solidly grounded with proper weight and contact. The orbs glide along the track groove with implied contact. The central hub column rises vertically from the platform with structural stability.",
+      "structural_believability": true,
+      "structural_details": "The circular track has consistent cross-section around its full circumference — proper channel walls, groove, and cant. Stations are structurally attached to the track with visible mounting points. The central column has proper proportions for its height. The handshake interlocking shapes mesh correctly."
+    }
+  },
+  "materials": {
+    "primary_surfaces": {
+      "track_channel": "Dark brushed stainless steel walls with directional grain following the circular path, the inner groove has a luminous magenta strip flush with the surface, the track has slight inward cant with precise machined edges",
+      "station_structures": "Mix of dark brushed metal frames and dark frosted glass panels depending on station type — the net/funnel has mesh metal, the filter has perforated metal, the bubbles are frosted glass, the kanban board is matte dark panel, the handshake is polished dark metal",
+      "platform": "Dark matte composite circular surface with CNC-machined concentric ring engravings at 8mm intervals, non-reflective except where magenta light from above creates subtle warm highlights in the grooves"
+    },
+    "orb_and_trail": {
+      "primary_orb": "A luminous magenta sphere with bright core and soft radial light falloff, the surface has a subtle frosted quality rather than perfectly smooth — suggesting contained energy, the orb casts visible magenta point light on the track surface below it",
+      "trail": "A fading luminous magenta streak along the track groove behind the orb, brightest immediately behind the orb and fading to invisible over approximately 30 degrees of arc, the trail sits within the groove strip",
+      "secondary_orbs": "Smaller and dimmer versions of the primary orb (approximately 60% brightness and 70% size), with shorter trails, providing visual proof of multiple simultaneous deals in the system"
+    },
+    "central_hub": {
+      "column": "Thin dark brushed steel cylinder rising from platform center, approximately 20mm height, minimal and architectural",
+      "node": "Small magenta-glowing sphere on top of the column, similar material to the traveling orbs but stationary and pulsing, with radial connection lines extending outward to each station"
+    },
+    "transparency": "The nurture station message bubbles have frosted glass translucency. The filter station panel is perforated allowing visibility through. All other elements are opaque. The orbs have luminous quality but are not transparent."
+  },
+  "environment": {
+    "atmosphere": [
+      "Deep void environment with no visible horizon — pure darkness surrounding the circular track diorama",
+      "Very subtle atmospheric glow in the immediate vicinity of the track, created by accumulated magenta light from the groove strip and orbs — this creates a soft magenta ambience around the track without distinct rays or beams",
+      "No fog, no volumetric lighting shafts — the atmosphere is clean and precise"
+    ],
+    "time_season": ["Timeless — no natural time indicators, this is an artificial/digital environment"],
+    "particles": [
+      "The traveling orbs and their trails serve as the primary particle system — bright moving elements against the dark track",
+      "Very faint magenta micro-particles drift in the space immediately above the track (within 10mm), suggesting active energy in the system — very small (1px) and very low opacity (5%)",
+      "No smoke, no mist, no weather particles"
+    ],
+    "background": "Pure darkness (#0A0A0C equivalent) surrounding the track diorama. Extremely subtle radial gradient centered on the track — marginally brighter (2-3%) at the center fading to pure black at frame edges, creating natural vignetting that draws focus to the loop."
+  },
+  "composition": {
+    "perspective": "Elevated three-quarter view revealing the full circular form of the track while maintaining dimensionality of the station structures rising above it",
+    "framing": "rule_of_thirds",
+    "framing_details": "The circular track is centered in the frame with the central hub at the exact center point. The five stations distribute around the circle creating a balanced radial composition. The primary glowing orb is positioned at a visually interesting point on the track — not at a station but between two, creating tension and motion. The platform base occupies the lower portion with its concentric rings echoing the track above.",
+    "subject_placement": "centered",
+    "depth_layers": [
+      "Background: Dark void with subtle central brightening",
+      "Far track section: Opposite side of the circular loop from the camera, gentle soft focus",
+      "Focal plane: Nearest section of the track, closest stations, and the primary glowing orb in sharp focus",
+      "Central layer: Hub node and radial connection lines",
+      "Foreground: Platform front edge with subtle focus falloff"
+    ],
+    "negative_space": "Dark space surrounding the circular track on all sides creates a framing effect that emphasizes the self-contained nature of the revenue loop. The center of the loop contains the hub node but otherwise reads as contained interior space, reinforcing the closed-system concept.",
+    "visual_flow": "The eye is drawn first to the brightest element — the primary magenta orb on the track — then follows its trail to understand direction of movement, then discovers the station structures around the loop, reads the circular form, notices the central hub, and follows the connection lines outward to understand the hub-and-spoke data architecture. The circular form creates an inherently satisfying visual that loops the eye continuously, reinforcing the perpetual cycle narrative."
+  },
+  "quality_keywords": {
+    "include": [
+      "hyperrealistic 3D render",
+      "dark premium tech aesthetic",
+      "professional product visualization",
+      "cinematic lighting",
+      "studio quality",
+      "sharp detail on focal subject",
+      "authentic material textures",
+      "precise edge definition",
+      "subtle film grain texture",
+      "volumetric accuracy",
+      "physically based rendering",
+      "clean anti-aliased edges",
+      "professional color grading",
+      "high dynamic range"
+    ],
+    "avoid": [
+      "blurry",
+      "low resolution",
+      "pixelated",
+      "jpeg artifacts",
+      "watermark",
+      "text overlay",
+      "signature",
+      "oversaturated colors",
+      "neon glow",
+      "bloom effects",
+      "lens flare",
+      "chromatic aberration",
+      "noise grain heavier than 5%",
+      "flat lighting",
+      "ambient occlusion artifacts",
+      "visible polygon edges",
+      "low-poly aesthetic",
+      "cartoon style",
+      "anime style",
+      "painterly style",
+      "bright white surfaces",
+      "warm gold color tones",
+      "cool blue color tones",
+      "complementary color accents",
+      "multiple accent colors"
+    ]
+  },
+  "flattened_prompt": {
+    "midjourney": "A three-dimensional circular track pathway forming a complete closed loop elevated above a dark matte circular pedestal with concentric ring engravings. The track is dark brushed stainless steel with a luminous magenta center groove strip. Five distinct station structures rise above the track at evenly spaced intervals: a stylized net/funnel shape for lead capture, a perforated filter panel for qualification, three cascading frosted glass message bubbles for nurture, a miniature Kanban board panel for pipeline, and two interlocking polished curved shapes for close. A bright glowing magenta orb travels along the track groove leaving a fading luminous trail behind it. Two smaller dimmer orbs at other positions on the track. Central dark column with magenta-glowing hub node, subtle magenta connection lines radiating to each station. Small dim gray spheres entering the capture funnel from above. Dark void environment. Cool key light from upper-left, magenta track groove as linear light source, orbs as point lights. Near-black palette with magenta pink-purple sole accent. Three-quarter elevated view at 35 degrees above, 55mm lens, medium depth of field. Hyperrealistic 3D render, studio quality, precise machined surfaces --ar 1:1 --s 200 --no text, labels, people, hands, bright white, neon glow, bloom, cartoon, warm colors, cool blues, multiple accent colors",
+    "dalle3": "A hyperrealistic 3D render of a three-dimensional circular track pathway forming a complete closed loop, elevated above a dark matte circular pedestal platform with CNC-machined concentric ring engravings. The track is constructed of dark brushed stainless steel channel walls with a luminous magenta strip running along its center groove, forming a ring approximately 40cm in diameter with slight inward cant. Five distinct station structures rise above the track at evenly spaced intervals: a stylized dark metal net-mouth shape catching small gray spheres from above (Lead Capture at 12 o'clock), a perforated dark metal filter panel with magenta-glowing holes (Qualification at 2:30), three cascading dark frosted glass message bubbles with magenta edge outlines in descending sequence (Nurture at 5 o'clock), a miniature dark Kanban board with three columns and tiny card placeholders with magenta dividers (Pipeline at 7:30), and two interlocking polished dark metal curved bracket shapes with magenta edge highlights where they meet (Close at 10 o'clock). A bright glowing magenta orb with soft radial falloff travels along the track groove, leaving a fading luminous magenta trail behind it. Two smaller dimmer orbs travel at other positions on the loop. At the center, a thin dark column supports a magenta-glowing spherical hub node with subtle connection lines radiating to each station. Dark void environment. Cool key light from upper-left, magenta track groove and orbs as light sources creating warm reflections on track walls and platform rings. Near-black palette with magenta pink-purple as the sole accent. Three-quarter elevated view at 35 degrees, 55mm lens, medium depth of field. No text, no people, no logos, no bright white, no warm colors. Square format.",
+    "flux": "Hyperrealistic 3D render, dark premium tech visualization. A 3D circular track pathway forming a complete closed loop elevated above a dark matte circular pedestal with concentric ring engravings. Dark brushed stainless steel channel walls with luminous magenta center groove strip, slight inward cant. Five stations at even intervals: dark metal net-mouth funnel catching gray spheres at 12 o'clock, perforated filter panel with magenta-glowing holes at 2:30, three cascading dark frosted glass message bubbles with magenta edges at 5 o'clock, miniature dark Kanban board with magenta column dividers at 7:30, two interlocking polished dark metal curved shapes with magenta highlights at 10 o'clock. Bright magenta orb with soft radial falloff glides along track groove leaving fading luminous trail. Two smaller dimmer secondary orbs at other positions. Thin dark column at center supports magenta-glowing hub node with radial connection lines to each station. Stations briefly brighten as orbs pass. Faint magenta energy flows along connection lines to hub. Deep void environment, subtle central brightening vignette. Cool key light upper-left, magenta groove as linear light, orbs as point lights. Sparse magenta micro-particles above track. Three-quarter elevated view 35 degrees above, 55mm lens, medium depth of field, centered composition. Muted color profile: near-black to charcoal with magenta pink-purple oklch(0.50 0.30 285) as sole accent. No text, no people, no logos, no warm colors, no bloom. Square 1:1."
+  }
+}

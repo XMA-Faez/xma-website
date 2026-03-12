@@ -93,7 +93,7 @@ export default function ContactPage() {
                   {
                     Icon: MapPin,
                     title: "Visit Us",
-                    content: "Dubai, UAE",
+                    content: "M44, The Curve Building, Al Qouz 3, Dubai, UAE",
                     color: "text-blue-400",
                     type: "address",
                     link: null,
