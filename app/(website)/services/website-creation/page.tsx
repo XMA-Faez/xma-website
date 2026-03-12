@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Premium Website Design & Development | 90+ PageSpeed Guaranteed",
-    description: "Stop losing customers to a slow website. We build premium, high-performance Next.js websites that turn your traffic into bookings for Dubai businesses.",
+    description: "Stop losing customers to a slow website. We build premium, high-performance Next.js websites that turn your traffic into customers for Dubai businesses.",
     url: "/services/website-creation",
     siteName: "XMA Agency",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Premium Website Design & Development | 90+ PageSpeed Guaranteed",
-    description: "Stop losing customers to a slow website. We build premium, high-performance Next.js websites that turn your traffic into bookings for Dubai businesses.",
+    description: "Stop losing customers to a slow website. We build premium, high-performance Next.js websites that turn your traffic into customers for Dubai businesses.",
     images: ["/images/website-creation-twitter.jpg"],
     creator: "@xmaagency",
   },

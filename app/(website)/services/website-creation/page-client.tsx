@@ -88,7 +88,7 @@ const WebCreationPageClient = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               Premium, high-performance Next.js websites that turn your traffic
-              into bookings. Sub-2-second load times, conversion-focused design,
+              into customers. Sub-2-second load times, conversion-focused design,
               and a CMS you can actually use.
             </motion.p>
 

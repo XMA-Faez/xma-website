@@ -11,20 +11,20 @@ interface HeadlineContent {
 
 const headlines: Record<HeadlineVariant, HeadlineContent> = {
   control: {
-    main: "Turn Luxury Car Inquiries Into Confirmed Bookings",
-    sub: "We help UAE luxury car rental companies increase their booking rate by fixing what most agencies ignore: conversion, follow-up, and WhatsApp response speed.",
+    main: "Growth Systems Built to Scale Revenue",
+    sub: "We design and implement the marketing, sales, and conversion systems companies need to generate leads, acquire customers, and grow revenue predictably.",
   },
   problem_focused: {
-    main: "Stop Losing Bookings to Slow Follow-Up",
-    sub: "Most inquiries are lost in the first 5 minutes. We fix your conversion, follow-up, and WhatsApp response speed to capture every opportunity.",
+    main: "Stop Losing Leads to Broken Systems",
+    sub: "Most leads are lost to slow follow-up and disconnected tools. We build integrated growth systems that capture every opportunity.",
   },
   outcome_focused: {
-    main: "3x Your Booking Rate in 90 Days",
-    sub: "Proven systems for luxury car rental growth. We optimize your conversion funnel, automate follow-ups, and accelerate your WhatsApp response time.",
+    main: "3x Your Pipeline in 90 Days",
+    sub: "Proven growth systems that optimize your conversion funnel, automate follow-ups, and turn traffic into predictable revenue.",
   },
   question: {
-    main: "What If Every Inquiry Became a Booking?",
-    sub: "It's possible with the right systems. We fix conversion, follow-up, and WhatsApp response speed for UAE luxury car rental companies.",
+    main: "What If Every Lead Became a Customer?",
+    sub: "It's possible with the right systems. We build the marketing, sales, and conversion infrastructure your business needs to scale.",
   },
 };
 

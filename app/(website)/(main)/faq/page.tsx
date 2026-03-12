@@ -10,23 +10,23 @@ import { useTrackCTA } from "@/hooks/useTrackEvent";
 const faqData = [
   {
     id: "1",
-    q: "How quickly will I start seeing more bookings?",
-    a: "Most clients see their first qualified inquiries within 7-14 days of campaign launch. Booking rates typically improve over the first month as we optimize targeting and refine the messaging based on real conversion data.",
+    q: "How quickly will I start seeing results?",
+    a: "Most clients see their first qualified leads within 7-14 days of campaign launch. Conversion rates typically improve over the first month as we optimize targeting and refine messaging based on real performance data.",
   },
   {
     id: "2",
     q: "What if I've tried marketing agencies before and it didn't work?",
-    a: "Most agencies fail in this space because they don't understand the luxury car rental market. They generate clicks, not bookings. We focus specifically on conversion optimization—WhatsApp response speed, follow-up sequences, and qualifying leads before they reach you.",
+    a: "Most agencies deliver vanity metrics — clicks and impressions that don't move the needle. We focus specifically on revenue outcomes: lead quality, conversion rates, pipeline velocity, and systems that actually scale your business.",
   },
   {
     id: "3",
-    q: "Do you work with all types of luxury vehicles?",
-    a: "Yes. We've worked with exotic sports cars, luxury SUVs, classic cars, and premium sedans. Our targeting and creative approach adapts to your specific fleet and ideal customer profile.",
+    q: "What industries do you work with?",
+    a: "We work with growth-focused businesses across industries — e-commerce, B2B services, professional services, and more. Our systems adapt to your specific market and ideal customer profile.",
   },
   {
     id: "4",
     q: "What's the minimum investment?",
-    a: "Management fees are customized based on your goals and fleet size. We recommend a minimum ad spend of AED 5,000/month to generate meaningful results. Book a strategy call to get a custom proposal.",
+    a: "Management fees are customized based on your goals and scope. We recommend a minimum ad spend of AED 5,000/month to generate meaningful results. Book a strategy call to get a custom proposal.",
   },
   {
     id: "5",
@@ -36,7 +36,7 @@ const faqData = [
   {
     id: "6",
     q: "Do you handle WhatsApp automation?",
-    a: "Absolutely. WhatsApp is the primary communication channel for luxury car rentals in the UAE. We set up automated instant replies, follow-up sequences, and lead routing—all designed to feel human and premium, not robotic.",
+    a: "Absolutely. WhatsApp is a primary communication channel for businesses in the UAE. We set up automated instant replies, follow-up sequences, and lead routing — all designed to feel human and professional, not robotic.",
   },
 ];
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Section from "@/components/ui/section";
 import { ScanningButton } from "@/components/ui/ScanningButton";
 import { useTrackCTA } from "@/hooks/useTrackEvent";
-import { Target, Timer, Car } from "phosphor-react";
+import { Target, Timer, ChartLineUp } from "phosphor-react";
 import type { Icon } from "phosphor-react";
 
 type Statement = {
@@ -17,20 +17,20 @@ type Statement = {
 const statements: Statement[] = [
   {
     icon: Target,
-    headline: "We optimize for bookings, not clicks.",
+    headline: "We optimize for revenue, not vanity metrics.",
     subtext:
-      "Other agencies celebrate traffic. We celebrate confirmed reservations.",
+      "Other agencies celebrate impressions. We celebrate pipeline growth and closed deals.",
   },
   {
     icon: Timer,
-    headline: "Response time under 2 minutes.",
-    subtext: "Your WhatsApp inquiries answered instantly, 24/7.",
+    headline: "Systems that respond in real time.",
+    subtext: "Automated follow-ups, instant lead routing, and 24/7 engagement.",
   },
   {
-    icon: Car,
-    headline: "Built specifically for luxury car rentals.",
+    icon: ChartLineUp,
+    headline: "Built for businesses ready to scale.",
     subtext:
-      "Not a generic agency. We know your market, your customers, your challenges.",
+      "Not a generic agency. We build growth systems tailored to your market and goals.",
   },
 ];
 

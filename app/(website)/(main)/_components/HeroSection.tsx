@@ -4,20 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ScanningButton } from "@/components/ui/ScanningButton";
 import Link from "next/link";
-import { CaretDown } from "phosphor-react";
 import Image from "next/image";
 import BlackGradient from "@/public/black-gradient.jpg";
 import { useTrackCTA } from "@/hooks/useTrackEvent";
 
 const HeroSection = () => {
   const trackCTA = useTrackCTA();
-
-  const scrollToSystem = () => {
-    const systemSection = document.getElementById("luxury-booking-system");
-    if (systemSection) {
-      systemSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="relative md:min-h-screen flex items-center pt-20 pb-8 md:pb-24 px-4 min-h-[720px]">
@@ -33,17 +25,8 @@ const HeroSection = () => {
         <div className="bg-gradient-to-b from-transparent to-black absolute inset-0 z-0"></div>
       </div>
 
-      {/* Background Image */}
-      <div className="absolute inset-0 z-10">
-        <Image
-          src="/car.png"
-          alt="Luxury Porsche"
-          className="object-contain absolute bottom-0 right-0 w-full max-w-[103rem] object-bottom -scale-x-100 pointer-events-none select-none"
-          priority
-          width={1000}
-          height={1000}
-        />
-      </div>
+      {/* Background overlay */}
+      <div className="absolute inset-0 z-10" />
 
       <div className="max-w-6xl xl:max-w-7xl mx-auto w-full relative z-10">
         <div className="max-w-2xl mb-16 sm:mb-64">
@@ -58,7 +41,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="heading-hero pb-2"
             >
-              Premium Websites For Luxury Car Rentals
+              Growth Systems Built to Scale Revenue
             </motion.h1>
 
             <motion.p
@@ -67,8 +50,8 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-slate-600 dark:text-gray-400 mb-8 leading-relaxed"
             >
-              We craft websites that look as premium as your fleet — and
-              convert visitors into bookings.
+              We design and implement the marketing, sales, and conversion
+              systems your business needs to grow predictably.
             </motion.p>
 
             <motion.div

@@ -23,10 +23,10 @@ const variantContent: Record<CTAVariant, CTAContent> = {
   },
   benefit: {
     text: "Get Your Custom Growth Plan",
-    subtext: "See exactly how to increase bookings",
+    subtext: "See exactly how to scale your revenue",
   },
   social_proof: {
-    text: "Join 50+ Luxury Brands",
+    text: "Join 50+ Growing Businesses",
     subtext: "Book your strategy session",
   },
 };

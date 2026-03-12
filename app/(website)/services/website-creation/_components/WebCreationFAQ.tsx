@@ -193,7 +193,7 @@ const WebCreationFAQ: React.FC = () => {
       id: "industries",
       question: "What industries do you serve?",
       answer:
-        "While we specialize in luxury car rental and premium service businesses in Dubai, we build websites for businesses across industries including hospitality, real estate, healthcare, e-commerce, and professional services. Our expertise is in high-performance, conversion-focused websites for businesses where brand perception directly impacts revenue.",
+        "We build websites for growth-focused businesses across industries including e-commerce, B2B services, hospitality, real estate, healthcare, and professional services. Our expertise is in high-performance, conversion-focused websites for businesses where brand perception directly impacts revenue.",
       category: "process",
       tags: ["industries", "clients", "specialization"],
       popularity: 82,
@@ -238,7 +238,7 @@ const WebCreationFAQ: React.FC = () => {
       id: "booking-integration",
       question: "Can you integrate booking and payment systems?",
       answer:
-        "Absolutely. We integrate with popular booking platforms (Calendly, Cal.com), payment gateways (Stripe, PayTabs for UAE), and custom booking flows. For car rental businesses, we can build custom availability calendars and quote request forms that feed directly into your CRM. All integrations are tested thoroughly before launch.",
+        "Absolutely. We integrate with popular booking platforms (Calendly, Cal.com), payment gateways (Stripe, PayTabs for UAE), and custom scheduling flows. We can build custom availability calendars, quote request forms, and lead capture systems that feed directly into your CRM. All integrations are tested thoroughly before launch.",
       category: "technology",
       tags: ["booking", "payments", "integration", "calendar"],
       popularity: 83,

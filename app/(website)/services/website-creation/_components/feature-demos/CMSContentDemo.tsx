@@ -25,21 +25,21 @@ const contentFields: ContentField[] = [
     id: "title",
     label: "Page Title",
     type: "text",
-    value: "Premium Fleet Collection",
+    value: "Our Growth Solutions",
     icon: <Type className="w-4 h-4" />,
   },
   {
     id: "description",
     label: "Description",
     type: "richtext",
-    value: "Discover our handpicked selection of luxury vehicles, from sleek sports cars to elegant sedans. Each vehicle in our fleet is maintained to the highest standards.",
+    value: "Discover our integrated growth systems designed to help businesses generate leads, acquire customers, and scale revenue predictably.",
     icon: <FileEdit className="w-4 h-4" />,
   },
   {
     id: "hero_image",
     label: "Hero Image",
     type: "image",
-    value: "fleet-hero-2024.jpg",
+    value: "solutions-hero-2024.jpg",
     icon: <ImageIcon className="w-4 h-4" />,
   },
   {
@@ -120,7 +120,7 @@ const CMSContentDemo: React.FC = () => {
           <div className="text-[10px] uppercase tracking-wider text-zinc-500 mb-2 font-medium">
             Document Types
           </div>
-          {["Pages", "Blog Posts", "Fleet Items", "Testimonials", "Settings"].map(
+          {["Pages", "Blog Posts", "Case Studies", "Testimonials", "Settings"].map(
             (item, index) => (
               <motion.div
                 key={item}

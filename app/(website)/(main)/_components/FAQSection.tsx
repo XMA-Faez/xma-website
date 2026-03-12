@@ -11,15 +11,15 @@ import { useTrackCTA } from "@/hooks/useTrackEvent";
 const faqData = [
   {
     id: "1",
-    question: "How quickly will I start seeing more bookings?",
+    question: "How quickly will I start seeing results?",
     answer:
-      "Most clients see their first qualified inquiries within 7-14 days of campaign launch. Booking rates typically improve over the first month as we optimize targeting and refine the messaging based on real conversion data.",
+      "Most clients see their first qualified leads within 7-14 days of campaign launch. Conversion rates typically improve over the first month as we optimize targeting and refine messaging based on real performance data.",
   },
   {
     id: "2",
     question: "What if I've tried marketing agencies before and it didn't work?",
     answer:
-      "Most agencies fail in this space because they don't understand the luxury car rental market. They generate clicks, not bookings. We focus specifically on conversion optimization—WhatsApp response speed, follow-up sequences, and qualifying leads before they reach you.",
+      "Most agencies deliver vanity metrics — clicks and impressions that don't move the needle. We focus specifically on revenue outcomes: lead quality, conversion rates, pipeline velocity, and systems that actually scale your business.",
   },
   {
     id: "3",
@@ -31,7 +31,7 @@ const faqData = [
     id: "4",
     question: "Do you handle WhatsApp automation?",
     answer:
-      "Absolutely. WhatsApp is the primary communication channel for luxury car rentals in the UAE. We set up automated instant replies, follow-up sequences, and lead routing—all designed to feel human and premium, not robotic.",
+      "Absolutely. WhatsApp is a primary communication channel for businesses in the UAE. We set up automated instant replies, follow-up sequences, and lead routing — all designed to feel human and professional, not robotic.",
   },
 ];
 

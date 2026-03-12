@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "XMA designs and implements the marketing, sales, and conversion systems companies need to generate leads, acquire customers, and grow revenue predictably.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/xma-website.png",
         width: 1920,
         height: 1080,
         alt: "XMA Agency - Growth Systems Built to Scale Revenue",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "XMA Agency | Growth Systems Built to Scale Revenue",
     description:
       "XMA designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue.",
-    images: ["/og-image.png"],
+    images: ["/xma-website.png"],
     creator: "@xma_agency",
   },
   robots: {

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "XMA Agency",
     images: [
       {
-        url: "/og-image.png",
+        url: "/xma-website.png",
         width: 1200,
         height: 630,
         alt: "XMA Agency - Growth Systems Built to Scale Revenue",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "Growth Systems Built to Scale Revenue | XMA",
     description:
       "XMA designs and implements growth systems that help businesses generate leads, acquire customers, and scale revenue.",
-    images: ["/og-image.png"],
+    images: ["/xma-website.png"],
     creator: "@xmaagency",
   },
   robots: {
