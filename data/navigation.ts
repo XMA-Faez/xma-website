@@ -13,6 +13,7 @@ export const mainNavItems: NavItem[] = [
   { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export const solutions: SolutionItem[] = [
