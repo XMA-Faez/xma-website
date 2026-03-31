@@ -166,7 +166,7 @@ export default function SolutionsOverviewSection() {
         className="text-center mt-12"
       >
         <Link href="/solutions">
-          <ScanningButton variant="outline" size="md">
+          <ScanningButton variant="primary" size="md" color="white">
             <span className="flex items-center gap-2">
               See All Solutions
               <ArrowRight className="w-4 h-4" />

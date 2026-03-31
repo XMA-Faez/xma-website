@@ -1,140 +1,196 @@
 "use client";
 import React from "react";
-import {
-  useScroll,
-  useTransform,
-  useSpring,
-  MotionValue,
-  LazyMotion,
-  domAnimation,
-} from "motion/react";
+import { LazyMotion, domAnimation, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import * as m from "motion/react-m";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   optimizeCloudinaryVideoUrl,
   getOptimizedThumbnail,
 } from "@/utils/cloudinary";
 import { ScanningButton } from "@/components/ui/ScanningButton";
+import {
+  ScrollVelocityContainer,
+  ScrollVelocityRow,
+} from "@/components/ui/scroll-velocity";
+
+interface Video {
+  title?: string;
+  url: string;
+  thumbnail: string;
+  public_id: string;
+}
 
 export const HeroVideoParallax = ({
   videos,
 }: {
-  videos: {
-    title?: string;
-    url: string;
-    thumbnail: string;
-    public_id: string;
-  }[];
+  videos: Video[];
 }) => {
+  const [selectedIndex, setSelectedIndex] = React.useState<number | null>(null);
+
   const firstRow = videos.slice(0, 10);
   const secondRow = videos.slice(10, 20);
   const thirdRow = videos.slice(20, 30);
-  const ref = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
+  const allVideos = [...firstRow, ...secondRow, ...thirdRow];
+
+  const openVideo = (publicId: string) => {
+    const idx = allVideos.findIndex((v) => v.public_id === publicId);
+    if (idx !== -1) setSelectedIndex(idx);
+  };
+
+  const closeVideo = () => setSelectedIndex(null);
+
+  const goNext = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((selectedIndex + 1) % allVideos.length);
+  };
+
+  const goPrev = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((selectedIndex - 1 + allVideos.length) % allVideos.length);
+  };
+
+  React.useEffect(() => {
+    if (selectedIndex === null) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeVideo();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "ArrowLeft") goPrev();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
-
-  const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig,
-  );
-  const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig,
-  );
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
-    springConfig,
-  );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig,
-  );
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
-    springConfig,
-  );
-  const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 200]),
-    springConfig,
-  );
   return (
-    <div
-      ref={ref}
-      className="h-[280vh] pt-40 pb-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-    >
+    <div className="relative min-h-svh flex flex-col overflow-hidden">
       <Header />
-      <LazyMotion features={domAnimation}>
-        <m.div
-          style={{
-            rotateX,
-            rotateZ,
-            translateY,
-            opacity,
-          }}
-          className=""
-        >
-          <m.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-            {firstRow.map((video) => (
-              <VideoCard
-                video={video}
-                translate={translateX}
-                key={video.public_id}
-              />
-            ))}
-          </m.div>
-          <m.div className="flex flex-row  mb-20 space-x-20 ">
-            {secondRow.map((video) => (
-              <VideoCard
-                video={video}
-                translate={translateXReverse}
-                key={video.public_id}
-              />
-            ))}
-          </m.div>
-          <m.div className="flex flex-row-reverse space-x-reverse space-x-20">
-            {thirdRow.map((video) => (
-              <VideoCard
-                video={video}
-                translate={translateX}
-                key={video.public_id}
-              />
-            ))}
-          </m.div>
-        </m.div>
-      </LazyMotion>
+      <div className="flex-1 flex flex-col justify-end pb-8 md:pb-12">
+        <LazyMotion features={domAnimation}>
+          <ScrollVelocityContainer>
+            <ScrollVelocityRow baseVelocity={3} direction={-1} className="mb-4 md:mb-6">
+              {firstRow.map((video) => (
+                <VideoCard video={video} key={video.public_id} onClick={() => openVideo(video.public_id)} />
+              ))}
+            </ScrollVelocityRow>
+            <ScrollVelocityRow baseVelocity={3} direction={1} className="mb-4 md:mb-6">
+              {secondRow.map((video) => (
+                <VideoCard video={video} key={video.public_id} onClick={() => openVideo(video.public_id)} />
+              ))}
+            </ScrollVelocityRow>
+            <ScrollVelocityRow baseVelocity={3} direction={-1}>
+              {thirdRow.map((video) => (
+                <VideoCard video={video} key={video.public_id} onClick={() => openVideo(video.public_id)} />
+              ))}
+            </ScrollVelocityRow>
+          </ScrollVelocityContainer>
+        </LazyMotion>
+      </div>
+
+      <AnimatePresence>
+        {selectedIndex !== null && (
+          <VideoLightbox
+            video={allVideos[selectedIndex]}
+            onClose={closeVideo}
+            onNext={goNext}
+            onPrev={goPrev}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
+function VideoLightbox({
+  video,
+  onClose,
+  onNext,
+  onPrev,
+}: {
+  video: Video;
+  onClose: () => void;
+  onNext: () => void;
+  onPrev: () => void;
+}) {
+  return (
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="fixed inset-0 z-[100] flex items-center justify-center"
+      onClick={onClose}
+    >
+      <div className="absolute inset-0 bg-black/90 backdrop-blur-sm" />
+
+      <m.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        transition={{ duration: 0.2 }}
+        className="relative w-[80vw] max-w-sm aspect-[9/16] rounded-2xl overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <video
+          key={video.public_id}
+          src={optimizeCloudinaryVideoUrl(video.url)}
+          poster={getOptimizedThumbnail(video.url)}
+          className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+          autoPlay
+          loop
+          playsInline
+          controls
+        />
+      </m.div>
+
+      {/* Close */}
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 z-10 w-10 h-10 rounded-full bg-zinc-800/80 backdrop-blur-sm border border-zinc-700/50 flex items-center justify-center text-white hover:bg-zinc-700/80 transition-colors"
+      >
+        <X className="w-5 h-5" />
+      </button>
+
+      {/* Prev */}
+      <button
+        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-zinc-800/80 backdrop-blur-sm border border-zinc-700/50 flex items-center justify-center text-white hover:bg-zinc-700/80 transition-colors"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+
+      {/* Next */}
+      <button
+        onClick={(e) => { e.stopPropagation(); onNext(); }}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-zinc-800/80 backdrop-blur-sm border border-zinc-700/50 flex items-center justify-center text-white hover:bg-zinc-700/80 transition-colors"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+    </m.div>
+  );
+}
+
 export const Header = () => {
   return (
-    <div className="max-w-7xl z-10 relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <div className="rounded-3xl p-8 md:p-12">
-        <h1 className="max-w-2xl text-2xl pointer-events-none md:text-6xl text-balance font-bold text-white drop-shadow-lg">
-          Growth Systems Built to{" "}
-          <span className="heading-gradient">Scale Revenue</span>
-        </h1>
-        <p className="max-w-2xl text-base pointer-events-none md:text-xl mt-8 mb-lg text-white/90 drop-shadow-sm">
-          XMA designs and implements the marketing, sales, and conversion
-          systems companies need to generate leads, acquire customers, and
-          grow revenue predictably.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <Link href="/apply" className="inline-block">
-            <ScanningButton className="backdrop-blur-md" variant="primary" size="md" color="blue">
-              Book a Call
-            </ScanningButton>
-          </Link>
-          <Link href="#solutions" className="inline-block">
-            <ScanningButton className="backdrop-blur-md" variant="outline" size="md">
-              Explore Solutions
-            </ScanningButton>
-          </Link>
-        </div>
+    <div className="max-w-7xl z-10 relative mx-auto pt-24 md:pt-32 pb-8 md:pb-12 px-4 w-full">
+      <h1 className="max-w-2xl text-3xl md:text-6xl text-balance font-bold text-white drop-shadow-lg">
+        Growth Systems Built to{" "}
+        <span className="heading-gradient">Scale Revenue</span>
+      </h1>
+      <p className="max-w-xl text-base md:text-lg mt-6 text-white/80 drop-shadow-sm">
+        Marketing, sales, and conversion systems that generate leads and grow
+        revenue predictably.
+      </p>
+      <div className="mt-6 flex flex-col sm:flex-row gap-4">
+        <Link href="/apply" className="inline-block">
+          <ScanningButton variant="primary" size="md" color="white">
+            Book a Call
+          </ScanningButton>
+        </Link>
+        <Link href="#solutions" className="inline-block">
+          <ScanningButton variant="outline" size="md" color="neutral">
+            Explore Solutions
+          </ScanningButton>
+        </Link>
       </div>
     </div>
   );
@@ -142,15 +198,10 @@ export const Header = () => {
 
 export const VideoCard = ({
   video,
-  translate,
+  onClick,
 }: {
-  video: {
-    title?: string;
-    url: string;
-    thumbnail: string;
-    public_id: string;
-  };
-  translate: MotionValue<number>;
+  video: Video;
+  onClick: () => void;
 }) => {
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
@@ -180,14 +231,11 @@ export const VideoCard = ({
 
   return (
     <m.div
-      style={{
-        x: translate,
-      }}
       whileHover={{
         y: -20,
       }}
-      key={video.public_id}
-      className="group/video w-64 aspect-[9/16] relative flex-shrink-0"
+      onClick={onClick}
+      className="group/video w-36 md:w-52 aspect-[9/16] relative flex-shrink-0 mx-2 md:mx-4 cursor-pointer"
     >
       <div className="block w-full h-full rounded-2xl overflow-hidden">
         <video

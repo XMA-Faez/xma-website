@@ -4,7 +4,6 @@ import {
   useScroll,
   useTransform,
   useSpring,
-  MotionValue,
   LazyMotion,
   domAnimation,
 } from "motion/react";
@@ -33,14 +32,6 @@ export const HeroParallax = ({
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
-    springConfig,
-  );
-  const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
-    springConfig,
-  );
   const rotateX = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [15, 0]),
     springConfig,
@@ -64,47 +55,41 @@ export const HeroParallax = ({
     >
       <Header />
       <LazyMotion features={domAnimation}>
-      <m.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
-        className=""
-      >
-        <m.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
+        <m.div
+          style={{
+            rotateX,
+            rotateZ,
+            translateY,
+            opacity,
+          }}
+        >
+          <CarouselRow products={firstRow} direction="reverse" />
+          <CarouselRow products={secondRow} direction="normal" />
+          <CarouselRow products={thirdRow} direction="reverse" />
         </m.div>
-        <m.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </m.div>
-        <m.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </m.div>
-      </m.div>
       </LazyMotion>
     </div>
   );
 };
+
+function CarouselRow({
+  products,
+  direction,
+}: {
+  products: { title: string; link: string; thumbnail: string }[];
+  direction: "normal" | "reverse";
+}) {
+  return (
+    <div
+      className={`flex gap-8 overflow-x-auto mb-20 touch-pan-x ${direction === "reverse" ? "flex-row-reverse" : "flex-row"}`}
+      style={{ scrollbarWidth: "none" }}
+    >
+      {products.map((product) => (
+        <ProductCard product={product} key={product.title} />
+      ))}
+    </div>
+  );
+}
 
 export const Header = () => {
   return (
@@ -127,20 +112,15 @@ export const Header = () => {
 
 export const ProductCard = ({
   product,
-  translate,
 }: {
   product: {
     title: string;
     link: string;
     thumbnail: string;
   };
-  translate: MotionValue<number>;
 }) => {
   return (
     <m.div
-      style={{
-        x: translate,
-      }}
       whileHover={{
         y: -20,
       }}

@@ -20,7 +20,7 @@ function getHeaderCTA(pathname: string) {
   if (CRM_PATHS.some((path) => pathname.startsWith(path))) {
     return { label: "Book a Demo", href: "/book-crm", color: "emerald" as const };
   }
-  return { label: "Book a Call", href: "/book", color: "blue" as const };
+  return { label: "Book a Call", href: "/book", color: "white" as const };
 }
 
 export function Header() {

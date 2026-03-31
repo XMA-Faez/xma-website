@@ -36,7 +36,7 @@ export default function QualificationCTA() {
           </p>
 
           <Link href="/book">
-            <ScanningButton variant="primary" size="lg" color="blue">
+            <ScanningButton variant="primary" size="lg" color="white">
               Book a Call
             </ScanningButton>
           </Link>

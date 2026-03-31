@@ -26,7 +26,7 @@ const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-20 md:bottom-6 right-6 z-50">
       <motion.a
         href={whatsappUrl}
         target="_blank"
