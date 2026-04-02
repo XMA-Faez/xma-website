@@ -18,7 +18,7 @@ const clientLogos: Logo[] = [
 const stats = [
   { value: "50+", label: "Campaigns Managed" },
   { value: "$2M+", label: "Revenue Generated" },
-  { value: "30+", label: "Clients Served" },
+  { value: "80+", label: "Clients Served" },
 ];
 
 export default function CredibilityStrip() {

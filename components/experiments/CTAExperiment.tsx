@@ -26,7 +26,7 @@ const variantContent: Record<CTAVariant, CTAContent> = {
     subtext: "See exactly how to scale your revenue",
   },
   social_proof: {
-    text: "Join 50+ Growing Businesses",
+    text: "Join 80+ Growing Businesses",
     subtext: "Book your strategy session",
   },
 };

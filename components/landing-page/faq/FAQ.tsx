@@ -52,7 +52,7 @@ const faqCategories = [
     questions: [
       {
         q: "What makes your agency different from others?",
-        a: "We're a full in-house team of 15 professionals including videographers, editors, developers, designers, and marketing experts. We've generated 30K+ leads and managed 3M+ AED in ad spend for 50+ clients."
+        a: "We're a full in-house team of 15 professionals including videographers, editors, developers, designers, and marketing experts. We've generated 30K+ leads and managed 3M+ AED in ad spend for 80+ clients."
       },
       {
         q: "How do you ensure my ads will perform?",

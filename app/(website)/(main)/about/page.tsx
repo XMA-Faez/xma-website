@@ -85,7 +85,7 @@ const AboutUsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                number: "50+", 
+                number: "80+",
                 label: "Satisfied Clients",
                 description: "Trusted by businesses worldwide",
                 IconComponent: Users,

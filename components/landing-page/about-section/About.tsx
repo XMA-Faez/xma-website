@@ -27,7 +27,7 @@ const stats = [
   },
   {
     IconComponent: Trophy,
-    value: "50+",
+    value: "80+",
     label: "Success Stories",
     color: "text-orange-400"
   }
