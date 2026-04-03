@@ -8,6 +8,7 @@ import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { cloudinarySchemaPlugin, cloudinaryAssetSourcePlugin } from 'sanity-plugin-cloudinary'
+import { schemaMarkup } from '@operationnation/sanity-plugin-schema-markup'
 
 import { apiVersion, dataset, projectId } from './sanity/env'
 import { schema } from './sanity/schemaTypes'
@@ -23,5 +24,6 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     cloudinarySchemaPlugin(),
     cloudinaryAssetSourcePlugin(),
+    schemaMarkup(),
   ],
 })

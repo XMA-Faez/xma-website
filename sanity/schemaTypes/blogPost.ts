@@ -165,6 +165,11 @@ export default defineType({
       type: 'number',
       validation: (Rule) => Rule.min(1).max(60),
     }),
+    defineField({
+      name: 'schemaMarkup',
+      title: 'Schema Markup',
+      type: 'schemaMarkup',
+    }),
   ],
   preview: {
     select: {

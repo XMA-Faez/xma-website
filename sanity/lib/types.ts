@@ -43,6 +43,7 @@ export interface BlogPost {
   metaTitle?: string
   metaDescription?: string
   readingTime?: number
+  schemaMarkup?: Record<string, unknown>[]
 }
 
 export interface BlogPostCard {

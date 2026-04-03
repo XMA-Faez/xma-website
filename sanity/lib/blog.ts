@@ -32,7 +32,8 @@ const blogPostFields = groq`
   tags,
   metaTitle,
   metaDescription,
-  readingTime
+  readingTime,
+  schemaMarkup
 `
 
 export async function getAllBlogPosts(

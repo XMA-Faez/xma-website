@@ -4,6 +4,7 @@ import { BlogContent } from '../_components/BlogContent'
 import { RelatedPosts } from '../_components/RelatedPosts'
 import { SocialShare } from '../_components/SocialShare'
 import { BlogCTA } from '../_components/BlogCTA'
+import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -73,7 +74,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const imageUrl = post.featuredImage ? urlFor(post.featuredImage).width(1200).url() : null
 
-  const jsonLd = {
+  const fallbackJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
@@ -95,10 +96,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {post.schemaMarkup ? (
+        <SchemaMarkup schema={post.schemaMarkup} />
+      ) : (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(fallbackJsonLd) }}
+        />
+      )}
 
       <article className="max-w-4xl pt-40 mx-auto px-4 py-8">
         <header className="mb-8">
