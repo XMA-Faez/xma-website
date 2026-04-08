@@ -28,9 +28,10 @@ export const HeroVideoParallax = ({
 }) => {
   const [selectedIndex, setSelectedIndex] = React.useState<number | null>(null);
 
-  const firstRow = videos.slice(0, 10);
-  const secondRow = videos.slice(10, 20);
-  const thirdRow = videos.slice(20, 30);
+  const rowSize = Math.ceil(videos.length / 3);
+  const firstRow = videos.slice(0, rowSize);
+  const secondRow = videos.slice(rowSize, rowSize * 2);
+  const thirdRow = videos.slice(rowSize * 2);
   const allVideos = [...firstRow, ...secondRow, ...thirdRow];
 
   const openVideo = (publicId: string) => {
@@ -67,17 +68,17 @@ export const HeroVideoParallax = ({
       <div className="flex-1 flex flex-col justify-end pb-8 md:pb-12">
         <LazyMotion features={domAnimation}>
           <ScrollVelocityContainer>
-            <ScrollVelocityRow baseVelocity={3} direction={-1} className="mb-4 md:mb-6">
+            <ScrollVelocityRow baseVelocity={1} direction={-1} className="mb-4 md:mb-6">
               {firstRow.map((video) => (
                 <VideoCard video={video} key={video.public_id} onClick={() => openVideo(video.public_id)} />
               ))}
             </ScrollVelocityRow>
-            <ScrollVelocityRow baseVelocity={3} direction={1} className="mb-4 md:mb-6">
+            <ScrollVelocityRow baseVelocity={1} direction={1} className="mb-4 md:mb-6">
               {secondRow.map((video) => (
                 <VideoCard video={video} key={video.public_id} onClick={() => openVideo(video.public_id)} />
               ))}
             </ScrollVelocityRow>
-            <ScrollVelocityRow baseVelocity={3} direction={-1}>
+            <ScrollVelocityRow baseVelocity={1} direction={-1}>
               {thirdRow.map((video) => (
                 <VideoCard video={video} key={video.public_id} onClick={() => openVideo(video.public_id)} />
               ))}
