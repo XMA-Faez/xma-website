@@ -82,6 +82,26 @@ Optional:
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID` — Google Analytics
 - `NEXT_PUBLIC_SANITY_API_VERSION` — defaults to 2026-01-07
 
+## Landing Page Shared Components
+
+Reusable sub-components for SEO landing pages live in `app/(website)/(main)/_components/landing-pages/_shared/`:
+
+**Utilities:**
+- `accent-utils.ts` — `deriveAccentTokens()`, `mapAccentToButtonColor()`, `AccentTokens` and `ButtonColor` types
+- `icon-map.ts` — `ICON_MAP` record and `resolveIcon()` helper (60+ lucide icons)
+
+**Components (all accept `accentTokens: AccentTokens`):**
+- `LandingHero.tsx` — Split-screen 60/40 hero with badge, H1, subtitle, CTA, decorative floating shapes
+- `StatsStrip.tsx` — Animated counter strip with spring physics via `useMotionValue`
+- `PainPointBento.tsx` — Bento grid (2fr/1fr) for pain points with icon tiles
+- `ProcessTimeline.tsx` — Alternating left/right vertical timeline with numbered steps
+- `FAQAccordion.tsx` — Animated accordion with FAQ JSON-LD schema injection
+- `LandingCTA.tsx` — Bottom CTA with radial gradient and fade-up animation
+- `CrossLinkGrid.tsx` — Related page cards grid with hover lift
+- `TestimonialCard.tsx` — Case study spotlight with challenge/solution/result flow
+
+Types are defined at `data/landing-pages/types.ts`.
+
 ## Documentation
 
 Detailed docs live in `/docs/`:

@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getBlogPostsForSitemap } from '@/sanity/lib/blog'
+import { allLandingPageEntries } from '@/data/landing-pages/registry'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.xma.ae'
@@ -11,6 +12,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(post._updatedAt),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
+  }))
+
+  const landingPageSitemap = allLandingPageEntries.map((page) => ({
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
   }))
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -94,5 +102,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  return [...staticPages, ...blogSitemap]
+  return [...staticPages, ...landingPageSitemap, ...blogSitemap]
 }
